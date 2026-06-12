@@ -95,6 +95,7 @@ window.CURRICULUM.grades.push({
           text: "Discuss how culture, religion, cost, availability and marketing influence food choices, and read a nutrition label critically.",
           resources: [
             { type: "interactive", title: "BBC Bitesize: Diet & food choices", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/topics/zf339j6", note: "Factors that shape what we eat." },
+            { type: "reading", title: "7 foods with the most microplastics — and what to eat instead", provider: "🐺 Wolves classroom · superage.com", url: "https://superage.com/7-foods-and-beverages-that-have-the-most-microplastics-and-what-to-eat-instead/", note: "Hidden contaminants in everyday foods — another reason to know what's in your food." },
             { type: "video", title: "What actually causes high cholesterol? (TED-Ed, 6 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=EixIyh1gshM", note: "How diet and other factors affect cholesterol — read labels critically." },
             { type: "reading", title: "Common sweetener linked to higher stroke risk", provider: "🐺 Wolves classroom · earth.com", url: "https://www.earth.com/news/common-sweetener-may-directly-damage-the-brain/", note: "A reminder to look past marketing claims to the actual ingredients." },
             { type: "reading", title: "Gut cancers linked with certain diets", provider: "🐺 Wolves classroom · ScienceAlert", url: "https://www.sciencealert.com/alarming-rise-in-cancers-of-the-gut-linked-with-these-deadly-diets", note: "Why dietary choices matter for long-term health." }
@@ -193,6 +194,7 @@ window.CURRICULUM.grades.push({
           text: "Distinguish elements, compounds and mixtures and classify substances accordingly.",
           resources: [
             { type: "interactive", title: "BBC Bitesize: Elements, compounds & mixtures", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/topics/zstp34j", note: "How to classify substances." },
+            { type: "interactive", title: "Matter & properties study bot", provider: "🐺 Wolves classroom · ChatGPT", url: "https://chatgpt.com/g/g-6791de19e3e881918e97e1ef365205b3-matter-properties-bot", note: "A tutor bot to quiz yourself on matter and its properties. (Needs a ChatGPT login.)" },
             { type: "video", title: "What happens if you eat a silica gel packet? (TED-Ed, 5 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=QWCHnR53oIw", note: "A real-world look at a everyday material and what it's made of." }
           ],
           quiz: [
@@ -434,6 +436,8 @@ window.CURRICULUM.grades.push({
           text: "Describe energy flow through an ecosystem using food chains and energy pyramids.",
           resources: [
             { type: "video", title: "Ecology – energy flow & food chains", provider: "YouTube · Amoeba Sisters", url: "https://www.youtube.com/@AmoebaSisters", note: "Trophic levels and food chains explained simply." },
+            { type: "video", title: "Why animals help each other (TED-Ed, 4 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=qWG2f9DwwpY", note: "Cooperation and relationships within ecosystems." },
+            { type: "video", title: "Are there any places on Earth with no bugs? (TED-Ed, 5 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=jejgP_u82Qo", note: "How life and food webs spread across different habitats." },
             { type: "video", title: "Is the Amazon Rainforest disappearing? (TED-Ed, 5 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=Qxby1J5bnPQ", note: "A real ecosystem under pressure." },
             { type: "video", title: "Inside the monarch butterfly migration mystery (12 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=hrXzY4DP_c8", note: "Energy, life cycles and ecosystems across a continent." }
           ],
@@ -471,6 +475,7 @@ window.CURRICULUM.grades.push({
           text: "Describe the main Earth systems and how they interact.",
           resources: [
             { type: "interactive", title: "BBC Bitesize: Earth & atmosphere", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/zrkw2hv", note: "The geosphere, hydrosphere, atmosphere and biosphere." },
+            { type: "video", title: "Inside Biosphere 2: the world's largest Earth-science experiment (16 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=-yAcD3wuY2Q", note: "A sealed model of Earth's systems — see how air, water, soil and life interact." },
             { type: "reading", title: "NOAA SciJinks: How Earth's systems connect", provider: "NOAA SciJinks", url: "https://scijinks.gov/", note: "Student-friendly look at interacting Earth systems." }
           ],
           quiz: [

@@ -23,6 +23,7 @@ window.CURRICULUM.grades.push({
           text: "Label the heart's chambers, valves and major vessels and trace the double circulation of blood.",
           resources: [
             { type: "video", title: "The circulatory system (Amoeba Sisters)", provider: "YouTube · Amoeba Sisters", url: "https://www.youtube.com/@AmoebaSisters", note: "Heart structure and double circulation." },
+            { type: "interactive", title: "The human body systems study bot", provider: "🐺 Wolves classroom · ChatGPT", url: "https://chatgpt.com/g/g-6780a55ada8881919ba84cbfb7664b87-the-human-body-system", note: "An interactive tutor on the body's organ systems. (Needs a ChatGPT login.)" },
             { type: "interactive", title: "BBC Bitesize: The heart & circulation", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/zrkw2hv", note: "Chambers, valves and blood vessels." }
           ],
           quiz: [
@@ -85,6 +86,7 @@ window.CURRICULUM.grades.push({
           text: "Classify pathogens (bacteria, viruses, fungi, protozoa, parasites) and describe routes of disease transmission.",
           resources: [
             { type: "video", title: "Pathogens & disease (Amoeba Sisters)", provider: "YouTube · Amoeba Sisters", url: "https://www.youtube.com/@AmoebaSisters", note: "The main pathogen groups and how disease spreads." },
+            { type: "reading", title: "The greatest parasite is right in front of you", provider: "🐺 Wolves classroom · ScienceAlert", url: "https://www.sciencealert.com/the-greatest-parasite-is-right-in-front-of-you-and-its-dangerous", note: "A real-world look at parasites as a pathogen group." },
             { type: "reading", title: "CK-12: Pathogens & transmission", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "Types of pathogen and routes of infection." }
           ],
           quiz: [
@@ -121,6 +123,8 @@ window.CURRICULUM.grades.push({
           text: "Use Punnett squares to predict inheritance, including codominance and incomplete dominance, and interpret a pedigree.",
           resources: [
             { type: "interactive", title: "Khan Academy: Mendelian genetics & Punnett squares", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology/classical-genetics", note: "Worked Punnett squares with practice." },
+            { type: "podcast", title: "Orange Cat Lovers, Rise Up – Short Wave", provider: "🐺 Wolves classroom · Apple Podcasts", url: "https://podcasts.apple.com/us/podcast/orange-cat-lovers-rise-up/id1482575855?i=1000708659195", note: "The genetics behind orange cat coat colour — inheritance in action." },
+            { type: "reading", title: "Gene-editing tailored to rare disorders", provider: "🐺 Wolves classroom · NYTimes", url: "https://www.nytimes.com/2025/05/15/health/gene-editing-personalized-rare-disorders.html?unlocked_article_code=1.HU8.o_m0.hUzjq5_8hv8_", note: "How scientists edit genes — cutting-edge genetics and inheritance." },
             { type: "interactive", title: "BBC Bitesize: Inheritance", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/zrkw2hv", note: "Dominant/recessive, codominance and pedigrees." }
           ],
           quiz: [
@@ -133,6 +137,8 @@ window.CURRICULUM.grades.push({
           text: "Define mutation and outline the evidence for evolution (fossils, anatomy/homology, vestigial structures, DNA).",
           resources: [
             { type: "video", title: "Evidence for evolution (CrashCourse Biology)", provider: "YouTube · CrashCourse Biology", url: "https://www.youtube.com/@crashcourse", note: "Fossils, homology and DNA evidence." },
+            { type: "reading", title: "Fossilised claw prints rewrite the amniote timeline", provider: "🐺 Wolves classroom · The Guardian", url: "https://www.theguardian.com/environment/2025/may/14/fossilised-claw-prints-australia-amniotes-fossils", note: "Fossils as living evidence for evolution." },
+            { type: "video", title: "Investigating the rise of early-onset cancer (documentary, 45 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=EQgP153WUUM", note: "Cancer and mutation — how changes in DNA can affect cells." },
             { type: "podcast", title: "Love Fruit? Thank Dinosaur Mass Extinction – Short Wave", provider: "🐺 Wolves classroom · Apple Podcasts", url: "https://podcasts.apple.com/us/podcast/love-fruit-thank-dinosaur-mass-extinction/id1482575855?i=1000699108203", note: "Extinction, fossils and how life changes over time." }
           ],
           quiz: [
@@ -145,6 +151,7 @@ window.CURRICULUM.grades.push({
           text: "Explain natural selection and how variation, selection and isolation can lead to speciation.",
           resources: [
             { type: "interactive", title: "PhET: Natural Selection", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/natural-selection", note: "Change the environment and watch traits evolve." },
+            { type: "podcast", title: "All of Life Has a Common Ancestor – Short Wave", provider: "🐺 Wolves classroom · Apple Podcasts", url: "https://podcasts.apple.com/us/podcast/short-wave/id1482575855?i=1000684312471", note: "Common ancestry — the deep connection between all living things." },
             { type: "video", title: "The surprising reason zebras have stripes (TED-Ed, 5 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=QJB0nmEjbDY", note: "Adaptation and selection in a real animal." },
             { type: "video", title: "Why are there so many kinds of dogs? (TED-Ed, 5 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=ikxGwImO5sc", note: "Selective breeding — selection sped up by humans." }
           ],
@@ -434,6 +441,8 @@ window.CURRICULUM.grades.push({
           text: "Identify energy forms, describe energy transfer and conservation, and calculate efficiency.",
           resources: [
             { type: "interactive", title: "Khan Academy: Energy & efficiency", provider: "Khan Academy", url: "https://www.khanacademy.org/science/physics", note: "Energy forms, transfers and efficiency." },
+            { type: "interactive", title: "Energy study bot", provider: "🐺 Wolves classroom · ChatGPT", url: "https://chatgpt.com/g/g-6761430f8cb88191ab9bd3de2bbc6ee2-energy", note: "A tutor bot to explore energy forms and transfers. (Needs a ChatGPT login.)" },
+            { type: "reading", title: "Solar superpowers, wind warriors & hydro heroes", provider: "🐺 Wolves classroom · United Nations", url: "https://www.un.org/en/climatechange/how-communities-are-embracing-renewable-energy", note: "How communities turn energy resources into electricity." },
             { type: "video", title: "Power Trip: The Story of Energy (documentary, 49 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=-35IXfS7cKg", note: "How energy powers transport and society." },
             { type: "reading", title: "Renewable energy – powering a safer future", provider: "🐺 Wolves classroom · United Nations", url: "https://www.un.org/en/climatechange/raising-ambition/renewable-energy", note: "Where our energy comes from and where it's going." }
           ],
@@ -471,6 +480,8 @@ window.CURRICULUM.grades.push({
           text: "Read rock layers and the geologic time scale and explain how dating evidence orders Earth's history.",
           resources: [
             { type: "interactive", title: "NASA: Evidence & Earth's history", provider: "NASA Global Climate Change", url: "https://climate.nasa.gov/evidence/", note: "How scientists read Earth's past from physical evidence." },
+            { type: "interactive", title: "Earth's structure study bot", provider: "🐺 Wolves classroom · ChatGPT", url: "https://chatgpt.com/g/g-67726005ceb8819191dc29a431bca1b1-earth-s-structure-bot", note: "A tutor bot on Earth's layers and structure. (Needs a ChatGPT login.)" },
+            { type: "reading", title: "It once rained on Earth for a million years", provider: "🐺 Wolves classroom · History Facts", url: "https://historyfacts.com/science-industry/fact/rained-on-earth-for-a-million-years/", note: "A dramatic chapter of deep geologic time — the Carnian Pluvial Event." },
             { type: "video", title: "Plate tectonics & geology", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "Rock layers and Earth's structure." }
           ],
           quiz: [
@@ -483,6 +494,8 @@ window.CURRICULUM.grades.push({
           text: "Describe plate tectonics and explain earthquakes, including P-waves and S-waves.",
           resources: [
             { type: "video", title: "Earthquake Science, and the disaster that created it (8 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=XOCxNVDiOnE", note: "How earthquakes work and how we study them." },
+            { type: "video", title: "Why are earthquakes so hard to predict? (TED-Ed, 4 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=jhRuUoTnA6g", note: "Plate movement and the science of seismic prediction." },
+            { type: "video", title: "Why Iceland's lava is so hard to control (TED-Ed, 5 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=8H--GLt3h8I", note: "Volcanism at a plate boundary — tectonics in action." },
             { type: "video", title: "How does the Richter Scale work? (4 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=NaNw9LHq9dc", note: "Measuring the strength of earthquakes." }
           ],
           quiz: [
@@ -495,6 +508,8 @@ window.CURRICULUM.grades.push({
           text: "Explain interactions between Earth's spheres and outline the quantitative water cycle and watersheds.",
           resources: [
             { type: "interactive", title: "NASA Climate Kids: The water cycle", provider: "NASA Climate Kids", url: "https://climatekids.nasa.gov/", note: "How water moves between Earth's systems." },
+            { type: "video", title: "Why are there two tides a day? (TED-Ed, 5 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=mpRJhhbKLFc", note: "How the Moon and oceans (hydrosphere) interact." },
+            { type: "reading", title: "A massive underground ocean 700 km below the surface", provider: "🐺 Wolves classroom · Economic Times", url: "https://economictimes.indiatimes.com/news/science/scientists-found-a-massive-underground-ocean-hidden-700km-below-earths-surface-heres-all-about-it/articleshow/113849982.cms", note: "Water locked in the geosphere — a surprising link between Earth's spheres." },
             { type: "video", title: "The Mighty River – Ganga: River From The Skies (4 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=Q0gYQrebGwY", note: "A great river system and its watershed." }
           ],
           quiz: [
@@ -507,6 +522,7 @@ window.CURRICULUM.grades.push({
           text: "Carry out and interpret water quality tests (pH, nitrates) and link them to environmental health.",
           resources: [
             { type: "video", title: "India's $10BN water treatment sector (18 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=0kySio8LOi4", note: "Why clean water and treatment matter." },
+            { type: "interactive", title: "Pollution study bot", provider: "🐺 Wolves classroom · ChatGPT", url: "https://chatgpt.com/g/g-676d88c6594881918166b7050d053f33-the-pollution-bot", note: "A tutor bot on pollution and environmental health. (Needs a ChatGPT login.)" },
             { type: "video", title: "Why don't we get drinking water from the ocean? (TED-Ed, 5 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=jdOjB0j329g", note: "Water quality, salts and treatment." }
           ],
           quiz: [
@@ -519,6 +535,7 @@ window.CURRICULUM.grades.push({
           text: "Explain atmospheric pressure and circulation and the main climate drivers.",
           resources: [
             { type: "interactive", title: "NASA Climate Kids: Atmosphere & weather", provider: "NASA Climate Kids", url: "https://climatekids.nasa.gov/", note: "Air pressure, circulation and climate." },
+            { type: "podcast", title: "The science behind wildfire smoke – Short Wave", provider: "🐺 Wolves classroom · Apple Podcasts", url: "https://podcasts.apple.com/us/podcast/short-wave/id1482575855?i=1000683539757", note: "How smoke travels through the atmosphere and affects air quality." },
             { type: "interactive", title: "Atmosphere study bot", provider: "🐺 Wolves classroom · ChatGPT", url: "https://chatgpt.com/g/g-6784b93bd7d08191bc36436210ebeedf-atmosphere-bot", note: "Ask questions about the atmosphere and climate drivers. (Needs a ChatGPT login.)" }
           ],
           quiz: [
@@ -531,6 +548,7 @@ window.CURRICULUM.grades.push({
           text: "Explain the greenhouse effect and how feedback loops can amplify or dampen climate change.",
           resources: [
             { type: "interactive", title: "PhET: Greenhouse Effect", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/greenhouse-effect", note: "Add greenhouse gases and watch temperature respond." },
+            { type: "interactive", title: "Climate study bot", provider: "🐺 Wolves classroom · ChatGPT", url: "https://chatgpt.com/g/g-676255862aa08191a6da8af67d3d91b2-climate", note: "A tutor bot on climate and the greenhouse effect. (Needs a ChatGPT login.)" },
             { type: "video", title: "How I think about climate change (9 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=tRA2SfSk2Tc", note: "A clear, calm look at the climate challenge." }
           ],
           quiz: [
@@ -567,6 +585,9 @@ window.CURRICULUM.grades.push({
           text: "Use the engineering design process: define criteria and constraints, prototype, test and improve, considering sustainability.",
           resources: [
             { type: "interactive", title: "TeachEngineering: Engineering design process", provider: "TeachEngineering", url: "https://www.teachengineering.org/", note: "Free design challenges with criteria and constraints." },
+            { type: "video", title: "Can India's clay tea cups compete with single-use plastic? (12 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=Z_VGwnxcQtY", note: "A real design trade-off — materials, cost and life-cycle sustainability." },
+            { type: "video", title: "What is a natural resource? Facts for kids (8 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=hvw1YGs63Hc", note: "The raw materials behind everything we design and build." },
+            { type: "reading", title: "Natural resources for kids", provider: "🐺 Wolves classroom · The World Counts", url: "https://www.theworldcounts.com/stories/natural-resources-for-kids", note: "Using resources sustainably — key to good engineering design." },
             { type: "interactive", title: "Sustainability & conservation study bot", provider: "🐺 Wolves classroom · ChatGPT", url: "https://chatgpt.com/g/g-6768f062691c8191973ed4e046acc083-sustainability-and-conservation", note: "Explore sustainable design choices. (Needs a ChatGPT login.)" }
           ],
           quiz: [
