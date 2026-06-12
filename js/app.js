@@ -86,7 +86,15 @@
         <p class="lede">A free study companion for Grades 6–8 — clear learning objectives, hand-picked free resources and self-marking quizzes for every objective, plus a concept mindmap. Choose a subject to begin.</p>
       </section>
       <h2 class="section-title">Subjects <span class="count">${HUB.subjects.length} live${planned.length ? " · " + planned.length + " coming" : ""}</span></h2>
-      <div class="grid cols-3">${cards}${soon}</div>`;
+      <div class="grid cols-3">${cards}${soon}</div>
+      ${CLASS.meta.count ? `
+      <h2 class="section-title">Enrichment library</h2>
+      <a class="grade-card" href="#/library" style="border-top-color:#c08a3e">
+        <span class="card-eyebrow" style="color:#c08a3e">🐺 Wolves classroom library</span>
+        <h3>${CLASS.meta.count} free resources across every subject</h3>
+        <p class="card-desc">A searchable stream of real-world videos, articles and podcasts your class collected — Science, Maths, Finance, History, AI, civics and more. Filter by subject and type.</p>
+        <div class="card-footer"><span class="chip">Searchable</span><span class="go-link">Browse the library →</span></div>
+      </a>` : ""}`;
   }
 
   // ---------- subject landing (grade picker for one subject) ----------
@@ -138,12 +146,12 @@
         <div class="card-footer"><span class="chip">Interactive</span><span class="go-link">Open mindmap →</span></div>
       </a>` : ""}
 
-      ${SUBJ.hasLibrary && CLASS.meta.count ? `
+      ${CLASS.meta.count ? `
       <h2 class="section-title">Enrichment from the Wolves classroom</h2>
-      <a class="grade-card" href="${sb()}/library" style="border-top-color:#c08a3e">
-        <span class="card-eyebrow" style="color:#c08a3e">Classroom library</span>
-        <h3>🐺 ${CLASS.meta.count} extra videos, articles &amp; podcasts</h3>
-        <p class="card-desc">A curated stream of real-world science your class collected — TED-Ed talks, BBC Earth documentaries, news and Short Wave podcasts. Search and filter them, or find them woven into each objective's resources.</p>
+      <a class="grade-card" href="#/library" style="border-top-color:#c08a3e">
+        <span class="card-eyebrow" style="color:#c08a3e">🐺 Classroom library</span>
+        <h3>${CLASS.meta.count} videos, articles &amp; podcasts across all subjects</h3>
+        <p class="card-desc">A searchable stream of real-world resources your class collected. Filter by subject and type, or find the relevant ones woven into each objective's resources.</p>
         <div class="card-footer"><span class="chip">Searchable</span><span class="go-link">Browse the library →</span></div>
       </a>` : ""}`;
   }
@@ -239,7 +247,7 @@
       <div class="classroom-block">
         <h3>🐺 From the Wolves classroom</h3>
         <p class="muted">Extra videos, articles &amp; podcasts collected by your class that connect to this topic.
-          <a href="${sb()}/library">Browse the full classroom library →</a></p>
+          <a href="#/library">Browse the full classroom library →</a></p>
         <div class="res-list">${classroom.map(classroomCard).join("")}</div>
       </div>` : "";
 
@@ -333,7 +341,7 @@
       <div class="classroom-block">
         <h3>🐺 From the Wolves classroom</h3>
         <p class="muted">Extra videos, articles &amp; podcasts collected by your class that connect to this topic.
-          <a href="${sb()}/library">Browse the full classroom library →</a></p>
+          <a href="#/library">Browse the full classroom library →</a></p>
         <div class="res-list">${classroom.map(classroomCard).join("")}</div>
       </div>` : "";
     return `<div class="tab-panel">
@@ -361,23 +369,23 @@
       </div>`;
   }
 
-  // ---------- classroom library (Science only) ----------
+  // ---------- classroom library (hub-level, all subjects) ----------
   function viewLibrary() {
-    const subjects = ["All", "Biology", "Chemistry", "Physics", "Earth & Space", "General"];
+    const mods = (CLASS.meta.modules || []).map(m => m.name);
+    const moduleChips = ["All", ...mods].map((s, i) =>
+      `<button class="filter-chip ${i === 0 ? "active" : ""}" data-filter="module" data-val="${esc(s)}">${esc(s)}${s !== "All" ? ` <span class="chip-n">${(CLASS.meta.modules.find(m => m.name === s) || {}).count}</span>` : ""}</button>`).join("");
     const kinds = [["all", "All"], ["video", "Videos"], ["reading", "Reading"], ["podcast", "Podcasts"]];
-    const subChips = subjects.map((s, i) =>
-      `<button class="filter-chip ${i === 0 ? "active" : ""}" data-filter="subject" data-val="${esc(s)}">${esc(s)}</button>`).join("");
     const kindChips = kinds.map((k, i) =>
       `<button class="filter-chip ${i === 0 ? "active" : ""}" data-filter="kind" data-val="${k[0]}">${esc(k[1])}</button>`).join("");
     return `
-      <nav class="breadcrumb">${crumbBase()} › <span>Classroom Library</span></nav>
+      <nav class="breadcrumb"><a href="#/">Subjects</a> › <span>Classroom Library</span></nav>
       <h1>🐺 Wolves classroom library</h1>
-      <p class="topic-summary">${CLASS.meta.count} free science videos, articles and podcasts collected from the
-        Wolves Google Classroom — folded in here as enrichment alongside the curriculum. Search, filter, and open any of them.
-        Where one connects to a curriculum topic, it also appears on that topic's <em>Resources</em>.</p>
+      <p class="topic-summary">${CLASS.meta.count} free videos, articles and podcasts collected across <strong>every subject</strong> of the
+        Wolves Google Classroom — Science, Maths, Finance, History, AI, civics and more. Search, filter by subject and type, and open any of them.
+        Where a resource connects to a curriculum topic, it also appears on that topic's <em>Resources</em>.</p>
       <div class="lib-controls">
         <input id="lib-search" class="lib-search" type="search" placeholder="🔍 Search titles & sources…" />
-        <div class="filter-row"><span class="filter-label">Subject</span>${subChips}</div>
+        <div class="filter-row"><span class="filter-label">Subject</span>${moduleChips}</div>
         <div class="filter-row"><span class="filter-label">Type</span>${kindChips}</div>
       </div>
       <p class="lib-count" id="lib-count"></p>
@@ -385,17 +393,24 @@
       <p class="empty" id="lib-empty" style="display:none">No resources match your filters.</p>`;
   }
 
+  function findTopicAny(id) {
+    for (const s of HUB.subjects) for (const g of s.grades) {
+      const t = g.topics.find(t => t.id === id);
+      if (t) return { topic: t, grade: g, subject: s };
+    }
+    return null;
+  }
   function libraryCard(r) {
     const k = KIND_META[r.kind] || KIND_META.reading;
     const topicPills = (r.topics || []).map(id => {
-      const f = findTopic(id);
-      return f ? `<a class="lib-topic-pill" href="${sb()}/topic/${id}"><span class="dot" style="background:${f.grade.color}"></span>${esc(f.topic.title)}</a>` : "";
+      const f = findTopicAny(id);
+      return f ? `<a class="lib-topic-pill" href="#/${f.subject.id}/topic/${id}"><span class="dot" style="background:${f.grade.color}"></span>${esc(f.topic.title)}</a>` : "";
     }).join("");
     return `
       <div class="res-card classroom lib-card">
         <div class="lib-card-top">
           <span class="res-type ${k.cls}">${k.icon} ${k.label}</span>
-          <span class="chip subject">${esc(r.subject)}</span>
+          <span class="chip subject">${esc(r.module || r.subject)}</span>
         </div>
         <h4>${esc(r.title)}</h4>
         <div class="res-provider">${esc(r.source || "")}</div>
@@ -409,12 +424,12 @@
     const countEl = document.getElementById("lib-count");
     const emptyEl = document.getElementById("lib-empty");
     if (!grid) return;
-    const state = { q: "", subject: "All", kind: "all" };
+    const state = { q: "", module: "All", kind: "all" };
 
     function apply() {
       const q = state.q.trim().toLowerCase();
       const list = CLASS.resources.filter(r => {
-        if (state.subject !== "All" && r.subject !== state.subject) return false;
+        if (state.module !== "All" && r.module !== state.module) return false;
         if (state.kind !== "all" && r.kind !== state.kind) return false;
         if (q && !((r.title || "").toLowerCase().includes(q) || (r.source || "").toLowerCase().includes(q))) return false;
         return true;
@@ -637,10 +652,10 @@
     if (subject) {
       subject.grades.forEach(g => { html += `<a href="#/${subject.id}/grade/${g.id}">${esc(g.name)}</a>`; });
       if (subject.threads && subject.threads.length) html += `<a href="#/${subject.id}/mindmap">Mindmap</a>`;
-      if (subject.hasLibrary && CLASS.meta.count) html += `<a href="#/${subject.id}/library">Library</a>`;
     } else {
       HUB.subjects.forEach(s => { html += `<a href="#/${s.id}">${esc(s.name)}</a>`; });
     }
+    if (CLASS.meta.count) html += `<a href="#/library">Library</a>`;
     nav.innerHTML = html;
   }
 
@@ -668,7 +683,7 @@
   }
 
   // ---------- router ----------
-  const LEGACY = ["grade", "topic", "mindmap", "library"]; // old un-scoped science routes
+  const LEGACY = ["grade", "topic", "mindmap"]; // old un-scoped science links (library is now hub-level)
 
   function renderInSubject(rest) {
     if (rest.length === 0) { main.innerHTML = viewSubjectHome(); return; }
@@ -706,11 +721,7 @@
       window.Mindmap.render(document.getElementById("mindmap-mount"), SUBJ);
       return;
     }
-    if (rest[0] === "library") {
-      if (SUBJ.hasLibrary) { main.innerHTML = viewLibrary(); mountLibrary(); }
-      else main.innerHTML = `<p class="empty">This subject has no classroom library.</p>`;
-      return;
-    }
+    if (rest[0] === "library") { main.innerHTML = viewLibrary(); mountLibrary(); return; } // alias of hub #/library
     main.innerHTML = `<p class="empty">Page not found. <a href="${sb()}">${esc(SUBJ.name)} home</a>.</p>`;
   }
 
@@ -723,6 +734,16 @@
     if (parts.length === 0) {
       renderNav(null);
       main.innerHTML = viewSubjects();
+      setActiveNav(hash);
+      main.focus({ preventScroll: true });
+      return;
+    }
+
+    // hub-level Classroom Library (spans all subjects)
+    if (parts[0] === "library") {
+      renderNav(null);
+      main.innerHTML = viewLibrary();
+      mountLibrary();
       setActiveNav(hash);
       main.focus({ preventScroll: true });
       return;
