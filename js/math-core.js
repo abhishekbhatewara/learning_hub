@@ -19,7 +19,7 @@ window.CURRICULUM_MATH = window.registerSubject({
       "(expressions, factorising, equations). Grade 8 moves into formal algebra, functions, simultaneous " +
       "equations, surds, advanced geometry and data modelling."
   },
-  // short labels for the mindmap (extended as each grade is added)
+  // short labels for the mindmap
   shortLabels: {
     "m6-fractions": "Fractions",
     "m6-ratios": "Ratios",
@@ -29,6 +29,29 @@ window.CURRICULUM_MATH = window.registerSubject({
     "m6-factors": "Factors & Multiples",
     "m6-exponents": "Indices & Roots",
     "m6-sequences": "Sequences & Patterns",
-    "m6-algebra-geometry": "Algebra & Geometry"
+    "m6-algebra-geometry": "Algebra & Geometry",
+    "m7-percentages": "Percentages",
+    "m7-number-system": "Number System",
+    "m7-ratio-proportion": "Ratio, Rate & Proportion",
+    "m7-time-units": "Time, Units & Rates",
+    "m7-sequences": "Sequences",
+    "m7-indices": "Indices & Exponents",
+    "m7-expressions": "Algebraic Expressions",
+    "m7-factorisation": "Factorisation",
+    "m7-algebraic-fractions": "Algebraic Fractions",
+    "m7-polynomials": "Polynomials",
+    "m7-equations": "Equations & Inequalities",
+    "m7-geometry": "Geometry & Measurement",
+    "m7-statistics": "Statistics & Probability",
+    "m8-ratio-finance": "Ratio, Proportion & Finance",
+    "m8-precision": "Precision & Standard Form",
+    "m8-surds": "Indices, Roots & Surds",
+    "m8-algebra": "Advanced Algebra",
+    "m8-linear-functions": "Linear Equations & Functions",
+    "m8-simultaneous": "Simultaneous Equations",
+    "m8-sequences": "Sequences",
+    "m8-geometry": "Advanced Geometry",
+    "m8-data": "Data & Probability",
+    "m8-capstone": "Capstone & Review"
   }
 });

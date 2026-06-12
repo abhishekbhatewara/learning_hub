@@ -41,12 +41,15 @@ window.Mindmap = (function () {
         color: g.color, name: g.name, tagline: g.tagline, id: g.id
       };
       const n = g.topics.length;
-      const span = 58; // total degrees the topics fan across
+      // widen the fan and stagger topics over two rings when a grade has many topics
+      const many = n > 6;
+      const span = many ? 84 : 58; // total degrees the topics fan across
       g.topics.forEach((t, ti) => {
         const a = n === 1 ? base : base - span / 2 + span * (ti / (n - 1));
+        const r = TOPIC_R + (many ? (ti % 2) * 96 : 0); // alternate inner/outer ring
         pos.topics[t.id] = {
-          x: CENTER.x + TOPIC_R * Math.cos(deg2rad(a)),
-          y: CENTER.y + TOPIC_R * Math.sin(deg2rad(a)),
+          x: CENTER.x + r * Math.cos(deg2rad(a)),
+          y: CENTER.y + r * Math.sin(deg2rad(a)),
           color: g.color, gradeId: g.id, icon: t.icon,
           title: (subject.shortLabels || SHORT)[t.id] || t.title, full: t.title, id: t.id
         };
