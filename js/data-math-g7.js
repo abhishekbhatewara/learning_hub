@@ -18,8 +18,8 @@ window.CURRICULUM_MATH.grades.push({
       objectives: [
         { text: "Find the original amount using reverse percentages.",
           resources: [
-            { type: "interactive", title: "Reverse percentages", provider: "BBC Bitesize (KS3)", url: "https://www.bbc.co.uk/bitesize/subjects/zqhs34j", note: "Working back to the original value." },
-            { type: "video", title: "Reverse percentages", provider: "Corbettmaths", url: "https://corbettmaths.com/contents/", note: "Worked examples (search 'reverse percentages')." }
+            { type: "interactive", title: "Percentage Change", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/percentage-change.html", note: "Working backwards from a percentage." },
+            { type: "interactive", title: "Khan Academy: Percentages", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Reverse-percentage problems." }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "A price is £60 after a 20% increase. The original price was:", options: ["£48", "£50", "£72", "£45"], answer: 1, explanation: "Original × 1.2 = 60, so original = 60 ÷ 1.2 = £50." },
@@ -37,7 +37,7 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Calculate percentage change.",
           resources: [
             { type: "interactive", title: "Percentage Change", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/percentage-change.html", note: "Change as a percentage of the original." },
-            { type: "video", title: "Percentage change", provider: "Corbettmaths", url: "https://corbettmaths.com/contents/", note: "Worked examples (search 'percentage change')." }
+            { type: "interactive", title: "Khan Academy: Percentage change", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Percentage increase and decrease." }
           ],
           quiz: [
             { type: "numeric", difficulty: "medium", q: "A value rises from 40 to 50. What is the percentage increase? (number only)", answer: "25", explanation: "Change = 10; 10 ÷ 40 × 100 = 25%." },
@@ -45,7 +45,7 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "Work out repeated percentage changes.",
           resources: [
-            { type: "interactive", title: "Repeated percentage change", provider: "BBC Bitesize (KS3)", url: "https://www.bbc.co.uk/bitesize/subjects/zqhs34j", note: "Applying multipliers more than once." },
+            { type: "interactive", title: "Percentage Change", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/percentage-change.html", note: "Applying a percentage change more than once." },
             { type: "interactive", title: "Percentages", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Multi-step percentage problems." }
           ],
           quiz: [
@@ -63,7 +63,7 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "Apply percentages to real-life situations.",
           resources: [
-            { type: "interactive", title: "Percentages in real life", provider: "BBC Bitesize (KS3)", url: "https://www.bbc.co.uk/bitesize/subjects/zqhs34j", note: "VAT, discounts and tips." },
+            { type: "interactive", title: "Percentages", provider: "Math is Fun", url: "https://www.mathsisfun.com/percentage.html", note: "Percentages in real situations." },
             { type: "interactive", title: "Percentage word problems", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Apply to contexts." }
           ],
           quiz: [
@@ -110,7 +110,7 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "Begin working with surds.",
           resources: [
-            { type: "interactive", title: "Surds", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/z38pycw", note: "Roots that cannot be simplified to whole numbers." },
+            { type: "interactive", title: "Simplifying Square Roots", provider: "Math is Fun", url: "https://www.mathsisfun.com/surds.html", note: "Simplifying roots and surds." },
             { type: "interactive", title: "Square roots", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Simplifying roots." }
           ],
           quiz: [
@@ -129,7 +129,7 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Add, subtract, multiply and divide rational numbers.",
           resources: [
             { type: "interactive", title: "Rational number operations", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "All four operations." },
-            { type: "video", title: "Operations with fractions & negatives", provider: "Corbettmaths", url: "https://corbettmaths.com/contents/", note: "Worked examples." }
+            { type: "interactive", title: "Rational Numbers", provider: "Math is Fun", url: "https://www.mathsisfun.com/rational-numbers.html", note: "Operations with rational numbers." }
           ],
           quiz: [
             { type: "numeric", difficulty: "medium", q: "Work out −3/4 + 1/4. Give your answer as a decimal.", answer: "-0.5", explanation: "−3/4 + 1/4 = −2/4 = −1/2 = −0.5." },
@@ -158,7 +158,7 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Simplify ratios.",
           resources: [
             { type: "interactive", title: "Simplifying ratios", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/ratio.html", note: "Divide by the common factor." },
-            { type: "video", title: "Simplifying ratios", provider: "Corbettmaths", url: "https://corbettmaths.com/contents/", note: "Worked examples." }
+            { type: "interactive", title: "Khan Academy: Simplifying ratios", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Practice simplifying ratios." }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Simplify 15:25.", options: ["3:5", "5:3", "1:2", "15:25"], answer: 0, explanation: "Divide both by 5: 15:25 = 3:5." },
@@ -220,8 +220,8 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "Compare value for money (best-buy problems).",
           resources: [
-            { type: "interactive", title: "Best buy", provider: "BBC Bitesize (KS3)", url: "https://www.bbc.co.uk/bitesize/subjects/zqhs34j", note: "Comparing unit prices." },
-            { type: "video", title: "Best buys", provider: "Corbettmaths", url: "https://corbettmaths.com/contents/", note: "Worked examples (search 'best buys')." }
+            { type: "interactive", title: "Unit Rates", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/ratio.html", note: "Comparing value using unit rates." },
+            { type: "interactive", title: "Khan Academy: Best-buy problems", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Worked best-buy comparisons." }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "Which is better value: 500 g for £2, or 800 g for £3?", options: ["500 g for £2", "800 g for £3", "they are the same", "cannot tell"], answer: 1, explanation: "£2/500 g = 0.40p/g; £3/800 g = 0.375p/g — the 800 g pack is cheaper per gram." },
@@ -229,7 +229,7 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "Solve contextual problems involving speed, density and recipes.",
           resources: [
-            { type: "interactive", title: "Speed, distance, time", provider: "BBC Bitesize (KS3)", url: "https://www.bbc.co.uk/bitesize/subjects/zqhs34j", note: "Rate formulas in context." },
+            { type: "interactive", title: "Direct & Inverse Proportion", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/directly-inversely-proportional.html", note: "Speed as a rate (distance over time)." },
             { type: "interactive", title: "Rates in context", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Speed, density and more." }
           ],
           quiz: [
@@ -250,7 +250,7 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Convert between area and volume units.",
           resources: [
             { type: "interactive", title: "Unit conversion", provider: "Math is Fun", url: "https://www.mathsisfun.com/measure/unit-conversion-tool.html", note: "Area and volume conversions." },
-            { type: "interactive", title: "Units of area & volume", provider: "BBC Bitesize (KS3)", url: "https://www.bbc.co.uk/bitesize/subjects/zqhs34j", note: "cm², m², cm³, m³." }
+            { type: "interactive", title: "Khan Academy: Units of area & volume", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Converting area and volume units." }
           ],
           quiz: [
             { type: "numeric", difficulty: "medium", q: "How many cm² are in 1 m²?", answer: "10000", explanation: "1 m = 100 cm, so 1 m² = 100 × 100 = 10,000 cm²." },
@@ -259,7 +259,7 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Work with hours, minutes and seconds.",
           resources: [
             { type: "interactive", title: "Time", provider: "Math is Fun", url: "https://www.mathsisfun.com/time.html", note: "Units of time." },
-            { type: "interactive", title: "Time", provider: "BBC Bitesize (KS3)", url: "https://www.bbc.co.uk/bitesize/subjects/zqhs34j", note: "Converting between time units." }
+            { type: "interactive", title: "Khan Academy: Working with time", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Units of time and conversions." }
           ],
           quiz: [
             { type: "numeric", difficulty: "easy", q: "How many seconds are in 3 minutes?", answer: "180", explanation: "3 × 60 = 180 seconds." },
@@ -268,7 +268,7 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Use the 12-hour and 24-hour clock.",
           resources: [
             { type: "interactive", title: "24-Hour Clock", provider: "Math is Fun", url: "https://www.mathsisfun.com/time.html", note: "Converting between clock formats." },
-            { type: "interactive", title: "Clocks & time", provider: "BBC Bitesize (KS3)", url: "https://www.bbc.co.uk/bitesize/subjects/zqhs34j", note: "12 and 24-hour clocks." }
+            { type: "interactive", title: "Khan Academy: 12 & 24-hour clock", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Reading the 12 and 24-hour clock." }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "3:45 pm on the 24-hour clock is:", options: ["03:45", "13:45", "15:45", "17:45"], answer: 2, explanation: "Add 12 to the pm hour: 3 + 12 = 15, so 15:45." },
@@ -276,8 +276,8 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "Add and subtract time.",
           resources: [
-            { type: "interactive", title: "Adding & subtracting time", provider: "BBC Bitesize (KS3)", url: "https://www.bbc.co.uk/bitesize/subjects/zqhs34j", note: "Time calculations." },
-            { type: "video", title: "Time calculations", provider: "Corbettmaths", url: "https://corbettmaths.com/contents/", note: "Worked examples (search 'time')." }
+            { type: "interactive", title: "Time", provider: "Math is Fun", url: "https://www.mathsisfun.com/time.html", note: "Adding and subtracting time." },
+            { type: "interactive", title: "Khan Academy: Time calculations", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Worked time calculations." }
           ],
           quiz: [
             { type: "short", difficulty: "medium", q: "A film starts at 19:40 and lasts 2 h 35 min. What time does it end?", answer: "22:15. Add 2 h to get 21:40, then 35 min to reach 22:15.", explanation: "Add hours then minutes, carrying over 60 min into an hour." },
@@ -285,7 +285,7 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "Work with time zones.",
           resources: [
-            { type: "interactive", title: "Time zones", provider: "BBC Bitesize (KS3)", url: "https://www.bbc.co.uk/bitesize/subjects/zqhs34j", note: "Calculating across zones." },
+            { type: "interactive", title: "Time", provider: "Math is Fun", url: "https://www.mathsisfun.com/time.html", note: "Calculating across time zones." },
             { type: "interactive", title: "Time zones", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Time difference problems." }
           ],
           quiz: [
@@ -295,7 +295,7 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Solve work-rate ('men and days') problems.",
           resources: [
             { type: "interactive", title: "Inverse proportion", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/directly-inversely-proportional.html", note: "More workers, less time." },
-            { type: "video", title: "Work-rate problems", provider: "Corbettmaths", url: "https://corbettmaths.com/contents/", note: "Worked examples." }
+            { type: "interactive", title: "Khan Academy: Inverse proportion", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Worked 'men and days' problems." }
           ],
           quiz: [
             { type: "numeric", difficulty: "medium", q: "If 4 workers build a wall in 6 days, how many days for 8 workers (same rate)?", answer: "3", explanation: "Twice as many workers → half the time: 6 ÷ 2 = 3 days." },
@@ -303,7 +303,7 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "Solve distance-time problems.",
           resources: [
-            { type: "interactive", title: "Speed, distance, time", provider: "BBC Bitesize (KS3)", url: "https://www.bbc.co.uk/bitesize/subjects/zqhs34j", note: "The distance-speed-time triangle." },
+            { type: "interactive", title: "Direct & Inverse Proportion", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/directly-inversely-proportional.html", note: "Speed as a rate (distance over time)." },
             { type: "interactive", title: "Rates", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Distance and time." }
           ],
           quiz: [
@@ -350,8 +350,8 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "State the rule of a pattern.",
           resources: [
-            { type: "interactive", title: "Describing sequences", provider: "BBC Bitesize (KS3)", url: "https://www.bbc.co.uk/bitesize/subjects/zqhs34j", note: "Term-to-term rules." },
-            { type: "video", title: "Sequences", provider: "Corbettmaths", url: "https://corbettmaths.com/contents/", note: "Worked examples (search 'sequences')." }
+            { type: "interactive", title: "Number Patterns", provider: "Math is Fun", url: "https://www.mathsisfun.com/numberpatterns.html", note: "Stating the rule of a sequence." },
+            { type: "interactive", title: "Khan Academy: Sequences", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Number sequences and rules." }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "For 7, 12, 17, 22… the term-to-term rule is:", options: ["+4", "+5", "×2", "+7"], answer: 1, explanation: "Each term is 5 more than the previous one." },
@@ -368,8 +368,8 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "Predict terms using a position-to-term (nth term) rule.",
           resources: [
-            { type: "interactive", title: "The nth term", provider: "BBC Bitesize (KS3)", url: "https://www.bbc.co.uk/bitesize/subjects/zqhs34j", note: "Position-to-term rules." },
-            { type: "video", title: "nth term", provider: "Corbettmaths", url: "https://corbettmaths.com/contents/", note: "Worked examples (search 'nth term')." }
+            { type: "interactive", title: "Sequences & Series", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/sequences-series.html", note: "Position-to-term (nth term) rules." },
+            { type: "interactive", title: "Khan Academy: nth term", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Finding and using the nth term." }
           ],
           quiz: [
             { type: "numeric", difficulty: "medium", q: "The nth term is 4n − 1. Find the 5th term.", answer: "19", explanation: "4 × 5 − 1 = 19." },
@@ -398,7 +398,7 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Add, subtract and multiply powers correctly.",
           resources: [
             { type: "interactive", title: "Exponent laws", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/exponent-laws.html", note: "Power of a power." },
-            { type: "video", title: "Indices", provider: "Corbettmaths", url: "https://corbettmaths.com/contents/", note: "Worked examples (search 'indices')." }
+            { type: "interactive", title: "Khan Academy: Exponent properties", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice with the index laws." }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "(x²)³ = ?", options: ["x⁵", "x⁶", "x⁸", "x⁹"], answer: 1, explanation: "Power of a power: multiply, 2 × 3 = 6." },
@@ -451,7 +451,7 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "Apply index laws to algebraic expressions.",
           resources: [
-            { type: "interactive", title: "Index laws in algebra", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/z38pycw", note: "Simplifying algebraic powers." },
+            { type: "interactive", title: "Laws of Exponents", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/exponent-laws.html", note: "Index laws applied to algebra." },
             { type: "interactive", title: "Exponents in algebra", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." }
           ],
           quiz: [
@@ -500,8 +500,8 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "Expand single brackets.",
           resources: [
-            { type: "interactive", title: "Expanding brackets", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/z38pycw", note: "Multiplying out a bracket." },
-            { type: "video", title: "Expanding brackets", provider: "Corbettmaths", url: "https://corbettmaths.com/contents/", note: "Worked examples." }
+            { type: "interactive", title: "Multiplying Polynomials", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/polynomials-multiplying.html", note: "Multiplying out a bracket." },
+            { type: "interactive", title: "Khan Academy: Expanding brackets", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Worked expansions." }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Expand x(x + 3).", options: ["x² + 3", "x² + 3x", "2x + 3", "x + 3x"], answer: 1, explanation: "x × x = x² and x × 3 = 3x." },
@@ -519,7 +519,7 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Square a binomial.",
           resources: [
             { type: "interactive", title: "Perfect square expansion", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/polynomials-multiplying.html", note: "(a + b)² = a² + 2ab + b²." },
-            { type: "video", title: "Squaring brackets", provider: "Corbettmaths", url: "https://corbettmaths.com/contents/", note: "Worked examples." }
+            { type: "interactive", title: "Khan Academy: Squaring binomials", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Squaring a bracket." }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "(x + 3)² = ?", options: ["x² + 9", "x² + 6x + 9", "x² + 3x + 9", "x² + 6x + 6"], answer: 1, explanation: "(x+3)² = x² + 2(3)x + 9 = x² + 6x + 9." },
@@ -545,7 +545,7 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "Work with rational (fractional) coefficients.",
           resources: [
-            { type: "interactive", title: "Algebra with fractions", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/z38pycw", note: "Fractional coefficients." },
+            { type: "interactive", title: "Algebra Index", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/index.html", note: "Working with fractional coefficients." },
             { type: "interactive", title: "Expressions", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." }
           ],
           quiz: [
@@ -583,8 +583,8 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "Carry out simple factorisation (common factors).",
           resources: [
-            { type: "interactive", title: "Common factors", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/z38pycw", note: "Taking out the HCF." },
-            { type: "video", title: "Factorising", provider: "Corbettmaths", url: "https://corbettmaths.com/contents/", note: "Worked examples." }
+            { type: "interactive", title: "Factoring", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/factoring.html", note: "Taking out the highest common factor." },
+            { type: "interactive", title: "Khan Academy: Factoring", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Worked factorising examples." }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Factorise 5x + 10.", options: ["5(x + 2)", "5(x + 10)", "x(5 + 10)", "10(x + 1)"], answer: 0, explanation: "HCF 5: 5(x + 2)." },
@@ -620,7 +620,7 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Factorise quadratics by splitting the middle term.",
           resources: [
             { type: "interactive", title: "Factoring quadratics", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/factoring-quadratics.html", note: "Finding two numbers that multiply and add." },
-            { type: "video", title: "Factorising quadratics", provider: "Corbettmaths", url: "https://corbettmaths.com/contents/", note: "Worked examples." }
+            { type: "interactive", title: "Khan Academy: Factoring quadratics", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Splitting the middle term." }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "Factorise x² + 5x + 6.", options: ["(x + 2)(x + 3)", "(x + 1)(x + 6)", "(x + 2)(x + 4)", "(x − 2)(x − 3)"], answer: 0, explanation: "2 and 3 multiply to 6 and add to 5." },
@@ -628,7 +628,7 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "Find the HCF and LCM of algebraic terms.",
           resources: [
-            { type: "interactive", title: "HCF & LCM of terms", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/z38pycw", note: "Highest common factor of algebraic terms." },
+            { type: "interactive", title: "Factoring", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/factoring.html", note: "HCF and LCM of algebraic terms." },
             { type: "interactive", title: "GCF of monomials", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." }
           ],
           quiz: [
@@ -648,8 +648,8 @@ window.CURRICULUM_MATH.grades.push({
       objectives: [
         { text: "Add and subtract algebraic fractions.",
           resources: [
-            { type: "interactive", title: "Algebraic fractions", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/z38pycw", note: "Common denominators with letters." },
-            { type: "video", title: "Adding algebraic fractions", provider: "Corbettmaths", url: "https://corbettmaths.com/contents/", note: "Worked examples." }
+            { type: "interactive", title: "Algebra Index", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/index.html", note: "Adding and subtracting algebraic fractions." },
+            { type: "interactive", title: "Khan Academy: Algebraic fractions", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Worked algebraic-fraction examples." }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "x/3 + x/3 = ?", options: ["2x/3", "x/3", "2x/6", "x²/3"], answer: 0, explanation: "Same denominator: add the tops, x + x = 2x → 2x/3." },
@@ -675,7 +675,7 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "Find the HCF and LCM of algebraic expressions and fractions.",
           resources: [
-            { type: "interactive", title: "HCF & LCM (algebra)", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/z38pycw", note: "Common denominators for algebraic fractions." },
+            { type: "interactive", title: "Factoring", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/factoring.html", note: "Common denominators for algebraic fractions." },
             { type: "interactive", title: "LCM of denominators", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." }
           ],
           quiz: [
@@ -752,7 +752,7 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Solve two-step equations.",
           resources: [
             { type: "interactive", title: "Two-step equations", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Two inverse operations." },
-            { type: "video", title: "Two-step equations", provider: "Corbettmaths", url: "https://corbettmaths.com/contents/", note: "Worked examples." }
+            { type: "interactive", title: "Linear Equations", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/linear-equations.html", note: "Solving two-step equations." }
           ],
           quiz: [
             { type: "numeric", difficulty: "easy", q: "Solve 2x + 3 = 11. What is x?", answer: "4", explanation: "Subtract 3 then divide by 2: x = 8 ÷ 2 = 4." },
@@ -778,8 +778,8 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "Form and solve equations from word problems.",
           resources: [
-            { type: "interactive", title: "Forming equations", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/z38pycw", note: "Turning words into algebra." },
-            { type: "video", title: "Forming equations", provider: "Corbettmaths", url: "https://corbettmaths.com/contents/", note: "Worked examples." }
+            { type: "interactive", title: "Linear Equations", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/linear-equations.html", note: "Turning words into equations." },
+            { type: "interactive", title: "Khan Academy: Forming equations", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Worked word-problem equations." }
           ],
           quiz: [
             { type: "short", difficulty: "medium", q: "I think of a number, multiply by 3 and add 4 to get 19. Form and solve an equation.", answer: "3x + 4 = 19 → 3x = 15 → x = 5.", explanation: "Translate the words, then solve." },
@@ -808,8 +808,8 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "Find the area of composite shapes.",
           resources: [
-            { type: "interactive", title: "Composite area", provider: "BBC Bitesize (KS3)", url: "https://www.bbc.co.uk/bitesize/subjects/zqhs34j", note: "Splitting into simple shapes." },
-            { type: "video", title: "Area of compound shapes", provider: "Corbettmaths", url: "https://corbettmaths.com/contents/", note: "Worked examples." }
+            { type: "interactive", title: "Area", provider: "Math is Fun", url: "https://www.mathsisfun.com/area.html", note: "Splitting shapes to find composite area." },
+            { type: "interactive", title: "Khan Academy: Area of composite figures", provider: "Khan Academy", url: "https://www.khanacademy.org/math/basic-geo", note: "Worked compound-area examples." }
           ],
           quiz: [
             { type: "numeric", difficulty: "medium", q: "An L-shape is a 6×4 rectangle plus a 3×2 rectangle. What is the total area?", answer: "30", explanation: "24 + 6 = 30 square units." },
@@ -817,7 +817,7 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "Use and interpret scale drawings.",
           resources: [
-            { type: "interactive", title: "Scale drawings", provider: "BBC Bitesize (KS3)", url: "https://www.bbc.co.uk/bitesize/subjects/zqhs34j", note: "Using a map scale." },
+            { type: "interactive", title: "Khan Academy: Scale drawings", provider: "Khan Academy", url: "https://www.khanacademy.org/math/geometry", note: "Using a scale to find real lengths." },
             { type: "interactive", title: "Scale", provider: "Math is Fun", url: "https://www.mathsisfun.com/geometry/index.html", note: "Scale and ratio." }
           ],
           quiz: [
@@ -846,7 +846,7 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "Solve real-world volume problems.",
           resources: [
-            { type: "interactive", title: "Volume problems", provider: "BBC Bitesize (KS3)", url: "https://www.bbc.co.uk/bitesize/subjects/zqhs34j", note: "Volume in context." },
+            { type: "interactive", title: "Prisms (Volume)", provider: "Math is Fun", url: "https://www.mathsisfun.com/geometry/prisms.html", note: "Volume in real-world contexts." },
             { type: "interactive", title: "Volume", provider: "Khan Academy", url: "https://www.khanacademy.org/math/basic-geo", note: "Word problems." }
           ],
           quiz: [
@@ -886,7 +886,7 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Understand sampling.",
           resources: [
             { type: "interactive", title: "Sampling", provider: "Khan Academy", url: "https://www.khanacademy.org/math/statistics-probability", note: "Representative samples." },
-            { type: "interactive", title: "Data sampling", provider: "BBC Bitesize (KS3)", url: "https://www.bbc.co.uk/bitesize/subjects/zqhs34j", note: "Fair samples." }
+            { type: "interactive", title: "Data Index", provider: "Math is Fun", url: "https://www.mathsisfun.com/data/index.html", note: "Fair, representative samples." }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "A good sample should be:", options: ["large and representative", "small and biased", "only your friends", "the whole population always"], answer: 0, explanation: "Larger, representative samples give reliable results." },
@@ -912,7 +912,7 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "Interpret graphs.",
           resources: [
-            { type: "interactive", title: "Interpreting graphs", provider: "BBC Bitesize (KS3)", url: "https://www.bbc.co.uk/bitesize/subjects/zqhs34j", note: "Reading and describing graphs." },
+            { type: "interactive", title: "Data Index", provider: "Math is Fun", url: "https://www.mathsisfun.com/data/index.html", note: "Reading and describing graphs." },
             { type: "interactive", title: "Graph interpretation", provider: "Khan Academy", url: "https://www.khanacademy.org/math/statistics-probability", note: "Practice." }
           ],
           quiz: [

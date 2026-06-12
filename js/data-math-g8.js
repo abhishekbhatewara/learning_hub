@@ -18,7 +18,7 @@ window.CURRICULUM_MATH.grades.push({
       objectives: [
         { text: "Solve ratio problems involving algebra.",
           resources: [
-            { type: "interactive", title: "Ratio problems", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/z38pycw", note: "Algebraic ratio reasoning." },
+            { type: "interactive", title: "Ratios", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/ratio.html", note: "Algebraic ratio problems." },
             { type: "interactive", title: "Ratios", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-eighth-grade-math", note: "Practice." }
           ],
           quiz: [
@@ -46,7 +46,7 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Calculate compound interest.",
           resources: [
             { type: "interactive", title: "Compound Interest", provider: "Math is Fun", url: "https://www.mathsisfun.com/money/compound-interest.html", note: "Interest on interest." },
-            { type: "interactive", title: "Compound interest", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/z38pycw", note: "The multiplier method." }
+            { type: "interactive", title: "Interest (simple & compound)", provider: "Math is Fun", url: "https://www.mathsisfun.com/money/interest.html", note: "How interest is calculated." }
           ],
           quiz: [
             { type: "numeric", difficulty: "medium", q: "£100 at 10% compound interest for 2 years. What is the final amount (£)?", answer: "121", explanation: "100 × 1.1 × 1.1 = £121." },
@@ -63,7 +63,7 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "Calculate depreciation.",
           resources: [
-            { type: "interactive", title: "Depreciation", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/z38pycw", note: "Reducing value over time." },
+            { type: "interactive", title: "Money & financial maths", provider: "Math is Fun", url: "https://www.mathsisfun.com/money/index.html", note: "Value falling over time." },
             { type: "interactive", title: "Percentage decrease", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/percentage-change.html", note: "Repeated decrease." }
           ],
           quiz: [
@@ -73,7 +73,7 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Apply percentage change to financial problems.",
           resources: [
             { type: "interactive", title: "Percentage change", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/percentage-change.html", note: "Increases and decreases in money." },
-            { type: "interactive", title: "Financial maths", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/z38pycw", note: "Real-life percentages." }
+            { type: "interactive", title: "Money & financial maths", provider: "Math is Fun", url: "https://www.mathsisfun.com/money/index.html", note: "Real-life financial percentages." }
           ],
           quiz: [
             { type: "numeric", difficulty: "medium", q: "A salary rises from £20,000 to £22,000. What is the percentage increase? (number only)", answer: "10", explanation: "Change £2000; 2000 ÷ 20,000 × 100 = 10%." },
@@ -93,7 +93,7 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Round to a given number of significant figures.",
           resources: [
             { type: "interactive", title: "Significant Figures", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/significant-figures.html", note: "Counting and rounding sig figs." },
-            { type: "video", title: "Significant figures", provider: "Corbettmaths", url: "https://corbettmaths.com/contents/", note: "Worked examples." }
+            { type: "interactive", title: "Khan Academy: Significant figures", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-eighth-grade-math", note: "Worked rounding to sig figs." }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "452 to 2 significant figures is:", options: ["450", "460", "400", "452"], answer: 0, explanation: "The first two sig figs are 4 and 5; the next digit 2 rounds down → 450." },
@@ -110,8 +110,8 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "Find upper and lower bounds of rounded values.",
           resources: [
-            { type: "interactive", title: "Bounds", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/z38pycw", note: "Limits of accuracy." },
-            { type: "video", title: "Bounds", provider: "Corbettmaths", url: "https://corbettmaths.com/contents/", note: "Worked examples (search 'bounds')." }
+            { type: "interactive", title: "Rounding Numbers", provider: "Math is Fun", url: "https://www.mathsisfun.com/rounding-numbers.html", note: "Upper and lower bounds of rounded values." },
+            { type: "interactive", title: "Khan Academy: Bounds", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-eighth-grade-math", note: "Worked bounds examples." }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "A length is 8 cm to the nearest cm. The lower bound is:", options: ["7.5 cm", "7 cm", "8.5 cm", "8 cm"], answer: 0, explanation: "Half a unit below: 8 − 0.5 = 7.5 cm." },
@@ -119,7 +119,7 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "Express bounds using inequalities.",
           resources: [
-            { type: "interactive", title: "Error intervals", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/z38pycw", note: "Writing bounds as inequalities." },
+            { type: "interactive", title: "Khan Academy: Error intervals", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-eighth-grade-math", note: "Writing bounds as inequalities." },
             { type: "interactive", title: "Inequalities", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/inequality.html", note: "Inequality notation." }
           ],
           quiz: [
@@ -137,7 +137,7 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "Use standard form for small numbers.",
           resources: [
-            { type: "interactive", title: "Standard form (small numbers)", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/z38pycw", note: "Negative powers of 10." },
+            { type: "interactive", title: "Khan Academy: Standard form", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-eighth-grade-math", note: "Negative powers of 10." },
             { type: "interactive", title: "Scientific notation", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/scientific-notation.html", note: "Tiny numbers." }
           ],
           quiz: [
@@ -146,7 +146,7 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "Calculate with numbers in scientific notation.",
           resources: [
-            { type: "interactive", title: "Operations in standard form", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/z38pycw", note: "Multiplying and dividing." },
+            { type: "interactive", title: "Scientific Notation", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/scientific-notation.html", note: "Multiplying and dividing in standard form." },
             { type: "interactive", title: "Scientific notation", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-eighth-grade-math", note: "Practice." }
           ],
           quiz: [
@@ -184,7 +184,7 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "Solve equations involving indices.",
           resources: [
-            { type: "interactive", title: "Solving index equations", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/z38pycw", note: "Matching bases and powers." },
+            { type: "interactive", title: "Laws of Exponents", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/exponent-laws.html", note: "Matching bases and powers." },
             { type: "interactive", title: "Exponential equations", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." }
           ],
           quiz: [
@@ -193,7 +193,7 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "Distinguish pure and mixed surds.",
           resources: [
-            { type: "interactive", title: "Surds", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/z38pycw", note: "Pure vs mixed surds." },
+            { type: "interactive", title: "Simplifying Square Roots", provider: "Math is Fun", url: "https://www.mathsisfun.com/surds.html", note: "Pure and mixed surds." },
             { type: "interactive", title: "Simplifying surds", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." }
           ],
           quiz: [
@@ -202,7 +202,7 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "Use conjugates of surd expressions.",
           resources: [
-            { type: "interactive", title: "Conjugates", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/conjugate-math.html", note: "Pairs that remove the surd." },
+            { type: "interactive", title: "Conjugates", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/conjugate.html", note: "Pairs that remove the surd." },
             { type: "interactive", title: "Surds", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." }
           ],
           quiz: [
@@ -211,7 +211,7 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "Square and square-root surds.",
           resources: [
-            { type: "interactive", title: "Operations with surds", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/z38pycw", note: "Squaring surds." },
+            { type: "interactive", title: "Simplifying Square Roots", provider: "Math is Fun", url: "https://www.mathsisfun.com/surds.html", note: "Squaring and simplifying surds." },
             { type: "interactive", title: "Surds", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." }
           ],
           quiz: [
@@ -220,8 +220,8 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "Simplify surds by prime factorisation.",
           resources: [
-            { type: "interactive", title: "Simplifying Square Roots", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/simplifying-square-roots.html", note: "Take out square factors." },
-            { type: "video", title: "Simplifying surds", provider: "Corbettmaths", url: "https://corbettmaths.com/contents/", note: "Worked examples (search 'surds')." }
+            { type: "interactive", title: "Simplifying Square Roots", provider: "Math is Fun", url: "https://www.mathsisfun.com/surds.html", note: "Take out square factors." },
+            { type: "interactive", title: "Khan Academy: Simplifying surds", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Worked surd simplification." }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "Simplify √50.", options: ["5√2", "2√5", "25√2", "5√5"], answer: 0, explanation: "√50 = √25 × √2 = 5√2." },
@@ -229,7 +229,7 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "Add, subtract and multiply surds.",
           resources: [
-            { type: "interactive", title: "Operations on surds", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/z38pycw", note: "Combining like surds." },
+            { type: "interactive", title: "Simplifying Square Roots", provider: "Math is Fun", url: "https://www.mathsisfun.com/surds.html", note: "Adding, subtracting and multiplying surds." },
             { type: "interactive", title: "Surds", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." }
           ],
           quiz: [
@@ -238,7 +238,7 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "Rationalise the denominator.",
           resources: [
-            { type: "interactive", title: "Rationalising denominators", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/z38pycw", note: "Removing surds from the bottom." },
+            { type: "interactive", title: "Conjugates", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/conjugate.html", note: "Removing surds from the denominator." },
             { type: "interactive", title: "Rationalize the denominator", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." }
           ],
           quiz: [
@@ -268,7 +268,7 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Factorise by splitting the middle term.",
           resources: [
             { type: "interactive", title: "Splitting the middle term", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "For ax² + bx + c." },
-            { type: "video", title: "Factorising harder quadratics", provider: "Corbettmaths", url: "https://corbettmaths.com/contents/", note: "Worked examples." }
+            { type: "interactive", title: "Factoring Quadratics", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/factoring-quadratics.html", note: "Splitting the middle term." }
           ],
           quiz: [
             { type: "mcq", difficulty: "hard", q: "Factorise 2x² + 7x + 3 by splitting the middle term.", options: ["(2x + 1)(x + 3)", "(2x + 3)(x + 1)", "(x + 1)(x + 3)", "(2x + 1)(x + 1)"], answer: 0, explanation: "Split 7x into 6x + x: 2x(x+3) + 1(x+3) = (2x+1)(x+3)." },
@@ -285,7 +285,7 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "Simplify algebraic fractions with algebraic denominators.",
           resources: [
-            { type: "interactive", title: "Algebraic fractions", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/z38pycw", note: "Cancelling common factors." },
+            { type: "interactive", title: "Algebra Index", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/index.html", note: "Simplifying algebraic fractions." },
             { type: "interactive", title: "Rational expressions", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." }
           ],
           quiz: [
@@ -294,8 +294,8 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "Form equations from situations.",
           resources: [
-            { type: "interactive", title: "Forming equations", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/z38pycw", note: "Words to algebra." },
-            { type: "video", title: "Forming equations", provider: "Corbettmaths", url: "https://corbettmaths.com/contents/", note: "Worked examples." }
+            { type: "interactive", title: "Linear Equations", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/linear-equations.html", note: "Turning situations into equations." },
+            { type: "interactive", title: "Khan Academy: Forming equations", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Worked word-problem equations." }
           ],
           quiz: [
             { type: "short", difficulty: "medium", q: "The sum of a number and 7 is 20. Form and solve an equation.", answer: "x + 7 = 20 → x = 13.", explanation: "Write the relationship as an equation, then solve." },
@@ -312,7 +312,7 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "Change the subject of a formula.",
           resources: [
-            { type: "interactive", title: "Changing the subject", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/z38pycw", note: "Rearranging formulae." },
+            { type: "interactive", title: "Algebra Index", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/index.html", note: "Rearranging formulae." },
             { type: "interactive", title: "Rearranging formulas", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." }
           ],
           quiz: [
@@ -321,7 +321,7 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "Transpose formulae and model multi-step problems.",
           resources: [
-            { type: "interactive", title: "Transposition", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/z38pycw", note: "Rearranging multi-term formulae." },
+            { type: "interactive", title: "Algebra Index", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/index.html", note: "Rearranging multi-term formulae." },
             { type: "interactive", title: "Algebraic modelling", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." }
           ],
           quiz: [
@@ -478,8 +478,8 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "Solve word problems with simultaneous equations.",
           resources: [
-            { type: "interactive", title: "Systems word problems", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Forming two equations." },
-            { type: "video", title: "Simultaneous equations problems", provider: "Corbettmaths", url: "https://corbettmaths.com/contents/", note: "Worked examples." }
+            { type: "interactive", title: "Systems word problems", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Forming two equations from a problem." },
+            { type: "interactive", title: "Systems of Linear Equations", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/systems-linear-equations.html", note: "Worked simultaneous-equation problems." }
           ],
           quiz: [
             { type: "short", difficulty: "hard", q: "2 apples and 1 banana cost £5; 1 apple and 1 banana cost £3. Find the cost of an apple.", answer: "Subtract the equations: (2a + b) − (a + b) = 5 − 3 → a = £2.", explanation: "Eliminating b leaves the price of an apple." },
@@ -516,8 +516,8 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "Find the rule (nth term) of a linear sequence.",
           resources: [
-            { type: "interactive", title: "nth term", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/z38pycw", note: "Finding the formula." },
-            { type: "video", title: "nth term", provider: "Corbettmaths", url: "https://corbettmaths.com/contents/", note: "Worked examples." }
+            { type: "interactive", title: "Sequences & Series", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/sequences-series.html", note: "Finding the nth-term formula." },
+            { type: "interactive", title: "Khan Academy: nth term", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Worked nth-term examples." }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "The nth term of 5, 8, 11, 14… is:", options: ["3n + 2", "5n", "3n + 5", "2n + 3"], answer: 0, explanation: "Common difference 3, and 3(1) + 2 = 5: rule is 3n + 2." },
@@ -545,7 +545,7 @@ window.CURRICULUM_MATH.grades.push({
       objectives: [
         { text: "Use scale drawings and map scales.",
           resources: [
-            { type: "interactive", title: "Scale drawings", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/z38pycw", note: "Real lengths from a scale." },
+            { type: "interactive", title: "Khan Academy: Scale drawings", provider: "Khan Academy", url: "https://www.khanacademy.org/math/geometry", note: "Real lengths from a scale." },
             { type: "interactive", title: "Scale", provider: "Math is Fun", url: "https://www.mathsisfun.com/geometry/index.html", note: "Scale and ratio." }
           ],
           quiz: [
@@ -590,7 +590,7 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "Find the effect of scaling on perimeter and area.",
           resources: [
-            { type: "interactive", title: "Scaling area", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/z38pycw", note: "Length, area and volume scale factors." },
+            { type: "interactive", title: "Similar Shapes", provider: "Math is Fun", url: "https://www.mathsisfun.com/geometry/similar.html", note: "How area scales with length." },
             { type: "interactive", title: "Similar shapes & area", provider: "Khan Academy", url: "https://www.khanacademy.org/math/geometry", note: "Practice." }
           ],
           quiz: [
@@ -619,7 +619,7 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Find the hypotenuse of a right triangle.",
           resources: [
             { type: "interactive", title: "Finding the hypotenuse", provider: "Math is Fun", url: "https://www.mathsisfun.com/geometry/pythagorean-theorem.html", note: "c = √(a² + b²)." },
-            { type: "video", title: "Pythagoras — hypotenuse", provider: "Corbettmaths", url: "https://corbettmaths.com/contents/", note: "Worked examples." }
+            { type: "interactive", title: "Khan Academy: Pythagorean theorem", provider: "Khan Academy", url: "https://www.khanacademy.org/math/geometry", note: "Worked hypotenuse examples." }
           ],
           quiz: [
             { type: "numeric", difficulty: "easy", q: "A right triangle has legs 3 and 4. What is the hypotenuse?", answer: "5", explanation: "√(3² + 4²) = √25 = 5." },
@@ -646,7 +646,7 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Solve ratio segment / partition problems.",
           resources: [
             { type: "interactive", title: "Dividing a line in a ratio", provider: "Khan Academy", url: "https://www.khanacademy.org/math/geometry", note: "Partitioning segments." },
-            { type: "interactive", title: "Ratio & length", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/z38pycw", note: "Segments in a ratio." }
+            { type: "interactive", title: "Ratios", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/ratio.html", note: "Dividing a segment in a ratio." }
           ],
           quiz: [
             { type: "numeric", difficulty: "medium", q: "A line from 0 to 12 is divided in the ratio 1:3. The dividing point is at?", answer: "3", explanation: "4 parts over length 12 = 3 each; 1 part from 0 is at 3." },
@@ -720,7 +720,7 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Judge sampling and reliability.",
           resources: [
             { type: "interactive", title: "Sampling & reliability", provider: "Khan Academy", url: "https://www.khanacademy.org/math/statistics-probability", note: "Fair, reliable samples." },
-            { type: "interactive", title: "Data collection", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/z38pycw", note: "Bias and reliability." }
+            { type: "interactive", title: "Data Index", provider: "Math is Fun", url: "https://www.mathsisfun.com/data/index.html", note: "Bias and reliability in data." }
           ],
           quiz: [
             { type: "tf", difficulty: "medium", q: "A larger, well-chosen sample generally gives more reliable results.", answer: true, explanation: "It better represents the population." },
@@ -749,7 +749,7 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Revise mixed Grade 6–8 skills (spiral review).",
           resources: [
             { type: "interactive", title: "Mixed practice", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-eighth-grade-math", note: "Spiral review across topics." },
-            { type: "video", title: "Revision practice", provider: "Corbettmaths", url: "https://corbettmaths.com/contents/", note: "Mixed practice (5-a-day)." }
+            { type: "interactive", title: "Khan Academy: Grade 8 review", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-eighth-grade-math", note: "Mixed revision practice." }
           ],
           quiz: [
             { type: "numeric", difficulty: "easy", q: "Work out 25% of 200.", answer: "50", explanation: "200 ÷ 4 = 50." },
@@ -785,7 +785,7 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Solve multi-step modelling problems.",
           resources: [
             { type: "interactive", title: "Modelling problems", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Real-world multi-step problems." },
-            { type: "video", title: "Problem solving", provider: "Corbettmaths", url: "https://corbettmaths.com/contents/", note: "Worked examples." }
+            { type: "interactive", title: "Algebra Index", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/index.html", note: "Multi-step modelling problems." }
           ],
           quiz: [
             { type: "short", difficulty: "hard", q: "A gym charges £20 joining fee plus £15 per month. Write a formula for cost C after m months and find the cost after 6 months.", answer: "C = 20 + 15m; for m = 6, C = 20 + 90 = £110.", explanation: "Fixed fee plus a monthly rate." },
@@ -794,8 +794,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Use test strategy for a cumulative assessment.",
           resources: [
             { type: "reading", title: "The math myth — you don't need a 'math brain'", provider: "🐺 Wolves classroom · Big Think", url: "https://bigthink.com/hard-science/math-myth/", note: "Why anyone can improve at maths with practice — a confidence boost before a test." },
-            { type: "interactive", title: "Exam technique", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/z38pycw", note: "Revision and exam tips." },
-            { type: "video", title: "Revision practice", provider: "Corbettmaths", url: "https://corbettmaths.com/contents/", note: "Practice papers (5-a-day)." }
+            { type: "interactive", title: "Khan Academy: Review & test prep", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-eighth-grade-math", note: "Revision and review." },
+            { type: "interactive", title: "Khan Academy: Grade 8 review", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-eighth-grade-math", note: "Mixed revision practice." }
           ],
           quiz: [
             { type: "short", difficulty: "medium", q: "Give two good strategies for a maths test.", answer: "Examples: read each question carefully, show your working, manage your time, attempt easier questions first, and check answers at the end.", explanation: "Good strategy improves accuracy and earns method marks." },

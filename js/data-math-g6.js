@@ -31,7 +31,7 @@ window.CURRICULUM_MATH.grades.push({
           text: "Add and subtract fractions, including those with different denominators.",
           resources: [
             { type: "interactive", title: "Adding Fractions", provider: "Math is Fun", url: "https://www.mathsisfun.com/fractions_addition.html", note: "Step-by-step with common denominators." },
-            { type: "video", title: "Adding & subtracting fractions", provider: "Corbettmaths", url: "https://corbettmaths.com/contents/", note: "Short videos and practice (search 'fractions')." }
+            { type: "interactive", title: "Subtracting Fractions", provider: "Math is Fun", url: "https://www.mathsisfun.com/fractions_subtraction.html", note: "Subtracting fractions, step by step." }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "1/4 + 2/4 = ?", options: ["3/8", "3/4", "2/4", "1/2"], answer: 1, explanation: "Same denominator: add the tops, 1 + 2 = 3, giving 3/4." },
@@ -74,7 +74,7 @@ window.CURRICULUM_MATH.grades.push({
         {
           text: "Find a fraction of a quantity.",
           resources: [
-            { type: "interactive", title: "Fractions of a quantity", provider: "BBC Bitesize (KS3)", url: "https://www.bbc.co.uk/bitesize/subjects/zqhs34j", note: "Finding a fraction of an amount." },
+            { type: "interactive", title: "Fractions", provider: "Math is Fun", url: "https://www.mathsisfun.com/fractions.html", note: "Finding a fraction of an amount." },
             { type: "interactive", title: "Fractions of numbers", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Practice problems." }
           ],
           quiz: [
@@ -86,7 +86,7 @@ window.CURRICULUM_MATH.grades.push({
           text: "Solve mixed-operation word problems involving fractions.",
           resources: [
             { type: "interactive", title: "Fraction word problems", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Apply fractions to real situations." },
-            { type: "video", title: "Fraction problem solving", provider: "Corbettmaths", url: "https://corbettmaths.com/contents/", note: "Worked word problems (search 'fractions')." }
+            { type: "interactive", title: "Khan Academy: Fraction arithmetic", provider: "Khan Academy", url: "https://www.khanacademy.org/math/arithmetic/fraction-arithmetic", note: "Apply fractions to word problems." }
           ],
           quiz: [
             { type: "numeric", difficulty: "medium", q: "A jug holds 3/4 litre. You pour out 1/4 litre. How many litres remain? (decimal)", answer: "0.5", explanation: "3/4 − 1/4 = 2/4 = 1/2 = 0.5 litre." },
@@ -140,7 +140,7 @@ window.CURRICULUM_MATH.grades.push({
         {
           text: "Explain the difference between a ratio and a fraction.",
           resources: [
-            { type: "interactive", title: "Ratios vs fractions", provider: "BBC Bitesize (KS3)", url: "https://www.bbc.co.uk/bitesize/subjects/zqhs34j", note: "Part-to-part versus part-to-whole." },
+            { type: "interactive", title: "Khan Academy: Ratios", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Part-to-part versus part-to-whole." },
             { type: "interactive", title: "Ratios", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/ratio.html", note: "How ratios relate to fractions." }
           ],
           quiz: [
@@ -152,7 +152,7 @@ window.CURRICULUM_MATH.grades.push({
           text: "Simplify two-part and three-part ratios.",
           resources: [
             { type: "interactive", title: "Simplifying ratios", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/ratio.html", note: "Divide by the common factor." },
-            { type: "video", title: "Simplifying ratios", provider: "Corbettmaths", url: "https://corbettmaths.com/contents/", note: "Worked examples (search 'ratio')." }
+            { type: "interactive", title: "Khan Academy: Simplifying ratios", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Practice simplifying ratios." }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Simplify the ratio 6:9.", options: ["2:3", "3:2", "6:9", "1:2"], answer: 0, explanation: "Divide both by 3: 6:9 = 2:3." },
@@ -173,8 +173,8 @@ window.CURRICULUM_MATH.grades.push({
         {
           text: "Find quantities from a given ratio and total.",
           resources: [
-            { type: "interactive", title: "Sharing in a ratio", provider: "BBC Bitesize (KS3)", url: "https://www.bbc.co.uk/bitesize/subjects/zqhs34j", note: "Divide a total in a given ratio." },
-            { type: "video", title: "Sharing in a ratio", provider: "Corbettmaths", url: "https://corbettmaths.com/contents/", note: "Worked examples (search 'ratio sharing')." }
+            { type: "interactive", title: "Ratios", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/ratio.html", note: "Dividing a total in a given ratio." },
+            { type: "interactive", title: "Khan Academy: Sharing in a ratio", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Worked examples of sharing in a ratio." }
           ],
           quiz: [
             { type: "numeric", difficulty: "medium", q: "Share £20 in the ratio 2:3. How many £ is the larger share?", answer: "12", explanation: "5 parts → £20 ÷ 5 = £4 each. Larger = 3 × £4 = £12." },
@@ -195,7 +195,7 @@ window.CURRICULUM_MATH.grades.push({
         {
           text: "Relate ratios to percentages.",
           resources: [
-            { type: "interactive", title: "Ratios & percentages", provider: "BBC Bitesize (KS3)", url: "https://www.bbc.co.uk/bitesize/subjects/zqhs34j", note: "Turning a ratio into a percentage." },
+            { type: "interactive", title: "Percentages", provider: "Math is Fun", url: "https://www.mathsisfun.com/percentage.html", note: "Turning a ratio into a percentage." },
             { type: "interactive", title: "Percentages", provider: "Math is Fun", url: "https://www.mathsisfun.com/percentage.html", note: "Part of a whole as a percentage." }
           ],
           quiz: [
@@ -253,7 +253,7 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Decimal operations study bot", provider: "🐺 Wolves classroom · ChatGPT", url: "https://chatgpt.com/g/g-677f7e1049148191a7c1cd39711ea281-decimal-operations", note: "Your class's tutor bot for the four operations with decimals. (Needs a ChatGPT login.)" },
             { type: "interactive", title: "Decimal operations", provider: "Math is Fun", url: "https://www.mathsisfun.com/decimals-menu.html", note: "All four operations with decimals." },
-            { type: "video", title: "Calculating with decimals", provider: "Corbettmaths", url: "https://corbettmaths.com/contents/", note: "Worked examples (search 'decimals')." }
+            { type: "interactive", title: "Khan Academy: Decimal operations", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Practice the four operations with decimals." }
           ],
           quiz: [
             { type: "numeric", difficulty: "easy", q: "Work out 0.3 + 0.45.", answer: "0.75", explanation: "Line up the points: 0.30 + 0.45 = 0.75." },
@@ -264,7 +264,7 @@ window.CURRICULUM_MATH.grades.push({
           text: "Distinguish terminating, non-terminating and recurring decimals.",
           resources: [
             { type: "interactive", title: "Recurring decimals", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/recurring-decimals.html", note: "What recurring decimals are." },
-            { type: "interactive", title: "Terminating & recurring decimals", provider: "BBC Bitesize (KS3)", url: "https://www.bbc.co.uk/bitesize/subjects/zqhs34j", note: "Types of decimals from fractions." }
+            { type: "interactive", title: "Khan Academy: Fractions to decimals", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Why some fractions terminate and others recur." }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "1/3 written as a decimal is:", options: ["0.3 exactly", "0.33 (terminating)", "0.333… (recurring)", "3.0"], answer: 2, explanation: "1 ÷ 3 = 0.3333… — the 3 recurs forever." },
@@ -298,7 +298,7 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Fractions, decimals & percentages study bot", provider: "🐺 Wolves classroom · ChatGPT", url: "https://chatgpt.com/g/g-6767dd62d82481919fe6c2a40027aa83-fractions-decimals-and-percentages", note: "Your class's tutor bot linking fractions, decimals and percentages. (Needs a ChatGPT login.)" },
             { type: "interactive", title: "Fractions to percentages", provider: "Math is Fun", url: "https://www.mathsisfun.com/converting-fractions-percents.html", note: "Both directions." },
-            { type: "interactive", title: "Fractions & percentages", provider: "BBC Bitesize (KS3)", url: "https://www.bbc.co.uk/bitesize/subjects/zqhs34j", note: "Converting between forms." }
+            { type: "interactive", title: "Khan Academy: Fractions & percentages", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Converting between fractions and percentages." }
           ],
           quiz: [
             { type: "numeric", difficulty: "easy", q: "Write 1/2 as a percentage. (number only)", answer: "50", explanation: "1/2 = 0.5 = 50%." },
@@ -309,7 +309,7 @@ window.CURRICULUM_MATH.grades.push({
           text: "Find a percentage of a quantity.",
           resources: [
             { type: "interactive", title: "Percentage of an amount", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Find a percentage of a number." },
-            { type: "video", title: "Percentage of an amount", provider: "Corbettmaths", url: "https://corbettmaths.com/contents/", note: "Worked examples (search 'percentage of')." }
+            { type: "interactive", title: "Percentages", provider: "Math is Fun", url: "https://www.mathsisfun.com/percentage.html", note: "Finding a percentage of a number." }
           ],
           quiz: [
             { type: "numeric", difficulty: "easy", q: "What is 25% of 80?", answer: "20", explanation: "25% = 1/4, and 80 ÷ 4 = 20." },
@@ -319,7 +319,7 @@ window.CURRICULUM_MATH.grades.push({
         {
           text: "Use percentages in real-life situations.",
           resources: [
-            { type: "interactive", title: "Percentages in real life", provider: "BBC Bitesize (KS3)", url: "https://www.bbc.co.uk/bitesize/subjects/zqhs34j", note: "Discounts, tips and more." },
+            { type: "interactive", title: "Percentage Change", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/percentage-change.html", note: "Discounts, tips and real-life percentages." },
             { type: "interactive", title: "Percentage word problems", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Apply percentages to contexts." }
           ],
           quiz: [
@@ -377,7 +377,7 @@ window.CURRICULUM_MATH.grades.push({
           text: "Add, subtract, multiply and divide integers.",
           resources: [
             { type: "interactive", title: "Integer operations", provider: "Math is Fun", url: "https://www.mathsisfun.com/positive-negative-integers.html", note: "Rules for signs." },
-            { type: "video", title: "Adding & multiplying negatives", provider: "Corbettmaths", url: "https://corbettmaths.com/contents/", note: "Worked examples (search 'negative numbers')." }
+            { type: "interactive", title: "Khan Academy: Integer operations", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Adding, subtracting and multiplying integers." }
           ],
           quiz: [
             { type: "numeric", difficulty: "easy", q: "Work out −4 + 7.", answer: "3", explanation: "Start at −4 and move 7 right: −4 + 7 = 3." },
@@ -398,7 +398,7 @@ window.CURRICULUM_MATH.grades.push({
         {
           text: "Use integers to solve real-life problems.",
           resources: [
-            { type: "interactive", title: "Negative numbers in real life", provider: "BBC Bitesize (KS3)", url: "https://www.bbc.co.uk/bitesize/subjects/zqhs34j", note: "Temperature, depth and money." },
+            { type: "interactive", title: "Integers", provider: "Math is Fun", url: "https://www.mathsisfun.com/positive-negative-integers.html", note: "Temperature, depth and money with negatives." },
             { type: "interactive", title: "Integers in context", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Word problems with negatives." }
           ],
           quiz: [
@@ -443,7 +443,7 @@ window.CURRICULUM_MATH.grades.push({
           text: "Write a number as a product of its prime factors.",
           resources: [
             { type: "interactive", title: "Prime Factorization", provider: "Math is Fun", url: "https://www.mathsisfun.com/prime-factorization.html", note: "Factor trees and prime products." },
-            { type: "video", title: "Product of primes", provider: "Corbettmaths", url: "https://corbettmaths.com/contents/", note: "Worked examples (search 'product of primes')." }
+            { type: "interactive", title: "Khan Academy: Prime factorisation", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Writing a number as a product of primes." }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "The prime factorisation of 12 is:", options: ["2 × 6", "2² × 3", "3 × 4", "2 × 3 × 3"], answer: 1, explanation: "12 = 2 × 2 × 3 = 2² × 3." },
@@ -475,8 +475,8 @@ window.CURRICULUM_MATH.grades.push({
         {
           text: "Solve real-life problems using LCM and HCF.",
           resources: [
-            { type: "interactive", title: "LCM & HCF problems", provider: "BBC Bitesize (KS3)", url: "https://www.bbc.co.uk/bitesize/subjects/zqhs34j", note: "When to use LCM vs HCF." },
-            { type: "video", title: "LCM & HCF word problems", provider: "Corbettmaths", url: "https://corbettmaths.com/contents/", note: "Worked examples (search 'LCM HCF problems')." }
+            { type: "interactive", title: "Least Common Multiple", provider: "Math is Fun", url: "https://www.mathsisfun.com/least-common-multiple.html", note: "When to use the LCM." },
+            { type: "interactive", title: "Greatest Common Factor (HCF)", provider: "Math is Fun", url: "https://www.mathsisfun.com/greatest-common-factor.html", note: "When to use the HCF." }
           ],
           quiz: [
             { type: "short", difficulty: "hard", q: "Two bells ring every 4 and 6 minutes. After how many minutes do they next ring together, and which (LCM or HCF) did you use?", answer: "LCM of 4 and 6 = 12 minutes. You use the LCM for 'happening together again' / repeating events.", explanation: "Repeating-together problems use the LCM." },
@@ -510,7 +510,7 @@ window.CURRICULUM_MATH.grades.push({
           text: "Apply the zero, product, division and inverse (negative-power) rules.",
           resources: [
             { type: "interactive", title: "Exponent laws", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/exponent-laws.html", note: "Zero, product, quotient and negative powers." },
-            { type: "video", title: "Index laws", provider: "Corbettmaths", url: "https://corbettmaths.com/contents/", note: "Worked examples (search 'indices')." }
+            { type: "interactive", title: "Khan Academy: Exponents", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:foundation-algebra", note: "Practice the index laws." }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Any non-zero number to the power 0 equals:", options: ["0", "1", "the number itself", "undefined"], answer: 1, explanation: "By the zero rule, a⁰ = 1 for any non-zero a." },
@@ -543,7 +543,7 @@ window.CURRICULUM_MATH.grades.push({
           text: "Recall squares and cubes from 1 to 20.",
           resources: [
             { type: "interactive", title: "Squares and Square Roots", provider: "Math is Fun", url: "https://www.mathsisfun.com/square-root.html", note: "Squares (and roots) of numbers." },
-            { type: "video", title: "Squares & cubes", provider: "Corbettmaths", url: "https://corbettmaths.com/contents/", note: "Practice recall (search 'squares cubes')." }
+            { type: "interactive", title: "Khan Academy: Squares & cubes", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Practice recalling squares and cubes." }
           ],
           quiz: [
             { type: "numeric", difficulty: "easy", q: "What is 12²?", answer: "144", explanation: "12 × 12 = 144." },
@@ -608,8 +608,8 @@ window.CURRICULUM_MATH.grades.push({
         {
           text: "State the rule of a sequence.",
           resources: [
-            { type: "interactive", title: "Sequences", provider: "BBC Bitesize (KS3)", url: "https://www.bbc.co.uk/bitesize/subjects/zqhs34j", note: "Describing the term-to-term rule." },
-            { type: "video", title: "Describing sequences", provider: "Corbettmaths", url: "https://corbettmaths.com/contents/", note: "Worked examples (search 'sequences')." }
+            { type: "interactive", title: "Number Patterns", provider: "Math is Fun", url: "https://www.mathsisfun.com/numberpatterns.html", note: "Describing the rule of a sequence." },
+            { type: "interactive", title: "Khan Academy: Sequences", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Stating sequence rules." }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "For 5, 10, 15, 20… the rule is:", options: ["add 10", "multiply by 2", "add 5", "subtract 5"], answer: 2, explanation: "Each term is 5 more than the last." },
@@ -630,8 +630,8 @@ window.CURRICULUM_MATH.grades.push({
         {
           text: "Work with pattern series using a position-to-term rule.",
           resources: [
-            { type: "interactive", title: "The nth term", provider: "BBC Bitesize (KS3)", url: "https://www.bbc.co.uk/bitesize/subjects/zqhs34j", note: "Position-to-term rules." },
-            { type: "video", title: "nth term of a sequence", provider: "Corbettmaths", url: "https://corbettmaths.com/contents/", note: "Worked examples (search 'nth term')." }
+            { type: "interactive", title: "Sequences", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/sequences-series.html", note: "Position-to-term (nth term) rules." },
+            { type: "interactive", title: "Khan Academy: nth term", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Finding and using the nth term." }
           ],
           quiz: [
             { type: "numeric", difficulty: "easy", q: "Using the rule 'term = 3 × position', what is the 5th term?", answer: "15", explanation: "3 × 5 = 15." },
@@ -709,8 +709,8 @@ window.CURRICULUM_MATH.grades.push({
         {
           text: "Find the area of composite shapes.",
           resources: [
-            { type: "interactive", title: "Composite area", provider: "BBC Bitesize (KS3)", url: "https://www.bbc.co.uk/bitesize/subjects/zqhs34j", note: "Splitting shapes into rectangles." },
-            { type: "video", title: "Area of compound shapes", provider: "Corbettmaths", url: "https://corbettmaths.com/contents/", note: "Worked examples (search 'area compound shapes')." }
+            { type: "interactive", title: "Area", provider: "Math is Fun", url: "https://www.mathsisfun.com/area.html", note: "Splitting shapes to find composite area." },
+            { type: "interactive", title: "Khan Academy: Area of composite figures", provider: "Khan Academy", url: "https://www.khanacademy.org/math/basic-geo", note: "Worked examples of compound-shape area." }
           ],
           quiz: [
             { type: "short", difficulty: "medium", q: "An L-shape is made of two rectangles, 4×2 and 3×2. Explain how to find its total area and give the answer.", answer: "Find each rectangle's area and add them: 4 × 2 = 8 and 3 × 2 = 6, so the total area is 8 + 6 = 14 square units.", explanation: "Split a composite shape into simple parts, find each area, then add." },
