@@ -749,7 +749,7 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Revise mixed Grade 6–8 skills (spiral review).",
           resources: [
             { type: "interactive", title: "Mixed practice", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-eighth-grade-math", note: "Spiral review across topics." },
-            { type: "interactive", title: "Khan Academy: Grade 8 review", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-eighth-grade-math", note: "Mixed revision practice." }
+            { type: "interactive", title: "Math is Fun: Number skills", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/index.html", note: "Mixed number and algebra practice." }
           ],
           quiz: [
             { type: "numeric", difficulty: "easy", q: "Work out 25% of 200.", answer: "50", explanation: "200 ÷ 4 = 50." },
@@ -795,7 +795,7 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "reading", title: "The math myth — you don't need a 'math brain'", provider: "🐺 Wolves classroom · Big Think", url: "https://bigthink.com/hard-science/math-myth/", note: "Why anyone can improve at maths with practice — a confidence boost before a test." },
             { type: "interactive", title: "Khan Academy: Review & test prep", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-eighth-grade-math", note: "Revision and review." },
-            { type: "interactive", title: "Khan Academy: Grade 8 review", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-eighth-grade-math", note: "Mixed revision practice." }
+            { type: "interactive", title: "Math is Fun: Practice index", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/index.html", note: "Revision across topics." }
           ],
           quiz: [
             { type: "short", difficulty: "medium", q: "Give two good strategies for a maths test.", answer: "Examples: read each question carefully, show your working, manage your time, attempt easier questions first, and check answers at the end.", explanation: "Good strategy improves accuracy and earns method marks." },

@@ -22,7 +22,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Describe the stages of a scientific investigation: question → hypothesis → method → data → analysis → conclusion.",
           resources: [
-            { type: "video", title: "The Scientific Method (Crash Course Kids)", provider: "YouTube · Crash Course Kids", url: "https://www.youtube.com/c/crashcoursekids", note: "Short, friendly walkthrough of the investigation steps in order." },
+            { type: "reading", title: "CK-12: The scientific method", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/physical-science/", note: "The stages of a scientific investigation." },
             { type: "interactive", title: "Khan Academy: Working scientifically", provider: "Khan Academy", url: "https://www.khanacademy.org/science", note: "Notes and check questions on investigations." },
             { type: "video", title: "The art and science of failing well (TED-Ed, 6 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=lwewZMJzBh4", note: "Why trial, error and failing well are central to how science actually works." }
           ],
@@ -48,7 +48,7 @@ window.CURRICULUM.grades.push({
           text: "Identify the independent, dependent and controlled variables in an experiment.",
           resources: [
             { type: "reading", title: "CK-12: Variables & fair tests", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/physical-science/", note: "The three kinds of variable." },
-            { type: "video", title: "Variables in an experiment", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "Animated explanation of independent, dependent and control variables." }
+            { type: "video", title: "Independent, dependent & control variables", provider: "YouTube", url: "https://www.youtube.com/watch?v=zFe8eK1aiIU", note: "The three kinds of variable, explained." }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "In 'How does fertiliser amount affect plant height?', the dependent variable is:", options: ["Amount of fertiliser", "Plant height", "Type of plant", "Amount of water"], answer: 1, explanation: "You measure the height (dependent); you change the fertiliser (independent)." },
@@ -71,7 +71,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Distinguish accuracy from precision and identify random vs systematic errors.",
           resources: [
-            { type: "video", title: "Accuracy vs Precision", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "Clear animation contrasting the two ideas with a dartboard." },
+            { type: "video", title: "Reliability, accuracy & precision (FuseSchool)", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/watch?v=MRX2laaTZHY", note: "The difference between accuracy and precision." },
             { type: "reading", title: "CK-12: Accuracy, precision & error", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/physical-science/", note: "Notes on random vs systematic error." }
           ],
           quiz: [
@@ -96,7 +96,7 @@ window.CURRICULUM.grades.push({
           text: "Tell fundamental quantities (length, mass, time) apart from derived quantities (area, volume, density).",
           resources: [
             { type: "reading", title: "CK-12: Base & derived quantities", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/physical-science/", note: "How derived quantities are built from base ones." },
-            { type: "video", title: "Physical quantities & units", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "Short explainer on the kinds of quantity." }
+            { type: "interactive", title: "Khan Academy: Units & measurement", provider: "Khan Academy", url: "https://www.khanacademy.org/science/physics", note: "Base and derived quantities." }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "Which is a derived quantity (not a fundamental one)?", options: ["Length", "Time", "Density", "Mass"], answer: 2, explanation: "Density is mass ÷ volume, derived from other quantities." },
@@ -120,7 +120,7 @@ window.CURRICULUM.grades.push({
           text: "Find the area and volume of regular shapes by calculation and of irregular objects by displacement.",
           resources: [
             { type: "interactive", title: "Khan Academy: Volume & area", provider: "Khan Academy", url: "https://www.khanacademy.org/math/basic-geo", note: "Practice calculating area and volume of shapes." },
-            { type: "video", title: "Measuring volume by displacement", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "How to find the volume of an irregular object." }
+            { type: "interactive", title: "PhET: Density (volume by displacement)", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/density", note: "Find volume by water displacement." }
           ],
           quiz: [
             { type: "numeric", difficulty: "medium", q: "A block measures 4 cm × 3 cm × 2 cm. What is its volume in cm³?", answer: "24", explanation: "Volume of a cuboid = length × width × height = 4 × 3 × 2 = 24 cm³." },
@@ -131,7 +131,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Calculate density (ρ = m ÷ V) and use it to compare materials.",
           resources: [
-            { type: "video", title: "Density explained", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "What density is and how to calculate it." },
+            { type: "video", title: "What is density? (FuseSchool)", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/watch?v=nVrsgESZh-Y", note: "What density is and how to find it." },
             { type: "interactive", title: "PhET: Density", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/density", note: "Drag blocks into water and see why things float or sink." }
           ],
           quiz: [
@@ -155,7 +155,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Round values to a sensible number of significant figures and decimal places.",
           resources: [
-            { type: "video", title: "Significant figures", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "How to count and round to significant figures." },
+            { type: "interactive", title: "Significant Figures", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/significant-figures.html", note: "Counting and rounding to significant figures." },
             { type: "interactive", title: "Khan Academy: Rounding & significant figures", provider: "Khan Academy", url: "https://www.khanacademy.org/math/arithmetic", note: "Practice rounding sensibly." }
           ],
           quiz: [
@@ -180,7 +180,7 @@ window.CURRICULUM.grades.push({
           text: "Describe motion as a change in position over time and name the quantities used to measure it.",
           resources: [
             { type: "interactive", title: "The Physics Classroom: 1D Kinematics", provider: "The Physics Classroom", url: "https://www.physicsclassroom.com/class/1DKin", note: "How we describe and measure motion." },
-            { type: "video", title: "What is motion?", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "Distance, time and speed explained." },
+            { type: "interactive", title: "PhET: Forces & Motion – Basics", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/forces-and-motion-basics", note: "Explore motion, position and speed." },
             { type: "interactive", title: "Speed, velocity & acceleration study bot", provider: "🐺 Wolves classroom · ChatGPT", url: "https://chatgpt.com/g/g-67888e9d3ab4819184bf9ef35745731e-calculating-speed-velocity-and-acceleration", note: "A tutor bot for practising how we measure and calculate motion. (Needs a ChatGPT login.)" }
           ],
           quiz: [
@@ -192,7 +192,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Identify the six simple machines: lever, pulley, inclined plane, screw, wedge and wheel-and-axle.",
           resources: [
-            { type: "video", title: "Simple Machines (Crash Course Kids)", provider: "YouTube · Crash Course Kids", url: "https://www.youtube.com/c/crashcoursekids", note: "All six simple machines with everyday examples." },
+            { type: "interactive", title: "Khan Academy: Simple machines", provider: "Khan Academy", url: "https://www.khanacademy.org/science/physics", note: "The six simple machines." },
             { type: "reading", title: "CK-12: Simple machines", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/physical-science/simple-machines/", note: "Notes and diagrams of each machine." }
           ],
           quiz: [
@@ -204,7 +204,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Classify levers as class 1, 2 or 3 by the order of the load, effort and fulcrum.",
           resources: [
-            { type: "video", title: "Levers and lever classes", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "The three lever classes with examples." },
+            { type: "reading", title: "CK-12: Levers & lever classes", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/physical-science/simple-machines/", note: "Class 1, 2 and 3 levers." },
             { type: "interactive", title: "PhET: Balancing Act (levers)", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/balancing-act", note: "Play with fulcrum, load and effort on a seesaw." }
           ],
           quiz: [
@@ -216,7 +216,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Explain how a pulley system changes the direction or size of a force.",
           resources: [
-            { type: "video", title: "Pulleys explained", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "Fixed vs movable pulleys and what they change." },
+            { type: "interactive", title: "Khan Academy: Pulleys & machines", provider: "Khan Academy", url: "https://www.khanacademy.org/science/physics", note: "How pulleys change force and direction." },
             { type: "reading", title: "CK-12: Pulleys", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/physical-science/simple-machines/", note: "How pulley systems multiply or redirect force." },
             { type: "video", title: "The physics behind lift cables (BBC, 4 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=b2D4nhUOGW0", note: "How elevator pulley-and-cable systems lift huge loads safely." }
           ],
@@ -230,7 +230,7 @@ window.CURRICULUM.grades.push({
           text: "Explain how an inclined plane, wedge and screw trade a smaller force over a longer distance.",
           resources: [
             { type: "reading", title: "CK-12: Inclined planes, wedges & screws", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/physical-science/simple-machines/", note: "How these three machines reduce the force needed." },
-            { type: "video", title: "Inclined planes & wedges", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "Trading force for distance, animated." }
+            { type: "interactive", title: "Khan Academy: Inclined planes & wedges", provider: "Khan Academy", url: "https://www.khanacademy.org/science/physics", note: "Trading force for distance." }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "A ramp used to push a heavy box onto a truck is an example of a(n):", options: ["Inclined plane", "Lever", "Pulley", "Wheel and axle"], answer: 0, explanation: "A ramp is an inclined plane — less force over a longer distance." },
@@ -241,7 +241,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Define mechanical advantage as load ÷ effort and calculate it for simple machines.",
           resources: [
-            { type: "video", title: "Mechanical advantage", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "What mechanical advantage means and how to work it out." },
+            { type: "interactive", title: "Khan Academy: Mechanical advantage", provider: "Khan Academy", url: "https://www.khanacademy.org/science/physics", note: "Load divided by effort." },
             { type: "reading", title: "CK-12: Mechanical advantage", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/physical-science/simple-machines/", note: "Worked examples of load ÷ effort." }
           ],
           quiz: [
@@ -253,7 +253,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Explain why no machine is 100% efficient (friction wastes energy as heat).",
           resources: [
-            { type: "video", title: "Friction & efficiency", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "Why some energy is always lost as heat." },
+            { type: "interactive", title: "PhET: Forces & Motion (friction)", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/forces-and-motion-basics", note: "See friction turn motion into heat." },
             { type: "reading", title: "CK-12: Energy & efficiency", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/physical-science/", note: "Energy transfers and wasted energy." },
             { type: "interactive", title: "Gravity, friction & other forces study bot", provider: "🐺 Wolves classroom · ChatGPT", url: "https://chatgpt.com/g/g-677becabbef48191a678cbd2c430d4b9-gravity-friction-and-other-forces", note: "Ask questions about friction — the force that stops any machine being 100% efficient. (Needs a ChatGPT login.)" }
           ],
@@ -266,8 +266,8 @@ window.CURRICULUM.grades.push({
         {
           text: "Identify simple machines hidden inside everyday tools and the human body.",
           resources: [
-            { type: "video", title: "Simple machines all around us", provider: "YouTube · Crash Course Kids", url: "https://www.youtube.com/c/crashcoursekids", note: "Spotting simple machines in everyday objects." },
-            { type: "reading", title: "CK-12: Machines in everyday life", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/physical-science/simple-machines/", note: "Machines in tools and the body." },
+            { type: "reading", title: "CK-12: Machines in everyday life", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/physical-science/simple-machines/", note: "Spotting simple machines around us." },
+            { type: "interactive", title: "Khan Academy: Machines in everyday life", provider: "Khan Academy", url: "https://www.khanacademy.org/science/physics", note: "Simple machines in tools and the body." },
             { type: "video", title: "The physics behind lift cables (BBC, 4 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=b2D4nhUOGW0", note: "A real-world machine — the elevator — built from pulleys and cables." }
           ],
           quiz: [
@@ -291,7 +291,7 @@ window.CURRICULUM.grades.push({
         {
           text: "State the cell theory and explain why the cell is called the basic unit of life.",
           resources: [
-            { type: "video", title: "Cell theory (Amoeba Sisters)", provider: "YouTube · Amoeba Sisters", url: "https://www.youtube.com/@AmoebaSisters", note: "Clear cartoon explaining the cell theory." },
+            { type: "interactive", title: "CELLS alive: interactive cell model", provider: "CELLS alive!", url: "https://www.cellsalive.com/cells/cell_model.htm", note: "Explore the cell, the basic unit of life." },
             { type: "reading", title: "CK-12: Cells", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "Why the cell is the basic unit of life." },
             { type: "interactive", title: "Cells & microorganisms study bot", provider: "🐺 Wolves classroom · ChatGPT", url: "https://chatgpt.com/g/g-677e0912ba3c81918a4fc6efcdbf3077-cells-and-microorganisms-bot", note: "An interactive tutor to quiz yourself on cells and the cell theory. (Needs a ChatGPT login.)" }
           ],
@@ -304,7 +304,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Describe the idea that the first cells arose on early Earth (the 'primordial soup' hypothesis) as a scientific model.",
           resources: [
-            { type: "video", title: "The origin of life", provider: "YouTube · CrashCourse", url: "https://www.youtube.com/@crashcourse", note: "How scientists model the first cells forming." },
+            { type: "interactive", title: "Khan Academy: Origin of life", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "How scientists model the first cells." },
             { type: "reading", title: "CK-12: Origin of life", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "The primordial soup hypothesis explained." }
           ],
           quiz: [
@@ -316,7 +316,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Distinguish unicellular from multicellular organisms with examples.",
           resources: [
-            { type: "video", title: "Unicellular vs multicellular", provider: "YouTube · Amoeba Sisters", url: "https://www.youtube.com/@AmoebaSisters", note: "The difference with friendly examples." },
+            { type: "video", title: "Unicellular vs Multicellular (Amoeba Sisters)", provider: "YouTube · Amoeba Sisters", url: "https://www.youtube.com/watch?v=xKqhbFnWbvI", note: "Single-celled versus many-celled life." },
             { type: "reading", title: "CK-12: Unicellular & multicellular", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "Single-celled and many-celled life." },
             { type: "interactive", title: "Cells & microorganisms study bot", provider: "🐺 Wolves classroom · ChatGPT", url: "https://chatgpt.com/g/g-677e0912ba3c81918a4fc6efcdbf3077-cells-and-microorganisms-bot", note: "Explore single-celled microorganisms and how they differ from many-celled life. (Needs a ChatGPT login.)" }
           ],
@@ -354,7 +354,7 @@ window.CURRICULUM.grades.push({
           text: "Compare plant and animal cells and identify structures unique to each.",
           resources: [
             { type: "interactive", title: "Plant & animal cell models", provider: "CELLS alive!", url: "https://www.cellsalive.com/cells/cell_model.htm", note: "Compare the two side by side, interactively." },
-            { type: "video", title: "Plant vs animal cells (Amoeba Sisters)", provider: "YouTube · Amoeba Sisters", url: "https://www.youtube.com/@AmoebaSisters", note: "What each cell has and why." }
+            { type: "interactive", title: "Khan Academy: Plant vs animal cells", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology/structure-of-a-cell", note: "Comparing the two cell types." }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Which structure is found in plant cells but NOT animal cells?", options: ["Nucleus", "Cell membrane", "Cell wall", "Mitochondria"], answer: 2, explanation: "Cell walls (and chloroplasts and large vacuoles) are features of plant cells." },
@@ -365,7 +365,7 @@ window.CURRICULUM.grades.push({
         {
           text: "State the function of key organelles: cell membrane, cell wall, nucleus, cytoplasm, ribosomes, endoplasmic reticulum, mitochondria, chloroplasts and vacuoles.",
           resources: [
-            { type: "video", title: "Eukaryopolis – The City of Cells", provider: "YouTube · CrashCourse Biology", url: "https://www.youtube.com/@crashcourse", note: "Tour of organelles and the job each one does." },
+            { type: "interactive", title: "Khan Academy: Cell organelles", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology/structure-of-a-cell", note: "A tour of the organelles and their jobs." },
             { type: "reading", title: "CK-12: Cell Structure & Function", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "Each organelle and its function, with diagrams." }
           ],
           quiz: [
@@ -377,7 +377,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Explain the relationship between DNA, genes and chromosomes.",
           resources: [
-            { type: "video", title: "DNA, genes & chromosomes (Amoeba Sisters)", provider: "YouTube · Amoeba Sisters", url: "https://www.youtube.com/@AmoebaSisters", note: "How the three fit together." },
+            { type: "video", title: "DNA, Chromosomes, Genes & Traits (Amoeba Sisters)", provider: "YouTube · Amoeba Sisters", url: "https://www.youtube.com/watch?v=8m6hHRlKwxY", note: "How DNA, genes and chromosomes fit together." },
             { type: "interactive", title: "Khan Academy: DNA & chromosomes", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "Videos and practice on genetic material." }
           ],
           quiz: [

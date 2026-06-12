@@ -196,7 +196,7 @@ window.CURRICULUM_MATH.grades.push({
           text: "Relate ratios to percentages.",
           resources: [
             { type: "interactive", title: "Percentages", provider: "Math is Fun", url: "https://www.mathsisfun.com/percentage.html", note: "Turning a ratio into a percentage." },
-            { type: "interactive", title: "Percentages", provider: "Math is Fun", url: "https://www.mathsisfun.com/percentage.html", note: "Part of a whole as a percentage." }
+            { type: "interactive", title: "Khan Academy: Ratios & percentages", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Turning a ratio into a percentage." }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "In a mixture of juice to water of 1:4, juice is what percentage of the whole?", options: ["25%", "20%", "10%", "40%"], answer: 1, explanation: "Total = 5 parts; juice = 1/5 = 20%." },

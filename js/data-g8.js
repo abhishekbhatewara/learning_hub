@@ -22,7 +22,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Label the heart's chambers, valves and major vessels and trace the double circulation of blood.",
           resources: [
-            { type: "video", title: "The circulatory system (Amoeba Sisters)", provider: "YouTube · Amoeba Sisters", url: "https://www.youtube.com/@AmoebaSisters", note: "Heart structure and double circulation." },
+            { type: "reading", title: "CK-12: The heart & circulation", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "Heart structure and double circulation." },
             { type: "interactive", title: "The human body systems study bot", provider: "🐺 Wolves classroom · ChatGPT", url: "https://chatgpt.com/g/g-6780a55ada8881919ba84cbfb7664b87-the-human-body-system", note: "An interactive tutor on the body's organ systems. (Needs a ChatGPT login.)" },
             { type: "interactive", title: "Khan Academy: The circulatory system", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "Chambers, valves and blood vessels." }
           ],
@@ -35,7 +35,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Compare arteries, veins and capillaries and identify the components of blood and their functions.",
           resources: [
-            { type: "video", title: "Blood & blood vessels (Amoeba Sisters)", provider: "YouTube · Amoeba Sisters", url: "https://www.youtube.com/@AmoebaSisters", note: "Arteries, veins, capillaries and blood components." },
+            { type: "interactive", title: "Khan Academy: Blood & blood vessels", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "Arteries, veins, capillaries and blood components." },
             { type: "reading", title: "CK-12: Blood & circulation", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "What's in blood and how vessels differ." }
           ],
           quiz: [
@@ -48,7 +48,7 @@ window.CURRICULUM.grades.push({
           text: "Explain factors affecting heart rate and design a fair investigation into exercise and heart rate.",
           resources: [
             { type: "interactive", title: "Khan Academy: Circulation & exercise", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "How activity changes heart rate." },
-            { type: "video", title: "Heart rate & exercise (Amoeba Sisters)", provider: "YouTube · Amoeba Sisters", url: "https://www.youtube.com/@AmoebaSisters", note: "Why the heart speeds up during exercise." }
+            { type: "reading", title: "CK-12: Heart rate & exercise", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "Why the heart speeds up during exercise." }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "During exercise, heart rate usually:", options: ["Decreases", "Increases", "Stays exactly the same", "Stops"], answer: 1, explanation: "Muscles need more oxygen and glucose during exercise, so the heart beats faster to deliver it." },
@@ -74,7 +74,7 @@ window.CURRICULUM.grades.push({
           text: "Describe the lymphatic system and its roles in fluid balance and immune defence.",
           resources: [
             { type: "reading", title: "CK-12: The lymphatic system", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "Fluid balance and immune roles." },
-            { type: "reading", title: "CK-12: Immune & lymphatic systems", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "How lymph supports defence." }
+            { type: "interactive", title: "Khan Academy: The lymphatic system", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "Fluid balance and immune defence." }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "One key role of the lymphatic system is to:", options: ["Pump blood around the body", "Return excess tissue fluid to the blood and help fight infection", "Digest food", "Produce bile"], answer: 1, explanation: "The lymphatic system drains tissue fluid back to the blood and carries white blood cells that defend the body." },
@@ -85,7 +85,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Classify pathogens (bacteria, viruses, fungi, protozoa, parasites) and describe routes of disease transmission.",
           resources: [
-            { type: "video", title: "Pathogens & disease (Amoeba Sisters)", provider: "YouTube · Amoeba Sisters", url: "https://www.youtube.com/@AmoebaSisters", note: "The main pathogen groups and how disease spreads." },
+            { type: "interactive", title: "Khan Academy: Pathogens & disease", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "The main pathogen groups and transmission." },
             { type: "reading", title: "The greatest parasite is right in front of you", provider: "🐺 Wolves classroom · ScienceAlert", url: "https://www.sciencealert.com/the-greatest-parasite-is-right-in-front-of-you-and-its-dangerous", note: "A real-world look at parasites as a pathogen group." },
             { type: "reading", title: "CK-12: Pathogens & transmission", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "Types of pathogen and routes of infection." }
           ],
@@ -98,7 +98,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Explain the body's defences, phagocytosis, and the difference between active and passive immunity.",
           resources: [
-            { type: "video", title: "The immune system (Amoeba Sisters)", provider: "YouTube · Amoeba Sisters", url: "https://www.youtube.com/@AmoebaSisters", note: "Defences, white blood cells and immunity." },
+            { type: "reading", title: "CK-12: The immune system", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "Defences, white blood cells and immunity." },
             { type: "interactive", title: "Khan Academy: Defence against disease", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "Barriers, phagocytosis and vaccines." }
           ],
           quiz: [
@@ -111,7 +111,7 @@ window.CURRICULUM.grades.push({
           text: "Classify bones, joints and muscle types in the human body.",
           resources: [
             { type: "reading", title: "CK-12: Skeleton, joints & muscles", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "Bone, joint and muscle types." },
-            { type: "reading", title: "CK-12: The musculoskeletal system", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "How bones and muscles work together." }
+            { type: "interactive", title: "Khan Academy: Skeleton, joints & muscles", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "Bone, joint and muscle types." }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "A joint that allows movement in nearly all directions, like the shoulder, is a:", options: ["Hinge joint", "Ball-and-socket joint", "Fixed joint", "Pivot joint"], answer: 1, explanation: "Ball-and-socket joints (shoulder, hip) allow rotation in many directions; hinge joints (elbow, knee) move one way." },
@@ -125,7 +125,7 @@ window.CURRICULUM.grades.push({
             { type: "interactive", title: "Khan Academy: Mendelian genetics & Punnett squares", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology/classical-genetics", note: "Worked Punnett squares with practice." },
             { type: "podcast", title: "Orange Cat Lovers, Rise Up – Short Wave", provider: "🐺 Wolves classroom · Apple Podcasts", url: "https://podcasts.apple.com/us/podcast/orange-cat-lovers-rise-up/id1482575855?i=1000708659195", note: "The genetics behind orange cat coat colour — inheritance in action." },
             { type: "reading", title: "Gene-editing tailored to rare disorders", provider: "🐺 Wolves classroom · NYTimes", url: "https://www.nytimes.com/2025/05/15/health/gene-editing-personalized-rare-disorders.html?unlocked_article_code=1.HU8.o_m0.hUzjq5_8hv8_", note: "How scientists edit genes — cutting-edge genetics and inheritance." },
-            { type: "interactive", title: "Khan Academy: Inheritance", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology/classical-genetics", note: "Dominant/recessive, codominance and pedigrees." }
+            { type: "reading", title: "CK-12: Inheritance & Punnett squares", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "Dominant/recessive, codominance and pedigrees." }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "In a cross between a tall (TT) and a short (tt) pea plant, the offspring (Tt) are all:", options: ["Short", "Tall", "Half tall, half short", "Medium height"], answer: 1, explanation: "T is dominant, so all Tt offspring show the tall phenotype." },
@@ -136,7 +136,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Define mutation and outline the evidence for evolution (fossils, anatomy/homology, vestigial structures, DNA).",
           resources: [
-            { type: "video", title: "Evidence for evolution (CrashCourse Biology)", provider: "YouTube · CrashCourse Biology", url: "https://www.youtube.com/@crashcourse", note: "Fossils, homology and DNA evidence." },
+            { type: "interactive", title: "PhET: Natural Selection", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/natural-selection", note: "Watch traits evolve as the environment changes." },
             { type: "reading", title: "Fossilised claw prints rewrite the amniote timeline", provider: "🐺 Wolves classroom · The Guardian", url: "https://www.theguardian.com/environment/2025/may/14/fossilised-claw-prints-australia-amniotes-fossils", note: "Fossils as living evidence for evolution." },
             { type: "video", title: "Investigating the rise of early-onset cancer (documentary, 45 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=EQgP153WUUM", note: "Cancer and mutation — how changes in DNA can affect cells." },
             { type: "podcast", title: "Love Fruit? Thank Dinosaur Mass Extinction – Short Wave", provider: "🐺 Wolves classroom · Apple Podcasts", url: "https://podcasts.apple.com/us/podcast/love-fruit-thank-dinosaur-mass-extinction/id1482575855?i=1000699108203", note: "Extinction, fossils and how life changes over time." }
@@ -176,7 +176,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Describe and explain periodic trends in atomic/ionic radius, ionisation energy, electronegativity and metallic character.",
           resources: [
-            { type: "video", title: "The periodic table & periodic trends", provider: "YouTube · CrashCourse Chemistry", url: "https://www.youtube.com/@crashcourse", note: "Trends across periods and down groups." },
+            { type: "reading", title: "CK-12: The periodic table & trends", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/chemistry/", note: "Trends across periods and down groups." },
             { type: "interactive", title: "Khan Academy: Periodic trends", provider: "Khan Academy", url: "https://www.khanacademy.org/science/chemistry", note: "Patterns in the periodic table." }
           ],
           quiz: [
@@ -188,7 +188,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Link an element's electronic configuration to its position in the periodic table.",
           resources: [
-            { type: "video", title: "Electron configuration & the table", provider: "YouTube · CrashCourse Chemistry", url: "https://www.youtube.com/@crashcourse", note: "How electron shells map to groups and periods." },
+            { type: "reading", title: "CK-12: Electron configuration", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/chemistry/", note: "How electron shells map to the table." },
             { type: "interactive", title: "Khan Academy: Electron configurations", provider: "Khan Academy", url: "https://www.khanacademy.org/science/chemistry", note: "Configurations and periodic position." }
           ],
           quiz: [
@@ -200,7 +200,7 @@ window.CURRICULUM.grades.push({
         {
           text: "State the octet rule and use it to explain ionic, covalent and metallic bonding.",
           resources: [
-            { type: "video", title: "Ionic, covalent & metallic bonding", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "All three bond types and the octet rule." },
+            { type: "interactive", title: "PhET: Build a Molecule", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/build-a-molecule", note: "Build molecules and explore bonding." },
             { type: "reading", title: "CK-12: Chemical bonding", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/chemistry/", note: "Why atoms bond to fill their outer shell." }
           ],
           quiz: [
@@ -212,7 +212,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Predict ion charges and write/name simple ionic compounds; relate ionic properties to structure.",
           resources: [
-            { type: "video", title: "Ionic compounds & their properties", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "Forming ions and why ionic solids behave as they do." },
+            { type: "reading", title: "CK-12: Ionic compounds", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/chemistry/", note: "Forming ions and ionic properties." },
             { type: "interactive", title: "Khan Academy: Ionic compounds", provider: "Khan Academy", url: "https://www.khanacademy.org/science/chemistry", note: "Charges, names and properties." }
           ],
           quiz: [
@@ -224,7 +224,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Explain metallic bonding with the 'sea of electrons' model and link it to the properties of metals.",
           resources: [
-            { type: "video", title: "Metallic bonding", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "The sea of delocalised electrons and metal properties." },
+            { type: "interactive", title: "Khan Academy: Metallic bonding", provider: "Khan Academy", url: "https://www.khanacademy.org/science/chemistry", note: "The sea of delocalised electrons." },
             { type: "reading", title: "CK-12: Metallic bonding", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/chemistry/", note: "Why metals conduct and bend." }
           ],
           quiz: [
@@ -248,7 +248,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Distinguish polar from non-polar bonds/molecules and name simple covalent compounds using prefixes.",
           resources: [
-            { type: "video", title: "Polar & non-polar molecules", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "Electronegativity, polarity and naming." },
+            { type: "interactive", title: "PhET: Molecule Shapes & Polarity", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/molecule-shapes", note: "Electronegativity and polarity." },
             { type: "interactive", title: "Khan Academy: Covalent compounds", provider: "Khan Academy", url: "https://www.khanacademy.org/science/chemistry", note: "Naming molecules with prefixes." }
           ],
           quiz: [
@@ -285,7 +285,7 @@ window.CURRICULUM.grades.push({
           text: "Distinguish physical from chemical changes, apply conservation of mass, and balance chemical equations.",
           resources: [
             { type: "interactive", title: "Khan Academy: Balancing chemical equations", provider: "Khan Academy", url: "https://www.khanacademy.org/science/chemistry", note: "Practice balancing with conservation of mass." },
-            { type: "interactive", title: "Khan Academy: Chemical reactions", provider: "Khan Academy", url: "https://www.khanacademy.org/science/chemistry", note: "Physical vs chemical change and equations." }
+            { type: "reading", title: "CK-12: Physical & chemical change", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/chemistry/", note: "Conservation of mass and balancing." }
           ],
           quiz: [
             { type: "numeric", difficulty: "medium", q: "Balance: H₂ + O₂ → H₂O. What coefficient goes in front of H₂O?", answer: "2", explanation: "2H₂ + O₂ → 2H₂O balances atoms: 4 H and 2 O on each side." },
@@ -345,7 +345,7 @@ window.CURRICULUM.grades.push({
           text: "Explain thermal expansion in solids, liquids and gases and its everyday applications.",
           resources: [
             { type: "interactive", title: "Khan Academy: Thermal expansion", provider: "Khan Academy", url: "https://www.khanacademy.org/science/physics", note: "Why materials expand when heated." },
-            { type: "video", title: "Thermal expansion", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "Everyday examples of expansion and contraction." }
+            { type: "interactive", title: "PhET: States of Matter", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/states-of-matter-basics", note: "Heat particles and watch matter expand." }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "Gaps are left between sections of railway track to allow for:", options: ["Water drainage", "Thermal expansion in hot weather", "Faster trains", "Electrical insulation"], answer: 1, explanation: "Rails expand when hot; gaps stop them buckling — an application of thermal expansion." },
@@ -368,7 +368,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Distinguish transverse from longitudinal waves and mechanical from electromagnetic waves.",
           resources: [
-            { type: "video", title: "Types of waves", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "Transverse vs longitudinal, mechanical vs EM." },
+            { type: "interactive", title: "The Physics Classroom: Waves", provider: "The Physics Classroom", url: "https://www.physicsclassroom.com/class/waves", note: "Transverse vs longitudinal, mechanical vs EM." },
             { type: "interactive", title: "PhET: Wave on a String", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/wave-on-a-string", note: "See how a transverse wave behaves." }
           ],
           quiz: [
@@ -380,7 +380,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Define wavelength, frequency, time period and wave speed and use v = fλ and v = λ/T.",
           resources: [
-            { type: "video", title: "The wave equation v = fλ", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "Using the wave equation in calculations." },
+            { type: "interactive", title: "The Physics Classroom: The wave equation", provider: "The Physics Classroom", url: "https://www.physicsclassroom.com/class/waves", note: "Using v = fλ in calculations." },
             { type: "interactive", title: "Waves study bot", provider: "🐺 Wolves classroom · ChatGPT", url: "https://chatgpt.com/g/g-679aea0f60a48191814976ada31719aa-waves", note: "Practise wave properties and calculations. (Needs a ChatGPT login.)" }
           ],
           quiz: [
@@ -393,7 +393,7 @@ window.CURRICULUM.grades.push({
           text: "Describe sound as a longitudinal wave, explain echoes, and compare its speed in different media.",
           resources: [
             { type: "interactive", title: "The Physics Classroom: Sound waves", provider: "The Physics Classroom", url: "https://www.physicsclassroom.com/class/sound", note: "How sound travels, echoes and speed in media." },
-            { type: "video", title: "Sound waves explained", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "Compressions, rarefactions and echoes." }
+            { type: "interactive", title: "PhET: Waves Intro (sound)", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/waves-intro", note: "Compressions, rarefactions and echoes." }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "Sound cannot travel through a vacuum because it needs particles to carry the vibration.", answer: true, explanation: "Sound is mechanical, so it needs a medium; light (EM) can travel through a vacuum." },
@@ -416,7 +416,7 @@ window.CURRICULUM.grades.push({
         {
           text: "State Newton's three laws and apply F = ma and momentum p = mv (and the idea of impulse).",
           resources: [
-            { type: "video", title: "Newton's Laws & momentum", provider: "YouTube · CrashCourse Physics", url: "https://www.youtube.com/@crashcourse", note: "F = ma, momentum and the three laws." },
+            { type: "interactive", title: "The Physics Classroom: Newton's Laws", provider: "The Physics Classroom", url: "https://www.physicsclassroom.com/class/newtlaws", note: "F = ma, momentum and the three laws." },
             { type: "interactive", title: "Khan Academy: Forces & Newton's laws", provider: "Khan Academy", url: "https://www.khanacademy.org/science/physics", note: "Applying F = ma and momentum." }
           ],
           quiz: [
@@ -428,7 +428,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Apply momentum/impulse ideas to safety engineering such as crumple zones.",
           resources: [
-            { type: "video", title: "Momentum & impulse in crashes", provider: "YouTube · CrashCourse Physics", url: "https://www.youtube.com/@crashcourse", note: "How impulse explains safety features." },
+            { type: "interactive", title: "Khan Academy: Momentum & impulse", provider: "Khan Academy", url: "https://www.khanacademy.org/science/physics", note: "How impulse explains safety features." },
             { type: "interactive", title: "The Physics Classroom: Momentum & collisions", provider: "The Physics Classroom", url: "https://www.physicsclassroom.com/class/momentum", note: "Impulse, momentum and safety engineering." }
           ],
           quiz: [
@@ -455,7 +455,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Describe optics basics: how prisms and lenses bend light, the spectrum, and the link between frequency and energy.",
           resources: [
-            { type: "video", title: "Refraction, prisms & the spectrum", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "How light bends and splits into colours." },
+            { type: "interactive", title: "PhET: Bending Light", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/bending-light", note: "How light bends and splits into colours." },
             { type: "interactive", title: "Khan Academy: Light & optics", provider: "Khan Academy", url: "https://www.khanacademy.org/science/physics", note: "Lenses, prisms and the EM spectrum." }
           ],
           quiz: [
@@ -482,7 +482,7 @@ window.CURRICULUM.grades.push({
             { type: "interactive", title: "NASA: Evidence & Earth's history", provider: "NASA Global Climate Change", url: "https://climate.nasa.gov/evidence/", note: "How scientists read Earth's past from physical evidence." },
             { type: "interactive", title: "Earth's structure study bot", provider: "🐺 Wolves classroom · ChatGPT", url: "https://chatgpt.com/g/g-67726005ceb8819191dc29a431bca1b1-earth-s-structure-bot", note: "A tutor bot on Earth's layers and structure. (Needs a ChatGPT login.)" },
             { type: "reading", title: "It once rained on Earth for a million years", provider: "🐺 Wolves classroom · History Facts", url: "https://historyfacts.com/science-industry/fact/rained-on-earth-for-a-million-years/", note: "A dramatic chapter of deep geologic time — the Carnian Pluvial Event." },
-            { type: "video", title: "Plate tectonics & geology", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "Rock layers and Earth's structure." }
+            { type: "interactive", title: "PhET: Plate Tectonics", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/plate-tectonics", note: "How plates move and reshape the Earth." }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "In undisturbed rock layers, the oldest rocks are usually:", options: ["At the top", "At the bottom", "In the middle", "Randomly placed"], answer: 1, explanation: "The law of superposition: lower layers were laid down first, so they're older." },

@@ -22,7 +22,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Name the four biomolecules (carbohydrates, proteins, lipids, nucleic acids) and their building blocks (monosaccharides, amino acids, fatty acids + glycerol, nucleotides).",
           resources: [
-            { type: "video", title: "Biomolecules & Food Tests", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "The four biomolecules and the units they're built from." },
+            { type: "reading", title: "CK-12: Biomolecules", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "The four biomolecules and their units." },
             { type: "interactive", title: "Khan Academy: Nutrition & biomolecules", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "Food groups and the molecules in food." }
           ],
           quiz: [
@@ -59,7 +59,7 @@ window.CURRICULUM.grades.push({
           text: "Link named deficiency diseases to the nutrient that is lacking.",
           resources: [
             { type: "reading", title: "CK-12: Vitamins, minerals & deficiency", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "What happens when nutrients are missing." },
-            { type: "reading", title: "CK-12: Vitamins & minerals", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "Nutrient roles and deficiency effects." }
+            { type: "interactive", title: "Khan Academy: Deficiency diseases", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "Nutrient roles and deficiency effects." }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "Lack of vitamin C in the diet causes:", options: ["Rickets", "Scurvy", "Anaemia", "Goitre"], answer: 1, explanation: "Vitamin C deficiency causes scurvy (bleeding gums, poor wound healing)." },
@@ -82,7 +82,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Carry out and interpret the four food tests: iodine (starch), Benedict's (reducing sugar), Biuret (protein) and grease-spot/emulsion (fat).",
           resources: [
-            { type: "video", title: "Food tests step-by-step", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "Iodine, Benedict's, Biuret and grease-spot tests." },
+            { type: "interactive", title: "Khan Academy: Food tests", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "Iodine, Benedict's, Biuret and grease-spot tests." },
             { type: "reading", title: "CK-12: Food tests", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "What each food test shows." }
           ],
           quiz: [
@@ -121,7 +121,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Sequence the digestive processes: ingestion, digestion, absorption, assimilation and egestion.",
           resources: [
-            { type: "video", title: "Digestive System (Amoeba Sisters)", provider: "YouTube · Amoeba Sisters", url: "https://www.youtube.com/@AmoebaSisters", note: "The whole journey of food, step by step." },
+            { type: "interactive", title: "Khan Academy: The digestive system", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "The whole journey of food." },
             { type: "reading", title: "CK-12: The digestive system", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/digestive-system/", note: "Order of the digestive processes." }
           ],
           quiz: [
@@ -133,7 +133,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Distinguish mechanical from chemical digestion and identify the organs of the digestive system and their roles.",
           resources: [
-            { type: "video", title: "Digestion & enzymes (Amoeba Sisters)", provider: "YouTube · Amoeba Sisters", url: "https://www.youtube.com/@AmoebaSisters", note: "Mechanical vs chemical digestion and the gut organs." },
+            { type: "interactive", title: "Khan Academy: Digestion & enzymes", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "Mechanical vs chemical digestion." },
             { type: "reading", title: "CK-12: Human Digestive System", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/digestive-system/", note: "Each organ and what it does." }
           ],
           quiz: [
@@ -157,8 +157,8 @@ window.CURRICULUM.grades.push({
         {
           text: "Describe how digestive enzymes work on substrates and how pH and temperature affect them.",
           resources: [
-            { type: "video", title: "Enzymes explained (Amoeba Sisters)", provider: "YouTube · Amoeba Sisters", url: "https://www.youtube.com/@AmoebaSisters", note: "Active sites, substrates, and the effect of pH/temperature." },
-            { type: "video", title: "How enzymes work", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "Optimum conditions and denaturing." }
+            { type: "interactive", title: "Khan Academy: Enzymes", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "Active sites, substrates and conditions." },
+            { type: "reading", title: "CK-12: Enzymes", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "Optimum conditions and denaturing." }
           ],
           quiz: [
             { type: "mcq", difficulty: "hard", q: "Most enzymes in the human body work best at about:", options: ["0 °C", "20 °C", "37 °C", "60 °C"], answer: 2, explanation: "Body temperature (~37 °C) is the optimum; too hot and enzymes denature." },
@@ -181,7 +181,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Define atoms, elements and compounds and recall the first 20 element symbols.",
           resources: [
-            { type: "video", title: "Atomic structure & the periodic table", provider: "YouTube · CrashCourse Chemistry", url: "https://www.youtube.com/@crashcourse", note: "Atoms, elements and the first elements." },
+            { type: "interactive", title: "PhET: Build an Atom", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/build-an-atom", note: "Build atoms from protons, neutrons and electrons." },
             { type: "interactive", title: "Khan Academy: Atoms, elements & compounds", provider: "Khan Academy", url: "https://www.khanacademy.org/science/chemistry", note: "Definitions and element symbols." }
           ],
           quiz: [
@@ -206,7 +206,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Select and justify separation techniques: filtration, evaporation, crystallisation, distillation, sublimation and the separating funnel.",
           resources: [
-            { type: "video", title: "Separating mixtures", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "Filtration, distillation, crystallisation and more." },
+            { type: "reading", title: "CK-12: Separating mixtures", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/chemistry/", note: "Filtration, distillation and more." },
             { type: "interactive", title: "Khan Academy: Separating mixtures", provider: "Khan Academy", url: "https://www.khanacademy.org/science/chemistry", note: "Choosing the right technique." }
           ],
           quiz: [
@@ -230,7 +230,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Carry out paper chromatography and calculate Rf values to identify substances.",
           resources: [
-            { type: "video", title: "Chromatography & Rf values", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "Running a chromatogram and calculating Rf." },
+            { type: "reading", title: "CK-12: Chromatography", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/chemistry/", note: "Running a chromatogram and Rf values." },
             { type: "interactive", title: "Khan Academy: Chromatography", provider: "Khan Academy", url: "https://www.khanacademy.org/science/chemistry", note: "How separation by chromatography works." }
           ],
           quiz: [
@@ -243,7 +243,7 @@ window.CURRICULUM.grades.push({
           text: "State the relative charge and mass of protons, neutrons and electrons and locate them in the atom.",
           resources: [
             { type: "interactive", title: "PhET: Build an Atom", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/build-an-atom", note: "Place protons, neutrons and electrons to build atoms." },
-            { type: "video", title: "Subatomic particles", provider: "YouTube · CrashCourse Chemistry", url: "https://www.youtube.com/@crashcourse", note: "Charge and mass of the three particles." }
+            { type: "interactive", title: "Khan Academy: Subatomic particles", provider: "Khan Academy", url: "https://www.khanacademy.org/science/chemistry", note: "Charge and mass of the three particles." }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "Protons have a positive charge and electrons have a negative charge.", answer: true, explanation: "Protons are +1, electrons are −1, neutrons are neutral." },
@@ -267,7 +267,7 @@ window.CURRICULUM.grades.push({
           text: "Describe how the atomic model developed through Dalton, Thomson, Rutherford and Bohr, and the role of the gold-foil experiment.",
           resources: [
             { type: "reading", title: "CK-12: History of the atomic model", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/chemistry/", note: "Dalton to Bohr, with the gold-foil experiment." },
-            { type: "video", title: "The history of the atom", provider: "YouTube · CrashCourse Chemistry", url: "https://www.youtube.com/@crashcourse", note: "How evidence reshaped the model over time." }
+            { type: "interactive", title: "Khan Academy: History of the atom", provider: "Khan Academy", url: "https://www.khanacademy.org/science/chemistry", note: "Dalton to Bohr and the gold-foil experiment." }
           ],
           quiz: [
             { type: "tf", difficulty: "medium", q: "In Rutherford's gold-foil experiment, most particles passed straight through, showing the atom is mostly empty space.", answer: true, explanation: "A few particles bounced back, revealing a tiny dense positive nucleus surrounded by empty space." },
@@ -302,7 +302,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Distinguish distance from displacement and speed from velocity (scalar vs vector).",
           resources: [
-            { type: "video", title: "Motion, speed & acceleration", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "Scalars and vectors in motion." },
+            { type: "interactive", title: "The Physics Classroom: 1D Kinematics", provider: "The Physics Classroom", url: "https://www.physicsclassroom.com/class/1DKin", note: "Scalars, vectors and motion." },
             { type: "interactive", title: "Speed, velocity & acceleration study bot", provider: "🐺 Wolves classroom · ChatGPT", url: "https://chatgpt.com/g/g-67888e9d3ab4819184bf9ef35745731e-calculating-speed-velocity-and-acceleration", note: "Practise the differences and calculations. (Needs a ChatGPT login.)" }
           ],
           quiz: [
@@ -314,7 +314,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Define acceleration and interpret distance–time and velocity–time graphs, including the meaning of the slope.",
           resources: [
-            { type: "video", title: "Distance–time & velocity–time graphs", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "Reading the slope of motion graphs." },
+            { type: "interactive", title: "The Physics Classroom: Motion graphs", provider: "The Physics Classroom", url: "https://www.physicsclassroom.com/class/1DKin", note: "Reading the slope of motion graphs." },
             { type: "interactive", title: "Khan Academy: One-dimensional motion", provider: "Khan Academy", url: "https://www.khanacademy.org/science/physics/one-dimensional-motion", note: "Graphs and acceleration practice." }
           ],
           quiz: [
@@ -350,7 +350,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Identify forces: gravity, friction, tension, drag, upthrust, magnetic, electrostatic, nuclear and push/pull.",
           resources: [
-            { type: "video", title: "Forces & free-body diagrams", provider: "YouTube · CrashCourse Physics", url: "https://www.youtube.com/@crashcourse", note: "The main types of force with examples." },
+            { type: "interactive", title: "PhET: Forces and Motion – Basics", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/forces-and-motion-basics", note: "The main types of force." },
             { type: "interactive", title: "Gravity, friction & other forces study bot", provider: "🐺 Wolves classroom · ChatGPT", url: "https://chatgpt.com/g/g-677becabbef48191a678cbd2c430d4b9-gravity-friction-and-other-forces", note: "Ask questions about the different forces. (Needs a ChatGPT login.)" }
           ],
           quiz: [
@@ -363,7 +363,7 @@ window.CURRICULUM.grades.push({
           text: "Classify forces as contact or non-contact and as balanced or unbalanced.",
           resources: [
             { type: "interactive", title: "PhET: Forces and Motion – Basics", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/forces-and-motion-basics", note: "See balanced vs unbalanced forces in action." },
-            { type: "video", title: "Balanced & unbalanced forces", provider: "YouTube · CrashCourse Physics", url: "https://www.youtube.com/@crashcourse", note: "How net force changes motion." }
+            { type: "interactive", title: "The Physics Classroom: Newton's Laws", provider: "The Physics Classroom", url: "https://www.physicsclassroom.com/class/newtlaws", note: "How net force changes motion." }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Friction and air resistance are examples of:", options: ["Non-contact forces", "Contact forces", "Magnetic forces", "Nuclear forces"], answer: 1, explanation: "They act through direct contact; gravity and magnetism are non-contact." },
@@ -374,7 +374,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Draw free-body diagrams showing the forces on an object.",
           resources: [
-            { type: "video", title: "Free-body diagrams", provider: "YouTube · CrashCourse Physics", url: "https://www.youtube.com/@crashcourse", note: "How to draw and label force arrows." },
+            { type: "interactive", title: "Khan Academy: Free-body diagrams", provider: "Khan Academy", url: "https://www.khanacademy.org/science/physics", note: "Drawing and labelling force arrows." },
             { type: "interactive", title: "The Physics Classroom: Free-body diagrams", provider: "The Physics Classroom", url: "https://www.physicsclassroom.com/class/newtlaws", note: "Practice identifying forces on objects." }
           ],
           quiz: [
@@ -386,7 +386,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Distinguish mass from weight and calculate weight using W = m × g.",
           resources: [
-            { type: "video", title: "Mass vs weight", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "Why weight changes with gravity but mass doesn't." },
+            { type: "interactive", title: "The Physics Classroom: Mass & weight", provider: "The Physics Classroom", url: "https://www.physicsclassroom.com/class/newtlaws", note: "Why weight changes with gravity but mass doesn't." },
             { type: "interactive", title: "Khan Academy: Mass & weight", provider: "Khan Academy", url: "https://www.khanacademy.org/science/physics", note: "Calculating weight with W = mg." }
           ],
           quiz: [
@@ -410,7 +410,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Relate mechanical advantage and efficiency for simple machines to force, distance and energy.",
           resources: [
-            { type: "video", title: "Mechanical advantage & efficiency", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "Trading force for distance, and energy losses." },
+            { type: "interactive", title: "The Physics Classroom: Work & machines", provider: "The Physics Classroom", url: "https://www.physicsclassroom.com/class/energy", note: "Trading force for distance, and energy losses." },
             { type: "video", title: "The physics behind lift cables (BBC, 4 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=b2D4nhUOGW0", note: "Real machines using pulleys to gain mechanical advantage." },
             { type: "video", title: "The physics behind Einstein's E = mc² (TED-Ed, 5 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=gkTVlYDB21g", note: "Enrichment: the deep link between mass and energy." }
           ],
@@ -435,7 +435,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Describe energy flow through an ecosystem using food chains and energy pyramids.",
           resources: [
-            { type: "video", title: "Ecology – energy flow & food chains", provider: "YouTube · Amoeba Sisters", url: "https://www.youtube.com/@AmoebaSisters", note: "Trophic levels and food chains explained simply." },
+            { type: "interactive", title: "Khan Academy: Energy flow in ecosystems", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "Trophic levels and food chains." },
             { type: "video", title: "Why animals help each other (TED-Ed, 4 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=qWG2f9DwwpY", note: "Cooperation and relationships within ecosystems." },
             { type: "video", title: "Are there any places on Earth with no bugs? (TED-Ed, 5 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=jejgP_u82Qo", note: "How life and food webs spread across different habitats." },
             { type: "video", title: "Is the Amazon Rainforest disappearing? (TED-Ed, 5 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=Qxby1J5bnPQ", note: "A real ecosystem under pressure." },
@@ -450,7 +450,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Apply the 10% rule to explain why energy decreases at each trophic level.",
           resources: [
-            { type: "video", title: "Energy pyramids & the 10% rule", provider: "YouTube · Amoeba Sisters", url: "https://www.youtube.com/@AmoebaSisters", note: "Why energy shrinks up the levels." },
+            { type: "reading", title: "CK-12: Energy pyramids & the 10% rule", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "Why energy shrinks up the levels." },
             { type: "interactive", title: "PhET: Natural Selection & ecosystems", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/filter?subjects=biology", note: "Model populations and energy in ecosystems." }
           ],
           quiz: [
@@ -462,7 +462,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Outline the rock cycle and distinguish weathering from erosion.",
           resources: [
-            { type: "video", title: "The Rock Cycle & weathering", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "How rocks form, break down and reform." },
+            { type: "reading", title: "CK-12: The rock cycle & weathering", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/earth-science/", note: "How rocks form, break down and reform." },
             { type: "podcast", title: "The Secrets Everyday Rocks Keep – Short Wave", provider: "🐺 Wolves classroom · Apple Podcasts", url: "https://podcasts.apple.com/us/podcast/the-secrets-everyday-rocks-keep/id1482575855?i=1000735094795", note: "What ordinary rocks reveal about Earth's history." }
           ],
           quiz: [
@@ -476,7 +476,7 @@ window.CURRICULUM.grades.push({
           resources: [
             { type: "reading", title: "NOAA SciJinks: Earth's systems", provider: "NOAA SciJinks", url: "https://scijinks.gov/", note: "The geosphere, hydrosphere, atmosphere and biosphere." },
             { type: "video", title: "Inside Biosphere 2: the world's largest Earth-science experiment (16 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=-yAcD3wuY2Q", note: "A sealed model of Earth's systems — see how air, water, soil and life interact." },
-            { type: "reading", title: "NOAA SciJinks: How Earth's systems connect", provider: "NOAA SciJinks", url: "https://scijinks.gov/", note: "Student-friendly look at interacting Earth systems." }
+            { type: "interactive", title: "NASA Climate Kids: Earth's systems", provider: "NASA Climate Kids", url: "https://climatekids.nasa.gov/", note: "How air, water, rock and life interact." }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "Which pair correctly names two of Earth's 'spheres'?", options: ["Atmosphere & hydrosphere", "Stratosphere & ionosphere only", "Biosphere & exosphere only", "Lithosphere & sonosphere"], answer: 0, explanation: "Earth's four main systems are the atmosphere (air), hydrosphere (water), geosphere/lithosphere (rock) and biosphere (life)." },
@@ -488,7 +488,7 @@ window.CURRICULUM.grades.push({
           text: "Read a basic weather map, including isobars and fronts.",
           resources: [
             { type: "reading", title: "NOAA SciJinks: Weather maps & fronts", provider: "NOAA SciJinks", url: "https://scijinks.gov/", note: "Isobars, fronts and pressure systems." },
-            { type: "reading", title: "NOAA SciJinks: Weather", provider: "NOAA SciJinks", url: "https://scijinks.gov/", note: "How to read weather and climate." }
+            { type: "interactive", title: "NASA Climate Kids: Weather & climate", provider: "NASA Climate Kids", url: "https://climatekids.nasa.gov/", note: "Reading weather and climate." }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "On a weather map, lines joining places of equal air pressure are called:", options: ["Contours", "Isobars", "Fronts", "Latitudes"], answer: 1, explanation: "Isobars connect points of equal pressure; closely spaced isobars mean stronger winds." },
@@ -512,7 +512,7 @@ window.CURRICULUM.grades.push({
           text: "Evaluate data for reliability and bias and recognise when a sample is fair.",
           resources: [
             { type: "interactive", title: "Khan Academy: Sampling & bias", provider: "Khan Academy", url: "https://www.khanacademy.org/math/statistics-probability", note: "What makes a sample fair and reliable." },
-            { type: "interactive", title: "Khan Academy: Sampling & reliability", provider: "Khan Academy", url: "https://www.khanacademy.org/math/statistics-probability", note: "Spotting bias in investigations." }
+            { type: "interactive", title: "Math is Fun: Data & sampling", provider: "Math is Fun", url: "https://www.mathsisfun.com/data/index.html", note: "Fair, representative samples." }
           ],
           quiz: [
             { type: "short", difficulty: "medium", q: "Give one reason a survey of 'favourite animal' carried out only at a zoo gift shop might be biased.", answer: "The sample is not representative: people at a zoo gift shop are already animal enthusiasts and may favour exotic zoo animals, so the results wouldn't reflect the wider public. A fair survey needs a varied, random sample.", explanation: "Where and who you sample can skew results — sampling bias." },
@@ -524,7 +524,7 @@ window.CURRICULUM.grades.push({
           text: "Interpret scatter plots and describe correlation (positive, negative, none).",
           resources: [
             { type: "interactive", title: "Khan Academy: Interpreting scatter plots", provider: "Khan Academy", url: "https://www.khanacademy.org/math/statistics-probability", note: "Reading correlation from data." },
-            { type: "interactive", title: "Khan Academy: Scatter graphs", provider: "Khan Academy", url: "https://www.khanacademy.org/math/statistics-probability", note: "Positive, negative and no correlation." }
+            { type: "interactive", title: "Math is Fun: Scatter Plots", provider: "Math is Fun", url: "https://www.mathsisfun.com/data/scatter-xy-plots.html", note: "Reading correlation from data." }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "A scatter plot shows points rising from bottom-left to top-right. This is:", options: ["Negative correlation", "No correlation", "Positive correlation", "An outlier"], answer: 2, explanation: "As one variable increases, so does the other — positive correlation." },
