@@ -28,8 +28,8 @@ window.Mindmap = (function () {
   function deg2rad(d) { return (d * Math.PI) / 180; }
 
   // compute positions for grades and topics
-  function layout() {
-    const grades = window.CURRICULUM.grades;
+  function layout(subject) {
+    const grades = subject.grades;
     const pos = { topics: {}, grades: {} };
     // grade base angles: G6 top, G7 lower-right, G8 lower-left
     const baseAngles = [-90, 30, 150];
@@ -48,7 +48,7 @@ window.Mindmap = (function () {
           x: CENTER.x + TOPIC_R * Math.cos(deg2rad(a)),
           y: CENTER.y + TOPIC_R * Math.sin(deg2rad(a)),
           color: g.color, gradeId: g.id, icon: t.icon,
-          title: SHORT[t.id] || t.title, full: t.title, id: t.id
+          title: (subject.shortLabels || SHORT)[t.id] || t.title, full: t.title, id: t.id
         };
       });
     });
@@ -80,10 +80,11 @@ window.Mindmap = (function () {
     return `M ${a.x} ${a.y} Q ${cx} ${cy} ${b.x} ${b.y}`;
   }
 
-  function render(container) {
+  function render(container, subject) {
+    subject = subject || window.CURRICULUM;
     container.innerHTML = "";
-    const pos = layout();
-    const threads = window.CURRICULUM.threads;
+    const pos = layout(subject);
+    const threads = subject.threads;
     const visible = {}; threads.forEach(t => (visible[t.id] = true));
 
     // ---- toolbar ----
@@ -110,7 +111,7 @@ window.Mindmap = (function () {
     container.appendChild(toolbar);
 
     // ---- svg ----
-    const svg = el("svg", { id: "mindmap-svg", viewBox: `0 0 ${VBW} ${VBH}`, role: "img", "aria-label": "Concept mindmap of IB Science topics" });
+    const svg = el("svg", { id: "mindmap-svg", viewBox: `0 0 ${VBW} ${VBH}`, role: "img", "aria-label": "Concept mindmap of " + subject.name + " topics" });
     const root = el("g", {}); // pan/zoom group
     svg.appendChild(root);
     container.appendChild(svg);
@@ -120,7 +121,7 @@ window.Mindmap = (function () {
     const gNodes = el("g", {}); root.appendChild(gNodes);
 
     // ---- static structural links (centre→grade→topic) ----
-    window.CURRICULUM.grades.forEach(g => {
+    subject.grades.forEach(g => {
       const gp = pos.grades[g.id];
       gLinks.appendChild(el("line", { class: "mm-link", x1: CENTER.x, y1: CENTER.y, x2: gp.x, y2: gp.y, stroke: gp.color, "stroke-width": 2, opacity: .5 }));
       g.topics.forEach(t => {
@@ -147,13 +148,13 @@ window.Mindmap = (function () {
 
     // ---- centre node ----
     const cg = el("g", { class: "mm-node" });
-    cg.appendChild(el("circle", { cx: CENTER.x, cy: CENTER.y, r: 52, fill: "#3b5bdb", stroke: "#fff", "stroke-width": 3 }));
-    const ct1 = el("text", { x: CENTER.x, y: CENTER.y - 4, "text-anchor": "middle", fill: "#fff", "font-size": 15, "font-weight": 700 }); ct1.textContent = "IB Science";
+    cg.appendChild(el("circle", { cx: CENTER.x, cy: CENTER.y, r: 52, fill: subject.color || "#3b5bdb", stroke: "#fff", "stroke-width": 3 }));
+    const ct1 = el("text", { x: CENTER.x, y: CENTER.y - 4, "text-anchor": "middle", fill: "#fff", "font-size": 15, "font-weight": 700 }); ct1.textContent = subject.centreLabel || subject.name;
     const ct2 = el("text", { x: CENTER.x, y: CENTER.y + 15, "text-anchor": "middle", fill: "#dbe4ff", "font-size": 12, "font-weight": 600 }); ct2.textContent = "Grades 6–8";
     cg.append(ct1, ct2); gNodes.appendChild(cg);
 
     // ---- grade nodes ----
-    window.CURRICULUM.grades.forEach(g => {
+    subject.grades.forEach(g => {
       const gp = pos.grades[g.id];
       const grp = el("g", { class: "mm-node" });
       const w = 132, h = 44;
@@ -162,7 +163,7 @@ window.Mindmap = (function () {
       const t2 = el("text", { x: gp.x, y: gp.y + 14, "text-anchor": "middle", fill: "rgba(255,255,255,.9)", "font-size": 9.5, "font-weight": 600 }); t2.textContent = g.tagline;
       grp.append(rect, t1, t2);
       grp.style.cursor = "pointer";
-      grp.addEventListener("click", () => { location.hash = "#/grade/" + g.id; });
+      grp.addEventListener("click", () => { location.hash = "#/" + subject.id + "/grade/" + g.id; });
       gNodes.appendChild(grp);
     });
 
@@ -187,7 +188,7 @@ window.Mindmap = (function () {
       });
       grp.style.cursor = "pointer";
       const title = el("title", {}); title.textContent = tp.full + " — click to open"; grp.appendChild(title);
-      grp.addEventListener("click", () => { location.hash = "#/topic/" + tp.id; });
+      grp.addEventListener("click", () => { location.hash = "#/" + subject.id + "/topic/" + tp.id; });
       grp.addEventListener("mouseenter", () => rect.setAttribute("stroke-width", 3.4));
       grp.addEventListener("mouseleave", () => rect.setAttribute("stroke-width", 2.4));
       gNodes.appendChild(grp);

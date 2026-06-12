@@ -3,32 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IB Science Hub · Grades 6–8</title>
-  <meta name="description" content="Learning objectives, free resources, interactive quizzes and a concept mindmap for IB Science, Grades 6 to 8." />
+  <title>IB Learning Hub · Grades 6–8</title>
+  <meta name="description" content="Learning objectives, free resources, interactive quizzes and concept mindmaps across subjects for IB Grades 6 to 8." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=2" />
+  <link rel="stylesheet" href="css/styles.css?v=3" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="#/" aria-label="IB Science Hub home">
-        <span class="brand-mark">⚗︎</span>
+      <a class="brand" href="#/" aria-label="IB Learning Hub home">
+        <span class="brand-mark">🎓</span>
         <span class="brand-text">
-          <strong>IB Science Hub</strong>
+          <strong>IB Learning Hub</strong>
           <small>Grades 6 – 8</small>
         </span>
       </a>
       <nav class="main-nav" id="main-nav" aria-label="Primary">
-        <a href="#/">Home</a>
-        <a href="#/grade/grade-6">Grade 6</a>
-        <a href="#/grade/grade-7">Grade 7</a>
-        <a href="#/grade/grade-8">Grade 8</a>
-        <a href="#/mindmap">Mindmap</a>
-        <a href="#/library">Library</a>
+        <!-- nav links are rendered by app.js, scoped to the active subject -->
       </nav>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
     </div>
@@ -39,19 +34,19 @@
   </main>
 
   <footer class="site-footer">
-    <p>IB Science Hub · A free study companion for Grades 6–8. Built for learners — explore objectives, watch & read, then test yourself.</p>
+    <p>IB Learning Hub · A free study companion for Grades 6–8. Built for learners — explore objectives, watch & read, then test yourself.</p>
     <p class="muted">Resource links point to free, well-known educators (Khan Academy, PhET, CrashCourse, Amoeba Sisters, FuseSchool, BBC Bitesize, CK-12, NASA and more).</p>
   </footer>
 
   <!-- data loads first, in order. ?v= is bumped on each content update to bust browser caches. -->
-  <script src="js/core.js?v=2"></script>
-  <script src="js/data-g6.js?v=2"></script>
-  <script src="js/data-g7.js?v=2"></script>
-  <script src="js/data-g8.js?v=2"></script>
-  <script src="js/threads.js?v=2"></script>
-  <script src="js/data-classroom.js?v=2"></script>
+  <script src="js/core.js?v=3"></script>
+  <script src="js/data-g6.js?v=3"></script>
+  <script src="js/data-g7.js?v=3"></script>
+  <script src="js/data-g8.js?v=3"></script>
+  <script src="js/threads.js?v=3"></script>
+  <script src="js/data-classroom.js?v=3"></script>
   <!-- then the app -->
-  <script src="js/mindmap.js?v=2"></script>
-  <script src="js/app.js?v=2"></script>
+  <script src="js/mindmap.js?v=3"></script>
+  <script src="js/app.js?v=3"></script>
 </body>
 </html>

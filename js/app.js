@@ -1,41 +1,47 @@
-/* App: hash router + view rendering + quiz engine. */
+/* App: multi-subject hash router + view rendering + quiz engine.
+ * Routes are subject-scoped: #/<subjectId>/grade/..., #/<subjectId>/topic/...,
+ * #/<subjectId>/mindmap, #/<subjectId>/library. #/ is the subject picker.
+ * Legacy science links (#/topic/..., #/grade/..., #/mindmap, #/library) still
+ * resolve to the Science subject for backward compatibility. */
 (function () {
   const main = document.getElementById("main");
-  const C = window.CURRICULUM;
+  const HUB = window.HUB;
+  let SUBJ = window.CURRICULUM; // active subject (set at the top of route())
 
   // ---------- helpers ----------
   const $ = (sel, root = document) => root.querySelector(sel);
+  function sb() { return "#/" + SUBJ.id; }              // current subject route base
+  function crumbBase() { return `<a href="#/">Subjects</a> › <a href="${sb()}">${esc(SUBJ.name)}</a>`; }
   function findTopic(id) {
-    for (const g of C.grades) {
+    for (const g of SUBJ.grades) {
       const t = g.topics.find(t => t.id === id);
       if (t) return { topic: t, grade: g };
     }
     return null;
   }
-  function gradeOf(id) { return C.grades.find(g => g.id === id); }
+  function gradeOf(id) { return SUBJ.grades.find(g => g.id === id); }
   function esc(s) { return String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
   function countByType(quiz) {
     const auto = quiz.filter(q => ["mcq", "tf", "numeric", "match"].includes(q.type)).length;
     return { total: quiz.length, auto, written: quiz.length - auto };
   }
-  // --- schema helpers: support BOTH the new per-objective schema
-  //     (objectives are objects with .text/.resources/.quiz) and the older
-  //     flat schema (objectives are strings; resources/quiz live on the topic). ---
+  // --- schema helpers: support BOTH the per-objective schema (objectives are
+  //     objects with .text/.resources/.quiz) and the older flat schema
+  //     (objectives are strings; resources/quiz live on the topic). ---
   function isPerObj(t) { return Array.isArray(t.objectives) && t.objectives.length > 0 && typeof t.objectives[0] === "object"; }
-  function objText(o) { return typeof o === "string" ? o : o.text; }
   function allResources(t) { return isPerObj(t) ? t.objectives.flatMap(o => o.resources || []) : (t.resources || []); }
   function allQuiz(t) { return isPerObj(t) ? t.objectives.flatMap(o => o.quiz || []) : (t.quiz || []); }
   // topics that share at least one concept thread with the given topic
   function relatedTopics(topicId) {
     const set = new Set();
-    C.threads.forEach(th => {
+    SUBJ.threads.forEach(th => {
       if (th.path.includes(topicId)) th.path.forEach(p => { if (p !== topicId) set.add(p); });
     });
     return [...set].map(id => findTopic(id)).filter(Boolean);
   }
-  function threadsFor(topicId) { return C.threads.filter(th => th.path.includes(topicId)); }
+  function threadsFor(topicId) { return SUBJ.threads.filter(th => th.path.includes(topicId)); }
 
-  // ---- Wolves classroom resources (optional, loaded from data-classroom.js) ----
+  // ---- Wolves classroom resources (optional, loaded from data-classroom.js; Science only) ----
   const CLASS = window.CLASSROOM || { meta: { count: 0 }, resources: [] };
   const KIND_META = {
     video: { label: "Video", cls: "video", icon: "▶" },
@@ -54,10 +60,42 @@
       </a>`;
   }
 
-  // ---------- views ----------
-  function viewHome() {
-    const gradeCards = C.grades.map(g => `
-      <a class="grade-card" href="#/grade/${g.id}" style="border-top-color:${g.color}">
+  // ---------- subject picker (home) ----------
+  function viewSubjects() {
+    const cards = HUB.subjects.map(s => {
+      const topics = s.grades.reduce((n, g) => n + g.topics.length, 0);
+      return `
+      <a class="grade-card" href="#/${s.id}" style="border-top-color:${s.color}">
+        <span class="card-eyebrow" style="color:${s.color}">${esc(s.icon || "")} Subject</span>
+        <h3>${esc(s.name)}</h3>
+        <p class="card-desc">${esc(s.blurb || "")}</p>
+        <div class="card-footer"><span class="chip">${s.grades.length} grades · ${topics} topics</span><span class="go-link">Open →</span></div>
+      </a>`;
+    }).join("");
+    const planned = ["English", "Social Sciences"].filter(n => !HUB.subjects.some(s => s.name === n));
+    const soon = planned.map(n => `
+      <div class="grade-card disabled" style="border-top-color:#cbd2e0">
+        <span class="card-eyebrow" style="color:#9aa3b8">Coming soon</span>
+        <h3>${esc(n)}</h3>
+        <p class="card-desc">Same structure — objectives, free resources, quizzes and a concept mindmap — coming next.</p>
+        <div class="card-footer"><span class="chip">Planned</span></div>
+      </div>`).join("");
+    return `
+      <section class="hero">
+        <h1>IB Learning Hub</h1>
+        <p class="lede">A free study companion for Grades 6–8 — clear learning objectives, hand-picked free resources and self-marking quizzes for every objective, plus a concept mindmap. Choose a subject to begin.</p>
+      </section>
+      <h2 class="section-title">Subjects <span class="count">${HUB.subjects.length} live${planned.length ? " · " + planned.length + " coming" : ""}</span></h2>
+      <div class="grid cols-3">${cards}${soon}</div>`;
+  }
+
+  // ---------- subject landing (grade picker for one subject) ----------
+  function viewSubjectHome() {
+    const grades = SUBJ.grades;
+    const topicCount = grades.reduce((n, g) => n + g.topics.length, 0);
+    const meta = SUBJ.meta || {};
+    const gradeCards = grades.map(g => `
+      <a class="grade-card" href="${sb()}/grade/${g.id}" style="border-top-color:${g.color}">
         <span class="card-eyebrow" style="color:${g.color}">${esc(g.name)}</span>
         <h3>${esc(g.tagline)}</h3>
         <p class="card-desc">${esc(g.blurb)}</p>
@@ -66,43 +104,46 @@
           <span class="go-link">Explore →</span>
         </div>
       </a>`).join("");
+    const hasMindmap = SUBJ.threads && SUBJ.threads.length;
 
     return `
+      <nav class="breadcrumb"><a href="#/">Subjects</a> › <span>${esc(SUBJ.name)}</span></nav>
       <section class="hero">
-        <h1>${esc(C.meta.title)}</h1>
-        <p class="lede">${esc(C.meta.subtitle)}</p>
+        <h1>${esc(meta.title || (SUBJ.name + " Hub"))}</h1>
+        <p class="lede">${esc(meta.subtitle || "")}</p>
         <div class="hero-cta">
-          <a class="btn btn-primary" href="#/grade/grade-6">Start with Grade 6 →</a>
-          <a class="btn btn-ghost" href="#/mindmap">🧠 View the concept mindmap</a>
+          ${grades.length ? `<a class="btn btn-primary" href="${sb()}/grade/${grades[0].id}">Start with ${esc(grades[0].name)} →</a>` : ""}
+          ${hasMindmap ? `<a class="btn btn-ghost" href="${sb()}/mindmap">🧠 View the concept mindmap</a>` : ""}
         </div>
       </section>
 
-      <div class="arc-note"><strong>The 3-year arc.</strong> ${esc(C.meta.arc)}</div>
+      ${meta.arc ? `<div class="arc-note"><strong>The 3-year arc.</strong> ${esc(meta.arc)}</div>` : ""}
 
-      <h2 class="section-title">Choose a grade <span class="count">3 grades · 11 topics</span></h2>
+      <h2 class="section-title">Choose a grade <span class="count">${grades.length} grades · ${topicCount} topics</span></h2>
       <div class="grid cols-3">${gradeCards}</div>
 
       <h2 class="section-title">How to use this hub</h2>
       <div class="grid cols-3">
-        <div class="topic-card"><div class="icon">🎯</div><h3>Learn the objectives</h3><p class="card-desc">Each topic opens with clear "I can…" learning objectives so you know exactly what to master.</p></div>
-        <div class="topic-card"><div class="icon">📺</div><h3>Use free resources</h3><p class="card-desc">Hand-picked free videos, simulations, readings and podcasts to build understanding.</p></div>
-        <div class="topic-card"><div class="icon">📝</div><h3>Test yourself</h3><p class="card-desc">15–20 questions per topic, easy → hard, mixing multiple-choice, true/false, numeric and written answers.</p></div>
+        <div class="topic-card"><div class="icon">🎯</div><h3>Pick an objective</h3><p class="card-desc">Each topic breaks into clear "I can…" objectives. Open any one to study just that skill.</p></div>
+        <div class="topic-card"><div class="icon">📺</div><h3>Use free resources</h3><p class="card-desc">Every objective has its own hand-picked free videos, simulations, readings and podcasts.</p></div>
+        <div class="topic-card"><div class="icon">📝</div><h3>Test yourself</h3><p class="card-desc">Each objective has its own quick quiz — mixing multiple-choice, true/false, numeric and written answers, auto-marked where possible.</p></div>
       </div>
 
+      ${hasMindmap ? `
       <h2 class="section-title">See how it all connects</h2>
-      <a class="grade-card" href="#/mindmap" style="border-top-color:var(--accent)">
-        <span class="card-eyebrow" style="color:var(--accent)">Concept mindmap</span>
+      <a class="grade-card" href="${sb()}/mindmap" style="border-top-color:${SUBJ.color}">
+        <span class="card-eyebrow" style="color:${SUBJ.color}">Concept mindmap</span>
         <h3>🧠 Trace ideas from Grade 6 to Grade 8</h3>
-        <p class="card-desc">An interactive map showing how seven big ideas — like forces, energy, the cell, atoms and data — thread through all three years. Toggle each thread to see the links.</p>
+        <p class="card-desc">An interactive map showing how the big ideas thread through all three years. Toggle each thread to see the links.</p>
         <div class="card-footer"><span class="chip">Interactive</span><span class="go-link">Open mindmap →</span></div>
-      </a>
+      </a>` : ""}
 
-      ${CLASS.meta.count ? `
+      ${SUBJ.hasLibrary && CLASS.meta.count ? `
       <h2 class="section-title">Enrichment from the Wolves classroom</h2>
-      <a class="grade-card" href="#/library" style="border-top-color:#c08a3e">
+      <a class="grade-card" href="${sb()}/library" style="border-top-color:#c08a3e">
         <span class="card-eyebrow" style="color:#c08a3e">Classroom library</span>
-        <h3>🐺 ${CLASS.meta.count} extra science videos, articles &amp; podcasts</h3>
-        <p class="card-desc">A curated stream of real-world science your class collected — TED-Ed talks, BBC Earth documentaries, news and Short Wave podcasts. Search and filter them, or find them woven into each topic's resources.</p>
+        <h3>🐺 ${CLASS.meta.count} extra videos, articles &amp; podcasts</h3>
+        <p class="card-desc">A curated stream of real-world science your class collected — TED-Ed talks, BBC Earth documentaries, news and Short Wave podcasts. Search and filter them, or find them woven into each objective's resources.</p>
         <div class="card-footer"><span class="chip">Searchable</span><span class="go-link">Browse the library →</span></div>
       </a>` : ""}`;
   }
@@ -113,7 +154,7 @@
     const cards = g.topics.map(t => {
       const c = countByType(allQuiz(t));
       return `
-      <a class="topic-card" href="#/topic/${t.id}">
+      <a class="topic-card" href="${sb()}/topic/${t.id}">
         <div class="icon">${t.icon}</div>
         <span class="card-eyebrow" style="color:${g.color}">${esc(t.subject)}</span>
         <h3>${esc(t.title)}</h3>
@@ -127,7 +168,7 @@
       </a>`;
     }).join("");
     return `
-      <nav class="breadcrumb"><a href="#/">Home</a> ›  <span>${esc(g.name)}</span></nav>
+      <nav class="breadcrumb">${crumbBase()} › <span>${esc(g.name)}</span></nav>
       <section class="hero" style="background:linear-gradient(135deg, ${g.color}1a, #f8fbff)">
         <h1>${esc(g.name)} · ${esc(g.tagline)}</h1>
         <p class="lede">${esc(g.blurb)}</p>
@@ -157,7 +198,7 @@
     const tabBtn = (key, label) => `<button class="tab-btn ${activeTab === key ? "active" : ""}" data-tab="${key}">${label}</button>`;
 
     return `
-      <nav class="breadcrumb"><a href="#/">Home</a> › <a href="#/grade/${g.id}">${esc(g.name)}</a> › <span>${esc(t.title)}</span></nav>
+      <nav class="breadcrumb">${crumbBase()} › <a href="${sb()}/grade/${g.id}">${esc(g.name)}</a> › <span>${esc(t.title)}</span></nav>
       ${topicHead(t, g)}
       <p class="topic-summary">${esc(t.summary)}</p>
 
@@ -169,7 +210,7 @@
       <div id="tab-content"></div>
 
       ${renderConnections(t)}
-      <div class="back-top"><a class="btn btn-ghost" href="#/grade/${g.id}">← Back to ${esc(g.name)}</a></div>`;
+      <div class="back-top"><a class="btn btn-ghost" href="${sb()}/grade/${g.id}">← Back to ${esc(g.name)}</a></div>`;
   }
 
   // ---- per-objective topic hub (new schema) ----
@@ -187,8 +228,8 @@
             <p class="obj-text">${esc(o.text)}</p>
           </div>
           <div class="obj-links">
-            <a class="obj-link res" href="#/topic/${t.id}/obj/${i}/resources">📚 Resources <span class="obj-link-count">${nRes}</span></a>
-            <a class="obj-link quiz" href="#/topic/${t.id}/obj/${i}/quiz">📝 Quiz <span class="obj-link-count">${nQuiz}</span></a>
+            <a class="obj-link res" href="${sb()}/topic/${t.id}/obj/${i}/resources">📚 Resources <span class="obj-link-count">${nRes}</span></a>
+            <a class="obj-link quiz" href="${sb()}/topic/${t.id}/obj/${i}/quiz">📝 Quiz <span class="obj-link-count">${nQuiz}</span></a>
           </div>
         </div>`;
     }).join("");
@@ -198,12 +239,12 @@
       <div class="classroom-block">
         <h3>🐺 From the Wolves classroom</h3>
         <p class="muted">Extra videos, articles &amp; podcasts collected by your class that connect to this topic.
-          <a href="#/library">Browse the full classroom library →</a></p>
+          <a href="${sb()}/library">Browse the full classroom library →</a></p>
         <div class="res-list">${classroom.map(classroomCard).join("")}</div>
       </div>` : "";
 
     return `
-      <nav class="breadcrumb"><a href="#/">Home</a> › <a href="#/grade/${g.id}">${esc(g.name)}</a> › <span>${esc(t.title)}</span></nav>
+      <nav class="breadcrumb">${crumbBase()} › <a href="${sb()}/grade/${g.id}">${esc(g.name)}</a> › <span>${esc(t.title)}</span></nav>
       ${topicHead(t, g)}
       <p class="topic-summary">${esc(t.summary)}</p>
       <p class="obj-intro">This topic has <strong>${t.objectives.length} learning objectives</strong>. Each one has its own
@@ -211,7 +252,7 @@
       <div class="obj-hub">${objCards}</div>
       ${classroomBlock}
       ${renderConnections(t)}
-      <div class="back-top"><a class="btn btn-ghost" href="#/grade/${g.id}">← Back to ${esc(g.name)}</a></div>`;
+      <div class="back-top"><a class="btn btn-ghost" href="${sb()}/grade/${g.id}">← Back to ${esc(g.name)}</a></div>`;
   }
 
   function objNav(t, g, i, here) {
@@ -219,7 +260,7 @@
     const otherKey = here === "resources" ? "quiz" : "resources";
     const otherLabel = here === "resources" ? "📝 Take the quiz for this objective" : "📚 See resources for this objective";
     return `
-      <nav class="breadcrumb"><a href="#/">Home</a> › <a href="#/grade/${g.id}">${esc(g.name)}</a> › <a href="#/topic/${t.id}">${esc(t.title)}</a> › <span>Objective ${i + 1}</span></nav>
+      <nav class="breadcrumb">${crumbBase()} › <a href="${sb()}/grade/${g.id}">${esc(g.name)}</a> › <a href="${sb()}/topic/${t.id}">${esc(t.title)}</a> › <span>Objective ${i + 1}</span></nav>
       <div class="obj-detail-head">
         <span class="obj-num lg" style="background:${g.color}">${i + 1}</span>
         <div>
@@ -228,8 +269,8 @@
         </div>
       </div>
       <div class="obj-switch">
-        <a class="btn btn-ghost" href="#/topic/${t.id}/obj/${i}/${otherKey}">${otherLabel} →</a>
-        <a class="btn btn-ghost" href="#/topic/${t.id}">← All objectives</a>
+        <a class="btn btn-ghost" href="${sb()}/topic/${t.id}/obj/${i}/${otherKey}">${otherLabel} →</a>
+        <a class="btn btn-ghost" href="${sb()}/topic/${t.id}">← All objectives</a>
       </div>`;
   }
 
@@ -292,7 +333,7 @@
       <div class="classroom-block">
         <h3>🐺 From the Wolves classroom</h3>
         <p class="muted">Extra videos, articles &amp; podcasts collected by your class that connect to this topic.
-          <a href="#/library">Browse the full classroom library →</a></p>
+          <a href="${sb()}/library">Browse the full classroom library →</a></p>
         <div class="res-list">${classroom.map(classroomCard).join("")}</div>
       </div>` : "";
     return `<div class="tab-panel">
@@ -307,7 +348,7 @@
     if (!rel.length) return "";
     const ths = threadsFor(t.id);
     const pills = rel.map(({ topic, grade }) => `
-      <a class="conn-pill" href="#/topic/${topic.id}"><span class="dot" style="background:${grade.color}"></span>${esc(topic.title)} <small style="color:var(--muted)">· ${esc(grade.name)}</small></a>`).join("");
+      <a class="conn-pill" href="${sb()}/topic/${topic.id}"><span class="dot" style="background:${grade.color}"></span>${esc(topic.title)} <small style="color:var(--muted)">· ${esc(grade.name)}</small></a>`).join("");
     const threadTags = ths.map(th => `<span class="conn-pill"><span class="dot" style="background:${th.color}"></span>${esc(th.label)}</span>`).join("");
     return `
       <div class="connections">
@@ -316,11 +357,11 @@
         <div class="conn-list">${threadTags}</div>
         <p class="muted" style="margin-top:.9rem">Related topics across the grades:</p>
         <div class="conn-list">${pills}</div>
-        <p style="margin-top:.9rem"><a href="#/mindmap">See the full concept mindmap →</a></p>
+        <p style="margin-top:.9rem"><a href="${sb()}/mindmap">See the full concept mindmap →</a></p>
       </div>`;
   }
 
-  // ---------- classroom library ----------
+  // ---------- classroom library (Science only) ----------
   function viewLibrary() {
     const subjects = ["All", "Biology", "Chemistry", "Physics", "Earth & Space", "General"];
     const kinds = [["all", "All"], ["video", "Videos"], ["reading", "Reading"], ["podcast", "Podcasts"]];
@@ -329,11 +370,11 @@
     const kindChips = kinds.map((k, i) =>
       `<button class="filter-chip ${i === 0 ? "active" : ""}" data-filter="kind" data-val="${k[0]}">${esc(k[1])}</button>`).join("");
     return `
-      <nav class="breadcrumb"><a href="#/">Home</a> › <span>Classroom Library</span></nav>
+      <nav class="breadcrumb">${crumbBase()} › <span>Classroom Library</span></nav>
       <h1>🐺 Wolves classroom library</h1>
       <p class="topic-summary">${CLASS.meta.count} free science videos, articles and podcasts collected from the
         Wolves Google Classroom — folded in here as enrichment alongside the curriculum. Search, filter, and open any of them.
-        Where one connects to a curriculum topic, it also appears on that topic's <em>Resources</em> tab.</p>
+        Where one connects to a curriculum topic, it also appears on that topic's <em>Resources</em>.</p>
       <div class="lib-controls">
         <input id="lib-search" class="lib-search" type="search" placeholder="🔍 Search titles & sources…" />
         <div class="filter-row"><span class="filter-label">Subject</span>${subChips}</div>
@@ -348,7 +389,7 @@
     const k = KIND_META[r.kind] || KIND_META.reading;
     const topicPills = (r.topics || []).map(id => {
       const f = findTopic(id);
-      return f ? `<a class="lib-topic-pill" href="#/topic/${id}"><span class="dot" style="background:${f.grade.color}"></span>${esc(f.topic.title)}</a>` : "";
+      return f ? `<a class="lib-topic-pill" href="${sb()}/topic/${id}"><span class="dot" style="background:${f.grade.color}"></span>${esc(f.topic.title)}</a>` : "";
     }).join("");
     return `
       <div class="res-card classroom lib-card">
@@ -432,7 +473,7 @@
     if (!s) return;
     const pct = Math.round((state.correct / state.autoTotal) * 100);
     let msg = "Keep going — review the explanations and try again.";
-    if (pct >= 90) msg = "Outstanding! You've really mastered this topic. 🌟";
+    if (pct >= 90) msg = "Outstanding! You've really mastered this. 🌟";
     else if (pct >= 70) msg = "Great work! A little review on the missed ones will lock it in. 💪";
     else if (pct >= 50) msg = "Good start — revisit the resources for the tricky parts. 📚";
     s.className = "quiz-summary show";
@@ -588,14 +629,27 @@
   }
   function shuffle(arr) { for (let i = arr.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1));[arr[i], arr[j]] = [arr[j], arr[i]]; } return arr; }
 
-  // ---------- router ----------
+  // ---------- navigation ----------
+  function renderNav(subject) {
+    const nav = document.getElementById("main-nav");
+    if (!nav) return;
+    let html = `<a href="#/">Subjects</a>`;
+    if (subject) {
+      subject.grades.forEach(g => { html += `<a href="#/${subject.id}/grade/${g.id}">${esc(g.name)}</a>`; });
+      if (subject.threads && subject.threads.length) html += `<a href="#/${subject.id}/mindmap">Mindmap</a>`;
+      if (subject.hasLibrary && CLASS.meta.count) html += `<a href="#/${subject.id}/library">Library</a>`;
+    } else {
+      HUB.subjects.forEach(s => { html += `<a href="#/${s.id}">${esc(s.name)}</a>`; });
+    }
+    nav.innerHTML = html;
+  }
+
   function setActiveNav(hash) {
     document.querySelectorAll(".main-nav a").forEach(a => {
       const href = a.getAttribute("href");
       let active = false;
-      if (href === "#/" && (hash === "" || hash === "#/" )) active = true;
+      if (href === "#/" && (hash === "" || hash === "#/")) active = true;
       else if (href !== "#/" && hash.startsWith(href)) active = true;
-      // topic pages: highlight the grade they belong to
       a.classList.toggle("active", active);
     });
   }
@@ -608,9 +662,56 @@
       if (tab === "quiz") mountQuiz(t.quiz);
     }
     document.querySelectorAll(".tab-btn").forEach(b => {
-      b.addEventListener("click", () => { show(b.dataset.tab); history.replaceState(null, "", `#/topic/${t.id}/${b.dataset.tab}`); });
+      b.addEventListener("click", () => { show(b.dataset.tab); history.replaceState(null, "", `${sb()}/topic/${t.id}/${b.dataset.tab}`); });
     });
     return show;
+  }
+
+  // ---------- router ----------
+  const LEGACY = ["grade", "topic", "mindmap", "library"]; // old un-scoped science routes
+
+  function renderInSubject(rest) {
+    if (rest.length === 0) { main.innerHTML = viewSubjectHome(); return; }
+    if (rest[0] === "grade") { main.innerHTML = viewGrade(rest[1]); return; }
+    if (rest[0] === "topic") {
+      const found = findTopic(rest[1]);
+      if (!found) { main.innerHTML = `<p class="empty">Topic not found.</p>`; return; }
+      if (isPerObj(found.topic)) {
+        if (rest[2] === "obj" && rest[3] != null) {
+          const idx = rest[3];
+          if (rest[4] === "quiz") {
+            main.innerHTML = viewObjQuiz(rest[1], idx);
+            const o = found.topic.objectives[+idx];
+            if (o) mountQuiz(o.quiz || []);
+          } else {
+            main.innerHTML = viewObjResources(rest[1], idx);
+          }
+        } else {
+          main.innerHTML = viewTopicHub(rest[1]);
+        }
+      } else {
+        const tab = rest[2] || "objectives";
+        main.innerHTML = viewTopic(rest[1], tab);
+        const show = wireTopicTabs(found.topic, found.grade);
+        show(tab);
+      }
+      return;
+    }
+    if (rest[0] === "mindmap") {
+      main.innerHTML = `
+        <nav class="breadcrumb">${crumbBase()} › <span>Concept mindmap</span></nav>
+        <h1>🧠 ${esc(SUBJ.name)} concept mindmap</h1>
+        <p class="topic-summary">Every topic across Grades 6–8, with the big ideas that thread through all three years. Toggle a thread on or off, drag to pan, scroll to zoom, and click any topic to open it.</p>
+        <div class="mindmap-wrap" id="mindmap-mount" style="margin-top:1rem"></div>`;
+      window.Mindmap.render(document.getElementById("mindmap-mount"), SUBJ);
+      return;
+    }
+    if (rest[0] === "library") {
+      if (SUBJ.hasLibrary) { main.innerHTML = viewLibrary(); mountLibrary(); }
+      else main.innerHTML = `<p class="empty">This subject has no classroom library.</p>`;
+      return;
+    }
+    main.innerHTML = `<p class="empty">Page not found. <a href="${sb()}">${esc(SUBJ.name)} home</a>.</p>`;
   }
 
   function route() {
@@ -619,48 +720,28 @@
     window.scrollTo(0, 0);
     closeMobileNav();
 
-    if (parts.length === 0) { main.innerHTML = viewHome(); }
-    else if (parts[0] === "grade") { main.innerHTML = viewGrade(parts[1]); }
-    else if (parts[0] === "topic") {
-      const found = findTopic(parts[1]);
-      if (!found) { main.innerHTML = `<p class="empty">Topic not found.</p>`; }
-      else if (isPerObj(found.topic)) {
-        // new per-objective schema
-        if (parts[2] === "obj" && parts[3] != null) {
-          const idx = parts[3];
-          const sub = parts[4] === "quiz" ? "quiz" : "resources";
-          if (sub === "quiz") {
-            main.innerHTML = viewObjQuiz(parts[1], idx);
-            const o = found.topic.objectives[+idx];
-            if (o) mountQuiz(o.quiz || []);
-          } else {
-            main.innerHTML = viewObjResources(parts[1], idx);
-          }
-        } else {
-          main.innerHTML = viewTopicHub(parts[1]);
-        }
-      }
-      else {
-        const tab = parts[2] || "objectives";
-        main.innerHTML = viewTopic(parts[1], tab);
-        const show = wireTopicTabs(found.topic, found.grade);
-        show(tab);
-      }
+    if (parts.length === 0) {
+      renderNav(null);
+      main.innerHTML = viewSubjects();
+      setActiveNav(hash);
+      main.focus({ preventScroll: true });
+      return;
     }
-    else if (parts[0] === "mindmap") {
-      main.innerHTML = `
-        <nav class="breadcrumb"><a href="#/">Home</a> › <span>Concept mindmap</span></nav>
-        <h1>🧠 Concept mindmap</h1>
-        <p class="topic-summary">Every topic across Grades 6–8, with the big ideas that thread through all three years. Toggle a thread on or off, drag to pan, scroll to zoom, and click any topic to open it.</p>
-        <div class="mindmap-wrap" id="mindmap-mount" style="margin-top:1rem"></div>`;
-      window.Mindmap.render(document.getElementById("mindmap-mount"));
-    }
-    else if (parts[0] === "library") {
-      main.innerHTML = viewLibrary();
-      mountLibrary();
-    }
-    else { main.innerHTML = `<p class="empty">Page not found. <a href="#/">Go home</a>.</p>`; }
 
+    let subject = HUB.subjects.find(s => s.id === parts[0]);
+    let rest;
+    if (subject) { rest = parts.slice(1); }
+    else if (LEGACY.includes(parts[0])) { subject = window.CURRICULUM; rest = parts; } // legacy science links
+    else {
+      renderNav(null);
+      main.innerHTML = `<p class="empty">Page not found. <a href="#/">Go to subjects</a>.</p>`;
+      setActiveNav(hash);
+      return;
+    }
+
+    SUBJ = subject;
+    renderNav(subject);
+    renderInSubject(rest);
     setActiveNav(hash);
     main.focus({ preventScroll: true });
   }

@@ -127,6 +127,7 @@ a:hover { text-decoration: underline; }
 }
 .grade-card:hover, .topic-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: #cfd6e8; }
 .grade-card { border-top: 5px solid var(--accent); }
+.grade-card.disabled { opacity: .62; cursor: default; pointer-events: none; }
 .card-eyebrow { font-size: .76rem; text-transform: uppercase; letter-spacing: .05em; font-weight: 700; color: var(--muted); }
 .grade-card h3, .topic-card h3 { font-size: 1.25rem; margin: 0; }
 .topic-card .icon { font-size: 1.8rem; }
