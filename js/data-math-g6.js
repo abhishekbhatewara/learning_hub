@@ -217,6 +217,7 @@ window.CURRICULUM_MATH.grades.push({
         {
           text: "Understand decimal place value.",
           resources: [
+            { type: "interactive", title: "Decimal explorer study bot", provider: "🐺 Wolves classroom · ChatGPT", url: "https://chatgpt.com/g/g-677cdc98011081919446ff3a69d7af27-decimal-explorer", note: "Your class's tutor bot for exploring decimals and place value. (Needs a ChatGPT login.)" },
             { type: "interactive", title: "Decimals", provider: "Math is Fun", url: "https://www.mathsisfun.com/decimals.html", note: "Place value of tenths, hundredths, thousandths." },
             { type: "interactive", title: "Decimal place value", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Reading and writing decimals." }
           ],
@@ -250,6 +251,7 @@ window.CURRICULUM_MATH.grades.push({
         {
           text: "Add, subtract, multiply and divide decimals.",
           resources: [
+            { type: "interactive", title: "Decimal operations study bot", provider: "🐺 Wolves classroom · ChatGPT", url: "https://chatgpt.com/g/g-677f7e1049148191a7c1cd39711ea281-decimal-operations", note: "Your class's tutor bot for the four operations with decimals. (Needs a ChatGPT login.)" },
             { type: "interactive", title: "Decimal operations", provider: "Math is Fun", url: "https://www.mathsisfun.com/decimals-menu.html", note: "All four operations with decimals." },
             { type: "video", title: "Calculating with decimals", provider: "Corbettmaths", url: "https://corbettmaths.com/contents/", note: "Worked examples (search 'decimals')." }
           ],
@@ -294,6 +296,7 @@ window.CURRICULUM_MATH.grades.push({
         {
           text: "Convert between fractions and percentages.",
           resources: [
+            { type: "interactive", title: "Fractions, decimals & percentages study bot", provider: "🐺 Wolves classroom · ChatGPT", url: "https://chatgpt.com/g/g-6767dd62d82481919fe6c2a40027aa83-fractions-decimals-and-percentages", note: "Your class's tutor bot linking fractions, decimals and percentages. (Needs a ChatGPT login.)" },
             { type: "interactive", title: "Fractions to percentages", provider: "Math is Fun", url: "https://www.mathsisfun.com/converting-fractions-percents.html", note: "Both directions." },
             { type: "interactive", title: "Fractions & percentages", provider: "BBC Bitesize (KS3)", url: "https://www.bbc.co.uk/bitesize/subjects/zqhs34j", note: "Converting between forms." }
           ],
@@ -327,6 +330,7 @@ window.CURRICULUM_MATH.grades.push({
         {
           text: "Apply basic percentage ideas, including increases.",
           resources: [
+            { type: "interactive", title: "Cent-percent study bot", provider: "🐺 Wolves classroom · ChatGPT", url: "https://chatgpt.com/g/g-6799cb7e19f48191b31c60ba00c127bd-cent-percent", note: "Your class's tutor bot for working with percentages. (Needs a ChatGPT login.)" },
             { type: "interactive", title: "Percentage change", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/percentage-change.html", note: "Increases and decreases." },
             { type: "interactive", title: "Percentages", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Percentage applications." }
           ],
@@ -360,6 +364,7 @@ window.CURRICULUM_MATH.grades.push({
         {
           text: "Classify numbers as natural, whole, integer or rational.",
           resources: [
+            { type: "podcast", title: "The Trouble With Zero – Short Wave", provider: "🐺 Wolves classroom · Apple Podcasts", url: "https://podcasts.apple.com/us/podcast/the-trouble-with-zero/id1482575855?i=1000681901180", note: "The strange story of zero — a number it took humans centuries to accept." },
             { type: "interactive", title: "Types of numbers", provider: "Math is Fun", url: "https://www.mathsisfun.com/sets/number-types.html", note: "Natural, whole, integer, rational and more." },
             { type: "interactive", title: "Classifying numbers", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Number sets explained." }
           ],
@@ -492,6 +497,7 @@ window.CURRICULUM_MATH.grades.push({
         {
           text: "Understand and use the laws of indices.",
           resources: [
+            { type: "interactive", title: "Power in the roots study bot", provider: "🐺 Wolves classroom · ChatGPT", url: "https://chatgpt.com/g/g-6787a7149d2881918eee37ff3d6a365c-power-in-the-roots", note: "Your class's tutor bot for powers, indices and roots. (Needs a ChatGPT login.)" },
             { type: "interactive", title: "Laws of Exponents", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/exponent-laws.html", note: "All the index laws in one place." },
             { type: "interactive", title: "Exponents", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Intro to powers and exponents." }
           ],
@@ -679,6 +685,7 @@ window.CURRICULUM_MATH.grades.push({
         {
           text: "Find the area and perimeter of rectangles and triangles.",
           resources: [
+            { type: "interactive", title: "Perimeter, area & surface area study bot", provider: "🐺 Wolves classroom · ChatGPT", url: "https://chatgpt.com/g/g-6773b11f5ac48191b58d5389f40a4ebd-perimeter-area-and-surface-area", note: "Your class's tutor bot for perimeter, area and surface area. (Needs a ChatGPT login.)" },
             { type: "interactive", title: "Area & Perimeter", provider: "Math is Fun", url: "https://www.mathsisfun.com/area.html", note: "Formulas for rectangles and triangles." },
             { type: "interactive", title: "Area & perimeter", provider: "Khan Academy", url: "https://www.khanacademy.org/math/basic-geo", note: "Practice problems." }
           ],
@@ -690,6 +697,7 @@ window.CURRICULUM_MATH.grades.push({
         {
           text: "Find the circumference and area of circles.",
           resources: [
+            { type: "video", title: "Area of a circle, formula explained (2 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=YokKp3pwVFc", note: "A quick, clear look at where the circle-area formula comes from." },
             { type: "interactive", title: "Circle area & circumference", provider: "Math is Fun", url: "https://www.mathsisfun.com/geometry/circle.html", note: "Using π with the formulas." },
             { type: "interactive", title: "Area & circumference of circles", provider: "Khan Academy", url: "https://www.khanacademy.org/math/basic-geo", note: "Worked examples and practice." }
           ],

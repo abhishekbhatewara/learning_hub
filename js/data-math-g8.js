@@ -608,6 +608,7 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "State and use the Pythagorean theorem.",
           resources: [
+            { type: "video", title: "Properties of a right-angle triangle (4 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=PORfKtT7rU0", note: "The right triangle — the shape the Pythagorean theorem is built on." },
             { type: "interactive", title: "Pythagorean theorem", provider: "Math is Fun", url: "https://www.mathsisfun.com/geometry/pythagorean-theorem.html", note: "a² + b² = c²." },
             { type: "interactive", title: "Pythagorean theorem", provider: "Khan Academy", url: "https://www.khanacademy.org/math/geometry", note: "Practice." }
           ],
@@ -792,6 +793,7 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "Use test strategy for a cumulative assessment.",
           resources: [
+            { type: "reading", title: "The math myth — you don't need a 'math brain'", provider: "🐺 Wolves classroom · Big Think", url: "https://bigthink.com/hard-science/math-myth/", note: "Why anyone can improve at maths with practice — a confidence boost before a test." },
             { type: "interactive", title: "Exam technique", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/z38pycw", note: "Revision and exam tips." },
             { type: "video", title: "Revision practice", provider: "Corbettmaths", url: "https://corbettmaths.com/contents/", note: "Practice papers (5-a-day)." }
           ],
