@@ -1,6 +1,6 @@
 /* Grade 7 — Core Science Development
    PER-OBJECTIVE schema: each objective is { text, resources[], quiz[] }.
-   Resources include curated free sources plus relevant 🐺 Wolves-classroom library items. */
+   Resources include curated free sources plus relevant 📚 School's Library items. */
 window.CURRICULUM.grades.push({
   id: "grade-7",
   name: "Grade 7",
@@ -95,10 +95,10 @@ window.CURRICULUM.grades.push({
           text: "Discuss how culture, religion, cost, availability and marketing influence food choices, and read a nutrition label critically.",
           resources: [
             { type: "interactive", title: "Khan Academy: Diet & food choices", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "Factors that shape what we eat." },
-            { type: "reading", title: "7 foods with the most microplastics — and what to eat instead", provider: "🐺 Wolves classroom · superage.com", url: "https://superage.com/7-foods-and-beverages-that-have-the-most-microplastics-and-what-to-eat-instead/", note: "Hidden contaminants in everyday foods — another reason to know what's in your food." },
-            { type: "video", title: "What actually causes high cholesterol? (TED-Ed, 6 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=EixIyh1gshM", note: "How diet and other factors affect cholesterol — read labels critically." },
-            { type: "reading", title: "Common sweetener linked to higher stroke risk", provider: "🐺 Wolves classroom · earth.com", url: "https://www.earth.com/news/common-sweetener-may-directly-damage-the-brain/", note: "A reminder to look past marketing claims to the actual ingredients." },
-            { type: "reading", title: "Gut cancers linked with certain diets", provider: "🐺 Wolves classroom · ScienceAlert", url: "https://www.sciencealert.com/alarming-rise-in-cancers-of-the-gut-linked-with-these-deadly-diets", note: "Why dietary choices matter for long-term health." }
+            { type: "reading", title: "7 foods with the most microplastics — and what to eat instead", provider: "📚 School's Library · superage.com", url: "https://superage.com/7-foods-and-beverages-that-have-the-most-microplastics-and-what-to-eat-instead/", note: "Hidden contaminants in everyday foods — another reason to know what's in your food." },
+            { type: "video", title: "What actually causes high cholesterol? (TED-Ed, 6 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=EixIyh1gshM", note: "How diet and other factors affect cholesterol — read labels critically." },
+            { type: "reading", title: "Common sweetener linked to higher stroke risk", provider: "📚 School's Library · earth.com", url: "https://www.earth.com/news/common-sweetener-may-directly-damage-the-brain/", note: "A reminder to look past marketing claims to the actual ingredients." },
+            { type: "reading", title: "Gut cancers linked with certain diets", provider: "📚 School's Library · ScienceAlert", url: "https://www.sciencealert.com/alarming-rise-in-cancers-of-the-gut-linked-with-these-deadly-diets", note: "Why dietary choices matter for long-term health." }
           ],
           quiz: [
             { type: "mcq", difficulty: "hard", q: "A snack is labelled 'low fat' but is very high in sugar and marketed as 'healthy'. The best critical response is to:", options: ["Trust the front-of-pack claim", "Check the full ingredient list and per-100 g values, since 'low fat' can hide high sugar", "Assume low fat always means healthy", "Ignore the label"], answer: 1, explanation: "Marketing highlights one favourable claim; reading the full per-100 g panel reveals the real picture." },
@@ -110,7 +110,7 @@ window.CURRICULUM.grades.push({
           text: "Label the structure of a tooth and the types of teeth, and explain the causes and prevention of tooth decay.",
           resources: [
             { type: "reading", title: "CK-12: Teeth & digestion", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/digestive-system/", note: "Tooth structure, types and decay." },
-            { type: "reading", title: "What did people use before toothbrushes?", provider: "🐺 Wolves classroom · History Facts", url: "https://historyfacts.com/science-industry/article/what-did-people-use-before-toothbrushes/", note: "A fun history of dental care and why we protect our teeth." }
+            { type: "reading", title: "What did people use before toothbrushes?", provider: "📚 School's Library · History Facts", url: "https://historyfacts.com/science-industry/article/what-did-people-use-before-toothbrushes/", note: "A fun history of dental care and why we protect our teeth." }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "The hard outer layer that protects the crown of a tooth is the:", options: ["Dentine", "Enamel", "Pulp", "Root"], answer: 1, explanation: "Enamel is the hardest substance in the body and shields the tooth from decay." },
@@ -194,8 +194,8 @@ window.CURRICULUM.grades.push({
           text: "Distinguish elements, compounds and mixtures and classify substances accordingly.",
           resources: [
             { type: "reading", title: "CK-12: Elements, compounds & mixtures", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/chemistry/", note: "How to classify substances." },
-            { type: "interactive", title: "Matter & properties study bot", provider: "🐺 Wolves classroom · ChatGPT", url: "https://chatgpt.com/g/g-6791de19e3e881918e97e1ef365205b3-matter-properties-bot", note: "A tutor bot to quiz yourself on matter and its properties. (Needs a ChatGPT login.)" },
-            { type: "video", title: "What happens if you eat a silica gel packet? (TED-Ed, 5 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=QWCHnR53oIw", note: "A real-world look at a everyday material and what it's made of." }
+            { type: "interactive", title: "Matter & properties study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-6791de19e3e881918e97e1ef365205b3-matter-properties-bot", note: "A tutor bot to quiz yourself on matter and its properties. (Needs a ChatGPT login.)" },
+            { type: "video", title: "What happens if you eat a silica gel packet? (TED-Ed, 5 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=QWCHnR53oIw", note: "A real-world look at a everyday material and what it's made of." }
           ],
           quiz: [
             { type: "short", difficulty: "hard", q: "Explain the difference between a compound and a mixture, with one example of each.", answer: "In a compound, different elements are chemically bonded in fixed proportions and can only be separated by a chemical reaction (e.g. water, H₂O). In a mixture, substances are just physically combined in any proportion and can be separated by physical methods (e.g. salty water or air). A compound has new properties; a mixture keeps the properties of its parts.", explanation: "Compound = chemically bonded, fixed ratio; mixture = physically combined, separable physically." },
@@ -219,7 +219,7 @@ window.CURRICULUM.grades.push({
           text: "Compare types of mixtures (solutions, suspensions, colloids, emulsions, alloys) by particle size and behaviour.",
           resources: [
             { type: "reading", title: "CK-12: Solutions & mixtures", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/chemistry/", note: "Types of mixtures and how they behave." },
-            { type: "video", title: "Not quite a solid, not quite a liquid: hydrogels (TED-Ed, 5 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=KKcJOHkG19w", note: "A fascinating material that blurs the states of matter." }
+            { type: "video", title: "Not quite a solid, not quite a liquid: hydrogels (TED-Ed, 5 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=KKcJOHkG19w", note: "A fascinating material that blurs the states of matter." }
           ],
           quiz: [
             { type: "mcq", difficulty: "hard", q: "Which mixture has the LARGEST particles, big enough to settle out over time?", options: ["Solution", "Colloid", "Suspension", "Alloy"], answer: 2, explanation: "Suspensions have large particles that settle out (e.g. muddy water); solutions don't settle." },
@@ -279,7 +279,7 @@ window.CURRICULUM.grades.push({
           text: "Define isotopes and give real uses of radioactive isotopes (e.g. carbon-14 dating, medical and industrial uses).",
           resources: [
             { type: "interactive", title: "Khan Academy: Isotopes", provider: "Khan Academy", url: "https://www.khanacademy.org/science/chemistry", note: "What isotopes are and how they're used." },
-            { type: "reading", title: "The black fungus from Chernobyl that may 'eat' radiation", provider: "🐺 Wolves classroom · BBC Future", url: "https://www.bbc.com/future/article/20251125-the-mysterious-black-fungus-from-chernobyl-that-appears-to-eat-radiation", note: "A real story about radiation and radioactive material." }
+            { type: "reading", title: "The black fungus from Chernobyl that may 'eat' radiation", provider: "📚 School's Library · BBC Future", url: "https://www.bbc.com/future/article/20251125-the-mysterious-black-fungus-from-chernobyl-that-appears-to-eat-radiation", note: "A real story about radiation and radioactive material." }
           ],
           quiz: [
             { type: "mcq", difficulty: "hard", q: "Isotopes of the same element have:", options: ["Different numbers of protons", "The same number of neutrons", "The same number of protons but different numbers of neutrons", "Different charges"], answer: 2, explanation: "Isotopes share the proton number (same element) but differ in neutrons, so they have different mass numbers." },
@@ -303,7 +303,7 @@ window.CURRICULUM.grades.push({
           text: "Distinguish distance from displacement and speed from velocity (scalar vs vector).",
           resources: [
             { type: "interactive", title: "The Physics Classroom: 1D Kinematics", provider: "The Physics Classroom", url: "https://www.physicsclassroom.com/class/1DKin", note: "Scalars, vectors and motion." },
-            { type: "interactive", title: "Speed, velocity & acceleration study bot", provider: "🐺 Wolves classroom · ChatGPT", url: "https://chatgpt.com/g/g-67888e9d3ab4819184bf9ef35745731e-calculating-speed-velocity-and-acceleration", note: "Practise the differences and calculations. (Needs a ChatGPT login.)" }
+            { type: "interactive", title: "Speed, velocity & acceleration study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-67888e9d3ab4819184bf9ef35745731e-calculating-speed-velocity-and-acceleration", note: "Practise the differences and calculations. (Needs a ChatGPT login.)" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Which quantity has both size AND direction (a vector)?", options: ["Distance", "Speed", "Velocity", "Time"], answer: 2, explanation: "Velocity is a vector (speed with direction); distance and speed are scalars." },
@@ -351,7 +351,7 @@ window.CURRICULUM.grades.push({
           text: "Identify forces: gravity, friction, tension, drag, upthrust, magnetic, electrostatic, nuclear and push/pull.",
           resources: [
             { type: "interactive", title: "PhET: Forces and Motion – Basics", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/forces-and-motion-basics", note: "The main types of force." },
-            { type: "interactive", title: "Gravity, friction & other forces study bot", provider: "🐺 Wolves classroom · ChatGPT", url: "https://chatgpt.com/g/g-677becabbef48191a678cbd2c430d4b9-gravity-friction-and-other-forces", note: "Ask questions about the different forces. (Needs a ChatGPT login.)" }
+            { type: "interactive", title: "Gravity, friction & other forces study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-677becabbef48191a678cbd2c430d4b9-gravity-friction-and-other-forces", note: "Ask questions about the different forces. (Needs a ChatGPT login.)" }
           ],
           quiz: [
             { type: "mcq", difficulty: "hard", q: "Upthrust is the force that:", options: ["Pulls objects toward Earth", "Pushes up on an object in a fluid, opposing its weight", "Slows objects moving through air", "Holds a magnet to steel"], answer: 1, explanation: "Upthrust (buoyancy) is the upward push of a fluid; it's why things feel lighter in water." },
@@ -411,8 +411,8 @@ window.CURRICULUM.grades.push({
           text: "Relate mechanical advantage and efficiency for simple machines to force, distance and energy.",
           resources: [
             { type: "interactive", title: "The Physics Classroom: Work & machines", provider: "The Physics Classroom", url: "https://www.physicsclassroom.com/class/energy", note: "Trading force for distance, and energy losses." },
-            { type: "video", title: "The physics behind lift cables (BBC, 4 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=b2D4nhUOGW0", note: "Real machines using pulleys to gain mechanical advantage." },
-            { type: "video", title: "The physics behind Einstein's E = mc² (TED-Ed, 5 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=gkTVlYDB21g", note: "Enrichment: the deep link between mass and energy." }
+            { type: "video", title: "The physics behind lift cables (BBC, 4 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=b2D4nhUOGW0", note: "Real machines using pulleys to gain mechanical advantage." },
+            { type: "video", title: "The physics behind Einstein's E = mc² (TED-Ed, 5 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=gkTVlYDB21g", note: "Enrichment: the deep link between mass and energy." }
           ],
           quiz: [
             { type: "numeric", difficulty: "medium", q: "A machine lifts a 300 N load with an effort of 100 N. What is its mechanical advantage?", answer: "3", explanation: "MA = load ÷ effort = 300 ÷ 100 = 3." },
@@ -436,10 +436,10 @@ window.CURRICULUM.grades.push({
           text: "Describe energy flow through an ecosystem using food chains and energy pyramids.",
           resources: [
             { type: "interactive", title: "Khan Academy: Energy flow in ecosystems", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "Trophic levels and food chains." },
-            { type: "video", title: "Why animals help each other (TED-Ed, 4 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=qWG2f9DwwpY", note: "Cooperation and relationships within ecosystems." },
-            { type: "video", title: "Are there any places on Earth with no bugs? (TED-Ed, 5 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=jejgP_u82Qo", note: "How life and food webs spread across different habitats." },
-            { type: "video", title: "Is the Amazon Rainforest disappearing? (TED-Ed, 5 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=Qxby1J5bnPQ", note: "A real ecosystem under pressure." },
-            { type: "video", title: "Inside the monarch butterfly migration mystery (12 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=hrXzY4DP_c8", note: "Energy, life cycles and ecosystems across a continent." }
+            { type: "video", title: "Why animals help each other (TED-Ed, 4 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=qWG2f9DwwpY", note: "Cooperation and relationships within ecosystems." },
+            { type: "video", title: "Are there any places on Earth with no bugs? (TED-Ed, 5 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=jejgP_u82Qo", note: "How life and food webs spread across different habitats." },
+            { type: "video", title: "Is the Amazon Rainforest disappearing? (TED-Ed, 5 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=Qxby1J5bnPQ", note: "A real ecosystem under pressure." },
+            { type: "video", title: "Inside the monarch butterfly migration mystery (12 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=hrXzY4DP_c8", note: "Energy, life cycles and ecosystems across a continent." }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "In a food chain, the arrows show the direction of:", options: ["Energy flow", "Animal movement", "Water flow", "Time"], answer: 0, explanation: "Arrows point from the eaten to the eater, showing energy transfer." },
@@ -463,7 +463,7 @@ window.CURRICULUM.grades.push({
           text: "Outline the rock cycle and distinguish weathering from erosion.",
           resources: [
             { type: "reading", title: "CK-12: The rock cycle & weathering", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/earth-science/", note: "How rocks form, break down and reform." },
-            { type: "podcast", title: "The Secrets Everyday Rocks Keep – Short Wave", provider: "🐺 Wolves classroom · Apple Podcasts", url: "https://podcasts.apple.com/us/podcast/the-secrets-everyday-rocks-keep/id1482575855?i=1000735094795", note: "What ordinary rocks reveal about Earth's history." }
+            { type: "podcast", title: "The Secrets Everyday Rocks Keep – Short Wave", provider: "📚 School's Library · Apple Podcasts", url: "https://podcasts.apple.com/us/podcast/the-secrets-everyday-rocks-keep/id1482575855?i=1000735094795", note: "What ordinary rocks reveal about Earth's history." }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "Weathering breaks rock down in place, while erosion moves the broken pieces away.", answer: true, explanation: "Weathering = break down; erosion = transport by wind, water or ice." },
@@ -475,7 +475,7 @@ window.CURRICULUM.grades.push({
           text: "Describe the main Earth systems and how they interact.",
           resources: [
             { type: "reading", title: "NOAA SciJinks: Earth's systems", provider: "NOAA SciJinks", url: "https://scijinks.gov/", note: "The geosphere, hydrosphere, atmosphere and biosphere." },
-            { type: "video", title: "Inside Biosphere 2: the world's largest Earth-science experiment (16 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=-yAcD3wuY2Q", note: "A sealed model of Earth's systems — see how air, water, soil and life interact." },
+            { type: "video", title: "Inside Biosphere 2: the world's largest Earth-science experiment (16 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=-yAcD3wuY2Q", note: "A sealed model of Earth's systems — see how air, water, soil and life interact." },
             { type: "interactive", title: "NASA Climate Kids: Earth's systems", provider: "NASA Climate Kids", url: "https://climatekids.nasa.gov/", note: "How air, water, rock and life interact." }
           ],
           quiz: [
@@ -500,7 +500,7 @@ window.CURRICULUM.grades.push({
           text: "Explain how latitude, altitude and nearby water bodies act as climate drivers.",
           resources: [
             { type: "reading", title: "NOAA SciJinks: What controls climate", provider: "NOAA SciJinks", url: "https://scijinks.gov/", note: "Latitude, altitude and oceans as climate drivers." },
-            { type: "video", title: "This $3BN Mega-Dam Changes the Weather (11 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=vZiL--dFqCg", note: "How large water bodies can influence local climate." }
+            { type: "video", title: "This $3BN Mega-Dam Changes the Weather (11 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=vZiL--dFqCg", note: "How large water bodies can influence local climate." }
           ],
           quiz: [
             { type: "tf", difficulty: "medium", q: "Places at higher altitude tend to be colder than nearby lowlands at the same latitude.", answer: true, explanation: "Temperature generally falls with altitude — a key climate driver." },

@@ -471,7 +471,7 @@ window.CURRICULUM_MATH.grades.push({
       objectives: [
         { text: "Substitute values into algebraic expressions.",
           resources: [
-            { type: "interactive", title: "Algebra study bot", provider: "🐺 Wolves classroom · ChatGPT", url: "https://chatgpt.com/g/g-67594442fff88191854c1e73c3a522f0-algebra-bot", note: "Your class's tutor bot for algebra basics. (Needs a ChatGPT login.)" },
+            { type: "interactive", title: "Algebra study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-67594442fff88191854c1e73c3a522f0-algebra-bot", note: "Your class's tutor bot for algebra basics. (Needs a ChatGPT login.)" },
             { type: "interactive", title: "Substitution", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/introduction.html", note: "Putting numbers in for letters." },
             { type: "interactive", title: "Evaluating expressions", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." }
           ],
@@ -481,7 +481,7 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "Simplify expressions by collecting like terms.",
           resources: [
-            { type: "interactive", title: "Simplifying expressions study bot", provider: "🐺 Wolves classroom · ChatGPT", url: "https://chatgpt.com/g/g-676a3f1c4c508191b14ff0aa3d15206e-simplifying-expressions-in-basic-algebra", note: "Your class's tutor bot for simplifying basic algebraic expressions. (Needs a ChatGPT login.)" },
+            { type: "interactive", title: "Simplifying expressions study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-676a3f1c4c508191b14ff0aa3d15206e-simplifying-expressions-in-basic-algebra", note: "Your class's tutor bot for simplifying basic algebraic expressions. (Needs a ChatGPT login.)" },
             { type: "interactive", title: "Like Terms", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/like-terms.html", note: "Collecting like terms." },
             { type: "interactive", title: "Combining like terms", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." }
           ],
@@ -798,7 +798,7 @@ window.CURRICULUM_MATH.grades.push({
       objectives: [
         { text: "Review area and perimeter of basic shapes.",
           resources: [
-            { type: "interactive", title: "Geometry study bot", provider: "🐺 Wolves classroom · ChatGPT", url: "https://chatgpt.com/g/g-6763e3735fa48191aa94a1a3da22c5dd-geometry-bot", note: "Your class's tutor bot for geometry questions. (Needs a ChatGPT login.)" },
+            { type: "interactive", title: "Geometry study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-6763e3735fa48191aa94a1a3da22c5dd-geometry-bot", note: "Your class's tutor bot for geometry questions. (Needs a ChatGPT login.)" },
             { type: "interactive", title: "Area & Perimeter", provider: "Math is Fun", url: "https://www.mathsisfun.com/area.html", note: "Formulas and examples." },
             { type: "interactive", title: "Area & perimeter", provider: "Khan Academy", url: "https://www.khanacademy.org/math/basic-geo", note: "Practice." }
           ],
@@ -826,7 +826,7 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "Find the surface area of solids.",
           resources: [
-            { type: "interactive", title: "Surface area study bot", provider: "🐺 Wolves classroom · ChatGPT", url: "https://chatgpt.com/g/g-67971dd2e7c08191b76c124e1dd65e00-surface-area-bot", note: "Your class's tutor bot for surface-area problems. (Needs a ChatGPT login.)" },
+            { type: "interactive", title: "Surface area study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-67971dd2e7c08191b76c124e1dd65e00-surface-area-bot", note: "Your class's tutor bot for surface-area problems. (Needs a ChatGPT login.)" },
             { type: "interactive", title: "Surface Area", provider: "Math is Fun", url: "https://www.mathsisfun.com/geometry/surface-area.html", note: "Adding up all the faces." },
             { type: "interactive", title: "Surface area", provider: "Khan Academy", url: "https://www.khanacademy.org/math/basic-geo", note: "Practice." }
           ],
@@ -836,7 +836,7 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "Find the volume of prisms using V = Bh.",
           resources: [
-            { type: "interactive", title: "Volume study bot", provider: "🐺 Wolves classroom · ChatGPT", url: "https://chatgpt.com/g/g-678bba1058608191b7567d768eefdd1a-volume-bot", note: "Your class's tutor bot for volume problems. (Needs a ChatGPT login.)" },
+            { type: "interactive", title: "Volume study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-678bba1058608191b7567d768eefdd1a-volume-bot", note: "Your class's tutor bot for volume problems. (Needs a ChatGPT login.)" },
             { type: "interactive", title: "Volume of a prism", provider: "Math is Fun", url: "https://www.mathsisfun.com/geometry/prisms.html", note: "V = base area × height." },
             { type: "interactive", title: "Volume", provider: "Khan Academy", url: "https://www.khanacademy.org/math/basic-geo", note: "Practice." }
           ],
@@ -866,7 +866,7 @@ window.CURRICULUM_MATH.grades.push({
       objectives: [
         { text: "Calculate simple probability.",
           resources: [
-            { type: "interactive", title: "Probability study bot", provider: "🐺 Wolves classroom · ChatGPT", url: "https://chatgpt.com/g/g-6757bc78d1f8819195c9ad980a64cb93-unschool-probability-gpt", note: "Your class's tutor bot for probability questions. (Needs a ChatGPT login.)" },
+            { type: "interactive", title: "Probability study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-6757bc78d1f8819195c9ad980a64cb93-unschool-probability-gpt", note: "Your class's tutor bot for probability questions. (Needs a ChatGPT login.)" },
             { type: "interactive", title: "Probability", provider: "Math is Fun", url: "https://www.mathsisfun.com/data/probability.html", note: "Likelihood of outcomes." },
             { type: "interactive", title: "Basic probability", provider: "Khan Academy", url: "https://www.khanacademy.org/math/statistics-probability", note: "Practice." }
           ],

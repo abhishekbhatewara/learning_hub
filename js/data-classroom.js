@@ -1,4 +1,4 @@
-/* Auto-generated from the Wolves Google Classroom — all-subject public resources. */
+/* Auto-generated from the school — all-subject public resources. */
 window.CLASSROOM = {
  "meta": {
   "class_name": "Wolves",
@@ -53,7 +53,7 @@ window.CLASSROOM = {
     "count": 3
    }
   ],
-  "note": "Public resources (videos, articles & podcasts) collected across all subjects of the Wolves Google Classroom."
+  "note": "Public resources (videos, articles & podcasts) collected across all subjects of the school."
  },
  "resources": [
   {
