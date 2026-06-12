@@ -23,7 +23,8 @@ window.CURRICULUM.grades.push({
           text: "Describe the stages of a scientific investigation: question → hypothesis → method → data → analysis → conclusion.",
           resources: [
             { type: "video", title: "The Scientific Method (Crash Course Kids)", provider: "YouTube · Crash Course Kids", url: "https://www.youtube.com/c/crashcoursekids", note: "Short, friendly walkthrough of the investigation steps in order." },
-            { type: "interactive", title: "BBC Bitesize: Working scientifically", provider: "BBC Bitesize (KS3)", url: "https://www.bbc.co.uk/bitesize/topics/zwbr97h", note: "Notes and check questions on planning an investigation." }
+            { type: "interactive", title: "BBC Bitesize: Working scientifically", provider: "BBC Bitesize (KS3)", url: "https://www.bbc.co.uk/bitesize/topics/zwbr97h", note: "Notes and check questions on planning an investigation." },
+            { type: "video", title: "The art and science of failing well (TED-Ed, 6 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=lwewZMJzBh4", note: "Why trial, error and failing well are central to how science actually works." }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Which step normally comes first in a scientific investigation?", options: ["Drawing a conclusion", "Asking a testable question", "Plotting a graph", "Writing the method"], answer: 1, explanation: "Everything starts with a question you can actually test." },
@@ -179,7 +180,8 @@ window.CURRICULUM.grades.push({
           text: "Describe motion as a change in position over time and name the quantities used to measure it.",
           resources: [
             { type: "interactive", title: "BBC Bitesize: Speed, distance & time", provider: "BBC Bitesize (KS3)", url: "https://www.bbc.co.uk/bitesize/topics/zlbb9j6", note: "How we describe and measure motion." },
-            { type: "video", title: "What is motion?", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "Distance, time and speed explained." }
+            { type: "video", title: "What is motion?", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "Distance, time and speed explained." },
+            { type: "interactive", title: "Speed, velocity & acceleration study bot", provider: "🐺 Wolves classroom · ChatGPT", url: "https://chatgpt.com/g/g-67888e9d3ab4819184bf9ef35745731e-calculating-speed-velocity-and-acceleration", note: "A tutor bot for practising how we measure and calculate motion. (Needs a ChatGPT login.)" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Motion is best described as:", options: ["A change in colour over time", "A change in position over time", "A type of force", "A kind of energy"], answer: 1, explanation: "An object is in motion when its position changes as time passes." },
@@ -215,7 +217,8 @@ window.CURRICULUM.grades.push({
           text: "Explain how a pulley system changes the direction or size of a force.",
           resources: [
             { type: "video", title: "Pulleys explained", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "Fixed vs movable pulleys and what they change." },
-            { type: "reading", title: "CK-12: Pulleys", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/physical-science/simple-machines/", note: "How pulley systems multiply or redirect force." }
+            { type: "reading", title: "CK-12: Pulleys", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/physical-science/simple-machines/", note: "How pulley systems multiply or redirect force." },
+            { type: "video", title: "The physics behind lift cables (BBC, 4 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=b2D4nhUOGW0", note: "How elevator pulley-and-cable systems lift huge loads safely." }
           ],
           quiz: [
             { type: "tf", difficulty: "medium", q: "A single fixed pulley changes the direction of a force but does not reduce the effort needed.", answer: true, explanation: "A fixed pulley redirects force; you pull down to lift up, but the effort still equals the load." },
@@ -251,7 +254,8 @@ window.CURRICULUM.grades.push({
           text: "Explain why no machine is 100% efficient (friction wastes energy as heat).",
           resources: [
             { type: "video", title: "Friction & efficiency", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "Why some energy is always lost as heat." },
-            { type: "interactive", title: "BBC Bitesize: Energy & efficiency", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/topics/zlbb9j6", note: "Energy transfers and wasted energy." }
+            { type: "interactive", title: "BBC Bitesize: Energy & efficiency", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/topics/zlbb9j6", note: "Energy transfers and wasted energy." },
+            { type: "interactive", title: "Gravity, friction & other forces study bot", provider: "🐺 Wolves classroom · ChatGPT", url: "https://chatgpt.com/g/g-677becabbef48191a678cbd2c430d4b9-gravity-friction-and-other-forces", note: "Ask questions about friction — the force that stops any machine being 100% efficient. (Needs a ChatGPT login.)" }
           ],
           quiz: [
             { type: "tf", difficulty: "hard", q: "Because of friction, the actual mechanical advantage of a real machine is usually less than its ideal mechanical advantage.", answer: true, explanation: "Friction wastes some effort as heat, so the real (measured) MA is lower than the theoretical value." },
@@ -263,7 +267,8 @@ window.CURRICULUM.grades.push({
           text: "Identify simple machines hidden inside everyday tools and the human body.",
           resources: [
             { type: "video", title: "Simple machines all around us", provider: "YouTube · Crash Course Kids", url: "https://www.youtube.com/c/crashcoursekids", note: "Spotting simple machines in everyday objects." },
-            { type: "interactive", title: "BBC Bitesize: Machines in everyday life", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/topics/zlbb9j6", note: "Examples of machines in tools and the body." }
+            { type: "interactive", title: "BBC Bitesize: Machines in everyday life", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/topics/zlbb9j6", note: "Examples of machines in tools and the body." },
+            { type: "video", title: "The physics behind lift cables (BBC, 4 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=b2D4nhUOGW0", note: "A real-world machine — the elevator — built from pulleys and cables." }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "A seesaw is an example of a:", options: ["Pulley", "Lever", "Screw", "Wedge"], answer: 1, explanation: "A seesaw pivots about a fulcrum — a class-1 lever." },
@@ -287,7 +292,8 @@ window.CURRICULUM.grades.push({
           text: "State the cell theory and explain why the cell is called the basic unit of life.",
           resources: [
             { type: "video", title: "Cell theory (Amoeba Sisters)", provider: "YouTube · Amoeba Sisters", url: "https://www.youtube.com/@AmoebaSisters", note: "Clear cartoon explaining the cell theory." },
-            { type: "interactive", title: "BBC Bitesize: Cells", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/topics/znxbkqt", note: "Why the cell is the basic unit of life." }
+            { type: "interactive", title: "BBC Bitesize: Cells", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/topics/znxbkqt", note: "Why the cell is the basic unit of life." },
+            { type: "interactive", title: "Cells & microorganisms study bot", provider: "🐺 Wolves classroom · ChatGPT", url: "https://chatgpt.com/g/g-677e0912ba3c81918a4fc6efcdbf3077-cells-and-microorganisms-bot", note: "An interactive tutor to quiz yourself on cells and the cell theory. (Needs a ChatGPT login.)" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "The basic unit of all living things is the:", options: ["Atom", "Cell", "Organ", "Tissue"], answer: 1, explanation: "All organisms are made of one or more cells — the basic unit of life." },
@@ -311,7 +317,8 @@ window.CURRICULUM.grades.push({
           text: "Distinguish unicellular from multicellular organisms with examples.",
           resources: [
             { type: "video", title: "Unicellular vs multicellular", provider: "YouTube · Amoeba Sisters", url: "https://www.youtube.com/@AmoebaSisters", note: "The difference with friendly examples." },
-            { type: "interactive", title: "BBC Bitesize: Types of organism", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/topics/znxbkqt", note: "Single-celled and many-celled life." }
+            { type: "interactive", title: "BBC Bitesize: Types of organism", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/topics/znxbkqt", note: "Single-celled and many-celled life." },
+            { type: "interactive", title: "Cells & microorganisms study bot", provider: "🐺 Wolves classroom · ChatGPT", url: "https://chatgpt.com/g/g-677e0912ba3c81918a4fc6efcdbf3077-cells-and-microorganisms-bot", note: "Explore single-celled microorganisms and how they differ from many-celled life. (Needs a ChatGPT login.)" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "Bacteria are examples of unicellular organisms.", answer: true, explanation: "Bacteria are made of a single cell." },
