@@ -69,7 +69,7 @@
         <span class="card-eyebrow" style="color:${s.color}">${esc(s.icon || "")} Subject</span>
         <h3>${esc(s.name)}</h3>
         <p class="card-desc">${esc(s.blurb || "")}</p>
-        <div class="card-footer"><span class="chip">${s.grades.length} grades · ${topics} topics</span><span class="go-link">Open →</span></div>
+        <div class="card-footer"><span class="chip">${s.grades.length} grade${s.grades.length === 1 ? "" : "s"} · ${topics} topics</span><span class="go-link">Open →</span></div>
       </a>`;
     }).join("");
     const planned = ["English", "Social Sciences"].filter(n => !HUB.subjects.some(s => s.name === n));
@@ -119,7 +119,7 @@
 
       ${meta.arc ? `<div class="arc-note"><strong>The 3-year arc.</strong> ${esc(meta.arc)}</div>` : ""}
 
-      <h2 class="section-title">Choose a grade <span class="count">${grades.length} grades · ${topicCount} topics</span></h2>
+      <h2 class="section-title">Choose a grade <span class="count">${grades.length} grade${grades.length === 1 ? "" : "s"} · ${topicCount} topics</span></h2>
       <div class="grid cols-3">${gradeCards}</div>
 
       <h2 class="section-title">How to use this hub</h2>
