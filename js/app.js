@@ -18,6 +18,13 @@
     const auto = quiz.filter(q => ["mcq", "tf", "numeric", "match"].includes(q.type)).length;
     return { total: quiz.length, auto, written: quiz.length - auto };
   }
+  // --- schema helpers: support BOTH the new per-objective schema
+  //     (objectives are objects with .text/.resources/.quiz) and the older
+  //     flat schema (objectives are strings; resources/quiz live on the topic). ---
+  function isPerObj(t) { return Array.isArray(t.objectives) && t.objectives.length > 0 && typeof t.objectives[0] === "object"; }
+  function objText(o) { return typeof o === "string" ? o : o.text; }
+  function allResources(t) { return isPerObj(t) ? t.objectives.flatMap(o => o.resources || []) : (t.resources || []); }
+  function allQuiz(t) { return isPerObj(t) ? t.objectives.flatMap(o => o.quiz || []) : (t.quiz || []); }
   // topics that share at least one concept thread with the given topic
   function relatedTopics(topicId) {
     const set = new Set();
@@ -104,7 +111,7 @@
     const g = gradeOf(gradeId);
     if (!g) return `<p class="empty">Grade not found.</p>`;
     const cards = g.topics.map(t => {
-      const c = countByType(t.quiz);
+      const c = countByType(allQuiz(t));
       return `
       <a class="topic-card" href="#/topic/${t.id}">
         <div class="icon">${t.icon}</div>
@@ -113,7 +120,7 @@
         <p class="card-desc">${esc(t.summary)}</p>
         <div class="topic-stats">
           <span>🎯 ${t.objectives.length} objectives</span>
-          <span>📚 ${t.resources.length} resources</span>
+          <span>📚 ${allResources(t).length} resources</span>
           <span>📝 ${c.total} questions</span>
         </div>
         <div class="card-footer"><span class="chip subject">${esc(g.name)}</span><span class="go-link">Open →</span></div>
@@ -129,6 +136,17 @@
       <div class="grid cols-2">${cards}</div>`;
   }
 
+  function topicHead(t, g) {
+    return `
+      <div class="topic-head">
+        <span class="big-icon">${t.icon}</span>
+        <div>
+          <span class="card-eyebrow" style="color:${g.color}">${esc(g.name)} · ${esc(t.subject)}</span>
+          <h1>${esc(t.title)}</h1>
+        </div>
+      </div>`;
+  }
+
   function viewTopic(topicId, tab) {
     const found = findTopic(topicId);
     if (!found) return `<p class="empty">Topic not found.</p>`;
@@ -140,13 +158,7 @@
 
     return `
       <nav class="breadcrumb"><a href="#/">Home</a> › <a href="#/grade/${g.id}">${esc(g.name)}</a> › <span>${esc(t.title)}</span></nav>
-      <div class="topic-head">
-        <span class="big-icon">${t.icon}</span>
-        <div>
-          <span class="card-eyebrow" style="color:${g.color}">${esc(g.name)} · ${esc(t.subject)}</span>
-          <h1>${esc(t.title)}</h1>
-        </div>
-      </div>
+      ${topicHead(t, g)}
       <p class="topic-summary">${esc(t.summary)}</p>
 
       <div class="tabs" role="tablist">
@@ -160,10 +172,97 @@
       <div class="back-top"><a class="btn btn-ghost" href="#/grade/${g.id}">← Back to ${esc(g.name)}</a></div>`;
   }
 
+  // ---- per-objective topic hub (new schema) ----
+  function viewTopicHub(topicId) {
+    const found = findTopic(topicId);
+    if (!found) return `<p class="empty">Topic not found.</p>`;
+    const { topic: t, grade: g } = found;
+    const objCards = t.objectives.map((o, i) => {
+      const nRes = (o.resources || []).length;
+      const nQuiz = (o.quiz || []).length;
+      return `
+        <div class="obj-card">
+          <div class="obj-card-head">
+            <span class="obj-num" style="background:${g.color}">${i + 1}</span>
+            <p class="obj-text">${esc(o.text)}</p>
+          </div>
+          <div class="obj-links">
+            <a class="obj-link res" href="#/topic/${t.id}/obj/${i}/resources">📚 Resources <span class="obj-link-count">${nRes}</span></a>
+            <a class="obj-link quiz" href="#/topic/${t.id}/obj/${i}/quiz">📝 Quiz <span class="obj-link-count">${nQuiz}</span></a>
+          </div>
+        </div>`;
+    }).join("");
+
+    const classroom = classroomFor(t.id);
+    const classroomBlock = classroom.length ? `
+      <div class="classroom-block">
+        <h3>🐺 From the Wolves classroom</h3>
+        <p class="muted">Extra videos, articles &amp; podcasts collected by your class that connect to this topic.
+          <a href="#/library">Browse the full classroom library →</a></p>
+        <div class="res-list">${classroom.map(classroomCard).join("")}</div>
+      </div>` : "";
+
+    return `
+      <nav class="breadcrumb"><a href="#/">Home</a> › <a href="#/grade/${g.id}">${esc(g.name)}</a> › <span>${esc(t.title)}</span></nav>
+      ${topicHead(t, g)}
+      <p class="topic-summary">${esc(t.summary)}</p>
+      <p class="obj-intro">This topic has <strong>${t.objectives.length} learning objectives</strong>. Each one has its own
+        resources and its own quick quiz — open whichever you want from the links below.</p>
+      <div class="obj-hub">${objCards}</div>
+      ${classroomBlock}
+      ${renderConnections(t)}
+      <div class="back-top"><a class="btn btn-ghost" href="#/grade/${g.id}">← Back to ${esc(g.name)}</a></div>`;
+  }
+
+  function objNav(t, g, i, here) {
+    const o = t.objectives[i];
+    const otherKey = here === "resources" ? "quiz" : "resources";
+    const otherLabel = here === "resources" ? "📝 Take the quiz for this objective" : "📚 See resources for this objective";
+    return `
+      <nav class="breadcrumb"><a href="#/">Home</a> › <a href="#/grade/${g.id}">${esc(g.name)}</a> › <a href="#/topic/${t.id}">${esc(t.title)}</a> › <span>Objective ${i + 1}</span></nav>
+      <div class="obj-detail-head">
+        <span class="obj-num lg" style="background:${g.color}">${i + 1}</span>
+        <div>
+          <span class="card-eyebrow" style="color:${g.color}">${esc(g.name)} · ${esc(t.title)} · Objective ${i + 1} of ${t.objectives.length}</span>
+          <h1>${esc(o.text)}</h1>
+        </div>
+      </div>
+      <div class="obj-switch">
+        <a class="btn btn-ghost" href="#/topic/${t.id}/obj/${i}/${otherKey}">${otherLabel} →</a>
+        <a class="btn btn-ghost" href="#/topic/${t.id}">← All objectives</a>
+      </div>`;
+  }
+
+  function viewObjResources(topicId, i) {
+    const found = findTopic(topicId);
+    if (!found || !isPerObj(found.topic)) return `<p class="empty">Not found.</p>`;
+    const { topic: t, grade: g } = found;
+    const o = t.objectives[+i];
+    if (!o) return `<p class="empty">Objective not found.</p>`;
+    const cards = (o.resources || []).map(resourceCard).join("");
+    return `
+      ${objNav(t, g, +i, "resources")}
+      <h2 class="section-title">📚 Resources for this objective</h2>
+      <p class="obj-intro">Free, high-quality resources to build this specific skill. Mix watching, reading and interacting.</p>
+      <div class="res-list">${cards || `<p class="empty">No resources yet for this objective.</p>`}</div>`;
+  }
+
+  function viewObjQuiz(topicId, i) {
+    const found = findTopic(topicId);
+    if (!found || !isPerObj(found.topic)) return `<p class="empty">Not found.</p>`;
+    const { topic: t, grade: g } = found;
+    const o = t.objectives[+i];
+    if (!o) return `<p class="empty">Objective not found.</p>`;
+    return `
+      ${objNav(t, g, +i, "quiz")}
+      <h2 class="section-title">📝 Quiz for this objective</h2>
+      ${renderQuizShell(o.quiz || [])}`;
+  }
+
   function renderTabContent(t, g, tab) {
     if (tab === "objectives") return renderObjectives(t);
     if (tab === "resources") return renderResources(t);
-    if (tab === "quiz") return renderQuizShell(t);
+    if (tab === "quiz") return renderQuizShell(t.quiz);
     return "";
   }
 
@@ -175,15 +274,19 @@
     </div>`;
   }
 
-  function renderResources(t) {
-    const cards = t.resources.map(r => `
+  function resourceCard(r) {
+    return `
       <div class="res-card">
         <span class="res-type ${r.type}">${r.type}</span>
         <h4>${esc(r.title)}</h4>
         <div class="res-provider">${esc(r.provider)}</div>
         <div class="res-note">${esc(r.note || "")}</div>
         <a class="res-open" href="${esc(r.url)}" target="_blank" rel="noopener noreferrer">Open resource ↗</a>
-      </div>`).join("");
+      </div>`;
+  }
+
+  function renderResources(t) {
+    const cards = t.resources.map(resourceCard).join("");
     const classroom = classroomFor(t.id);
     const classroomBlock = classroom.length ? `
       <div class="classroom-block">
@@ -293,8 +396,8 @@
   }
 
   // ---------- quiz ----------
-  function renderQuizShell(t) {
-    const c = countByType(t.quiz);
+  function renderQuizShell(quiz) {
+    const c = countByType(quiz);
     return `<div class="tab-panel">
       <div class="quiz-intro">
         <div class="quiz-meta">
@@ -308,13 +411,13 @@
     </div>`;
   }
 
-  function mountQuiz(t) {
+  function mountQuiz(quiz) {
     const list = document.getElementById("quiz-list");
     if (!list) return;
-    const c = countByType(t.quiz);
+    const c = countByType(quiz);
     const state = { correct: 0, answered: 0, checkedAuto: 0, autoTotal: c.auto };
 
-    t.quiz.forEach((q, i) => list.appendChild(buildQuestion(q, i, state, t)));
+    quiz.forEach((q, i) => list.appendChild(buildQuestion(q, i, state)));
     updateProgress(state);
   }
 
@@ -340,7 +443,7 @@
 
   const KIND_LABEL = { mcq: "Multiple choice", tf: "True / False", numeric: "Numeric", short: "Short answer", long: "Long answer", match: "Match" };
 
-  function buildQuestion(q, i, state, t) {
+  function buildQuestion(q, i, state) {
     const card = document.createElement("div");
     card.className = "q-card";
     const diff = q.difficulty || "medium";
@@ -502,7 +605,7 @@
     function show(tab) {
       content.innerHTML = renderTabContent(t, g, tab);
       document.querySelectorAll(".tab-btn").forEach(b => b.classList.toggle("active", b.dataset.tab === tab));
-      if (tab === "quiz") mountQuiz(t);
+      if (tab === "quiz") mountQuiz(t.quiz);
     }
     document.querySelectorAll(".tab-btn").forEach(b => {
       b.addEventListener("click", () => { show(b.dataset.tab); history.replaceState(null, "", `#/topic/${t.id}/${b.dataset.tab}`); });
@@ -521,6 +624,22 @@
     else if (parts[0] === "topic") {
       const found = findTopic(parts[1]);
       if (!found) { main.innerHTML = `<p class="empty">Topic not found.</p>`; }
+      else if (isPerObj(found.topic)) {
+        // new per-objective schema
+        if (parts[2] === "obj" && parts[3] != null) {
+          const idx = parts[3];
+          const sub = parts[4] === "quiz" ? "quiz" : "resources";
+          if (sub === "quiz") {
+            main.innerHTML = viewObjQuiz(parts[1], idx);
+            const o = found.topic.objectives[+idx];
+            if (o) mountQuiz(o.quiz || []);
+          } else {
+            main.innerHTML = viewObjResources(parts[1], idx);
+          }
+        } else {
+          main.innerHTML = viewTopicHub(parts[1]);
+        }
+      }
       else {
         const tab = parts[2] || "objectives";
         main.innerHTML = viewTopic(parts[1], tab);
