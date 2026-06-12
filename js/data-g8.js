@@ -24,7 +24,7 @@ window.CURRICULUM.grades.push({
           resources: [
             { type: "video", title: "The circulatory system (Amoeba Sisters)", provider: "YouTube · Amoeba Sisters", url: "https://www.youtube.com/@AmoebaSisters", note: "Heart structure and double circulation." },
             { type: "interactive", title: "The human body systems study bot", provider: "🐺 Wolves classroom · ChatGPT", url: "https://chatgpt.com/g/g-6780a55ada8881919ba84cbfb7664b87-the-human-body-system", note: "An interactive tutor on the body's organ systems. (Needs a ChatGPT login.)" },
-            { type: "interactive", title: "BBC Bitesize: The heart & circulation", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/zrkw2hv", note: "Chambers, valves and blood vessels." }
+            { type: "interactive", title: "Khan Academy: The circulatory system", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "Chambers, valves and blood vessels." }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Which blood vessels carry blood AWAY from the heart?", options: ["Veins", "Arteries", "Capillaries", "Valves"], answer: 1, explanation: "Arteries carry blood away from the heart (usually at high pressure)." },
@@ -47,7 +47,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Explain factors affecting heart rate and design a fair investigation into exercise and heart rate.",
           resources: [
-            { type: "interactive", title: "BBC Bitesize: Exercise & heart rate", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/zrkw2hv", note: "How activity changes heart rate." },
+            { type: "interactive", title: "Khan Academy: Circulation & exercise", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "How activity changes heart rate." },
             { type: "video", title: "Heart rate & exercise (Amoeba Sisters)", provider: "YouTube · Amoeba Sisters", url: "https://www.youtube.com/@AmoebaSisters", note: "Why the heart speeds up during exercise." }
           ],
           quiz: [
@@ -59,7 +59,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Relate causes, prevention and treatment of coronary heart disease, hypertension, angina and heart failure.",
           resources: [
-            { type: "interactive", title: "BBC Bitesize: Heart disease & health", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/zrkw2hv", note: "Causes and prevention of heart disease." },
+            { type: "reading", title: "CK-12: Heart disease & health", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "Causes and prevention of heart disease." },
             { type: "video", title: "What actually causes high cholesterol? (TED-Ed, 6 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=EixIyh1gshM", note: "Cholesterol and the risk of heart disease." },
             { type: "reading", title: "Common sweetener linked to higher stroke risk", provider: "🐺 Wolves classroom · earth.com", url: "https://www.earth.com/news/common-sweetener-may-directly-damage-the-brain/", note: "Diet, blood vessels and cardiovascular risk." },
             { type: "video", title: "The science behind 'super agers' (26 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=WKb5PE-XM4I", note: "What lifestyle does for long-term heart and brain health." }
@@ -74,7 +74,7 @@ window.CURRICULUM.grades.push({
           text: "Describe the lymphatic system and its roles in fluid balance and immune defence.",
           resources: [
             { type: "reading", title: "CK-12: The lymphatic system", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "Fluid balance and immune roles." },
-            { type: "interactive", title: "BBC Bitesize: Immune & lymphatic systems", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/zrkw2hv", note: "How lymph supports defence." }
+            { type: "reading", title: "CK-12: Immune & lymphatic systems", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "How lymph supports defence." }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "One key role of the lymphatic system is to:", options: ["Pump blood around the body", "Return excess tissue fluid to the blood and help fight infection", "Digest food", "Produce bile"], answer: 1, explanation: "The lymphatic system drains tissue fluid back to the blood and carries white blood cells that defend the body." },
@@ -99,7 +99,7 @@ window.CURRICULUM.grades.push({
           text: "Explain the body's defences, phagocytosis, and the difference between active and passive immunity.",
           resources: [
             { type: "video", title: "The immune system (Amoeba Sisters)", provider: "YouTube · Amoeba Sisters", url: "https://www.youtube.com/@AmoebaSisters", note: "Defences, white blood cells and immunity." },
-            { type: "interactive", title: "BBC Bitesize: Defence against disease", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/zrkw2hv", note: "Barriers, phagocytosis and vaccines." }
+            { type: "interactive", title: "Khan Academy: Defence against disease", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "Barriers, phagocytosis and vaccines." }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "White blood cells that engulf and 'eat' pathogens carry out:", options: ["Photosynthesis", "Phagocytosis", "Respiration", "Digestion"], answer: 1, explanation: "Phagocytes surround and digest pathogens — phagocytosis." },
@@ -110,7 +110,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Classify bones, joints and muscle types in the human body.",
           resources: [
-            { type: "interactive", title: "BBC Bitesize: Skeleton, joints & muscles", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/zrkw2hv", note: "Bone, joint and muscle types." },
+            { type: "reading", title: "CK-12: Skeleton, joints & muscles", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "Bone, joint and muscle types." },
             { type: "reading", title: "CK-12: The musculoskeletal system", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "How bones and muscles work together." }
           ],
           quiz: [
@@ -125,7 +125,7 @@ window.CURRICULUM.grades.push({
             { type: "interactive", title: "Khan Academy: Mendelian genetics & Punnett squares", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology/classical-genetics", note: "Worked Punnett squares with practice." },
             { type: "podcast", title: "Orange Cat Lovers, Rise Up – Short Wave", provider: "🐺 Wolves classroom · Apple Podcasts", url: "https://podcasts.apple.com/us/podcast/orange-cat-lovers-rise-up/id1482575855?i=1000708659195", note: "The genetics behind orange cat coat colour — inheritance in action." },
             { type: "reading", title: "Gene-editing tailored to rare disorders", provider: "🐺 Wolves classroom · NYTimes", url: "https://www.nytimes.com/2025/05/15/health/gene-editing-personalized-rare-disorders.html?unlocked_article_code=1.HU8.o_m0.hUzjq5_8hv8_", note: "How scientists edit genes — cutting-edge genetics and inheritance." },
-            { type: "interactive", title: "BBC Bitesize: Inheritance", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/zrkw2hv", note: "Dominant/recessive, codominance and pedigrees." }
+            { type: "interactive", title: "Khan Academy: Inheritance", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology/classical-genetics", note: "Dominant/recessive, codominance and pedigrees." }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "In a cross between a tall (TT) and a short (tt) pea plant, the offspring (Tt) are all:", options: ["Short", "Tall", "Half tall, half short", "Medium height"], answer: 1, explanation: "T is dominant, so all Tt offspring show the tall phenotype." },
@@ -177,7 +177,7 @@ window.CURRICULUM.grades.push({
           text: "Describe and explain periodic trends in atomic/ionic radius, ionisation energy, electronegativity and metallic character.",
           resources: [
             { type: "video", title: "The periodic table & periodic trends", provider: "YouTube · CrashCourse Chemistry", url: "https://www.youtube.com/@crashcourse", note: "Trends across periods and down groups." },
-            { type: "interactive", title: "BBC Bitesize: Periodic trends", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/topics/zstp34j", note: "Patterns in the periodic table." }
+            { type: "interactive", title: "Khan Academy: Periodic trends", provider: "Khan Academy", url: "https://www.khanacademy.org/science/chemistry", note: "Patterns in the periodic table." }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Across a period (left to right), atomic radius generally:", options: ["Increases", "Decreases", "Stays the same", "Doubles"], answer: 1, explanation: "More protons pull the same shell of electrons closer, so atoms get smaller across a period." },
@@ -201,7 +201,7 @@ window.CURRICULUM.grades.push({
           text: "State the octet rule and use it to explain ionic, covalent and metallic bonding.",
           resources: [
             { type: "video", title: "Ionic, covalent & metallic bonding", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "All three bond types and the octet rule." },
-            { type: "interactive", title: "BBC Bitesize: Chemical bonding", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/topics/zstp34j", note: "Why atoms bond to fill their outer shell." }
+            { type: "reading", title: "CK-12: Chemical bonding", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/chemistry/", note: "Why atoms bond to fill their outer shell." }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Ionic bonds form between:", options: ["Two metals", "Two non-metals", "A metal and a non-metal", "Noble gases"], answer: 2, explanation: "A metal loses electrons to a non-metal, forming oppositely charged ions that attract." },
@@ -213,7 +213,7 @@ window.CURRICULUM.grades.push({
           text: "Predict ion charges and write/name simple ionic compounds; relate ionic properties to structure.",
           resources: [
             { type: "video", title: "Ionic compounds & their properties", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "Forming ions and why ionic solids behave as they do." },
-            { type: "interactive", title: "BBC Bitesize: Ionic compounds", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/topics/zstp34j", note: "Charges, names and properties." }
+            { type: "interactive", title: "Khan Academy: Ionic compounds", provider: "Khan Academy", url: "https://www.khanacademy.org/science/chemistry", note: "Charges, names and properties." }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "Ionic compounds conduct electricity when:", options: ["Solid", "Molten or dissolved in water", "Never", "Only as a gas"], answer: 1, explanation: "Ions must be free to move; locked in a solid they can't, but when molten or in solution they carry charge." },
@@ -225,7 +225,7 @@ window.CURRICULUM.grades.push({
           text: "Explain metallic bonding with the 'sea of electrons' model and link it to the properties of metals.",
           resources: [
             { type: "video", title: "Metallic bonding", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "The sea of delocalised electrons and metal properties." },
-            { type: "interactive", title: "BBC Bitesize: Metallic bonding", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/topics/zstp34j", note: "Why metals conduct and bend." }
+            { type: "reading", title: "CK-12: Metallic bonding", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/chemistry/", note: "Why metals conduct and bend." }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "Why do metals conduct electricity?", options: ["They have a giant covalent structure", "They contain delocalised (free) electrons", "They are made of ions only", "They have hydrogen bonds"], answer: 1, explanation: "The 'sea' of delocalised electrons can move and carry charge." },
@@ -249,7 +249,7 @@ window.CURRICULUM.grades.push({
           text: "Distinguish polar from non-polar bonds/molecules and name simple covalent compounds using prefixes.",
           resources: [
             { type: "video", title: "Polar & non-polar molecules", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "Electronegativity, polarity and naming." },
-            { type: "interactive", title: "BBC Bitesize: Covalent compounds", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/topics/zstp34j", note: "Naming molecules with prefixes." }
+            { type: "interactive", title: "Khan Academy: Covalent compounds", provider: "Khan Academy", url: "https://www.khanacademy.org/science/chemistry", note: "Naming molecules with prefixes." }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "The covalent compound CO₂ is named:", options: ["Carbon oxide", "Carbon dioxide", "Carbonate", "Dicarbon oxide"], answer: 1, explanation: "Prefix 'di-' shows two oxygens: carbon dioxide." },
@@ -260,7 +260,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Compare ionic and covalent compounds and describe giant covalent structures (diamond, graphite, silicon dioxide).",
           resources: [
-            { type: "interactive", title: "BBC Bitesize: Giant covalent structures", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/topics/zstp34j", note: "Diamond, graphite and silicon dioxide." },
+            { type: "reading", title: "CK-12: Giant covalent structures", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/chemistry/", note: "Diamond, graphite and silicon dioxide." },
             { type: "interactive", title: "Khan Academy: Bonding & structure", provider: "Khan Academy", url: "https://www.khanacademy.org/science/chemistry", note: "Comparing ionic, covalent and giant structures." }
           ],
           quiz: [
@@ -285,7 +285,7 @@ window.CURRICULUM.grades.push({
           text: "Distinguish physical from chemical changes, apply conservation of mass, and balance chemical equations.",
           resources: [
             { type: "interactive", title: "Khan Academy: Balancing chemical equations", provider: "Khan Academy", url: "https://www.khanacademy.org/science/chemistry", note: "Practice balancing with conservation of mass." },
-            { type: "interactive", title: "BBC Bitesize: Chemical reactions", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/topics/zstp34j", note: "Physical vs chemical change and equations." }
+            { type: "interactive", title: "Khan Academy: Chemical reactions", provider: "Khan Academy", url: "https://www.khanacademy.org/science/chemistry", note: "Physical vs chemical change and equations." }
           ],
           quiz: [
             { type: "numeric", difficulty: "medium", q: "Balance: H₂ + O₂ → H₂O. What coefficient goes in front of H₂O?", answer: "2", explanation: "2H₂ + O₂ → 2H₂O balances atoms: 4 H and 2 O on each side." },
@@ -296,7 +296,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Classify reactions as exothermic or endothermic and use the pH scale and indicators.",
           resources: [
-            { type: "interactive", title: "BBC Bitesize: Energy changes, acids & pH", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/topics/zstp34j", note: "Exothermic/endothermic reactions and the pH scale." },
+            { type: "reading", title: "CK-12: Energy changes, acids & pH", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/chemistry/", note: "Exothermic/endothermic reactions and pH." },
             { type: "video", title: "What is entropy? (TED-Ed, 5 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=YM-uykVfq_E", note: "Enrichment: energy spreading out in reactions and changes." }
           ],
           quiz: [

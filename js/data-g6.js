@@ -23,7 +23,7 @@ window.CURRICULUM.grades.push({
           text: "Describe the stages of a scientific investigation: question → hypothesis → method → data → analysis → conclusion.",
           resources: [
             { type: "video", title: "The Scientific Method (Crash Course Kids)", provider: "YouTube · Crash Course Kids", url: "https://www.youtube.com/c/crashcoursekids", note: "Short, friendly walkthrough of the investigation steps in order." },
-            { type: "interactive", title: "BBC Bitesize: Working scientifically", provider: "BBC Bitesize (KS3)", url: "https://www.bbc.co.uk/bitesize/topics/zwbr97h", note: "Notes and check questions on planning an investigation." },
+            { type: "interactive", title: "Khan Academy: Working scientifically", provider: "Khan Academy", url: "https://www.khanacademy.org/science", note: "Notes and check questions on investigations." },
             { type: "video", title: "The art and science of failing well (TED-Ed, 6 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=lwewZMJzBh4", note: "Why trial, error and failing well are central to how science actually works." }
           ],
           quiz: [
@@ -35,7 +35,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Write a testable research question and a hypothesis in 'If… then… because…' form.",
           resources: [
-            { type: "interactive", title: "BBC Bitesize: Planning an enquiry", provider: "BBC Bitesize (KS3)", url: "https://www.bbc.co.uk/bitesize/topics/zwbr97h", note: "How to turn a question into a testable prediction." },
+            { type: "reading", title: "CK-12: Planning an investigation", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/physical-science/", note: "Turning a question into a testable prediction." },
             { type: "interactive", title: "Khan Academy: Science & the scientific method", provider: "Khan Academy", url: "https://www.khanacademy.org/science", note: "Practice spotting good questions and hypotheses." }
           ],
           quiz: [
@@ -47,7 +47,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Identify the independent, dependent and controlled variables in an experiment.",
           resources: [
-            { type: "interactive", title: "BBC Bitesize: Variables & fair tests", provider: "BBC Bitesize (KS3)", url: "https://www.bbc.co.uk/bitesize/topics/zwbr97h", note: "Clear definitions of the three kinds of variable." },
+            { type: "reading", title: "CK-12: Variables & fair tests", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/physical-science/", note: "The three kinds of variable." },
             { type: "video", title: "Variables in an experiment", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "Animated explanation of independent, dependent and control variables." }
           ],
           quiz: [
@@ -59,7 +59,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Explain what makes a test 'fair', and distinguish reliability from validity.",
           resources: [
-            { type: "interactive", title: "BBC Bitesize: Fair testing", provider: "BBC Bitesize (KS3)", url: "https://www.bbc.co.uk/bitesize/topics/zwbr97h", note: "What a fair test is and why it matters." },
+            { type: "interactive", title: "Khan Academy: Fair testing", provider: "Khan Academy", url: "https://www.khanacademy.org/science", note: "What a fair test is and why it matters." },
             { type: "reading", title: "CK-12: Designing a controlled experiment", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/physical-science/", note: "Readable notes on control and repeatability." }
           ],
           quiz: [
@@ -108,7 +108,7 @@ window.CURRICULUM.grades.push({
           text: "Measure length, mass and time with appropriate instruments and read scales correctly.",
           resources: [
             { type: "interactive", title: "PhET: Measuring simulations", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/filter?subjects=general", note: "Free browser labs to practise reading measuring tools." },
-            { type: "interactive", title: "BBC Bitesize: Taking measurements", provider: "BBC Bitesize (KS3)", url: "https://www.bbc.co.uk/bitesize/topics/zwbr97h", note: "Choosing and reading the right instrument." }
+            { type: "reading", title: "CK-12: Taking measurements", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/physical-science/", note: "Choosing and reading the right instrument." }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Which instrument is best for measuring a short time interval in the lab?", options: ["Ruler", "Stopwatch", "Balance", "Measuring cylinder"], answer: 1, explanation: "A stopwatch measures time; a ruler measures length and a balance measures mass." },
@@ -143,7 +143,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Record raw data in a well-headed table and display it as a bar graph or line graph.",
           resources: [
-            { type: "interactive", title: "BBC Bitesize: Tables & graphs", provider: "BBC Bitesize (KS3)", url: "https://www.bbc.co.uk/bitesize/topics/zwbr97h", note: "Setting out results tables and choosing the right graph." },
+            { type: "reading", title: "CK-12: Tables & graphs", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/physical-science/", note: "Setting out results and choosing a graph." },
             { type: "interactive", title: "Khan Academy: Reading & making graphs", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Practice with bar and line graphs." }
           ],
           quiz: [
@@ -179,7 +179,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Describe motion as a change in position over time and name the quantities used to measure it.",
           resources: [
-            { type: "interactive", title: "BBC Bitesize: Speed, distance & time", provider: "BBC Bitesize (KS3)", url: "https://www.bbc.co.uk/bitesize/topics/zlbb9j6", note: "How we describe and measure motion." },
+            { type: "interactive", title: "The Physics Classroom: 1D Kinematics", provider: "The Physics Classroom", url: "https://www.physicsclassroom.com/class/1DKin", note: "How we describe and measure motion." },
             { type: "video", title: "What is motion?", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "Distance, time and speed explained." },
             { type: "interactive", title: "Speed, velocity & acceleration study bot", provider: "🐺 Wolves classroom · ChatGPT", url: "https://chatgpt.com/g/g-67888e9d3ab4819184bf9ef35745731e-calculating-speed-velocity-and-acceleration", note: "A tutor bot for practising how we measure and calculate motion. (Needs a ChatGPT login.)" }
           ],
@@ -193,7 +193,7 @@ window.CURRICULUM.grades.push({
           text: "Identify the six simple machines: lever, pulley, inclined plane, screw, wedge and wheel-and-axle.",
           resources: [
             { type: "video", title: "Simple Machines (Crash Course Kids)", provider: "YouTube · Crash Course Kids", url: "https://www.youtube.com/c/crashcoursekids", note: "All six simple machines with everyday examples." },
-            { type: "interactive", title: "BBC Bitesize: Simple machines", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/topics/zlbb9j6", note: "Notes and diagrams of each machine." }
+            { type: "reading", title: "CK-12: Simple machines", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/physical-science/simple-machines/", note: "Notes and diagrams of each machine." }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Which of these is NOT one of the six simple machines?", options: ["Lever", "Pulley", "Engine", "Wedge"], answer: 2, explanation: "An engine is a complex machine; the six simple machines are lever, pulley, inclined plane, screw, wedge and wheel-and-axle." },
@@ -254,7 +254,7 @@ window.CURRICULUM.grades.push({
           text: "Explain why no machine is 100% efficient (friction wastes energy as heat).",
           resources: [
             { type: "video", title: "Friction & efficiency", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "Why some energy is always lost as heat." },
-            { type: "interactive", title: "BBC Bitesize: Energy & efficiency", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/topics/zlbb9j6", note: "Energy transfers and wasted energy." },
+            { type: "reading", title: "CK-12: Energy & efficiency", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/physical-science/", note: "Energy transfers and wasted energy." },
             { type: "interactive", title: "Gravity, friction & other forces study bot", provider: "🐺 Wolves classroom · ChatGPT", url: "https://chatgpt.com/g/g-677becabbef48191a678cbd2c430d4b9-gravity-friction-and-other-forces", note: "Ask questions about friction — the force that stops any machine being 100% efficient. (Needs a ChatGPT login.)" }
           ],
           quiz: [
@@ -267,7 +267,7 @@ window.CURRICULUM.grades.push({
           text: "Identify simple machines hidden inside everyday tools and the human body.",
           resources: [
             { type: "video", title: "Simple machines all around us", provider: "YouTube · Crash Course Kids", url: "https://www.youtube.com/c/crashcoursekids", note: "Spotting simple machines in everyday objects." },
-            { type: "interactive", title: "BBC Bitesize: Machines in everyday life", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/topics/zlbb9j6", note: "Examples of machines in tools and the body." },
+            { type: "reading", title: "CK-12: Machines in everyday life", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/physical-science/simple-machines/", note: "Machines in tools and the body." },
             { type: "video", title: "The physics behind lift cables (BBC, 4 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=b2D4nhUOGW0", note: "A real-world machine — the elevator — built from pulleys and cables." }
           ],
           quiz: [
@@ -292,7 +292,7 @@ window.CURRICULUM.grades.push({
           text: "State the cell theory and explain why the cell is called the basic unit of life.",
           resources: [
             { type: "video", title: "Cell theory (Amoeba Sisters)", provider: "YouTube · Amoeba Sisters", url: "https://www.youtube.com/@AmoebaSisters", note: "Clear cartoon explaining the cell theory." },
-            { type: "interactive", title: "BBC Bitesize: Cells", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/topics/znxbkqt", note: "Why the cell is the basic unit of life." },
+            { type: "reading", title: "CK-12: Cells", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "Why the cell is the basic unit of life." },
             { type: "interactive", title: "Cells & microorganisms study bot", provider: "🐺 Wolves classroom · ChatGPT", url: "https://chatgpt.com/g/g-677e0912ba3c81918a4fc6efcdbf3077-cells-and-microorganisms-bot", note: "An interactive tutor to quiz yourself on cells and the cell theory. (Needs a ChatGPT login.)" }
           ],
           quiz: [
@@ -317,7 +317,7 @@ window.CURRICULUM.grades.push({
           text: "Distinguish unicellular from multicellular organisms with examples.",
           resources: [
             { type: "video", title: "Unicellular vs multicellular", provider: "YouTube · Amoeba Sisters", url: "https://www.youtube.com/@AmoebaSisters", note: "The difference with friendly examples." },
-            { type: "interactive", title: "BBC Bitesize: Types of organism", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/topics/znxbkqt", note: "Single-celled and many-celled life." },
+            { type: "reading", title: "CK-12: Unicellular & multicellular", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "Single-celled and many-celled life." },
             { type: "interactive", title: "Cells & microorganisms study bot", provider: "🐺 Wolves classroom · ChatGPT", url: "https://chatgpt.com/g/g-677e0912ba3c81918a4fc6efcdbf3077-cells-and-microorganisms-bot", note: "Explore single-celled microorganisms and how they differ from many-celled life. (Needs a ChatGPT login.)" }
           ],
           quiz: [
@@ -329,7 +329,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Order the levels of organisation: cell → tissue → organ → organ system → organism.",
           resources: [
-            { type: "interactive", title: "BBC Bitesize: Levels of organisation", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/topics/znxbkqt", note: "From cells to whole organisms." },
+            { type: "reading", title: "CK-12: Levels of organisation", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "From cells to whole organisms." },
             { type: "interactive", title: "Khan Academy: Body structure & organisation", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "Practice ordering the levels." }
           ],
           quiz: [
@@ -342,7 +342,7 @@ window.CURRICULUM.grades.push({
           text: "Name the main parts of a light microscope and describe how to use it to view cells.",
           resources: [
             { type: "interactive", title: "Interactive microscope & cell models", provider: "CELLS alive!", url: "https://www.cellsalive.com/cells/cell_model.htm", note: "Explore cells as you would under a microscope." },
-            { type: "interactive", title: "BBC Bitesize: Using a microscope", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/topics/znxbkqt", note: "Parts of the microscope and how to focus." }
+            { type: "reading", title: "CK-12: Using a microscope", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "Parts of the microscope and focusing." }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "On a microscope, which part do you turn to focus the image sharply at high power?", options: ["Coarse focus", "Fine focus", "Stage clip", "Diaphragm"], answer: 1, explanation: "Coarse focus gets you close; fine focus sharpens the image, especially at high magnification." },

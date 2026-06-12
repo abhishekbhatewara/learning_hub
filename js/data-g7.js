@@ -23,7 +23,7 @@ window.CURRICULUM.grades.push({
           text: "Name the four biomolecules (carbohydrates, proteins, lipids, nucleic acids) and their building blocks (monosaccharides, amino acids, fatty acids + glycerol, nucleotides).",
           resources: [
             { type: "video", title: "Biomolecules & Food Tests", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "The four biomolecules and the units they're built from." },
-            { type: "interactive", title: "BBC Bitesize: Nutrition", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/topics/zf339j6", note: "Food groups and the molecules in our food." }
+            { type: "interactive", title: "Khan Academy: Nutrition & biomolecules", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "Food groups and the molecules in food." }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "The building blocks of proteins are:", options: ["Fatty acids", "Amino acids", "Monosaccharides", "Nucleotides"], answer: 1, explanation: "Proteins are chains of amino acids." },
@@ -46,7 +46,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Distinguish macronutrients from micronutrients and explain the roles of key vitamins and minerals.",
           resources: [
-            { type: "interactive", title: "BBC Bitesize: A balanced diet", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/topics/zf339j6", note: "Macronutrients, vitamins and minerals." },
+            { type: "reading", title: "CK-12: Food & nutrients", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "Macronutrients, vitamins and minerals." },
             { type: "interactive", title: "Khan Academy: Nutrition", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "Roles of nutrients in the body." }
           ],
           quiz: [
@@ -58,7 +58,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Link named deficiency diseases to the nutrient that is lacking.",
           resources: [
-            { type: "interactive", title: "BBC Bitesize: Deficiency diseases", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/topics/zf339j6", note: "What happens when nutrients are missing." },
+            { type: "reading", title: "CK-12: Vitamins, minerals & deficiency", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "What happens when nutrients are missing." },
             { type: "reading", title: "CK-12: Vitamins & minerals", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "Nutrient roles and deficiency effects." }
           ],
           quiz: [
@@ -70,7 +70,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Explain what a balanced diet is and how needs vary with age, sex and activity level; define basal metabolic rate.",
           resources: [
-            { type: "interactive", title: "BBC Bitesize: Energy & a balanced diet", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/topics/zf339j6", note: "How dietary needs change between people." },
+            { type: "interactive", title: "Khan Academy: Energy & a balanced diet", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "How dietary needs vary between people." },
             { type: "podcast", title: "Brains On! – Food & the body", provider: "Brains On! Science Podcast", url: "https://www.brainson.org/", note: "Kid-friendly audio on food and energy." }
           ],
           quiz: [
@@ -83,7 +83,7 @@ window.CURRICULUM.grades.push({
           text: "Carry out and interpret the four food tests: iodine (starch), Benedict's (reducing sugar), Biuret (protein) and grease-spot/emulsion (fat).",
           resources: [
             { type: "video", title: "Food tests step-by-step", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "Iodine, Benedict's, Biuret and grease-spot tests." },
-            { type: "interactive", title: "BBC Bitesize: Food tests", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/topics/zf339j6", note: "What each test shows and the colour changes." }
+            { type: "reading", title: "CK-12: Food tests", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "What each food test shows." }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Which test detects starch?", options: ["Benedict's", "Biuret", "Iodine", "Grease spot"], answer: 2, explanation: "Iodine turns blue-black in the presence of starch." },
@@ -94,7 +94,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Discuss how culture, religion, cost, availability and marketing influence food choices, and read a nutrition label critically.",
           resources: [
-            { type: "interactive", title: "BBC Bitesize: Diet & food choices", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/topics/zf339j6", note: "Factors that shape what we eat." },
+            { type: "interactive", title: "Khan Academy: Diet & food choices", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "Factors that shape what we eat." },
             { type: "reading", title: "7 foods with the most microplastics — and what to eat instead", provider: "🐺 Wolves classroom · superage.com", url: "https://superage.com/7-foods-and-beverages-that-have-the-most-microplastics-and-what-to-eat-instead/", note: "Hidden contaminants in everyday foods — another reason to know what's in your food." },
             { type: "video", title: "What actually causes high cholesterol? (TED-Ed, 6 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=EixIyh1gshM", note: "How diet and other factors affect cholesterol — read labels critically." },
             { type: "reading", title: "Common sweetener linked to higher stroke risk", provider: "🐺 Wolves classroom · earth.com", url: "https://www.earth.com/news/common-sweetener-may-directly-damage-the-brain/", note: "A reminder to look past marketing claims to the actual ingredients." },
@@ -109,7 +109,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Label the structure of a tooth and the types of teeth, and explain the causes and prevention of tooth decay.",
           resources: [
-            { type: "interactive", title: "BBC Bitesize: Teeth & digestion", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/topics/zf339j6", note: "Tooth structure, types and decay." },
+            { type: "reading", title: "CK-12: Teeth & digestion", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/digestive-system/", note: "Tooth structure, types and decay." },
             { type: "reading", title: "What did people use before toothbrushes?", provider: "🐺 Wolves classroom · History Facts", url: "https://historyfacts.com/science-industry/article/what-did-people-use-before-toothbrushes/", note: "A fun history of dental care and why we protect our teeth." }
           ],
           quiz: [
@@ -122,7 +122,7 @@ window.CURRICULUM.grades.push({
           text: "Sequence the digestive processes: ingestion, digestion, absorption, assimilation and egestion.",
           resources: [
             { type: "video", title: "Digestive System (Amoeba Sisters)", provider: "YouTube · Amoeba Sisters", url: "https://www.youtube.com/@AmoebaSisters", note: "The whole journey of food, step by step." },
-            { type: "interactive", title: "BBC Bitesize: The digestive system", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/topics/zf339j6", note: "Order of the digestive processes." }
+            { type: "reading", title: "CK-12: The digestive system", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/digestive-system/", note: "Order of the digestive processes." }
           ],
           quiz: [
             { type: "short", difficulty: "medium", q: "List the five stages of food processing in order.", answer: "Ingestion (taking food in), digestion (breaking it down), absorption (nutrients pass into the blood), assimilation (cells use the nutrients), egestion (removing undigested waste).", explanation: "Ingestion → digestion → absorption → assimilation → egestion." },
@@ -182,7 +182,7 @@ window.CURRICULUM.grades.push({
           text: "Define atoms, elements and compounds and recall the first 20 element symbols.",
           resources: [
             { type: "video", title: "Atomic structure & the periodic table", provider: "YouTube · CrashCourse Chemistry", url: "https://www.youtube.com/@crashcourse", note: "Atoms, elements and the first elements." },
-            { type: "interactive", title: "BBC Bitesize: Atoms, elements & compounds", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/topics/zstp34j", note: "Definitions and element symbols." }
+            { type: "interactive", title: "Khan Academy: Atoms, elements & compounds", provider: "Khan Academy", url: "https://www.khanacademy.org/science/chemistry", note: "Definitions and element symbols." }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "A pure substance made of only one type of atom is a(n):", options: ["Compound", "Mixture", "Element", "Solution"], answer: 2, explanation: "An element contains only one kind of atom." },
@@ -193,7 +193,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Distinguish elements, compounds and mixtures and classify substances accordingly.",
           resources: [
-            { type: "interactive", title: "BBC Bitesize: Elements, compounds & mixtures", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/topics/zstp34j", note: "How to classify substances." },
+            { type: "reading", title: "CK-12: Elements, compounds & mixtures", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/chemistry/", note: "How to classify substances." },
             { type: "interactive", title: "Matter & properties study bot", provider: "🐺 Wolves classroom · ChatGPT", url: "https://chatgpt.com/g/g-6791de19e3e881918e97e1ef365205b3-matter-properties-bot", note: "A tutor bot to quiz yourself on matter and its properties. (Needs a ChatGPT login.)" },
             { type: "video", title: "What happens if you eat a silica gel packet? (TED-Ed, 5 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=QWCHnR53oIw", note: "A real-world look at a everyday material and what it's made of." }
           ],
@@ -207,7 +207,7 @@ window.CURRICULUM.grades.push({
           text: "Select and justify separation techniques: filtration, evaporation, crystallisation, distillation, sublimation and the separating funnel.",
           resources: [
             { type: "video", title: "Separating mixtures", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/@fuseschool", note: "Filtration, distillation, crystallisation and more." },
-            { type: "interactive", title: "BBC Bitesize: Separating mixtures", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/topics/zstp34j", note: "Choosing the right technique." }
+            { type: "interactive", title: "Khan Academy: Separating mixtures", provider: "Khan Academy", url: "https://www.khanacademy.org/science/chemistry", note: "Choosing the right technique." }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Which technique separates an insoluble solid from a liquid?", options: ["Distillation", "Filtration", "Chromatography", "Evaporation"], answer: 1, explanation: "Filtration traps an insoluble solid (residue) while the liquid (filtrate) passes through." },
@@ -218,7 +218,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Compare types of mixtures (solutions, suspensions, colloids, emulsions, alloys) by particle size and behaviour.",
           resources: [
-            { type: "interactive", title: "BBC Bitesize: Solutions & mixtures", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/topics/zstp34j", note: "Types of mixtures and how they behave." },
+            { type: "reading", title: "CK-12: Solutions & mixtures", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/chemistry/", note: "Types of mixtures and how they behave." },
             { type: "video", title: "Not quite a solid, not quite a liquid: hydrogels (TED-Ed, 5 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=KKcJOHkG19w", note: "A fascinating material that blurs the states of matter." }
           ],
           quiz: [
@@ -474,7 +474,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Describe the main Earth systems and how they interact.",
           resources: [
-            { type: "interactive", title: "BBC Bitesize: Earth & atmosphere", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/zrkw2hv", note: "The geosphere, hydrosphere, atmosphere and biosphere." },
+            { type: "reading", title: "NOAA SciJinks: Earth's systems", provider: "NOAA SciJinks", url: "https://scijinks.gov/", note: "The geosphere, hydrosphere, atmosphere and biosphere." },
             { type: "video", title: "Inside Biosphere 2: the world's largest Earth-science experiment (16 min)", provider: "🐺 Wolves classroom · YouTube", url: "https://www.youtube.com/watch?v=-yAcD3wuY2Q", note: "A sealed model of Earth's systems — see how air, water, soil and life interact." },
             { type: "reading", title: "NOAA SciJinks: How Earth's systems connect", provider: "NOAA SciJinks", url: "https://scijinks.gov/", note: "Student-friendly look at interacting Earth systems." }
           ],
@@ -488,7 +488,7 @@ window.CURRICULUM.grades.push({
           text: "Read a basic weather map, including isobars and fronts.",
           resources: [
             { type: "reading", title: "NOAA SciJinks: Weather maps & fronts", provider: "NOAA SciJinks", url: "https://scijinks.gov/", note: "Isobars, fronts and pressure systems." },
-            { type: "interactive", title: "BBC Bitesize: Weather", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/zrkw2hv", note: "How to read a weather chart." }
+            { type: "reading", title: "NOAA SciJinks: Weather", provider: "NOAA SciJinks", url: "https://scijinks.gov/", note: "How to read weather and climate." }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "On a weather map, lines joining places of equal air pressure are called:", options: ["Contours", "Isobars", "Fronts", "Latitudes"], answer: 1, explanation: "Isobars connect points of equal pressure; closely spaced isobars mean stronger winds." },
@@ -512,7 +512,7 @@ window.CURRICULUM.grades.push({
           text: "Evaluate data for reliability and bias and recognise when a sample is fair.",
           resources: [
             { type: "interactive", title: "Khan Academy: Sampling & bias", provider: "Khan Academy", url: "https://www.khanacademy.org/math/statistics-probability", note: "What makes a sample fair and reliable." },
-            { type: "interactive", title: "BBC Bitesize: Reliable data", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/zrkw2hv", note: "Spotting bias in investigations." }
+            { type: "interactive", title: "Khan Academy: Sampling & reliability", provider: "Khan Academy", url: "https://www.khanacademy.org/math/statistics-probability", note: "Spotting bias in investigations." }
           ],
           quiz: [
             { type: "short", difficulty: "medium", q: "Give one reason a survey of 'favourite animal' carried out only at a zoo gift shop might be biased.", answer: "The sample is not representative: people at a zoo gift shop are already animal enthusiasts and may favour exotic zoo animals, so the results wouldn't reflect the wider public. A fair survey needs a varied, random sample.", explanation: "Where and who you sample can skew results — sampling bias." },
@@ -524,7 +524,7 @@ window.CURRICULUM.grades.push({
           text: "Interpret scatter plots and describe correlation (positive, negative, none).",
           resources: [
             { type: "interactive", title: "Khan Academy: Interpreting scatter plots", provider: "Khan Academy", url: "https://www.khanacademy.org/math/statistics-probability", note: "Reading correlation from data." },
-            { type: "interactive", title: "BBC Bitesize: Scatter graphs", provider: "BBC Bitesize", url: "https://www.bbc.co.uk/bitesize/subjects/zrkw2hv", note: "Positive, negative and no correlation." }
+            { type: "interactive", title: "Khan Academy: Scatter graphs", provider: "Khan Academy", url: "https://www.khanacademy.org/math/statistics-probability", note: "Positive, negative and no correlation." }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "A scatter plot shows points rising from bottom-left to top-right. This is:", options: ["Negative correlation", "No correlation", "Positive correlation", "An outlier"], answer: 2, explanation: "As one variable increases, so does the other — positive correlation." },
