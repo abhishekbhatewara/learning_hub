@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/styles.css?v=2" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -43,15 +43,15 @@
     <p class="muted">Resource links point to free, well-known educators (Khan Academy, PhET, CrashCourse, Amoeba Sisters, FuseSchool, BBC Bitesize, CK-12, NASA and more).</p>
   </footer>
 
-  <!-- data loads first, in order -->
-  <script src="js/core.js"></script>
-  <script src="js/data-g6.js"></script>
-  <script src="js/data-g7.js"></script>
-  <script src="js/data-g8.js"></script>
-  <script src="js/threads.js"></script>
-  <script src="js/data-classroom.js"></script>
+  <!-- data loads first, in order. ?v= is bumped on each content update to bust browser caches. -->
+  <script src="js/core.js?v=2"></script>
+  <script src="js/data-g6.js?v=2"></script>
+  <script src="js/data-g7.js?v=2"></script>
+  <script src="js/data-g8.js?v=2"></script>
+  <script src="js/threads.js?v=2"></script>
+  <script src="js/data-classroom.js?v=2"></script>
   <!-- then the app -->
-  <script src="js/mindmap.js"></script>
-  <script src="js/app.js"></script>
+  <script src="js/mindmap.js?v=2"></script>
+  <script src="js/app.js?v=2"></script>
 </body>
 </html>
