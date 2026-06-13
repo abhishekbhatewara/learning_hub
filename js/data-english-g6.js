@@ -1,0 +1,656 @@
+/* English — Grade 6: Foundations
+   PER-OBJECTIVE schema: each objective is { text, resources[], quiz[] }.
+   Grade 6 is built at FULL depth (12–15 questions per objective, easy→hard,
+   mixed types: mcq / tf / short / long / match). */
+window.CURRICULUM_ENGLISH.grades.push({
+  id: "grade-6",
+  name: "Grade 6",
+  tagline: "Foundations",
+  color: "#e11d48",
+  blurb: "Reading literary and non-literary texts, the foundations of writing (paragraphs, narrative, description, letters) and core grammar and mechanics.",
+  topics: [
+
+    /* ============================================================ */
+    {
+      id: "e6-reading-lit",
+      title: "Reading: Literary Texts",
+      subject: "Reading",
+      icon: "📖",
+      summary: "Reading short stories and travel poetry for literal meaning and inference, and identifying plot, setting, character and basic theme across stories from different cultures.",
+      objectives: [
+
+        {
+          text: "Read for literal meaning — find information the text states directly.",
+          resources: [
+            { type: "reading", title: "Reading comprehension: key ideas & details", provider: "Khan Academy", url: "https://www.khanacademy.org/ela/cc-6th-reading-vocab", note: "Short passages with questions about what the text says directly." },
+            { type: "reading", title: "Free leveled reading passages", provider: "CommonLit", url: "https://www.commonlit.org/", note: "Thousands of free stories and poems with comprehension questions." }
+          ],
+          quiz: [
+            { type: "mcq", difficulty: "easy", q: "Reading for 'literal meaning' means finding information that is:", options: ["hinted at but not stated", "stated directly in the text", "your personal opinion", "from another book"], answer: 1, explanation: "Literal meaning is what the words actually say, right there on the page." },
+            { type: "tf", difficulty: "easy", q: "If a sentence says 'Maya wore a red coat,' the colour of Maya's coat is a literal detail.", answer: true, explanation: "The text states the colour directly, so it is literal." },
+            { type: "mcq", difficulty: "easy", q: "Which question asks for a literal detail from a story?", options: ["How do you think the character felt?", "What is the story's message?", "What time did the bus arrive?", "Why might the author have chosen this ending?"], answer: 2, explanation: "A time stated in the text is a literal fact; the others need thinking beyond the words." },
+            { type: "tf", difficulty: "easy", q: "A literal-comprehension answer can usually be pointed to in a specific line of the text.", answer: true, explanation: "Because it is directly stated, you can find and quote it." },
+            { type: "mcq", difficulty: "medium", q: "Passage: 'The market opened at dawn. Sai sold twelve baskets of mangoes before noon.' How many baskets did Sai sell?", options: ["twelve", "at dawn", "before noon", "mangoes"], answer: 0, explanation: "The number twelve is stated directly — a literal detail." },
+            { type: "mcq", difficulty: "medium", q: "Which word signals you should scan for a literal fact?", options: ["why", "imagine", "who / when / where", "predict"], answer: 2, explanation: "Who, when and where usually have answers stated directly in the text." },
+            { type: "short", difficulty: "medium", q: "In your own words, explain the difference between a literal question and an inference question.", answer: "A literal question can be answered with information the text states directly (who, what, when, where). An inference question asks you to work out something the text only hints at, using clues plus your own reasoning.", explanation: "Literal = stated; inference = worked out from clues." },
+            { type: "mcq", difficulty: "medium", q: "Passage: 'Rohan packed his bag, locked the door, and ran to catch the 7:15 train.' Which is a literal detail?", options: ["Rohan was nervous", "Rohan was late for school", "Rohan ran to catch the 7:15 train", "Rohan disliked trains"], answer: 2, explanation: "Only 'ran to catch the 7:15 train' is actually stated; the rest are guesses." },
+            { type: "tf", difficulty: "medium", q: "Skimming a text quickly to find a specific stated fact (like a name or date) is a useful literal-reading skill.", answer: true, explanation: "Scanning for stated facts is exactly what literal reading involves." },
+            { type: "short", difficulty: "medium", q: "Passage: 'The storm lasted three days. On the fourth morning the sun returned.' List two literal facts you can find here.", answer: "1) The storm lasted three days. 2) The sun returned on the fourth morning. (Either two stated facts are acceptable.)", explanation: "Both are stated directly in the text — no guessing needed." },
+            { type: "mcq", difficulty: "hard", q: "Why is reading for literal meaning an important first step before making inferences?", options: ["It is the only kind of reading that matters", "You must understand what the text actually says before you can read between the lines", "It replaces the need to infer", "It is harder than inference"], answer: 1, explanation: "Solid literal understanding gives you the evidence base for good inferences." },
+            { type: "long", difficulty: "hard", q: "Read this short passage and answer: 'Aunt Devi set three plates on the table, then a fourth. She kept glancing at the door.' Write down (a) two literal details and (b) explain why (b) — guessing she is expecting a visitor — is NOT a literal detail.", answer: "(a) Literal: she set three plates, then a fourth (four plates total); she kept glancing at the door. (b) 'She is expecting a visitor' is an inference, not a literal detail, because the text never states it — we work it out from the extra plate and the glancing. Literal details are only what the words actually say.", explanation: "A strong answer separates stated facts (plates, glancing) from the reasoned guess (a visitor is coming)." }
+          ]
+        },
+
+        {
+          text: "Read for inference — work out meaning the text suggests but does not state.",
+          resources: [
+            { type: "reading", title: "Making inferences from text", provider: "Khan Academy", url: "https://www.khanacademy.org/ela/cc-6th-reading-vocab", note: "How to combine text clues with reasoning." },
+            { type: "reading", title: "Inference practice passages", provider: "ReadWriteThink", url: "https://www.readwritethink.org/", note: "Strategy lessons and printable practice on inferring." }
+          ],
+          quiz: [
+            { type: "mcq", difficulty: "easy", q: "An inference is:", options: ["a fact stated directly in the text", "a logical guess based on text clues plus your own knowledge", "a made-up idea with no support", "the title of the story"], answer: 1, explanation: "You infer by combining what the text hints at with reasoning." },
+            { type: "tf", difficulty: "easy", q: "'Her hands were shaking and her voice cracked' lets you infer she might be nervous or upset.", answer: true, explanation: "The physical clues support a reasonable inference about her feelings." },
+            { type: "mcq", difficulty: "easy", q: "A good inference must be:", options: ["completely certain", "supported by clues in the text", "the same for every reader", "stated word-for-word in the text"], answer: 1, explanation: "Inferences need textual support, even though they aren't stated outright." },
+            { type: "mcq", difficulty: "medium", q: "Text: 'Devon zipped his jacket and pulled his hood tight as he stepped outside.' What can you reasonably infer?", options: ["It is hot outside", "The weather is cold or windy", "Devon is going to sleep", "Devon hates jackets"], answer: 1, explanation: "Zipping up and tightening a hood are clues that it's cold or windy." },
+            { type: "tf", difficulty: "medium", q: "An inference with no clues to support it is just a wild guess.", answer: true, explanation: "Without textual evidence, it isn't a valid inference." },
+            { type: "short", difficulty: "medium", q: "Text: 'Mira looked at her empty lunchbox and her stomach growled all afternoon.' What can you infer, and what clue supports it?", answer: "You can infer Mira is hungry (she may have forgotten or lost her lunch). The clues are the empty lunchbox and her growling stomach all afternoon.", explanation: "A good answer names the inference AND the supporting clue." },
+            { type: "mcq", difficulty: "medium", q: "Which sentence requires you to infer how a character feels?", options: ["'I am very angry,' said Ben.", "Ben slammed the door and refused to speak.", "Ben is ten years old.", "Ben lives in Delhi."], answer: 1, explanation: "The first states the feeling; the slammed door makes you infer the anger from behaviour." },
+            { type: "mcq", difficulty: "medium", q: "Text clue + reader's background knowledge = ?", options: ["a summary", "an inference", "a title", "a literal fact"], answer: 1, explanation: "That combination is exactly how readers form inferences." },
+            { type: "short", difficulty: "medium", q: "Text: 'The classroom was silent. Everyone's eyes were on the clock. Papers lay face-down on each desk.' Infer the situation and give two clues.", answer: "It's the start of a test or exam. Clues (any two): the silence, eyes on the clock, and face-down papers waiting to be turned over.", explanation: "Multiple clues point to a test about to begin." },
+            { type: "tf", difficulty: "hard", q: "Two readers can make different reasonable inferences from the same passage, as long as each is supported by text clues.", answer: true, explanation: "Inferences can vary; what matters is that each is backed by evidence." },
+            { type: "mcq", difficulty: "hard", q: "Text: 'Grandpa smiled, but his eyes were wet as he waved the train away.' The best-supported inference is that Grandpa feels:", options: ["only happy", "bored", "a mix of happiness and sadness at the goodbye", "angry at the train"], answer: 2, explanation: "The smile plus wet eyes suggests bittersweet, mixed feelings — happy and sad at parting." },
+            { type: "long", difficulty: "hard", q: "Text: 'When Aisha came home, the lights were off, the dishes from breakfast were still in the sink, and her mother's coat was gone from the hook.' Write one inference about what may have happened, and explain exactly which clues led you there.", answer: "A reasonable inference: Aisha's mother left in a hurry and has not been home for a while / something unexpected came up. Clues: the lights being off and breakfast dishes still unwashed suggest no one has been home during the day; the missing coat suggests her mother went out. Combining these supports the idea that her mother left suddenly. (Other supported inferences are acceptable.)", explanation: "A strong answer states a single inference and ties it to specific clues — the dark house, unwashed dishes, and missing coat." }
+          ]
+        },
+
+        {
+          text: "Identify the basic plot of a story — beginning, conflict, climax and resolution.",
+          resources: [
+            { type: "interactive", title: "Plot diagram / story map", provider: "ReadWriteThink", url: "https://www.readwritethink.org/classroom-resources/student-interactives/plot-diagram", note: "Interactive plot-diagram tool: exposition → rising action → climax → resolution." },
+            { type: "reading", title: "Elements of a story", provider: "CommonLit", url: "https://www.commonlit.org/", note: "Stories to practise tracking plot stages." }
+          ],
+          quiz: [
+            { type: "mcq", difficulty: "easy", q: "The part of a story where the main problem is finally settled is the:", options: ["exposition", "climax", "resolution", "rising action"], answer: 2, explanation: "The resolution (or denouement) is where the conflict is resolved and the story winds down." },
+            { type: "mcq", difficulty: "easy", q: "The beginning of a story, where characters and setting are introduced, is called the:", options: ["climax", "exposition", "resolution", "conflict"], answer: 1, explanation: "Exposition sets up the who, where and when before the action builds." },
+            { type: "tf", difficulty: "easy", q: "The climax is usually the most exciting or tense moment of the story.", answer: true, explanation: "The climax is the turning point — the peak of the tension." },
+            { type: "match", difficulty: "medium", q: "Match each plot stage to its description.", pairs: [["Exposition", "Introduces characters and setting"], ["Rising action", "Events build and the problem grows"], ["Climax", "The turning point of highest tension"], ["Resolution", "The problem is settled and the story ends"]], explanation: "These are the four core stages of plot in order." },
+            { type: "mcq", difficulty: "medium", q: "Put these in the usual order: 1) climax, 2) exposition, 3) resolution, 4) rising action.", options: ["2, 4, 1, 3", "1, 2, 3, 4", "2, 1, 4, 3", "4, 2, 1, 3"], answer: 0, explanation: "Exposition → rising action → climax → resolution is the standard order." },
+            { type: "tf", difficulty: "medium", q: "'Conflict' is the central problem or struggle that drives the plot forward.", answer: true, explanation: "Without a conflict there is little for the plot to develop." },
+            { type: "short", difficulty: "medium", q: "In one sentence, explain what happens during the 'rising action' of a story.", answer: "During the rising action, a series of events builds tension and develops the conflict, leading toward the climax.", explanation: "Rising action is the build-up between the set-up and the turning point." },
+            { type: "mcq", difficulty: "medium", q: "In 'The three little pigs', the moment the wolf finally fails to blow down the brick house is best described as the:", options: ["exposition", "climax", "rising action", "title"], answer: 1, explanation: "It's the turning point where the main struggle reaches its peak and tips toward resolution." },
+            { type: "short", difficulty: "medium", q: "Why do most stories need a conflict?", answer: "The conflict creates a problem or struggle that the characters must face, which gives the story tension, purpose and a reason to keep reading. Without it there would be no plot to develop.", explanation: "Conflict is the engine of plot." },
+            { type: "mcq", difficulty: "hard", q: "A story ends with the hero defeating the villain, and the last page shows the village rebuilding peacefully. The rebuilding scene is part of the:", options: ["exposition", "climax", "resolution", "rising action"], answer: 2, explanation: "After the climactic defeat, the calm rebuilding is the resolution." },
+            { type: "tf", difficulty: "hard", q: "Some stories deliberately end without fully resolving the conflict, leaving the reader to wonder — these are sometimes called 'open' or 'cliffhanger' endings.", answer: true, explanation: "Not every story has a tidy resolution; open endings are a deliberate choice." },
+            { type: "long", difficulty: "hard", q: "Think of a story, film, or book you know well. Briefly map its plot by naming what happens at each of the four stages: exposition, rising action, climax, and resolution.", answer: "Answers vary. A strong response clearly identifies all four stages for one chosen story: exposition (who/where/the set-up), rising action (the events that build the problem), climax (the turning-point moment of greatest tension), and resolution (how the problem is finally settled). Each stage should match real events from the story.", explanation: "A full answer maps all four stages accurately onto one story." }
+          ]
+        },
+
+        {
+          text: "Describe a story's setting and explain why it matters.",
+          resources: [
+            { type: "reading", title: "Setting in literature", provider: "CommonLit", url: "https://www.commonlit.org/", note: "Texts to explore how time and place shape a story." },
+            { type: "reading", title: "Literary terms: setting", provider: "LiteraryDevices", url: "https://literarydevices.net/setting/", note: "Definition and examples of setting." }
+          ],
+          quiz: [
+            { type: "mcq", difficulty: "easy", q: "The 'setting' of a story is:", options: ["the main character", "the time and place where it happens", "the problem in the story", "the lesson it teaches"], answer: 1, explanation: "Setting = when and where the events occur." },
+            { type: "tf", difficulty: "easy", q: "Setting can include both the time period (when) and the location (where) of a story.", answer: true, explanation: "Both time and place are parts of setting." },
+            { type: "mcq", difficulty: "easy", q: "Which detail describes a setting?", options: ["a brave knight", "a foggy harbour at midnight", "a sad ending", "an angry tone"], answer: 1, explanation: "'A foggy harbour at midnight' names a place and time — a setting." },
+            { type: "mcq", difficulty: "medium", q: "How can setting affect the MOOD of a story?", options: ["It cannot affect mood", "A dark, stormy setting can create a tense or scary mood", "Setting only affects the title", "Mood depends only on the narrator's age"], answer: 1, explanation: "The time and place help create the feeling, or mood, of a scene." },
+            { type: "tf", difficulty: "medium", q: "Changing a story's setting from a busy city to a lonely desert could change how the story feels.", answer: true, explanation: "Setting strongly shapes atmosphere and even the events that are possible." },
+            { type: "short", difficulty: "medium", q: "Name two things, besides time and place, that an author might include to build a vivid setting.", answer: "Any two of: weather, sounds, smells, scenery/landscape, buildings, the season, culture or customs of the place, or the historical period's details.", explanation: "Sensory and cultural details bring a setting to life." },
+            { type: "mcq", difficulty: "medium", q: "A story set 'in a village with no electricity, long before phones existed' tells you mainly about the:", options: ["character's name", "time period (historical setting)", "theme", "narrator"], answer: 1, explanation: "The lack of electricity and phones places the story in an earlier time period." },
+            { type: "short", difficulty: "medium", q: "Give one example of how setting could create a problem (conflict) for a character.", answer: "Examples: a snowstorm traps a family indoors; a desert leaves travellers short of water; a strict historical society forbids what a character wants to do. (Any setting that causes a difficulty is acceptable.)", explanation: "Setting can directly generate the story's conflict." },
+            { type: "tf", difficulty: "medium", q: "Setting is only the physical place and never includes social or cultural surroundings.", answer: false, explanation: "Setting can also include the social and cultural background — customs, rules and ways of life." },
+            { type: "mcq", difficulty: "hard", q: "Why might an author spend a whole paragraph describing a haunted, crumbling house at the start of a story?", options: ["To waste space", "To build a mood and prepare the reader for what kind of story this will be", "Because settings must always be long", "To hide the plot"], answer: 1, explanation: "A vivid, eerie setting establishes mood and expectations early." },
+            { type: "short", difficulty: "hard", q: "Explain the difference between the SETTING of a story and its PLOT.", answer: "The setting is when and where the story takes place (the time, location and surroundings). The plot is the sequence of events that happen — the problem and how it unfolds. Setting is the backdrop; plot is the action.", explanation: "Setting = where/when; plot = what happens." },
+            { type: "long", difficulty: "hard", q: "Choose any place you know well (your school, a market, a beach). Write 3–4 sentences using sensory details to turn it into a vivid story setting, then state the mood your description creates.", answer: "Answers vary. A strong response uses several sensory details (sights, sounds, smells, textures) to bring the place alive and then names a clear mood (e.g. peaceful, busy, lonely, exciting) that the description creates. The mood should genuinely match the details chosen.", explanation: "A full answer is vivid, uses sensory detail, and identifies the resulting mood." }
+          ]
+        },
+
+        {
+          text: "Identify characters and describe their traits using evidence.",
+          resources: [
+            { type: "reading", title: "Character traits & evidence", provider: "ReadWriteThink", url: "https://www.readwritethink.org/", note: "Lessons on describing characters with textual support." },
+            { type: "reading", title: "Stories for character study", provider: "CommonLit", url: "https://www.commonlit.org/", note: "Short stories with rich characters to analyse." }
+          ],
+          quiz: [
+            { type: "mcq", difficulty: "easy", q: "A 'character trait' is:", options: ["the place a story happens", "a quality or part of a character's personality", "the ending of a story", "a punctuation mark"], answer: 1, explanation: "A trait describes what a character is like (e.g. brave, shy, kind)." },
+            { type: "mcq", difficulty: "easy", q: "Which of these is a character trait?", options: ["tall", "generous", "wearing red", "in the kitchen"], answer: 1, explanation: "'Generous' describes personality; the others describe appearance or location." },
+            { type: "tf", difficulty: "easy", q: "The main character that a story centres on is often called the protagonist.", answer: true, explanation: "The protagonist is the central character; an antagonist opposes them." },
+            { type: "mcq", difficulty: "medium", q: "A character 'shares her lunch every day and stops to help a lost child.' Which trait does this best show?", options: ["selfish", "kind / caring", "lazy", "dishonest"], answer: 1, explanation: "Sharing and helping are evidence of kindness." },
+            { type: "tf", difficulty: "medium", q: "We learn about characters from what they say, what they do, and how others react to them.", answer: true, explanation: "These actions, words and reactions are the main ways characters are revealed." },
+            { type: "short", difficulty: "medium", q: "Why should you support a character trait with evidence from the text?", answer: "Because a trait is your interpretation; quoting or describing what the character says or does proves your point and shows it isn't just a guess. Evidence makes your description convincing.", explanation: "Traits should be backed by what's actually in the text." },
+            { type: "mcq", difficulty: "medium", q: "The character who opposes the main character (the 'villain' or rival) is the:", options: ["protagonist", "narrator", "antagonist", "author"], answer: 2, explanation: "The antagonist works against the protagonist." },
+            { type: "short", difficulty: "medium", q: "A character 'checked the lock three times, then went back to make sure the stove was off.' Name a trait this suggests and explain why.", answer: "It suggests the character is careful, anxious or cautious, because repeatedly checking the lock and stove shows worry about safety and a need to be sure.", explanation: "The repeated checking is the evidence for the trait." },
+            { type: "tf", difficulty: "medium", q: "A character can have more than one trait — for example, both brave and stubborn.", answer: true, explanation: "Real and well-written characters usually have several traits." },
+            { type: "mcq", difficulty: "hard", q: "Showing a character's personality through their actions and words, instead of just telling us 'she was kind,' is an example of:", options: ["'show, don't tell'", "exposition", "rhyme", "a setting"], answer: 0, explanation: "Revealing traits through behaviour is the 'show, don't tell' technique." },
+            { type: "short", difficulty: "hard", q: "Explain the difference between how a character looks (appearance) and a character trait.", answer: "Appearance is the character's physical description — height, hair, clothes, etc. A trait describes their personality or character — how they behave and think (brave, honest, jealous). Appearance is outside; a trait is inside.", explanation: "Looks ≠ personality." },
+            { type: "long", difficulty: "hard", q: "Pick a character from any story you know. Name two of their traits and, for each, give one specific action or line from the story that proves it.", answer: "Answers vary. A strong response names two genuine personality traits and supports each with a specific action, decision, or quotation from the story that clearly demonstrates that trait. The evidence must actually match the trait claimed.", explanation: "Two traits, each backed by real textual evidence." }
+          ]
+        },
+
+        {
+          text: "Identify a basic theme — the message or big idea of a story.",
+          resources: [
+            { type: "reading", title: "Theme vs topic", provider: "CommonLit", url: "https://www.commonlit.org/", note: "Practice finding the deeper message in stories." },
+            { type: "reading", title: "Literary terms: theme", provider: "LiteraryDevices", url: "https://literarydevices.net/theme/", note: "Definition and clear examples of theme." }
+          ],
+          quiz: [
+            { type: "mcq", difficulty: "easy", q: "The 'theme' of a story is:", options: ["the time and place", "the central message or big idea", "the main character's name", "the number of pages"], answer: 1, explanation: "Theme is the underlying message or lesson a story explores." },
+            { type: "mcq", difficulty: "easy", q: "Which of these is a THEME rather than a topic?", options: ["friendship", "Honesty builds trust between friends", "a dog", "school"], answer: 1, explanation: "A topic is a single word (friendship); a theme is a full idea or message about it." },
+            { type: "tf", difficulty: "easy", q: "A theme is usually stated as a complete idea or sentence, not a single word.", answer: true, explanation: "'Courage' is a topic; 'true courage means acting despite fear' is a theme." },
+            { type: "mcq", difficulty: "medium", q: "A story shows a greedy king who loses everything by always wanting more. The theme is most likely:", options: ["kings are tall", "greed can lead to loss", "stories should have kings", "gold is yellow"], answer: 1, explanation: "The pattern of events points to a message about greed and loss." },
+            { type: "tf", difficulty: "medium", q: "Two different stories can share the same theme even if their plots are completely different.", answer: true, explanation: "Theme is about the underlying message, which can recur across many plots." },
+            { type: "short", difficulty: "medium", q: "Explain the difference between a story's TOPIC and its THEME.", answer: "A topic is what the story is about in a word or phrase (e.g. friendship, courage). A theme is the message or idea the story expresses about that topic (e.g. 'true friendship means standing by someone in hard times').", explanation: "Topic = subject; theme = the message about that subject." },
+            { type: "mcq", difficulty: "medium", q: "Which question best helps you find a story's theme?", options: ["What colour was the door?", "What lesson or idea about life does the story leave you with?", "How many characters are there?", "When was the book printed?"], answer: 1, explanation: "Theme comes from the deeper lesson or idea, not surface facts." },
+            { type: "short", difficulty: "medium", q: "Name two common themes you might find in stories for your age.", answer: "Any two such as: friendship matters, honesty is important, courage means facing fear, perseverance pays off, kindness is rewarded, growing up brings change, good triumphs over evil.", explanation: "These are typical universal themes." },
+            { type: "tf", difficulty: "medium", q: "The theme of a story is always written out directly in the first sentence.", answer: false, explanation: "Theme is usually implied through the events and characters, not stated outright." },
+            { type: "mcq", difficulty: "hard", q: "To work out a theme, the best approach is to:", options: ["look only at the title", "notice what the main character learns or how the conflict is resolved, then state the idea behind it", "count the chapters", "ask what colour the cover is"], answer: 1, explanation: "Themes emerge from what changes, what characters learn, and how conflicts resolve." },
+            { type: "short", difficulty: "hard", q: "Why is it better to write a theme as 'Perseverance helps people overcome hardship' rather than just 'perseverance'?", answer: "Because a theme should express an idea or message about the topic, not just name it. 'Perseverance' alone is only a topic; the full sentence states what the story actually says about perseverance, which is what a theme is.", explanation: "A theme is a complete idea, not a one-word topic." },
+            { type: "long", difficulty: "hard", q: "Choose a story you know. State its theme as a full sentence, then explain two things in the story (events, character choices, or the ending) that led you to that theme.", answer: "Answers vary. A strong response states the theme as a complete sentence (an idea about life, not a single word) and supports it with two specific elements from the story — key events, a character's decision, or how the conflict is resolved — that genuinely point to that message.", explanation: "Theme stated as a sentence + two supporting story elements." }
+          ]
+        },
+
+        {
+          text: "Read travel poetry and stories from different cultures, noticing context and culture.",
+          resources: [
+            { type: "reading", title: "Poems to explore (learn section)", provider: "Poetry Foundation", url: "https://www.poetryfoundation.org/learn", note: "Poems and guides, including poems about place and journeys." },
+            { type: "reading", title: "Stories & poems from many cultures", provider: "CommonLit", url: "https://www.commonlit.org/", note: "Texts from around the world with background context." }
+          ],
+          quiz: [
+            { type: "mcq", difficulty: "easy", q: "'Travel poetry' is poetry that mainly explores:", options: ["maths problems", "places, journeys and the experience of travelling", "grammar rules", "cooking recipes"], answer: 1, explanation: "Travel poetry focuses on places, journeys and what travel feels like." },
+            { type: "tf", difficulty: "easy", q: "The 'context' of a story includes the time, place and culture it comes from.", answer: true, explanation: "Context is the background — historical, cultural and social — surrounding a text." },
+            { type: "mcq", difficulty: "easy", q: "Reading stories from other cultures can help a reader:", options: ["learn only spelling", "understand different ways of life and see the world from new perspectives", "avoid all new ideas", "memorise dates"], answer: 1, explanation: "Cross-cultural reading builds empathy and broadens perspective." },
+            { type: "mcq", difficulty: "medium", q: "Why might knowing the cultural context of a story help you understand it better?", options: ["It doesn't help at all", "Customs, beliefs and history in the story make more sense when you know the culture", "Context only matters for poetry", "It changes the spelling"], answer: 1, explanation: "Cultural context explains characters' choices, customs and references." },
+            { type: "tf", difficulty: "medium", q: "A festival, food, or custom mentioned in a story can be a clue to its cultural setting.", answer: true, explanation: "Such cultural details signal where and among whom the story takes place." },
+            { type: "short", difficulty: "medium", q: "What does a poet often try to make the reader feel or experience in a travel poem?", answer: "A travel poet often tries to make the reader sense the place — its sights, sounds, smells and atmosphere — and feel the emotions of the journey, such as wonder, longing, excitement or homesickness.", explanation: "Travel poems aim to transport the reader to a place and a feeling." },
+            { type: "mcq", difficulty: "medium", q: "A poem describes 'paddy fields shining at dawn and the call of a distant temple bell.' These details mainly build a sense of:", options: ["a maths lesson", "a specific place and its culture", "a grammar rule", "a character's age"], answer: 1, explanation: "Such sensory, cultural images evoke a particular place and way of life." },
+            { type: "short", difficulty: "medium", q: "Give one reason an author might set a story in a culture different from the reader's.", answer: "To share a different way of life, to broaden the reader's understanding, to explore experiences the reader hasn't had, or because the story's events truly belong to that culture. (Any sensible reason.)", explanation: "Authors use diverse settings to widen perspective and share experiences." },
+            { type: "tf", difficulty: "medium", q: "Stories from very different cultures can still share universal themes like love, courage or family.", answer: true, explanation: "Universal themes cross cultural boundaries even when details differ." },
+            { type: "mcq", difficulty: "hard", q: "When you read a story set in an unfamiliar culture and meet a custom you don't recognise, the best reader response is to:", options: ["decide the story is wrong", "use context clues to work out its meaning and stay curious", "skip the whole story", "change the words"], answer: 1, explanation: "Good readers use context and curiosity rather than judging unfamiliar customs." },
+            { type: "short", difficulty: "hard", q: "How can reading travel poetry be similar to actually travelling?", answer: "Both let you experience new places, sights, sounds and ways of life. A travel poem uses vivid imagery and feeling to take your imagination to a place you may never have visited, much like real travel exposes you to new experiences and perspectives.", explanation: "Poetry can transport the imagination the way travel transports the body." },
+            { type: "long", difficulty: "hard", q: "Think of a story or poem you've read set in a culture or place different from your own. Describe two things it taught you about that culture or place, and explain how the writer made that place feel real.", answer: "Answers vary. A strong response names a specific text, identifies two genuine details about the culture/place (customs, landscape, beliefs, daily life), and explains the techniques the writer used to make it vivid — sensory imagery, specific cultural detail, characters' actions, or context the writer supplied.", explanation: "Two cultural insights + how the writer brought the place alive." }
+          ]
+        }
+
+      ]
+    },
+
+    /* ============================================================ */
+    {
+      id: "e6-reading-nonlit",
+      title: "Reading: Non-Literary Texts",
+      subject: "Reading",
+      icon: "📰",
+      summary: "Reading travel blogs, letters and autobiography to identify purpose and audience, recognise text type and structure, extract key information, and compare personal with factual writing.",
+      objectives: [
+
+        {
+          text: "Identify the purpose and audience of a non-literary text.",
+          resources: [
+            { type: "reading", title: "Author's purpose & audience", provider: "Khan Academy", url: "https://www.khanacademy.org/ela/cc-6th-reading-vocab", note: "How to work out why a text was written and for whom." },
+            { type: "reading", title: "Non-fiction texts to analyse", provider: "CommonLit", url: "https://www.commonlit.org/", note: "Articles and blogs with purpose-and-audience questions." }
+          ],
+          quiz: [
+            { type: "mcq", difficulty: "easy", q: "The 'purpose' of a text means:", options: ["how long it is", "the reason it was written", "who printed it", "the colour of the page"], answer: 1, explanation: "Purpose is the writer's reason — to inform, persuade, entertain, or instruct." },
+            { type: "mcq", difficulty: "easy", q: "The 'audience' of a text is:", options: ["the writer", "the people it is meant for", "the title", "the publisher"], answer: 1, explanation: "Audience = the intended readers." },
+            { type: "mcq", difficulty: "easy", q: "A set of instructions for building a bookshelf is mainly written to:", options: ["entertain", "instruct / explain how to do something", "persuade you to vote", "tell a story"], answer: 1, explanation: "Instructions aim to instruct." },
+            { type: "match", difficulty: "medium", q: "Match each text to its main purpose.", pairs: [["A funny short story", "To entertain"], ["A news report", "To inform"], ["An advertisement", "To persuade"], ["A recipe", "To instruct"]], explanation: "Common purposes: entertain, inform, persuade, instruct." },
+            { type: "tf", difficulty: "medium", q: "A single text can have more than one purpose — for example, to inform AND entertain.", answer: true, explanation: "Many texts mix purposes, like an entertaining but informative travel blog." },
+            { type: "short", difficulty: "medium", q: "How can the LANGUAGE of a text give clues about its intended audience?", answer: "Simple words and a friendly tone suggest a young or general audience; technical terms and formal language suggest expert or adult readers. The vocabulary, tone and examples are chosen to suit who will read it.", explanation: "Word choice and tone are tailored to the audience." },
+            { type: "mcq", difficulty: "medium", q: "A poster reading 'Save water — turn off the tap!' is mainly written to:", options: ["inform about taps", "persuade people to change behaviour", "entertain children", "tell a story"], answer: 1, explanation: "It urges action, so its purpose is to persuade." },
+            { type: "short", difficulty: "medium", q: "You read a text full of cartoons, big colourful words and simple sentences. Who is the likely audience, and why?", answer: "The likely audience is young children, because the cartoons, large colourful words and simple sentences are designed to appeal to and be understood by young readers.", explanation: "Visual style and simple language signal a young audience." },
+            { type: "tf", difficulty: "medium", q: "Knowing the audience helps a writer choose the right tone, vocabulary and examples.", answer: true, explanation: "Writers adapt their style to suit who is reading." },
+            { type: "mcq", difficulty: "hard", q: "A travel blog uses 'you'll love wandering these lanes' and friendly jokes. This suggests its purpose and audience are to:", options: ["instruct engineers formally", "entertain and inform ordinary readers/travellers in a casual way", "persuade a court of law", "teach grammar rules"], answer: 1, explanation: "The casual, friendly voice targets general readers and aims to entertain and inform." },
+            { type: "short", difficulty: "hard", q: "Explain how the SAME topic (e.g. a city) could be written about differently for two audiences: young children and adult tourists.", answer: "For young children: simple words, short sentences, fun facts, pictures, an exciting tone. For adult tourists: more detail, practical information (costs, transport, history), sophisticated vocabulary, and a more measured tone. The purpose and audience shape the language and content chosen.", explanation: "Same topic, different audience = different language, detail and tone." },
+            { type: "long", difficulty: "hard", q: "Choose any text you've read recently (a sign, an article, a blog, an ad). State its purpose and audience, and give two specific clues from the text that helped you decide.", answer: "Answers vary. A strong response names the text, clearly states its purpose (inform/persuade/entertain/instruct) and intended audience, and gives two specific clues — such as the vocabulary, tone, layout, images, or content — that genuinely support those conclusions.", explanation: "Purpose + audience + two real supporting clues." }
+          ]
+        },
+
+        {
+          text: "Recognise different text types and their typical structure.",
+          resources: [
+            { type: "reading", title: "Text types & structures", provider: "ReadWriteThink", url: "https://www.readwritethink.org/", note: "Features of letters, reports, blogs and more." },
+            { type: "reading", title: "Informational text structure", provider: "Khan Academy", url: "https://www.khanacademy.org/ela/cc-6th-reading-vocab", note: "How non-fiction texts are organised." }
+          ],
+          quiz: [
+            { type: "mcq", difficulty: "easy", q: "Which feature would you expect in a FORMAL letter but not a text message?", options: ["emojis", "an address and a formal greeting like 'Dear Sir/Madam'", "slang", "no punctuation"], answer: 1, explanation: "Formal letters use addresses, formal greetings and sign-offs." },
+            { type: "mcq", difficulty: "easy", q: "An autobiography is a text type that tells:", options: ["the life story of the author, written by themselves", "a made-up adventure", "the news of the day", "a list of rules"], answer: 0, explanation: "'Auto' = self; an autobiography is your own life story." },
+            { type: "tf", difficulty: "easy", q: "A travel blog is usually written in a casual, personal style with the writer's own experiences.", answer: true, explanation: "Blogs are personal and informal, sharing first-hand experience." },
+            { type: "match", difficulty: "medium", q: "Match each text type to a typical feature.", pairs: [["Formal letter", "Address, date and 'Yours faithfully'"], ["Travel blog", "Personal, casual first-person account"], ["Autobiography", "The author's own life story"], ["Recipe", "A list of ingredients and numbered steps"]], explanation: "Each text type has recognisable structural features." },
+            { type: "tf", difficulty: "medium", q: "Recognising the text type helps you predict how the information will be organised.", answer: true, explanation: "Knowing the type sets up your expectations for its structure." },
+            { type: "short", difficulty: "medium", q: "Name two structural features of a formal letter.", answer: "Any two of: sender's address, date, recipient's address, a formal greeting ('Dear...'), clear paragraphs, a formal closing ('Yours faithfully/sincerely'), and the sender's name/signature.", explanation: "Formal letters follow a set layout." },
+            { type: "mcq", difficulty: "medium", q: "A text organised with a 'Dear Riya,' opening and a chatty tone about your holiday is most likely a(n):", options: ["formal letter", "informal letter", "news report", "instruction manual"], answer: 1, explanation: "A first-name greeting and chatty tone signal an informal letter." },
+            { type: "short", difficulty: "medium", q: "How does the structure of a recipe help the reader use it?", answer: "A recipe lists the ingredients first so you can gather them, then gives numbered or sequenced steps so you do things in the right order. The clear structure makes it easy to follow while cooking.", explanation: "Recipes are structured as ingredients + ordered steps for usability." },
+            { type: "tf", difficulty: "medium", q: "All non-literary texts use exactly the same structure.", answer: false, explanation: "Different text types (letters, blogs, reports, recipes) have different structures." },
+            { type: "mcq", difficulty: "hard", q: "You see a text with a headline, a dateline, a first paragraph answering who/what/when/where, then details. This structure belongs to a(n):", options: ["poem", "news report / article", "personal diary", "shopping list"], answer: 1, explanation: "Headline, dateline and the 5 W's up front are classic news-report structure." },
+            { type: "short", difficulty: "hard", q: "Explain one way a formal letter and an informal letter differ in BOTH structure and language.", answer: "Structure: a formal letter includes addresses, a date and formal opening/closing; an informal letter can skip these and just start 'Dear [name]'. Language: a formal letter uses polite, standard, impersonal language; an informal letter uses casual, friendly, personal language (even slang). (Any valid contrast.)", explanation: "They differ in both layout and tone/vocabulary." },
+            { type: "long", difficulty: "hard", q: "Pick two different non-literary text types (e.g. a blog and a formal letter). Describe how each is structured and explain why that structure suits its purpose.", answer: "Answers vary. A strong response names two text types, accurately describes the typical structure of each, and links the structure to the purpose — e.g. a formal letter's layout suits clear, polite communication with someone you don't know; a blog's casual, personal structure suits sharing experiences with general readers.", explanation: "Two text types, their structures, and why the structure fits the purpose." }
+          ]
+        },
+
+        {
+          text: "Extract and locate key information from a non-fiction text.",
+          resources: [
+            { type: "reading", title: "Finding key details", provider: "Khan Academy", url: "https://www.khanacademy.org/ela/cc-6th-reading-vocab", note: "Locating and summarising key information." },
+            { type: "reading", title: "Informational passages", provider: "CommonLit", url: "https://www.commonlit.org/", note: "Practice pulling out main ideas and details." }
+          ],
+          quiz: [
+            { type: "mcq", difficulty: "easy", q: "The 'main idea' of a paragraph is:", options: ["the longest sentence", "the most important point it makes", "the first word", "the page number"], answer: 1, explanation: "The main idea is the central point; details support it." },
+            { type: "tf", difficulty: "easy", q: "'Scanning' means quickly looking through a text to find a specific piece of information.", answer: true, explanation: "Scanning is fast searching for a particular detail." },
+            { type: "mcq", difficulty: "easy", q: "Supporting details in a text are there to:", options: ["confuse the reader", "back up and explain the main idea", "fill empty space", "replace the title"], answer: 1, explanation: "Details give evidence and explanation for the main idea." },
+            { type: "mcq", difficulty: "medium", q: "Passage: 'The festival runs for five days. The biggest parade is on the third day, starting at 6 p.m.' When does the biggest parade start?", options: ["the first day", "6 p.m. on the third day", "for five days", "at dawn"], answer: 1, explanation: "Scan for the time and day: 6 p.m. on the third day." },
+            { type: "tf", difficulty: "medium", q: "Headings, bold words and bullet points can help you quickly locate key information.", answer: true, explanation: "These text features signal where important information sits." },
+            { type: "short", difficulty: "medium", q: "What is the difference between the 'main idea' and a 'supporting detail'?", answer: "The main idea is the most important overall point of a paragraph or text. A supporting detail is a smaller fact, example or explanation that backs up or develops that main idea.", explanation: "Main idea = the big point; details = the support." },
+            { type: "mcq", difficulty: "medium", q: "To find the main idea of a paragraph, you should ask:", options: ["How many words are there?", "What is this paragraph mostly about?", "What is the last word?", "Who printed it?"], answer: 1, explanation: "The main idea answers 'what is this mostly about?'" },
+            { type: "short", difficulty: "medium", q: "Passage: 'Recycling saves energy. Making a can from recycled metal uses 95% less energy than making a new one.' What is the main idea and what is the supporting detail?", answer: "Main idea: recycling saves energy. Supporting detail: making a can from recycled metal uses 95% less energy than from new metal.", explanation: "The first sentence states the point; the second supports it with a fact." },
+            { type: "tf", difficulty: "medium", q: "Every sentence in a text is equally important when you are looking for key information.", answer: false, explanation: "Some sentences carry the main ideas; others are minor details or filler." },
+            { type: "mcq", difficulty: "hard", q: "When taking notes from a non-fiction text, the BEST approach is to:", options: ["copy every sentence word-for-word", "record only the main ideas and key supporting details in your own words", "write nothing", "copy only the title"], answer: 1, explanation: "Good notes capture key ideas and details concisely, in your own words." },
+            { type: "short", difficulty: "hard", q: "Why is it useful to identify key information rather than trying to remember a whole text word-for-word?", answer: "Identifying key information lets you focus on what matters most — the main ideas and essential details — so you can understand, summarise and recall the text efficiently. Remembering every word is impossible and unnecessary; the key points carry the meaning.", explanation: "Focusing on key information makes reading efficient and memorable." },
+            { type: "long", difficulty: "hard", q: "Read any short non-fiction paragraph (from a textbook, article, or sign). Write its main idea in one sentence, then list two supporting details you extracted.", answer: "Answers vary. A strong response states the paragraph's main idea accurately in one sentence and lists two genuine supporting details from the text that back up that main idea.", explanation: "One accurate main idea + two real supporting details." }
+          ]
+        },
+
+        {
+          text: "Compare personal writing with factual writing.",
+          resources: [
+            { type: "reading", title: "Fact vs personal viewpoint", provider: "Khan Academy", url: "https://www.khanacademy.org/ela/cc-6th-reading-vocab", note: "Telling apart factual reporting and personal accounts." },
+            { type: "reading", title: "Compare two text styles", provider: "CommonLit", url: "https://www.commonlit.org/", note: "Read a personal blog and a factual report on the same topic." }
+          ],
+          quiz: [
+            { type: "mcq", difficulty: "easy", q: "'Personal writing' usually includes:", options: ["only numbers and dates", "the writer's own feelings, experiences and opinions", "no first-person 'I'", "only scientific facts"], answer: 1, explanation: "Personal writing shares the writer's own experience and viewpoint." },
+            { type: "mcq", difficulty: "easy", q: "'Factual writing' aims mainly to:", options: ["share feelings", "give accurate information that can be checked", "tell a personal story", "rhyme"], answer: 1, explanation: "Factual writing presents verifiable information." },
+            { type: "tf", difficulty: "easy", q: "A travel blog ('I felt amazed by the view') is more personal than an encyclopaedia entry about the same place.", answer: true, explanation: "Blogs share personal feelings; encyclopaedias state facts." },
+            { type: "match", difficulty: "medium", q: "Match the sentence to whether it is personal or factual.", pairs: [["'I loved the spicy street food.'", "Personal"], ["'The city has a population of two million.'", "Factual"], ["'It was the best day of my life.'", "Personal"], ["'The river is 300 km long.'", "Factual"]], explanation: "Feelings and opinions = personal; checkable information = factual." },
+            { type: "tf", difficulty: "medium", q: "A personal account and a factual report on the same event can both be valuable, for different reasons.", answer: true, explanation: "Personal writing gives experience and feeling; factual writing gives reliable information." },
+            { type: "short", difficulty: "medium", q: "Give one signal word or feature that often shows writing is PERSONAL.", answer: "Use of 'I', 'me', 'my'; words about feelings (loved, scared, amazed); opinions; and a casual or emotional tone are all signals of personal writing.", explanation: "First person and emotion/opinion language signal personal writing." },
+            { type: "mcq", difficulty: "medium", q: "Which sentence is factual rather than personal?", options: ["I think the museum is boring.", "The museum opened in 1925.", "The museum made me sleepy.", "I love old paintings."], answer: 1, explanation: "An opening date can be checked; it's a fact, not an opinion or feeling." },
+            { type: "short", difficulty: "medium", q: "Why might a reader want to read BOTH a personal blog and a factual guide before visiting a place?", answer: "The factual guide gives reliable, checkable information (location, costs, history); the personal blog gives a sense of what the experience actually feels like and a real person's opinion. Together they give both the facts and the feel.", explanation: "Facts inform; personal accounts give experience and atmosphere." },
+            { type: "tf", difficulty: "medium", q: "Factual writing usually avoids emotional language and personal opinions.", answer: true, explanation: "It stays neutral and information-focused." },
+            { type: "mcq", difficulty: "hard", q: "A text says: 'The trek is 12 km and gains 800 m in altitude — and honestly, it nearly broke me, but the summit was magic.' This text is best described as:", options: ["purely factual", "purely personal", "a mix of factual information and personal experience", "fiction"], answer: 2, explanation: "It blends checkable facts (distance, altitude) with personal feeling (nearly broke me, magic)." },
+            { type: "short", difficulty: "hard", q: "Rewrite this personal sentence as a factual one: 'I had the most delicious, unforgettable lunch at a tiny café.'", answer: "A factual version states checkable information without opinion, e.g. 'I had lunch at a small café' or 'The café serves [type of] food and is located on [street].' The emotional words 'most delicious' and 'unforgettable' are removed.", explanation: "Strip out opinion/feeling words and keep only checkable facts." },
+            { type: "long", difficulty: "hard", q: "Pick a recent experience (a trip, a meal, an event). Write one PERSONAL sentence about it and one FACTUAL sentence about it, then explain how they differ.", answer: "Answers vary. A strong response gives one clearly personal sentence (feelings/opinion, often using 'I') and one clearly factual sentence (checkable information, neutral tone) about the same experience, and explains that the personal one shares feeling/opinion while the factual one states verifiable information.", explanation: "One personal + one factual sentence on the same topic, with a clear explanation of the difference." }
+          ]
+        },
+
+        {
+          text: "Read and recognise the features of letters (formal and informal).",
+          resources: [
+            { type: "reading", title: "Writing letters: formal & informal", provider: "ReadWriteThink", url: "https://www.readwritethink.org/", note: "Layout and language of both letter types." },
+            { type: "reading", title: "Letter conventions", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/", note: "Guidance on tone and structure in correspondence." }
+          ],
+          quiz: [
+            { type: "mcq", difficulty: "easy", q: "A formal letter usually ends with:", options: ["'Bye! 😀'", "'Yours faithfully' or 'Yours sincerely'", "'See ya'", "nothing"], answer: 1, explanation: "Formal letters close with standard polite sign-offs." },
+            { type: "mcq", difficulty: "easy", q: "An informal letter to a friend would most likely begin:", options: ["'Dear Sir/Madam,'", "'To whom it may concern,'", "'Hi Aarav,' or 'Dear Aarav,'", "'Respected Authority,'"], answer: 2, explanation: "Informal letters use a friendly, first-name greeting." },
+            { type: "tf", difficulty: "easy", q: "Formal letters use polite, standard language and avoid slang.", answer: true, explanation: "Formality means standard, respectful language without slang." },
+            { type: "match", difficulty: "medium", q: "Match each feature to the right letter type.", pairs: [["'Yours faithfully'", "Formal"], ["Emojis and slang", "Informal"], ["Sender's and recipient's addresses", "Formal"], ["Chatty news about your weekend", "Informal"]], explanation: "Formal letters are structured and polite; informal letters are casual and personal." },
+            { type: "tf", difficulty: "medium", q: "You would write a formal letter to apply for something or to make a complaint to an organisation.", answer: true, explanation: "Official requests and complaints call for a formal letter." },
+            { type: "short", difficulty: "medium", q: "When would you use 'Yours faithfully' versus 'Yours sincerely' in a formal letter?", answer: "Use 'Yours faithfully' when you do NOT know the person's name (you opened with 'Dear Sir/Madam'); use 'Yours sincerely' when you DO know their name (you opened with 'Dear Mr Khan').", explanation: "Faithfully = unknown name; sincerely = named recipient." },
+            { type: "mcq", difficulty: "medium", q: "Which greeting suits a formal letter to an unknown official?", options: ["'Hey there!'", "'Dear Sir or Madam,'", "'Yo,'", "'Hi buddy,'"], answer: 1, explanation: "'Dear Sir or Madam' is the standard formal greeting when the name is unknown." },
+            { type: "short", difficulty: "medium", q: "Name two differences in TONE between a formal and an informal letter.", answer: "Formal: polite, respectful, impersonal, standard English. Informal: friendly, warm, casual, personal — may use contractions, slang and humour. (Any two valid contrasts.)", explanation: "Formal = polite/distant; informal = friendly/casual." },
+            { type: "tf", difficulty: "medium", q: "It is fine to use lots of slang and emojis in a formal complaint letter.", answer: false, explanation: "Formal letters require standard, polite language — no slang or emojis." },
+            { type: "mcq", difficulty: "hard", q: "Which situation calls for a FORMAL letter rather than an informal one?", options: ["Inviting a cousin to your birthday", "Telling a friend about your holiday", "Requesting a refund from a company", "Sharing a joke with a classmate"], answer: 2, explanation: "Dealing officially with a company calls for a formal letter." },
+            { type: "short", difficulty: "hard", q: "Explain why matching your letter's tone to its reader and purpose is important.", answer: "If the tone doesn't fit, the letter can seem rude, unclear or unprofessional — a slangy complaint may not be taken seriously, and an overly stiff letter to a friend feels cold. Matching tone to reader and purpose makes the message effective and appropriate.", explanation: "Tone must suit both the reader and the purpose for the letter to work." },
+            { type: "long", difficulty: "hard", q: "Describe a situation where you'd write a formal letter and one where you'd write an informal letter. For each, name the greeting, sign-off, and tone you would use.", answer: "Answers vary. A strong response gives one formal scenario (e.g. complaint/application) with a formal greeting ('Dear Sir/Madam' or 'Dear Mr X'), a formal sign-off ('Yours faithfully/sincerely') and polite tone; and one informal scenario (e.g. writing to a friend) with a casual greeting ('Hi/Dear [name]'), a casual sign-off ('Love'/'See you soon') and a friendly tone.", explanation: "Two scenarios with matching greeting, sign-off and tone for each." }
+          ]
+        },
+
+        {
+          text: "Read autobiography and travel blogs as forms of non-fiction.",
+          resources: [
+            { type: "reading", title: "Reading autobiography & memoir", provider: "CommonLit", url: "https://www.commonlit.org/", note: "Real-life accounts to read and analyse." },
+            { type: "reading", title: "Narrative non-fiction features", provider: "ReadWriteThink", url: "https://www.readwritethink.org/", note: "How true stories are told like narratives." }
+          ],
+          quiz: [
+            { type: "mcq", difficulty: "easy", q: "An autobiography is written by:", options: ["someone else about the subject's life", "the person whose life it is, about themselves", "a computer", "a fictional character"], answer: 1, explanation: "Auto = self: the author writes about their own life." },
+            { type: "mcq", difficulty: "easy", q: "A biography differs from an autobiography because a biography is:", options: ["written by the subject themselves", "written by someone else about a person's life", "always fiction", "only about animals"], answer: 1, explanation: "A biography is someone else's account of a person's life." },
+            { type: "tf", difficulty: "easy", q: "A travel blog is a non-fiction text sharing a real person's travel experiences.", answer: true, explanation: "Blogs recount genuine experiences, so they are non-fiction." },
+            { type: "mcq", difficulty: "medium", q: "Autobiographies are usually written in which point of view?", options: ["third person ('he/she')", "first person ('I')", "second person ('you')", "no narrator at all"], answer: 1, explanation: "Because the author tells their own story, autobiographies use 'I'." },
+            { type: "tf", difficulty: "medium", q: "Even though it is true, an autobiography can still use storytelling techniques like description and dialogue.", answer: true, explanation: "Narrative non-fiction blends true events with vivid storytelling." },
+            { type: "short", difficulty: "medium", q: "Why might a travel blog feel more personal than a guidebook about the same place?", answer: "A travel blog tells one real person's experiences and feelings in the first person, often casually, while a guidebook gives general factual information for everyone. The blog shares a personal point of view, making it feel closer and more individual.", explanation: "Blogs are first-person and personal; guidebooks are general and factual." },
+            { type: "mcq", difficulty: "medium", q: "Which is most likely to appear in an autobiography?", options: ["'Chapter 3: The day I started school'", "A list of chemical formulas", "Made-up dragons and wizards", "A weather forecast"], answer: 0, explanation: "Real memories arranged into life chapters are typical of autobiography." },
+            { type: "short", difficulty: "medium", q: "Give one reason people enjoy reading autobiographies of others.", answer: "To learn from real people's experiences, to be inspired, to understand a different life or time, to feel connected, or out of curiosity about a person they admire. (Any sensible reason.)", explanation: "Autobiographies offer real, often inspiring, lived experience." },
+            { type: "tf", difficulty: "medium", q: "A travel blog and an autobiography are both kinds of non-fiction because they describe real experiences.", answer: true, explanation: "Both recount true events, making them non-fiction." },
+            { type: "mcq", difficulty: "hard", q: "An autobiography says: 'Looking back now, I realise how frightened I truly was.' This shows a feature of autobiography called:", options: ["fiction", "reflection — the writer looking back and making sense of the past", "instruction", "rhyme"], answer: 1, explanation: "Autobiographers often reflect on past events with hindsight." },
+            { type: "short", difficulty: "hard", q: "How is an autobiography both factual AND personal at the same time?", answer: "It is factual because it describes real events from the author's actual life, and personal because it is told from the author's own point of view, including their feelings, opinions and reflections. It combines true information with personal experience.", explanation: "Real events (factual) told through the author's own eyes and feelings (personal)." },
+            { type: "long", difficulty: "hard", q: "Imagine you are writing a page of your own autobiography about an important day. What real event would you choose, and what feelings and reflections would you include to make it personal?", answer: "Answers vary. A strong response chooses a specific real event, describes what happened, and includes the writer's feelings at the time plus some reflection (what it meant or what they learned), showing the blend of true events and personal viewpoint that defines autobiography.", explanation: "A real event + genuine feelings + reflection = autobiographical writing." }
+          ]
+        }
+
+      ]
+    },
+
+    /* ============================================================ */
+    {
+      id: "e6-writing",
+      title: "Writing",
+      subject: "Writing",
+      icon: "✍️",
+      summary: "Building paragraphs with topic focus and transitions, descriptive and narrative writing with sensory detail, summary writing, formal and informal letters, and autobiographical writing.",
+      objectives: [
+
+        {
+          text: "Develop a paragraph with a topic sentence and supporting details.",
+          resources: [
+            { type: "reading", title: "Paragraphs & topic sentences", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/", note: "How to build a focused, well-supported paragraph." },
+            { type: "reading", title: "Writing strong paragraphs", provider: "Khan Academy", url: "https://www.khanacademy.org/ela/cc-6th-reading-vocab", note: "Structure of a paragraph." }
+          ],
+          quiz: [
+            { type: "mcq", difficulty: "easy", q: "A 'topic sentence' usually:", options: ["ends the paragraph", "states the main idea of the paragraph", "is always a question", "lists the writer's name"], answer: 1, explanation: "The topic sentence tells the reader the paragraph's main idea, usually near the start." },
+            { type: "tf", difficulty: "easy", q: "Supporting sentences give details, examples or reasons that develop the topic sentence.", answer: true, explanation: "They back up the main idea stated in the topic sentence." },
+            { type: "mcq", difficulty: "easy", q: "A well-developed paragraph should focus on:", options: ["many unrelated ideas", "one main idea", "no ideas", "only questions"], answer: 1, explanation: "A good paragraph develops a single main idea." },
+            { type: "mcq", difficulty: "medium", q: "Which sentence works best as a topic sentence for a paragraph about why dogs make good pets?", options: ["My dog is brown.", "Dogs make wonderful pets for several reasons.", "I went to the park.", "Cats sleep a lot."], answer: 1, explanation: "It states the paragraph's main idea and signals what will follow." },
+            { type: "tf", difficulty: "medium", q: "Every sentence in a paragraph should relate to the topic sentence.", answer: true, explanation: "Sentences that drift off-topic break the paragraph's unity." },
+            { type: "short", difficulty: "medium", q: "Name the three typical parts of a basic paragraph.", answer: "A topic sentence (the main idea), supporting sentences (details, examples or reasons), and a concluding or closing sentence that wraps up the idea.", explanation: "Topic sentence → support → conclusion." },
+            { type: "mcq", difficulty: "medium", q: "Which sentence does NOT belong in a paragraph whose topic sentence is 'Recycling helps the environment'?", options: ["It reduces waste in landfills.", "It saves energy and raw materials.", "My favourite colour is blue.", "It cuts down pollution."], answer: 2, explanation: "The favourite colour is off-topic and breaks the paragraph's focus." },
+            { type: "short", difficulty: "medium", q: "What is the job of a concluding sentence in a paragraph?", answer: "It wraps up the paragraph by restating or summing up the main idea, or by giving a final thought, so the paragraph feels complete rather than stopping suddenly.", explanation: "The closing sentence rounds off the main idea." },
+            { type: "tf", difficulty: "medium", q: "A paragraph with one topic sentence and three supporting details is better developed than one with just a topic sentence alone.", answer: true, explanation: "Supporting details develop and prove the main idea." },
+            { type: "mcq", difficulty: "hard", q: "A paragraph feels 'underdeveloped' when it:", options: ["has too many supporting details", "states a main idea but doesn't explain or support it enough", "is perfectly focused", "uses a topic sentence"], answer: 1, explanation: "Underdeveloped paragraphs lack enough support and explanation." },
+            { type: "short", difficulty: "hard", q: "Write a topic sentence for a paragraph about your favourite hobby, then list two details you'd use to support it.", answer: "Answers vary. A strong response gives a clear topic sentence naming the hobby as the main idea, plus two relevant supporting details (reasons, examples, or facts) that develop it.", explanation: "A focused topic sentence + two on-topic supporting details." },
+            { type: "long", difficulty: "hard", q: "Write a complete, well-developed paragraph (topic sentence + at least three supporting sentences + a closing sentence) about why reading is important.", answer: "Answers vary. A strong paragraph opens with a clear topic sentence ('Reading is important because...'), follows with at least three supporting sentences giving reasons or examples that all relate to the topic, and ends with a closing sentence. It should stay focused on one main idea throughout.", explanation: "Full structure: topic sentence, ≥3 relevant supports, closing sentence, all on one idea." }
+          ]
+        },
+
+        {
+          text: "Sequence ideas logically and use basic transitions.",
+          resources: [
+            { type: "reading", title: "Transition words & sequencing", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/", note: "Lists of transitions and how to order ideas." },
+            { type: "reading", title: "Organising writing", provider: "Khan Academy", url: "https://www.khanacademy.org/ela/cc-6th-reading-vocab", note: "Putting ideas in a sensible order." }
+          ],
+          quiz: [
+            { type: "mcq", difficulty: "easy", q: "A 'transition' word or phrase:", options: ["ends an essay", "connects ideas and shows how they relate", "is a type of noun", "is always capitalised"], answer: 1, explanation: "Transitions link ideas and guide the reader (e.g. first, then, however)." },
+            { type: "mcq", difficulty: "easy", q: "Which word signals TIME ORDER (sequence)?", options: ["because", "first", "although", "instead"], answer: 1, explanation: "'First' shows the order in which things happen." },
+            { type: "tf", difficulty: "easy", q: "Words like 'first, next, then, finally' help show the order of steps or events.", answer: true, explanation: "These are sequencing transitions." },
+            { type: "match", difficulty: "medium", q: "Match each transition to what it signals.", pairs: [["first / next / finally", "Time order"], ["because / so", "Cause and effect"], ["however / but", "Contrast"], ["for example", "Giving an example"]], explanation: "Different transitions show different relationships between ideas." },
+            { type: "tf", difficulty: "medium", q: "Good sequencing means putting ideas in an order that makes sense to the reader.", answer: true, explanation: "Logical order helps the reader follow the writing." },
+            { type: "short", difficulty: "medium", q: "Why are transitions important in writing?", answer: "Transitions connect ideas and sentences smoothly, showing the reader how points relate (time, cause, contrast, addition). They make writing flow and prevent it from feeling choppy or jumpy.", explanation: "Transitions create flow and show relationships between ideas." },
+            { type: "mcq", difficulty: "medium", q: "Which transition best fits: 'I wanted to play outside. ___, it was raining.'?", options: ["For example", "However", "First", "Finally"], answer: 1, explanation: "'However' shows the contrast between wanting to play and the rain." },
+            { type: "short", difficulty: "medium", q: "Put these instructions in a logical order and add a sequencing word to each: 'spread the jam', 'take two slices of bread', 'put the slices together'.", answer: "First, take two slices of bread. Next, spread the jam (on one slice). Finally, put the slices together. (Order and transitions like first/next/then/finally are the key point.)", explanation: "Logical order + sequencing transitions make steps clear." },
+            { type: "tf", difficulty: "medium", q: "Starting every sentence with 'and then' is the best way to sequence a story.", answer: false, explanation: "Repeating 'and then' is monotonous; varied transitions are better." },
+            { type: "mcq", difficulty: "hard", q: "Which transition signals CAUSE AND EFFECT?", options: ["meanwhile", "as a result", "for instance", "in contrast"], answer: 1, explanation: "'As a result' shows that one thing caused another." },
+            { type: "short", difficulty: "hard", q: "Rewrite these two choppy sentences into one smooth sentence using a transition: 'It was late. We went home.'", answer: "Examples: 'Because it was late, we went home.' or 'It was late, so we went home.' The transition (because/so) connects the two ideas and shows cause and effect.", explanation: "A cause-effect transition joins the ideas smoothly." },
+            { type: "long", difficulty: "hard", q: "Write a short paragraph (4–5 sentences) describing how to do a simple task (e.g. making tea), using at least three different sequencing or transition words.", answer: "Answers vary. A strong response gives a clear, logically ordered set of steps and uses at least three distinct transitions (e.g. first, next, then, after that, finally) so the process flows smoothly and is easy to follow.", explanation: "Logical steps + at least three varied transitions." }
+          ]
+        },
+
+        {
+          text: "Write descriptively using sensory details.",
+          resources: [
+            { type: "reading", title: "Descriptive writing & sensory detail", provider: "ReadWriteThink", url: "https://www.readwritethink.org/", note: "Using the five senses and 'show, don't tell'." },
+            { type: "reading", title: "Descriptive writing guidance", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/", note: "Techniques for vivid description." }
+          ],
+          quiz: [
+            { type: "mcq", difficulty: "easy", q: "'Sensory details' appeal to the reader's:", options: ["five senses (sight, sound, smell, taste, touch)", "maths skills", "spelling", "page count"], answer: 0, explanation: "Sensory details describe what we see, hear, smell, taste and feel." },
+            { type: "mcq", difficulty: "easy", q: "Which sentence uses a sensory detail?", options: ["It was a nice day.", "The warm sand crunched between my toes.", "I went to the beach.", "The beach was good."], answer: 1, explanation: "'Warm sand crunched' appeals to touch and sound — sensory description." },
+            { type: "tf", difficulty: "easy", q: "'Show, don't tell' means describing details so the reader can picture and feel a scene, rather than just stating facts flatly.", answer: true, explanation: "Showing uses vivid detail; telling just states." },
+            { type: "match", difficulty: "medium", q: "Match each detail to the sense it appeals to.", pairs: [["The lemon was sharp and sour", "Taste"], ["Thunder rumbled overhead", "Sound"], ["The blanket was soft and fuzzy", "Touch"], ["Fresh bread filled the air", "Smell"]], explanation: "Sensory details can target taste, sound, touch, smell or sight." },
+            { type: "tf", difficulty: "medium", q: "Good descriptive writing often uses more than one sense at a time.", answer: true, explanation: "Combining senses makes a scene more vivid and immersive." },
+            { type: "short", difficulty: "medium", q: "Rewrite 'The food was good' using at least one sensory detail.", answer: "Examples: 'The curry was rich and spicy, steam curling up from the bowl.' or 'The warm, buttery toast crunched at the first bite.' Any rewrite that adds a sensory detail (taste, smell, sound, sight or touch) is correct.", explanation: "Adding sensory detail turns a flat statement into vivid description." },
+            { type: "mcq", difficulty: "medium", q: "Which is the MOST descriptive version of 'the dog ran'?", options: ["The dog ran.", "The dog moved.", "The muddy brown dog bolted across the field, ears flying.", "There was a dog."], answer: 2, explanation: "It adds colour, action and vivid detail, helping the reader picture it." },
+            { type: "short", difficulty: "medium", q: "Why does using sensory details make writing more powerful?", answer: "Sensory details help the reader picture, hear, smell, taste and feel the scene, making it vivid and immersive. This pulls readers in and makes the writing more memorable and believable than plain statements.", explanation: "Sensory detail makes writing vivid, immersive and memorable." },
+            { type: "tf", difficulty: "medium", q: "Describing only what something looks like is enough for fully sensory writing.", answer: false, explanation: "Strong sensory writing uses several senses, not just sight." },
+            { type: "mcq", difficulty: "hard", q: "A writer wants to make a market scene come alive. The best technique is to:", options: ["list only the prices", "use details from several senses — sights, sounds, smells of the market", "write one short sentence", "avoid all adjectives"], answer: 1, explanation: "Multi-sensory detail immerses the reader in the scene." },
+            { type: "short", difficulty: "hard", q: "Describe a rainy day using at least three different senses in one or two sentences.", answer: "Answers vary. A strong response includes details from at least three senses, e.g. the sight of grey clouds, the sound of rain drumming, the smell of wet earth, the cool touch of raindrops, or the taste of cold air. The senses should be clearly different.", explanation: "At least three distinct senses in a vivid description." },
+            { type: "long", difficulty: "hard", q: "Write a short descriptive paragraph (4–6 sentences) about a place you love, using sensory details from at least four of the five senses and trying to 'show, not tell'.", answer: "Answers vary. A strong paragraph vividly describes one place using details from at least four senses (sight, sound, smell, taste, touch) and uses 'show, don't tell' — painting the scene through specific detail rather than flat statements like 'it was nice'.", explanation: "Vivid description, four+ senses, showing rather than telling." }
+          ]
+        },
+
+        {
+          text: "Write a narrative (story) with a clear beginning, middle and end.",
+          resources: [
+            { type: "reading", title: "Narrative writing", provider: "ReadWriteThink", url: "https://www.readwritethink.org/", note: "Planning and writing engaging stories." },
+            { type: "reading", title: "Storytelling structure", provider: "Khan Academy", url: "https://www.khanacademy.org/ela/cc-6th-reading-vocab", note: "Building narratives with structure." }
+          ],
+          quiz: [
+            { type: "mcq", difficulty: "easy", q: "A narrative is a piece of writing that:", options: ["lists facts", "tells a story with events in a sequence", "gives instructions", "argues a point"], answer: 1, explanation: "A narrative tells a story." },
+            { type: "tf", difficulty: "easy", q: "A good story usually has a clear beginning, middle and end.", answer: true, explanation: "This three-part shape gives a narrative structure." },
+            { type: "mcq", difficulty: "easy", q: "The 'beginning' of a story usually:", options: ["solves the problem", "introduces characters and the situation", "is the most exciting part", "lists the author's name"], answer: 1, explanation: "The beginning sets up characters and situation." },
+            { type: "mcq", difficulty: "medium", q: "Which element creates interest in the MIDDLE of a story?", options: ["the title", "a problem or conflict the characters face", "the author's address", "the page number"], answer: 1, explanation: "Conflict in the middle keeps readers engaged." },
+            { type: "tf", difficulty: "medium", q: "Dialogue (characters speaking) can make a narrative more lively and realistic.", answer: true, explanation: "Dialogue brings characters and scenes to life." },
+            { type: "short", difficulty: "medium", q: "Why is it useful to plan a story before writing it?", answer: "Planning helps you decide the characters, setting, problem and ending in advance, so the story has a clear structure and doesn't wander or get stuck. It makes the writing smoother and more organised.", explanation: "Planning gives the story structure and direction." },
+            { type: "mcq", difficulty: "medium", q: "Which sentence is the most engaging story OPENING?", options: ["This is a story about a dog.", "The door creaked open, and a cold draught swept through the empty house.", "First I will tell you the start.", "The end was good."], answer: 1, explanation: "A vivid, intriguing opening hooks the reader immediately." },
+            { type: "short", difficulty: "medium", q: "Name three things you might include when introducing the beginning of a story.", answer: "The main character(s), the setting (time and place), and the situation or hint of the problem to come. (Mood/atmosphere is also acceptable.)", explanation: "Beginnings establish character, setting and situation." },
+            { type: "tf", difficulty: "medium", q: "A satisfying ending usually resolves the story's problem in some way.", answer: true, explanation: "The end ties up the conflict introduced earlier." },
+            { type: "mcq", difficulty: "hard", q: "A narrative that builds tension, reaches a turning point, then resolves follows the shape of:", options: ["a shopping list", "a plot arc (beginning → rising action → climax → resolution)", "a dictionary", "a formal letter"], answer: 1, explanation: "Stories follow a plot arc from set-up through climax to resolution." },
+            { type: "short", difficulty: "hard", q: "Plan a simple story in three sentences: one for the beginning, one for the middle (problem), and one for the end.", answer: "Answers vary. A strong response gives a clear beginning (character + setting/situation), a middle that introduces a problem or conflict, and an end that resolves it — three connected sentences that form a complete mini-story.", explanation: "A clear beginning, a problem in the middle, and a resolution at the end." },
+            { type: "long", difficulty: "hard", q: "Write the opening paragraph of a short story. Introduce a character and setting and end with a hint of a problem that will pull the reader in.", answer: "Answers vary. A strong opening introduces at least one character and a setting (time/place), uses some descriptive detail, and finishes with a hook — a hint of trouble, mystery or change — that makes the reader want to continue.", explanation: "Character + setting + a hook hinting at the coming problem." }
+          ]
+        },
+
+        {
+          text: "Write a clear summary of a text in your own words.",
+          resources: [
+            { type: "reading", title: "Summarising texts", provider: "Khan Academy", url: "https://www.khanacademy.org/ela/cc-6th-reading-vocab", note: "How to condense a text to its key points." },
+            { type: "reading", title: "Summary vs paraphrase", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/", note: "Writing concise summaries in your own words." }
+          ],
+          quiz: [
+            { type: "mcq", difficulty: "easy", q: "A summary is:", options: ["a longer version of a text", "a short version giving only the main points, in your own words", "a copy of the text word-for-word", "the title only"], answer: 1, explanation: "A summary condenses a text to its key points in your own words." },
+            { type: "tf", difficulty: "easy", q: "A good summary leaves out small details and examples, keeping only the main ideas.", answer: true, explanation: "Summaries focus on key points, not minor detail." },
+            { type: "mcq", difficulty: "easy", q: "A summary should be written:", options: ["in your own words", "by copying the original exactly", "with no connection to the text", "longer than the original"], answer: 0, explanation: "Summarising means restating the key ideas in your own words." },
+            { type: "tf", difficulty: "medium", q: "A summary should include your personal opinion about the text.", answer: false, explanation: "A summary reports the text's main points neutrally, without adding opinion." },
+            { type: "short", difficulty: "medium", q: "List two things a good summary should do.", answer: "Any two of: include the main ideas/key points; leave out minor details and examples; be much shorter than the original; be written in your own words; stay accurate to the text; avoid adding your own opinion.", explanation: "Summaries are short, accurate, key-point-focused, and in your own words." },
+            { type: "mcq", difficulty: "medium", q: "Which is the best summary of a story about a boy who, after many failures, finally learns to swim?", options: ["The boy ate lunch and the pool was blue.", "After repeated struggles, a boy perseveres and learns to swim.", "Swimming is a sport people enjoy.", "The story has a boy in it."], answer: 1, explanation: "It captures the main idea (perseverance leading to learning to swim) concisely." },
+            { type: "tf", difficulty: "medium", q: "A summary is usually shorter than the original text.", answer: true, explanation: "Condensing to the main points makes a summary shorter." },
+            { type: "short", difficulty: "medium", q: "Why should a summary be written in your OWN words rather than copied?", answer: "Writing in your own words shows you actually understood the text, avoids copying (plagiarism), and lets you condense it to the key points. Copying word-for-word is not summarising.", explanation: "Own words show understanding and avoid copying." },
+            { type: "mcq", difficulty: "medium", q: "When summarising, you should include:", options: ["every example and detail", "only the main ideas and most important points", "your favourite jokes", "the page numbers"], answer: 1, explanation: "Keep the essentials; drop minor details." },
+            { type: "mcq", difficulty: "hard", q: "The first step in writing a good summary is usually to:", options: ["start writing immediately", "read the whole text and identify its main ideas", "copy the first sentence", "count the words"], answer: 1, explanation: "You must understand the text and find its main ideas before condensing it." },
+            { type: "short", difficulty: "hard", q: "What is the difference between summarising and paraphrasing a text?", answer: "Summarising condenses a whole text or passage down to its main points, so it is much shorter. Paraphrasing restates a specific part in your own words but keeps roughly the same length and detail. Both use your own words, but a summary is shorter and broader.", explanation: "Summary = shorter, main points; paraphrase = same length, restated." },
+            { type: "long", difficulty: "hard", q: "Read any short paragraph (from a book, article, or sign) and write a one- to two-sentence summary of it in your own words.", answer: "Answers vary. A strong response captures only the main idea(s) of the chosen paragraph, is clearly shorter than the original, is written in the student's own words, stays accurate, and adds no personal opinion.", explanation: "Accurate, concise, own-words summary of the main idea(s)." }
+          ]
+        },
+
+        {
+          text: "Write a formal or informal letter using the correct layout and tone.",
+          resources: [
+            { type: "reading", title: "How to write letters", provider: "ReadWriteThink", url: "https://www.readwritethink.org/", note: "Templates and tips for both letter types." },
+            { type: "reading", title: "Letter format & tone", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/", note: "Structure and register in letters." }
+          ],
+          quiz: [
+            { type: "mcq", difficulty: "easy", q: "Where does the date usually go in a formal letter?", options: ["in the middle of the page", "near the top, with the sender's address", "after the signature", "it is never included"], answer: 1, explanation: "The date sits near the top, typically under or beside the sender's address." },
+            { type: "mcq", difficulty: "easy", q: "An informal letter's tone should be:", options: ["stiff and official", "friendly and personal", "angry", "silent"], answer: 1, explanation: "Informal letters use a warm, personal tone." },
+            { type: "tf", difficulty: "easy", q: "A formal letter should be clear, polite and to the point.", answer: true, explanation: "Formal letters value clarity and politeness." },
+            { type: "match", difficulty: "medium", q: "Match each part of a letter to its position/purpose.", pairs: [["Greeting", "Opens the letter ('Dear...')"], ["Body", "The main message in paragraphs"], ["Sign-off", "Closes the letter ('Yours...'/'Love,')"], ["Signature", "Your name at the very end"]], explanation: "Letters follow greeting → body → sign-off → signature." },
+            { type: "tf", difficulty: "medium", q: "The body of a letter should be organised into clear paragraphs.", answer: true, explanation: "Paragraphs keep the message organised and readable." },
+            { type: "short", difficulty: "medium", q: "What information goes in the FIRST paragraph (opening) of a formal letter?", answer: "The opening paragraph states the purpose of the letter — why you are writing (e.g. to apply, to complain, to request information) — so the reader immediately knows what it is about.", explanation: "Open by stating your purpose clearly." },
+            { type: "mcq", difficulty: "medium", q: "Which sign-off fits an informal letter to a close friend?", options: ["Yours faithfully,", "Love, / See you soon,", "To whom it may concern,", "Respectfully submitted,"], answer: 1, explanation: "Warm sign-offs like 'Love' suit informal letters." },
+            { type: "short", difficulty: "medium", q: "Give one reason layout (addresses, date, greeting, sign-off) matters in a formal letter.", answer: "Correct layout makes the letter look professional and clear, helps the reader know who sent it and when, and follows the conventions expected in official communication, so it is taken seriously.", explanation: "Proper layout signals professionalism and clarity." },
+            { type: "tf", difficulty: "medium", q: "You should keep the same tone throughout a letter rather than switching from formal to casual halfway.", answer: true, explanation: "A consistent tone keeps the letter appropriate and coherent." },
+            { type: "mcq", difficulty: "hard", q: "You are writing to the principal to request a new water cooler. The best tone and opening are:", options: ["'Yo, we need water!'", "polite and formal: 'I am writing to request a water cooler for our classroom.'", "'Whatever, just read this.'", "no greeting at all"], answer: 1, explanation: "A formal request needs a polite tone and a clear statement of purpose." },
+            { type: "short", difficulty: "hard", q: "Write the greeting and the first sentence of a formal letter applying to join a school club.", answer: "Answers vary. A strong response uses a formal greeting (e.g. 'Dear Sir/Madam,' or 'Dear Mr/Ms [Name],') and a clear opening sentence stating the purpose, e.g. 'I am writing to apply to join the [name] club.'", explanation: "Formal greeting + purpose-stating opening sentence." },
+            { type: "long", difficulty: "hard", q: "Write a short informal letter (greeting, two short body paragraphs, sign-off) to a friend telling them about something fun you did recently.", answer: "Answers vary. A strong response uses an informal greeting ('Hi [name],' / 'Dear [name],'), a friendly personal tone, two organised body paragraphs sharing the experience, and an informal sign-off ('Love,' / 'See you soon,' + name). The layout and tone should match an informal letter.", explanation: "Correct informal layout (greeting, body paragraphs, sign-off) with a friendly tone." }
+          ]
+        },
+
+        {
+          text: "Write an autobiographical piece while keeping a clear topic focus.",
+          resources: [
+            { type: "reading", title: "Writing about yourself (memoir)", provider: "ReadWriteThink", url: "https://www.readwritethink.org/", note: "Turning real memories into focused writing." },
+            { type: "reading", title: "Staying on topic", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/", note: "Maintaining focus and unity in writing." }
+          ],
+          quiz: [
+            { type: "mcq", difficulty: "easy", q: "Autobiographical writing is writing about:", options: ["a made-up character", "your own real life and experiences", "the news", "how to build something"], answer: 1, explanation: "Autobiographical writing tells your own true experiences." },
+            { type: "tf", difficulty: "easy", q: "Autobiographical writing is usually written in the first person ('I').", answer: true, explanation: "You tell your own story, so you use 'I'." },
+            { type: "mcq", difficulty: "easy", q: "'Maintaining topic focus' means:", options: ["writing about many random things", "keeping your writing centred on one main subject or idea", "changing topic every sentence", "writing no main idea"], answer: 1, explanation: "Topic focus means staying on your chosen subject." },
+            { type: "tf", difficulty: "medium", q: "Including feelings and reflections makes autobiographical writing more personal and engaging.", answer: true, explanation: "Feelings and reflection are what make a memoir personal." },
+            { type: "short", difficulty: "medium", q: "Why is it important to keep a clear focus when writing about your life?", answer: "Because life has endless events; without focus the writing wanders and confuses the reader. Choosing one experience or idea and sticking to it keeps the piece clear, organised and meaningful.", explanation: "Focus keeps autobiographical writing clear and organised." },
+            { type: "mcq", difficulty: "medium", q: "Which is the most focused topic for a short autobiographical piece?", options: ["My entire life from birth to now", "The day I learned to ride a bicycle", "Everything about my whole family", "All my holidays ever"], answer: 1, explanation: "A single, specific event is focused and manageable." },
+            { type: "tf", difficulty: "medium", q: "Adding details about an unrelated event in the middle can weaken your topic focus.", answer: true, explanation: "Off-topic details break the unity of the piece." },
+            { type: "short", difficulty: "medium", q: "Name two features that make a piece of writing 'autobiographical'.", answer: "Any two of: it is about the writer's own real life; it is written in the first person ('I'); it includes real events and memories; it shares the writer's feelings and reflections.", explanation: "Real life, first person, real events, personal feelings." },
+            { type: "mcq", difficulty: "medium", q: "A piece titled 'My First Day at a New School' starts to talk about your pet's birthday for two paragraphs. This is a problem with:", options: ["spelling", "topic focus / staying on topic", "handwriting", "the title font"], answer: 1, explanation: "Drifting to the pet's birthday breaks the focus on the first day at school." },
+            { type: "mcq", difficulty: "hard", q: "To keep an autobiographical piece focused, a good strategy is to:", options: ["write about as many memories as possible", "choose one specific experience and explore it in depth", "avoid using 'I'", "never include feelings"], answer: 1, explanation: "Depth on one experience beats a shallow list of many." },
+            { type: "short", difficulty: "hard", q: "Choose one memorable moment from your life. State it in one sentence and explain why it would make a good focused topic.", answer: "Answers vary. A strong response names one specific moment (not a whole period of life) and explains that its narrow focus lets the writer explore it in depth with detail and feeling, keeping the piece clear and unified.", explanation: "A specific moment + why its narrow focus works well." },
+            { type: "long", difficulty: "hard", q: "Write the opening of an autobiographical piece about one important moment in your life. Use the first person, include at least one feeling, and stay focused on that single moment.", answer: "Answers vary. A strong response is in the first person, centres clearly on ONE moment/experience, includes at least one genuine feeling, uses some descriptive detail, and does not drift off into unrelated events — showing good topic focus.", explanation: "First person, one focused moment, real feeling, no drifting off-topic." }
+          ]
+        }
+
+      ]
+    },
+
+    /* ============================================================ */
+    {
+      id: "e6-grammar",
+      title: "Grammar & Mechanics",
+      subject: "Grammar",
+      icon: "🔤",
+      summary: "Relative and interrogative pronouns, nominative and objective case, adjectives and their types, definite and indefinite articles, complete sentences with subject and predicate, and basic punctuation.",
+      objectives: [
+
+        {
+          text: "Use relative pronouns (who, whom, whose, which, that) correctly.",
+          resources: [
+            { type: "reading", title: "Relative pronouns", provider: "Khan Academy", url: "https://www.khanacademy.org/humanities/grammar", note: "Videos and practice on who/whom/whose/which/that." },
+            { type: "reading", title: "Relative pronouns & clauses", provider: "Grammarly", url: "https://www.grammarly.com/blog/relative-pronouns/", note: "Clear guide with examples." }
+          ],
+          quiz: [
+            { type: "mcq", difficulty: "easy", q: "A relative pronoun introduces a clause that gives more information about a:", options: ["verb", "noun", "preposition", "punctuation mark"], answer: 1, explanation: "Relative pronouns (who, which, that…) add information about a noun." },
+            { type: "mcq", difficulty: "easy", q: "Which relative pronoun usually refers to PEOPLE?", options: ["which", "who", "that (things)", "where"], answer: 1, explanation: "'Who' refers to people." },
+            { type: "mcq", difficulty: "easy", q: "Which relative pronoun usually refers to THINGS or animals?", options: ["who", "whom", "which", "whose only"], answer: 2, explanation: "'Which' refers to things and animals." },
+            { type: "mcq", difficulty: "medium", q: "Choose the correct word: 'The girl ___ won the race is my sister.'", options: ["which", "who", "whose", "where"], answer: 1, explanation: "'Who' is used for a person who is the subject of the clause." },
+            { type: "mcq", difficulty: "medium", q: "Choose the correct word: 'That is the book ___ I borrowed.'", options: ["who", "whom", "that", "whose"], answer: 2, explanation: "'That' (or 'which') refers to the thing, the book." },
+            { type: "tf", difficulty: "medium", q: "'Whose' is a relative pronoun that shows possession ('the boy whose bike was stolen').", answer: true, explanation: "'Whose' indicates belonging." },
+            { type: "short", difficulty: "medium", q: "Explain when you use 'who' versus 'which'.", answer: "Use 'who' to refer to people; use 'which' to refer to things or animals. (For example: the teacher who helped me; the book which I read.)", explanation: "Who = people; which = things/animals." },
+            { type: "mcq", difficulty: "medium", q: "Choose the correct word: 'This is the house ___ roof is red.'", options: ["who", "which", "whose", "whom"], answer: 2, explanation: "'Whose' shows possession — the roof belongs to the house." },
+            { type: "tf", difficulty: "medium", q: "In the sentence 'The man whom I met was kind,' 'whom' is correct because it is the object of 'met'.", answer: true, explanation: "'Whom' is the object form, used as the object of the verb." },
+            { type: "mcq", difficulty: "hard", q: "Which sentence uses the relative pronoun correctly?", options: ["The dog who barked is mine.", "The car who is red is fast.", "The student whose project won is here.", "The book who I read was long."], answer: 2, explanation: "'Whose' correctly shows the project belongs to the student; the others misuse 'who' for things/animals." },
+            { type: "short", difficulty: "hard", q: "Combine these two sentences using a relative pronoun: 'I have a friend. She speaks three languages.'", answer: "'I have a friend who speaks three languages.' The relative pronoun 'who' joins the sentences and refers to the friend (a person).", explanation: "'Who' links the clauses and refers to the person." },
+            { type: "long", difficulty: "hard", q: "Write three sentences, each using a different relative pronoun (e.g. who, which, whose), and underline or note which pronoun you used in each.", answer: "Answers vary. A strong response gives three correct sentences, each containing a different relative pronoun used appropriately — 'who' for a person, 'which' for a thing, 'whose' for possession (or 'that'/'whom' used correctly) — and identifies the pronoun in each.", explanation: "Three correct sentences, three different relative pronouns, each used appropriately." }
+          ]
+        },
+
+        {
+          text: "Use interrogative pronouns (who, whom, whose, what, which) to ask questions.",
+          resources: [
+            { type: "reading", title: "Interrogative pronouns", provider: "Khan Academy", url: "https://www.khanacademy.org/humanities/grammar", note: "Pronouns that ask questions." },
+            { type: "reading", title: "Interrogative pronouns explained", provider: "Grammarly", url: "https://www.grammarly.com/blog/interrogative-pronouns/", note: "Who, whom, whose, what, which in questions." }
+          ],
+          quiz: [
+            { type: "mcq", difficulty: "easy", q: "An interrogative pronoun is used to:", options: ["end a sentence", "ask a question", "join two clauses", "show excitement"], answer: 1, explanation: "Interrogative pronouns (who, what, which…) introduce questions." },
+            { type: "mcq", difficulty: "easy", q: "Which is an interrogative pronoun?", options: ["the", "what", "and", "quickly"], answer: 1, explanation: "'What' asks a question; it is an interrogative pronoun." },
+            { type: "tf", difficulty: "easy", q: "'Who is at the door?' uses the interrogative pronoun 'who'.", answer: true, explanation: "'Who' opens the question about a person." },
+            { type: "mcq", difficulty: "medium", q: "Choose the best interrogative pronoun: '___ of these two shirts do you prefer?'", options: ["What", "Which", "Who", "Whose"], answer: 1, explanation: "'Which' is used when choosing among a limited, known set." },
+            { type: "mcq", difficulty: "medium", q: "Choose the best interrogative pronoun: '___ is your favourite food?'", options: ["Who", "Whom", "What", "Whose"], answer: 2, explanation: "'What' asks about a thing from an open set of options." },
+            { type: "tf", difficulty: "medium", q: "'Whose' as an interrogative pronoun asks about possession ('Whose bag is this?').", answer: true, explanation: "'Whose' asks who something belongs to." },
+            { type: "short", difficulty: "medium", q: "What is the difference between using 'what' and 'which' in a question?", answer: "'Which' is used when choosing from a limited, known set of options (Which colour — red or blue?). 'What' is used for an open, unlimited range of possibilities (What is your favourite colour?).", explanation: "Which = limited choice; what = open choice." },
+            { type: "mcq", difficulty: "medium", q: "Which sentence correctly uses an interrogative pronoun?", options: ["Who you are?", "What is your name?", "Which the book?", "Whose."], answer: 1, explanation: "'What is your name?' is a complete, correct question." },
+            { type: "tf", difficulty: "medium", q: "Interrogative pronouns and relative pronouns can share the same words (who, which, whose), but interrogative ones ask questions.", answer: true, explanation: "Same words, different job: interrogatives ask; relatives connect clauses." },
+            { type: "mcq", difficulty: "hard", q: "In 'Whom did you invite?', 'whom' is used because it is the:", options: ["subject of the verb", "object of the verb 'invite'", "a possessive", "not a pronoun"], answer: 1, explanation: "'Whom' is the object form — you invited whom." },
+            { type: "short", difficulty: "hard", q: "Write one question using 'whose' and one using 'which' as interrogative pronouns.", answer: "Answers vary. A strong response gives one correct question with 'whose' (asking about possession, e.g. 'Whose pencil is this?') and one with 'which' (choosing from a set, e.g. 'Which road should we take?').", explanation: "Two correct questions: one possessive ('whose'), one limited-choice ('which')." },
+            { type: "long", difficulty: "hard", q: "Write four different questions, each beginning with a different interrogative pronoun (who, what, which, whose). Make sure each question makes sense.", answer: "Answers vary. A strong response gives four sensible, grammatically correct questions, each starting with a different interrogative pronoun used appropriately: 'who' (person), 'what' (open thing), 'which' (limited choice), 'whose' (possession). ('Whom' may substitute for 'who' where it is the object.)", explanation: "Four correct questions, each with a different interrogative pronoun." }
+          ]
+        },
+
+        {
+          text: "Distinguish the nominative (subject) and objective (object) case of pronouns.",
+          resources: [
+            { type: "reading", title: "Subject & object pronouns", provider: "Khan Academy", url: "https://www.khanacademy.org/humanities/grammar", note: "I/me, he/him, she/her, we/us, they/them." },
+            { type: "reading", title: "Pronoun case", provider: "Grammarly", url: "https://www.grammarly.com/blog/pronoun-case/", note: "When to use nominative vs objective pronouns." }
+          ],
+          quiz: [
+            { type: "mcq", difficulty: "easy", q: "The nominative (subject) case pronoun is used when the pronoun is:", options: ["doing the action (the subject)", "receiving the action (the object)", "showing possession", "a question word"], answer: 0, explanation: "Subject pronouns (I, he, she, we, they) do the action." },
+            { type: "mcq", difficulty: "easy", q: "Which is an OBJECT (objective case) pronoun?", options: ["I", "he", "them", "she"], answer: 2, explanation: "'Them' receives the action; I, he, she are subject pronouns." },
+            { type: "tf", difficulty: "easy", q: "In 'She called me,' 'She' is the subject (nominative) and 'me' is the object (objective).", answer: true, explanation: "She does the calling; me receives it." },
+            { type: "match", difficulty: "medium", q: "Match each subject pronoun to its object form.", pairs: [["I", "me"], ["he", "him"], ["she", "her"], ["they", "them"]], explanation: "Each nominative pronoun has a matching objective form." },
+            { type: "mcq", difficulty: "medium", q: "Choose the correct pronoun: '___ went to the market.'", options: ["Me", "Him", "They", "Them"], answer: 2, explanation: "The subject doing the action needs a nominative pronoun: 'They'." },
+            { type: "mcq", difficulty: "medium", q: "Choose the correct pronoun: 'The teacher praised ___.'", options: ["he", "they", "she", "him"], answer: 3, explanation: "The pronoun receives the praise, so the objective 'him' is correct." },
+            { type: "tf", difficulty: "medium", q: "'Him and me went to the park' is correct standard English.", answer: false, explanation: "Subjects need nominative pronouns: 'He and I went to the park.'" },
+            { type: "short", difficulty: "medium", q: "How can you test whether to use 'I' or 'me' in 'My friend and (I/me) went home'?", answer: "Drop the other person and test the pronoun alone: 'I went home' sounds right, 'me went home' does not — so use 'I'. The pronoun is the subject, so it takes the nominative form.", explanation: "Test the pronoun on its own to hear the correct case." },
+            { type: "mcq", difficulty: "medium", q: "Choose the correct pronoun: 'Between you and ___, this is a secret.'", options: ["I", "me", "he", "they"], answer: 1, explanation: "After the preposition 'between' you need the objective case: 'me'." },
+            { type: "mcq", difficulty: "hard", q: "Which sentence is correct?", options: ["Her and I are friends.", "She and I are friends.", "Me and her are friends.", "Her and me are friends."], answer: 1, explanation: "Both pronouns are subjects, so both take the nominative case: 'She and I'." },
+            { type: "short", difficulty: "hard", q: "Correct this sentence and explain the fix: 'Me and him saw the film.'", answer: "Correct: 'He and I saw the film.' Both pronouns are the subjects doing the action, so they must be in the nominative case ('he' and 'I'), not the objective ('him', 'me'). (Putting the other person first is also polite convention.)", explanation: "Subjects take nominative pronouns: He and I." },
+            { type: "long", difficulty: "hard", q: "Write two sentences: one where a pronoun is the SUBJECT (nominative) and one where a pronoun is the OBJECT (objective). Label which is which.", answer: "Answers vary. A strong response gives one sentence with a correctly used subject pronoun (I/he/she/we/they doing the action) and one with a correctly used object pronoun (me/him/her/us/them receiving the action), and correctly labels each case.", explanation: "One correct nominative-subject sentence and one correct objective-object sentence, properly labelled." }
+          ]
+        },
+
+        {
+          text: "Identify and use adjectives, including their main types.",
+          resources: [
+            { type: "reading", title: "Adjectives", provider: "Khan Academy", url: "https://www.khanacademy.org/humanities/grammar", note: "What adjectives do and how to use them." },
+            { type: "reading", title: "Types of adjectives", provider: "Grammarly", url: "https://www.grammarly.com/blog/adjective/", note: "Descriptive, quantitative, demonstrative and more." }
+          ],
+          quiz: [
+            { type: "mcq", difficulty: "easy", q: "An adjective is a word that:", options: ["describes a noun", "shows an action", "joins clauses", "asks a question"], answer: 0, explanation: "Adjectives describe or modify nouns." },
+            { type: "mcq", difficulty: "easy", q: "In 'the tall building', the adjective is:", options: ["the", "tall", "building", "none"], answer: 1, explanation: "'Tall' describes the noun 'building'." },
+            { type: "tf", difficulty: "easy", q: "In 'three apples', 'three' is an adjective because it tells how many.", answer: true, explanation: "Numbers can act as quantitative adjectives describing the noun." },
+            { type: "match", difficulty: "medium", q: "Match each adjective to its type.", pairs: [["red, soft, happy", "Descriptive (quality)"], ["three, many, few", "Quantitative (quantity)"], ["this, that, these", "Demonstrative"], ["my, your, his", "Possessive"]], explanation: "Adjectives come in several types: descriptive, quantitative, demonstrative and possessive." },
+            { type: "tf", difficulty: "medium", q: "An adjective can come before a noun ('a happy child') or after a linking verb ('the child is happy').", answer: true, explanation: "Adjectives can appear before nouns or after verbs like 'is'." },
+            { type: "short", difficulty: "medium", q: "Identify the adjective(s) in: 'The hungry brown dog ate two biscuits.'", answer: "'Hungry' and 'brown' are descriptive adjectives (describing the dog) and 'two' is a quantitative adjective (how many biscuits).", explanation: "Hungry, brown describe the dog; two tells how many biscuits." },
+            { type: "mcq", difficulty: "medium", q: "Which sentence contains a demonstrative adjective?", options: ["She is kind.", "This book is mine.", "He runs fast.", "They sang loudly."], answer: 1, explanation: "'This' points out which book — a demonstrative adjective." },
+            { type: "short", difficulty: "medium", q: "What is the difference between a descriptive adjective and a quantitative adjective?", answer: "A descriptive adjective tells what a noun is like — its quality (red, soft, brave). A quantitative adjective tells how much or how many (three, several, few).", explanation: "Descriptive = quality; quantitative = amount." },
+            { type: "tf", difficulty: "medium", q: "'My', 'your' and 'his' are possessive adjectives because they show ownership of a noun.", answer: true, explanation: "They tell whom the noun belongs to." },
+            { type: "mcq", difficulty: "hard", q: "In 'These five delicious mangoes are mine,' how many adjectives are there (excluding 'mine')?", options: ["one", "two", "three", "none"], answer: 2, explanation: "'These' (demonstrative), 'five' (quantitative) and 'delicious' (descriptive) — three adjectives." },
+            { type: "short", difficulty: "hard", q: "Write a sentence that uses at least three adjectives of different types, and name the types.", answer: "Answers vary. A strong response gives a correct sentence with at least three adjectives of different types — e.g. descriptive (soft), quantitative (two), demonstrative (those) or possessive (my) — and correctly identifies each type.", explanation: "At least three adjectives of distinct types, correctly labelled." },
+            { type: "long", difficulty: "hard", q: "Explain what adjectives do for writing and give two examples showing how adding adjectives makes a plain sentence more vivid.", answer: "Answers vary. A strong response explains that adjectives describe nouns and make writing more precise and vivid, then gives two before/after examples — a plain sentence (e.g. 'The dog ran') and a richer version with adjectives (e.g. 'The huge, muddy dog ran') — showing the improvement.", explanation: "Clear explanation + two plain→vivid examples using adjectives." }
+          ]
+        },
+
+        {
+          text: "Use definite and indefinite articles (a, an, the) correctly.",
+          resources: [
+            { type: "reading", title: "Articles: a, an, the", provider: "Khan Academy", url: "https://www.khanacademy.org/humanities/grammar", note: "When to use each article." },
+            { type: "reading", title: "Using articles", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/grammar/articles_a_versus_an.html", note: "Clear rules for a, an and the." }
+          ],
+          quiz: [
+            { type: "mcq", difficulty: "easy", q: "'The' is called the ___ article.", options: ["indefinite", "definite", "demonstrative", "possessive"], answer: 1, explanation: "'The' is the definite article — it points to a specific thing." },
+            { type: "mcq", difficulty: "easy", q: "'A' and 'an' are called the ___ articles.", options: ["definite", "indefinite", "interrogative", "relative"], answer: 1, explanation: "'A' and 'an' are indefinite — they refer to any one, non-specific thing." },
+            { type: "mcq", difficulty: "easy", q: "Choose the correct article: 'I saw ___ elephant at the zoo.'", options: ["a", "an", "the", "no article"], answer: 1, explanation: "'An' is used before a vowel sound: an elephant." },
+            { type: "tf", difficulty: "easy", q: "We use 'an' before words that begin with a vowel SOUND, like 'an hour'.", answer: true, explanation: "'Hour' starts with a vowel sound (the h is silent), so 'an' is correct." },
+            { type: "mcq", difficulty: "medium", q: "Choose the correct article: 'She is ___ university student.'", options: ["a", "an", "the", "no article"], answer: 0, explanation: "'University' starts with a 'y' (consonant) sound, so 'a' is correct." },
+            { type: "tf", difficulty: "medium", q: "We usually use 'the' when both the speaker and listener know exactly which thing is meant.", answer: true, explanation: "'The' marks a specific, known thing." },
+            { type: "short", difficulty: "medium", q: "Explain when to use 'a' and when to use 'an'.", answer: "Use 'a' before a word starting with a consonant sound (a cat, a university) and 'an' before a word starting with a vowel sound (an apple, an hour). It depends on the SOUND, not just the letter.", explanation: "a = consonant sound; an = vowel sound." },
+            { type: "mcq", difficulty: "medium", q: "Choose the correct article: 'Please pass me ___ salt on the table.'", options: ["a", "an", "the", "no article"], answer: 2, explanation: "It's a specific salt (the one on the table), so use 'the'." },
+            { type: "mcq", difficulty: "medium", q: "Which sentence is correct?", options: ["I want a apple.", "I want an apple.", "I want the a apple.", "I want an the apple."], answer: 1, explanation: "'An apple' is correct — vowel sound after the indefinite article." },
+            { type: "short", difficulty: "hard", q: "Explain the difference in meaning between 'I need a pen' and 'I need the pen'.", answer: "'A pen' means any pen — non-specific (indefinite). 'The pen' means one particular, known pen — specific (definite), one both speaker and listener have in mind.", explanation: "a = any one; the = a specific, known one." },
+            { type: "mcq", difficulty: "hard", q: "Choose the correct article: 'It took us ___ hour to finish.'", options: ["a", "an", "the", "no article"], answer: 1, explanation: "'Hour' begins with a vowel sound (silent h), so 'an' is correct." },
+            { type: "long", difficulty: "hard", q: "Write three sentences: one correctly using 'a', one using 'an', and one using 'the'. For each, explain in a few words why that article is right.", answer: "Answers vary. A strong response gives three correct sentences — 'a' before a consonant sound, 'an' before a vowel sound, and 'the' for a specific/known thing — each with a brief correct reason.", explanation: "Correct 'a', 'an' and 'the' sentences, each with a valid reason." }
+          ]
+        },
+
+        {
+          text: "Write complete sentences with a subject and a predicate, and recognise sentence boundaries.",
+          resources: [
+            { type: "reading", title: "Subjects & predicates", provider: "Khan Academy", url: "https://www.khanacademy.org/humanities/grammar", note: "Every sentence needs a subject and a predicate." },
+            { type: "reading", title: "Sentence fragments & boundaries", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/", note: "Recognising complete sentences." }
+          ],
+          quiz: [
+            { type: "mcq", difficulty: "easy", q: "Every complete sentence needs at least a:", options: ["subject and a predicate", "adjective and an adverb", "comma and a full stop", "noun and a question mark"], answer: 0, explanation: "A complete sentence has a subject (who/what) and a predicate (what they do/are)." },
+            { type: "mcq", difficulty: "easy", q: "In 'The dog barked loudly,' the subject is:", options: ["barked", "loudly", "The dog", "barked loudly"], answer: 2, explanation: "'The dog' is who the sentence is about — the subject." },
+            { type: "tf", difficulty: "easy", q: "The predicate of a sentence tells what the subject does or is.", answer: true, explanation: "The predicate contains the verb and tells about the subject." },
+            { type: "mcq", difficulty: "medium", q: "Which of these is a COMPLETE sentence?", options: ["Running down the street.", "The tired runner.", "She crossed the finish line.", "Because it was raining."], answer: 2, explanation: "Only 'She crossed the finish line' has both a subject and a predicate and a complete thought." },
+            { type: "tf", difficulty: "medium", q: "'When the bell rang' is a complete sentence.", answer: false, explanation: "It is a fragment — it doesn't express a complete thought on its own." },
+            { type: "short", difficulty: "medium", q: "Identify the subject and the predicate in: 'My little sister loves chocolate cake.'", answer: "Subject: 'My little sister' (who the sentence is about). Predicate: 'loves chocolate cake' (what she does).", explanation: "Subject = my little sister; predicate = loves chocolate cake." },
+            { type: "mcq", difficulty: "medium", q: "A group of words that is missing a subject or a verb and doesn't express a complete thought is called a:", options: ["paragraph", "sentence fragment", "predicate", "clause that is complete"], answer: 1, explanation: "An incomplete sentence is a fragment." },
+            { type: "tf", difficulty: "medium", q: "A sentence should begin with a capital letter and end with a full stop, question mark or exclamation mark.", answer: true, explanation: "These mark the boundaries of a sentence." },
+            { type: "short", difficulty: "medium", q: "Turn this fragment into a complete sentence: 'After the long journey.'", answer: "Examples: 'After the long journey, we finally arrived home.' Adding a subject and predicate (we / arrived) completes the thought.", explanation: "Add a subject and predicate to express a complete idea." },
+            { type: "mcq", difficulty: "hard", q: "Which sentence shows correct sentence boundaries (not a run-on)?", options: ["I woke up I ate breakfast I left.", "I woke up, ate breakfast, and left.", "I woke up ate breakfast left.", "I woke up I ate I left."], answer: 1, explanation: "Option 2 joins ideas correctly; the others are run-ons missing proper boundaries or connectors." },
+            { type: "short", difficulty: "hard", q: "Explain what a 'run-on sentence' is and one way to fix it.", answer: "A run-on sentence joins two or more complete sentences without proper punctuation or a connecting word, so they 'run on' together. Fix it by splitting into separate sentences, adding a full stop, or joining with a comma + conjunction (e.g. 'and', 'but') or a semicolon.", explanation: "Run-on = sentences jammed together; fix with a full stop, conjunction or semicolon." },
+            { type: "long", difficulty: "hard", q: "Write two complete sentences of your own. For each, identify the subject and the predicate.", answer: "Answers vary. A strong response gives two genuinely complete sentences (each with a subject and a predicate expressing a full thought) and correctly identifies the subject (who/what) and predicate (what they do/are) in each.", explanation: "Two complete sentences, each with subject and predicate correctly identified." }
+          ]
+        },
+
+        {
+          text: "Use basic punctuation correctly (full stops, capitals, commas, question and exclamation marks).",
+          resources: [
+            { type: "reading", title: "Punctuation basics", provider: "Khan Academy", url: "https://www.khanacademy.org/humanities/grammar", note: "End marks, commas and capitals." },
+            { type: "reading", title: "Commas & end punctuation", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/punctuation/", note: "Rules and examples for everyday punctuation." }
+          ],
+          quiz: [
+            { type: "mcq", difficulty: "easy", q: "A statement (telling sentence) usually ends with a:", options: ["question mark", "full stop (period)", "comma", "exclamation mark"], answer: 1, explanation: "Statements end with a full stop." },
+            { type: "mcq", difficulty: "easy", q: "A question ends with a:", options: ["full stop", "question mark", "comma", "colon"], answer: 1, explanation: "Questions end with a question mark." },
+            { type: "tf", difficulty: "easy", q: "Every sentence should begin with a capital letter.", answer: true, explanation: "Sentences open with a capital letter." },
+            { type: "mcq", difficulty: "easy", q: "An exclamation mark is used to show:", options: ["a calm statement", "strong feeling or emphasis", "a question", "a list"], answer: 1, explanation: "Exclamation marks signal strong emotion or emphasis." },
+            { type: "mcq", difficulty: "medium", q: "Which sentence is punctuated correctly?", options: ["where are you going", "Where are you going?", "where are you going.", "Where are you going!"], answer: 1, explanation: "A question needs a capital letter at the start and a question mark at the end." },
+            { type: "tf", difficulty: "medium", q: "Commas can be used to separate items in a list, e.g. 'apples, bananas and grapes'.", answer: true, explanation: "Commas separate list items." },
+            { type: "short", difficulty: "medium", q: "Add the correct punctuation: 'what a beautiful day'", answer: "'What a beautiful day!' — it begins with a capital 'W' and ends with an exclamation mark because it expresses strong feeling.", explanation: "Capital at start + exclamation mark for strong feeling." },
+            { type: "mcq", difficulty: "medium", q: "Which uses commas correctly to list items?", options: ["I bought milk eggs and bread.", "I bought milk, eggs, and bread.", "I bought, milk eggs bread.", "I, bought milk eggs bread."], answer: 1, explanation: "Commas separate the listed items clearly." },
+            { type: "tf", difficulty: "medium", q: "Names of people and places (like 'Riya' and 'Mumbai') should start with a capital letter.", answer: true, explanation: "Proper nouns are capitalised." },
+            { type: "short", difficulty: "medium", q: "Rewrite with correct punctuation and capitals: 'my friend sam lives in delhi'", answer: "'My friend Sam lives in Delhi.' Capital 'M' to start, capital 'S' for the name Sam, capital 'D' for the place Delhi, and a full stop at the end.", explanation: "Capitalise the first word and proper nouns; end with a full stop." },
+            { type: "mcq", difficulty: "hard", q: "Which sentence uses a comma correctly to join two parts?", options: ["I was tired so I went to bed", "I was tired, so I went to bed.", "I was tired so, I went to bed.", "I, was tired so I went to bed."], answer: 1, explanation: "A comma before the conjunction 'so' correctly joins the two clauses." },
+            { type: "long", difficulty: "hard", q: "Write four short sentences: one statement ending in a full stop, one question, one exclamation, and one sentence containing a list with commas. Make sure all capitals and punctuation are correct.", answer: "Answers vary. A strong response gives four correctly punctuated sentences: a statement (full stop), a question (question mark), an exclamation (exclamation mark), and a sentence with a comma-separated list — all beginning with capital letters and with proper nouns capitalised.", explanation: "Four sentences showing full stop, question mark, exclamation mark and list commas, all correctly capitalised." }
+          ]
+        }
+
+      ]
+    }
+
+  ]
+});
