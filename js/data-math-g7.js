@@ -20,7 +20,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Percentage Change", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/percentage-change.html", note: "Working backwards from a percentage." },
             { type: "interactive", title: "Khan Academy: Percentages", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Reverse-percentage problems." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Percentages (Stage 8)", note: "Percentage increase/decrease and applications are covered in the Cambridge Stage 8 'Percentages' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Percentages (Stage 8)", note: "Percentage increase/decrease and applications are covered in the Cambridge Stage 8 'Percentages' unit.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Mean and Vulgar Bits", author: "Kjartan Poskitt", chapter: "(fractions, percentages, ratio & averages)", note: "Enrichment read (great for ages 11–13): percentages, ratio and proportion, made hilarious.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "To find the original amount after a percentage increase, you divide by the multiplier.", answer: true, explanation: "If final = original × multiplier, then original = final ÷ multiplier." },
@@ -40,7 +41,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Percentage increase/decrease", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/percentage-change.html", note: "Multiplier method." },
             { type: "interactive", title: "Percentages", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Practice increases and decreases." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Percentages (Stage 8)", note: "Percentage increase/decrease and applications are covered in the Cambridge Stage 8 'Percentages' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Percentages (Stage 8)", note: "Percentage increase/decrease and applications are covered in the Cambridge Stage 8 'Percentages' unit.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Mean and Vulgar Bits", author: "Kjartan Poskitt", chapter: "(fractions, percentages, ratio & averages)", note: "Enrichment read (great for ages 11–13): percentages, ratio and proportion, made hilarious.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "To increase a value by 30% you multiply by 1.3.", answer: true, explanation: "The multiplier for a 30% increase is 1 + 0.30 = 1.3." },
@@ -60,7 +62,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Percentage Change", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/percentage-change.html", note: "Change as a percentage of the original." },
             { type: "interactive", title: "Khan Academy: Percentage change", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Percentage increase and decrease." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Percentages (Stage 8)", note: "Percentage increase/decrease and applications are covered in the Cambridge Stage 8 'Percentages' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Percentages (Stage 8)", note: "Percentage increase/decrease and applications are covered in the Cambridge Stage 8 'Percentages' unit.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Mean and Vulgar Bits", author: "Kjartan Poskitt", chapter: "(fractions, percentages, ratio & averages)", note: "Enrichment read (great for ages 11–13): percentages, ratio and proportion, made hilarious.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "Percentage change = (change ÷ original) × 100.", answer: true, explanation: "Always divide the change by the original (starting) value." },
@@ -80,7 +83,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Percentage Change", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/percentage-change.html", note: "Applying a percentage change more than once." },
             { type: "interactive", title: "Percentages", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Multi-step percentage problems." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Percentages (Stage 8)", note: "Percentage increase/decrease and applications are covered in the Cambridge Stage 8 'Percentages' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Percentages (Stage 8)", note: "Percentage increase/decrease and applications are covered in the Cambridge Stage 8 'Percentages' unit.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Mean and Vulgar Bits", author: "Kjartan Poskitt", chapter: "(fractions, percentages, ratio & averages)", note: "Enrichment read (great for ages 11–13): percentages, ratio and proportion, made hilarious.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "For repeated percentage changes, you multiply the multipliers together.", answer: true, explanation: "Each successive change is applied to the new running total." },
@@ -100,7 +104,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Percentage Error", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/percentage-error.html", note: "How far a measurement is from the true value." },
             { type: "interactive", title: "Percent error", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Practice problems." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Percentages (Stage 8)", note: "Percentage increase/decrease and applications are covered in the Cambridge Stage 8 'Percentages' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Percentages (Stage 8)", note: "Percentage increase/decrease and applications are covered in the Cambridge Stage 8 'Percentages' unit.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Mean and Vulgar Bits", author: "Kjartan Poskitt", chapter: "(fractions, percentages, ratio & averages)", note: "Enrichment read (great for ages 11–13): percentages, ratio and proportion, made hilarious.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "Percentage error uses the true (accepted) value as the denominator.", answer: true, explanation: "% error = |measured − true| ÷ true × 100." },
@@ -120,7 +125,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Percentages", provider: "Math is Fun", url: "https://www.mathsisfun.com/percentage.html", note: "Percentages in real situations." },
             { type: "interactive", title: "Percentage word problems", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Apply to contexts." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Percentages (Stage 8)", note: "Percentage increase/decrease and applications are covered in the Cambridge Stage 8 'Percentages' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Percentages (Stage 8)", note: "Percentage increase/decrease and applications are covered in the Cambridge Stage 8 'Percentages' unit.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Mean and Vulgar Bits", author: "Kjartan Poskitt", chapter: "(fractions, percentages, ratio & averages)", note: "Enrichment read (great for ages 11–13): percentages, ratio and proportion, made hilarious.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "VAT (Value Added Tax) is an example of a percentage applied in real life.", answer: true, explanation: "VAT adds a fixed percentage to the price of goods." },
@@ -151,7 +157,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Types of Numbers", provider: "Math is Fun", url: "https://www.mathsisfun.com/sets/number-types.html", note: "All the number sets explained." },
             { type: "interactive", title: "Number sets", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-eighth-grade-math", note: "Rational vs irrational." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Integers, powers and roots (Stage 8)", note: "The number system, integers, powers and roots are covered in the Cambridge Stage 8 number units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Integers, powers and roots (Stage 8)", note: "The number system, integers, powers and roots are covered in the Cambridge Stage 8 number units.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Devil: A Mathematical Adventure", author: "Hans Magnus Enzensberger", chapter: "(a story across many number ideas)", note: "Enrichment read (great for ages 11–13): numbers, powers, roots and patterns through a dream-story.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "Every integer is a rational number.", answer: true, explanation: "Any integer n can be written as n/1." },
@@ -171,7 +178,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Rational Numbers", provider: "Math is Fun", url: "https://www.mathsisfun.com/rational-numbers.html", note: "Numbers as a ratio of integers." },
             { type: "interactive", title: "Rational numbers", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-eighth-grade-math", note: "The p/q form." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Integers, powers and roots (Stage 8)", note: "The number system, integers, powers and roots are covered in the Cambridge Stage 8 number units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Integers, powers and roots (Stage 8)", note: "The number system, integers, powers and roots are covered in the Cambridge Stage 8 number units.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Devil: A Mathematical Adventure", author: "Hans Magnus Enzensberger", chapter: "(a story across many number ideas)", note: "Enrichment read (great for ages 11–13): numbers, powers, roots and patterns through a dream-story.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "In p/q, q must not equal zero.", answer: true, explanation: "Division by zero is undefined, so q ≠ 0 is part of the definition." },
@@ -191,7 +199,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Irrational Numbers", provider: "Math is Fun", url: "https://www.mathsisfun.com/irrational-numbers.html", note: "Non-repeating, non-terminating decimals." },
             { type: "interactive", title: "Irrational numbers", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-eighth-grade-math", note: "Examples and properties." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Integers, powers and roots (Stage 8)", note: "The number system, integers, powers and roots are covered in the Cambridge Stage 8 number units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Integers, powers and roots (Stage 8)", note: "The number system, integers, powers and roots are covered in the Cambridge Stage 8 number units.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Devil: A Mathematical Adventure", author: "Hans Magnus Enzensberger", chapter: "(a story across many number ideas)", note: "Enrichment read (great for ages 11–13): numbers, powers, roots and patterns through a dream-story.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "An irrational number has a decimal that goes on forever without repeating.", answer: true, explanation: "That is what makes it irrational." },
@@ -211,7 +220,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Simplifying Square Roots", provider: "Math is Fun", url: "https://www.mathsisfun.com/surds.html", note: "Simplifying roots and surds." },
             { type: "interactive", title: "Square roots", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Simplifying roots." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Integers, powers and roots (Stage 8)", note: "The number system, integers, powers and roots are covered in the Cambridge Stage 8 number units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Integers, powers and roots (Stage 8)", note: "The number system, integers, powers and roots are covered in the Cambridge Stage 8 number units.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Devil: A Mathematical Adventure", author: "Hans Magnus Enzensberger", chapter: "(a story across many number ideas)", note: "Enrichment read (great for ages 11–13): numbers, powers, roots and patterns through a dream-story.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "A surd is an irrational root that cannot be simplified to a whole number.", answer: true, explanation: "e.g. √2, √3, √5 are surds; √4 = 2 is not." },
@@ -231,7 +241,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Pi", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/pi.html", note: "What π is and common approximations." },
             { type: "interactive", title: "Circles & π", provider: "Khan Academy", url: "https://www.khanacademy.org/math/geometry", note: "π in circle formulas." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Integers, powers and roots (Stage 8)", note: "The number system, integers, powers and roots are covered in the Cambridge Stage 8 number units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Integers, powers and roots (Stage 8)", note: "The number system, integers, powers and roots are covered in the Cambridge Stage 8 number units.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Devil: A Mathematical Adventure", author: "Hans Magnus Enzensberger", chapter: "(a story across many number ideas)", note: "Enrichment read (great for ages 11–13): numbers, powers, roots and patterns through a dream-story.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "22/7 is an exact value of π.", answer: false, explanation: "22/7 is only an approximation; π is irrational." },
@@ -251,7 +262,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Rational number operations", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "All four operations." },
             { type: "interactive", title: "Rational Numbers", provider: "Math is Fun", url: "https://www.mathsisfun.com/rational-numbers.html", note: "Operations with rational numbers." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Integers, powers and roots (Stage 8)", note: "The number system, integers, powers and roots are covered in the Cambridge Stage 8 number units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Integers, powers and roots (Stage 8)", note: "The number system, integers, powers and roots are covered in the Cambridge Stage 8 number units.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Devil: A Mathematical Adventure", author: "Hans Magnus Enzensberger", chapter: "(a story across many number ideas)", note: "Enrichment read (great for ages 11–13): numbers, powers, roots and patterns through a dream-story.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "To add fractions with the same denominator, you add the numerators and keep the denominator.", answer: true, explanation: "e.g. 1/5 + 2/5 = 3/5." },
@@ -282,7 +294,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Ratios", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/ratio.html", note: "Ratios and fractions." },
             { type: "interactive", title: "Ratios", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Part-to-whole from a ratio." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio and proportion (Stage 8)", note: "Ratio, rate and direct proportion are covered in the Cambridge Stage 8 'Ratio and proportion' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio and proportion (Stage 8)", note: "Ratio, rate and direct proportion are covered in the Cambridge Stage 8 'Ratio and proportion' unit.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Mean and Vulgar Bits", author: "Kjartan Poskitt", chapter: "(fractions, percentages, ratio & averages)", note: "Enrichment read (great for ages 11–13): percentages, ratio and proportion, made hilarious.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "The ratio 2:3 can be written as the fraction 2/3.", answer: true, explanation: "A ratio a:b can be expressed as the fraction a/b (part to part) or a/(a+b) (part to whole)." },
@@ -302,7 +315,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Simplifying ratios", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/ratio.html", note: "Divide by the common factor." },
             { type: "interactive", title: "Khan Academy: Simplifying ratios", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Practice simplifying ratios." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio and proportion (Stage 8)", note: "Ratio, rate and direct proportion are covered in the Cambridge Stage 8 'Ratio and proportion' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio and proportion (Stage 8)", note: "Ratio, rate and direct proportion are covered in the Cambridge Stage 8 'Ratio and proportion' unit.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Mean and Vulgar Bits", author: "Kjartan Poskitt", chapter: "(fractions, percentages, ratio & averages)", note: "Enrichment read (great for ages 11–13): percentages, ratio and proportion, made hilarious.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "To simplify a ratio, divide both parts by their highest common factor.", answer: true, explanation: "Dividing by the HCF gives the simplest form." },
@@ -322,7 +336,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Proportions", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/proportions.html", note: "Cross-multiplying to solve." },
             { type: "interactive", title: "Solving proportions", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Practice." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio and proportion (Stage 8)", note: "Ratio, rate and direct proportion are covered in the Cambridge Stage 8 'Ratio and proportion' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio and proportion (Stage 8)", note: "Ratio, rate and direct proportion are covered in the Cambridge Stage 8 'Ratio and proportion' unit.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Mean and Vulgar Bits", author: "Kjartan Poskitt", chapter: "(fractions, percentages, ratio & averages)", note: "Enrichment read (great for ages 11–13): percentages, ratio and proportion, made hilarious.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "In a proportion a/b = c/d, the cross-products are equal: a × d = b × c.", answer: true, explanation: "Cross-multiplication is the key technique for solving proportions." },
@@ -342,7 +357,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Direct Proportion", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/directly-inversely-proportional.html", note: "When one quantity scales with another." },
             { type: "interactive", title: "Proportional relationships", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Direct proportion practice." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio and proportion (Stage 8)", note: "Ratio, rate and direct proportion are covered in the Cambridge Stage 8 'Ratio and proportion' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio and proportion (Stage 8)", note: "Ratio, rate and direct proportion are covered in the Cambridge Stage 8 'Ratio and proportion' unit.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Mean and Vulgar Bits", author: "Kjartan Poskitt", chapter: "(fractions, percentages, ratio & averages)", note: "Enrichment read (great for ages 11–13): percentages, ratio and proportion, made hilarious.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "In direct proportion, if one quantity doubles, the other doubles.", answer: true, explanation: "Both change by the same factor." },
@@ -362,7 +378,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Proportional variation", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/directly-inversely-proportional.html", note: "The constant of variation." },
             { type: "interactive", title: "Constant of proportionality", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Finding k." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio and proportion (Stage 8)", note: "Ratio, rate and direct proportion are covered in the Cambridge Stage 8 'Ratio and proportion' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio and proportion (Stage 8)", note: "Ratio, rate and direct proportion are covered in the Cambridge Stage 8 'Ratio and proportion' unit.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Mean and Vulgar Bits", author: "Kjartan Poskitt", chapter: "(fractions, percentages, ratio & averages)", note: "Enrichment read (great for ages 11–13): percentages, ratio and proportion, made hilarious.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "In y = kx, the constant k is called the constant of proportionality.", answer: true, explanation: "k links y to x in a proportional relationship." },
@@ -382,7 +399,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Unit rates", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Rate per single unit." },
             { type: "interactive", title: "Rates", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/ratio.html", note: "Rates and unit rates." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio and proportion (Stage 8)", note: "Ratio, rate and direct proportion are covered in the Cambridge Stage 8 'Ratio and proportion' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio and proportion (Stage 8)", note: "Ratio, rate and direct proportion are covered in the Cambridge Stage 8 'Ratio and proportion' unit.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Mean and Vulgar Bits", author: "Kjartan Poskitt", chapter: "(fractions, percentages, ratio & averages)", note: "Enrichment read (great for ages 11–13): percentages, ratio and proportion, made hilarious.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "A unit rate expresses a quantity per single unit of another quantity.", answer: true, explanation: "e.g. 60 km/h means 60 km per 1 hour." },
@@ -402,7 +420,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Rate tables", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Tables of equivalent rates." },
             { type: "interactive", title: "Ratio tables", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/ratio.html", note: "Scaling values in a table." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio and proportion (Stage 8)", note: "Ratio, rate and direct proportion are covered in the Cambridge Stage 8 'Ratio and proportion' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio and proportion (Stage 8)", note: "Ratio, rate and direct proportion are covered in the Cambridge Stage 8 'Ratio and proportion' unit.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Mean and Vulgar Bits", author: "Kjartan Poskitt", chapter: "(fractions, percentages, ratio & averages)", note: "Enrichment read (great for ages 11–13): percentages, ratio and proportion, made hilarious.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "A rate table shows pairs of values that follow a consistent rate.", answer: true, explanation: "Each entry in the table is found by applying the same unit rate." },
@@ -422,7 +441,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Constant of proportionality", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Finding k from data." },
             { type: "interactive", title: "Proportion", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/directly-inversely-proportional.html", note: "The constant k." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio and proportion (Stage 8)", note: "Ratio, rate and direct proportion are covered in the Cambridge Stage 8 'Ratio and proportion' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio and proportion (Stage 8)", note: "Ratio, rate and direct proportion are covered in the Cambridge Stage 8 'Ratio and proportion' unit.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Mean and Vulgar Bits", author: "Kjartan Poskitt", chapter: "(fractions, percentages, ratio & averages)", note: "Enrichment read (great for ages 11–13): percentages, ratio and proportion, made hilarious.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "The constant of proportionality k is the same for all pairs in a directly proportional relationship.", answer: true, explanation: "k = y/x is constant throughout." },
@@ -442,7 +462,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Unit Rates", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/ratio.html", note: "Comparing value using unit rates." },
             { type: "interactive", title: "Khan Academy: Best-buy problems", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Worked best-buy comparisons." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio and proportion (Stage 8)", note: "Ratio, rate and direct proportion are covered in the Cambridge Stage 8 'Ratio and proportion' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio and proportion (Stage 8)", note: "Ratio, rate and direct proportion are covered in the Cambridge Stage 8 'Ratio and proportion' unit.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Mean and Vulgar Bits", author: "Kjartan Poskitt", chapter: "(fractions, percentages, ratio & averages)", note: "Enrichment read (great for ages 11–13): percentages, ratio and proportion, made hilarious.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "To find the best buy, calculate the price per unit and choose the cheapest.", answer: true, explanation: "The lowest price per unit is the best value." },
@@ -462,7 +483,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Direct & Inverse Proportion", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/directly-inversely-proportional.html", note: "Speed as a rate (distance over time)." },
             { type: "interactive", title: "Rates in context", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Speed, density and more." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio and proportion (Stage 8)", note: "Ratio, rate and direct proportion are covered in the Cambridge Stage 8 'Ratio and proportion' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio and proportion (Stage 8)", note: "Ratio, rate and direct proportion are covered in the Cambridge Stage 8 'Ratio and proportion' unit.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Mean and Vulgar Bits", author: "Kjartan Poskitt", chapter: "(fractions, percentages, ratio & averages)", note: "Enrichment read (great for ages 11–13): percentages, ratio and proportion, made hilarious.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "Speed = distance ÷ time.", answer: true, explanation: "This is the definition of average speed." },
@@ -493,7 +515,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Unit conversion", provider: "Math is Fun", url: "https://www.mathsisfun.com/measure/unit-conversion-tool.html", note: "Area and volume conversions." },
             { type: "interactive", title: "Khan Academy: Units of area & volume", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Converting area and volume units." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio, rate and measures (Stage 8)", note: "Time, rates and unit conversion are covered within the Cambridge Stage 8 ratio/measures units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio, rate and measures (Stage 8)", note: "Time, rates and unit conversion are covered within the Cambridge Stage 8 ratio/measures units.", url: "" },
+            { type: "book", enrichment: true, title: "Why Do Buses Come in Threes?", author: "Rob Eastaway & Jeremy Wyndham", chapter: "(everyday maths — rates, time & measures)", note: "Enrichment read (accessible stretch): the surprising maths of everyday life — rates, time and measurement.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "1 m² = 10 000 cm².", answer: true, explanation: "1 m = 100 cm, so 1 m² = 100² = 10 000 cm²." },
@@ -513,7 +536,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Time", provider: "Math is Fun", url: "https://www.mathsisfun.com/time.html", note: "Units of time." },
             { type: "interactive", title: "Khan Academy: Working with time", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Units of time and conversions." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio, rate and measures (Stage 8)", note: "Time, rates and unit conversion are covered within the Cambridge Stage 8 ratio/measures units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio, rate and measures (Stage 8)", note: "Time, rates and unit conversion are covered within the Cambridge Stage 8 ratio/measures units.", url: "" },
+            { type: "book", enrichment: true, title: "Why Do Buses Come in Threes?", author: "Rob Eastaway & Jeremy Wyndham", chapter: "(everyday maths — rates, time & measures)", note: "Enrichment read (accessible stretch): the surprising maths of everyday life — rates, time and measurement.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "There are 60 seconds in a minute.", answer: true, explanation: "This is a standard unit of time." },
@@ -533,7 +557,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "24-Hour Clock", provider: "Math is Fun", url: "https://www.mathsisfun.com/time.html", note: "Converting between clock formats." },
             { type: "interactive", title: "Khan Academy: 12 & 24-hour clock", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Reading the 12 and 24-hour clock." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio, rate and measures (Stage 8)", note: "Time, rates and unit conversion are covered within the Cambridge Stage 8 ratio/measures units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio, rate and measures (Stage 8)", note: "Time, rates and unit conversion are covered within the Cambridge Stage 8 ratio/measures units.", url: "" },
+            { type: "book", enrichment: true, title: "Why Do Buses Come in Threes?", author: "Rob Eastaway & Jeremy Wyndham", chapter: "(everyday maths — rates, time & measures)", note: "Enrichment read (accessible stretch): the surprising maths of everyday life — rates, time and measurement.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "In the 24-hour clock, midnight is written as 00:00.", answer: true, explanation: "The 24-hour clock runs from 00:00 (midnight) to 23:59." },
@@ -553,7 +578,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Time", provider: "Math is Fun", url: "https://www.mathsisfun.com/time.html", note: "Adding and subtracting time." },
             { type: "interactive", title: "Khan Academy: Time calculations", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Worked time calculations." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio, rate and measures (Stage 8)", note: "Time, rates and unit conversion are covered within the Cambridge Stage 8 ratio/measures units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio, rate and measures (Stage 8)", note: "Time, rates and unit conversion are covered within the Cambridge Stage 8 ratio/measures units.", url: "" },
+            { type: "book", enrichment: true, title: "Why Do Buses Come in Threes?", author: "Rob Eastaway & Jeremy Wyndham", chapter: "(everyday maths — rates, time & measures)", note: "Enrichment read (accessible stretch): the surprising maths of everyday life — rates, time and measurement.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "To add time, you add hours first and then minutes, carrying 60 minutes into an extra hour.", answer: true, explanation: "There are 60 minutes in an hour; carries work differently from base-10." },
@@ -573,7 +599,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Time", provider: "Math is Fun", url: "https://www.mathsisfun.com/time.html", note: "Calculating across time zones." },
             { type: "interactive", title: "Time zones", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Time difference problems." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio, rate and measures (Stage 8)", note: "Time, rates and unit conversion are covered within the Cambridge Stage 8 ratio/measures units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio, rate and measures (Stage 8)", note: "Time, rates and unit conversion are covered within the Cambridge Stage 8 ratio/measures units.", url: "" },
+            { type: "book", enrichment: true, title: "Why Do Buses Come in Threes?", author: "Rob Eastaway & Jeremy Wyndham", chapter: "(everyday maths — rates, time & measures)", note: "Enrichment read (accessible stretch): the surprising maths of everyday life — rates, time and measurement.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "Time zones are defined by how many hours ahead or behind UTC (Coordinated Universal Time) a place is.", answer: true, explanation: "e.g. UTC+5:30 means 5 hours 30 min ahead of UTC." },
@@ -593,7 +620,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Inverse proportion", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/directly-inversely-proportional.html", note: "More workers, less time." },
             { type: "interactive", title: "Khan Academy: Inverse proportion", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Worked 'men and days' problems." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio, rate and measures (Stage 8)", note: "Time, rates and unit conversion are covered within the Cambridge Stage 8 ratio/measures units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio, rate and measures (Stage 8)", note: "Time, rates and unit conversion are covered within the Cambridge Stage 8 ratio/measures units.", url: "" },
+            { type: "book", enrichment: true, title: "Why Do Buses Come in Threes?", author: "Rob Eastaway & Jeremy Wyndham", chapter: "(everyday maths — rates, time & measures)", note: "Enrichment read (accessible stretch): the surprising maths of everyday life — rates, time and measurement.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "Work-rate problems involve inverse proportion: more workers means fewer days.", answer: true, explanation: "If workers double, time halves — that is inverse proportion." },
@@ -613,7 +641,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Direct & Inverse Proportion", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/directly-inversely-proportional.html", note: "Speed as a rate (distance over time)." },
             { type: "interactive", title: "Rates", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Distance and time." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio, rate and measures (Stage 8)", note: "Time, rates and unit conversion are covered within the Cambridge Stage 8 ratio/measures units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio, rate and measures (Stage 8)", note: "Time, rates and unit conversion are covered within the Cambridge Stage 8 ratio/measures units.", url: "" },
+            { type: "book", enrichment: true, title: "Why Do Buses Come in Threes?", author: "Rob Eastaway & Jeremy Wyndham", chapter: "(everyday maths — rates, time & measures)", note: "Enrichment read (accessible stretch): the surprising maths of everyday life — rates, time and measurement.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "Distance = Speed × Time.", answer: true, explanation: "This is one of the three forms of the speed-distance-time formula." },
@@ -633,7 +662,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Rates", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Many kinds of rate." },
             { type: "interactive", title: "Rates", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/ratio.html", note: "Rate problems." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio, rate and measures (Stage 8)", note: "Time, rates and unit conversion are covered within the Cambridge Stage 8 ratio/measures units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio, rate and measures (Stage 8)", note: "Time, rates and unit conversion are covered within the Cambridge Stage 8 ratio/measures units.", url: "" },
+            { type: "book", enrichment: true, title: "Why Do Buses Come in Threes?", author: "Rob Eastaway & Jeremy Wyndham", chapter: "(everyday maths — rates, time & measures)", note: "Enrichment read (accessible stretch): the surprising maths of everyday life — rates, time and measurement.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "A rate always involves two different units.", answer: true, explanation: "e.g. km/h, £/kg, pages/minute — two quantities in a ratio." },
@@ -653,7 +683,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Converting rates", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "e.g. km/h to m/s." },
             { type: "interactive", title: "Unit conversion", provider: "Math is Fun", url: "https://www.mathsisfun.com/measure/unit-conversion-tool.html", note: "Converting compound units." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio, rate and measures (Stage 8)", note: "Time, rates and unit conversion are covered within the Cambridge Stage 8 ratio/measures units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio, rate and measures (Stage 8)", note: "Time, rates and unit conversion are covered within the Cambridge Stage 8 ratio/measures units.", url: "" },
+            { type: "book", enrichment: true, title: "Why Do Buses Come in Threes?", author: "Rob Eastaway & Jeremy Wyndham", chapter: "(everyday maths — rates, time & measures)", note: "Enrichment read (accessible stretch): the surprising maths of everyday life — rates, time and measurement.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "To convert km/h to m/s you multiply by 1000 and divide by 3600.", answer: true, explanation: "1 km = 1000 m and 1 h = 3600 s." },
@@ -684,7 +715,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Number Patterns", provider: "Math is Fun", url: "https://www.mathsisfun.com/numberpatterns.html", note: "Spotting the pattern." },
             { type: "interactive", title: "Sequences", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Identifying patterns." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Sequences and functions (Stage 8)", note: "Sequences and the nth term are covered in the Cambridge Stage 8 'Sequences and functions' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Sequences and functions (Stage 8)", note: "Sequences and the nth term are covered in the Cambridge Stage 8 'Sequences and functions' unit.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Devil: A Mathematical Adventure", author: "Hans Magnus Enzensberger", chapter: "(a story across many number ideas)", note: "Enrichment read (great for ages 11–13): numbers, powers, roots and patterns through a dream-story.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "An arithmetic sequence has a constant difference between consecutive terms.", answer: true, explanation: "e.g. 3, 7, 11, 15 — the difference is always 4." },
@@ -704,7 +736,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Number Patterns", provider: "Math is Fun", url: "https://www.mathsisfun.com/numberpatterns.html", note: "Stating the rule of a sequence." },
             { type: "interactive", title: "Khan Academy: Sequences", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Number sequences and rules." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Sequences and functions (Stage 8)", note: "Sequences and the nth term are covered in the Cambridge Stage 8 'Sequences and functions' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Sequences and functions (Stage 8)", note: "Sequences and the nth term are covered in the Cambridge Stage 8 'Sequences and functions' unit.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Devil: A Mathematical Adventure", author: "Hans Magnus Enzensberger", chapter: "(a story across many number ideas)", note: "Enrichment read (great for ages 11–13): numbers, powers, roots and patterns through a dream-story.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "A term-to-term rule tells you how to get the next term from the current one.", answer: true, explanation: "e.g. +3 means add 3 to each term." },
@@ -724,7 +757,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Special sequences", provider: "Math is Fun", url: "https://www.mathsisfun.com/numberpatterns.html", note: "Square, triangular and Fibonacci." },
             { type: "interactive", title: "Sequences", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Recognising patterns." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Sequences and functions (Stage 8)", note: "Sequences and the nth term are covered in the Cambridge Stage 8 'Sequences and functions' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Sequences and functions (Stage 8)", note: "Sequences and the nth term are covered in the Cambridge Stage 8 'Sequences and functions' unit.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Devil: A Mathematical Adventure", author: "Hans Magnus Enzensberger", chapter: "(a story across many number ideas)", note: "Enrichment read (great for ages 11–13): numbers, powers, roots and patterns through a dream-story.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "The square numbers are 1, 4, 9, 16, 25, …", answer: true, explanation: "They are the squares of 1, 2, 3, 4, 5, …" },
@@ -744,7 +778,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Sequences & Series", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/sequences-series.html", note: "Position-to-term (nth term) rules." },
             { type: "interactive", title: "Khan Academy: nth term", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Finding and using the nth term." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Sequences and functions (Stage 8)", note: "Sequences and the nth term are covered in the Cambridge Stage 8 'Sequences and functions' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Sequences and functions (Stage 8)", note: "Sequences and the nth term are covered in the Cambridge Stage 8 'Sequences and functions' unit.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Devil: A Mathematical Adventure", author: "Hans Magnus Enzensberger", chapter: "(a story across many number ideas)", note: "Enrichment read (great for ages 11–13): numbers, powers, roots and patterns through a dream-story.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "A position-to-term rule lets you find any term without listing all the previous terms.", answer: true, explanation: "The nth-term formula gives T(n) directly from n." },
@@ -775,7 +810,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Laws of Exponents", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/exponent-laws.html", note: "All the rules together." },
             { type: "interactive", title: "Exponent properties", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice the laws." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Powers and roots / indices (Stage 8)", note: "Indices and the laws of indices are covered in the Cambridge Stage 8 'Powers and roots' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Powers and roots / indices (Stage 8)", note: "Indices and the laws of indices are covered in the Cambridge Stage 8 'Powers and roots' unit.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Devil: A Mathematical Adventure", author: "Hans Magnus Enzensberger", chapter: "(a story across many number ideas)", note: "Enrichment read (great for ages 11–13): numbers, powers, roots and patterns through a dream-story.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "When multiplying powers with the same base, you add the exponents.", answer: true, explanation: "aᵐ × aⁿ = aᵐ⁺ⁿ." },
@@ -795,7 +831,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Exponent laws", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/exponent-laws.html", note: "Power of a power." },
             { type: "interactive", title: "Khan Academy: Exponent properties", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice with the index laws." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Powers and roots / indices (Stage 8)", note: "Indices and the laws of indices are covered in the Cambridge Stage 8 'Powers and roots' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Powers and roots / indices (Stage 8)", note: "Indices and the laws of indices are covered in the Cambridge Stage 8 'Powers and roots' unit.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Devil: A Mathematical Adventure", author: "Hans Magnus Enzensberger", chapter: "(a story across many number ideas)", note: "Enrichment read (great for ages 11–13): numbers, powers, roots and patterns through a dream-story.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "You can only add or subtract terms that have the same variable and the same power.", answer: true, explanation: "e.g. 3x² + 2x² = 5x², but 3x² + 2x³ cannot be combined." },
@@ -815,7 +852,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Negative Exponents", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/negative-exponents.html", note: "Reciprocals from negative powers." },
             { type: "interactive", title: "Negative exponents", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Powers and roots / indices (Stage 8)", note: "Indices and the laws of indices are covered in the Cambridge Stage 8 'Powers and roots' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Powers and roots / indices (Stage 8)", note: "Indices and the laws of indices are covered in the Cambridge Stage 8 'Powers and roots' unit.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Devil: A Mathematical Adventure", author: "Hans Magnus Enzensberger", chapter: "(a story across many number ideas)", note: "Enrichment read (great for ages 11–13): numbers, powers, roots and patterns through a dream-story.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "A negative exponent means the reciprocal: a⁻ⁿ = 1/aⁿ.", answer: true, explanation: "e.g. 3⁻² = 1/9." },
@@ -835,7 +873,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Exponent laws", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/exponent-laws.html", note: "The zero rule." },
             { type: "interactive", title: "Exponents", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Zero and one as exponents." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Powers and roots / indices (Stage 8)", note: "Indices and the laws of indices are covered in the Cambridge Stage 8 'Powers and roots' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Powers and roots / indices (Stage 8)", note: "Indices and the laws of indices are covered in the Cambridge Stage 8 'Powers and roots' unit.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Devil: A Mathematical Adventure", author: "Hans Magnus Enzensberger", chapter: "(a story across many number ideas)", note: "Enrichment read (great for ages 11–13): numbers, powers, roots and patterns through a dream-story.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "Any non-zero base to the power 0 equals 1.", answer: true, explanation: "This is the zero rule of indices." },
@@ -855,7 +894,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Exponent of a product", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/exponent-laws.html", note: "(ab)ⁿ = aⁿbⁿ." },
             { type: "interactive", title: "Powers of products", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Distributing exponents." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Powers and roots / indices (Stage 8)", note: "Indices and the laws of indices are covered in the Cambridge Stage 8 'Powers and roots' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Powers and roots / indices (Stage 8)", note: "Indices and the laws of indices are covered in the Cambridge Stage 8 'Powers and roots' unit.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Devil: A Mathematical Adventure", author: "Hans Magnus Enzensberger", chapter: "(a story across many number ideas)", note: "Enrichment read (great for ages 11–13): numbers, powers, roots and patterns through a dream-story.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "(ab)ⁿ = aⁿbⁿ.", answer: true, explanation: "The power distributes over multiplication." },
@@ -875,7 +915,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Fractional Exponents", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/exponent-fractional.html", note: "Roots written as powers." },
             { type: "interactive", title: "Fractional exponents", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Powers and roots / indices (Stage 8)", note: "Indices and the laws of indices are covered in the Cambridge Stage 8 'Powers and roots' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Powers and roots / indices (Stage 8)", note: "Indices and the laws of indices are covered in the Cambridge Stage 8 'Powers and roots' unit.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Devil: A Mathematical Adventure", author: "Hans Magnus Enzensberger", chapter: "(a story across many number ideas)", note: "Enrichment read (great for ages 11–13): numbers, powers, roots and patterns through a dream-story.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "a^(1/2) = √a.", answer: true, explanation: "A fractional index of 1/2 means square root." },
@@ -895,7 +936,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Exponents", provider: "Math is Fun", url: "https://www.mathsisfun.com/exponent.html", note: "Working out powers." },
             { type: "interactive", title: "Order of operations with exponents", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Practice." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Powers and roots / indices (Stage 8)", note: "Indices and the laws of indices are covered in the Cambridge Stage 8 'Powers and roots' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Powers and roots / indices (Stage 8)", note: "Indices and the laws of indices are covered in the Cambridge Stage 8 'Powers and roots' unit.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Devil: A Mathematical Adventure", author: "Hans Magnus Enzensberger", chapter: "(a story across many number ideas)", note: "Enrichment read (great for ages 11–13): numbers, powers, roots and patterns through a dream-story.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "When simplifying expressions with indices, apply one law at a time and work left to right.", answer: true, explanation: "Systematic step-by-step simplification avoids errors." },
@@ -915,7 +957,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Laws of Exponents", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/exponent-laws.html", note: "Index laws applied to algebra." },
             { type: "interactive", title: "Exponents in algebra", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Powers and roots / indices (Stage 8)", note: "Indices and the laws of indices are covered in the Cambridge Stage 8 'Powers and roots' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Powers and roots / indices (Stage 8)", note: "Indices and the laws of indices are covered in the Cambridge Stage 8 'Powers and roots' unit.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Devil: A Mathematical Adventure", author: "Hans Magnus Enzensberger", chapter: "(a story across many number ideas)", note: "Enrichment read (great for ages 11–13): numbers, powers, roots and patterns through a dream-story.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "When multiplying algebraic expressions with indices, multiply the coefficients and add the powers of matching variables.", answer: true, explanation: "e.g. 3x² × 4x³ = 12x⁵." },
@@ -947,7 +990,8 @@ window.CURRICULUM_MATH.grades.push({
             { type: "interactive", title: "Algebra study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-67594442fff88191854c1e73c3a522f0-algebra-bot", note: "Your class's tutor bot for algebra basics. (Needs a ChatGPT login.)" },
             { type: "interactive", title: "Substitution", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/introduction.html", note: "Putting numbers in for letters." },
             { type: "interactive", title: "Evaluating expressions", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions and formulae (Stage 8)", note: "Simplifying and substituting into algebraic expressions is covered in the Cambridge Stage 8 'Expressions and formulae' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions and formulae (Stage 8)", note: "Simplifying and substituting into algebraic expressions is covered in the Cambridge Stage 8 'Expressions and formulae' unit.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Phantom X (Algebra)", author: "Kjartan Poskitt", chapter: "(algebra — expressions & equations)", note: "Enrichment read (great for ages 11–13): algebra, expressions and solving for x, made fun.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "Substitution means replacing the letter(s) in an expression with given numbers.", answer: true, explanation: "e.g. if x = 4, then 3x = 3 × 4 = 12." },
@@ -968,7 +1012,8 @@ window.CURRICULUM_MATH.grades.push({
             { type: "interactive", title: "Simplifying expressions study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-676a3f1c4c508191b14ff0aa3d15206e-simplifying-expressions-in-basic-algebra", note: "Your class's tutor bot for simplifying basic algebraic expressions. (Needs a ChatGPT login.)" },
             { type: "interactive", title: "Like Terms", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/like-terms.html", note: "Collecting like terms." },
             { type: "interactive", title: "Combining like terms", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions and formulae (Stage 8)", note: "Simplifying and substituting into algebraic expressions is covered in the Cambridge Stage 8 'Expressions and formulae' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions and formulae (Stage 8)", note: "Simplifying and substituting into algebraic expressions is covered in the Cambridge Stage 8 'Expressions and formulae' unit.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Phantom X (Algebra)", author: "Kjartan Poskitt", chapter: "(algebra — expressions & equations)", note: "Enrichment read (great for ages 11–13): algebra, expressions and solving for x, made fun.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "Like terms have the same variable(s) raised to the same powers.", answer: true, explanation: "e.g. 3x² and 7x² are like terms; 3x² and 3x are not." },
@@ -988,7 +1033,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Distributive property", provider: "Math is Fun", url: "https://www.mathsisfun.com/associative-commutative-distributive.html", note: "a(b + c) = ab + ac." },
             { type: "interactive", title: "Distributive property", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions and formulae (Stage 8)", note: "Simplifying and substituting into algebraic expressions is covered in the Cambridge Stage 8 'Expressions and formulae' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions and formulae (Stage 8)", note: "Simplifying and substituting into algebraic expressions is covered in the Cambridge Stage 8 'Expressions and formulae' unit.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Phantom X (Algebra)", author: "Kjartan Poskitt", chapter: "(algebra — expressions & equations)", note: "Enrichment read (great for ages 11–13): algebra, expressions and solving for x, made fun.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "The distributive property states a(b + c) = ab + ac.", answer: true, explanation: "Multiply the factor outside by each term inside the bracket." },
@@ -1008,7 +1054,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Multiplying Polynomials", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/polynomials-multiplying.html", note: "Multiplying out a bracket." },
             { type: "interactive", title: "Khan Academy: Expanding brackets", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Worked expansions." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions and formulae (Stage 8)", note: "Simplifying and substituting into algebraic expressions is covered in the Cambridge Stage 8 'Expressions and formulae' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions and formulae (Stage 8)", note: "Simplifying and substituting into algebraic expressions is covered in the Cambridge Stage 8 'Expressions and formulae' unit.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Phantom X (Algebra)", author: "Kjartan Poskitt", chapter: "(algebra — expressions & equations)", note: "Enrichment read (great for ages 11–13): algebra, expressions and solving for x, made fun.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "Expanding a bracket means multiplying the factor outside by every term inside.", answer: true, explanation: "e.g. 3(x + 2) = 3x + 6." },
@@ -1028,7 +1075,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Multiplying binomials (FOIL)", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/polynomials-multiplying.html", note: "FOIL method." },
             { type: "interactive", title: "Multiplying binomials", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions and formulae (Stage 8)", note: "Simplifying and substituting into algebraic expressions is covered in the Cambridge Stage 8 'Expressions and formulae' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions and formulae (Stage 8)", note: "Simplifying and substituting into algebraic expressions is covered in the Cambridge Stage 8 'Expressions and formulae' unit.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Phantom X (Algebra)", author: "Kjartan Poskitt", chapter: "(algebra — expressions & equations)", note: "Enrichment read (great for ages 11–13): algebra, expressions and solving for x, made fun.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "FOIL stands for First, Outer, Inner, Last — the four products when multiplying two binomials.", answer: true, explanation: "FOIL helps you remember to multiply all four pairs of terms." },
@@ -1048,7 +1096,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Perfect square expansion", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/polynomials-multiplying.html", note: "(a + b)² = a² + 2ab + b²." },
             { type: "interactive", title: "Khan Academy: Squaring binomials", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Squaring a bracket." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions and formulae (Stage 8)", note: "Simplifying and substituting into algebraic expressions is covered in the Cambridge Stage 8 'Expressions and formulae' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions and formulae (Stage 8)", note: "Simplifying and substituting into algebraic expressions is covered in the Cambridge Stage 8 'Expressions and formulae' unit.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Phantom X (Algebra)", author: "Kjartan Poskitt", chapter: "(algebra — expressions & equations)", note: "Enrichment read (great for ages 11–13): algebra, expressions and solving for x, made fun.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "(a + b)² = a² + 2ab + b².", answer: true, explanation: "This is the perfect square identity; the middle term is 2ab." },
@@ -1068,7 +1117,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Difference of two squares", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/polynomials-multiplying.html", note: "(a+b)(a−b) = a² − b²." },
             { type: "interactive", title: "Special products", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions and formulae (Stage 8)", note: "Simplifying and substituting into algebraic expressions is covered in the Cambridge Stage 8 'Expressions and formulae' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions and formulae (Stage 8)", note: "Simplifying and substituting into algebraic expressions is covered in the Cambridge Stage 8 'Expressions and formulae' unit.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Phantom X (Algebra)", author: "Kjartan Poskitt", chapter: "(algebra — expressions & equations)", note: "Enrichment read (great for ages 11–13): algebra, expressions and solving for x, made fun.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "(a + b)(a − b) = a² − b².", answer: true, explanation: "This is the difference of two squares identity." },
@@ -1088,7 +1138,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Multiplying polynomials", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/polynomials-multiplying.html", note: "Each term times each term." },
             { type: "interactive", title: "Multiplying polynomials", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions and formulae (Stage 8)", note: "Simplifying and substituting into algebraic expressions is covered in the Cambridge Stage 8 'Expressions and formulae' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions and formulae (Stage 8)", note: "Simplifying and substituting into algebraic expressions is covered in the Cambridge Stage 8 'Expressions and formulae' unit.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Phantom X (Algebra)", author: "Kjartan Poskitt", chapter: "(algebra — expressions & equations)", note: "Enrichment read (great for ages 11–13): algebra, expressions and solving for x, made fun.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "When multiplying a binomial by a trinomial, every term in the binomial multiplies every term in the trinomial.", answer: true, explanation: "This gives 2 × 3 = 6 products before simplifying." },
@@ -1108,7 +1159,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Algebra Index", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/index.html", note: "Working with fractional coefficients." },
             { type: "interactive", title: "Expressions", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions and formulae (Stage 8)", note: "Simplifying and substituting into algebraic expressions is covered in the Cambridge Stage 8 'Expressions and formulae' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions and formulae (Stage 8)", note: "Simplifying and substituting into algebraic expressions is covered in the Cambridge Stage 8 'Expressions and formulae' unit.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Phantom X (Algebra)", author: "Kjartan Poskitt", chapter: "(algebra — expressions & equations)", note: "Enrichment read (great for ages 11–13): algebra, expressions and solving for x, made fun.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "A coefficient of 1/2 in front of x means half of x.", answer: true, explanation: "(1/2)x = x/2." },
@@ -1128,7 +1180,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Equivalent expressions", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "When two expressions are equal." },
             { type: "interactive", title: "Algebra basics", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/introduction.html", note: "Equivalent forms." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions and formulae (Stage 8)", note: "Simplifying and substituting into algebraic expressions is covered in the Cambridge Stage 8 'Expressions and formulae' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions and formulae (Stage 8)", note: "Simplifying and substituting into algebraic expressions is covered in the Cambridge Stage 8 'Expressions and formulae' unit.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Phantom X (Algebra)", author: "Kjartan Poskitt", chapter: "(algebra — expressions & equations)", note: "Enrichment read (great for ages 11–13): algebra, expressions and solving for x, made fun.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "Two expressions are equivalent if they give the same value for every value of the variable.", answer: true, explanation: "Equivalent expressions are always equal, not just for one value." },
@@ -1159,7 +1212,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Factoring", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/factoring.html", note: "Undoing expansion." },
             { type: "interactive", title: "Factoring intro", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions, formulae and equations (Stage 8)", note: "Factorising expressions is covered within the Cambridge Stage 8/9 'Expressions, formulae and equations' units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions, formulae and equations (Stage 8)", note: "Factorising expressions is covered within the Cambridge Stage 8/9 'Expressions, formulae and equations' units.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Phantom X (Algebra)", author: "Kjartan Poskitt", chapter: "(algebra — expressions & equations)", note: "Enrichment read (great for ages 11–13): algebra, expressions and solving for x, made fun.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "Factorising is the reverse of expanding.", answer: true, explanation: "Factorising puts an expression back into brackets." },
@@ -1179,7 +1233,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Factoring", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/factoring.html", note: "Taking out the highest common factor." },
             { type: "interactive", title: "Khan Academy: Factoring", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Worked factorising examples." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions, formulae and equations (Stage 8)", note: "Factorising expressions is covered within the Cambridge Stage 8/9 'Expressions, formulae and equations' units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions, formulae and equations (Stage 8)", note: "Factorising expressions is covered within the Cambridge Stage 8/9 'Expressions, formulae and equations' units.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Phantom X (Algebra)", author: "Kjartan Poskitt", chapter: "(algebra — expressions & equations)", note: "Enrichment read (great for ages 11–13): algebra, expressions and solving for x, made fun.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Factorise 5x + 10.", options: ["5(x + 2)", "5(x + 10)", "x(5 + 10)", "10(x + 1)"], answer: 0, explanation: "HCF 5: 5(x + 2)." },
@@ -1199,7 +1254,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Factoring with powers", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/factoring.html", note: "Common variable factors." },
             { type: "interactive", title: "Factoring", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions, formulae and equations (Stage 8)", note: "Factorising expressions is covered within the Cambridge Stage 8/9 'Expressions, formulae and equations' units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions, formulae and equations (Stage 8)", note: "Factorising expressions is covered within the Cambridge Stage 8/9 'Expressions, formulae and equations' units.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Phantom X (Algebra)", author: "Kjartan Poskitt", chapter: "(algebra — expressions & equations)", note: "Enrichment read (great for ages 11–13): algebra, expressions and solving for x, made fun.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "Factorise x² + x.", options: ["x(x + 1)", "x²(1 + x)", "x(x² + 1)", "1(x² + x)"], answer: 0, explanation: "Common factor x: x(x + 1)." },
@@ -1219,7 +1275,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Factoring by grouping", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Grouping pairs of terms." },
             { type: "interactive", title: "Factoring", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/factoring.html", note: "Grouping method." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions, formulae and equations (Stage 8)", note: "Factorising expressions is covered within the Cambridge Stage 8/9 'Expressions, formulae and equations' units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions, formulae and equations (Stage 8)", note: "Factorising expressions is covered within the Cambridge Stage 8/9 'Expressions, formulae and equations' units.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Phantom X (Algebra)", author: "Kjartan Poskitt", chapter: "(algebra — expressions & equations)", note: "Enrichment read (great for ages 11–13): algebra, expressions and solving for x, made fun.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "hard", q: "Factorise x(a + b) + 2(a + b).", options: ["(a + b)(x + 2)", "(a + b)(x − 2)", "x + 2 + a + b", "(a + b)²"], answer: 0, explanation: "Common factor (a + b): (a + b)(x + 2)." },
@@ -1239,7 +1296,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Factoring rules", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/factoring.html", note: "Always take out the HCF first." },
             { type: "interactive", title: "Factoring", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions, formulae and equations (Stage 8)", note: "Factorising expressions is covered within the Cambridge Stage 8/9 'Expressions, formulae and equations' units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions, formulae and equations (Stage 8)", note: "Factorising expressions is covered within the Cambridge Stage 8/9 'Expressions, formulae and equations' units.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Phantom X (Algebra)", author: "Kjartan Poskitt", chapter: "(algebra — expressions & equations)", note: "Enrichment read (great for ages 11–13): algebra, expressions and solving for x, made fun.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "The HCF of 4x and 6x² is:", options: ["2x", "2x²", "4x", "12x²"], answer: 0, explanation: "Number HCF 2, variable HCF x → 2x." },
@@ -1259,7 +1317,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Factoring quadratics", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/factoring-quadratics.html", note: "Finding two numbers that multiply and add." },
             { type: "interactive", title: "Khan Academy: Factoring quadratics", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Splitting the middle term." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions, formulae and equations (Stage 8)", note: "Factorising expressions is covered within the Cambridge Stage 8/9 'Expressions, formulae and equations' units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions, formulae and equations (Stage 8)", note: "Factorising expressions is covered within the Cambridge Stage 8/9 'Expressions, formulae and equations' units.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Phantom X (Algebra)", author: "Kjartan Poskitt", chapter: "(algebra — expressions & equations)", note: "Enrichment read (great for ages 11–13): algebra, expressions and solving for x, made fun.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "Factorise x² + 5x + 6.", options: ["(x + 2)(x + 3)", "(x + 1)(x + 6)", "(x + 2)(x + 4)", "(x − 2)(x − 3)"], answer: 0, explanation: "2 and 3 multiply to 6 and add to 5." },
@@ -1279,7 +1338,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Factoring", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/factoring.html", note: "HCF and LCM of algebraic terms." },
             { type: "interactive", title: "GCF of monomials", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions, formulae and equations (Stage 8)", note: "Factorising expressions is covered within the Cambridge Stage 8/9 'Expressions, formulae and equations' units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions, formulae and equations (Stage 8)", note: "Factorising expressions is covered within the Cambridge Stage 8/9 'Expressions, formulae and equations' units.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Phantom X (Algebra)", author: "Kjartan Poskitt", chapter: "(algebra — expressions & equations)", note: "Enrichment read (great for ages 11–13): algebra, expressions and solving for x, made fun.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "hard", q: "The HCF of 6x²y and 9xy² is:", options: ["3xy", "3x²y²", "18x²y²", "xy"], answer: 0, explanation: "Number HCF 3, then lowest powers x and y → 3xy." },
@@ -1310,7 +1370,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Algebra Index", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/index.html", note: "Adding and subtracting algebraic fractions." },
             { type: "interactive", title: "Khan Academy: Algebraic fractions", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Worked algebraic-fraction examples." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions and formulae (Stage 8)", note: "Algebraic fractions are covered within the Cambridge Stage 8/9 algebra units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions and formulae (Stage 8)", note: "Algebraic fractions are covered within the Cambridge Stage 8/9 algebra units.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Phantom X (Algebra)", author: "Kjartan Poskitt", chapter: "(algebra — expressions & equations)", note: "Enrichment read (great for ages 11–13): algebra, expressions and solving for x, made fun.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "x/3 + x/3 = ?", options: ["2x/3", "x/3", "2x/6", "x²/3"], answer: 0, explanation: "Same denominator: add the tops, x + x = 2x → 2x/3." },
@@ -1330,7 +1391,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Multiplying algebraic fractions", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Cancel common factors." },
             { type: "interactive", title: "Algebraic fractions", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/index.html", note: "Operations on fractions." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions and formulae (Stage 8)", note: "Algebraic fractions are covered within the Cambridge Stage 8/9 algebra units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions and formulae (Stage 8)", note: "Algebraic fractions are covered within the Cambridge Stage 8/9 algebra units.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Phantom X (Algebra)", author: "Kjartan Poskitt", chapter: "(algebra — expressions & equations)", note: "Enrichment read (great for ages 11–13): algebra, expressions and solving for x, made fun.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "(x/2) × (3/x) = ?", options: ["3/2", "x²/6", "3x/2", "3/(2x)"], answer: 0, explanation: "x cancels: (x × 3)/(2 × x) = 3/2." },
@@ -1350,7 +1412,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Simplifying fractions", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/index.html", note: "Dividing each term." },
             { type: "interactive", title: "Algebraic fractions", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions and formulae (Stage 8)", note: "Algebraic fractions are covered within the Cambridge Stage 8/9 algebra units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions and formulae (Stage 8)", note: "Algebraic fractions are covered within the Cambridge Stage 8/9 algebra units.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Phantom X (Algebra)", author: "Kjartan Poskitt", chapter: "(algebra — expressions & equations)", note: "Enrichment read (great for ages 11–13): algebra, expressions and solving for x, made fun.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "Simplify (2x + 4)/2.", options: ["x + 2", "2x + 2", "x + 4", "x + 2x"], answer: 0, explanation: "Divide each term by 2: x + 2." },
@@ -1370,7 +1433,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Factoring", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/factoring.html", note: "Common denominators for algebraic fractions." },
             { type: "interactive", title: "LCM of denominators", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions and formulae (Stage 8)", note: "Algebraic fractions are covered within the Cambridge Stage 8/9 algebra units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions and formulae (Stage 8)", note: "Algebraic fractions are covered within the Cambridge Stage 8/9 algebra units.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Phantom X (Algebra)", author: "Kjartan Poskitt", chapter: "(algebra — expressions & equations)", note: "Enrichment read (great for ages 11–13): algebra, expressions and solving for x, made fun.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "The LCM of the denominators in x/4 + x/6 is:", options: ["12", "24", "10", "6"], answer: 0, explanation: "The lowest common multiple of 4 and 6 is 12." },
@@ -1401,7 +1465,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Polynomials", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/polynomials.html", note: "What a polynomial is and its degree." },
             { type: "interactive", title: "Intro to polynomials", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions and formulae (Stage 8)", note: "Expanding and working with algebraic expressions is covered in the Cambridge Stage 8 'Expressions and formulae' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions and formulae (Stage 8)", note: "Expanding and working with algebraic expressions is covered in the Cambridge Stage 8 'Expressions and formulae' unit.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Phantom X (Algebra)", author: "Kjartan Poskitt", chapter: "(algebra — expressions & equations)", note: "Enrichment read (great for ages 11–13): algebra, expressions and solving for x, made fun.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "Which is a polynomial?", options: ["x² + 3x − 1", "1/x + 2", "√x + 1", "x⁻² + x"], answer: 0, explanation: "Polynomials have whole-number powers of x only." },
@@ -1421,7 +1486,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Perfect squares", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/polynomials-multiplying.html", note: "(a + b)² and beyond." },
             { type: "interactive", title: "Squaring expressions", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions and formulae (Stage 8)", note: "Expanding and working with algebraic expressions is covered in the Cambridge Stage 8 'Expressions and formulae' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions and formulae (Stage 8)", note: "Expanding and working with algebraic expressions is covered in the Cambridge Stage 8 'Expressions and formulae' unit.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Phantom X (Algebra)", author: "Kjartan Poskitt", chapter: "(algebra — expressions & equations)", note: "Enrichment read (great for ages 11–13): algebra, expressions and solving for x, made fun.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "(x + y)² = ?", options: ["x² + y²", "x² + 2xy + y²", "x² − 2xy + y²", "2x + 2y"], answer: 1, explanation: "(x + y)² = x² + 2xy + y²." },
@@ -1441,7 +1507,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Cubing binomials", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "(a + b)³ expansion." },
             { type: "interactive", title: "Polynomials", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/polynomials.html", note: "Higher powers." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions and formulae (Stage 8)", note: "Expanding and working with algebraic expressions is covered in the Cambridge Stage 8 'Expressions and formulae' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions and formulae (Stage 8)", note: "Expanding and working with algebraic expressions is covered in the Cambridge Stage 8 'Expressions and formulae' unit.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Phantom X (Algebra)", author: "Kjartan Poskitt", chapter: "(algebra — expressions & equations)", note: "Enrichment read (great for ages 11–13): algebra, expressions and solving for x, made fun.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "hard", q: "(x + y)³ = x³ + 3x²y + 3xy² + y³. The coefficient of x²y is:", options: ["1", "2", "3", "6"], answer: 2, explanation: "The middle terms have coefficient 3." },
@@ -1461,7 +1528,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Polynomial terms", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/polynomials.html", note: "Degrees of terms." },
             { type: "interactive", title: "Polynomials", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions and formulae (Stage 8)", note: "Expanding and working with algebraic expressions is covered in the Cambridge Stage 8 'Expressions and formulae' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions and formulae (Stage 8)", note: "Expanding and working with algebraic expressions is covered in the Cambridge Stage 8 'Expressions and formulae' unit.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Phantom X (Algebra)", author: "Kjartan Poskitt", chapter: "(algebra — expressions & equations)", note: "Enrichment read (great for ages 11–13): algebra, expressions and solving for x, made fun.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "medium", q: "A heterogeneous expression has terms of different degrees, like x² + x + 1.", answer: true, explanation: "Its terms have degrees 2, 1 and 0." },
@@ -1492,7 +1560,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "One-step equations", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/introduction.html", note: "Inverse operations." },
             { type: "interactive", title: "One-step equations", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Equations and inequalities (Stage 8)", note: "Solving linear equations and inequalities is covered in the Cambridge Stage 8 'Equations and inequalities' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Equations and inequalities (Stage 8)", note: "Solving linear equations and inequalities is covered in the Cambridge Stage 8 'Equations and inequalities' unit.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Phantom X (Algebra)", author: "Kjartan Poskitt", chapter: "(algebra — expressions & equations)", note: "Enrichment read (great for ages 11–13): algebra, expressions and solving for x, made fun.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "easy", q: "Solve x − 5 = 9. What is x?", answer: "14", explanation: "Add 5 to both sides: x = 14." },
@@ -1512,7 +1581,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Two-step equations", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Two inverse operations." },
             { type: "interactive", title: "Linear Equations", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/linear-equations.html", note: "Solving two-step equations." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Equations and inequalities (Stage 8)", note: "Solving linear equations and inequalities is covered in the Cambridge Stage 8 'Equations and inequalities' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Equations and inequalities (Stage 8)", note: "Solving linear equations and inequalities is covered in the Cambridge Stage 8 'Equations and inequalities' unit.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Phantom X (Algebra)", author: "Kjartan Poskitt", chapter: "(algebra — expressions & equations)", note: "Enrichment read (great for ages 11–13): algebra, expressions and solving for x, made fun.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "easy", q: "Solve 2x + 3 = 11. What is x?", answer: "4", explanation: "Subtract 3 then divide by 2: x = 8 ÷ 2 = 4." },
@@ -1532,7 +1602,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Multi-step equations", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Brackets and variables on both sides." },
             { type: "interactive", title: "Solving equations", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/introduction.html", note: "Step-by-step." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Equations and inequalities (Stage 8)", note: "Solving linear equations and inequalities is covered in the Cambridge Stage 8 'Equations and inequalities' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Equations and inequalities (Stage 8)", note: "Solving linear equations and inequalities is covered in the Cambridge Stage 8 'Equations and inequalities' unit.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Phantom X (Algebra)", author: "Kjartan Poskitt", chapter: "(algebra — expressions & equations)", note: "Enrichment read (great for ages 11–13): algebra, expressions and solving for x, made fun.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "medium", q: "Solve 2(x + 3) = 16. What is x?", answer: "5", explanation: "Expand: 2x + 6 = 16 → 2x = 10 → x = 5." },
@@ -1552,7 +1623,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Solving Inequalities", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/inequality-solving.html", note: "Rules for inequalities." },
             { type: "interactive", title: "Inequalities", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Equations and inequalities (Stage 8)", note: "Solving linear equations and inequalities is covered in the Cambridge Stage 8 'Equations and inequalities' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Equations and inequalities (Stage 8)", note: "Solving linear equations and inequalities is covered in the Cambridge Stage 8 'Equations and inequalities' unit.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Phantom X (Algebra)", author: "Kjartan Poskitt", chapter: "(algebra — expressions & equations)", note: "Enrichment read (great for ages 11–13): algebra, expressions and solving for x, made fun.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "Solve 2x + 1 > 7.", options: ["x > 3", "x < 3", "x > 4", "x > 8"], answer: 0, explanation: "2x > 6 → x > 3." },
@@ -1572,7 +1644,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Linear Equations", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/linear-equations.html", note: "Turning words into equations." },
             { type: "interactive", title: "Khan Academy: Forming equations", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Worked word-problem equations." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Equations and inequalities (Stage 8)", note: "Solving linear equations and inequalities is covered in the Cambridge Stage 8 'Equations and inequalities' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Equations and inequalities (Stage 8)", note: "Solving linear equations and inequalities is covered in the Cambridge Stage 8 'Equations and inequalities' unit.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Phantom X (Algebra)", author: "Kjartan Poskitt", chapter: "(algebra — expressions & equations)", note: "Enrichment read (great for ages 11–13): algebra, expressions and solving for x, made fun.", url: "" }
           ],
           quiz: [
             { type: "short", difficulty: "medium", q: "I think of a number, multiply by 3 and add 4 to get 19. Form and solve an equation.", answer: "3x + 4 = 19 → 3x = 15 → x = 5.", explanation: "Translate the words, then solve." },
@@ -1604,7 +1677,8 @@ window.CURRICULUM_MATH.grades.push({
             { type: "interactive", title: "Geometry study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-6763e3735fa48191aa94a1a3da22c5dd-geometry-bot", note: "Your class's tutor bot for geometry questions. (Needs a ChatGPT login.)" },
             { type: "interactive", title: "Area & Perimeter", provider: "Math is Fun", url: "https://www.mathsisfun.com/area.html", note: "Formulas and examples." },
             { type: "interactive", title: "Area & perimeter", provider: "Khan Academy", url: "https://www.khanacademy.org/math/basic-geo", note: "Practice." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Angles; Shapes; Area, perimeter and volume (Stage 8)", note: "Angles, 2D/3D shapes, area, surface area and volume are covered in the Cambridge Stage 8 geometry and measures units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Angles; Shapes; Area, perimeter and volume (Stage 8)", note: "Angles, 2D/3D shapes, area, surface area and volume are covered in the Cambridge Stage 8 geometry and measures units.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Mysteries", author: "Marcus du Sautoy", chapter: "Ch 2 ‘The Story of the Elusive Shape’", note: "Enrichment read (accessible stretch): the maths of shapes, symmetry and space.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "easy", q: "A rectangle is 8 cm by 5 cm. What is its perimeter (cm)?", answer: "26", explanation: "P = 2(8 + 5) = 26 cm." },
@@ -1624,7 +1698,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Area", provider: "Math is Fun", url: "https://www.mathsisfun.com/area.html", note: "Splitting shapes to find composite area." },
             { type: "interactive", title: "Khan Academy: Area of composite figures", provider: "Khan Academy", url: "https://www.khanacademy.org/math/basic-geo", note: "Worked compound-area examples." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Angles; Shapes; Area, perimeter and volume (Stage 8)", note: "Angles, 2D/3D shapes, area, surface area and volume are covered in the Cambridge Stage 8 geometry and measures units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Angles; Shapes; Area, perimeter and volume (Stage 8)", note: "Angles, 2D/3D shapes, area, surface area and volume are covered in the Cambridge Stage 8 geometry and measures units.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Mysteries", author: "Marcus du Sautoy", chapter: "Ch 2 ‘The Story of the Elusive Shape’", note: "Enrichment read (accessible stretch): the maths of shapes, symmetry and space.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "medium", q: "An L-shape is a 6×4 rectangle plus a 3×2 rectangle. What is the total area?", answer: "30", explanation: "24 + 6 = 30 square units." },
@@ -1644,7 +1719,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Khan Academy: Scale drawings", provider: "Khan Academy", url: "https://www.khanacademy.org/math/geometry", note: "Using a scale to find real lengths." },
             { type: "interactive", title: "Scale", provider: "Math is Fun", url: "https://www.mathsisfun.com/geometry/index.html", note: "Scale and ratio." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Angles; Shapes; Area, perimeter and volume (Stage 8)", note: "Angles, 2D/3D shapes, area, surface area and volume are covered in the Cambridge Stage 8 geometry and measures units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Angles; Shapes; Area, perimeter and volume (Stage 8)", note: "Angles, 2D/3D shapes, area, surface area and volume are covered in the Cambridge Stage 8 geometry and measures units.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Mysteries", author: "Marcus du Sautoy", chapter: "Ch 2 ‘The Story of the Elusive Shape’", note: "Enrichment read (accessible stretch): the maths of shapes, symmetry and space.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "medium", q: "A map scale is 1:100. A wall is 5 cm on the map. What is the real length in cm?", answer: "500", explanation: "5 × 100 = 500 cm." },
@@ -1665,7 +1741,8 @@ window.CURRICULUM_MATH.grades.push({
             { type: "interactive", title: "Surface area study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-67971dd2e7c08191b76c124e1dd65e00-surface-area-bot", note: "Your class's tutor bot for surface-area problems. (Needs a ChatGPT login.)" },
             { type: "interactive", title: "Surface Area", provider: "Math is Fun", url: "https://www.mathsisfun.com/geometry/surface-area.html", note: "Adding up all the faces." },
             { type: "interactive", title: "Surface area", provider: "Khan Academy", url: "https://www.khanacademy.org/math/basic-geo", note: "Practice." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Angles; Shapes; Area, perimeter and volume (Stage 8)", note: "Angles, 2D/3D shapes, area, surface area and volume are covered in the Cambridge Stage 8 geometry and measures units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Angles; Shapes; Area, perimeter and volume (Stage 8)", note: "Angles, 2D/3D shapes, area, surface area and volume are covered in the Cambridge Stage 8 geometry and measures units.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Mysteries", author: "Marcus du Sautoy", chapter: "Ch 2 ‘The Story of the Elusive Shape’", note: "Enrichment read (accessible stretch): the maths of shapes, symmetry and space.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "medium", q: "Surface area of a cube with side 3 cm = 6 × side². Find it in cm².", answer: "54", explanation: "6 × 3² = 6 × 9 = 54 cm²." },
@@ -1686,7 +1763,8 @@ window.CURRICULUM_MATH.grades.push({
             { type: "interactive", title: "Volume study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-678bba1058608191b7567d768eefdd1a-volume-bot", note: "Your class's tutor bot for volume problems. (Needs a ChatGPT login.)" },
             { type: "interactive", title: "Volume of a prism", provider: "Math is Fun", url: "https://www.mathsisfun.com/geometry/prisms.html", note: "V = base area × height." },
             { type: "interactive", title: "Volume", provider: "Khan Academy", url: "https://www.khanacademy.org/math/basic-geo", note: "Practice." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Angles; Shapes; Area, perimeter and volume (Stage 8)", note: "Angles, 2D/3D shapes, area, surface area and volume are covered in the Cambridge Stage 8 geometry and measures units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Angles; Shapes; Area, perimeter and volume (Stage 8)", note: "Angles, 2D/3D shapes, area, surface area and volume are covered in the Cambridge Stage 8 geometry and measures units.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Mysteries", author: "Marcus du Sautoy", chapter: "Ch 2 ‘The Story of the Elusive Shape’", note: "Enrichment read (accessible stretch): the maths of shapes, symmetry and space.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "easy", q: "A prism has base area B = 10 cm² and height h = 6 cm. Find its volume (cm³).", answer: "60", explanation: "V = Bh = 10 × 6 = 60 cm³." },
@@ -1706,7 +1784,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Prisms (Volume)", provider: "Math is Fun", url: "https://www.mathsisfun.com/geometry/prisms.html", note: "Volume in real-world contexts." },
             { type: "interactive", title: "Volume", provider: "Khan Academy", url: "https://www.khanacademy.org/math/basic-geo", note: "Word problems." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Angles; Shapes; Area, perimeter and volume (Stage 8)", note: "Angles, 2D/3D shapes, area, surface area and volume are covered in the Cambridge Stage 8 geometry and measures units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Angles; Shapes; Area, perimeter and volume (Stage 8)", note: "Angles, 2D/3D shapes, area, surface area and volume are covered in the Cambridge Stage 8 geometry and measures units.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Mysteries", author: "Marcus du Sautoy", chapter: "Ch 2 ‘The Story of the Elusive Shape’", note: "Enrichment read (accessible stretch): the maths of shapes, symmetry and space.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "medium", q: "A tank is 1 m × 2 m × 0.5 m. What is its volume in m³?", answer: "1", explanation: "1 × 2 × 0.5 = 1 m³." },
@@ -1738,7 +1817,8 @@ window.CURRICULUM_MATH.grades.push({
             { type: "interactive", title: "Probability study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-6757bc78d1f8819195c9ad980a64cb93-unschool-probability-gpt", note: "Your class's tutor bot for probability questions. (Needs a ChatGPT login.)" },
             { type: "interactive", title: "Probability", provider: "Math is Fun", url: "https://www.mathsisfun.com/data/probability.html", note: "Likelihood of outcomes." },
             { type: "interactive", title: "Basic probability", provider: "Khan Academy", url: "https://www.khanacademy.org/math/statistics-probability", note: "Practice." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Statistics; Probability (Stage 8)", note: "Averages, data handling and probability are covered in the Cambridge Stage 8 statistics and probability units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Statistics; Probability (Stage 8)", note: "Averages, data handling and probability are covered in the Cambridge Stage 8 statistics and probability units.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Mysteries", author: "Marcus du Sautoy", chapter: "Ch 3 ‘The Secret of the Winning Streak’", note: "Enrichment read (accessible stretch): probability, chance and games.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "A fair die is rolled. P(rolling a 4) = ?", options: ["1/6", "1/4", "4/6", "1/2"], answer: 0, explanation: "One favourable outcome out of six: 1/6." },
@@ -1758,7 +1838,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Theoretical vs experimental", provider: "Khan Academy", url: "https://www.khanacademy.org/math/statistics-probability", note: "Prediction vs results." },
             { type: "interactive", title: "Probability", provider: "Math is Fun", url: "https://www.mathsisfun.com/data/probability.html", note: "Outcomes and trials." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Statistics; Probability (Stage 8)", note: "Averages, data handling and probability are covered in the Cambridge Stage 8 statistics and probability units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Statistics; Probability (Stage 8)", note: "Averages, data handling and probability are covered in the Cambridge Stage 8 statistics and probability units.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Mysteries", author: "Marcus du Sautoy", chapter: "Ch 3 ‘The Secret of the Winning Streak’", note: "Enrichment read (accessible stretch): probability, chance and games.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "medium", q: "Theoretical probability is based on equally likely outcomes; experimental probability is based on results of trials.", answer: true, explanation: "Theory predicts; experiment measures." },
@@ -1778,7 +1859,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Sampling", provider: "Khan Academy", url: "https://www.khanacademy.org/math/statistics-probability", note: "Representative samples." },
             { type: "interactive", title: "Data Index", provider: "Math is Fun", url: "https://www.mathsisfun.com/data/index.html", note: "Fair, representative samples." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Statistics; Probability (Stage 8)", note: "Averages, data handling and probability are covered in the Cambridge Stage 8 statistics and probability units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Statistics; Probability (Stage 8)", note: "Averages, data handling and probability are covered in the Cambridge Stage 8 statistics and probability units.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Mysteries", author: "Marcus du Sautoy", chapter: "Ch 3 ‘The Secret of the Winning Streak’", note: "Enrichment read (accessible stretch): probability, chance and games.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "A good sample should be:", options: ["large and representative", "small and biased", "only your friends", "the whole population always"], answer: 0, explanation: "Larger, representative samples give reliable results." },
@@ -1798,7 +1880,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Mean, Median, Mode", provider: "Math is Fun", url: "https://www.mathsisfun.com/data/central-measures.html", note: "The three averages." },
             { type: "interactive", title: "Averages", provider: "Khan Academy", url: "https://www.khanacademy.org/math/statistics-probability", note: "Practice." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Statistics; Probability (Stage 8)", note: "Averages, data handling and probability are covered in the Cambridge Stage 8 statistics and probability units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Statistics; Probability (Stage 8)", note: "Averages, data handling and probability are covered in the Cambridge Stage 8 statistics and probability units.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Mysteries", author: "Marcus du Sautoy", chapter: "Ch 3 ‘The Secret of the Winning Streak’", note: "Enrichment read (accessible stretch): probability, chance and games.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "easy", q: "Find the mean of 4, 6, 8, 10.", answer: "7", explanation: "(4 + 6 + 8 + 10) ÷ 4 = 28 ÷ 4 = 7." },
@@ -1818,7 +1901,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Data displays", provider: "Math is Fun", url: "https://www.mathsisfun.com/data/index.html", note: "Bar charts, pie charts and more." },
             { type: "interactive", title: "Charts & graphs", provider: "Khan Academy", url: "https://www.khanacademy.org/math/statistics-probability", note: "Reading displays." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Statistics; Probability (Stage 8)", note: "Averages, data handling and probability are covered in the Cambridge Stage 8 statistics and probability units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Statistics; Probability (Stage 8)", note: "Averages, data handling and probability are covered in the Cambridge Stage 8 statistics and probability units.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Mysteries", author: "Marcus du Sautoy", chapter: "Ch 3 ‘The Secret of the Winning Streak’", note: "Enrichment read (accessible stretch): probability, chance and games.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "Which display is best for showing parts of a whole?", options: ["pie chart", "line graph", "scatter plot", "time series"], answer: 0, explanation: "A pie chart shows proportions of a whole." },
@@ -1838,7 +1922,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Data Index", provider: "Math is Fun", url: "https://www.mathsisfun.com/data/index.html", note: "Reading and describing graphs." },
             { type: "interactive", title: "Graph interpretation", provider: "Khan Academy", url: "https://www.khanacademy.org/math/statistics-probability", note: "Practice." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Statistics; Probability (Stage 8)", note: "Averages, data handling and probability are covered in the Cambridge Stage 8 statistics and probability units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Statistics; Probability (Stage 8)", note: "Averages, data handling and probability are covered in the Cambridge Stage 8 statistics and probability units.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Mysteries", author: "Marcus du Sautoy", chapter: "Ch 3 ‘The Secret of the Winning Streak’", note: "Enrichment read (accessible stretch): probability, chance and games.", url: "" }
           ],
           quiz: [
             { type: "short", difficulty: "medium", q: "A line graph of temperature rises then falls. What does the rising part tell you?", answer: "During the rising part, the temperature is increasing over that period of time.", explanation: "An upward slope means the quantity is increasing." },

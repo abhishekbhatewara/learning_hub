@@ -21,7 +21,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Equivalent Fractions", provider: "Math is Fun", url: "https://www.mathsisfun.com/equivalent_fractions.html", note: "Visual explanation with an interactive tool." },
             { type: "interactive", title: "Equivalent fractions", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Videos and practice on equivalent fractions." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Fractions (Stage 7)", note: "Equivalent fractions and the four operations with fractions are covered in the Cambridge Stage 7 'Fractions' unit (the topic spirals across Stages 7–9).", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Fractions (Stage 7)", note: "Equivalent fractions and the four operations with fractions are covered in the Cambridge Stage 7 'Fractions' unit (the topic spirals across Stages 7–9).", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Mean and Vulgar Bits", author: "Kjartan Poskitt", chapter: "(fractions, decimals, percentages & averages)", note: "Enrichment read (great for ages 11–13): fractions, decimals, percentages and averages, made hilarious.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Which fraction is equivalent to 2/3?", options: ["4/9", "4/6", "6/8", "3/4"], answer: 1, explanation: "Multiply numerator and denominator by 2: 2/3 = 4/6." },
@@ -43,7 +44,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Adding Fractions", provider: "Math is Fun", url: "https://www.mathsisfun.com/fractions_addition.html", note: "Step-by-step with common denominators." },
             { type: "interactive", title: "Subtracting Fractions", provider: "Math is Fun", url: "https://www.mathsisfun.com/fractions_subtraction.html", note: "Subtracting fractions, step by step." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Fractions (Stage 7)", note: "Equivalent fractions and the four operations with fractions are covered in the Cambridge Stage 7 'Fractions' unit (the topic spirals across Stages 7–9).", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Fractions (Stage 7)", note: "Equivalent fractions and the four operations with fractions are covered in the Cambridge Stage 7 'Fractions' unit (the topic spirals across Stages 7–9).", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Mean and Vulgar Bits", author: "Kjartan Poskitt", chapter: "(fractions, decimals, percentages & averages)", note: "Enrichment read (great for ages 11–13): fractions, decimals, percentages and averages, made hilarious.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "1/4 + 2/4 = ?", options: ["3/8", "3/4", "2/4", "1/2"], answer: 1, explanation: "Same denominator: add the tops, 1 + 2 = 3, giving 3/4." },
@@ -65,7 +67,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Fractions", provider: "Math is Fun", url: "https://www.mathsisfun.com/fractions.html", note: "How any whole number can be written over 1." },
             { type: "interactive", title: "Fractions intro", provider: "Khan Academy", url: "https://www.khanacademy.org/math/arithmetic/fraction-arithmetic", note: "Whole numbers and fractions." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Fractions (Stage 7)", note: "Equivalent fractions and the four operations with fractions are covered in the Cambridge Stage 7 'Fractions' unit (the topic spirals across Stages 7–9).", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Fractions (Stage 7)", note: "Equivalent fractions and the four operations with fractions are covered in the Cambridge Stage 7 'Fractions' unit (the topic spirals across Stages 7–9).", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Mean and Vulgar Bits", author: "Kjartan Poskitt", chapter: "(fractions, decimals, percentages & averages)", note: "Enrichment read (great for ages 11–13): fractions, decimals, percentages and averages, made hilarious.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "The whole number 3 written as a fraction is:", options: ["1/3", "3/1", "3/3", "0/3"], answer: 1, explanation: "Any whole number is itself over 1: 3 = 3/1." },
@@ -87,7 +90,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Mixed Fractions", provider: "Math is Fun", url: "https://www.mathsisfun.com/mixed-fractions.html", note: "Converting both ways with examples." },
             { type: "interactive", title: "Mixed & improper fractions", provider: "Khan Academy", url: "https://www.khanacademy.org/math/arithmetic/fraction-arithmetic", note: "Practice converting." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Fractions (Stage 7)", note: "Equivalent fractions and the four operations with fractions are covered in the Cambridge Stage 7 'Fractions' unit (the topic spirals across Stages 7–9).", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Fractions (Stage 7)", note: "Equivalent fractions and the four operations with fractions are covered in the Cambridge Stage 7 'Fractions' unit (the topic spirals across Stages 7–9).", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Mean and Vulgar Bits", author: "Kjartan Poskitt", chapter: "(fractions, decimals, percentages & averages)", note: "Enrichment read (great for ages 11–13): fractions, decimals, percentages and averages, made hilarious.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "The mixed number 2 1/3 as an improper fraction is:", options: ["6/3", "7/3", "5/3", "2/3"], answer: 1, explanation: "2 × 3 + 1 = 7, over 3: 7/3." },
@@ -109,7 +113,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Multiplying & Dividing Fractions", provider: "Math is Fun", url: "https://www.mathsisfun.com/fractions_multiplication.html", note: "Multiply tops/bottoms; divide by the reciprocal." },
             { type: "interactive", title: "Multiplying & dividing fractions", provider: "Khan Academy", url: "https://www.khanacademy.org/math/arithmetic/fraction-arithmetic", note: "Worked examples and practice." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Fractions (Stage 7)", note: "Equivalent fractions and the four operations with fractions are covered in the Cambridge Stage 7 'Fractions' unit (the topic spirals across Stages 7–9).", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Fractions (Stage 7)", note: "Equivalent fractions and the four operations with fractions are covered in the Cambridge Stage 7 'Fractions' unit (the topic spirals across Stages 7–9).", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Mean and Vulgar Bits", author: "Kjartan Poskitt", chapter: "(fractions, decimals, percentages & averages)", note: "Enrichment read (great for ages 11–13): fractions, decimals, percentages and averages, made hilarious.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "1/2 × 3/5 = ?", options: ["3/10", "4/7", "3/5", "1/10"], answer: 0, explanation: "Multiply tops (1×3=3) and bottoms (2×5=10): 3/10." },
@@ -131,7 +136,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Fractions", provider: "Math is Fun", url: "https://www.mathsisfun.com/fractions.html", note: "Finding a fraction of an amount." },
             { type: "interactive", title: "Fractions of numbers", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Practice problems." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Fractions (Stage 7)", note: "Equivalent fractions and the four operations with fractions are covered in the Cambridge Stage 7 'Fractions' unit (the topic spirals across Stages 7–9).", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Fractions (Stage 7)", note: "Equivalent fractions and the four operations with fractions are covered in the Cambridge Stage 7 'Fractions' unit (the topic spirals across Stages 7–9).", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Mean and Vulgar Bits", author: "Kjartan Poskitt", chapter: "(fractions, decimals, percentages & averages)", note: "Enrichment read (great for ages 11–13): fractions, decimals, percentages and averages, made hilarious.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "easy", q: "What is 3/4 of 20?", answer: "15", explanation: "20 ÷ 4 = 5, then × 3 = 15." },
@@ -153,7 +159,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Fraction word problems", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Apply fractions to real situations." },
             { type: "interactive", title: "Khan Academy: Fraction arithmetic", provider: "Khan Academy", url: "https://www.khanacademy.org/math/arithmetic/fraction-arithmetic", note: "Apply fractions to word problems." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Fractions (Stage 7)", note: "Equivalent fractions and the four operations with fractions are covered in the Cambridge Stage 7 'Fractions' unit (the topic spirals across Stages 7–9).", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Fractions (Stage 7)", note: "Equivalent fractions and the four operations with fractions are covered in the Cambridge Stage 7 'Fractions' unit (the topic spirals across Stages 7–9).", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Mean and Vulgar Bits", author: "Kjartan Poskitt", chapter: "(fractions, decimals, percentages & averages)", note: "Enrichment read (great for ages 11–13): fractions, decimals, percentages and averages, made hilarious.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "medium", q: "A jug holds 3/4 litre. You pour out 1/4 litre. How many litres remain? (decimal)", answer: "0.5", explanation: "3/4 − 1/4 = 2/4 = 1/2 = 0.5 litre." },
@@ -175,7 +182,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Order of Operations (BODMAS)", provider: "Math is Fun", url: "https://www.mathsisfun.com/operation-order-bodmas.html", note: "The order to do operations in." },
             { type: "interactive", title: "Order of operations", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Practice with brackets and operations." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Fractions (Stage 7)", note: "Equivalent fractions and the four operations with fractions are covered in the Cambridge Stage 7 'Fractions' unit (the topic spirals across Stages 7–9).", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Fractions (Stage 7)", note: "Equivalent fractions and the four operations with fractions are covered in the Cambridge Stage 7 'Fractions' unit (the topic spirals across Stages 7–9).", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Mean and Vulgar Bits", author: "Kjartan Poskitt", chapter: "(fractions, decimals, percentages & averages)", note: "Enrichment read (great for ages 11–13): fractions, decimals, percentages and averages, made hilarious.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "Work out 1/2 + 1/4 × 2 using order of operations.", options: ["1 1/2", "1", "3/8", "1/4"], answer: 1, explanation: "Multiply first: 1/4 × 2 = 1/2. Then 1/2 + 1/2 = 1." },
@@ -208,7 +216,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Ratios", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/ratio.html", note: "What a ratio is and how to write it." },
             { type: "interactive", title: "Intro to ratios", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Ratio language and notation." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio and proportion (Stage 7)", note: "Ratio and proportion are covered in the Cambridge Stage 7 'Ratio and proportion' unit (spirals across Stages 7–9).", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio and proportion (Stage 7)", note: "Ratio and proportion are covered in the Cambridge Stage 7 'Ratio and proportion' unit (spirals across Stages 7–9).", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Mean and Vulgar Bits", author: "Kjartan Poskitt", chapter: "(fractions, decimals, percentages & averages)", note: "Enrichment read (great for ages 11–13): fractions, decimals, percentages and averages, made hilarious.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "A class has 3 boys and 5 girls. The ratio of boys to girls is:", options: ["5:3", "3:5", "3:8", "8:3"], answer: 1, explanation: "Boys first, then girls: 3:5." },
@@ -230,7 +239,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Ratios", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/ratio.html", note: "Linking ratios and fractions." },
             { type: "interactive", title: "Ratios as fractions", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Part-to-whole from a ratio." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio and proportion (Stage 7)", note: "Ratio and proportion are covered in the Cambridge Stage 7 'Ratio and proportion' unit (spirals across Stages 7–9).", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio and proportion (Stage 7)", note: "Ratio and proportion are covered in the Cambridge Stage 7 'Ratio and proportion' unit (spirals across Stages 7–9).", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Mean and Vulgar Bits", author: "Kjartan Poskitt", chapter: "(fractions, decimals, percentages & averages)", note: "Enrichment read (great for ages 11–13): fractions, decimals, percentages and averages, made hilarious.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "In the ratio 2:5, the first quantity is what fraction of the total?", options: ["2/5", "2/7", "5/7", "1/2"], answer: 1, explanation: "Total parts = 2 + 5 = 7, so the first part is 2/7." },
@@ -252,7 +262,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Khan Academy: Ratios", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Part-to-part versus part-to-whole." },
             { type: "interactive", title: "Ratios", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/ratio.html", note: "How ratios relate to fractions." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio and proportion (Stage 7)", note: "Ratio and proportion are covered in the Cambridge Stage 7 'Ratio and proportion' unit (spirals across Stages 7–9).", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio and proportion (Stage 7)", note: "Ratio and proportion are covered in the Cambridge Stage 7 'Ratio and proportion' unit (spirals across Stages 7–9).", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Mean and Vulgar Bits", author: "Kjartan Poskitt", chapter: "(fractions, decimals, percentages & averages)", note: "Enrichment read (great for ages 11–13): fractions, decimals, percentages and averages, made hilarious.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "medium", q: "A ratio compares two quantities (part to part), while a fraction compares a part to the whole.", answer: true, explanation: "That is the key difference between them." },
@@ -274,7 +285,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Simplifying ratios", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/ratio.html", note: "Divide by the common factor." },
             { type: "interactive", title: "Khan Academy: Simplifying ratios", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Practice simplifying ratios." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio and proportion (Stage 7)", note: "Ratio and proportion are covered in the Cambridge Stage 7 'Ratio and proportion' unit (spirals across Stages 7–9).", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio and proportion (Stage 7)", note: "Ratio and proportion are covered in the Cambridge Stage 7 'Ratio and proportion' unit (spirals across Stages 7–9).", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Mean and Vulgar Bits", author: "Kjartan Poskitt", chapter: "(fractions, decimals, percentages & averages)", note: "Enrichment read (great for ages 11–13): fractions, decimals, percentages and averages, made hilarious.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Simplify the ratio 6:9.", options: ["2:3", "3:2", "6:9", "1:2"], answer: 0, explanation: "Divide both by 3: 6:9 = 2:3." },
@@ -296,7 +308,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Equivalent ratios", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Scaling ratios up and down." },
             { type: "interactive", title: "Ratios", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/ratio.html", note: "Equivalent ratios by multiplying." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio and proportion (Stage 7)", note: "Ratio and proportion are covered in the Cambridge Stage 7 'Ratio and proportion' unit (spirals across Stages 7–9).", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio and proportion (Stage 7)", note: "Ratio and proportion are covered in the Cambridge Stage 7 'Ratio and proportion' unit (spirals across Stages 7–9).", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Mean and Vulgar Bits", author: "Kjartan Poskitt", chapter: "(fractions, decimals, percentages & averages)", note: "Enrichment read (great for ages 11–13): fractions, decimals, percentages and averages, made hilarious.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Which ratio is equivalent to 2:3?", options: ["4:9", "6:9", "4:5", "3:2"], answer: 1, explanation: "Multiply both by 3: 2:3 = 6:9." },
@@ -318,7 +331,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Ratios", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/ratio.html", note: "Dividing a total in a given ratio." },
             { type: "interactive", title: "Khan Academy: Sharing in a ratio", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Worked examples of sharing in a ratio." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio and proportion (Stage 7)", note: "Ratio and proportion are covered in the Cambridge Stage 7 'Ratio and proportion' unit (spirals across Stages 7–9).", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio and proportion (Stage 7)", note: "Ratio and proportion are covered in the Cambridge Stage 7 'Ratio and proportion' unit (spirals across Stages 7–9).", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Mean and Vulgar Bits", author: "Kjartan Poskitt", chapter: "(fractions, decimals, percentages & averages)", note: "Enrichment read (great for ages 11–13): fractions, decimals, percentages and averages, made hilarious.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "medium", q: "Share £20 in the ratio 2:3. How many £ is the larger share?", answer: "12", explanation: "5 parts → £20 ÷ 5 = £4 each. Larger = 3 × £4 = £12." },
@@ -340,7 +354,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Using ratios", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Scale to find a missing quantity." },
             { type: "interactive", title: "Ratios", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/ratio.html", note: "Finding a missing part." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio and proportion (Stage 7)", note: "Ratio and proportion are covered in the Cambridge Stage 7 'Ratio and proportion' unit (spirals across Stages 7–9).", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio and proportion (Stage 7)", note: "Ratio and proportion are covered in the Cambridge Stage 7 'Ratio and proportion' unit (spirals across Stages 7–9).", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Mean and Vulgar Bits", author: "Kjartan Poskitt", chapter: "(fractions, decimals, percentages & averages)", note: "Enrichment read (great for ages 11–13): fractions, decimals, percentages and averages, made hilarious.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "medium", q: "In the ratio red:blue = 2:3, there are 8 red. How many blue?", answer: "12", explanation: "2 → 8 means scale × 4, so blue = 3 × 4 = 12." },
@@ -362,7 +377,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Percentages", provider: "Math is Fun", url: "https://www.mathsisfun.com/percentage.html", note: "Turning a ratio into a percentage." },
             { type: "interactive", title: "Khan Academy: Ratios & percentages", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Turning a ratio into a percentage." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio and proportion (Stage 7)", note: "Ratio and proportion are covered in the Cambridge Stage 7 'Ratio and proportion' unit (spirals across Stages 7–9).", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Ratio and proportion (Stage 7)", note: "Ratio and proportion are covered in the Cambridge Stage 7 'Ratio and proportion' unit (spirals across Stages 7–9).", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Mean and Vulgar Bits", author: "Kjartan Poskitt", chapter: "(fractions, decimals, percentages & averages)", note: "Enrichment read (great for ages 11–13): fractions, decimals, percentages and averages, made hilarious.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "In a mixture of juice to water of 1:4, juice is what percentage of the whole?", options: ["25%", "20%", "10%", "40%"], answer: 1, explanation: "Total = 5 parts; juice = 1/5 = 20%." },
@@ -396,7 +412,8 @@ window.CURRICULUM_MATH.grades.push({
             { type: "interactive", title: "Decimal explorer study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-677cdc98011081919446ff3a69d7af27-decimal-explorer", note: "Your class's tutor bot for exploring decimals and place value. (Needs a ChatGPT login.)" },
             { type: "interactive", title: "Decimals", provider: "Math is Fun", url: "https://www.mathsisfun.com/decimals.html", note: "Place value of tenths, hundredths, thousandths." },
             { type: "interactive", title: "Decimal place value", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Reading and writing decimals." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Place value, ordering, rounding and decimals (Stage 7)", note: "Decimals and place value are covered in the Cambridge Stage 7 'Place value, ordering and rounding' / decimals units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Place value, ordering, rounding and decimals (Stage 7)", note: "Decimals and place value are covered in the Cambridge Stage 7 'Place value, ordering and rounding' / decimals units.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Mean and Vulgar Bits", author: "Kjartan Poskitt", chapter: "(fractions, decimals, percentages & averages)", note: "Enrichment read (great for ages 11–13): fractions, decimals, percentages and averages, made hilarious.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "In 4.27, the digit 7 is in the:", options: ["tenths place", "hundredths place", "ones place", "tens place"], answer: 1, explanation: "After the point: first is tenths, second is hundredths — 7 is hundredths." },
@@ -418,7 +435,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Comparing decimals", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Compare using place value." },
             { type: "interactive", title: "Ordering decimals", provider: "Math is Fun", url: "https://www.mathsisfun.com/ordering_decimals.html", note: "Line up the decimal points." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Place value, ordering, rounding and decimals (Stage 7)", note: "Decimals and place value are covered in the Cambridge Stage 7 'Place value, ordering and rounding' / decimals units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Place value, ordering, rounding and decimals (Stage 7)", note: "Decimals and place value are covered in the Cambridge Stage 7 'Place value, ordering and rounding' / decimals units.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Mean and Vulgar Bits", author: "Kjartan Poskitt", chapter: "(fractions, decimals, percentages & averages)", note: "Enrichment read (great for ages 11–13): fractions, decimals, percentages and averages, made hilarious.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Which is the largest?", options: ["0.5", "0.45", "0.405", "0.05"], answer: 0, explanation: "0.5 = 0.500 is bigger than 0.450, 0.405 and 0.050." },
@@ -440,7 +458,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Converting decimals to fractions", provider: "Math is Fun", url: "https://www.mathsisfun.com/converting-decimals-fractions.html", note: "Both directions, with examples." },
             { type: "interactive", title: "Decimals & fractions", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Practice converting." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Place value, ordering, rounding and decimals (Stage 7)", note: "Decimals and place value are covered in the Cambridge Stage 7 'Place value, ordering and rounding' / decimals units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Place value, ordering, rounding and decimals (Stage 7)", note: "Decimals and place value are covered in the Cambridge Stage 7 'Place value, ordering and rounding' / decimals units.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Mean and Vulgar Bits", author: "Kjartan Poskitt", chapter: "(fractions, decimals, percentages & averages)", note: "Enrichment read (great for ages 11–13): fractions, decimals, percentages and averages, made hilarious.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "easy", q: "Write 1/4 as a decimal.", answer: "0.25", explanation: "1 ÷ 4 = 0.25." },
@@ -463,7 +482,8 @@ window.CURRICULUM_MATH.grades.push({
             { type: "interactive", title: "Decimal operations study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-677f7e1049148191a7c1cd39711ea281-decimal-operations", note: "Your class's tutor bot for the four operations with decimals. (Needs a ChatGPT login.)" },
             { type: "interactive", title: "Decimal operations", provider: "Math is Fun", url: "https://www.mathsisfun.com/decimals-menu.html", note: "All four operations with decimals." },
             { type: "interactive", title: "Khan Academy: Decimal operations", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Practice the four operations with decimals." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Place value, ordering, rounding and decimals (Stage 7)", note: "Decimals and place value are covered in the Cambridge Stage 7 'Place value, ordering and rounding' / decimals units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Place value, ordering, rounding and decimals (Stage 7)", note: "Decimals and place value are covered in the Cambridge Stage 7 'Place value, ordering and rounding' / decimals units.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Mean and Vulgar Bits", author: "Kjartan Poskitt", chapter: "(fractions, decimals, percentages & averages)", note: "Enrichment read (great for ages 11–13): fractions, decimals, percentages and averages, made hilarious.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "easy", q: "Work out 0.3 + 0.45.", answer: "0.75", explanation: "Line up the points: 0.30 + 0.45 = 0.75." },
@@ -485,7 +505,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Recurring decimals", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/recurring-decimals.html", note: "What recurring decimals are." },
             { type: "interactive", title: "Khan Academy: Fractions to decimals", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Why some fractions terminate and others recur." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Place value, ordering, rounding and decimals (Stage 7)", note: "Decimals and place value are covered in the Cambridge Stage 7 'Place value, ordering and rounding' / decimals units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Place value, ordering, rounding and decimals (Stage 7)", note: "Decimals and place value are covered in the Cambridge Stage 7 'Place value, ordering and rounding' / decimals units.", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Mean and Vulgar Bits", author: "Kjartan Poskitt", chapter: "(fractions, decimals, percentages & averages)", note: "Enrichment read (great for ages 11–13): fractions, decimals, percentages and averages, made hilarious.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "1/3 written as a decimal is:", options: ["0.3 exactly", "0.33 (terminating)", "0.333… (recurring)", "3.0"], answer: 2, explanation: "1 ÷ 3 = 0.3333… — the 3 recurs forever." },
@@ -518,7 +539,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Percentages", provider: "Math is Fun", url: "https://www.mathsisfun.com/percentage.html", note: "Decimal ↔ percentage conversion." },
             { type: "interactive", title: "Decimals & percentages", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Practice converting." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Percentages (Stage 7)", note: "Percentages are covered in the Cambridge Stage 7 'Percentages' unit (spirals across Stages 7–9).", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Percentages (Stage 7)", note: "Percentages are covered in the Cambridge Stage 7 'Percentages' unit (spirals across Stages 7–9).", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Mean and Vulgar Bits", author: "Kjartan Poskitt", chapter: "(fractions, decimals, percentages & averages)", note: "Enrichment read (great for ages 11–13): fractions, decimals, percentages and averages, made hilarious.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "easy", q: "Write 0.45 as a percentage. (number only)", answer: "45", explanation: "Multiply by 100: 0.45 × 100 = 45%." },
@@ -541,7 +563,8 @@ window.CURRICULUM_MATH.grades.push({
             { type: "interactive", title: "Fractions, decimals & percentages study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-6767dd62d82481919fe6c2a40027aa83-fractions-decimals-and-percentages", note: "Your class's tutor bot linking fractions, decimals and percentages. (Needs a ChatGPT login.)" },
             { type: "interactive", title: "Fractions to percentages", provider: "Math is Fun", url: "https://www.mathsisfun.com/converting-fractions-percents.html", note: "Both directions." },
             { type: "interactive", title: "Khan Academy: Fractions & percentages", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Converting between fractions and percentages." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Percentages (Stage 7)", note: "Percentages are covered in the Cambridge Stage 7 'Percentages' unit (spirals across Stages 7–9).", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Percentages (Stage 7)", note: "Percentages are covered in the Cambridge Stage 7 'Percentages' unit (spirals across Stages 7–9).", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Mean and Vulgar Bits", author: "Kjartan Poskitt", chapter: "(fractions, decimals, percentages & averages)", note: "Enrichment read (great for ages 11–13): fractions, decimals, percentages and averages, made hilarious.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "easy", q: "Write 1/2 as a percentage. (number only)", answer: "50", explanation: "1/2 = 0.5 = 50%." },
@@ -563,7 +586,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Percentage of an amount", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Find a percentage of a number." },
             { type: "interactive", title: "Percentages", provider: "Math is Fun", url: "https://www.mathsisfun.com/percentage.html", note: "Finding a percentage of a number." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Percentages (Stage 7)", note: "Percentages are covered in the Cambridge Stage 7 'Percentages' unit (spirals across Stages 7–9).", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Percentages (Stage 7)", note: "Percentages are covered in the Cambridge Stage 7 'Percentages' unit (spirals across Stages 7–9).", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Mean and Vulgar Bits", author: "Kjartan Poskitt", chapter: "(fractions, decimals, percentages & averages)", note: "Enrichment read (great for ages 11–13): fractions, decimals, percentages and averages, made hilarious.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "easy", q: "What is 25% of 80?", answer: "20", explanation: "25% = 1/4, and 80 ÷ 4 = 20." },
@@ -585,7 +609,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Percentage Change", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/percentage-change.html", note: "Discounts, tips and real-life percentages." },
             { type: "interactive", title: "Percentage word problems", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Apply percentages to contexts." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Percentages (Stage 7)", note: "Percentages are covered in the Cambridge Stage 7 'Percentages' unit (spirals across Stages 7–9).", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Percentages (Stage 7)", note: "Percentages are covered in the Cambridge Stage 7 'Percentages' unit (spirals across Stages 7–9).", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Mean and Vulgar Bits", author: "Kjartan Poskitt", chapter: "(fractions, decimals, percentages & averages)", note: "Enrichment read (great for ages 11–13): fractions, decimals, percentages and averages, made hilarious.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "medium", q: "A £40 jacket has 25% off. How many £ is the discount?", answer: "10", explanation: "25% of 40 = 40 ÷ 4 = £10." },
@@ -608,7 +633,8 @@ window.CURRICULUM_MATH.grades.push({
             { type: "interactive", title: "Cent-percent study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-6799cb7e19f48191b31c60ba00c127bd-cent-percent", note: "Your class's tutor bot for working with percentages. (Needs a ChatGPT login.)" },
             { type: "interactive", title: "Percentage change", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/percentage-change.html", note: "Increases and decreases." },
             { type: "interactive", title: "Percentages", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Percentage applications." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Percentages (Stage 7)", note: "Percentages are covered in the Cambridge Stage 7 'Percentages' unit (spirals across Stages 7–9).", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Percentages (Stage 7)", note: "Percentages are covered in the Cambridge Stage 7 'Percentages' unit (spirals across Stages 7–9).", url: "" },
+            { type: "book", enrichment: true, title: "Murderous Maths: The Mean and Vulgar Bits", author: "Kjartan Poskitt", chapter: "(fractions, decimals, percentages & averages)", note: "Enrichment read (great for ages 11–13): fractions, decimals, percentages and averages, made hilarious.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "medium", q: "What percentage is 15 out of 60? (number only)", answer: "25", explanation: "15 ÷ 60 = 0.25 = 25%." },
@@ -641,7 +667,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Integers (number line)", provider: "Math is Fun", url: "https://www.mathsisfun.com/positive-negative-integers.html", note: "Negative and positive numbers on a line." },
             { type: "interactive", title: "Negative numbers", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "The number line and ordering." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Integers (Stage 7)", note: "Negative numbers and the four operations with integers are covered in the Cambridge Stage 7 'Integers' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Integers (Stage 7)", note: "Negative numbers and the four operations with integers are covered in the Cambridge Stage 7 'Integers' unit.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Devil: A Mathematical Adventure", author: "Hans Magnus Enzensberger", chapter: "(a story across many number ideas)", note: "Enrichment read (great for ages 11–13): a boy meets a 'number devil' who reveals the wonders of numbers, powers and patterns.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "On a number line, which value is furthest to the left?", options: ["−3", "0", "2", "−1"], answer: 0, explanation: "The smallest value, −3, is furthest left." },
@@ -664,7 +691,8 @@ window.CURRICULUM_MATH.grades.push({
             { type: "podcast", title: "The Trouble With Zero – Short Wave", provider: "📚 School's Library · Apple Podcasts", url: "https://podcasts.apple.com/us/podcast/the-trouble-with-zero/id1482575855?i=1000681901180", note: "The strange story of zero — a number it took humans centuries to accept." },
             { type: "interactive", title: "Types of numbers", provider: "Math is Fun", url: "https://www.mathsisfun.com/sets/number-types.html", note: "Natural, whole, integer, rational and more." },
             { type: "interactive", title: "Classifying numbers", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Number sets explained." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Integers (Stage 7)", note: "Negative numbers and the four operations with integers are covered in the Cambridge Stage 7 'Integers' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Integers (Stage 7)", note: "Negative numbers and the four operations with integers are covered in the Cambridge Stage 7 'Integers' unit.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Devil: A Mathematical Adventure", author: "Hans Magnus Enzensberger", chapter: "(a story across many number ideas)", note: "Enrichment read (great for ages 11–13): a boy meets a 'number devil' who reveals the wonders of numbers, powers and patterns.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "Which set does −3 belong to, but 0.5 does not?", options: ["Rational numbers", "Integers", "Real numbers", "Decimals"], answer: 1, explanation: "−3 is an integer; 0.5 is rational but not an integer." },
@@ -686,7 +714,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Integer operations", provider: "Math is Fun", url: "https://www.mathsisfun.com/positive-negative-integers.html", note: "Rules for signs." },
             { type: "interactive", title: "Khan Academy: Integer operations", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Adding, subtracting and multiplying integers." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Integers (Stage 7)", note: "Negative numbers and the four operations with integers are covered in the Cambridge Stage 7 'Integers' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Integers (Stage 7)", note: "Negative numbers and the four operations with integers are covered in the Cambridge Stage 7 'Integers' unit.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Devil: A Mathematical Adventure", author: "Hans Magnus Enzensberger", chapter: "(a story across many number ideas)", note: "Enrichment read (great for ages 11–13): a boy meets a 'number devil' who reveals the wonders of numbers, powers and patterns.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "easy", q: "Work out −4 + 7.", answer: "3", explanation: "Start at −4 and move 7 right: −4 + 7 = 3." },
@@ -708,7 +737,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Order of Operations (BODMAS)", provider: "Math is Fun", url: "https://www.mathsisfun.com/operation-order-bodmas.html", note: "The correct order for mixed operations." },
             { type: "interactive", title: "Order of operations", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Practice with negatives." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Integers (Stage 7)", note: "Negative numbers and the four operations with integers are covered in the Cambridge Stage 7 'Integers' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Integers (Stage 7)", note: "Negative numbers and the four operations with integers are covered in the Cambridge Stage 7 'Integers' unit.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Devil: A Mathematical Adventure", author: "Hans Magnus Enzensberger", chapter: "(a story across many number ideas)", note: "Enrichment read (great for ages 11–13): a boy meets a 'number devil' who reveals the wonders of numbers, powers and patterns.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "medium", q: "Work out −2 + 3 × 4.", answer: "10", explanation: "Multiply first: 3 × 4 = 12, then −2 + 12 = 10." },
@@ -730,7 +760,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Integers", provider: "Math is Fun", url: "https://www.mathsisfun.com/positive-negative-integers.html", note: "Temperature, depth and money with negatives." },
             { type: "interactive", title: "Integers in context", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Word problems with negatives." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Integers (Stage 7)", note: "Negative numbers and the four operations with integers are covered in the Cambridge Stage 7 'Integers' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Integers (Stage 7)", note: "Negative numbers and the four operations with integers are covered in the Cambridge Stage 7 'Integers' unit.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Devil: A Mathematical Adventure", author: "Hans Magnus Enzensberger", chapter: "(a story across many number ideas)", note: "Enrichment read (great for ages 11–13): a boy meets a 'number devil' who reveals the wonders of numbers, powers and patterns.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "easy", q: "The temperature is −3°C and rises by 8°C. What is the new temperature in °C?", answer: "5", explanation: "−3 + 8 = 5°C." },
@@ -763,7 +794,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Divisibility Rules", provider: "Math is Fun", url: "https://www.mathsisfun.com/divisibility-rules.html", note: "Quick tests for each number." },
             { type: "interactive", title: "Divisibility", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Practice the rules." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Factors, multiples and primes (Stage 7)", note: "Factors, multiples, primes, HCF and LCM are covered in the Cambridge Stage 7 number units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Factors, multiples and primes (Stage 7)", note: "Factors, multiples, primes, HCF and LCM are covered in the Cambridge Stage 7 number units.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Mysteries", author: "Marcus du Sautoy", chapter: "Ch 1 'The Curious Incident of the Never-Ending Primes'", note: "Enrichment read (accessible stretch): the mystery of prime numbers, factors and multiples.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Which number is divisible by 3?", options: ["14", "22", "27", "20"], answer: 2, explanation: "2 + 7 = 9, which is divisible by 3, so 27 is too." },
@@ -785,7 +817,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Prime Numbers", provider: "Math is Fun", url: "https://www.mathsisfun.com/prime-numbers.html", note: "What makes a number prime." },
             { type: "interactive", title: "Prime numbers", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Identify primes." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Factors, multiples and primes (Stage 7)", note: "Factors, multiples, primes, HCF and LCM are covered in the Cambridge Stage 7 number units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Factors, multiples and primes (Stage 7)", note: "Factors, multiples, primes, HCF and LCM are covered in the Cambridge Stage 7 number units.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Mysteries", author: "Marcus du Sautoy", chapter: "Ch 1 'The Curious Incident of the Never-Ending Primes'", note: "Enrichment read (accessible stretch): the mystery of prime numbers, factors and multiples.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Which of these is a prime number?", options: ["21", "29", "27", "33"], answer: 1, explanation: "29 has only two factors, 1 and itself; the others are composite." },
@@ -807,7 +840,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Prime Factorization", provider: "Math is Fun", url: "https://www.mathsisfun.com/prime-factorization.html", note: "Factor trees and prime products." },
             { type: "interactive", title: "Khan Academy: Prime factorisation", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Writing a number as a product of primes." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Factors, multiples and primes (Stage 7)", note: "Factors, multiples, primes, HCF and LCM are covered in the Cambridge Stage 7 number units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Factors, multiples and primes (Stage 7)", note: "Factors, multiples, primes, HCF and LCM are covered in the Cambridge Stage 7 number units.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Mysteries", author: "Marcus du Sautoy", chapter: "Ch 1 'The Curious Incident of the Never-Ending Primes'", note: "Enrichment read (accessible stretch): the mystery of prime numbers, factors and multiples.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "The prime factorisation of 12 is:", options: ["2 × 6", "2² × 3", "3 × 4", "2 × 3 × 3"], answer: 1, explanation: "12 = 2 × 2 × 3 = 2² × 3." },
@@ -829,7 +863,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Factors and Multiples", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/factors-multiples.html", note: "The difference and how to list them." },
             { type: "interactive", title: "Factors & multiples", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Practice problems." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Factors, multiples and primes (Stage 7)", note: "Factors, multiples, primes, HCF and LCM are covered in the Cambridge Stage 7 number units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Factors, multiples and primes (Stage 7)", note: "Factors, multiples, primes, HCF and LCM are covered in the Cambridge Stage 7 number units.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Mysteries", author: "Marcus du Sautoy", chapter: "Ch 1 'The Curious Incident of the Never-Ending Primes'", note: "Enrichment read (accessible stretch): the mystery of prime numbers, factors and multiples.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Which of these is a factor of 24?", options: ["5", "7", "8", "9"], answer: 2, explanation: "24 ÷ 8 = 3 with no remainder, so 8 is a factor." },
@@ -851,7 +886,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Least Common Multiple", provider: "Math is Fun", url: "https://www.mathsisfun.com/least-common-multiple.html", note: "Finding the LCM." },
             { type: "interactive", title: "Greatest Common Factor (HCF)", provider: "Math is Fun", url: "https://www.mathsisfun.com/greatest-common-factor.html", note: "Finding the HCF/GCF." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Factors, multiples and primes (Stage 7)", note: "Factors, multiples, primes, HCF and LCM are covered in the Cambridge Stage 7 number units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Factors, multiples and primes (Stage 7)", note: "Factors, multiples, primes, HCF and LCM are covered in the Cambridge Stage 7 number units.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Mysteries", author: "Marcus du Sautoy", chapter: "Ch 1 'The Curious Incident of the Never-Ending Primes'", note: "Enrichment read (accessible stretch): the mystery of prime numbers, factors and multiples.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "medium", q: "What is the HCF of 12 and 18?", answer: "6", explanation: "The highest common factor of 12 and 18 is 6." },
@@ -873,7 +909,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Least Common Multiple", provider: "Math is Fun", url: "https://www.mathsisfun.com/least-common-multiple.html", note: "When to use the LCM." },
             { type: "interactive", title: "Greatest Common Factor (HCF)", provider: "Math is Fun", url: "https://www.mathsisfun.com/greatest-common-factor.html", note: "When to use the HCF." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Factors, multiples and primes (Stage 7)", note: "Factors, multiples, primes, HCF and LCM are covered in the Cambridge Stage 7 number units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Factors, multiples and primes (Stage 7)", note: "Factors, multiples, primes, HCF and LCM are covered in the Cambridge Stage 7 number units.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Mysteries", author: "Marcus du Sautoy", chapter: "Ch 1 'The Curious Incident of the Never-Ending Primes'", note: "Enrichment read (accessible stretch): the mystery of prime numbers, factors and multiples.", url: "" }
           ],
           quiz: [
             { type: "short", difficulty: "hard", q: "Two bells ring every 4 and 6 minutes. After how many minutes do they next ring together, and which (LCM or HCF) did you use?", answer: "LCM of 4 and 6 = 12 minutes. You use the LCM for 'happening together again' / repeating events.", explanation: "Repeating-together problems use the LCM." },
@@ -907,7 +944,8 @@ window.CURRICULUM_MATH.grades.push({
             { type: "interactive", title: "Power in the roots study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-6787a7149d2881918eee37ff3d6a365c-power-in-the-roots", note: "Your class's tutor bot for powers, indices and roots. (Needs a ChatGPT login.)" },
             { type: "interactive", title: "Laws of Exponents", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/exponent-laws.html", note: "All the index laws in one place." },
             { type: "interactive", title: "Exponents", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Intro to powers and exponents." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Powers and roots / indices (Stage 7)", note: "Indices (powers) and roots are covered in the Cambridge Stage 7 'Powers and roots' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Powers and roots / indices (Stage 7)", note: "Indices (powers) and roots are covered in the Cambridge Stage 7 'Powers and roots' unit.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Devil: A Mathematical Adventure", author: "Hans Magnus Enzensberger", chapter: "(a story across many number ideas)", note: "Enrichment read (great for ages 11–13): a boy meets a 'number devil' who reveals the wonders of numbers, powers and patterns.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "2³ × 2² = ?", options: ["2⁵", "2⁶", "4⁵", "2¹"], answer: 0, explanation: "Same base: add the powers, 3 + 2 = 5, giving 2⁵." },
@@ -929,7 +967,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Exponent laws", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/exponent-laws.html", note: "Zero, product, quotient and negative powers." },
             { type: "interactive", title: "Khan Academy: Exponents", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:foundation-algebra", note: "Practice the index laws." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Powers and roots / indices (Stage 7)", note: "Indices (powers) and roots are covered in the Cambridge Stage 7 'Powers and roots' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Powers and roots / indices (Stage 7)", note: "Indices (powers) and roots are covered in the Cambridge Stage 7 'Powers and roots' unit.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Devil: A Mathematical Adventure", author: "Hans Magnus Enzensberger", chapter: "(a story across many number ideas)", note: "Enrichment read (great for ages 11–13): a boy meets a 'number devil' who reveals the wonders of numbers, powers and patterns.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Any non-zero number to the power 0 equals:", options: ["0", "1", "the number itself", "undefined"], answer: 1, explanation: "By the zero rule, a⁰ = 1 for any non-zero a." },
@@ -951,7 +990,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Fractional Exponents", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/exponent-fractional.html", note: "Why √x = x^(1/2)." },
             { type: "interactive", title: "Roots as exponents", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Connecting roots and powers." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Powers and roots / indices (Stage 7)", note: "Indices (powers) and roots are covered in the Cambridge Stage 7 'Powers and roots' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Powers and roots / indices (Stage 7)", note: "Indices (powers) and roots are covered in the Cambridge Stage 7 'Powers and roots' unit.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Devil: A Mathematical Adventure", author: "Hans Magnus Enzensberger", chapter: "(a story across many number ideas)", note: "Enrichment read (great for ages 11–13): a boy meets a 'number devil' who reveals the wonders of numbers, powers and patterns.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "√x can be written as which index?", options: ["x²", "x^(1/2)", "x^(−1)", "2x"], answer: 1, explanation: "A square root is the power one-half: √x = x^(1/2)." },
@@ -973,7 +1013,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Exponents", provider: "Math is Fun", url: "https://www.mathsisfun.com/exponent.html", note: "Working out powers." },
             { type: "interactive", title: "Evaluating exponents", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Practice calculating with powers." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Powers and roots / indices (Stage 7)", note: "Indices (powers) and roots are covered in the Cambridge Stage 7 'Powers and roots' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Powers and roots / indices (Stage 7)", note: "Indices (powers) and roots are covered in the Cambridge Stage 7 'Powers and roots' unit.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Devil: A Mathematical Adventure", author: "Hans Magnus Enzensberger", chapter: "(a story across many number ideas)", note: "Enrichment read (great for ages 11–13): a boy meets a 'number devil' who reveals the wonders of numbers, powers and patterns.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "easy", q: "Work out 3² + 4². (give the number)", answer: "25", explanation: "9 + 16 = 25." },
@@ -995,7 +1036,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Squares and Square Roots", provider: "Math is Fun", url: "https://www.mathsisfun.com/square-root.html", note: "Squares (and roots) of numbers." },
             { type: "interactive", title: "Khan Academy: Squares & cubes", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Practice recalling squares and cubes." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Powers and roots / indices (Stage 7)", note: "Indices (powers) and roots are covered in the Cambridge Stage 7 'Powers and roots' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Powers and roots / indices (Stage 7)", note: "Indices (powers) and roots are covered in the Cambridge Stage 7 'Powers and roots' unit.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Devil: A Mathematical Adventure", author: "Hans Magnus Enzensberger", chapter: "(a story across many number ideas)", note: "Enrichment read (great for ages 11–13): a boy meets a 'number devil' who reveals the wonders of numbers, powers and patterns.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "easy", q: "What is 12²?", answer: "144", explanation: "12 × 12 = 144." },
@@ -1017,7 +1059,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Square & cube roots", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/cube-root.html", note: "Finding roots, including with factors." },
             { type: "interactive", title: "Roots via prime factors", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Using prime factorisation." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Powers and roots / indices (Stage 7)", note: "Indices (powers) and roots are covered in the Cambridge Stage 7 'Powers and roots' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Powers and roots / indices (Stage 7)", note: "Indices (powers) and roots are covered in the Cambridge Stage 7 'Powers and roots' unit.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Devil: A Mathematical Adventure", author: "Hans Magnus Enzensberger", chapter: "(a story across many number ideas)", note: "Enrichment read (great for ages 11–13): a boy meets a 'number devil' who reveals the wonders of numbers, powers and patterns.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "easy", q: "What is √144?", answer: "12", explanation: "12 × 12 = 144, so √144 = 12." },
@@ -1039,7 +1082,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Perfect squares", provider: "Math is Fun", url: "https://www.mathsisfun.com/square-root.html", note: "Recognising square numbers." },
             { type: "interactive", title: "Estimating roots", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-eighth-grade-math", note: "Roots between whole numbers." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Powers and roots / indices (Stage 7)", note: "Indices (powers) and roots are covered in the Cambridge Stage 7 'Powers and roots' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Powers and roots / indices (Stage 7)", note: "Indices (powers) and roots are covered in the Cambridge Stage 7 'Powers and roots' unit.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Devil: A Mathematical Adventure", author: "Hans Magnus Enzensberger", chapter: "(a story across many number ideas)", note: "Enrichment read (great for ages 11–13): a boy meets a 'number devil' who reveals the wonders of numbers, powers and patterns.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "The nearest perfect square below 50 is:", options: ["36", "49", "25", "64"], answer: 1, explanation: "49 = 7² is the largest perfect square less than 50." },
@@ -1072,7 +1116,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Number Patterns", provider: "Math is Fun", url: "https://www.mathsisfun.com/numberpatterns.html", note: "Spotting and continuing patterns." },
             { type: "interactive", title: "Number patterns", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Practice extending sequences." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Sequences and functions (Stage 7)", note: "Sequences and patterns are covered in the Cambridge Stage 7 'Sequences and functions' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Sequences and functions (Stage 7)", note: "Sequences and patterns are covered in the Cambridge Stage 7 'Sequences and functions' unit.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Devil: A Mathematical Adventure", author: "Hans Magnus Enzensberger", chapter: "(a story across many number ideas)", note: "Enrichment read (great for ages 11–13): a boy meets a 'number devil' who reveals the wonders of numbers, powers and patterns.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "easy", q: "Find the next term: 2, 4, 6, 8, ?", answer: "10", explanation: "Add 2 each time: 8 + 2 = 10." },
@@ -1094,7 +1139,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Pattern problems", provider: "NRICH", url: "https://nrich.maths.org/", note: "Rich visual pattern investigations." },
             { type: "interactive", title: "Patterns", provider: "Math is Fun", url: "https://www.mathsisfun.com/numberpatterns.html", note: "Patterns made from shapes and dots." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Sequences and functions (Stage 7)", note: "Sequences and patterns are covered in the Cambridge Stage 7 'Sequences and functions' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Sequences and functions (Stage 7)", note: "Sequences and patterns are covered in the Cambridge Stage 7 'Sequences and functions' unit.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Devil: A Mathematical Adventure", author: "Hans Magnus Enzensberger", chapter: "(a story across many number ideas)", note: "Enrichment read (great for ages 11–13): a boy meets a 'number devil' who reveals the wonders of numbers, powers and patterns.", url: "" }
           ],
           quiz: [
             { type: "short", difficulty: "medium", q: "A dot pattern uses 3 dots, then 5, then 7. How many dots in the 4th picture, and what is the rule?", answer: "9 dots. The rule is 'add 2 each time' (the odd numbers).", explanation: "Each picture adds 2 more dots." },
@@ -1116,7 +1162,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Number Patterns", provider: "Math is Fun", url: "https://www.mathsisfun.com/numberpatterns.html", note: "Describing the rule of a sequence." },
             { type: "interactive", title: "Khan Academy: Sequences", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Stating sequence rules." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Sequences and functions (Stage 7)", note: "Sequences and patterns are covered in the Cambridge Stage 7 'Sequences and functions' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Sequences and functions (Stage 7)", note: "Sequences and patterns are covered in the Cambridge Stage 7 'Sequences and functions' unit.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Devil: A Mathematical Adventure", author: "Hans Magnus Enzensberger", chapter: "(a story across many number ideas)", note: "Enrichment read (great for ages 11–13): a boy meets a 'number devil' who reveals the wonders of numbers, powers and patterns.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "For 5, 10, 15, 20… the rule is:", options: ["add 10", "multiply by 2", "add 5", "subtract 5"], answer: 2, explanation: "Each term is 5 more than the last." },
@@ -1138,7 +1185,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Number Patterns", provider: "Math is Fun", url: "https://www.mathsisfun.com/numberpatterns.html", note: "Predicting later terms." },
             { type: "interactive", title: "Sequences", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Extending patterns." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Sequences and functions (Stage 7)", note: "Sequences and patterns are covered in the Cambridge Stage 7 'Sequences and functions' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Sequences and functions (Stage 7)", note: "Sequences and patterns are covered in the Cambridge Stage 7 'Sequences and functions' unit.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Devil: A Mathematical Adventure", author: "Hans Magnus Enzensberger", chapter: "(a story across many number ideas)", note: "Enrichment read (great for ages 11–13): a boy meets a 'number devil' who reveals the wonders of numbers, powers and patterns.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "medium", q: "Square numbers: 1, 4, 9, 16, ? — what is the next term?", answer: "25", explanation: "The next square is 5² = 25." },
@@ -1160,7 +1208,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Sequences", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/sequences-series.html", note: "Position-to-term (nth term) rules." },
             { type: "interactive", title: "Khan Academy: nth term", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Finding and using the nth term." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Sequences and functions (Stage 7)", note: "Sequences and patterns are covered in the Cambridge Stage 7 'Sequences and functions' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Sequences and functions (Stage 7)", note: "Sequences and patterns are covered in the Cambridge Stage 7 'Sequences and functions' unit.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Devil: A Mathematical Adventure", author: "Hans Magnus Enzensberger", chapter: "(a story across many number ideas)", note: "Enrichment read (great for ages 11–13): a boy meets a 'number devil' who reveals the wonders of numbers, powers and patterns.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "easy", q: "Using the rule 'term = 3 × position', what is the 5th term?", answer: "15", explanation: "3 × 5 = 15." },
@@ -1193,7 +1242,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Introduction to Algebra", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/introduction.html", note: "What variables are and how substitution works." },
             { type: "interactive", title: "Substitution", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Evaluating expressions." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Expressions, formulae and equations; Geometry (Stage 7)", note: "Introductory algebra is covered in 'Expressions, formulae and equations' and shape/angle/area work in the Cambridge Stage 7 geometry units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Expressions, formulae and equations; Geometry (Stage 7)", note: "Introductory algebra is covered in 'Expressions, formulae and equations' and shape/angle/area work in the Cambridge Stage 7 geometry units.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Mysteries", author: "Marcus du Sautoy", chapter: "Ch 2 'The Story of the Elusive Shape'", note: "Enrichment read (accessible stretch): the maths of shapes and space.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "easy", q: "If x = 4, work out 3x + 2.", answer: "14", explanation: "3 × 4 + 2 = 12 + 2 = 14." },
@@ -1215,7 +1265,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Solving one-step equations", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/introduction.html", note: "Doing the same to both sides." },
             { type: "interactive", title: "One-step equations", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Practice solving." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Expressions, formulae and equations; Geometry (Stage 7)", note: "Introductory algebra is covered in 'Expressions, formulae and equations' and shape/angle/area work in the Cambridge Stage 7 geometry units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Expressions, formulae and equations; Geometry (Stage 7)", note: "Introductory algebra is covered in 'Expressions, formulae and equations' and shape/angle/area work in the Cambridge Stage 7 geometry units.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Mysteries", author: "Marcus du Sautoy", chapter: "Ch 2 'The Story of the Elusive Shape'", note: "Enrichment read (accessible stretch): the maths of shapes and space.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "easy", q: "Solve x + 7 = 12. What is x?", answer: "5", explanation: "Subtract 7 from both sides: x = 12 − 7 = 5." },
@@ -1237,7 +1288,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Inequalities", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/inequality.html", note: "Solving and showing inequalities." },
             { type: "interactive", title: "One-step inequalities", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Practice problems." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Expressions, formulae and equations; Geometry (Stage 7)", note: "Introductory algebra is covered in 'Expressions, formulae and equations' and shape/angle/area work in the Cambridge Stage 7 geometry units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Expressions, formulae and equations; Geometry (Stage 7)", note: "Introductory algebra is covered in 'Expressions, formulae and equations' and shape/angle/area work in the Cambridge Stage 7 geometry units.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Mysteries", author: "Marcus du Sautoy", chapter: "Ch 2 'The Story of the Elusive Shape'", note: "Enrichment read (accessible stretch): the maths of shapes and space.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "Solve x + 3 > 5. The solution is:", options: ["x > 2", "x < 2", "x > 8", "x = 2"], answer: 0, explanation: "Subtract 3 from both sides: x > 2." },
@@ -1260,7 +1312,8 @@ window.CURRICULUM_MATH.grades.push({
             { type: "interactive", title: "Perimeter, area & surface area study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-6773b11f5ac48191b58d5389f40a4ebd-perimeter-area-and-surface-area", note: "Your class's tutor bot for perimeter, area and surface area. (Needs a ChatGPT login.)" },
             { type: "interactive", title: "Area & Perimeter", provider: "Math is Fun", url: "https://www.mathsisfun.com/area.html", note: "Formulas for rectangles and triangles." },
             { type: "interactive", title: "Area & perimeter", provider: "Khan Academy", url: "https://www.khanacademy.org/math/basic-geo", note: "Practice problems." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Expressions, formulae and equations; Geometry (Stage 7)", note: "Introductory algebra is covered in 'Expressions, formulae and equations' and shape/angle/area work in the Cambridge Stage 7 geometry units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Expressions, formulae and equations; Geometry (Stage 7)", note: "Introductory algebra is covered in 'Expressions, formulae and equations' and shape/angle/area work in the Cambridge Stage 7 geometry units.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Mysteries", author: "Marcus du Sautoy", chapter: "Ch 2 'The Story of the Elusive Shape'", note: "Enrichment read (accessible stretch): the maths of shapes and space.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "easy", q: "A rectangle is 6 cm by 4 cm. What is its area in cm²?", answer: "24", explanation: "Area = length × width = 6 × 4 = 24 cm²." },
@@ -1283,7 +1336,8 @@ window.CURRICULUM_MATH.grades.push({
             { type: "video", title: "Area of a circle, formula explained (2 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=YokKp3pwVFc", note: "A quick, clear look at where the circle-area formula comes from." },
             { type: "interactive", title: "Circle area & circumference", provider: "Math is Fun", url: "https://www.mathsisfun.com/geometry/circle.html", note: "Using π with the formulas." },
             { type: "interactive", title: "Area & circumference of circles", provider: "Khan Academy", url: "https://www.khanacademy.org/math/basic-geo", note: "Worked examples and practice." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Expressions, formulae and equations; Geometry (Stage 7)", note: "Introductory algebra is covered in 'Expressions, formulae and equations' and shape/angle/area work in the Cambridge Stage 7 geometry units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Expressions, formulae and equations; Geometry (Stage 7)", note: "Introductory algebra is covered in 'Expressions, formulae and equations' and shape/angle/area work in the Cambridge Stage 7 geometry units.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Mysteries", author: "Marcus du Sautoy", chapter: "Ch 2 'The Story of the Elusive Shape'", note: "Enrichment read (accessible stretch): the maths of shapes and space.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "medium", q: "A circle has radius 5 cm. Using C = 2πr with π ≈ 3.14, find the circumference in cm.", answer: "31.4", explanation: "C = 2 × 3.14 × 5 = 31.4 cm." },
@@ -1305,7 +1359,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "interactive", title: "Area", provider: "Math is Fun", url: "https://www.mathsisfun.com/area.html", note: "Splitting shapes to find composite area." },
             { type: "interactive", title: "Khan Academy: Area of composite figures", provider: "Khan Academy", url: "https://www.khanacademy.org/math/basic-geo", note: "Worked examples of compound-shape area." },
-            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Expressions, formulae and equations; Geometry (Stage 7)", note: "Introductory algebra is covered in 'Expressions, formulae and equations' and shape/angle/area work in the Cambridge Stage 7 geometry units.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Expressions, formulae and equations; Geometry (Stage 7)", note: "Introductory algebra is covered in 'Expressions, formulae and equations' and shape/angle/area work in the Cambridge Stage 7 geometry units.", url: "" },
+            { type: "book", enrichment: true, title: "The Number Mysteries", author: "Marcus du Sautoy", chapter: "Ch 2 'The Story of the Elusive Shape'", note: "Enrichment read (accessible stretch): the maths of shapes and space.", url: "" }
           ],
           quiz: [
             { type: "short", difficulty: "medium", q: "An L-shape is made of two rectangles, 4×2 and 3×2. Explain how to find its total area and give the answer.", answer: "Find each rectangle's area and add them: 4 × 2 = 8 and 3 × 2 = 6, so the total area is 8 + 6 = 14 square units.", explanation: "Split a composite shape into simple parts, find each area, then add." },

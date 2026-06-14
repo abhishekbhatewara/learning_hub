@@ -145,6 +145,8 @@ window.CURRICULUM.grades.push({
             { type: "interactive", title: "Khan Academy: Food tests", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "Iodine, Benedict's, Biuret and grease-spot tests." },
             { type: "reading", title: "CK-12: Food tests", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "What each food test shows." },
             { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Diet and growth (Stage 8)", note: "Nutrients, a balanced diet, the digestive system and related health topics are covered in the Stage 8 'Diet and growth' unit.", url: "" }
+          ,
+            { type: "book", enrichment: true, title: "The Body: A Guide for Occupants", author: "Bill Bryson", chapter: "'Food, Glorious Food' & 'The Guts'", note: "Enrichment read (accessible stretch): what food actually does inside you, from mouth to gut.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Which test detects starch?", options: ["Benedict's", "Biuret", "Iodine", "Grease spot"], answer: 2, explanation: "Iodine turns blue-black in the presence of starch." },
@@ -171,6 +173,8 @@ window.CURRICULUM.grades.push({
             { type: "reading", title: "Common sweetener linked to higher stroke risk", provider: "📚 School's Library · earth.com", url: "https://www.earth.com/news/common-sweetener-may-directly-damage-the-brain/", note: "A reminder to look past marketing claims to the actual ingredients." },
             { type: "reading", title: "Gut cancers linked with certain diets", provider: "📚 School's Library · ScienceAlert", url: "https://www.sciencealert.com/alarming-rise-in-cancers-of-the-gut-linked-with-these-deadly-diets", note: "Why dietary choices matter for long-term health." },
             { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Diet and growth (Stage 8)", note: "Nutrients, a balanced diet, the digestive system and related health topics are covered in the Stage 8 'Diet and growth' unit.", url: "" }
+          ,
+            { type: "book", enrichment: true, title: "The Body: A Guide for Occupants", author: "Bill Bryson", chapter: "'Food, Glorious Food' & 'The Guts'", note: "Enrichment read (accessible stretch): what food actually does inside you, from mouth to gut.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "Religious beliefs can influence which foods a person chooses to eat.", answer: true, explanation: "Many religions have dietary rules (e.g. halal, kosher, vegetarianism) that shape food choices." },
@@ -194,6 +198,8 @@ window.CURRICULUM.grades.push({
             { type: "reading", title: "CK-12: Teeth & digestion", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/digestive-system/", note: "Tooth structure, types and decay." },
             { type: "reading", title: "What did people use before toothbrushes?", provider: "📚 School's Library · History Facts", url: "https://historyfacts.com/science-industry/article/what-did-people-use-before-toothbrushes/", note: "A fun history of dental care and why we protect our teeth." },
             { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Diet and growth (Stage 8)", note: "Nutrients, a balanced diet, the digestive system and related health topics are covered in the Stage 8 'Diet and growth' unit.", url: "" }
+          ,
+            { type: "book", enrichment: true, title: "The Body: A Guide for Occupants", author: "Bill Bryson", chapter: "'Food, Glorious Food' & 'The Guts'", note: "Enrichment read (accessible stretch): what food actually does inside you, from mouth to gut.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "The hard outer layer that protects the crown of a tooth is the:", options: ["Dentine", "Enamel", "Pulp", "Root"], answer: 1, explanation: "Enamel is the hardest substance in the body and shields the tooth from decay." },
@@ -217,6 +223,8 @@ window.CURRICULUM.grades.push({
             { type: "interactive", title: "Khan Academy: The digestive system", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "The whole journey of food." },
             { type: "reading", title: "CK-12: The digestive system", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/digestive-system/", note: "Order of the digestive processes." },
             { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Diet and growth (Stage 8)", note: "Nutrients, a balanced diet, the digestive system and related health topics are covered in the Stage 8 'Diet and growth' unit.", url: "" }
+          ,
+            { type: "book", enrichment: true, title: "The Body: A Guide for Occupants", author: "Bill Bryson", chapter: "'Food, Glorious Food' & 'The Guts'", note: "Enrichment read (accessible stretch): what food actually does inside you, from mouth to gut.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Removing undigested waste from the body is called:", options: ["Digestion", "Absorption", "Egestion", "Ingestion"], answer: 2, explanation: "Egestion is the removal of undigested material as faeces — different from excretion of metabolic waste." },
@@ -240,6 +248,8 @@ window.CURRICULUM.grades.push({
             { type: "interactive", title: "Khan Academy: Digestion & enzymes", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "Mechanical vs chemical digestion." },
             { type: "reading", title: "CK-12: Human Digestive System", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/digestive-system/", note: "Each organ and what it does." },
             { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Diet and growth (Stage 8)", note: "Nutrients, a balanced diet, the digestive system and related health topics are covered in the Stage 8 'Diet and growth' unit.", url: "" }
+          ,
+            { type: "book", enrichment: true, title: "The Body: A Guide for Occupants", author: "Bill Bryson", chapter: "'Food, Glorious Food' & 'The Guts'", note: "Enrichment read (accessible stretch): what food actually does inside you, from mouth to gut.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "Chewing food in the mouth is an example of mechanical digestion.", answer: true, explanation: "Chewing physically breaks food into smaller pieces, increasing surface area for enzymes — mechanical digestion." },
@@ -263,6 +273,8 @@ window.CURRICULUM.grades.push({
             { type: "reading", title: "CK-12: Absorption & the small intestine", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/digestive-system/", note: "How villi are adapted for absorbing nutrients." },
             { type: "interactive", title: "Khan Academy: The digestive system", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "Absorption through villi and microvilli." },
             { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Diet and growth (Stage 8)", note: "Nutrients, a balanced diet, the digestive system and related health topics are covered in the Stage 8 'Diet and growth' unit.", url: "" }
+          ,
+            { type: "book", enrichment: true, title: "The Body: A Guide for Occupants", author: "Bill Bryson", chapter: "'Food, Glorious Food' & 'The Guts'", note: "Enrichment read (accessible stretch): what food actually does inside you, from mouth to gut.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Which organ is where most chemical digestion and absorption of nutrients happens?", options: ["Stomach", "Small intestine", "Large intestine", "Oesophagus"], answer: 1, explanation: "The small intestine completes digestion and absorbs nutrients through its villi." },
@@ -286,6 +298,8 @@ window.CURRICULUM.grades.push({
             { type: "interactive", title: "Khan Academy: Enzymes", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "Active sites, substrates and conditions." },
             { type: "reading", title: "CK-12: Enzymes", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "Optimum conditions and denaturing." },
             { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Diet and growth (Stage 8)", note: "Nutrients, a balanced diet, the digestive system and related health topics are covered in the Stage 8 'Diet and growth' unit.", url: "" }
+          ,
+            { type: "book", enrichment: true, title: "The Body: A Guide for Occupants", author: "Bill Bryson", chapter: "'Food, Glorious Food' & 'The Guts'", note: "Enrichment read (accessible stretch): what food actually does inside you, from mouth to gut.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "An enzyme is best described as:", options: ["A type of food", "A biological catalyst that speeds up reactions", "A hormone", "A type of fat"], answer: 1, explanation: "Enzymes are proteins that catalyse (speed up) chemical reactions in living organisms without being used up." },
@@ -321,6 +335,8 @@ window.CURRICULUM.grades.push({
             { type: "interactive", title: "PhET: Build an Atom", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/build-an-atom", note: "Build atoms from protons, neutrons and electrons." },
             { type: "interactive", title: "Khan Academy: Atoms, elements & compounds", provider: "Khan Academy", url: "https://www.khanacademy.org/science/chemistry", note: "Definitions and element symbols." },
             { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Properties of matter and materials (Stage 7)", note: "Elements, compounds and mixtures, separating mixtures and the particle model are covered in the Stage 7 'Properties of matter and materials' unit; atomic structure is developed further in later study.", url: "" }
+          ,
+            { type: "book", enrichment: true, title: "The Elements: A Visual Exploration of Every Known Atom in the Universe", author: "Theodore Gray", chapter: "(browse by element)", note: "Enrichment read (great for ages 11–13): a stunning visual tour of the elements that make up all matter.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "A pure substance made of only one type of atom is a(n):", options: ["Compound", "Mixture", "Element", "Solution"], answer: 2, explanation: "An element contains only one kind of atom." },
@@ -345,6 +361,8 @@ window.CURRICULUM.grades.push({
             { type: "interactive", title: "Matter & properties study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-6791de19e3e881918e97e1ef365205b3-matter-properties-bot", note: "A tutor bot to quiz yourself on matter and its properties. (Needs a ChatGPT login.)" },
             { type: "video", title: "What happens if you eat a silica gel packet? (TED-Ed, 5 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=QWCHnR53oIw", note: "A real-world look at a everyday material and what it's made of." },
             { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Properties of matter and materials (Stage 7)", note: "Elements, compounds and mixtures, separating mixtures and the particle model are covered in the Stage 7 'Properties of matter and materials' unit; atomic structure is developed further in later study.", url: "" }
+          ,
+            { type: "book", enrichment: true, title: "The Elements: A Visual Exploration of Every Known Atom in the Universe", author: "Theodore Gray", chapter: "(browse by element)", note: "Enrichment read (great for ages 11–13): a stunning visual tour of the elements that make up all matter.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Air is best classified as a:", options: ["Element", "Compound", "Mixture", "Pure substance"], answer: 2, explanation: "Air is a mixture of gases (nitrogen, oxygen and others) not chemically bonded together." },
@@ -368,6 +386,8 @@ window.CURRICULUM.grades.push({
             { type: "reading", title: "CK-12: Separating mixtures", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/chemistry/", note: "Filtration, distillation and more." },
             { type: "interactive", title: "Khan Academy: Separating mixtures", provider: "Khan Academy", url: "https://www.khanacademy.org/science/chemistry", note: "Choosing the right technique." },
             { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Properties of matter and materials (Stage 7)", note: "Elements, compounds and mixtures, separating mixtures and the particle model are covered in the Stage 7 'Properties of matter and materials' unit; atomic structure is developed further in later study.", url: "" }
+          ,
+            { type: "book", enrichment: true, title: "The Elements: A Visual Exploration of Every Known Atom in the Universe", author: "Theodore Gray", chapter: "(browse by element)", note: "Enrichment read (great for ages 11–13): a stunning visual tour of the elements that make up all matter.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Which technique separates an insoluble solid from a liquid?", options: ["Distillation", "Filtration", "Chromatography", "Evaporation"], answer: 1, explanation: "Filtration traps an insoluble solid (residue) while the liquid (filtrate) passes through." },
@@ -391,6 +411,8 @@ window.CURRICULUM.grades.push({
             { type: "reading", title: "CK-12: Solutions & mixtures", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/chemistry/", note: "Types of mixtures and how they behave." },
             { type: "video", title: "Not quite a solid, not quite a liquid: hydrogels (TED-Ed, 5 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=KKcJOHkG19w", note: "A fascinating material that blurs the states of matter." },
             { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Properties of matter and materials (Stage 7)", note: "Elements, compounds and mixtures, separating mixtures and the particle model are covered in the Stage 7 'Properties of matter and materials' unit; atomic structure is developed further in later study.", url: "" }
+          ,
+            { type: "book", enrichment: true, title: "The Elements: A Visual Exploration of Every Known Atom in the Universe", author: "Theodore Gray", chapter: "(browse by element)", note: "Enrichment read (great for ages 11–13): a stunning visual tour of the elements that make up all matter.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "In a solution, the dissolved substance is called the:", options: ["Solvent", "Solute", "Suspension", "Colloid"], answer: 1, explanation: "The solute is the substance dissolved; the solvent does the dissolving (e.g. salt is the solute in salt water)." },
@@ -414,6 +436,8 @@ window.CURRICULUM.grades.push({
             { type: "reading", title: "CK-12: Chromatography", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/chemistry/", note: "Running a chromatogram and Rf values." },
             { type: "interactive", title: "Khan Academy: Chromatography", provider: "Khan Academy", url: "https://www.khanacademy.org/science/chemistry", note: "How separation by chromatography works." },
             { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Properties of matter and materials (Stage 7)", note: "Elements, compounds and mixtures, separating mixtures and the particle model are covered in the Stage 7 'Properties of matter and materials' unit; atomic structure is developed further in later study.", url: "" }
+          ,
+            { type: "book", enrichment: true, title: "The Elements: A Visual Exploration of Every Known Atom in the Universe", author: "Theodore Gray", chapter: "(browse by element)", note: "Enrichment read (great for ages 11–13): a stunning visual tour of the elements that make up all matter.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "In paper chromatography, what carries the substances up the paper?", options: ["Air pressure", "The moving solvent (mobile phase)", "Gravity", "Electricity"], answer: 1, explanation: "The solvent (mobile phase) moves up the paper by capillary action, carrying dissolved substances with it." },
@@ -437,6 +461,8 @@ window.CURRICULUM.grades.push({
             { type: "interactive", title: "PhET: Build an Atom", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/build-an-atom", note: "Place protons, neutrons and electrons to build atoms." },
             { type: "interactive", title: "Khan Academy: Subatomic particles", provider: "Khan Academy", url: "https://www.khanacademy.org/science/chemistry", note: "Charge and mass of the three particles." },
             { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Properties of matter and materials (Stage 7)", note: "Elements, compounds and mixtures, separating mixtures and the particle model are covered in the Stage 7 'Properties of matter and materials' unit; atomic structure is developed further in later study.", url: "" }
+          ,
+            { type: "book", enrichment: true, title: "The Elements: A Visual Exploration of Every Known Atom in the Universe", author: "Theodore Gray", chapter: "(browse by element)", note: "Enrichment read (great for ages 11–13): a stunning visual tour of the elements that make up all matter.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "Protons have a positive charge and electrons have a negative charge.", answer: true, explanation: "Protons are +1, electrons are −1, neutrons are neutral." },
@@ -460,6 +486,8 @@ window.CURRICULUM.grades.push({
             { type: "interactive", title: "PhET: Build an Atom", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/build-an-atom", note: "See how atomic and mass number relate to the particles." },
             { type: "interactive", title: "Khan Academy: Atomic number & mass number", provider: "Khan Academy", url: "https://www.khanacademy.org/science/chemistry", note: "Working out protons, neutrons and electrons." },
             { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Properties of matter and materials (Stage 7)", note: "Elements, compounds and mixtures, separating mixtures and the particle model are covered in the Stage 7 'Properties of matter and materials' unit; atomic structure is developed further in later study.", url: "" }
+          ,
+            { type: "book", enrichment: true, title: "The Elements: A Visual Exploration of Every Known Atom in the Universe", author: "Theodore Gray", chapter: "(browse by element)", note: "Enrichment read (great for ages 11–13): a stunning visual tour of the elements that make up all matter.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "The atomic number of an element tells you:", options: ["The number of neutrons", "The number of protons", "The mass of the atom", "The number of shells"], answer: 1, explanation: "The atomic number = number of protons, and this defines which element it is." },
@@ -483,6 +511,8 @@ window.CURRICULUM.grades.push({
             { type: "reading", title: "CK-12: History of the atomic model", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/chemistry/", note: "Dalton to Bohr, with the gold-foil experiment." },
             { type: "interactive", title: "Khan Academy: History of the atom", provider: "Khan Academy", url: "https://www.khanacademy.org/science/chemistry", note: "Dalton to Bohr and the gold-foil experiment." },
             { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Properties of matter and materials (Stage 7)", note: "Elements, compounds and mixtures, separating mixtures and the particle model are covered in the Stage 7 'Properties of matter and materials' unit; atomic structure is developed further in later study.", url: "" }
+          ,
+            { type: "book", enrichment: true, title: "The Elements: A Visual Exploration of Every Known Atom in the Universe", author: "Theodore Gray", chapter: "(browse by element)", note: "Enrichment read (great for ages 11–13): a stunning visual tour of the elements that make up all matter.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Who first proposed that matter is made of tiny, indivisible spheres (atoms)?", options: ["Thomson", "Dalton", "Bohr", "Rutherford"], answer: 1, explanation: "John Dalton (early 1800s) proposed atoms as tiny, indivisible solid spheres — the first modern atomic theory." },
@@ -506,6 +536,8 @@ window.CURRICULUM.grades.push({
             { type: "interactive", title: "Khan Academy: Isotopes", provider: "Khan Academy", url: "https://www.khanacademy.org/science/chemistry", note: "What isotopes are and how they're used." },
             { type: "reading", title: "The black fungus from Chernobyl that may 'eat' radiation", provider: "📚 School's Library · BBC Future", url: "https://www.bbc.com/future/article/20251125-the-mysterious-black-fungus-from-chernobyl-that-appears-to-eat-radiation", note: "A real story about radiation and radioactive material." },
             { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Properties of matter and materials (Stage 7)", note: "Elements, compounds and mixtures, separating mixtures and the particle model are covered in the Stage 7 'Properties of matter and materials' unit; atomic structure is developed further in later study.", url: "" }
+          ,
+            { type: "book", enrichment: true, title: "The Elements: A Visual Exploration of Every Known Atom in the Universe", author: "Theodore Gray", chapter: "(browse by element)", note: "Enrichment read (great for ages 11–13): a stunning visual tour of the elements that make up all matter.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Isotopes of the same element have:", options: ["Different numbers of protons", "The same number of neutrons", "The same number of protons but different numbers of neutrons", "Different charges"], answer: 2, explanation: "Isotopes share the proton number (same element) but differ in neutrons, so they have different mass numbers." },
@@ -541,6 +573,8 @@ window.CURRICULUM.grades.push({
             { type: "interactive", title: "The Physics Classroom: 1D Kinematics", provider: "The Physics Classroom", url: "https://www.physicsclassroom.com/class/1DKin", note: "Scalars, vectors and motion." },
             { type: "interactive", title: "Speed, velocity & acceleration study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-67888e9d3ab4819184bf9ef35745731e-calculating-speed-velocity-and-acceleration", note: "Practise the differences and calculations. (Needs a ChatGPT login.)" },
             { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Forces and energy (Stage 8)", note: "Motion, speed, forces, mass vs weight, pressure and energy are covered in the Stage 8 'Forces and energy' unit (and extended in Stage 9).", url: "" }
+          ,
+            { type: "book", enrichment: true, title: "What If? Serious Scientific Answers to Absurd Hypothetical Questions", author: "Randall Munroe", chapter: "(browse questions)", note: "Enrichment read (great for ages 11–13): forces, motion and energy explored through hilarious 'what if' physics.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Which quantity has both size AND direction (a vector)?", options: ["Distance", "Speed", "Velocity", "Time"], answer: 2, explanation: "Velocity is a vector (speed with direction); distance and speed are scalars." },
@@ -564,6 +598,8 @@ window.CURRICULUM.grades.push({
             { type: "interactive", title: "The Physics Classroom: Motion graphs", provider: "The Physics Classroom", url: "https://www.physicsclassroom.com/class/1DKin", note: "Reading the slope of motion graphs." },
             { type: "interactive", title: "Khan Academy: One-dimensional motion", provider: "Khan Academy", url: "https://www.khanacademy.org/science/physics/one-dimensional-motion", note: "Graphs and acceleration practice." },
             { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Forces and energy (Stage 8)", note: "Motion, speed, forces, mass vs weight, pressure and energy are covered in the Stage 8 'Forces and energy' unit (and extended in Stage 9).", url: "" }
+          ,
+            { type: "book", enrichment: true, title: "What If? Serious Scientific Answers to Absurd Hypothetical Questions", author: "Randall Munroe", chapter: "(browse questions)", note: "Enrichment read (great for ages 11–13): forces, motion and energy explored through hilarious 'what if' physics.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Acceleration is defined as:", options: ["Speed x time", "Change in velocity ÷ time taken", "Distance ÷ time", "Force x mass"], answer: 1, explanation: "Acceleration = (final velocity − initial velocity) ÷ time. It tells you how quickly velocity changes." },
@@ -587,6 +623,8 @@ window.CURRICULUM.grades.push({
             { type: "interactive", title: "The Physics Classroom: 1D Kinematics", provider: "The Physics Classroom", url: "https://www.physicsclassroom.com/class/1DKin", note: "Worked examples with the motion equations." },
             { type: "interactive", title: "Khan Academy: Kinematic formulas", provider: "Khan Academy", url: "https://www.khanacademy.org/science/physics/one-dimensional-motion", note: "Practice using v = u + at and s = ut + ½at²." },
             { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Forces and energy (Stage 8)", note: "Motion, speed, forces, mass vs weight, pressure and energy are covered in the Stage 8 'Forces and energy' unit (and extended in Stage 9).", url: "" }
+          ,
+            { type: "book", enrichment: true, title: "What If? Serious Scientific Answers to Absurd Hypothetical Questions", author: "Randall Munroe", chapter: "(browse questions)", note: "Enrichment read (great for ages 11–13): forces, motion and energy explored through hilarious 'what if' physics.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "The equation for average speed is:", options: ["Speed = time ÷ distance", "Speed = distance × time", "Speed = distance ÷ time", "Speed = mass ÷ time"], answer: 2, explanation: "Average speed = total distance ÷ total time, measured in m/s." },
@@ -610,6 +648,8 @@ window.CURRICULUM.grades.push({
             { type: "interactive", title: "The Physics Classroom: Measurement", provider: "The Physics Classroom", url: "https://www.physicsclassroom.com/", note: "Reading instruments accurately." },
             { type: "interactive", title: "Khan Academy: Measurement & uncertainty", provider: "Khan Academy", url: "https://www.khanacademy.org/science/physics", note: "Sources of measurement error." },
             { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Forces and energy (Stage 8)", note: "Motion, speed, forces, mass vs weight, pressure and energy are covered in the Stage 8 'Forces and energy' unit (and extended in Stage 9).", url: "" }
+          ,
+            { type: "book", enrichment: true, title: "What If? Serious Scientific Answers to Absurd Hypothetical Questions", author: "Randall Munroe", chapter: "(browse questions)", note: "Enrichment read (great for ages 11–13): forces, motion and energy explored through hilarious 'what if' physics.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "The 'least count' of a measuring instrument is:", options: ["Its largest reading", "The smallest division it can measure", "Its total length", "Its zero error"], answer: 1, explanation: "Least count is the smallest interval the instrument can resolve — e.g. 1 mm on a ruler." },
@@ -633,6 +673,8 @@ window.CURRICULUM.grades.push({
             { type: "interactive", title: "PhET: Forces and Motion – Basics", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/forces-and-motion-basics", note: "The main types of force." },
             { type: "interactive", title: "Gravity, friction & other forces study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-677becabbef48191a678cbd2c430d4b9-gravity-friction-and-other-forces", note: "Ask questions about the different forces. (Needs a ChatGPT login.)" },
             { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Forces and energy (Stage 8)", note: "Motion, speed, forces, mass vs weight, pressure and energy are covered in the Stage 8 'Forces and energy' unit (and extended in Stage 9).", url: "" }
+          ,
+            { type: "book", enrichment: true, title: "What If? Serious Scientific Answers to Absurd Hypothetical Questions", author: "Randall Munroe", chapter: "(browse questions)", note: "Enrichment read (great for ages 11–13): forces, motion and energy explored through hilarious 'what if' physics.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Which of these is a non-contact force?", options: ["Friction", "Tension", "Gravity", "Drag"], answer: 2, explanation: "Gravity acts at a distance without touching; friction, tension and drag need contact." },
@@ -656,6 +698,8 @@ window.CURRICULUM.grades.push({
             { type: "interactive", title: "PhET: Forces and Motion – Basics", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/forces-and-motion-basics", note: "See balanced vs unbalanced forces in action." },
             { type: "interactive", title: "The Physics Classroom: Newton's Laws", provider: "The Physics Classroom", url: "https://www.physicsclassroom.com/class/newtlaws", note: "How net force changes motion." },
             { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Forces and energy (Stage 8)", note: "Motion, speed, forces, mass vs weight, pressure and energy are covered in the Stage 8 'Forces and energy' unit (and extended in Stage 9).", url: "" }
+          ,
+            { type: "book", enrichment: true, title: "What If? Serious Scientific Answers to Absurd Hypothetical Questions", author: "Randall Munroe", chapter: "(browse questions)", note: "Enrichment read (great for ages 11–13): forces, motion and energy explored through hilarious 'what if' physics.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Friction and air resistance are examples of:", options: ["Non-contact forces", "Contact forces", "Magnetic forces", "Nuclear forces"], answer: 1, explanation: "They act through direct contact; gravity and magnetism are non-contact." },
@@ -679,6 +723,8 @@ window.CURRICULUM.grades.push({
             { type: "interactive", title: "Khan Academy: Free-body diagrams", provider: "Khan Academy", url: "https://www.khanacademy.org/science/physics", note: "Drawing and labelling force arrows." },
             { type: "interactive", title: "The Physics Classroom: Free-body diagrams", provider: "The Physics Classroom", url: "https://www.physicsclassroom.com/class/newtlaws", note: "Practice identifying forces on objects." },
             { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Forces and energy (Stage 8)", note: "Motion, speed, forces, mass vs weight, pressure and energy are covered in the Stage 8 'Forces and energy' unit (and extended in Stage 9).", url: "" }
+          ,
+            { type: "book", enrichment: true, title: "What If? Serious Scientific Answers to Absurd Hypothetical Questions", author: "Randall Munroe", chapter: "(browse questions)", note: "Enrichment read (great for ages 11–13): forces, motion and energy explored through hilarious 'what if' physics.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "A free-body diagram shows:", options: ["The insides of an object", "All forces acting on an object as arrows", "The speed of an object", "The path of an object"], answer: 1, explanation: "A free-body diagram represents an object as a box or dot and draws all forces acting on it as labelled arrows." },
@@ -702,6 +748,8 @@ window.CURRICULUM.grades.push({
             { type: "interactive", title: "The Physics Classroom: Mass & weight", provider: "The Physics Classroom", url: "https://www.physicsclassroom.com/class/newtlaws", note: "Why weight changes with gravity but mass doesn't." },
             { type: "interactive", title: "Khan Academy: Mass & weight", provider: "Khan Academy", url: "https://www.khanacademy.org/science/physics", note: "Calculating weight with W = mg." },
             { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Forces and energy (Stage 8)", note: "Motion, speed, forces, mass vs weight, pressure and energy are covered in the Stage 8 'Forces and energy' unit (and extended in Stage 9).", url: "" }
+          ,
+            { type: "book", enrichment: true, title: "What If? Serious Scientific Answers to Absurd Hypothetical Questions", author: "Randall Munroe", chapter: "(browse questions)", note: "Enrichment read (great for ages 11–13): forces, motion and energy explored through hilarious 'what if' physics.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "Weight is a force caused by gravity, while mass is the amount of matter in an object.", answer: true, explanation: "Mass (kg) stays the same everywhere; weight (N) depends on gravity." },
@@ -725,6 +773,8 @@ window.CURRICULUM.grades.push({
             { type: "reading", title: "CK-12: Pressure & Pascal's Principle", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/physics/", note: "Fluid pressure and hydraulics." },
             { type: "interactive", title: "Khan Academy: Fluids & pressure", provider: "Khan Academy", url: "https://www.khanacademy.org/science/physics", note: "Pressure in fluids and Pascal's law." },
             { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Forces and energy (Stage 8)", note: "Motion, speed, forces, mass vs weight, pressure and energy are covered in the Stage 8 'Forces and energy' unit (and extended in Stage 9).", url: "" }
+          ,
+            { type: "book", enrichment: true, title: "What If? Serious Scientific Answers to Absurd Hypothetical Questions", author: "Randall Munroe", chapter: "(browse questions)", note: "Enrichment read (great for ages 11–13): forces, motion and energy explored through hilarious 'what if' physics.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "The unit of pressure is the:", options: ["Newton", "Kilogram", "Pascal", "Metre"], answer: 2, explanation: "Pressure is measured in Pascals (Pa), where 1 Pa = 1 N/m²." },
@@ -749,6 +799,8 @@ window.CURRICULUM.grades.push({
             { type: "video", title: "The physics behind lift cables (BBC, 4 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=b2D4nhUOGW0", note: "Real machines using pulleys to gain mechanical advantage." },
             { type: "video", title: "The physics behind Einstein's E = mc² (TED-Ed, 5 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=gkTVlYDB21g", note: "Enrichment: the deep link between mass and energy." },
             { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Forces and energy (Stage 8)", note: "Motion, speed, forces, mass vs weight, pressure and energy are covered in the Stage 8 'Forces and energy' unit (and extended in Stage 9).", url: "" }
+          ,
+            { type: "book", enrichment: true, title: "What If? Serious Scientific Answers to Absurd Hypothetical Questions", author: "Randall Munroe", chapter: "(browse questions)", note: "Enrichment read (great for ages 11–13): forces, motion and energy explored through hilarious 'what if' physics.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "A simple machine helps us by:", options: ["Creating energy from nothing", "Multiplying force, speed or distance, making tasks easier", "Reducing the total work done", "Increasing friction"], answer: 1, explanation: "Simple machines (levers, pulleys, ramps, etc.) allow us to apply a smaller force over a larger distance to do the same work." },
@@ -787,6 +839,8 @@ window.CURRICULUM.grades.push({
             { type: "video", title: "Is the Amazon Rainforest disappearing? (TED-Ed, 5 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=Qxby1J5bnPQ", note: "A real ecosystem under pressure." },
             { type: "video", title: "Inside the monarch butterfly migration mystery (12 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=hrXzY4DP_c8", note: "Energy, life cycles and ecosystems across a continent." },
             { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Ecosystems; Materials and cycles on Earth (Stage 8)", note: "Energy flow and food chains are covered in 'Ecosystems' and the rock cycle and Earth's systems in 'Materials and cycles on Earth'; data-handling skills sit in the 'Thinking & Working Scientifically' strand.", url: "" }
+          ,
+            { type: "book", enrichment: true, title: "A Short History of Nearly Everything", author: "Bill Bryson (young-reader ed. available)", chapter: "Part IV 'Dangerous Planet'", note: "Enrichment read (accessible stretch): Earth's restless geology — volcanoes, quakes and the rock cycle.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "In a food chain, the arrows show the direction of:", options: ["Energy flow", "Animal movement", "Water flow", "Time"], answer: 0, explanation: "Arrows point from the eaten to the eater, showing energy transfer." },
@@ -810,6 +864,8 @@ window.CURRICULUM.grades.push({
             { type: "reading", title: "CK-12: Energy pyramids & the 10% rule", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "Why energy shrinks up the levels." },
             { type: "interactive", title: "PhET: Natural Selection & ecosystems", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/filter?subjects=biology", note: "Model populations and energy in ecosystems." },
             { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Ecosystems; Materials and cycles on Earth (Stage 8)", note: "Energy flow and food chains are covered in 'Ecosystems' and the rock cycle and Earth's systems in 'Materials and cycles on Earth'; data-handling skills sit in the 'Thinking & Working Scientifically' strand.", url: "" }
+          ,
+            { type: "book", enrichment: true, title: "A Short History of Nearly Everything", author: "Bill Bryson (young-reader ed. available)", chapter: "Part IV 'Dangerous Planet'", note: "Enrichment read (accessible stretch): Earth's restless geology — volcanoes, quakes and the rock cycle.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Roughly how much energy passes to the next trophic level?", options: ["100%", "50%", "10%", "0%"], answer: 2, explanation: "About 10% is passed on; the rest is lost as heat, movement and waste." },
@@ -833,6 +889,8 @@ window.CURRICULUM.grades.push({
             { type: "reading", title: "CK-12: The rock cycle & weathering", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/earth-science/", note: "How rocks form, break down and reform." },
             { type: "podcast", title: "The Secrets Everyday Rocks Keep – Short Wave", provider: "📚 School's Library · Apple Podcasts", url: "https://podcasts.apple.com/us/podcast/the-secrets-everyday-rocks-keep/id1482575855?i=1000735094795", note: "What ordinary rocks reveal about Earth's history." },
             { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Ecosystems; Materials and cycles on Earth (Stage 8)", note: "Energy flow and food chains are covered in 'Ecosystems' and the rock cycle and Earth's systems in 'Materials and cycles on Earth'; data-handling skills sit in the 'Thinking & Working Scientifically' strand.", url: "" }
+          ,
+            { type: "book", enrichment: true, title: "A Short History of Nearly Everything", author: "Bill Bryson (young-reader ed. available)", chapter: "Part IV 'Dangerous Planet'", note: "Enrichment read (accessible stretch): Earth's restless geology — volcanoes, quakes and the rock cycle.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "Weathering breaks rock down in place, while erosion moves the broken pieces away.", answer: true, explanation: "Weathering = break down; erosion = transport by wind, water or ice." },
@@ -857,6 +915,8 @@ window.CURRICULUM.grades.push({
             { type: "video", title: "Inside Biosphere 2: the world's largest Earth-science experiment (16 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=-yAcD3wuY2Q", note: "A sealed model of Earth's systems — see how air, water, soil and life interact." },
             { type: "interactive", title: "NASA Climate Kids: Earth's systems", provider: "NASA Climate Kids", url: "https://climatekids.nasa.gov/", note: "How air, water, rock and life interact." },
             { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Ecosystems; Materials and cycles on Earth (Stage 8)", note: "Energy flow and food chains are covered in 'Ecosystems' and the rock cycle and Earth's systems in 'Materials and cycles on Earth'; data-handling skills sit in the 'Thinking & Working Scientifically' strand.", url: "" }
+          ,
+            { type: "book", enrichment: true, title: "A Short History of Nearly Everything", author: "Bill Bryson (young-reader ed. available)", chapter: "Part IV 'Dangerous Planet'", note: "Enrichment read (accessible stretch): Earth's restless geology — volcanoes, quakes and the rock cycle.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Which pair correctly names two of Earth's 'spheres'?", options: ["Atmosphere & hydrosphere", "Stratosphere & ionosphere only", "Biosphere & exosphere only", "Lithosphere & sonosphere"], answer: 0, explanation: "Earth's four main systems are the atmosphere (air), hydrosphere (water), geosphere/lithosphere (rock) and biosphere (life)." },
@@ -880,6 +940,8 @@ window.CURRICULUM.grades.push({
             { type: "reading", title: "NOAA SciJinks: Weather maps & fronts", provider: "NOAA SciJinks", url: "https://scijinks.gov/", note: "Isobars, fronts and pressure systems." },
             { type: "interactive", title: "NASA Climate Kids: Weather & climate", provider: "NASA Climate Kids", url: "https://climatekids.nasa.gov/", note: "Reading weather and climate." },
             { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Ecosystems; Materials and cycles on Earth (Stage 8)", note: "Energy flow and food chains are covered in 'Ecosystems' and the rock cycle and Earth's systems in 'Materials and cycles on Earth'; data-handling skills sit in the 'Thinking & Working Scientifically' strand.", url: "" }
+          ,
+            { type: "book", enrichment: true, title: "A Short History of Nearly Everything", author: "Bill Bryson (young-reader ed. available)", chapter: "Part IV 'Dangerous Planet'", note: "Enrichment read (accessible stretch): Earth's restless geology — volcanoes, quakes and the rock cycle.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "What does H on a weather map usually represent?", options: ["High pressure (anticyclone)", "Humidity", "Haze", "Hail warning"], answer: 0, explanation: "H marks a high-pressure centre (anticyclone), usually associated with settled, clear weather." },
@@ -903,6 +965,8 @@ window.CURRICULUM.grades.push({
             { type: "reading", title: "NOAA SciJinks: What controls climate", provider: "NOAA SciJinks", url: "https://scijinks.gov/", note: "Latitude, altitude and oceans as climate drivers." },
             { type: "video", title: "This $3BN Mega-Dam Changes the Weather (11 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=vZiL--dFqCg", note: "How large water bodies can influence local climate." },
             { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Ecosystems; Materials and cycles on Earth (Stage 8)", note: "Energy flow and food chains are covered in 'Ecosystems' and the rock cycle and Earth's systems in 'Materials and cycles on Earth'; data-handling skills sit in the 'Thinking & Working Scientifically' strand.", url: "" }
+          ,
+            { type: "book", enrichment: true, title: "A Short History of Nearly Everything", author: "Bill Bryson (young-reader ed. available)", chapter: "Part IV 'Dangerous Planet'", note: "Enrichment read (accessible stretch): Earth's restless geology — volcanoes, quakes and the rock cycle.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Why are places near the equator generally hotter than places near the poles?", options: ["They are closer to the Sun", "Sunlight hits them at a more direct angle, concentrating energy", "The equator has no clouds", "The poles have more water"], answer: 1, explanation: "At low latitudes sunlight strikes at a high angle, concentrating solar energy over a smaller area. At high latitudes, the same energy spreads over a much larger surface area, making it cooler." },
@@ -926,6 +990,8 @@ window.CURRICULUM.grades.push({
             { type: "interactive", title: "Khan Academy: Sampling & bias", provider: "Khan Academy", url: "https://www.khanacademy.org/math/statistics-probability", note: "What makes a sample fair and reliable." },
             { type: "interactive", title: "Math is Fun: Data & sampling", provider: "Math is Fun", url: "https://www.mathsisfun.com/data/index.html", note: "Fair, representative samples." },
             { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Ecosystems; Materials and cycles on Earth (Stage 8)", note: "Energy flow and food chains are covered in 'Ecosystems' and the rock cycle and Earth's systems in 'Materials and cycles on Earth'; data-handling skills sit in the 'Thinking & Working Scientifically' strand.", url: "" }
+          ,
+            { type: "book", enrichment: true, title: "A Short History of Nearly Everything", author: "Bill Bryson (young-reader ed. available)", chapter: "Part IV 'Dangerous Planet'", note: "Enrichment read (accessible stretch): Earth's restless geology — volcanoes, quakes and the rock cycle.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "A scientist tests a new fertiliser by applying it to 10 plants, all the same species. What does a 'reliable' result mean?", options: ["The result matches what the scientist expected", "The result can be reproduced if the experiment is repeated", "Only one plant responded well", "The experiment was fast"], answer: 1, explanation: "Reliability means getting consistent results when the experiment is repeated — not just matching expectations." },
@@ -949,6 +1015,8 @@ window.CURRICULUM.grades.push({
             { type: "interactive", title: "Khan Academy: Interpreting scatter plots", provider: "Khan Academy", url: "https://www.khanacademy.org/math/statistics-probability", note: "Reading correlation from data." },
             { type: "interactive", title: "Math is Fun: Scatter Plots", provider: "Math is Fun", url: "https://www.mathsisfun.com/data/scatter-xy-plots.html", note: "Reading correlation from data." },
             { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Ecosystems; Materials and cycles on Earth (Stage 8)", note: "Energy flow and food chains are covered in 'Ecosystems' and the rock cycle and Earth's systems in 'Materials and cycles on Earth'; data-handling skills sit in the 'Thinking & Working Scientifically' strand.", url: "" }
+          ,
+            { type: "book", enrichment: true, title: "A Short History of Nearly Everything", author: "Bill Bryson (young-reader ed. available)", chapter: "Part IV 'Dangerous Planet'", note: "Enrichment read (accessible stretch): Earth's restless geology — volcanoes, quakes and the rock cycle.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "What does a scatter plot show?", options: ["A bar of data for each category", "Pairs of data points plotted to show a relationship between two variables", "A line showing change over time only", "A pie divided by frequency"], answer: 1, explanation: "A scatter plot places each pair of values as a point on a graph to reveal patterns or relationships between two variables." },
@@ -972,6 +1040,8 @@ window.CURRICULUM.grades.push({
             { type: "interactive", title: "Khan Academy: Correlation & causation", provider: "Khan Academy", url: "https://www.khanacademy.org/math/statistics-probability", note: "Why correlation isn't proof of cause." },
             { type: "reading", title: "NOAA SciJinks: Using data as evidence", provider: "NOAA SciJinks", url: "https://scijinks.gov/", note: "Backing claims with real environmental data." },
             { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Ecosystems; Materials and cycles on Earth (Stage 8)", note: "Energy flow and food chains are covered in 'Ecosystems' and the rock cycle and Earth's systems in 'Materials and cycles on Earth'; data-handling skills sit in the 'Thinking & Working Scientifically' strand.", url: "" }
+          ,
+            { type: "book", enrichment: true, title: "A Short History of Nearly Everything", author: "Bill Bryson (young-reader ed. available)", chapter: "Part IV 'Dangerous Planet'", note: "Enrichment read (accessible stretch): Earth's restless geology — volcanoes, quakes and the rock cycle.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Which of the following is an example of using statistics to support a scientific claim?", options: ["Saying 'I think pollution is bad'", "Showing that average CO2 levels rose from 315 ppm in 1960 to 420 ppm in 2023", "Drawing a picture of a smoky factory", "Asking a friend their opinion"], answer: 1, explanation: "Statistics (measured data values) provide quantitative evidence to back up a scientific claim — much stronger than opinion." },
