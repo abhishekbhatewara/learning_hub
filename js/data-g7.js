@@ -24,7 +24,8 @@ window.CURRICULUM.grades.push({
           resources: [
             { type: "reading", title: "CK-12: Biomolecules", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "The four biomolecules and their units." },
             { type: "interactive", title: "Khan Academy: Nutrition & biomolecules", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "Food groups and the molecules in food." },
-            { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Diet and growth (Stage 8)", note: "Nutrients, a balanced diet, the digestive system and related health topics are covered in the Stage 8 'Diet and growth' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Diet and growth (Stage 8)", note: "Nutrients, a balanced diet, the digestive system and related health topics are covered in the Stage 8 'Diet and growth' unit.", url: "" },
+            { type: "book", enrichment: true, title: "The Body: A Guide for Occupants", author: "Bill Bryson", chapter: "'Food, Glorious Food' & 'The Guts'", note: "Enrichment read (accessible stretch): what food actually does inside you, from mouth to gut.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "The building blocks of proteins are:", options: ["Fatty acids", "Amino acids", "Monosaccharides", "Nucleotides"], answer: 1, explanation: "Proteins are chains of amino acids." },
@@ -47,7 +48,8 @@ window.CURRICULUM.grades.push({
           resources: [
             { type: "reading", title: "CK-12: Biochemical molecules", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "How each molecule's structure suits its job." },
             { type: "interactive", title: "Khan Academy: Macromolecules", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "Structure–function of carbs, proteins, lipids and nucleic acids." },
-            { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Diet and growth (Stage 8)", note: "Nutrients, a balanced diet, the digestive system and related health topics are covered in the Stage 8 'Diet and growth' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Diet and growth (Stage 8)", note: "Nutrients, a balanced diet, the digestive system and related health topics are covered in the Stage 8 'Diet and growth' unit.", url: "" },
+            { type: "book", enrichment: true, title: "The Body: A Guide for Occupants", author: "Bill Bryson", chapter: "'Food, Glorious Food' & 'The Guts'", note: "Enrichment read (accessible stretch): what food actually does inside you, from mouth to gut.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Which biomolecule provides most of the body's immediate energy during exercise?", options: ["Lipid", "Protein", "Carbohydrate", "Nucleic acid"], answer: 2, explanation: "Carbohydrates (glucose) are the preferred quick-release energy source during physical activity." },
@@ -70,7 +72,8 @@ window.CURRICULUM.grades.push({
           resources: [
             { type: "reading", title: "CK-12: Food & nutrients", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "Macronutrients, vitamins and minerals." },
             { type: "interactive", title: "Khan Academy: Nutrition", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "Roles of nutrients in the body." },
-            { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Diet and growth (Stage 8)", note: "Nutrients, a balanced diet, the digestive system and related health topics are covered in the Stage 8 'Diet and growth' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Diet and growth (Stage 8)", note: "Nutrients, a balanced diet, the digestive system and related health topics are covered in the Stage 8 'Diet and growth' unit.", url: "" },
+            { type: "book", enrichment: true, title: "The Body: A Guide for Occupants", author: "Bill Bryson", chapter: "'Food, Glorious Food' & 'The Guts'", note: "Enrichment read (accessible stretch): what food actually does inside you, from mouth to gut.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "Vitamins and minerals are micronutrients, needed only in small amounts.", answer: true, explanation: "We need them in tiny quantities, but they are still essential." },
@@ -93,7 +96,8 @@ window.CURRICULUM.grades.push({
           resources: [
             { type: "reading", title: "CK-12: Vitamins, minerals & deficiency", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "What happens when nutrients are missing." },
             { type: "interactive", title: "Khan Academy: Deficiency diseases", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "Nutrient roles and deficiency effects." },
-            { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Diet and growth (Stage 8)", note: "Nutrients, a balanced diet, the digestive system and related health topics are covered in the Stage 8 'Diet and growth' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Diet and growth (Stage 8)", note: "Nutrients, a balanced diet, the digestive system and related health topics are covered in the Stage 8 'Diet and growth' unit.", url: "" },
+            { type: "book", enrichment: true, title: "The Body: A Guide for Occupants", author: "Bill Bryson", chapter: "'Food, Glorious Food' & 'The Guts'", note: "Enrichment read (accessible stretch): what food actually does inside you, from mouth to gut.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Which deficiency disease is caused by a lack of vitamin C?", options: ["Rickets", "Scurvy", "Anaemia", "Goitre"], answer: 1, explanation: "Vitamin C deficiency causes scurvy (bleeding gums, poor wound healing)." },
@@ -116,7 +120,8 @@ window.CURRICULUM.grades.push({
           resources: [
             { type: "interactive", title: "Khan Academy: Energy & a balanced diet", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "How dietary needs vary between people." },
             { type: "podcast", title: "Brains On! – Food & the body", provider: "Brains On! Science Podcast", url: "https://www.brainson.org/", note: "Kid-friendly audio on food and energy." },
-            { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Diet and growth (Stage 8)", note: "Nutrients, a balanced diet, the digestive system and related health topics are covered in the Stage 8 'Diet and growth' unit.", url: "" }
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Diet and growth (Stage 8)", note: "Nutrients, a balanced diet, the digestive system and related health topics are covered in the Stage 8 'Diet and growth' unit.", url: "" },
+            { type: "book", enrichment: true, title: "The Body: A Guide for Occupants", author: "Bill Bryson", chapter: "'Food, Glorious Food' & 'The Guts'", note: "Enrichment read (accessible stretch): what food actually does inside you, from mouth to gut.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Which of the following is the best description of a balanced diet?", options: ["Eating only fruit and vegetables", "Eating correct amounts of all food groups needed for health", "Eating the same food every day", "Eating nothing but protein"], answer: 1, explanation: "A balanced diet provides all macronutrients, micronutrients, fibre and water in appropriate proportions for health." },
