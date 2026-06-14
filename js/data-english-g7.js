@@ -501,7 +501,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Write a narrative, including an alternate ending to a known story.",
           resources: [
             { type: "reading", title: "Narrative writing", provider: "ReadWriteThink", url: "https://www.readwritethink.org/", note: "Crafting and reshaping stories." },
-            { type: "reading", title: "Narrative techniques", provider: "Khan Academy", url: "https://www.khanacademy.org/ela", note: "Building engaging narratives." }
+            { type: "reading", title: "Narrative techniques", provider: "Khan Academy", url: "https://www.khanacademy.org/ela", note: "Building engaging narratives." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Story-Writing", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Story-Writing'.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "An 'alternate ending' keeps a story's characters and setting but changes how it finishes.", answer: true, explanation: "It re-imagines the resolution while staying true to the rest." },
@@ -523,7 +524,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Write a CEA paragraph: Claim, Evidence, Analysis.",
           resources: [
             { type: "reading", title: "Claim–Evidence–Analysis", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/", note: "Structuring an analytical paragraph." },
-            { type: "reading", title: "Using textual evidence", provider: "Khan Academy", url: "https://www.khanacademy.org/ela", note: "Backing claims with evidence." }
+            { type: "reading", title: "Using textual evidence", provider: "Khan Academy", url: "https://www.khanacademy.org/ela", note: "Backing claims with evidence." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Paragraph-Writing", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Paragraph-Writing'.", url: "" }
           ],
           quiz: [
             { type: "match", difficulty: "medium", q: "Match each part of a CEA paragraph to its job.", pairs: [["Claim", "States your point/argument"], ["Evidence", "A quote or detail from the text"], ["Analysis", "Explains how the evidence proves the claim"]], explanation: "CEA = Claim, Evidence, Analysis." },
@@ -545,7 +547,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Embed quotes and facts and explain the evidence.",
           resources: [
             { type: "reading", title: "Integrating quotations", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/research_and_citation/using_research/quoting_paraphrasing_and_summarizing/index.html", note: "Smoothly embedding evidence." },
-            { type: "reading", title: "Using evidence", provider: "Khan Academy", url: "https://www.khanacademy.org/ela", note: "Quoting and explaining support." }
+            { type: "reading", title: "Using evidence", provider: "Khan Academy", url: "https://www.khanacademy.org/ela", note: "Quoting and explaining support." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Paragraph-Writing", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Paragraph-Writing'.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "A quote should be introduced and explained, not just dropped into a paragraph on its own.", answer: true, explanation: "Embedded quotes need framing and explanation." },
@@ -567,7 +570,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Write strong topic sentences and maintain paragraph unity.",
           resources: [
             { type: "reading", title: "Topic sentences & unity", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/", note: "Keeping paragraphs focused." },
-            { type: "reading", title: "Paragraph structure", provider: "Khan Academy", url: "https://www.khanacademy.org/ela", note: "Building unified paragraphs." }
+            { type: "reading", title: "Paragraph structure", provider: "Khan Academy", url: "https://www.khanacademy.org/ela", note: "Building unified paragraphs." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Paragraph-Writing", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Paragraph-Writing'.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "'Paragraph unity' means:", options: ["every sentence supports one main idea", "the paragraph is very long", "there is no topic sentence", "ideas keep changing"], answer: 0, explanation: "Unity = all sentences relate to a single main idea." },
@@ -589,7 +593,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Write a clear thesis statement and outline an essay.",
           resources: [
             { type: "reading", title: "Thesis statements", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/the_writing_process/thesis_statement_tips.html", note: "How to craft a strong thesis." },
-            { type: "reading", title: "Essay outlining", provider: "Khan Academy", url: "https://www.khanacademy.org/ela", note: "Planning an essay's structure." }
+            { type: "reading", title: "Essay outlining", provider: "Khan Academy", url: "https://www.khanacademy.org/ela", note: "Planning an essay's structure." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Essay-Writing", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Essay-Writing'.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "A thesis statement is:", options: ["a random fact", "the main argument or central claim of an essay", "the conclusion only", "a quotation"], answer: 1, explanation: "The thesis states the essay's main argument, usually in the introduction." },
@@ -611,7 +616,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Use transitions to create flow between ideas and paragraphs.",
           resources: [
             { type: "reading", title: "Transitions", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/mechanics/transitions_and_transitional_devices/index.html", note: "Linking ideas smoothly." },
-            { type: "reading", title: "Coherence & flow", provider: "Khan Academy", url: "https://www.khanacademy.org/ela", note: "Making writing flow." }
+            { type: "reading", title: "Coherence & flow", provider: "Khan Academy", url: "https://www.khanacademy.org/ela", note: "Making writing flow." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Paragraph-Writing", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Paragraph-Writing'.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Which transition signals CONTRAST?", options: ["furthermore", "however", "for example", "first"], answer: 1, explanation: "'However' signals a contrast between ideas." },
@@ -633,7 +639,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Write expository and literary analysis essays.",
           resources: [
             { type: "reading", title: "Expository writing", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/", note: "Explaining and informing in an essay." },
-            { type: "reading", title: "Literary analysis", provider: "CommonLit", url: "https://www.commonlit.org/", note: "Analysing texts in essay form." }
+            { type: "reading", title: "Literary analysis", provider: "CommonLit", url: "https://www.commonlit.org/", note: "Analysing texts in essay form." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Essay-Writing", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Essay-Writing'.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "An EXPOSITORY essay mainly aims to:", options: ["tell a personal story", "explain or inform about a topic", "sell a product", "rhyme"], answer: 1, explanation: "Expository essays explain or inform." },
@@ -655,7 +662,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Draft a persuasive speech.",
           resources: [
             { type: "reading", title: "Persuasive writing & speeches", provider: "ReadWriteThink", url: "https://www.readwritethink.org/", note: "Building a persuasive case for an audience." },
-            { type: "reading", title: "Rhetoric & persuasion", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/", note: "Appeals and structure for speeches." }
+            { type: "reading", title: "Rhetoric & persuasion", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/", note: "Appeals and structure for speeches." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Speech-Writing", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Speech-Writing'.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "A persuasive speech tries to convince an audience to think or act in a certain way.", answer: true, explanation: "Persuasion is the goal of such a speech." },
@@ -677,7 +685,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Revise and edit writing for clarity and correctness.",
           resources: [
             { type: "reading", title: "Revising & editing", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/the_writing_process/proofreading/index.html", note: "Improving drafts step by step." },
-            { type: "reading", title: "Editing your work", provider: "Khan Academy", url: "https://www.khanacademy.org/ela", note: "Polishing writing." }
+            { type: "reading", title: "Editing your work", provider: "Khan Academy", url: "https://www.khanacademy.org/ela", note: "Polishing writing." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Essay-Writing", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Essay-Writing'.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "What is the difference between revising and editing?", options: ["They are exactly the same", "Revising improves ideas/structure; editing fixes grammar, spelling and punctuation", "Editing comes before writing", "Revising means deleting everything"], answer: 1, explanation: "Revising = big-picture ideas/organisation; editing = surface correctness." },
@@ -711,7 +720,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Review the parts of speech (nouns, pronouns, articles, adjectives).",
           resources: [
             { type: "reading", title: "Parts of speech", provider: "Khan Academy", url: "https://www.khanacademy.org/humanities/grammar", note: "Review of word classes." },
-            { type: "reading", title: "Parts of speech overview", provider: "Grammarly", url: "https://www.grammarly.com/blog/parts-of-speech/", note: "All eight parts of speech explained." }
+            { type: "reading", title: "Parts of speech overview", provider: "Grammarly", url: "https://www.grammarly.com/blog/parts-of-speech/", note: "All eight parts of speech explained." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Parts of Speech", note: "This grammar point is covered in Wren & Martin's grammar section, 'Parts of Speech'.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "A word that names a person, place, thing or idea is a:", options: ["verb", "noun", "adjective", "adverb"], answer: 1, explanation: "Nouns name people, places, things and ideas." },
@@ -733,7 +743,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Use degrees of comparison (positive, comparative, superlative).",
           resources: [
             { type: "reading", title: "Comparatives & superlatives", provider: "Khan Academy", url: "https://www.khanacademy.org/humanities/grammar", note: "Comparing with -er/-est and more/most." },
-            { type: "reading", title: "Degrees of comparison", provider: "Grammarly", url: "https://www.grammarly.com/blog/comparative-and-superlative-adjectives/", note: "Rules and examples." }
+            { type: "reading", title: "Degrees of comparison", provider: "Grammarly", url: "https://www.grammarly.com/blog/comparative-and-superlative-adjectives/", note: "Rules and examples." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "The Adjective — Degrees of Comparison", note: "This grammar point is covered in Wren & Martin's grammar section, 'The Adjective — Degrees of Comparison'.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "The superlative of 'tall' is:", options: ["tall", "taller", "tallest", "more tall"], answer: 2, explanation: "Superlative = tallest (the most)." },
@@ -755,7 +766,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Identify and use adverbs.",
           resources: [
             { type: "reading", title: "Adverbs", provider: "Khan Academy", url: "https://www.khanacademy.org/humanities/grammar", note: "What adverbs modify and how." },
-            { type: "reading", title: "Adverbs explained", provider: "Grammarly", url: "https://www.grammarly.com/blog/adverb/", note: "Adverbs of manner, time, place and degree." }
+            { type: "reading", title: "Adverbs explained", provider: "Grammarly", url: "https://www.grammarly.com/blog/adverb/", note: "Adverbs of manner, time, place and degree." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "The Adverb", note: "This grammar point is covered in Wren & Martin's grammar section, 'The Adverb'.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "An adverb most often describes a:", options: ["noun", "verb (how, when, where, to what degree)", "article", "preposition only"], answer: 1, explanation: "Adverbs typically modify verbs (and adjectives/other adverbs)." },
@@ -777,7 +789,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Fix sentence fragments and run-on sentences.",
           resources: [
             { type: "reading", title: "Fragments & run-ons", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/mechanics/sentence_fragments.html", note: "Identifying and fixing both." },
-            { type: "reading", title: "Run-on sentences", provider: "Grammarly", url: "https://www.grammarly.com/blog/run-on-sentence/", note: "How to repair run-ons." }
+            { type: "reading", title: "Run-on sentences", provider: "Grammarly", url: "https://www.grammarly.com/blog/run-on-sentence/", note: "How to repair run-ons." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "The Sentence; Analysis of Sentences", note: "This grammar point is covered in Wren & Martin's grammar section, 'The Sentence; Analysis of Sentences'.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Which is a sentence fragment?", options: ["The cat slept.", "Running through the rain.", "She laughed.", "We won."], answer: 1, explanation: "'Running through the rain' lacks a subject and complete thought." },
@@ -799,7 +812,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Identify independent and dependent clauses and use FANBOYS conjunctions.",
           resources: [
             { type: "reading", title: "Clauses & conjunctions", provider: "Khan Academy", url: "https://www.khanacademy.org/humanities/grammar", note: "Independent vs dependent; coordinating conjunctions." },
-            { type: "reading", title: "FANBOYS", provider: "Grammarly", url: "https://www.grammarly.com/blog/coordinating-conjunctions/", note: "For, And, Nor, But, Or, Yet, So." }
+            { type: "reading", title: "FANBOYS", provider: "Grammarly", url: "https://www.grammarly.com/blog/coordinating-conjunctions/", note: "For, And, Nor, But, Or, Yet, So." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Analysis of Sentences — Clauses; The Conjunction", note: "This grammar point is covered in Wren & Martin's grammar section, 'Analysis of Sentences — Clauses; The Conjunction'.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "An INDEPENDENT clause:", options: ["cannot stand alone", "can stand alone as a complete sentence", "has no verb", "is always a question"], answer: 1, explanation: "An independent clause expresses a complete thought on its own." },
@@ -821,7 +835,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Use commas and semicolons correctly.",
           resources: [
             { type: "reading", title: "Commas", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/punctuation/commas/index.html", note: "Comma rules with examples." },
-            { type: "reading", title: "Semicolons", provider: "Grammarly", url: "https://www.grammarly.com/blog/semicolon/", note: "When and how to use a semicolon." }
+            { type: "reading", title: "Semicolons", provider: "Grammarly", url: "https://www.grammarly.com/blog/semicolon/", note: "When and how to use a semicolon." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Punctuation", note: "This grammar point is covered in Wren & Martin's grammar section, 'Punctuation'.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "Commas are used to separate items in a list of three or more.", answer: true, explanation: "Lists use commas to separate items." },
@@ -843,7 +858,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Build simple, compound and complex sentences.",
           resources: [
             { type: "reading", title: "Sentence types", provider: "Khan Academy", url: "https://www.khanacademy.org/humanities/grammar", note: "Simple, compound and complex sentences." },
-            { type: "reading", title: "Sentence structure", provider: "Grammarly", url: "https://www.grammarly.com/blog/sentence-structure/", note: "Combining clauses." }
+            { type: "reading", title: "Sentence structure", provider: "Grammarly", url: "https://www.grammarly.com/blog/sentence-structure/", note: "Combining clauses." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Analysis of Sentences — Kinds of Sentences", note: "This grammar point is covered in Wren & Martin's grammar section, 'Analysis of Sentences — Kinds of Sentences'.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "A SIMPLE sentence has:", options: ["one independent clause", "two independent clauses", "a dependent clause only", "no verb"], answer: 0, explanation: "A simple sentence is a single independent clause." },
@@ -865,7 +881,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Use prepositional phrases and appositives.",
           resources: [
             { type: "reading", title: "Prepositional phrases", provider: "Khan Academy", url: "https://www.khanacademy.org/humanities/grammar", note: "Phrases beginning with prepositions." },
-            { type: "reading", title: "Appositives", provider: "Grammarly", url: "https://www.grammarly.com/blog/appositive/", note: "Renaming nouns with appositives." }
+            { type: "reading", title: "Appositives", provider: "Grammarly", url: "https://www.grammarly.com/blog/appositive/", note: "Renaming nouns with appositives." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "The Preposition; The Phrase", note: "This grammar point is covered in Wren & Martin's grammar section, 'The Preposition; The Phrase'.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "A preposition is a word like:", options: ["run, jump", "in, on, under, beside", "happy, sad", "quickly"], answer: 1, explanation: "Prepositions show position or relationship (in, on, under...)." },
@@ -887,7 +904,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Use apostrophes correctly (possession and contractions).",
           resources: [
             { type: "reading", title: "Apostrophes", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/punctuation/apostrophe_introduction.html", note: "Possession and contractions." },
-            { type: "reading", title: "Apostrophe rules", provider: "Grammarly", url: "https://www.grammarly.com/blog/apostrophe/", note: "Common apostrophe mistakes." }
+            { type: "reading", title: "Apostrophe rules", provider: "Grammarly", url: "https://www.grammarly.com/blog/apostrophe/", note: "Common apostrophe mistakes." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Punctuation — The Apostrophe", note: "This grammar point is covered in Wren & Martin's grammar section, 'Punctuation — The Apostrophe'.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Which shows correct possession?", options: ["the dogs bone (one dog)", "the dog's bone", "the dogs' bone (one dog)", "the dog,s bone"], answer: 1, explanation: "One dog owning a bone = the dog's bone." },
@@ -909,7 +927,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Edit for sentence variety to improve style.",
           resources: [
             { type: "reading", title: "Sentence variety", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/mechanics/sentence_variety.html", note: "Varying length and structure." },
-            { type: "reading", title: "Improving style", provider: "Khan Academy", url: "https://www.khanacademy.org/humanities/grammar", note: "Making writing flow with varied sentences." }
+            { type: "reading", title: "Improving style", provider: "Khan Academy", url: "https://www.khanacademy.org/humanities/grammar", note: "Making writing flow with varied sentences." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Transformation & Synthesis of Sentences", note: "This grammar point is covered in Wren & Martin's grammar section, 'Transformation & Synthesis of Sentences'.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "Mixing short and long sentences makes writing more interesting to read.", answer: true, explanation: "Sentence variety improves rhythm and engagement." },

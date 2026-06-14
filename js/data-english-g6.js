@@ -333,7 +333,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Develop a paragraph with a topic sentence and supporting details.",
           resources: [
             { type: "reading", title: "Paragraphs & topic sentences", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/", note: "How to build a focused, well-supported paragraph." },
-            { type: "reading", title: "Writing strong paragraphs", provider: "Khan Academy", url: "https://www.khanacademy.org/ela/cc-6th-reading-vocab", note: "Structure of a paragraph." }
+            { type: "reading", title: "Writing strong paragraphs", provider: "Khan Academy", url: "https://www.khanacademy.org/ela/cc-6th-reading-vocab", note: "Structure of a paragraph." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Paragraph-Writing", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Paragraph-Writing'.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "A 'topic sentence' usually:", options: ["ends the paragraph", "states the main idea of the paragraph", "is always a question", "lists the writer's name"], answer: 1, explanation: "The topic sentence tells the reader the paragraph's main idea, usually near the start." },
@@ -355,7 +356,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Sequence ideas logically and use basic transitions.",
           resources: [
             { type: "reading", title: "Transition words & sequencing", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/", note: "Lists of transitions and how to order ideas." },
-            { type: "reading", title: "Organising writing", provider: "Khan Academy", url: "https://www.khanacademy.org/ela/cc-6th-reading-vocab", note: "Putting ideas in a sensible order." }
+            { type: "reading", title: "Organising writing", provider: "Khan Academy", url: "https://www.khanacademy.org/ela/cc-6th-reading-vocab", note: "Putting ideas in a sensible order." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Paragraph-Writing", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Paragraph-Writing'.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "A 'transition' word or phrase:", options: ["ends an essay", "connects ideas and shows how they relate", "is a type of noun", "is always capitalised"], answer: 1, explanation: "Transitions link ideas and guide the reader (e.g. first, then, however)." },
@@ -377,7 +379,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Write descriptively using sensory details.",
           resources: [
             { type: "reading", title: "Descriptive writing & sensory detail", provider: "ReadWriteThink", url: "https://www.readwritethink.org/", note: "Using the five senses and 'show, don't tell'." },
-            { type: "reading", title: "Descriptive writing guidance", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/", note: "Techniques for vivid description." }
+            { type: "reading", title: "Descriptive writing guidance", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/", note: "Techniques for vivid description." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Description", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Description'.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "'Sensory details' appeal to the reader's:", options: ["five senses (sight, sound, smell, taste, touch)", "maths skills", "spelling", "page count"], answer: 0, explanation: "Sensory details describe what we see, hear, smell, taste and feel." },
@@ -399,7 +402,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Write a narrative (story) with a clear beginning, middle and end.",
           resources: [
             { type: "reading", title: "Narrative writing", provider: "ReadWriteThink", url: "https://www.readwritethink.org/", note: "Planning and writing engaging stories." },
-            { type: "reading", title: "Storytelling structure", provider: "Khan Academy", url: "https://www.khanacademy.org/ela/cc-6th-reading-vocab", note: "Building narratives with structure." }
+            { type: "reading", title: "Storytelling structure", provider: "Khan Academy", url: "https://www.khanacademy.org/ela/cc-6th-reading-vocab", note: "Building narratives with structure." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Story-Writing", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Story-Writing'.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "A narrative is a piece of writing that:", options: ["lists facts", "tells a story with events in a sequence", "gives instructions", "argues a point"], answer: 1, explanation: "A narrative tells a story." },
@@ -421,7 +425,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Write a clear summary of a text in your own words.",
           resources: [
             { type: "reading", title: "Summarising texts", provider: "Khan Academy", url: "https://www.khanacademy.org/ela/cc-6th-reading-vocab", note: "How to condense a text to its key points." },
-            { type: "reading", title: "Summary vs paraphrase", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/", note: "Writing concise summaries in your own words." }
+            { type: "reading", title: "Summary vs paraphrase", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/", note: "Writing concise summaries in your own words." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Précis-Writing", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Précis-Writing'.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "A summary is:", options: ["a longer version of a text", "a short version giving only the main points, in your own words", "a copy of the text word-for-word", "the title only"], answer: 1, explanation: "A summary condenses a text to its key points in your own words." },
@@ -443,7 +448,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Write a formal or informal letter using the correct layout and tone.",
           resources: [
             { type: "reading", title: "How to write letters", provider: "ReadWriteThink", url: "https://www.readwritethink.org/", note: "Templates and tips for both letter types." },
-            { type: "reading", title: "Letter format & tone", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/", note: "Structure and register in letters." }
+            { type: "reading", title: "Letter format & tone", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/", note: "Structure and register in letters." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Letter-Writing", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Letter-Writing'.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Where does the date usually go in a formal letter?", options: ["in the middle of the page", "near the top, with the sender's address", "after the signature", "it is never included"], answer: 1, explanation: "The date sits near the top, typically under or beside the sender's address." },
@@ -465,7 +471,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Write an autobiographical piece while keeping a clear topic focus.",
           resources: [
             { type: "reading", title: "Writing about yourself (memoir)", provider: "ReadWriteThink", url: "https://www.readwritethink.org/", note: "Turning real memories into focused writing." },
-            { type: "reading", title: "Staying on topic", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/", note: "Maintaining focus and unity in writing." }
+            { type: "reading", title: "Staying on topic", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/", note: "Maintaining focus and unity in writing." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Essay-Writing", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Essay-Writing'.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Autobiographical writing is writing about:", options: ["a made-up character", "your own real life and experiences", "the news", "how to build something"], answer: 1, explanation: "Autobiographical writing tells your own true experiences." },
@@ -499,7 +506,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Use relative pronouns (who, whom, whose, which, that) correctly.",
           resources: [
             { type: "reading", title: "Relative pronouns", provider: "Khan Academy", url: "https://www.khanacademy.org/humanities/grammar", note: "Videos and practice on who/whom/whose/which/that." },
-            { type: "reading", title: "Relative pronouns & clauses", provider: "Grammarly", url: "https://www.grammarly.com/blog/relative-pronouns/", note: "Clear guide with examples." }
+            { type: "reading", title: "Relative pronouns & clauses", provider: "Grammarly", url: "https://www.grammarly.com/blog/relative-pronouns/", note: "Clear guide with examples." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "The Pronoun — Relative Pronouns", note: "This grammar point is covered in Wren & Martin's grammar section, 'The Pronoun — Relative Pronouns'.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "A relative pronoun introduces a clause that gives more information about a:", options: ["verb", "noun", "preposition", "punctuation mark"], answer: 1, explanation: "Relative pronouns (who, which, that…) add information about a noun." },
@@ -521,7 +529,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Use interrogative pronouns (who, whom, whose, what, which) to ask questions.",
           resources: [
             { type: "reading", title: "Interrogative pronouns", provider: "Khan Academy", url: "https://www.khanacademy.org/humanities/grammar", note: "Pronouns that ask questions." },
-            { type: "reading", title: "Interrogative pronouns explained", provider: "Grammarly", url: "https://www.grammarly.com/blog/interrogative-pronouns/", note: "Who, whom, whose, what, which in questions." }
+            { type: "reading", title: "Interrogative pronouns explained", provider: "Grammarly", url: "https://www.grammarly.com/blog/interrogative-pronouns/", note: "Who, whom, whose, what, which in questions." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "The Pronoun — Interrogative Pronouns", note: "This grammar point is covered in Wren & Martin's grammar section, 'The Pronoun — Interrogative Pronouns'.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "An interrogative pronoun is used to:", options: ["end a sentence", "ask a question", "join two clauses", "show excitement"], answer: 1, explanation: "Interrogative pronouns (who, what, which…) introduce questions." },
@@ -543,7 +552,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Distinguish the nominative (subject) and objective (object) case of pronouns.",
           resources: [
             { type: "reading", title: "Subject & object pronouns", provider: "Khan Academy", url: "https://www.khanacademy.org/humanities/grammar", note: "I/me, he/him, she/her, we/us, they/them." },
-            { type: "reading", title: "Pronoun case", provider: "Grammarly", url: "https://www.grammarly.com/blog/pronoun-case/", note: "When to use nominative vs objective pronouns." }
+            { type: "reading", title: "Pronoun case", provider: "Grammarly", url: "https://www.grammarly.com/blog/pronoun-case/", note: "When to use nominative vs objective pronouns." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "The Pronoun — Case (Nominative & Objective)", note: "This grammar point is covered in Wren & Martin's grammar section, 'The Pronoun — Case (Nominative & Objective)'.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "The nominative (subject) case pronoun is used when the pronoun is:", options: ["doing the action (the subject)", "receiving the action (the object)", "showing possession", "a question word"], answer: 0, explanation: "Subject pronouns (I, he, she, we, they) do the action." },
@@ -565,7 +575,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Identify and use adjectives, including their main types.",
           resources: [
             { type: "reading", title: "Adjectives", provider: "Khan Academy", url: "https://www.khanacademy.org/humanities/grammar", note: "What adjectives do and how to use them." },
-            { type: "reading", title: "Types of adjectives", provider: "Grammarly", url: "https://www.grammarly.com/blog/adjective/", note: "Descriptive, quantitative, demonstrative and more." }
+            { type: "reading", title: "Types of adjectives", provider: "Grammarly", url: "https://www.grammarly.com/blog/adjective/", note: "Descriptive, quantitative, demonstrative and more." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "The Adjective", note: "This grammar point is covered in Wren & Martin's grammar section, 'The Adjective'.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "An adjective is a word that:", options: ["describes a noun", "shows an action", "joins clauses", "asks a question"], answer: 0, explanation: "Adjectives describe or modify nouns." },
@@ -587,7 +598,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Use definite and indefinite articles (a, an, the) correctly.",
           resources: [
             { type: "reading", title: "Articles: a, an, the", provider: "Khan Academy", url: "https://www.khanacademy.org/humanities/grammar", note: "When to use each article." },
-            { type: "reading", title: "Using articles", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/grammar/articles_a_versus_an.html", note: "Clear rules for a, an and the." }
+            { type: "reading", title: "Using articles", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/grammar/articles_a_versus_an.html", note: "Clear rules for a, an and the." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "The Adjective — Articles (A, An, The)", note: "This grammar point is covered in Wren & Martin's grammar section, 'The Adjective — Articles (A, An, The)'.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "'The' is called the ___ article.", options: ["indefinite", "definite", "demonstrative", "possessive"], answer: 1, explanation: "'The' is the definite article — it points to a specific thing." },
@@ -609,7 +621,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Write complete sentences with a subject and a predicate, and recognise sentence boundaries.",
           resources: [
             { type: "reading", title: "Subjects & predicates", provider: "Khan Academy", url: "https://www.khanacademy.org/humanities/grammar", note: "Every sentence needs a subject and a predicate." },
-            { type: "reading", title: "Sentence fragments & boundaries", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/", note: "Recognising complete sentences." }
+            { type: "reading", title: "Sentence fragments & boundaries", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/", note: "Recognising complete sentences." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "The Sentence — Subject and Predicate", note: "This grammar point is covered in Wren & Martin's grammar section, 'The Sentence — Subject and Predicate'.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Every complete sentence needs at least a:", options: ["subject and a predicate", "adjective and an adverb", "comma and a full stop", "noun and a question mark"], answer: 0, explanation: "A complete sentence has a subject (who/what) and a predicate (what they do/are)." },
@@ -631,7 +644,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Use basic punctuation correctly (full stops, capitals, commas, question and exclamation marks).",
           resources: [
             { type: "reading", title: "Punctuation basics", provider: "Khan Academy", url: "https://www.khanacademy.org/humanities/grammar", note: "End marks, commas and capitals." },
-            { type: "reading", title: "Commas & end punctuation", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/punctuation/", note: "Rules and examples for everyday punctuation." }
+            { type: "reading", title: "Commas & end punctuation", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/punctuation/", note: "Rules and examples for everyday punctuation." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Punctuation", note: "This grammar point is covered in Wren & Martin's grammar section, 'Punctuation'.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "A statement (telling sentence) usually ends with a:", options: ["question mark", "full stop (period)", "comma", "exclamation mark"], answer: 1, explanation: "Statements end with a full stop." },

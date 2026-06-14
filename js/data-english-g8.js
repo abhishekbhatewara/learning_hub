@@ -455,7 +455,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Write compare-and-contrast and descriptive/narrative pieces.",
           resources: [
             { type: "reading", title: "Compare & contrast writing", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/", note: "Structuring comparisons." },
-            { type: "reading", title: "Narrative & descriptive craft", provider: "ReadWriteThink", url: "https://www.readwritethink.org/", note: "Refining story and description." }
+            { type: "reading", title: "Narrative & descriptive craft", provider: "ReadWriteThink", url: "https://www.readwritethink.org/", note: "Refining story and description." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Essay-Writing; Story-Writing", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Essay-Writing; Story-Writing'.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "Two common ways to structure a compare-and-contrast essay are point-by-point and:", options: ["alphabetical", "block (subject-by-subject)", "random", "backwards"], answer: 1, explanation: "Block and point-by-point are the two standard structures." },
@@ -477,7 +478,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Write a literary analysis essay.",
           resources: [
             { type: "reading", title: "Literary analysis essay", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/subject_specific_writing/writing_in_literature/writing_in_literature_detailed_discussion/index.html", note: "How to analyse literature in an essay." },
-            { type: "reading", title: "Analysing texts", provider: "CommonLit", url: "https://www.commonlit.org/", note: "Building text-based arguments." }
+            { type: "reading", title: "Analysing texts", provider: "CommonLit", url: "https://www.commonlit.org/", note: "Building text-based arguments." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Essay-Writing", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Essay-Writing'.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "A literary analysis essay should be built around:", options: ["a plot summary only", "a thesis (interpretation) supported by textual evidence and analysis", "the author's biography", "your favourite quotes with no point"], answer: 1, explanation: "Literary analysis argues an interpretation with evidence." },
@@ -499,7 +501,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Write an argument essay with a clear claim and reasoning.",
           resources: [
             { type: "reading", title: "Argumentative essays", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/academic_writing/essay_writing/argumentative_essays.html", note: "Claim, reasons, evidence, structure." },
-            { type: "reading", title: "Argument writing", provider: "Khan Academy", url: "https://www.khanacademy.org/ela", note: "Making a case in writing." }
+            { type: "reading", title: "Argument writing", provider: "Khan Academy", url: "https://www.khanacademy.org/ela", note: "Making a case in writing." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Essay-Writing", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Essay-Writing'.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "The central claim of an argument essay is its:", options: ["conclusion only", "thesis", "title", "first quote"], answer: 1, explanation: "The thesis states the essay's main argument." },
@@ -521,7 +524,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Include counterargument and rebuttal, and qualify claims.",
           resources: [
             { type: "reading", title: "Counterargument & rebuttal", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/academic_writing/establishing_arguments/index.html", note: "Addressing the other side." },
-            { type: "reading", title: "Nuanced argument", provider: "Khan Academy", url: "https://www.khanacademy.org/ela", note: "Qualifying and strengthening claims." }
+            { type: "reading", title: "Nuanced argument", provider: "Khan Academy", url: "https://www.khanacademy.org/ela", note: "Qualifying and strengthening claims." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Essay-Writing", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Essay-Writing'.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "A 'counterargument' is:", options: ["your own thesis", "an opposing view that you acknowledge and respond to", "a grammar rule", "the conclusion"], answer: 1, explanation: "A counterargument is the opposing side you address." },
@@ -543,7 +547,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Develop a capstone thesis and defend a claim in writing.",
           resources: [
             { type: "reading", title: "Strong thesis statements", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/the_writing_process/thesis_statement_tips.html", note: "Crafting a defensible thesis." },
-            { type: "reading", title: "Defending a claim", provider: "Khan Academy", url: "https://www.khanacademy.org/ela", note: "Building a sustained argument." }
+            { type: "reading", title: "Defending a claim", provider: "Khan Academy", url: "https://www.khanacademy.org/ela", note: "Building a sustained argument." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Essay-Writing", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Essay-Writing'.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "hard", q: "A strong capstone thesis is one that is:", options: ["obvious and unarguable", "specific, debatable and supportable with evidence", "a question with no answer", "a list of facts"], answer: 1, explanation: "A good thesis is specific, arguable and provable." },
@@ -565,7 +570,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Write flash fiction and an editorial.",
           resources: [
             { type: "reading", title: "Flash fiction", provider: "ReadWriteThink", url: "https://www.readwritethink.org/", note: "Telling a complete story very briefly." },
-            { type: "reading", title: "Editorial writing", provider: "CommonLit", url: "https://www.commonlit.org/", note: "Opinion writing on an issue." }
+            { type: "reading", title: "Editorial writing", provider: "CommonLit", url: "https://www.commonlit.org/", note: "Opinion writing on an issue." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Story-Writing", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Story-Writing'.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "'Flash fiction' is:", options: ["a very long novel", "an extremely short, complete story", "a news report", "a poem with no words"], answer: 1, explanation: "Flash fiction tells a whole story in very few words." },
@@ -599,7 +605,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Use past simple and past perfect tenses correctly.",
           resources: [
             { type: "reading", title: "Verb tenses", provider: "Khan Academy", url: "https://www.khanacademy.org/humanities/grammar", note: "Simple and perfect tenses." },
-            { type: "reading", title: "Past perfect", provider: "Grammarly", url: "https://www.grammarly.com/blog/past-perfect/", note: "When to use the past perfect." }
+            { type: "reading", title: "Past perfect", provider: "Grammarly", url: "https://www.grammarly.com/blog/past-perfect/", note: "When to use the past perfect." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "The Verb — Tenses", note: "This is covered in Wren & Martin's grammar section, 'The Verb — Tenses'.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "The past perfect ('had + past participle') is used for an action that:", options: ["is happening now", "happened before another past action", "will happen later", "never happened"], answer: 1, explanation: "Past perfect shows the earlier of two past events." },
@@ -621,7 +628,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Use gerunds and infinitives.",
           resources: [
             { type: "reading", title: "Gerunds & infinitives", provider: "Khan Academy", url: "https://www.khanacademy.org/humanities/grammar", note: "-ing nouns and 'to + verb'." },
-            { type: "reading", title: "Gerunds vs infinitives", provider: "Grammarly", url: "https://www.grammarly.com/blog/gerund/", note: "Forms and uses." }
+            { type: "reading", title: "Gerunds vs infinitives", provider: "Grammarly", url: "https://www.grammarly.com/blog/gerund/", note: "Forms and uses." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "The Verb — Verbals (Gerunds & Infinitives)", note: "This is covered in Wren & Martin's grammar section, 'The Verb — Verbals (Gerunds & Infinitives)'.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "A gerund is a verb form ending in -ing that acts as a:", options: ["verb only", "noun", "preposition", "punctuation mark"], answer: 1, explanation: "A gerund (e.g. 'swimming is fun') functions as a noun." },
@@ -643,7 +651,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Use modal and phrasal verbs.",
           resources: [
             { type: "reading", title: "Modal verbs", provider: "Grammarly", url: "https://www.grammarly.com/blog/modal-verbs/", note: "Can, could, may, might, must, should." },
-            { type: "reading", title: "Phrasal verbs", provider: "Grammarly", url: "https://www.grammarly.com/blog/phrasal-verbs/", note: "Verb + particle combinations." }
+            { type: "reading", title: "Phrasal verbs", provider: "Grammarly", url: "https://www.grammarly.com/blog/phrasal-verbs/", note: "Verb + particle combinations." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "The Verb — Auxiliary & Modal Verbs; Phrasal Verbs", note: "This is covered in Wren & Martin's grammar section, 'The Verb — Auxiliary & Modal Verbs; Phrasal Verbs'.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Which is a modal verb?", options: ["run", "must", "table", "quickly"], answer: 1, explanation: "'Must' is a modal expressing necessity." },
@@ -665,7 +674,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Use active and passive voice, and choose voice intentionally.",
           resources: [
             { type: "reading", title: "Active vs passive voice", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/academic_writing/active_and_passive_voice/index.html", note: "When to use each voice." },
-            { type: "reading", title: "Passive voice", provider: "Grammarly", url: "https://www.grammarly.com/blog/passive-voice/", note: "Recognising and using the passive." }
+            { type: "reading", title: "Passive voice", provider: "Grammarly", url: "https://www.grammarly.com/blog/passive-voice/", note: "Recognising and using the passive." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Active and Passive Voice", note: "This is covered in Wren & Martin's grammar section, 'Active and Passive Voice'.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "Which sentence is in the PASSIVE voice?", options: ["The cat chased the mouse.", "The mouse was chased by the cat.", "The cat chases mice.", "Cats chase mice."], answer: 1, explanation: "In the passive, the subject receives the action: 'was chased'." },
@@ -687,7 +697,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Use verb moods (indicative, imperative, subjunctive).",
           resources: [
             { type: "reading", title: "Verb moods", provider: "Grammarly", url: "https://www.grammarly.com/blog/grammatical-mood/", note: "Indicative, imperative, subjunctive and more." },
-            { type: "reading", title: "Mood in grammar", provider: "Khan Academy", url: "https://www.khanacademy.org/humanities/grammar", note: "How mood changes meaning." }
+            { type: "reading", title: "Mood in grammar", provider: "Khan Academy", url: "https://www.khanacademy.org/humanities/grammar", note: "How mood changes meaning." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "The Verb — Mood", note: "This is covered in Wren & Martin's grammar section, 'The Verb — Mood'.", url: "" }
           ],
           quiz: [
             { type: "match", difficulty: "medium", q: "Match each mood to an example.", pairs: [["Indicative", "She walks to school."], ["Imperative", "Close the door."], ["Subjunctive", "If I were you, I'd rest."]], explanation: "Indicative states facts, imperative commands, subjunctive expresses hypotheticals/wishes." },
@@ -709,7 +720,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Use parallelism and participial phrases; control complex sentences.",
           resources: [
             { type: "reading", title: "Parallel structure", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/mechanics/parallel_structure.html", note: "Keeping items in a series parallel." },
-            { type: "reading", title: "Participial phrases", provider: "Grammarly", url: "https://www.grammarly.com/blog/participle/", note: "Phrases built from participles." }
+            { type: "reading", title: "Participial phrases", provider: "Grammarly", url: "https://www.grammarly.com/blog/participle/", note: "Phrases built from participles." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "The Participle; Synthesis of Sentences", note: "This is covered in Wren & Martin's grammar section, 'The Participle; Synthesis of Sentences'.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "Which sentence uses correct parallelism?", options: ["She likes reading, to swim, and biking.", "She likes reading, swimming, and biking.", "She likes to read, swimming, biked.", "She likes read, swim, and to bike."], answer: 1, explanation: "Parallelism keeps the items in the same grammatical form (all -ing)." },
@@ -731,7 +743,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Format dialogue correctly.",
           resources: [
             { type: "reading", title: "Dialogue punctuation", provider: "Grammarly", url: "https://www.grammarly.com/blog/punctuation-in-dialogue/", note: "Quotation marks, commas and new lines." },
-            { type: "reading", title: "Writing dialogue", provider: "ReadWriteThink", url: "https://www.readwritethink.org/", note: "Conventions for dialogue." }
+            { type: "reading", title: "Writing dialogue", provider: "ReadWriteThink", url: "https://www.readwritethink.org/", note: "Conventions for dialogue." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Direct and Indirect Speech; Punctuation", note: "This is covered in Wren & Martin's grammar section, 'Direct and Indirect Speech; Punctuation'.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "Which is correctly punctuated dialogue?", options: ["\"Let's go\" she said.", "\"Let's go,\" she said.", "Let's go, she said.", "\"Let's go,\" She said"], answer: 1, explanation: "A comma goes inside the quotation marks before the dialogue tag, which is lowercase." },
@@ -753,7 +766,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Control voice — sarcasm, humour, formal and persuasive tone.",
           resources: [
             { type: "reading", title: "Tone & voice", provider: "LiteraryDevices", url: "https://literarydevices.net/tone/", note: "How word choice shapes voice." },
-            { type: "reading", title: "Writing voice", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/", note: "Adjusting tone for purpose." }
+            { type: "reading", title: "Writing voice", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/", note: "Adjusting tone for purpose." },
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Style and Tone", note: "Style and tone are developed in Wren & Martin's Composition section.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "'Voice' in writing refers to:", options: ["how loud you read", "the distinctive style and personality of the writing", "the font", "the page count"], answer: 1, explanation: "Voice is the writer's distinctive style and attitude." },
