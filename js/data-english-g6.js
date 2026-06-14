@@ -23,7 +23,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Read for literal meaning — find information the text states directly.",
           resources: [
             { type: "reading", title: "Reading comprehension: key ideas & details", provider: "Khan Academy", url: "https://www.khanacademy.org/ela/cc-6th-reading-vocab", note: "Short passages with questions about what the text says directly." },
-            { type: "reading", title: "Free leveled reading passages", provider: "CommonLit", url: "https://www.commonlit.org/", note: "Thousands of free stories and poems with comprehension questions." }
+            { type: "reading", title: "Free leveled reading passages", provider: "CommonLit", url: "https://www.commonlit.org/", note: "Thousands of free stories and poems with comprehension questions." },
+            { type: "book", enrichment: true, title: "How to Read Literature Like a Professor — For Kids", author: "Thomas C. Foster", chapter: "(e.g. 'Is That a Symbol?', 'Geography Matters', 'Every Trip Is a Quest')", note: "Enrichment read (great for ages 11–13): a fun guide to spotting symbols, themes, settings and patterns in stories.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Reading for 'literal meaning' means finding information that is:", options: ["hinted at but not stated", "stated directly in the text", "your personal opinion", "from another book"], answer: 1, explanation: "Literal meaning is what the words actually say, right there on the page." },
@@ -45,10 +46,11 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Read for inference — work out meaning the text suggests but does not state.",
           resources: [
             { type: "reading", title: "Making inferences from text", provider: "Khan Academy", url: "https://www.khanacademy.org/ela/cc-6th-reading-vocab", note: "How to combine text clues with reasoning." },
-            { type: "reading", title: "Inference practice passages", provider: "ReadWriteThink", url: "https://www.readwritethink.org/", note: "Strategy lessons and printable practice on inferring." }
+            { type: "reading", title: "Inference practice passages", provider: "ReadWriteThink", url: "https://www.readwritethink.org/", note: "Strategy lessons and printable practice on inferring." },
+            { type: "book", enrichment: true, title: "How to Read Literature Like a Professor — For Kids", author: "Thomas C. Foster", chapter: "(e.g. 'Is That a Symbol?', 'Geography Matters', 'Every Trip Is a Quest')", note: "Enrichment read (great for ages 11–13): a fun guide to spotting symbols, themes, settings and patterns in stories.", url: "" }
           ],
           quiz: [
-            { type: "mcq", difficulty: "easy", q: "An inference is:", options: ["a fact stated directly in the text", "a logical guess based on text clues plus your own knowledge", "a made-up idea with no support", "the title of the story"], answer: 1, explanation: "You infer by combining what the text hints at with reasoning." },
+            { type: "mcq", difficulty: "easy", q: "An inference is:",options: ["a fact stated directly in the text", "a logical guess based on text clues plus your own knowledge", "a made-up idea with no support", "the title of the story"], answer: 1, explanation: "You infer by combining what the text hints at with reasoning." },
             { type: "tf", difficulty: "easy", q: "'Her hands were shaking and her voice cracked' lets you infer she might be nervous or upset.", answer: true, explanation: "The physical clues support a reasonable inference about her feelings." },
             { type: "mcq", difficulty: "easy", q: "A good inference must be:", options: ["completely certain", "supported by clues in the text", "the same for every reader", "stated word-for-word in the text"], answer: 1, explanation: "Inferences need textual support, even though they aren't stated outright." },
             { type: "mcq", difficulty: "medium", q: "Text: 'Devon zipped his jacket and pulled his hood tight as he stepped outside.' What can you reasonably infer?", options: ["It is hot outside", "The weather is cold or windy", "Devon is going to sleep", "Devon hates jackets"], answer: 1, explanation: "Zipping up and tightening a hood are clues that it's cold or windy." },
@@ -67,7 +69,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Identify the basic plot of a story — beginning, conflict, climax and resolution.",
           resources: [
             { type: "interactive", title: "Plot diagram / story map", provider: "ReadWriteThink", url: "https://www.readwritethink.org/classroom-resources/student-interactives/plot-diagram", note: "Interactive plot-diagram tool: exposition → rising action → climax → resolution." },
-            { type: "reading", title: "Elements of a story", provider: "CommonLit", url: "https://www.commonlit.org/", note: "Stories to practise tracking plot stages." }
+            { type: "reading", title: "Elements of a story", provider: "CommonLit", url: "https://www.commonlit.org/", note: "Stories to practise tracking plot stages." },
+            { type: "book", enrichment: true, title: "How to Read Literature Like a Professor — For Kids", author: "Thomas C. Foster", chapter: "(e.g. 'Is That a Symbol?', 'Geography Matters', 'Every Trip Is a Quest')", note: "Enrichment read (great for ages 11–13): a fun guide to spotting symbols, themes, settings and patterns in stories.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "The part of a story where the main problem is finally settled is the:", options: ["exposition", "climax", "resolution", "rising action"], answer: 2, explanation: "The resolution (or denouement) is where the conflict is resolved and the story winds down." },
@@ -89,7 +92,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Describe a story's setting and explain why it matters.",
           resources: [
             { type: "reading", title: "Setting in literature", provider: "CommonLit", url: "https://www.commonlit.org/", note: "Texts to explore how time and place shape a story." },
-            { type: "reading", title: "Literary terms: setting", provider: "LiteraryDevices", url: "https://literarydevices.net/setting/", note: "Definition and examples of setting." }
+            { type: "reading", title: "Literary terms: setting", provider: "LiteraryDevices", url: "https://literarydevices.net/setting/", note: "Definition and examples of setting." },
+            { type: "book", enrichment: true, title: "How to Read Literature Like a Professor — For Kids", author: "Thomas C. Foster", chapter: "(e.g. 'Is That a Symbol?', 'Geography Matters', 'Every Trip Is a Quest')", note: "Enrichment read (great for ages 11–13): a fun guide to spotting symbols, themes, settings and patterns in stories.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "The 'setting' of a story is:", options: ["the main character", "the time and place where it happens", "the problem in the story", "the lesson it teaches"], answer: 1, explanation: "Setting = when and where the events occur." },
@@ -111,7 +115,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Identify characters and describe their traits using evidence.",
           resources: [
             { type: "reading", title: "Character traits & evidence", provider: "ReadWriteThink", url: "https://www.readwritethink.org/", note: "Lessons on describing characters with textual support." },
-            { type: "reading", title: "Stories for character study", provider: "CommonLit", url: "https://www.commonlit.org/", note: "Short stories with rich characters to analyse." }
+            { type: "reading", title: "Stories for character study", provider: "CommonLit", url: "https://www.commonlit.org/", note: "Short stories with rich characters to analyse." },
+            { type: "book", enrichment: true, title: "How to Read Literature Like a Professor — For Kids", author: "Thomas C. Foster", chapter: "(e.g. 'Is That a Symbol?', 'Geography Matters', 'Every Trip Is a Quest')", note: "Enrichment read (great for ages 11–13): a fun guide to spotting symbols, themes, settings and patterns in stories.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "A 'character trait' is:", options: ["the place a story happens", "a quality or part of a character's personality", "the ending of a story", "a punctuation mark"], answer: 1, explanation: "A trait describes what a character is like (e.g. brave, shy, kind)." },
@@ -133,7 +138,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Identify a basic theme — the message or big idea of a story.",
           resources: [
             { type: "reading", title: "Theme vs topic", provider: "CommonLit", url: "https://www.commonlit.org/", note: "Practice finding the deeper message in stories." },
-            { type: "reading", title: "Literary terms: theme", provider: "LiteraryDevices", url: "https://literarydevices.net/theme/", note: "Definition and clear examples of theme." }
+            { type: "reading", title: "Literary terms: theme", provider: "LiteraryDevices", url: "https://literarydevices.net/theme/", note: "Definition and clear examples of theme." },
+            { type: "book", enrichment: true, title: "How to Read Literature Like a Professor — For Kids", author: "Thomas C. Foster", chapter: "(e.g. 'Is That a Symbol?', 'Geography Matters', 'Every Trip Is a Quest')", note: "Enrichment read (great for ages 11–13): a fun guide to spotting symbols, themes, settings and patterns in stories.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "The 'theme' of a story is:", options: ["the time and place", "the central message or big idea", "the main character's name", "the number of pages"], answer: 1, explanation: "Theme is the underlying message or lesson a story explores." },
@@ -155,7 +161,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           text: "Read travel poetry and stories from different cultures, noticing context and culture.",
           resources: [
             { type: "reading", title: "Poems to explore (learn section)", provider: "Poetry Foundation", url: "https://www.poetryfoundation.org/learn", note: "Poems and guides, including poems about place and journeys." },
-            { type: "reading", title: "Stories & poems from many cultures", provider: "CommonLit", url: "https://www.commonlit.org/", note: "Texts from around the world with background context." }
+            { type: "reading", title: "Stories & poems from many cultures", provider: "CommonLit", url: "https://www.commonlit.org/", note: "Texts from around the world with background context." },
+            { type: "book", enrichment: true, title: "How to Read Literature Like a Professor — For Kids", author: "Thomas C. Foster", chapter: "(e.g. 'Is That a Symbol?', 'Geography Matters', 'Every Trip Is a Quest')", note: "Enrichment read (great for ages 11–13): a fun guide to spotting symbols, themes, settings and patterns in stories.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "'Travel poetry' is poetry that mainly explores:", options: ["maths problems", "places, journeys and the experience of travelling", "grammar rules", "cooking recipes"], answer: 1, explanation: "Travel poetry focuses on places, journeys and what travel feels like." },
@@ -334,7 +341,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Paragraphs & topic sentences", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/", note: "How to build a focused, well-supported paragraph." },
             { type: "reading", title: "Writing strong paragraphs", provider: "Khan Academy", url: "https://www.khanacademy.org/ela/cc-6th-reading-vocab", note: "Structure of a paragraph." },
-            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Paragraph-Writing", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Paragraph-Writing'.", url: "" }
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Paragraph-Writing", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Paragraph-Writing'.", url: "" },
+            { type: "book", enrichment: true, title: "On Writing: A Memoir of the Craft", author: "Stephen King", chapter: "(the 'Toolbox' and 'On Writing' craft sections)", note: "Enrichment read (advanced / with guidance): a celebrated author's practical advice on storytelling and the craft of writing.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "A 'topic sentence' usually:", options: ["ends the paragraph", "states the main idea of the paragraph", "is always a question", "lists the writer's name"], answer: 1, explanation: "The topic sentence tells the reader the paragraph's main idea, usually near the start." },
@@ -357,7 +365,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Transition words & sequencing", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/", note: "Lists of transitions and how to order ideas." },
             { type: "reading", title: "Organising writing", provider: "Khan Academy", url: "https://www.khanacademy.org/ela/cc-6th-reading-vocab", note: "Putting ideas in a sensible order." },
-            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Paragraph-Writing", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Paragraph-Writing'.", url: "" }
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Paragraph-Writing", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Paragraph-Writing'.", url: "" },
+            { type: "book", enrichment: true, title: "On Writing: A Memoir of the Craft", author: "Stephen King", chapter: "(the 'Toolbox' and 'On Writing' craft sections)", note: "Enrichment read (advanced / with guidance): a celebrated author's practical advice on storytelling and the craft of writing.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "A 'transition' word or phrase:", options: ["ends an essay", "connects ideas and shows how they relate", "is a type of noun", "is always capitalised"], answer: 1, explanation: "Transitions link ideas and guide the reader (e.g. first, then, however)." },
@@ -380,7 +389,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Descriptive writing & sensory detail", provider: "ReadWriteThink", url: "https://www.readwritethink.org/", note: "Using the five senses and 'show, don't tell'." },
             { type: "reading", title: "Descriptive writing guidance", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/", note: "Techniques for vivid description." },
-            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Description", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Description'.", url: "" }
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Description", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Description'.", url: "" },
+            { type: "book", enrichment: true, title: "On Writing: A Memoir of the Craft", author: "Stephen King", chapter: "(the 'Toolbox' and 'On Writing' craft sections)", note: "Enrichment read (advanced / with guidance): a celebrated author's practical advice on storytelling and the craft of writing.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "'Sensory details' appeal to the reader's:", options: ["five senses (sight, sound, smell, taste, touch)", "maths skills", "spelling", "page count"], answer: 0, explanation: "Sensory details describe what we see, hear, smell, taste and feel." },
@@ -403,7 +413,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Narrative writing", provider: "ReadWriteThink", url: "https://www.readwritethink.org/", note: "Planning and writing engaging stories." },
             { type: "reading", title: "Storytelling structure", provider: "Khan Academy", url: "https://www.khanacademy.org/ela/cc-6th-reading-vocab", note: "Building narratives with structure." },
-            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Story-Writing", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Story-Writing'.", url: "" }
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Story-Writing", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Story-Writing'.", url: "" },
+            { type: "book", enrichment: true, title: "On Writing: A Memoir of the Craft", author: "Stephen King", chapter: "(the 'Toolbox' and 'On Writing' craft sections)", note: "Enrichment read (advanced / with guidance): a celebrated author's practical advice on storytelling and the craft of writing.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "A narrative is a piece of writing that:", options: ["lists facts", "tells a story with events in a sequence", "gives instructions", "argues a point"], answer: 1, explanation: "A narrative tells a story." },
@@ -426,7 +437,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Summarising texts", provider: "Khan Academy", url: "https://www.khanacademy.org/ela/cc-6th-reading-vocab", note: "How to condense a text to its key points." },
             { type: "reading", title: "Summary vs paraphrase", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/", note: "Writing concise summaries in your own words." },
-            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Précis-Writing", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Précis-Writing'.", url: "" }
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Précis-Writing", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Précis-Writing'.", url: "" },
+            { type: "book", enrichment: true, title: "On Writing: A Memoir of the Craft", author: "Stephen King", chapter: "(the 'Toolbox' and 'On Writing' craft sections)", note: "Enrichment read (advanced / with guidance): a celebrated author's practical advice on storytelling and the craft of writing.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "A summary is:", options: ["a longer version of a text", "a short version giving only the main points, in your own words", "a copy of the text word-for-word", "the title only"], answer: 1, explanation: "A summary condenses a text to its key points in your own words." },
@@ -449,7 +461,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "How to write letters", provider: "ReadWriteThink", url: "https://www.readwritethink.org/", note: "Templates and tips for both letter types." },
             { type: "reading", title: "Letter format & tone", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/", note: "Structure and register in letters." },
-            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Letter-Writing", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Letter-Writing'.", url: "" }
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Letter-Writing", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Letter-Writing'.", url: "" },
+            { type: "book", enrichment: true, title: "On Writing: A Memoir of the Craft", author: "Stephen King", chapter: "(the 'Toolbox' and 'On Writing' craft sections)", note: "Enrichment read (advanced / with guidance): a celebrated author's practical advice on storytelling and the craft of writing.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Where does the date usually go in a formal letter?", options: ["in the middle of the page", "near the top, with the sender's address", "after the signature", "it is never included"], answer: 1, explanation: "The date sits near the top, typically under or beside the sender's address." },
@@ -472,7 +485,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Writing about yourself (memoir)", provider: "ReadWriteThink", url: "https://www.readwritethink.org/", note: "Turning real memories into focused writing." },
             { type: "reading", title: "Staying on topic", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/", note: "Maintaining focus and unity in writing." },
-            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Essay-Writing", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Essay-Writing'.", url: "" }
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Essay-Writing", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Essay-Writing'.", url: "" },
+            { type: "book", enrichment: true, title: "On Writing: A Memoir of the Craft", author: "Stephen King", chapter: "(the 'Toolbox' and 'On Writing' craft sections)", note: "Enrichment read (advanced / with guidance): a celebrated author's practical advice on storytelling and the craft of writing.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Autobiographical writing is writing about:", options: ["a made-up character", "your own real life and experiences", "the news", "how to build something"], answer: 1, explanation: "Autobiographical writing tells your own true experiences." },
@@ -507,7 +521,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Relative pronouns", provider: "Khan Academy", url: "https://www.khanacademy.org/humanities/grammar", note: "Videos and practice on who/whom/whose/which/that." },
             { type: "reading", title: "Relative pronouns & clauses", provider: "Grammarly", url: "https://www.grammarly.com/blog/relative-pronouns/", note: "Clear guide with examples." },
-            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "The Pronoun — Relative Pronouns", note: "This grammar point is covered in Wren & Martin's grammar section, 'The Pronoun — Relative Pronouns'.", url: "" }
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "The Pronoun — Relative Pronouns", note: "This grammar point is covered in Wren & Martin's grammar section, 'The Pronoun — Relative Pronouns'.", url: "" },
+            { type: "book", enrichment: true, title: "Eats, Shoots & Leaves", author: "Lynne Truss (children's edition available)", chapter: "(punctuation — commas, apostrophes & more)", note: "Enrichment read (great for ages 11–13): a witty tour of punctuation and why it really matters.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "A relative pronoun introduces a clause that gives more information about a:", options: ["verb", "noun", "preposition", "punctuation mark"], answer: 1, explanation: "Relative pronouns (who, which, that…) add information about a noun." },
@@ -530,7 +545,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Interrogative pronouns", provider: "Khan Academy", url: "https://www.khanacademy.org/humanities/grammar", note: "Pronouns that ask questions." },
             { type: "reading", title: "Interrogative pronouns explained", provider: "Grammarly", url: "https://www.grammarly.com/blog/interrogative-pronouns/", note: "Who, whom, whose, what, which in questions." },
-            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "The Pronoun — Interrogative Pronouns", note: "This grammar point is covered in Wren & Martin's grammar section, 'The Pronoun — Interrogative Pronouns'.", url: "" }
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "The Pronoun — Interrogative Pronouns", note: "This grammar point is covered in Wren & Martin's grammar section, 'The Pronoun — Interrogative Pronouns'.", url: "" },
+            { type: "book", enrichment: true, title: "Eats, Shoots & Leaves", author: "Lynne Truss (children's edition available)", chapter: "(punctuation — commas, apostrophes & more)", note: "Enrichment read (great for ages 11–13): a witty tour of punctuation and why it really matters.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "An interrogative pronoun is used to:", options: ["end a sentence", "ask a question", "join two clauses", "show excitement"], answer: 1, explanation: "Interrogative pronouns (who, what, which…) introduce questions." },
@@ -553,7 +569,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Subject & object pronouns", provider: "Khan Academy", url: "https://www.khanacademy.org/humanities/grammar", note: "I/me, he/him, she/her, we/us, they/them." },
             { type: "reading", title: "Pronoun case", provider: "Grammarly", url: "https://www.grammarly.com/blog/pronoun-case/", note: "When to use nominative vs objective pronouns." },
-            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "The Pronoun — Case (Nominative & Objective)", note: "This grammar point is covered in Wren & Martin's grammar section, 'The Pronoun — Case (Nominative & Objective)'.", url: "" }
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "The Pronoun — Case (Nominative & Objective)", note: "This grammar point is covered in Wren & Martin's grammar section, 'The Pronoun — Case (Nominative & Objective)'.", url: "" },
+            { type: "book", enrichment: true, title: "Eats, Shoots & Leaves", author: "Lynne Truss (children's edition available)", chapter: "(punctuation — commas, apostrophes & more)", note: "Enrichment read (great for ages 11–13): a witty tour of punctuation and why it really matters.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "The nominative (subject) case pronoun is used when the pronoun is:", options: ["doing the action (the subject)", "receiving the action (the object)", "showing possession", "a question word"], answer: 0, explanation: "Subject pronouns (I, he, she, we, they) do the action." },
@@ -576,7 +593,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Adjectives", provider: "Khan Academy", url: "https://www.khanacademy.org/humanities/grammar", note: "What adjectives do and how to use them." },
             { type: "reading", title: "Types of adjectives", provider: "Grammarly", url: "https://www.grammarly.com/blog/adjective/", note: "Descriptive, quantitative, demonstrative and more." },
-            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "The Adjective", note: "This grammar point is covered in Wren & Martin's grammar section, 'The Adjective'.", url: "" }
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "The Adjective", note: "This grammar point is covered in Wren & Martin's grammar section, 'The Adjective'.", url: "" },
+            { type: "book", enrichment: true, title: "Eats, Shoots & Leaves", author: "Lynne Truss (children's edition available)", chapter: "(punctuation — commas, apostrophes & more)", note: "Enrichment read (great for ages 11–13): a witty tour of punctuation and why it really matters.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "An adjective is a word that:", options: ["describes a noun", "shows an action", "joins clauses", "asks a question"], answer: 0, explanation: "Adjectives describe or modify nouns." },
@@ -599,7 +617,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Articles: a, an, the", provider: "Khan Academy", url: "https://www.khanacademy.org/humanities/grammar", note: "When to use each article." },
             { type: "reading", title: "Using articles", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/grammar/articles_a_versus_an.html", note: "Clear rules for a, an and the." },
-            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "The Adjective — Articles (A, An, The)", note: "This grammar point is covered in Wren & Martin's grammar section, 'The Adjective — Articles (A, An, The)'.", url: "" }
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "The Adjective — Articles (A, An, The)", note: "This grammar point is covered in Wren & Martin's grammar section, 'The Adjective — Articles (A, An, The)'.", url: "" },
+            { type: "book", enrichment: true, title: "Eats, Shoots & Leaves", author: "Lynne Truss (children's edition available)", chapter: "(punctuation — commas, apostrophes & more)", note: "Enrichment read (great for ages 11–13): a witty tour of punctuation and why it really matters.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "'The' is called the ___ article.", options: ["indefinite", "definite", "demonstrative", "possessive"], answer: 1, explanation: "'The' is the definite article — it points to a specific thing." },
@@ -622,7 +641,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Subjects & predicates", provider: "Khan Academy", url: "https://www.khanacademy.org/humanities/grammar", note: "Every sentence needs a subject and a predicate." },
             { type: "reading", title: "Sentence fragments & boundaries", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/", note: "Recognising complete sentences." },
-            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "The Sentence — Subject and Predicate", note: "This grammar point is covered in Wren & Martin's grammar section, 'The Sentence — Subject and Predicate'.", url: "" }
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "The Sentence — Subject and Predicate", note: "This grammar point is covered in Wren & Martin's grammar section, 'The Sentence — Subject and Predicate'.", url: "" },
+            { type: "book", enrichment: true, title: "Eats, Shoots & Leaves", author: "Lynne Truss (children's edition available)", chapter: "(punctuation — commas, apostrophes & more)", note: "Enrichment read (great for ages 11–13): a witty tour of punctuation and why it really matters.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Every complete sentence needs at least a:", options: ["subject and a predicate", "adjective and an adverb", "comma and a full stop", "noun and a question mark"], answer: 0, explanation: "A complete sentence has a subject (who/what) and a predicate (what they do/are)." },
@@ -645,7 +665,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Punctuation basics", provider: "Khan Academy", url: "https://www.khanacademy.org/humanities/grammar", note: "End marks, commas and capitals." },
             { type: "reading", title: "Commas & end punctuation", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/punctuation/", note: "Rules and examples for everyday punctuation." },
-            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Punctuation", note: "This grammar point is covered in Wren & Martin's grammar section, 'Punctuation'.", url: "" }
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Punctuation", note: "This grammar point is covered in Wren & Martin's grammar section, 'Punctuation'.", url: "" },
+            { type: "book", enrichment: true, title: "Eats, Shoots & Leaves", author: "Lynne Truss (children's edition available)", chapter: "(punctuation — commas, apostrophes & more)", note: "Enrichment read (great for ages 11–13): a witty tour of punctuation and why it really matters.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "A statement (telling sentence) usually ends with a:", options: ["question mark", "full stop (period)", "comma", "exclamation mark"], answer: 1, explanation: "Statements end with a full stop." },
