@@ -716,8 +716,10 @@
             main.innerHTML = viewObjQuiz(rest[1], idx);
             const o = found.topic.objectives[+idx];
             if (o) mountQuiz(o.quiz || []);
+            if (window.Admin) window.Admin.decorate("quiz", SUBJ.id, rest[1], +idx);
           } else {
             main.innerHTML = viewObjResources(rest[1], idx);
+            if (window.Admin) window.Admin.decorate("resources", SUBJ.id, rest[1], +idx);
           }
         } else {
           main.innerHTML = viewTopicHub(rest[1]);
