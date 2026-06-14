@@ -24,7 +24,8 @@ window.CURRICULUM.grades.push({
           resources: [
             { type: "reading", title: "CK-12: The scientific method", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/physical-science/", note: "The stages of a scientific investigation." },
             { type: "interactive", title: "Khan Academy: Working scientifically", provider: "Khan Academy", url: "https://www.khanacademy.org/science", note: "Notes and check questions on investigations." },
-            { type: "video", title: "The art and science of failing well (TED-Ed, 6 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=lwewZMJzBh4", note: "Why trial, error and failing well are central to how science actually works." }
+            { type: "video", title: "The art and science of failing well (TED-Ed, 6 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=lwewZMJzBh4", note: "Why trial, error and failing well are central to how science actually works." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Thinking & Working Scientifically (skills strand, developed across Stages 7–9)", note: "Cambridge develops scientific enquiry, measurement, variables and data-handling skills through the 'Thinking and Working Scientifically' strand woven across every unit.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Which step normally comes first in a scientific investigation?", options: ["Drawing a conclusion", "Asking a testable question", "Plotting a graph", "Writing the method"], answer: 1, explanation: "Everything starts with a question you can actually test." },
@@ -46,7 +47,8 @@ window.CURRICULUM.grades.push({
           text: "Write a testable research question and a hypothesis in 'If… then… because…' form.",
           resources: [
             { type: "reading", title: "CK-12: Planning an investigation", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/physical-science/", note: "Turning a question into a testable prediction." },
-            { type: "interactive", title: "Khan Academy: Science & the scientific method", provider: "Khan Academy", url: "https://www.khanacademy.org/science", note: "Practice spotting good questions and hypotheses." }
+            { type: "interactive", title: "Khan Academy: Science & the scientific method", provider: "Khan Academy", url: "https://www.khanacademy.org/science", note: "Practice spotting good questions and hypotheses." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Thinking & Working Scientifically (skills strand, developed across Stages 7–9)", note: "Cambridge develops scientific enquiry, measurement, variables and data-handling skills through the 'Thinking and Working Scientifically' strand woven across every unit.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Which of these is a TESTABLE hypothesis?", options: ["Plants are pretty", "If I add more light, then the plant will grow taller, because light powers photosynthesis", "Why do plants grow?", "Plants are the best living things"], answer: 1, explanation: "A hypothesis predicts an effect and gives a reason — and can be tested by experiment." },
@@ -68,7 +70,8 @@ window.CURRICULUM.grades.push({
           text: "Identify the independent, dependent and controlled variables in an experiment.",
           resources: [
             { type: "reading", title: "CK-12: Variables & fair tests", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/physical-science/", note: "The three kinds of variable." },
-            { type: "video", title: "Independent, dependent & control variables", provider: "YouTube", url: "https://www.youtube.com/watch?v=zFe8eK1aiIU", note: "The three kinds of variable, explained." }
+            { type: "video", title: "Independent, dependent & control variables", provider: "YouTube", url: "https://www.youtube.com/watch?v=zFe8eK1aiIU", note: "The three kinds of variable, explained." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Thinking & Working Scientifically (skills strand, developed across Stages 7–9)", note: "Cambridge develops scientific enquiry, measurement, variables and data-handling skills through the 'Thinking and Working Scientifically' strand woven across every unit.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "In 'How does fertiliser amount affect plant height?', the dependent variable is:", options: ["Amount of fertiliser", "Plant height", "Type of plant", "Amount of water"], answer: 1, explanation: "You measure the height (dependent); you change the fertiliser (independent)." },
@@ -90,7 +93,8 @@ window.CURRICULUM.grades.push({
           text: "Explain what makes a test 'fair', and distinguish reliability from validity.",
           resources: [
             { type: "interactive", title: "Khan Academy: Fair testing", provider: "Khan Academy", url: "https://www.khanacademy.org/science", note: "What a fair test is and why it matters." },
-            { type: "reading", title: "CK-12: Designing a controlled experiment", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/physical-science/", note: "Readable notes on control and repeatability." }
+            { type: "reading", title: "CK-12: Designing a controlled experiment", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/physical-science/", note: "Readable notes on control and repeatability." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Thinking & Working Scientifically (skills strand, developed across Stages 7–9)", note: "Cambridge develops scientific enquiry, measurement, variables and data-handling skills through the 'Thinking and Working Scientifically' strand woven across every unit.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "medium", q: "Repeating a measurement several times and getting similar values shows the result is reliable.", answer: true, explanation: "Reliability is about repeatable, consistent results." },
@@ -112,7 +116,8 @@ window.CURRICULUM.grades.push({
           text: "Distinguish accuracy from precision and identify random vs systematic errors.",
           resources: [
             { type: "video", title: "Reliability, accuracy & precision (FuseSchool)", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/watch?v=MRX2laaTZHY", note: "The difference between accuracy and precision." },
-            { type: "reading", title: "CK-12: Accuracy, precision & error", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/physical-science/", note: "Notes on random vs systematic error." }
+            { type: "reading", title: "CK-12: Accuracy, precision & error", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/physical-science/", note: "Notes on random vs systematic error." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Thinking & Working Scientifically (skills strand, developed across Stages 7–9)", note: "Cambridge develops scientific enquiry, measurement, variables and data-handling skills through the 'Thinking and Working Scientifically' strand woven across every unit.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "A scale always reads 0.5 g too high, even with nothing on it. This is a:", options: ["Random error", "Systematic error", "Human reaction error", "Rounding error"], answer: 1, explanation: "A constant offset in one direction is a systematic error (here, a zero error)." },
@@ -134,7 +139,8 @@ window.CURRICULUM.grades.push({
           text: "Select correct SI base units and convert between units (e.g. mm ↔ cm ↔ m, g ↔ kg, s ↔ min).",
           resources: [
             { type: "reading", title: "CK-12: Measurement & the Metric System", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/physical-science/", note: "SI units and step-by-step unit conversion." },
-            { type: "interactive", title: "Khan Academy: Units & measurement", provider: "Khan Academy", url: "https://www.khanacademy.org/science", note: "Practice converting between metric units." }
+            { type: "interactive", title: "Khan Academy: Units & measurement", provider: "Khan Academy", url: "https://www.khanacademy.org/science", note: "Practice converting between metric units." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Thinking & Working Scientifically (skills strand, developed across Stages 7–9)", note: "Cambridge develops scientific enquiry, measurement, variables and data-handling skills through the 'Thinking and Working Scientifically' strand woven across every unit.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "The SI base unit of mass is the:", options: ["Newton", "Gram", "Kilogram", "Litre"], answer: 2, explanation: "The kilogram (kg) is the SI base unit of mass; the gram is a smaller multiple." },
@@ -156,7 +162,8 @@ window.CURRICULUM.grades.push({
           text: "Tell fundamental quantities (length, mass, time) apart from derived quantities (area, volume, density).",
           resources: [
             { type: "reading", title: "CK-12: Base & derived quantities", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/physical-science/", note: "How derived quantities are built from base ones." },
-            { type: "interactive", title: "Khan Academy: Units & measurement", provider: "Khan Academy", url: "https://www.khanacademy.org/science/physics", note: "Base and derived quantities." }
+            { type: "interactive", title: "Khan Academy: Units & measurement", provider: "Khan Academy", url: "https://www.khanacademy.org/science/physics", note: "Base and derived quantities." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Thinking & Working Scientifically (skills strand, developed across Stages 7–9)", note: "Cambridge develops scientific enquiry, measurement, variables and data-handling skills through the 'Thinking and Working Scientifically' strand woven across every unit.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "Which is a derived quantity (not a fundamental one)?", options: ["Length", "Time", "Density", "Mass"], answer: 2, explanation: "Density is mass ÷ volume, derived from other quantities." },
@@ -178,7 +185,8 @@ window.CURRICULUM.grades.push({
           text: "Measure length, mass and time with appropriate instruments and read scales correctly.",
           resources: [
             { type: "interactive", title: "PhET: Measuring simulations", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/filter?subjects=general", note: "Free browser labs to practise reading measuring tools." },
-            { type: "reading", title: "CK-12: Taking measurements", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/physical-science/", note: "Choosing and reading the right instrument." }
+            { type: "reading", title: "CK-12: Taking measurements", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/physical-science/", note: "Choosing and reading the right instrument." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Thinking & Working Scientifically (skills strand, developed across Stages 7–9)", note: "Cambridge develops scientific enquiry, measurement, variables and data-handling skills through the 'Thinking and Working Scientifically' strand woven across every unit.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Which instrument is best for measuring a short time interval in the lab?", options: ["Ruler", "Stopwatch", "Balance", "Measuring cylinder"], answer: 1, explanation: "A stopwatch measures time; a ruler measures length and a balance measures mass." },
@@ -200,7 +208,8 @@ window.CURRICULUM.grades.push({
           text: "Find the area and volume of regular shapes by calculation and of irregular objects by displacement.",
           resources: [
             { type: "interactive", title: "Khan Academy: Volume & area", provider: "Khan Academy", url: "https://www.khanacademy.org/math/basic-geo", note: "Practice calculating area and volume of shapes." },
-            { type: "interactive", title: "PhET: Density (volume by displacement)", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/density", note: "Find volume by water displacement." }
+            { type: "interactive", title: "PhET: Density (volume by displacement)", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/density", note: "Find volume by water displacement." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Thinking & Working Scientifically (skills strand, developed across Stages 7–9)", note: "Cambridge develops scientific enquiry, measurement, variables and data-handling skills through the 'Thinking and Working Scientifically' strand woven across every unit.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "medium", q: "A block measures 4 cm × 3 cm × 2 cm. What is its volume in cm³?", answer: "24", explanation: "Volume of a cuboid = length × width × height = 4 × 3 × 2 = 24 cm³." },
@@ -222,7 +231,8 @@ window.CURRICULUM.grades.push({
           text: "Calculate density (ρ = m ÷ V) and use it to compare materials.",
           resources: [
             { type: "video", title: "What is density? (FuseSchool)", provider: "YouTube · FuseSchool", url: "https://www.youtube.com/watch?v=nVrsgESZh-Y", note: "What density is and how to find it." },
-            { type: "interactive", title: "PhET: Density", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/density", note: "Drag blocks into water and see why things float or sink." }
+            { type: "interactive", title: "PhET: Density", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/density", note: "Drag blocks into water and see why things float or sink." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Thinking & Working Scientifically (skills strand, developed across Stages 7–9)", note: "Cambridge develops scientific enquiry, measurement, variables and data-handling skills through the 'Thinking and Working Scientifically' strand woven across every unit.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "medium", q: "An object has mass 60 g and volume 20 cm³. Find its density in g/cm³.", answer: "3", explanation: "ρ = m ÷ V = 60 ÷ 20 = 3 g/cm³." },
@@ -244,7 +254,8 @@ window.CURRICULUM.grades.push({
           text: "Record raw data in a well-headed table and display it as a bar graph or line graph.",
           resources: [
             { type: "reading", title: "CK-12: Tables & graphs", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/physical-science/", note: "Setting out results and choosing a graph." },
-            { type: "interactive", title: "Khan Academy: Reading & making graphs", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Practice with bar and line graphs." }
+            { type: "interactive", title: "Khan Academy: Reading & making graphs", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Practice with bar and line graphs." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Thinking & Working Scientifically (skills strand, developed across Stages 7–9)", note: "Cambridge develops scientific enquiry, measurement, variables and data-handling skills through the 'Thinking and Working Scientifically' strand woven across every unit.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "A line graph is usually the best choice when both variables are numbers that change continuously.", answer: true, explanation: "Continuous numerical data (e.g. temperature over time) suits a line graph; categories suit a bar graph." },
@@ -266,7 +277,8 @@ window.CURRICULUM.grades.push({
           text: "Round values to a sensible number of significant figures and decimal places.",
           resources: [
             { type: "interactive", title: "Significant Figures", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/significant-figures.html", note: "Counting and rounding to significant figures." },
-            { type: "interactive", title: "Khan Academy: Rounding & significant figures", provider: "Khan Academy", url: "https://www.khanacademy.org/math/arithmetic", note: "Practice rounding sensibly." }
+            { type: "interactive", title: "Khan Academy: Rounding & significant figures", provider: "Khan Academy", url: "https://www.khanacademy.org/math/arithmetic", note: "Practice rounding sensibly." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Thinking & Working Scientifically (skills strand, developed across Stages 7–9)", note: "Cambridge develops scientific enquiry, measurement, variables and data-handling skills through the 'Thinking and Working Scientifically' strand woven across every unit.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "medium", q: "Round 7.846 to 2 significant figures.", answer: "7.8", explanation: "The first two significant figures are 7 and 8; the next digit (4) rounds down, giving 7.8." },
@@ -301,7 +313,8 @@ window.CURRICULUM.grades.push({
           resources: [
             { type: "interactive", title: "The Physics Classroom: 1D Kinematics", provider: "The Physics Classroom", url: "https://www.physicsclassroom.com/class/1DKin", note: "How we describe and measure motion." },
             { type: "interactive", title: "PhET: Forces & Motion – Basics", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/forces-and-motion-basics", note: "Explore motion, position and speed." },
-            { type: "interactive", title: "Speed, velocity & acceleration study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-67888e9d3ab4819184bf9ef35745731e-calculating-speed-velocity-and-acceleration", note: "A tutor bot for practising how we measure and calculate motion. (Needs a ChatGPT login.)" }
+            { type: "interactive", title: "Speed, velocity & acceleration study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-67888e9d3ab4819184bf9ef35745731e-calculating-speed-velocity-and-acceleration", note: "A tutor bot for practising how we measure and calculate motion. (Needs a ChatGPT login.)" },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Forces and energy", note: "Forces, simple machines, energy transfer and efficiency are covered in the Stage 8 'Forces and energy' unit.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Motion is best described as:", options: ["A change in colour over time", "A change in position over time", "A type of force", "A kind of energy"], answer: 1, explanation: "An object is in motion when its position changes as time passes." },
@@ -323,7 +336,8 @@ window.CURRICULUM.grades.push({
           text: "Identify the six simple machines: lever, pulley, inclined plane, screw, wedge and wheel-and-axle.",
           resources: [
             { type: "interactive", title: "Khan Academy: Simple machines", provider: "Khan Academy", url: "https://www.khanacademy.org/science/physics", note: "The six simple machines." },
-            { type: "reading", title: "CK-12: Simple machines", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/physical-science/simple-machines/", note: "Notes and diagrams of each machine." }
+            { type: "reading", title: "CK-12: Simple machines", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/physical-science/simple-machines/", note: "Notes and diagrams of each machine." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Forces and energy", note: "Forces, simple machines, energy transfer and efficiency are covered in the Stage 8 'Forces and energy' unit.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Which of these is NOT one of the six simple machines?", options: ["Lever", "Pulley", "Engine", "Wedge"], answer: 2, explanation: "An engine is a complex machine; the six simple machines are lever, pulley, inclined plane, screw, wedge and wheel-and-axle." },
@@ -345,7 +359,8 @@ window.CURRICULUM.grades.push({
           text: "Classify levers as class 1, 2 or 3 by the order of the load, effort and fulcrum.",
           resources: [
             { type: "reading", title: "CK-12: Levers & lever classes", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/physical-science/simple-machines/", note: "Class 1, 2 and 3 levers." },
-            { type: "interactive", title: "PhET: Balancing Act (levers)", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/balancing-act", note: "Play with fulcrum, load and effort on a seesaw." }
+            { type: "interactive", title: "PhET: Balancing Act (levers)", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/balancing-act", note: "Play with fulcrum, load and effort on a seesaw." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Forces and energy", note: "Forces, simple machines, energy transfer and efficiency are covered in the Stage 8 'Forces and energy' unit.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "In a class-1 lever, the fulcrum is:", options: ["At one end", "Between the effort and the load", "On the load", "Always moving"], answer: 1, explanation: "Class 1: fulcrum in the middle (e.g. seesaw, scissors)." },
@@ -368,7 +383,8 @@ window.CURRICULUM.grades.push({
           resources: [
             { type: "interactive", title: "Khan Academy: Pulleys & machines", provider: "Khan Academy", url: "https://www.khanacademy.org/science/physics", note: "How pulleys change force and direction." },
             { type: "reading", title: "CK-12: Pulleys", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/physical-science/simple-machines/", note: "How pulley systems multiply or redirect force." },
-            { type: "video", title: "The physics behind lift cables (BBC, 4 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=b2D4nhUOGW0", note: "How elevator pulley-and-cable systems lift huge loads safely." }
+            { type: "video", title: "The physics behind lift cables (BBC, 4 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=b2D4nhUOGW0", note: "How elevator pulley-and-cable systems lift huge loads safely." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Forces and energy", note: "Forces, simple machines, energy transfer and efficiency are covered in the Stage 8 'Forces and energy' unit.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "medium", q: "A single fixed pulley changes the direction of a force but does not reduce the effort needed.", answer: true, explanation: "A fixed pulley redirects force; you pull down to lift up, but the effort still equals the load." },
@@ -390,7 +406,8 @@ window.CURRICULUM.grades.push({
           text: "Explain how an inclined plane, wedge and screw trade a smaller force over a longer distance.",
           resources: [
             { type: "reading", title: "CK-12: Inclined planes, wedges & screws", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/physical-science/simple-machines/", note: "How these three machines reduce the force needed." },
-            { type: "interactive", title: "Khan Academy: Inclined planes & wedges", provider: "Khan Academy", url: "https://www.khanacademy.org/science/physics", note: "Trading force for distance." }
+            { type: "interactive", title: "Khan Academy: Inclined planes & wedges", provider: "Khan Academy", url: "https://www.khanacademy.org/science/physics", note: "Trading force for distance." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Forces and energy", note: "Forces, simple machines, energy transfer and efficiency are covered in the Stage 8 'Forces and energy' unit.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "A ramp used to push a heavy box onto a truck is an example of a(n):", options: ["Inclined plane", "Lever", "Pulley", "Wheel and axle"], answer: 0, explanation: "A ramp is an inclined plane — less force over a longer distance." },
@@ -412,7 +429,8 @@ window.CURRICULUM.grades.push({
           text: "Define mechanical advantage as load ÷ effort and calculate it for simple machines.",
           resources: [
             { type: "interactive", title: "Khan Academy: Mechanical advantage", provider: "Khan Academy", url: "https://www.khanacademy.org/science/physics", note: "Load divided by effort." },
-            { type: "reading", title: "CK-12: Mechanical advantage", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/physical-science/simple-machines/", note: "Worked examples of load ÷ effort." }
+            { type: "reading", title: "CK-12: Mechanical advantage", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/physical-science/simple-machines/", note: "Worked examples of load ÷ effort." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Forces and energy", note: "Forces, simple machines, energy transfer and efficiency are covered in the Stage 8 'Forces and energy' unit.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "medium", q: "A lever lifts a 200 N load with an effort of 50 N. What is its mechanical advantage?", answer: "4", explanation: "MA = load ÷ effort = 200 ÷ 50 = 4." },
@@ -435,7 +453,8 @@ window.CURRICULUM.grades.push({
           resources: [
             { type: "interactive", title: "PhET: Forces & Motion (friction)", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/forces-and-motion-basics", note: "See friction turn motion into heat." },
             { type: "reading", title: "CK-12: Energy & efficiency", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/physical-science/", note: "Energy transfers and wasted energy." },
-            { type: "interactive", title: "Gravity, friction & other forces study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-677becabbef48191a678cbd2c430d4b9-gravity-friction-and-other-forces", note: "Ask questions about friction — the force that stops any machine being 100% efficient. (Needs a ChatGPT login.)" }
+            { type: "interactive", title: "Gravity, friction & other forces study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-677becabbef48191a678cbd2c430d4b9-gravity-friction-and-other-forces", note: "Ask questions about friction — the force that stops any machine being 100% efficient. (Needs a ChatGPT login.)" },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Forces and energy", note: "Forces, simple machines, energy transfer and efficiency are covered in the Stage 8 'Forces and energy' unit.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "hard", q: "Because of friction, the actual mechanical advantage of a real machine is usually less than its ideal mechanical advantage.", answer: true, explanation: "Friction wastes some effort as heat, so the real (measured) MA is lower than the theoretical value." },
@@ -458,7 +477,8 @@ window.CURRICULUM.grades.push({
           resources: [
             { type: "reading", title: "CK-12: Machines in everyday life", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/physical-science/simple-machines/", note: "Spotting simple machines around us." },
             { type: "interactive", title: "Khan Academy: Machines in everyday life", provider: "Khan Academy", url: "https://www.khanacademy.org/science/physics", note: "Simple machines in tools and the body." },
-            { type: "video", title: "The physics behind lift cables (BBC, 4 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=b2D4nhUOGW0", note: "A real-world machine — the elevator — built from pulleys and cables." }
+            { type: "video", title: "The physics behind lift cables (BBC, 4 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=b2D4nhUOGW0", note: "A real-world machine — the elevator — built from pulleys and cables." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 8", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Forces and energy", note: "Forces, simple machines, energy transfer and efficiency are covered in the Stage 8 'Forces and energy' unit.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "A seesaw is an example of a:", options: ["Pulley", "Lever", "Screw", "Wedge"], answer: 1, explanation: "A seesaw pivots about a fulcrum — a class-1 lever." },
@@ -493,7 +513,8 @@ window.CURRICULUM.grades.push({
           resources: [
             { type: "interactive", title: "CELLS alive: interactive cell model", provider: "CELLS alive!", url: "https://www.cellsalive.com/cells/cell_model.htm", note: "Explore the cell, the basic unit of life." },
             { type: "reading", title: "CK-12: Cells", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "Why the cell is the basic unit of life." },
-            { type: "interactive", title: "Cells & microorganisms study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-677e0912ba3c81918a4fc6efcdbf3077-cells-and-microorganisms-bot", note: "An interactive tutor to quiz yourself on cells and the cell theory. (Needs a ChatGPT login.)" }
+            { type: "interactive", title: "Cells & microorganisms study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-677e0912ba3c81918a4fc6efcdbf3077-cells-and-microorganisms-bot", note: "An interactive tutor to quiz yourself on cells and the cell theory. (Needs a ChatGPT login.)" },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit 1: Living things", note: "Cells, plant vs animal cells, organelles, and levels of organisation are introduced in the Stage 7 'Living things' unit.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "The basic unit of all living things is the:", options: ["Atom", "Cell", "Organ", "Tissue"], answer: 1, explanation: "All organisms are made of one or more cells — the basic unit of life." },
@@ -515,7 +536,8 @@ window.CURRICULUM.grades.push({
           text: "Describe the idea that the first cells arose on early Earth (the 'primordial soup' hypothesis) as a scientific model.",
           resources: [
             { type: "interactive", title: "Khan Academy: Origin of life", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "How scientists model the first cells." },
-            { type: "reading", title: "CK-12: Origin of life", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "The primordial soup hypothesis explained." }
+            { type: "reading", title: "CK-12: Origin of life", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "The primordial soup hypothesis explained." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit 1: Living things", note: "Cells, plant vs animal cells, organelles, and levels of organisation are introduced in the Stage 7 'Living things' unit.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "hard", q: "The 'primordial soup' hypothesis is best described as:", options: ["A proven fact about exactly how life began", "A scientific model suggesting simple molecules on early Earth combined to form the first cells", "The idea that cells fall from space fully formed", "A type of microscope"], answer: 1, explanation: "It is a model/hypothesis: on early Earth, energy acted on simple chemicals, forming organic molecules that could lead to the first cells." },
@@ -538,7 +560,8 @@ window.CURRICULUM.grades.push({
           resources: [
             { type: "video", title: "Unicellular vs Multicellular (Amoeba Sisters)", provider: "YouTube · Amoeba Sisters", url: "https://www.youtube.com/watch?v=xKqhbFnWbvI", note: "Single-celled versus many-celled life." },
             { type: "reading", title: "CK-12: Unicellular & multicellular", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "Single-celled and many-celled life." },
-            { type: "interactive", title: "Cells & microorganisms study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-677e0912ba3c81918a4fc6efcdbf3077-cells-and-microorganisms-bot", note: "Explore single-celled microorganisms and how they differ from many-celled life. (Needs a ChatGPT login.)" }
+            { type: "interactive", title: "Cells & microorganisms study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-677e0912ba3c81918a4fc6efcdbf3077-cells-and-microorganisms-bot", note: "Explore single-celled microorganisms and how they differ from many-celled life. (Needs a ChatGPT login.)" },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit 1: Living things", note: "Cells, plant vs animal cells, organelles, and levels of organisation are introduced in the Stage 7 'Living things' unit.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "Bacteria are examples of unicellular organisms.", answer: true, explanation: "Bacteria are made of a single cell." },
@@ -561,7 +584,8 @@ window.CURRICULUM.grades.push({
           text: "Order the levels of organisation: cell → tissue → organ → organ system → organism.",
           resources: [
             { type: "reading", title: "CK-12: Levels of organisation", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "From cells to whole organisms." },
-            { type: "interactive", title: "Khan Academy: Body structure & organisation", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "Practice ordering the levels." }
+            { type: "interactive", title: "Khan Academy: Body structure & organisation", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "Practice ordering the levels." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit 1: Living things", note: "Cells, plant vs animal cells, organelles, and levels of organisation are introduced in the Stage 7 'Living things' unit.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "Put the levels of organisation in the correct order.", options: ["Cell → organ → tissue → organ system", "Cell → tissue → organ → organ system", "Tissue → cell → organ → organism", "Organ → tissue → cell → organism"], answer: 1, explanation: "Cells group into tissues, tissues into organs, organs into organ systems, which form the organism." },
@@ -583,7 +607,8 @@ window.CURRICULUM.grades.push({
           text: "Name the main parts of a light microscope and describe how to use it to view cells.",
           resources: [
             { type: "interactive", title: "Interactive microscope & cell models", provider: "CELLS alive!", url: "https://www.cellsalive.com/cells/cell_model.htm", note: "Explore cells as you would under a microscope." },
-            { type: "reading", title: "CK-12: Using a microscope", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "Parts of the microscope and focusing." }
+            { type: "reading", title: "CK-12: Using a microscope", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "Parts of the microscope and focusing." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit 1: Living things", note: "Cells, plant vs animal cells, organelles, and levels of organisation are introduced in the Stage 7 'Living things' unit.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "On a microscope, which part do you turn to focus the image sharply at high power?", options: ["Coarse focus", "Fine focus", "Stage clip", "Diaphragm"], answer: 1, explanation: "Coarse focus gets you close; fine focus sharpens the image, especially at high magnification." },
@@ -605,7 +630,8 @@ window.CURRICULUM.grades.push({
           text: "Compare plant and animal cells and identify structures unique to each.",
           resources: [
             { type: "interactive", title: "Plant & animal cell models", provider: "CELLS alive!", url: "https://www.cellsalive.com/cells/cell_model.htm", note: "Compare the two side by side, interactively." },
-            { type: "interactive", title: "Khan Academy: Plant vs animal cells", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology/structure-of-a-cell", note: "Comparing the two cell types." }
+            { type: "interactive", title: "Khan Academy: Plant vs animal cells", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology/structure-of-a-cell", note: "Comparing the two cell types." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit 1: Living things", note: "Cells, plant vs animal cells, organelles, and levels of organisation are introduced in the Stage 7 'Living things' unit.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Which structure is found in plant cells but NOT animal cells?", options: ["Nucleus", "Cell membrane", "Cell wall", "Mitochondria"], answer: 2, explanation: "Cell walls (and chloroplasts and large vacuoles) are features of plant cells." },
@@ -627,7 +653,8 @@ window.CURRICULUM.grades.push({
           text: "State the function of key organelles: cell membrane, cell wall, nucleus, cytoplasm, ribosomes, endoplasmic reticulum, mitochondria, chloroplasts and vacuoles.",
           resources: [
             { type: "interactive", title: "Khan Academy: Cell organelles", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology/structure-of-a-cell", note: "A tour of the organelles and their jobs." },
-            { type: "reading", title: "CK-12: Cell Structure & Function", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "Each organelle and its function, with diagrams." }
+            { type: "reading", title: "CK-12: Cell Structure & Function", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "Each organelle and its function, with diagrams." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit 1: Living things", note: "Cells, plant vs animal cells, organelles, and levels of organisation are introduced in the Stage 7 'Living things' unit.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Which organelle controls the cell and contains its DNA?", options: ["Ribosome", "Nucleus", "Vacuole", "Cytoplasm"], answer: 1, explanation: "The nucleus stores genetic material and directs the cell's activities." },
@@ -649,7 +676,8 @@ window.CURRICULUM.grades.push({
           text: "Explain the relationship between DNA, genes and chromosomes.",
           resources: [
             { type: "video", title: "DNA, Chromosomes, Genes & Traits (Amoeba Sisters)", provider: "YouTube · Amoeba Sisters", url: "https://www.youtube.com/watch?v=8m6hHRlKwxY", note: "How DNA, genes and chromosomes fit together." },
-            { type: "interactive", title: "Khan Academy: DNA & chromosomes", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "Videos and practice on genetic material." }
+            { type: "interactive", title: "Khan Academy: DNA & chromosomes", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "Videos and practice on genetic material." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Genes and inheritance", note: "DNA, genes, chromosomes and inheritance are covered in the Stage 9 'Genes and inheritance' unit.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "DNA is best described as:", options: ["a type of organ", "the molecule that carries genetic information", "a kind of cell", "a unit of energy"], answer: 1, explanation: "DNA is the molecule storing genetic instructions." },
