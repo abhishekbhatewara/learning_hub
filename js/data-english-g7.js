@@ -148,7 +148,10 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "interactive", title: "Plot diagram tool", provider: "ReadWriteThink", url: "https://www.readwritethink.org/classroom-resources/student-interactives/plot-diagram", note: "Map a story's structure interactively." },
             { type: "reading", title: "Plot & structure", provider: "CommonLit", url: "https://www.commonlit.org/", note: "Texts to analyse for structure." },
-            { type: "book", enrichment: true, title: "How to Read Literature Like a Professor — For Kids", author: "Thomas C. Foster", chapter: "(e.g. 'Is That a Symbol?', 'It’s All Political', 'Marked for Greatness')", note: "Enrichment read (great for ages 11–13): a fun guide to symbols, themes, character and the patterns behind great stories.", url: "https://openlibrary.org/search?q=how+to+read+literature+like+a+professor+for+kids" }
+            { type: "book", enrichment: true, title: "How to Read Literature Like a Professor — For Kids", author: "Thomas C. Foster", chapter: "(e.g. 'Is That a Symbol?', 'It’s All Political', 'Marked for Greatness')", note: "Enrichment read (great for ages 11–13): a fun guide to symbols, themes, character and the patterns behind great stories.", url: "https://openlibrary.org/search?q=how+to+read+literature+like+a+professor+for+kids" },
+            { type: "video", title: "What makes a hero? - Matthew Winkler (4 minutes)", provider: "📚 School\u0027s Library · youtube.com", url: "https://www.youtube.com/watch?v=Hhk4N9A0oCA", note: "From the Wolves classroom library." },
+            { type: "video", title: "Starwars and Heros Journey (12 minutes)", provider: "📚 School\u0027s Library · youtube.com", url: "https://www.youtube.com/watch?v=4D_V3O5po-I", note: "From the Wolves classroom library." },
+            { type: "video", title: "Story Study: Structure (ft. Harry Potter & the Philosopher's Stone) (7 minutes)", provider: "📚 School\u0027s Library · youtube.com", url: "https://www.youtube.com/watch?v=AlJb8BnpWJw", note: "From the Wolves classroom library." }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "The turning point of greatest tension in a story is the:", options: ["exposition", "climax", "resolution", "setting"], answer: 1, explanation: "The climax is the peak of the story's tension." },
@@ -240,7 +243,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Theme & symbolism", provider: "LiteraryDevices", url: "https://literarydevices.net/symbolism/", note: "How objects can carry deeper meaning." },
             { type: "reading", title: "Topic vs message", provider: "CommonLit", url: "https://www.commonlit.org/", note: "Finding the deeper message." },
-            { type: "book", enrichment: true, title: "How to Read Literature Like a Professor — For Kids", author: "Thomas C. Foster", chapter: "(e.g. 'Is That a Symbol?', 'It's All Political', 'Marked for Greatness')", note: "Enrichment read (great for ages 11–13): a fun guide to symbols, themes, character and the patterns behind great stories.", url: "https://openlibrary.org/search?q=how+to+read+literature+like+a+professor+for+kids" }
+            { type: "book", enrichment: true, title: "How to Read Literature Like a Professor — For Kids", author: "Thomas C. Foster", chapter: "(e.g. 'Is That a Symbol?', 'It's All Political', 'Marked for Greatness')", note: "Enrichment read (great for ages 11–13): a fun guide to symbols, themes, character and the patterns behind great stories.", url: "https://openlibrary.org/search?q=how+to+read+literature+like+a+professor+for+kids" },
+            { type: "video", title: "Analysis of Robert Frost's \"The Road Not Taken\" (1 minute)", provider: "📚 School\u0027s Library · youtube.com", url: "https://www.youtube.com/watch?v=fMcsadmTPoE", note: "From the Wolves classroom library." }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "A symbol in a story is:", options: ["a spelling mistake", "an object or image that stands for a bigger idea", "the title", "the narrator"], answer: 1, explanation: "A symbol represents something larger (e.g. a dove = peace)." },
@@ -263,7 +267,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Figurative language", provider: "LiteraryDevices", url: "https://literarydevices.net/", note: "Definitions and examples of devices." },
             { type: "reading", title: "Figurative language practice", provider: "Khan Academy", url: "https://www.khanacademy.org/ela", note: "Spotting devices in texts." },
-            { type: "book", enrichment: true, title: "How to Read Literature Like a Professor — For Kids", author: "Thomas C. Foster", chapter: "(e.g. 'Is That a Symbol?', 'It's All Political', 'Marked for Greatness')", note: "Enrichment read (great for ages 11–13): a fun guide to symbols, themes, character and the patterns behind great stories.", url: "https://openlibrary.org/search?q=how+to+read+literature+like+a+professor+for+kids" }
+            { type: "book", enrichment: true, title: "How to Read Literature Like a Professor — For Kids", author: "Thomas C. Foster", chapter: "(e.g. 'Is That a Symbol?', 'It's All Political', 'Marked for Greatness')", note: "Enrichment read (great for ages 11–13): a fun guide to symbols, themes, character and the patterns behind great stories.", url: "https://openlibrary.org/search?q=how+to+read+literature+like+a+professor+for+kids" },
+            { type: "video", title: "\"The Road Not Taken\" by Robert Frost (2 minutes)", provider: "📚 School\u0027s Library · youtube.com", url: "https://www.youtube.com/watch?v=yGB_K_xlHdI", note: "From the Wolves classroom library." }
           ],
           quiz: [
             { type: "match", difficulty: "medium", q: "Match each device to its definition.", pairs: [["Simile", "Comparison using 'like' or 'as'"], ["Metaphor", "Says one thing IS another"], ["Personification", "Gives human qualities to non-human things"], ["Irony", "A gap between what is said/expected and what is true"]], explanation: "These are four core figurative devices." },
@@ -344,7 +349,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Fact vs opinion", provider: "Khan Academy", url: "https://www.khanacademy.org/ela", note: "Telling facts from opinions and judgments." },
             { type: "reading", title: "Fact/opinion practice", provider: "CommonLit", url: "https://www.commonlit.org/", note: "Sorting statements in real texts." },
-            { type: "book", enrichment: true, title: "The Elements of Eloquence: How to Turn the Perfect English Phrase", author: "Mark Forsyth", chapter: "(rhetorical figures, one per chapter)", note: "Enrichment read (accessible stretch): the rhetorical devices writers and advertisers use to make language persuasive and memorable.", url: "https://archive.org/details/the-elements-of-eloquence-how-to-turn-the-perfect-english-phrase" }
+            { type: "book", enrichment: true, title: "The Elements of Eloquence: How to Turn the Perfect English Phrase", author: "Mark Forsyth", chapter: "(rhetorical figures, one per chapter)", note: "Enrichment read (accessible stretch): the rhetorical devices writers and advertisers use to make language persuasive and memorable.", url: "https://archive.org/details/the-elements-of-eloquence-how-to-turn-the-perfect-english-phrase" },
+            { type: "reading", title: "‘That’s the one thing we did’: New Zealand irked by Trump’s false claim US split the atom | New Zealand | The Guardian", provider: "📚 School\u0027s Library · theguardian.com", url: "https://www.theguardian.com/world/2025/jan/21/donald-trump-splitting-the-atom-claim-new-zealand-ernest-rutherford", note: "From the Wolves classroom library." }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Which statement is a FACT (can be checked)?", options: ["Pizza is the best food.", "Water boils at 100°C at sea level.", "Mondays are awful.", "This film is boring."], answer: 1, explanation: "A fact can be verified; the others are opinions or judgments." },
@@ -390,7 +396,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Analysing ads & news", provider: "ReadWriteThink", url: "https://www.readwritethink.org/", note: "Purpose, audience, visuals and persuasion." },
             { type: "reading", title: "Reading the news critically", provider: "CommonLit", url: "https://www.commonlit.org/", note: "Questioning media texts." },
-            { type: "book", enrichment: true, title: "The Elements of Eloquence: How to Turn the Perfect English Phrase", author: "Mark Forsyth", chapter: "(rhetorical figures, one per chapter)", note: "Enrichment read (accessible stretch): the rhetorical devices writers and advertisers use to make language persuasive and memorable.", url: "https://archive.org/details/the-elements-of-eloquence-how-to-turn-the-perfect-english-phrase" }
+            { type: "book", enrichment: true, title: "The Elements of Eloquence: How to Turn the Perfect English Phrase", author: "Mark Forsyth", chapter: "(rhetorical figures, one per chapter)", note: "Enrichment read (accessible stretch): the rhetorical devices writers and advertisers use to make language persuasive and memorable.", url: "https://archive.org/details/the-elements-of-eloquence-how-to-turn-the-perfect-english-phrase" },
+            { type: "video", title: "Why San Francisco is suing top U.S. food manufacturers over ultra-processed foods (7 minutes)", provider: "📚 School\u0027s Library · youtube.com", url: "https://www.youtube.com/watch?v=Gf97F3EyH7o", note: "From the Wolves classroom library." }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "When analysing an advertisement, you should consider its purpose, audience, visuals and:", options: ["page count", "persuasive techniques", "the printer's name", "the font size only"], answer: 1, explanation: "Ads are built from purpose, audience, visuals and persuasion." },
@@ -413,7 +420,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Bias & objectivity", provider: "Khan Academy", url: "https://www.khanacademy.org/ela", note: "Spotting slanted language and viewpoints." },
             { type: "reading", title: "Detecting bias", provider: "CommonLit", url: "https://www.commonlit.org/", note: "Practice identifying bias in texts." },
-            { type: "book", enrichment: true, title: "The Elements of Eloquence: How to Turn the Perfect English Phrase", author: "Mark Forsyth", chapter: "(rhetorical figures, one per chapter)", note: "Enrichment read (accessible stretch): the rhetorical devices writers and advertisers use to make language persuasive and memorable.", url: "https://archive.org/details/the-elements-of-eloquence-how-to-turn-the-perfect-english-phrase" }
+            { type: "book", enrichment: true, title: "The Elements of Eloquence: How to Turn the Perfect English Phrase", author: "Mark Forsyth", chapter: "(rhetorical figures, one per chapter)", note: "Enrichment read (accessible stretch): the rhetorical devices writers and advertisers use to make language persuasive and memorable.", url: "https://archive.org/details/the-elements-of-eloquence-how-to-turn-the-perfect-english-phrase" },
+            { type: "video", title: "Yuval Noah Harari: How to safeguard your mind in the age of junk information (13 minutes)", provider: "📚 School\u0027s Library · youtube.com", url: "https://www.youtube.com/watch?v=K1OvbwY6GPM", note: "From the Wolves classroom library." }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "'Bias' in a text means:", options: ["a balanced view", "a one-sided slant that favours a particular view", "correct spelling", "a type of font"], answer: 1, explanation: "Bias is an unbalanced leaning toward one side." },
