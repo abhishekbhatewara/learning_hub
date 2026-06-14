@@ -326,12 +326,14 @@
   function resourceCard(r) {
     if (r.type === "book") {
       const by = r.author || r.provider || "";
+      const enrich = !!r.enrichment;
+      const chip = enrich ? "📗 Enrichment read" : "📕 Textbook";
       const link = r.url
         ? `<a class="res-open" href="${esc(r.url)}" target="_blank" rel="noopener noreferrer">View book ↗</a>`
         : "";
       return `
-        <div class="res-card book">
-          <span class="res-type book">📕 Book</span>
+        <div class="res-card book${enrich ? " enrich" : ""}">
+          <span class="res-type ${enrich ? "enrich" : "book"}">${chip}</span>
           <h4>${esc(r.title)}</h4>
           ${by ? `<div class="res-provider">${esc(by)}</div>` : ""}
           ${r.chapter ? `<div class="res-chapter">📖 ${esc(r.chapter)}</div>` : ""}

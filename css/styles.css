@@ -223,6 +223,9 @@ a:hover { text-decoration: underline; }
 .res-type.podcast { background: #f3e8ff; color: #7e22ce; }
 .res-type.book { background: #fef3c7; color: #92400e; }
 .res-card.book { border-left-color: #b45309; }
+.res-type.enrich { background: #dcfce7; color: #166534; }
+.res-card.book.enrich { border-left-color: #16a34a; }
+.res-card.book.enrich .res-chapter { color: #166534; }
 .res-card h4 { font-family: "Inter"; font-size: 1.02rem; font-weight: 700; margin: .1rem 0; }
 .res-provider { font-size: .82rem; color: var(--muted); }
 .res-chapter { font-size: .88rem; font-weight: 600; color: #92400e; }
