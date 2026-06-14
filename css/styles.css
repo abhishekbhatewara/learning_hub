@@ -221,8 +221,11 @@ a:hover { text-decoration: underline; }
 .res-type.interactive { background: #dbeafe; color: #1d4ed8; }
 .res-type.reading { background: #dcfce7; color: #15803d; }
 .res-type.podcast { background: #f3e8ff; color: #7e22ce; }
+.res-type.book { background: #fef3c7; color: #92400e; }
+.res-card.book { border-left-color: #b45309; }
 .res-card h4 { font-family: "Inter"; font-size: 1.02rem; font-weight: 700; margin: .1rem 0; }
 .res-provider { font-size: .82rem; color: var(--muted); }
+.res-chapter { font-size: .88rem; font-weight: 600; color: #92400e; }
 .res-note { font-size: .9rem; color: var(--ink-soft); }
 .res-card .res-open { margin-top: .3rem; font-weight: 600; font-size: .88rem; }
 

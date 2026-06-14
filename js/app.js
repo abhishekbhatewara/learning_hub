@@ -324,6 +324,21 @@
   }
 
   function resourceCard(r) {
+    if (r.type === "book") {
+      const by = r.author || r.provider || "";
+      const link = r.url
+        ? `<a class="res-open" href="${esc(r.url)}" target="_blank" rel="noopener noreferrer">View book ↗</a>`
+        : "";
+      return `
+        <div class="res-card book">
+          <span class="res-type book">📕 Book</span>
+          <h4>${esc(r.title)}</h4>
+          ${by ? `<div class="res-provider">${esc(by)}</div>` : ""}
+          ${r.chapter ? `<div class="res-chapter">📖 ${esc(r.chapter)}</div>` : ""}
+          <div class="res-note">${esc(r.note || "")}</div>
+          ${link}
+        </div>`;
+    }
     return `
       <div class="res-card">
         <span class="res-type ${r.type}">${r.type}</span>
