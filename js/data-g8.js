@@ -24,7 +24,8 @@ window.CURRICULUM.grades.push({
           resources: [
             { type: "reading", title: "CK-12: The heart & circulation", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "Heart structure and double circulation." },
             { type: "interactive", title: "The human body systems study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-6780a55ada8881919ba84cbfb7664b87-the-human-body-system", note: "An interactive tutor on the body's organ systems. (Needs a ChatGPT login.)" },
-            { type: "interactive", title: "Khan Academy: The circulatory system", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "Chambers, valves and blood vessels." }
+            { type: "interactive", title: "Khan Academy: The circulatory system", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "Chambers, valves and blood vessels." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Books 7 & 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Microorganisms & disease (Stage 7); Maintaining life and Genes & inheritance (Stage 9)", note: "Disease and immunity are covered in Stage 7 'Microorganisms & disease'; body systems, inheritance, variation and natural selection in the Stage 9 'Maintaining life' and 'Genes & inheritance' units.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Which blood vessels carry blood AWAY from the heart?", options: ["Veins", "Arteries", "Capillaries", "Valves"], answer: 1, explanation: "Arteries carry blood away from the heart (usually at high pressure)." },
@@ -46,7 +47,8 @@ window.CURRICULUM.grades.push({
           text: "Compare arteries, veins and capillaries and identify the components of blood and their functions.",
           resources: [
             { type: "interactive", title: "Khan Academy: Blood & blood vessels", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "Arteries, veins, capillaries and blood components." },
-            { type: "reading", title: "CK-12: Blood & circulation", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "What's in blood and how vessels differ." }
+            { type: "reading", title: "CK-12: Blood & circulation", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "What's in blood and how vessels differ." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Books 7 & 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Microorganisms & disease (Stage 7); Maintaining life and Genes & inheritance (Stage 9)", note: "Disease and immunity are covered in Stage 7 'Microorganisms & disease'; body systems, inheritance, variation and natural selection in the Stage 9 'Maintaining life' and 'Genes & inheritance' units.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Which blood component carries oxygen?", options: ["Platelets", "Plasma", "Red blood cells", "White blood cells"], answer: 2, explanation: "Red blood cells contain haemoglobin, which binds oxygen." },
@@ -68,7 +70,8 @@ window.CURRICULUM.grades.push({
           text: "Explain factors affecting heart rate and design a fair investigation into exercise and heart rate.",
           resources: [
             { type: "interactive", title: "Khan Academy: Circulation & exercise", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "How activity changes heart rate." },
-            { type: "reading", title: "CK-12: Heart rate & exercise", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "Why the heart speeds up during exercise." }
+            { type: "reading", title: "CK-12: Heart rate & exercise", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "Why the heart speeds up during exercise." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Books 7 & 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Microorganisms & disease (Stage 7); Maintaining life and Genes & inheritance (Stage 9)", note: "Disease and immunity are covered in Stage 7 'Microorganisms & disease'; body systems, inheritance, variation and natural selection in the Stage 9 'Maintaining life' and 'Genes & inheritance' units.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "During exercise, heart rate usually:", options: ["Decreases", "Increases", "Stays exactly the same", "Stops"], answer: 1, explanation: "Muscles need more oxygen and glucose during exercise, so the heart beats faster to deliver it." },
@@ -92,7 +95,8 @@ window.CURRICULUM.grades.push({
             { type: "reading", title: "CK-12: Heart disease & health", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "Causes and prevention of heart disease." },
             { type: "video", title: "What actually causes high cholesterol? (TED-Ed, 6 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=EixIyh1gshM", note: "Cholesterol and the risk of heart disease." },
             { type: "reading", title: "Common sweetener linked to higher stroke risk", provider: "📚 School's Library · earth.com", url: "https://www.earth.com/news/common-sweetener-may-directly-damage-the-brain/", note: "Diet, blood vessels and cardiovascular risk." },
-            { type: "video", title: "The science behind 'super agers' (26 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=WKb5PE-XM4I", note: "What lifestyle does for long-term heart and brain health." }
+            { type: "video", title: "The science behind 'super agers' (26 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=WKb5PE-XM4I", note: "What lifestyle does for long-term heart and brain health." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Books 7 & 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Microorganisms & disease (Stage 7); Maintaining life and Genes & inheritance (Stage 9)", note: "Disease and immunity are covered in Stage 7 'Microorganisms & disease'; body systems, inheritance, variation and natural selection in the Stage 9 'Maintaining life' and 'Genes & inheritance' units.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "High blood pressure is also known as:", options: ["Angina", "Hypertension", "Anaemia", "Arrhythmia"], answer: 1, explanation: "Hypertension means persistently elevated blood pressure, which strains the heart and blood vessels." },
@@ -114,7 +118,8 @@ window.CURRICULUM.grades.push({
           text: "Describe the lymphatic system and its roles in fluid balance and immune defence.",
           resources: [
             { type: "reading", title: "CK-12: The lymphatic system", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "Fluid balance and immune roles." },
-            { type: "interactive", title: "Khan Academy: The lymphatic system", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "Fluid balance and immune defence." }
+            { type: "interactive", title: "Khan Academy: The lymphatic system", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "Fluid balance and immune defence." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Books 7 & 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Microorganisms & disease (Stage 7); Maintaining life and Genes & inheritance (Stage 9)", note: "Disease and immunity are covered in Stage 7 'Microorganisms & disease'; body systems, inheritance, variation and natural selection in the Stage 9 'Maintaining life' and 'Genes & inheritance' units.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "Lymph nodes contain white blood cells that help fight infection.", answer: true, explanation: "Lymph nodes filter lymph and are full of white blood cells that attack pathogens." },
@@ -137,7 +142,8 @@ window.CURRICULUM.grades.push({
           resources: [
             { type: "interactive", title: "Khan Academy: Pathogens & disease", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "The main pathogen groups and transmission." },
             { type: "reading", title: "The greatest parasite is right in front of you", provider: "📚 School's Library · ScienceAlert", url: "https://www.sciencealert.com/the-greatest-parasite-is-right-in-front-of-you-and-its-dangerous", note: "A real-world look at parasites as a pathogen group." },
-            { type: "reading", title: "CK-12: Pathogens & transmission", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "Types of pathogen and routes of infection." }
+            { type: "reading", title: "CK-12: Pathogens & transmission", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "Types of pathogen and routes of infection." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Books 7 & 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Microorganisms & disease (Stage 7); Maintaining life and Genes & inheritance (Stage 9)", note: "Disease and immunity are covered in Stage 7 'Microorganisms & disease'; body systems, inheritance, variation and natural selection in the Stage 9 'Maintaining life' and 'Genes & inheritance' units.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "Viruses are living cells that can reproduce on their own.", answer: false, explanation: "Viruses are not cells; they can only reproduce inside a host's cells." },
@@ -159,7 +165,8 @@ window.CURRICULUM.grades.push({
           text: "Explain the body's defences, phagocytosis, and the difference between active and passive immunity.",
           resources: [
             { type: "reading", title: "CK-12: The immune system", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "Defences, white blood cells and immunity." },
-            { type: "interactive", title: "Khan Academy: Defence against disease", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "Barriers, phagocytosis and vaccines." }
+            { type: "interactive", title: "Khan Academy: Defence against disease", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "Barriers, phagocytosis and vaccines." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Books 7 & 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Microorganisms & disease (Stage 7); Maintaining life and Genes & inheritance (Stage 9)", note: "Disease and immunity are covered in Stage 7 'Microorganisms & disease'; body systems, inheritance, variation and natural selection in the Stage 9 'Maintaining life' and 'Genes & inheritance' units.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Which of the following is a non-specific (physical) barrier against infection?", options: ["Antibodies", "Skin", "Memory cells", "Lymphocytes"], answer: 1, explanation: "The skin is a tough, non-specific physical barrier that stops most pathogens from entering the body." },
@@ -181,7 +188,8 @@ window.CURRICULUM.grades.push({
           text: "Classify bones, joints and muscle types in the human body.",
           resources: [
             { type: "reading", title: "CK-12: Skeleton, joints & muscles", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "Bone, joint and muscle types." },
-            { type: "interactive", title: "Khan Academy: Skeleton, joints & muscles", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "Bone, joint and muscle types." }
+            { type: "interactive", title: "Khan Academy: Skeleton, joints & muscles", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "Bone, joint and muscle types." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Books 7 & 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Microorganisms & disease (Stage 7); Maintaining life and Genes & inheritance (Stage 9)", note: "Disease and immunity are covered in Stage 7 'Microorganisms & disease'; body systems, inheritance, variation and natural selection in the Stage 9 'Maintaining life' and 'Genes & inheritance' units.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "How many bones are in the adult human skeleton?", options: ["126", "206", "300", "52"], answer: 1, explanation: "The adult human skeleton contains approximately 206 bones." },
@@ -205,7 +213,8 @@ window.CURRICULUM.grades.push({
             { type: "interactive", title: "Khan Academy: Mendelian genetics & Punnett squares", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology/classical-genetics", note: "Worked Punnett squares with practice." },
             { type: "podcast", title: "Orange Cat Lovers, Rise Up – Short Wave", provider: "📚 School's Library · Apple Podcasts", url: "https://podcasts.apple.com/us/podcast/orange-cat-lovers-rise-up/id1482575855?i=1000708659195", note: "The genetics behind orange cat coat colour — inheritance in action." },
             { type: "reading", title: "Gene-editing tailored to rare disorders", provider: "📚 School's Library · NYTimes", url: "https://www.nytimes.com/2025/05/15/health/gene-editing-personalized-rare-disorders.html?unlocked_article_code=1.HU8.o_m0.hUzjq5_8hv8_", note: "How scientists edit genes — cutting-edge genetics and inheritance." },
-            { type: "reading", title: "CK-12: Inheritance & Punnett squares", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "Dominant/recessive, codominance and pedigrees." }
+            { type: "reading", title: "CK-12: Inheritance & Punnett squares", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "Dominant/recessive, codominance and pedigrees." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Books 7 & 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Microorganisms & disease (Stage 7); Maintaining life and Genes & inheritance (Stage 9)", note: "Disease and immunity are covered in Stage 7 'Microorganisms & disease'; body systems, inheritance, variation and natural selection in the Stage 9 'Maintaining life' and 'Genes & inheritance' units.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "The physical appearance of an organism (what we can observe) is its:", options: ["Genotype", "Phenotype", "Allele", "Gamete"], answer: 1, explanation: "Phenotype is the observable trait; genotype is the genetic make-up (alleles present)." },
@@ -229,7 +238,8 @@ window.CURRICULUM.grades.push({
             { type: "interactive", title: "PhET: Natural Selection", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/natural-selection", note: "Watch traits evolve as the environment changes." },
             { type: "reading", title: "Fossilised claw prints rewrite the amniote timeline", provider: "📚 School's Library · The Guardian", url: "https://www.theguardian.com/environment/2025/may/14/fossilised-claw-prints-australia-amniotes-fossils", note: "Fossils as living evidence for evolution." },
             { type: "video", title: "Investigating the rise of early-onset cancer (documentary, 45 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=EQgP153WUUM", note: "Cancer and mutation — how changes in DNA can affect cells." },
-            { type: "podcast", title: "Love Fruit? Thank Dinosaur Mass Extinction – Short Wave", provider: "📚 School's Library · Apple Podcasts", url: "https://podcasts.apple.com/us/podcast/love-fruit-thank-dinosaur-mass-extinction/id1482575855?i=1000699108203", note: "Extinction, fossils and how life changes over time." }
+            { type: "podcast", title: "Love Fruit? Thank Dinosaur Mass Extinction – Short Wave", provider: "📚 School's Library · Apple Podcasts", url: "https://podcasts.apple.com/us/podcast/love-fruit-thank-dinosaur-mass-extinction/id1482575855?i=1000699108203", note: "Extinction, fossils and how life changes over time." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Books 7 & 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Microorganisms & disease (Stage 7); Maintaining life and Genes & inheritance (Stage 9)", note: "Disease and immunity are covered in Stage 7 'Microorganisms & disease'; body systems, inheritance, variation and natural selection in the Stage 9 'Maintaining life' and 'Genes & inheritance' units.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "A change in the DNA base sequence of an organism is called a:", options: ["Mutation", "Mitosis", "Vaccine", "Vector"], answer: 0, explanation: "A mutation is a change in DNA; it creates the variation that evolution can act on." },
@@ -253,7 +263,8 @@ window.CURRICULUM.grades.push({
             { type: "interactive", title: "PhET: Natural Selection", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/natural-selection", note: "Change the environment and watch traits evolve." },
             { type: "podcast", title: "All of Life Has a Common Ancestor – Short Wave", provider: "📚 School's Library · Apple Podcasts", url: "https://podcasts.apple.com/us/podcast/short-wave/id1482575855?i=1000684312471", note: "Common ancestry — the deep connection between all living things." },
             { type: "video", title: "The surprising reason zebras have stripes (TED-Ed, 5 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=QJB0nmEjbDY", note: "Adaptation and selection in a real animal." },
-            { type: "video", title: "Why are there so many kinds of dogs? (TED-Ed, 5 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=ikxGwImO5sc", note: "Selective breeding — selection sped up by humans." }
+            { type: "video", title: "Why are there so many kinds of dogs? (TED-Ed, 5 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=ikxGwImO5sc", note: "Selective breeding — selection sped up by humans." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Books 7 & 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Microorganisms & disease (Stage 7); Maintaining life and Genes & inheritance (Stage 9)", note: "Disease and immunity are covered in Stage 7 'Microorganisms & disease'; body systems, inheritance, variation and natural selection in the Stage 9 'Maintaining life' and 'Genes & inheritance' units.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Natural selection acts on variation that is:", options: ["Learned during the organism's lifetime", "Heritable (passed from parents to offspring)", "Always visible to the eye", "Created by the environment"], answer: 1, explanation: "Only inherited variation can be passed on and acted on by natural selection over generations." },
@@ -287,7 +298,8 @@ window.CURRICULUM.grades.push({
           text: "Describe and explain periodic trends in atomic/ionic radius, ionisation energy, electronegativity and metallic character.",
           resources: [
             { type: "reading", title: "CK-12: The periodic table & trends", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/chemistry/", note: "Trends across periods and down groups." },
-            { type: "interactive", title: "Khan Academy: Periodic trends", provider: "Khan Academy", url: "https://www.khanacademy.org/science/chemistry", note: "Patterns in the periodic table." }
+            { type: "interactive", title: "Khan Academy: Periodic trends", provider: "Khan Academy", url: "https://www.khanacademy.org/science/chemistry", note: "Patterns in the periodic table." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Books 8 & 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Chemical reactions (Stage 8); Reactivity and Rates of reaction (Stage 9)", note: "Atoms, bonding and chemical reactions are introduced in Stage 8 'Chemical reactions' and developed in the Stage 9 'Reactivity' and 'Rates of reaction' units.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Across a period (left to right), atomic radius generally:", options: ["Increases", "Decreases", "Stays the same", "Doubles"], answer: 1, explanation: "More protons pull the same shell of electrons closer, so atoms get smaller across a period." },
@@ -309,7 +321,8 @@ window.CURRICULUM.grades.push({
           text: "Link an element's electronic configuration to its position in the periodic table.",
           resources: [
             { type: "reading", title: "CK-12: Electron configuration", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/chemistry/", note: "How electron shells map to the table." },
-            { type: "interactive", title: "Khan Academy: Electron configurations", provider: "Khan Academy", url: "https://www.khanacademy.org/science/chemistry", note: "Configurations and periodic position." }
+            { type: "interactive", title: "Khan Academy: Electron configurations", provider: "Khan Academy", url: "https://www.khanacademy.org/science/chemistry", note: "Configurations and periodic position." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Books 8 & 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Chemical reactions (Stage 8); Reactivity and Rates of reaction (Stage 9)", note: "Atoms, bonding and chemical reactions are introduced in Stage 8 'Chemical reactions' and developed in the Stage 9 'Reactivity' and 'Rates of reaction' units.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "Elements in the same group have the same number of outer-shell (valence) electrons.", answer: true, explanation: "That shared outer-electron count is why a group's elements react similarly." },
@@ -331,7 +344,8 @@ window.CURRICULUM.grades.push({
           text: "State the octet rule and use it to explain ionic, covalent and metallic bonding.",
           resources: [
             { type: "interactive", title: "PhET: Build a Molecule", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/build-a-molecule", note: "Build molecules and explore bonding." },
-            { type: "reading", title: "CK-12: Chemical bonding", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/chemistry/", note: "Why atoms bond to fill their outer shell." }
+            { type: "reading", title: "CK-12: Chemical bonding", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/chemistry/", note: "Why atoms bond to fill their outer shell." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Books 8 & 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Chemical reactions (Stage 8); Reactivity and Rates of reaction (Stage 9)", note: "Atoms, bonding and chemical reactions are introduced in Stage 8 'Chemical reactions' and developed in the Stage 9 'Reactivity' and 'Rates of reaction' units.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Ionic bonds form between:", options: ["Two metals", "Two non-metals", "A metal and a non-metal", "Noble gases"], answer: 2, explanation: "A metal loses electrons to a non-metal, forming oppositely charged ions that attract." },
@@ -353,7 +367,8 @@ window.CURRICULUM.grades.push({
           text: "Predict ion charges and write/name simple ionic compounds; relate ionic properties to structure.",
           resources: [
             { type: "reading", title: "CK-12: Ionic compounds", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/chemistry/", note: "Forming ions and ionic properties." },
-            { type: "interactive", title: "Khan Academy: Ionic compounds", provider: "Khan Academy", url: "https://www.khanacademy.org/science/chemistry", note: "Charges, names and properties." }
+            { type: "interactive", title: "Khan Academy: Ionic compounds", provider: "Khan Academy", url: "https://www.khanacademy.org/science/chemistry", note: "Charges, names and properties." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Books 8 & 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Chemical reactions (Stage 8); Reactivity and Rates of reaction (Stage 9)", note: "Atoms, bonding and chemical reactions are introduced in Stage 8 'Chemical reactions' and developed in the Stage 9 'Reactivity' and 'Rates of reaction' units.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "What charge does a sodium ion (Na+) carry?", options: ["No charge", "1+ positive", "1- negative", "2+ positive"], answer: 1, explanation: "Sodium loses one electron to become Na+, a singly charged positive ion (cation)." },
@@ -375,7 +390,8 @@ window.CURRICULUM.grades.push({
           text: "Explain metallic bonding with the 'sea of electrons' model and link it to the properties of metals.",
           resources: [
             { type: "interactive", title: "Khan Academy: Metallic bonding", provider: "Khan Academy", url: "https://www.khanacademy.org/science/chemistry", note: "The sea of delocalised electrons." },
-            { type: "reading", title: "CK-12: Metallic bonding", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/chemistry/", note: "Why metals conduct and bend." }
+            { type: "reading", title: "CK-12: Metallic bonding", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/chemistry/", note: "Why metals conduct and bend." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Books 8 & 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Chemical reactions (Stage 8); Reactivity and Rates of reaction (Stage 9)", note: "Atoms, bonding and chemical reactions are introduced in Stage 8 'Chemical reactions' and developed in the Stage 9 'Reactivity' and 'Rates of reaction' units.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "In the 'sea of electrons' model, the electrons that are free to move are called:", options: ["Valence electrons only", "Delocalised electrons", "Ionic electrons", "Paired electrons"], answer: 1, explanation: "In metallic bonding, outer electrons are released from individual atoms and become delocalised — free to move throughout the metal." },
@@ -397,7 +413,8 @@ window.CURRICULUM.grades.push({
           text: "Draw Lewis (dot-and-cross) structures for simple molecules with single, double and triple bonds.",
           resources: [
             { type: "interactive", title: "PhET: Build a Molecule", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/filter?subjects=chemistry", note: "Assemble molecules and see shared electrons." },
-            { type: "interactive", title: "Khan Academy: Lewis diagrams", provider: "Khan Academy", url: "https://www.khanacademy.org/science/chemistry", note: "Dot-and-cross structures with practice." }
+            { type: "interactive", title: "Khan Academy: Lewis diagrams", provider: "Khan Academy", url: "https://www.khanacademy.org/science/chemistry", note: "Dot-and-cross structures with practice." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Books 8 & 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Chemical reactions (Stage 8); Reactivity and Rates of reaction (Stage 9)", note: "Atoms, bonding and chemical reactions are introduced in Stage 8 'Chemical reactions' and developed in the Stage 9 'Reactivity' and 'Rates of reaction' units.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "In a Lewis (dot-and-cross) diagram, the dots and crosses represent:", options: ["Protons and neutrons", "Electrons from each of the two atoms", "Positive and negative charges", "Bonds only"], answer: 1, explanation: "Dots represent electrons from one atom, crosses from the other, showing how they are shared in a bond." },
@@ -419,7 +436,8 @@ window.CURRICULUM.grades.push({
           text: "Distinguish polar from non-polar bonds/molecules and name simple covalent compounds using prefixes.",
           resources: [
             { type: "interactive", title: "PhET: Molecule Shapes & Polarity", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/molecule-shapes", note: "Electronegativity and polarity." },
-            { type: "interactive", title: "Khan Academy: Covalent compounds", provider: "Khan Academy", url: "https://www.khanacademy.org/science/chemistry", note: "Naming molecules with prefixes." }
+            { type: "interactive", title: "Khan Academy: Covalent compounds", provider: "Khan Academy", url: "https://www.khanacademy.org/science/chemistry", note: "Naming molecules with prefixes." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Books 8 & 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Chemical reactions (Stage 8); Reactivity and Rates of reaction (Stage 9)", note: "Atoms, bonding and chemical reactions are introduced in Stage 8 'Chemical reactions' and developed in the Stage 9 'Reactivity' and 'Rates of reaction' units.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "The prefix 'tri-' in naming covalent molecules means:", options: ["1", "2", "3", "4"], answer: 2, explanation: "Mono=1, di=2, tri=3, tetra=4. For example, nitrogen trichloride (NCl₃) has 3 chlorines." },
@@ -441,7 +459,8 @@ window.CURRICULUM.grades.push({
           text: "Compare ionic and covalent compounds and describe giant covalent structures (diamond, graphite, silicon dioxide).",
           resources: [
             { type: "reading", title: "CK-12: Giant covalent structures", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/chemistry/", note: "Diamond, graphite and silicon dioxide." },
-            { type: "interactive", title: "Khan Academy: Bonding & structure", provider: "Khan Academy", url: "https://www.khanacademy.org/science/chemistry", note: "Comparing ionic, covalent and giant structures." }
+            { type: "interactive", title: "Khan Academy: Bonding & structure", provider: "Khan Academy", url: "https://www.khanacademy.org/science/chemistry", note: "Comparing ionic, covalent and giant structures." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Books 8 & 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Chemical reactions (Stage 8); Reactivity and Rates of reaction (Stage 9)", note: "Atoms, bonding and chemical reactions are introduced in Stage 8 'Chemical reactions' and developed in the Stage 9 'Reactivity' and 'Rates of reaction' units.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Giant covalent structures (like diamond) have very high melting points because:", options: ["They are made of metal ions", "There are many strong covalent bonds throughout the structure", "They have weak intermolecular forces", "They dissolve easily in water"], answer: 1, explanation: "Every atom in a giant covalent structure is bonded to its neighbours with strong covalent bonds; enormous energy is needed to break them." },
@@ -463,7 +482,8 @@ window.CURRICULUM.grades.push({
           text: "Identify intermolecular forces (London dispersion, dipole–dipole, hydrogen bonding) and explain hydrogen bonding in water.",
           resources: [
             { type: "reading", title: "CK-12: Intermolecular forces & hydrogen bonding", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/chemistry/", note: "The forces between molecules." },
-            { type: "video", title: "H₂O: The Molecule That Made Us (documentary, 54 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=NSzdOc_oJeg", note: "Why water's special properties shaped life on Earth." }
+            { type: "video", title: "H₂O: The Molecule That Made Us (documentary, 54 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=NSzdOc_oJeg", note: "Why water's special properties shaped life on Earth." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Books 8 & 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Chemical reactions (Stage 8); Reactivity and Rates of reaction (Stage 9)", note: "Atoms, bonding and chemical reactions are introduced in Stage 8 'Chemical reactions' and developed in the Stage 9 'Reactivity' and 'Rates of reaction' units.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Intermolecular forces are forces that act:", options: ["Inside a molecule between bonded atoms", "Between separate molecules", "Between ions in a lattice", "Between protons and neutrons"], answer: 1, explanation: "Intermolecular forces (van der Waals, dipole-dipole, hydrogen bonds) act between molecules, not within them." },
@@ -485,7 +505,8 @@ window.CURRICULUM.grades.push({
           text: "Distinguish physical from chemical changes, apply conservation of mass, and balance chemical equations.",
           resources: [
             { type: "interactive", title: "Khan Academy: Balancing chemical equations", provider: "Khan Academy", url: "https://www.khanacademy.org/science/chemistry", note: "Practice balancing with conservation of mass." },
-            { type: "reading", title: "CK-12: Physical & chemical change", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/chemistry/", note: "Conservation of mass and balancing." }
+            { type: "reading", title: "CK-12: Physical & chemical change", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/chemistry/", note: "Conservation of mass and balancing." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Books 8 & 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Chemical reactions (Stage 8); Reactivity and Rates of reaction (Stage 9)", note: "Atoms, bonding and chemical reactions are introduced in Stage 8 'Chemical reactions' and developed in the Stage 9 'Reactivity' and 'Rates of reaction' units.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Which of the following is a physical change?", options: ["Burning wood", "Iron rusting", "Water freezing", "Baking a cake"], answer: 2, explanation: "Freezing is reversible (melt the ice) and no new substance is formed — it is a physical change." },
@@ -507,7 +528,8 @@ window.CURRICULUM.grades.push({
           text: "Classify reactions as exothermic or endothermic and use the pH scale and indicators.",
           resources: [
             { type: "reading", title: "CK-12: Energy changes, acids & pH", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/chemistry/", note: "Exothermic/endothermic reactions and pH." },
-            { type: "video", title: "What is entropy? (TED-Ed, 5 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=YM-uykVfq_E", note: "Enrichment: energy spreading out in reactions and changes." }
+            { type: "video", title: "What is entropy? (TED-Ed, 5 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=YM-uykVfq_E", note: "Enrichment: energy spreading out in reactions and changes." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Books 8 & 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Chemical reactions (Stage 8); Reactivity and Rates of reaction (Stage 9)", note: "Atoms, bonding and chemical reactions are introduced in Stage 8 'Chemical reactions' and developed in the Stage 9 'Reactivity' and 'Rates of reaction' units.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "A solution with pH 2 is:", options: ["Strongly acidic", "Neutral", "Weakly alkaline", "Strongly alkaline"], answer: 0, explanation: "pH below 7 is acidic; pH 2 is strongly acidic." },
@@ -541,7 +563,8 @@ window.CURRICULUM.grades.push({
           text: "Use the kinetic theory of matter and Brownian motion to explain the states of matter.",
           resources: [
             { type: "interactive", title: "PhET: States of Matter – Basics", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/states-of-matter-basics", note: "Heat particles and watch states change." },
-            { type: "interactive", title: "Khan Academy: States of matter & kinetic theory", provider: "Khan Academy", url: "https://www.khanacademy.org/science/physics", note: "Particle model of solids, liquids and gases." }
+            { type: "interactive", title: "Khan Academy: States of matter & kinetic theory", provider: "Khan Academy", url: "https://www.khanacademy.org/science/physics", note: "Particle model of solids, liquids and gases." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Books 8 & 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Light (Stage 8); Sound & space and Forces & energy (Stage 9)", note: "Light is covered in Stage 8 'Light'; sound and waves in Stage 9 'Sound & space'; thermal energy and the laws of motion sit within the 'Forces & energy' units.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "In which state are particles most tightly packed and only vibrating?", options: ["Gas", "Liquid", "Solid", "Plasma"], answer: 2, explanation: "Solids have closely packed particles that vibrate in fixed positions." },
@@ -563,7 +586,8 @@ window.CURRICULUM.grades.push({
           text: "Convert between Celsius, Fahrenheit and Kelvin and distinguish heat from temperature.",
           resources: [
             { type: "interactive", title: "Khan Academy: Temperature & heat", provider: "Khan Academy", url: "https://www.khanacademy.org/science/physics", note: "Temperature scales and the difference from heat." },
-            { type: "interactive", title: "PhET: Energy & temperature", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/states-of-matter-basics", note: "See how heating changes particle energy." }
+            { type: "interactive", title: "PhET: Energy & temperature", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/states-of-matter-basics", note: "See how heating changes particle energy." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Books 8 & 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Light (Stage 8); Sound & space and Forces & energy (Stage 9)", note: "Light is covered in Stage 8 'Light'; sound and waves in Stage 9 'Sound & space'; thermal energy and the laws of motion sit within the 'Forces & energy' units.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "easy", q: "Convert 25 °C to Kelvin.", answer: "298", explanation: "K = °C + 273, so 25 + 273 = 298 K." },
@@ -585,7 +609,8 @@ window.CURRICULUM.grades.push({
           text: "Explain thermal expansion in solids, liquids and gases and its everyday applications.",
           resources: [
             { type: "interactive", title: "Khan Academy: Thermal expansion", provider: "Khan Academy", url: "https://www.khanacademy.org/science/physics", note: "Why materials expand when heated." },
-            { type: "interactive", title: "PhET: States of Matter", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/states-of-matter-basics", note: "Heat particles and watch matter expand." }
+            { type: "interactive", title: "PhET: States of Matter", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/states-of-matter-basics", note: "Heat particles and watch matter expand." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Books 8 & 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Light (Stage 8); Sound & space and Forces & energy (Stage 9)", note: "Light is covered in Stage 8 'Light'; sound and waves in Stage 9 'Sound & space'; thermal energy and the laws of motion sit within the 'Forces & energy' units.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "When most substances are heated, they:", options: ["Contract", "Expand", "Vanish", "Freeze"], answer: 1, explanation: "Heating makes particles move more and take up more space, so materials usually expand." },
@@ -607,7 +632,8 @@ window.CURRICULUM.grades.push({
           text: "Compare thermometers (liquid-in-glass, thermocouple, thermistor, infrared, bimetallic strip) and alcohol vs mercury.",
           resources: [
             { type: "interactive", title: "Khan Academy: Measuring temperature", provider: "Khan Academy", url: "https://www.khanacademy.org/science/physics", note: "Different types of thermometer." },
-            { type: "interactive", title: "The Physics Classroom: Thermometers & heat", provider: "The Physics Classroom", url: "https://www.physicsclassroom.com/class/thermalP", note: "How thermometers work." }
+            { type: "interactive", title: "The Physics Classroom: Thermometers & heat", provider: "The Physics Classroom", url: "https://www.physicsclassroom.com/class/thermalP", note: "How thermometers work." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Books 8 & 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Light (Stage 8); Sound & space and Forces & energy (Stage 9)", note: "Light is covered in Stage 8 'Light'; sound and waves in Stage 9 'Sound & space'; thermal energy and the laws of motion sit within the 'Forces & energy' units.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "What physical property does a liquid-in-glass thermometer use to measure temperature?", options: ["Electrical resistance", "Thermal expansion of a liquid", "Colour change", "Sound speed"], answer: 1, explanation: "A liquid (mercury or alcohol) in a capillary tube expands as temperature rises, and the length of the liquid column is read against a scale." },
@@ -629,7 +655,8 @@ window.CURRICULUM.grades.push({
           text: "Distinguish transverse from longitudinal waves and mechanical from electromagnetic waves.",
           resources: [
             { type: "interactive", title: "The Physics Classroom: Waves", provider: "The Physics Classroom", url: "https://www.physicsclassroom.com/class/waves", note: "Transverse vs longitudinal, mechanical vs EM." },
-            { type: "interactive", title: "PhET: Wave on a String", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/wave-on-a-string", note: "See how a transverse wave behaves." }
+            { type: "interactive", title: "PhET: Wave on a String", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/wave-on-a-string", note: "See how a transverse wave behaves." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Books 8 & 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Light (Stage 8); Sound & space and Forces & energy (Stage 9)", note: "Light is covered in Stage 8 'Light'; sound and waves in Stage 9 'Sound & space'; thermal energy and the laws of motion sit within the 'Forces & energy' units.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Sound is a:", options: ["Transverse wave", "Longitudinal wave", "Electromagnetic wave", "Stationary object"], answer: 1, explanation: "Sound is longitudinal: particles vibrate back and forth along the direction of travel." },
@@ -651,7 +678,8 @@ window.CURRICULUM.grades.push({
           text: "Define wavelength, frequency, time period and wave speed and use v = fλ and v = λ/T.",
           resources: [
             { type: "interactive", title: "The Physics Classroom: The wave equation", provider: "The Physics Classroom", url: "https://www.physicsclassroom.com/class/waves", note: "Using v = fλ in calculations." },
-            { type: "interactive", title: "Waves study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-679aea0f60a48191814976ada31719aa-waves", note: "Practise wave properties and calculations. (Needs a ChatGPT login.)" }
+            { type: "interactive", title: "Waves study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-679aea0f60a48191814976ada31719aa-waves", note: "Practise wave properties and calculations. (Needs a ChatGPT login.)" },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Books 8 & 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Light (Stage 8); Sound & space and Forces & energy (Stage 9)", note: "Light is covered in Stage 8 'Light'; sound and waves in Stage 9 'Sound & space'; thermal energy and the laws of motion sit within the 'Forces & energy' units.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "The wavelength of a wave is the distance:", options: ["From a crest to the nearest trough", "Of one complete wave cycle (e.g. crest to crest)", "The wave travels in one second", "Of the amplitude times two"], answer: 1, explanation: "Wavelength is the length of one complete wave (e.g. crest to crest, or compression to compression)." },
@@ -673,7 +701,8 @@ window.CURRICULUM.grades.push({
           text: "Describe sound as a longitudinal wave, explain echoes, and compare its speed in different media.",
           resources: [
             { type: "interactive", title: "The Physics Classroom: Sound waves", provider: "The Physics Classroom", url: "https://www.physicsclassroom.com/class/sound", note: "How sound travels, echoes and speed in media." },
-            { type: "interactive", title: "PhET: Waves Intro (sound)", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/waves-intro", note: "Compressions, rarefactions and echoes." }
+            { type: "interactive", title: "PhET: Waves Intro (sound)", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/waves-intro", note: "Compressions, rarefactions and echoes." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Books 8 & 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Light (Stage 8); Sound & space and Forces & energy (Stage 9)", note: "Light is covered in Stage 8 'Light'; sound and waves in Stage 9 'Sound & space'; thermal energy and the laws of motion sit within the 'Forces & energy' units.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "Sound cannot travel through a vacuum because it needs particles to carry the vibration.", answer: true, explanation: "Sound is mechanical, so it needs a medium; light (EM) can travel through a vacuum." },
@@ -695,7 +724,8 @@ window.CURRICULUM.grades.push({
           text: "Explain ultrasound, infrasound, SONAR, radar and medical sound applications, and solve time–distance sound problems.",
           resources: [
             { type: "interactive", title: "The Physics Classroom: Uses of sound", provider: "The Physics Classroom", url: "https://www.physicsclassroom.com/class/sound", note: "Ultrasound, SONAR and echo problems." },
-            { type: "interactive", title: "Khan Academy: Sound applications", provider: "Khan Academy", url: "https://www.khanacademy.org/science/physics", note: "Ultrasound and echo calculations." }
+            { type: "interactive", title: "Khan Academy: Sound applications", provider: "Khan Academy", url: "https://www.khanacademy.org/science/physics", note: "Ultrasound and echo calculations." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Books 8 & 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Light (Stage 8); Sound & space and Forces & energy (Stage 9)", note: "Light is covered in Stage 8 'Light'; sound and waves in Stage 9 'Sound & space'; thermal energy and the laws of motion sit within the 'Forces & energy' units.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Ultrasound has a frequency:", options: ["Below 20 Hz (infrasound range)", "Between 20 Hz and 20,000 Hz (audible range)", "Above 20,000 Hz (above human hearing)", "Exactly 20 Hz"], answer: 2, explanation: "Ultrasound is above the upper limit of human hearing (20,000 Hz). Infrasound is below 20 Hz." },
@@ -717,7 +747,8 @@ window.CURRICULUM.grades.push({
           text: "State Newton's three laws and apply F = ma and momentum p = mv (and the idea of impulse).",
           resources: [
             { type: "interactive", title: "The Physics Classroom: Newton's Laws", provider: "The Physics Classroom", url: "https://www.physicsclassroom.com/class/newtlaws", note: "F = ma, momentum and the three laws." },
-            { type: "interactive", title: "Khan Academy: Forces & Newton's laws", provider: "Khan Academy", url: "https://www.khanacademy.org/science/physics", note: "Applying F = ma and momentum." }
+            { type: "interactive", title: "Khan Academy: Forces & Newton's laws", provider: "Khan Academy", url: "https://www.khanacademy.org/science/physics", note: "Applying F = ma and momentum." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Books 8 & 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Light (Stage 8); Sound & space and Forces & energy (Stage 9)", note: "Light is covered in Stage 8 'Light'; sound and waves in Stage 9 'Sound & space'; thermal energy and the laws of motion sit within the 'Forces & energy' units.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Newton's first law states that an object remains at rest or moves in a straight line at constant speed unless:", options: ["It has mass", "A resultant (unbalanced) force acts on it", "It is very heavy", "It is in a vacuum"], answer: 1, explanation: "Without a net force, objects continue in their current state of motion — inertia." },
@@ -739,7 +770,8 @@ window.CURRICULUM.grades.push({
           text: "Apply momentum/impulse ideas to safety engineering such as crumple zones.",
           resources: [
             { type: "interactive", title: "Khan Academy: Momentum & impulse", provider: "Khan Academy", url: "https://www.khanacademy.org/science/physics", note: "How impulse explains safety features." },
-            { type: "interactive", title: "The Physics Classroom: Momentum & collisions", provider: "The Physics Classroom", url: "https://www.physicsclassroom.com/class/momentum", note: "Impulse, momentum and safety engineering." }
+            { type: "interactive", title: "The Physics Classroom: Momentum & collisions", provider: "The Physics Classroom", url: "https://www.physicsclassroom.com/class/momentum", note: "Impulse, momentum and safety engineering." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Books 8 & 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Light (Stage 8); Sound & space and Forces & energy (Stage 9)", note: "Light is covered in Stage 8 'Light'; sound and waves in Stage 9 'Sound & space'; thermal energy and the laws of motion sit within the 'Forces & energy' units.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Impulse is defined as:", options: ["Force × distance", "Force × time", "Mass × velocity", "Mass × acceleration"], answer: 1, explanation: "Impulse = F × t (force multiplied by time). It equals the change in momentum of an object." },
@@ -764,7 +796,8 @@ window.CURRICULUM.grades.push({
             { type: "interactive", title: "Energy study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-6761430f8cb88191ab9bd3de2bbc6ee2-energy", note: "A tutor bot to explore energy forms and transfers. (Needs a ChatGPT login.)" },
             { type: "reading", title: "Solar superpowers, wind warriors & hydro heroes", provider: "📚 School's Library · United Nations", url: "https://www.un.org/en/climatechange/how-communities-are-embracing-renewable-energy", note: "How communities turn energy resources into electricity." },
             { type: "video", title: "Power Trip: The Story of Energy (documentary, 49 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=-35IXfS7cKg", note: "How energy powers transport and society." },
-            { type: "reading", title: "Renewable energy – powering a safer future", provider: "📚 School's Library · United Nations", url: "https://www.un.org/en/climatechange/raising-ambition/renewable-energy", note: "Where our energy comes from and where it's going." }
+            { type: "reading", title: "Renewable energy – powering a safer future", provider: "📚 School's Library · United Nations", url: "https://www.un.org/en/climatechange/raising-ambition/renewable-energy", note: "Where our energy comes from and where it's going." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Books 8 & 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Light (Stage 8); Sound & space and Forces & energy (Stage 9)", note: "Light is covered in Stage 8 'Light'; sound and waves in Stage 9 'Sound & space'; thermal energy and the laws of motion sit within the 'Forces & energy' units.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Which of the following is a form of stored (potential) energy?", options: ["Light", "Sound", "A stretched spring", "Thermal radiation"], answer: 2, explanation: "A stretched spring has elastic potential energy stored in it. Light and sound are forms of wave energy, and thermal radiation is heat energy being transferred." },
@@ -786,7 +819,8 @@ window.CURRICULUM.grades.push({
           text: "Describe optics basics: how prisms and lenses bend light, the spectrum, and the link between frequency and energy.",
           resources: [
             { type: "interactive", title: "PhET: Bending Light", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/bending-light", note: "How light bends and splits into colours." },
-            { type: "interactive", title: "Khan Academy: Light & optics", provider: "Khan Academy", url: "https://www.khanacademy.org/science/physics", note: "Lenses, prisms and the EM spectrum." }
+            { type: "interactive", title: "Khan Academy: Light & optics", provider: "Khan Academy", url: "https://www.khanacademy.org/science/physics", note: "Lenses, prisms and the EM spectrum." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Books 8 & 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Light (Stage 8); Sound & space and Forces & energy (Stage 9)", note: "Light is covered in Stage 8 'Light'; sound and waves in Stage 9 'Sound & space'; thermal energy and the laws of motion sit within the 'Forces & energy' units.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Which colour of visible light has the longest wavelength?", options: ["Violet", "Green", "Yellow", "Red"], answer: 3, explanation: "Red light has the longest wavelength (~700 nm) and lowest frequency in the visible spectrum. Violet has the shortest wavelength." },
@@ -822,7 +856,8 @@ window.CURRICULUM.grades.push({
             { type: "interactive", title: "NASA: Evidence & Earth's history", provider: "NASA Global Climate Change", url: "https://climate.nasa.gov/evidence/", note: "How scientists read Earth's past from physical evidence." },
             { type: "interactive", title: "Earth's structure study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-67726005ceb8819191dc29a431bca1b1-earth-s-structure-bot", note: "A tutor bot on Earth's layers and structure. (Needs a ChatGPT login.)" },
             { type: "reading", title: "It once rained on Earth for a million years", provider: "📚 School's Library · History Facts", url: "https://historyfacts.com/science-industry/fact/rained-on-earth-for-a-million-years/", note: "A dramatic chapter of deep geologic time — the Carnian Pluvial Event." },
-            { type: "interactive", title: "PhET: Plate Tectonics", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/plate-tectonics", note: "How plates move and reshape the Earth." }
+            { type: "interactive", title: "PhET: Plate Tectonics", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/plate-tectonics", note: "How plates move and reshape the Earth." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Books 8 & 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Photosynthesis & the carbon cycle (Stage 9); Materials and cycles on Earth (Stage 8)", note: "Earth science, the carbon cycle and climate are covered in the Stage 9 'Photosynthesis & the carbon cycle' and Stage 8 'Materials and cycles on Earth' units; engineering-design and data-science skills sit in the 'Thinking & Working Scientifically' strand.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "In undisturbed rock layers, the oldest rocks are usually:", options: ["At the top", "At the bottom", "In the middle", "Randomly placed"], answer: 1, explanation: "The law of superposition: lower layers were laid down first, so they're older." },
@@ -846,7 +881,8 @@ window.CURRICULUM.grades.push({
             { type: "video", title: "Earthquake Science, and the disaster that created it (8 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=XOCxNVDiOnE", note: "How earthquakes work and how we study them." },
             { type: "video", title: "Why are earthquakes so hard to predict? (TED-Ed, 4 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=jhRuUoTnA6g", note: "Plate movement and the science of seismic prediction." },
             { type: "video", title: "Why Iceland's lava is so hard to control (TED-Ed, 5 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=8H--GLt3h8I", note: "Volcanism at a plate boundary — tectonics in action." },
-            { type: "video", title: "How does the Richter Scale work? (4 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=NaNw9LHq9dc", note: "Measuring the strength of earthquakes." }
+            { type: "video", title: "How does the Richter Scale work? (4 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=NaNw9LHq9dc", note: "Measuring the strength of earthquakes." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Books 8 & 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Photosynthesis & the carbon cycle (Stage 9); Materials and cycles on Earth (Stage 8)", note: "Earth science, the carbon cycle and climate are covered in the Stage 9 'Photosynthesis & the carbon cycle' and Stage 8 'Materials and cycles on Earth' units; engineering-design and data-science skills sit in the 'Thinking & Working Scientifically' strand.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Earthquakes happen mainly because of the movement of:", options: ["Ocean currents", "Tectonic plates", "Clouds", "The Moon"], answer: 1, explanation: "Plates moving and slipping at boundaries release energy as earthquakes." },
@@ -870,7 +906,8 @@ window.CURRICULUM.grades.push({
             { type: "interactive", title: "NASA Climate Kids: The water cycle", provider: "NASA Climate Kids", url: "https://climatekids.nasa.gov/", note: "How water moves between Earth's systems." },
             { type: "video", title: "Why are there two tides a day? (TED-Ed, 5 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=mpRJhhbKLFc", note: "How the Moon and oceans (hydrosphere) interact." },
             { type: "reading", title: "A massive underground ocean 700 km below the surface", provider: "📚 School's Library · Economic Times", url: "https://economictimes.indiatimes.com/news/science/scientists-found-a-massive-underground-ocean-hidden-700km-below-earths-surface-heres-all-about-it/articleshow/113849982.cms", note: "Water locked in the geosphere — a surprising link between Earth's spheres." },
-            { type: "video", title: "The Mighty River – Ganga: River From The Skies (4 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=Q0gYQrebGwY", note: "A great river system and its watershed." }
+            { type: "video", title: "The Mighty River – Ganga: River From The Skies (4 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=Q0gYQrebGwY", note: "A great river system and its watershed." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Books 8 & 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Photosynthesis & the carbon cycle (Stage 9); Materials and cycles on Earth (Stage 8)", note: "Earth science, the carbon cycle and climate are covered in the Stage 9 'Photosynthesis & the carbon cycle' and Stage 8 'Materials and cycles on Earth' units; engineering-design and data-science skills sit in the 'Thinking & Working Scientifically' strand.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "A 'watershed' (drainage basin) is:", options: ["A place that stores drinking water", "The area of land that drains into a particular river or lake", "A type of cloud", "A water-treatment machine"], answer: 1, explanation: "All rain falling in a watershed flows toward the same river system." },
@@ -893,7 +930,8 @@ window.CURRICULUM.grades.push({
           resources: [
             { type: "video", title: "India's $10BN water treatment sector (18 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=0kySio8LOi4", note: "Why clean water and treatment matter." },
             { type: "interactive", title: "Pollution study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-676d88c6594881918166b7050d053f33-the-pollution-bot", note: "A tutor bot on pollution and environmental health. (Needs a ChatGPT login.)" },
-            { type: "video", title: "Why don't we get drinking water from the ocean? (TED-Ed, 5 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=jdOjB0j329g", note: "Water quality, salts and treatment." }
+            { type: "video", title: "Why don't we get drinking water from the ocean? (TED-Ed, 5 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=jdOjB0j329g", note: "Water quality, salts and treatment." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Books 8 & 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Photosynthesis & the carbon cycle (Stage 9); Materials and cycles on Earth (Stage 8)", note: "Earth science, the carbon cycle and climate are covered in the Stage 9 'Photosynthesis & the carbon cycle' and Stage 8 'Materials and cycles on Earth' units; engineering-design and data-science skills sit in the 'Thinking & Working Scientifically' strand.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "High nitrate levels in a river, often from farm runoff, can cause:", options: ["Clearer water", "Algal blooms that lower oxygen and harm aquatic life", "Higher pH only", "No effect at all"], answer: 1, explanation: "Excess nitrates feed algae; when algae die and decay they use up oxygen, harming fish and other life." },
@@ -916,7 +954,8 @@ window.CURRICULUM.grades.push({
           resources: [
             { type: "interactive", title: "NASA Climate Kids: Atmosphere & weather", provider: "NASA Climate Kids", url: "https://climatekids.nasa.gov/", note: "Air pressure, circulation and climate." },
             { type: "podcast", title: "The science behind wildfire smoke – Short Wave", provider: "📚 School's Library · Apple Podcasts", url: "https://podcasts.apple.com/us/podcast/short-wave/id1482575855?i=1000683539757", note: "How smoke travels through the atmosphere and affects air quality." },
-            { type: "interactive", title: "Atmosphere study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-6784b93bd7d08191bc36436210ebeedf-atmosphere-bot", note: "Ask questions about the atmosphere and climate drivers. (Needs a ChatGPT login.)" }
+            { type: "interactive", title: "Atmosphere study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-6784b93bd7d08191bc36436210ebeedf-atmosphere-bot", note: "Ask questions about the atmosphere and climate drivers. (Needs a ChatGPT login.)" },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Books 8 & 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Photosynthesis & the carbon cycle (Stage 9); Materials and cycles on Earth (Stage 8)", note: "Earth science, the carbon cycle and climate are covered in the Stage 9 'Photosynthesis & the carbon cycle' and Stage 8 'Materials and cycles on Earth' units; engineering-design and data-science skills sit in the 'Thinking & Working Scientifically' strand.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Warm air tends to:", options: ["Sink", "Rise", "Stay completely still", "Freeze instantly"], answer: 1, explanation: "Warm air is less dense, so it rises — driving winds and weather systems." },
@@ -939,7 +978,8 @@ window.CURRICULUM.grades.push({
           resources: [
             { type: "interactive", title: "PhET: Greenhouse Effect", provider: "PhET Interactive Simulations", url: "https://phet.colorado.edu/en/simulations/greenhouse-effect", note: "Add greenhouse gases and watch temperature respond." },
             { type: "interactive", title: "Climate study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-676255862aa08191a6da8af67d3d91b2-climate", note: "A tutor bot on climate and the greenhouse effect. (Needs a ChatGPT login.)" },
-            { type: "video", title: "How I think about climate change (9 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=tRA2SfSk2Tc", note: "A clear, calm look at the climate challenge." }
+            { type: "video", title: "How I think about climate change (9 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=tRA2SfSk2Tc", note: "A clear, calm look at the climate challenge." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Books 8 & 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Photosynthesis & the carbon cycle (Stage 9); Materials and cycles on Earth (Stage 8)", note: "Earth science, the carbon cycle and climate are covered in the Stage 9 'Photosynthesis & the carbon cycle' and Stage 8 'Materials and cycles on Earth' units; engineering-design and data-science skills sit in the 'Thinking & Working Scientifically' strand.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "The greenhouse effect traps some heat near Earth's surface, keeping the planet warm enough for life.", answer: true, explanation: "A natural greenhouse effect is essential; the problem is extra greenhouse gases enhancing it." },
@@ -961,7 +1001,8 @@ window.CURRICULUM.grades.push({
           text: "Interpret real climate data such as the Keeling Curve and ice-core records, and describe how climate models work.",
           resources: [
             { type: "reading", title: "NASA: Global Climate Change – Evidence", provider: "NASA Global Climate Change", url: "https://climate.nasa.gov/evidence/", note: "Real CO₂ data, ice cores and warming evidence." },
-            { type: "interactive", title: "Khan Academy: Reading data & graphs", provider: "Khan Academy", url: "https://www.khanacademy.org/math/statistics-probability", note: "Interpreting trends in real data." }
+            { type: "interactive", title: "Khan Academy: Reading data & graphs", provider: "Khan Academy", url: "https://www.khanacademy.org/math/statistics-probability", note: "Interpreting trends in real data." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Books 8 & 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Photosynthesis & the carbon cycle (Stage 9); Materials and cycles on Earth (Stage 8)", note: "Earth science, the carbon cycle and climate are covered in the Stage 9 'Photosynthesis & the carbon cycle' and Stage 8 'Materials and cycles on Earth' units; engineering-design and data-science skills sit in the 'Thinking & Working Scientifically' strand.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "The Keeling Curve mainly shows the rising level of which gas in the atmosphere?", options: ["Oxygen", "Nitrogen", "Carbon dioxide", "Helium"], answer: 2, explanation: "It records the steady rise in atmospheric CO₂ since 1958." },
@@ -983,7 +1024,8 @@ window.CURRICULUM.grades.push({
           text: "Apply systems thinking using stocks, flows, feedback and predator–prey models.",
           resources: [
             { type: "interactive", title: "Khan Academy: Modelling & systems", provider: "Khan Academy", url: "https://www.khanacademy.org/math/statistics-probability", note: "Stocks, flows and feedback in models." },
-            { type: "interactive", title: "TeachEngineering: Systems & modelling", provider: "TeachEngineering", url: "https://www.teachengineering.org/", note: "Hands-on systems-thinking activities." }
+            { type: "interactive", title: "TeachEngineering: Systems & modelling", provider: "TeachEngineering", url: "https://www.teachengineering.org/", note: "Hands-on systems-thinking activities." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Books 8 & 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Photosynthesis & the carbon cycle (Stage 9); Materials and cycles on Earth (Stage 8)", note: "Earth science, the carbon cycle and climate are covered in the Stage 9 'Photosynthesis & the carbon cycle' and Stage 8 'Materials and cycles on Earth' units; engineering-design and data-science skills sit in the 'Thinking & Working Scientifically' strand.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "hard", q: "In a predator–prey system, if the prey population suddenly grows, the predator population will most likely:", options: ["Immediately crash", "Increase later, as more food is available", "Stay exactly the same forever", "Disappear"], answer: 1, explanation: "More prey (food) lets predators increase after a delay — a feedback relationship that creates cycles." },
@@ -1008,7 +1050,8 @@ window.CURRICULUM.grades.push({
             { type: "video", title: "Can India's clay tea cups compete with single-use plastic? (12 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=Z_VGwnxcQtY", note: "A real design trade-off — materials, cost and life-cycle sustainability." },
             { type: "video", title: "What is a natural resource? Facts for kids (8 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=hvw1YGs63Hc", note: "The raw materials behind everything we design and build." },
             { type: "reading", title: "Natural resources for kids", provider: "📚 School's Library · The World Counts", url: "https://www.theworldcounts.com/stories/natural-resources-for-kids", note: "Using resources sustainably — key to good engineering design." },
-            { type: "interactive", title: "Sustainability & conservation study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-6768f062691c8191973ed4e046acc083-sustainability-and-conservation", note: "Explore sustainable design choices. (Needs a ChatGPT login.)" }
+            { type: "interactive", title: "Sustainability & conservation study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-6768f062691c8191973ed4e046acc083-sustainability-and-conservation", note: "Explore sustainable design choices. (Needs a ChatGPT login.)" },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Books 8 & 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Photosynthesis & the carbon cycle (Stage 9); Materials and cycles on Earth (Stage 8)", note: "Earth science, the carbon cycle and climate are covered in the Stage 9 'Photosynthesis & the carbon cycle' and Stage 8 'Materials and cycles on Earth' units; engineering-design and data-science skills sit in the 'Thinking & Working Scientifically' strand.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "The first step of the engineering design process is usually to:", options: ["Build the final product", "Define the problem, criteria and constraints", "Sell the product", "Throw it away"], answer: 1, explanation: "You define what success looks like (criteria) and the limits (constraints) before designing." },
@@ -1030,7 +1073,8 @@ window.CURRICULUM.grades.push({
           text: "Apply data-science skills: evaluate reliability and bias, interpret scatter plots, identify correlation, outliers and non-linear patterns.",
           resources: [
             { type: "interactive", title: "Khan Academy: Scatter plots & correlation", provider: "Khan Academy", url: "https://www.khanacademy.org/math/statistics-probability", note: "Bivariate data, correlation and outliers." },
-            { type: "reading", title: "NASA: Reading real climate data", provider: "NASA Global Climate Change", url: "https://climate.nasa.gov/evidence/", note: "Interpreting trends and patterns in evidence." }
+            { type: "reading", title: "NASA: Reading real climate data", provider: "NASA Global Climate Change", url: "https://climate.nasa.gov/evidence/", note: "Interpreting trends and patterns in evidence." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Books 8 & 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Photosynthesis & the carbon cycle (Stage 9); Materials and cycles on Earth (Stage 8)", note: "Earth science, the carbon cycle and climate are covered in the Stage 9 'Photosynthesis & the carbon cycle' and Stage 8 'Materials and cycles on Earth' units; engineering-design and data-science skills sit in the 'Thinking & Working Scientifically' strand.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "hard", q: "A reliable scientific investigation should be repeatable and use a fair, representative sample to reduce bias.", answer: true, explanation: "Repeatability and representative sampling are central to reliable, unbiased data." },
@@ -1052,7 +1096,8 @@ window.CURRICULUM.grades.push({
           text: "Plan a fair investigation, keep a lab notebook, and write Claim–Evidence–Reasoning explanations.",
           resources: [
             { type: "interactive", title: "TeachEngineering: Planning investigations", provider: "TeachEngineering", url: "https://www.teachengineering.org/", note: "Fair testing and recording results." },
-            { type: "interactive", title: "Khan Academy: Scientific method & data", provider: "Khan Academy", url: "https://www.khanacademy.org/science", note: "Designing fair tests and arguing from evidence." }
+            { type: "interactive", title: "Khan Academy: Scientific method & data", provider: "Khan Academy", url: "https://www.khanacademy.org/science", note: "Designing fair tests and arguing from evidence." },
+            { type: "book", title: "Cambridge Lower Secondary Science Learner's Books 8 & 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Photosynthesis & the carbon cycle (Stage 9); Materials and cycles on Earth (Stage 8)", note: "Earth science, the carbon cycle and climate are covered in the Stage 9 'Photosynthesis & the carbon cycle' and Stage 8 'Materials and cycles on Earth' units; engineering-design and data-science skills sit in the 'Thinking & Working Scientifically' strand.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "In a fair test (controlled experiment), the variable you deliberately change is called the:", options: ["Dependent variable", "Controlled variable", "Independent variable", "Random variable"], answer: 2, explanation: "The independent variable is the one you change on purpose. The dependent variable is what you measure as a result. Controlled variables are kept constant." },
