@@ -11,7 +11,7 @@ window.CURRICULUM_MATH = window.registerSubject({
   hasLibrary: false,
   blurb: "Number and fractions, ratio and proportion, algebra, geometry and data across Grades 6–8.",
   meta: {
-    title: "IB Mathematics Hub",
+    title: "Mathematics Hub",
     subtitle: "Grades 6 – 8 · Learning objectives, free resources, quizzes & a concept mindmap",
     arc:
       "Grade 6 builds numerical fluency — fractions, decimals, percentages, integers, factors and indices. " +

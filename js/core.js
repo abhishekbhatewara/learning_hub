@@ -1,4 +1,4 @@
-/* Core data container for the IB Learning Hub (multi-subject).
+/* Core data container for the Learning Hub (multi-subject).
  * window.HUB.subjects holds every subject; registerSubject() creates one and
  * returns it. Science is created here as window.CURRICULUM (kept under that name
  * for back-compat, so the existing data-g6/7/8.js and threads.js can keep
@@ -21,7 +21,7 @@ window.CURRICULUM = window.registerSubject({
   hasLibrary: true,
   blurb: "Scientific method, biology, chemistry, physics and Earth science across Grades 6–8.",
   meta: {
-    title: "IB Science Hub",
+    title: "Science Hub",
     subtitle: "Grades 6 – 8 · Learning objectives, free resources, quizzes & a concept mindmap",
     arc:
       "Grade 6 builds the scientific method, measurement, cells and basic forces. " +

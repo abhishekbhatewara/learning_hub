@@ -41,7 +41,7 @@
   }
   function threadsFor(topicId) { return SUBJ.threads.filter(th => th.path.includes(topicId)); }
 
-  // ---- School's Library resources (optional, loaded from data-classroom.js; Science only) ----
+  // ---- Library resources (optional, loaded from data-classroom.js; Science only) ----
   const CLASS = window.CLASSROOM || { meta: { count: 0 }, resources: [] };
   const KIND_META = {
     video: { label: "Video", cls: "video", icon: "▶" },
@@ -55,7 +55,7 @@
       <a class="res-card classroom" href="${esc(r.url)}" target="_blank" rel="noopener noreferrer">
         <span class="res-type ${k.cls}">${k.icon} ${k.label}</span>
         <h4>${esc(r.title)}</h4>
-        <div class="res-provider">📚 School's Library · ${esc(r.source || "")}</div>
+        <div class="res-provider">📚 Library · ${esc(r.source || "")}</div>
         <span class="res-open">Open ↗</span>
       </a>`;
   }
@@ -82,7 +82,7 @@
       </div>`).join("");
     return `
       <section class="hero">
-        <h1>IB Learning Hub</h1>
+        <h1>Learning Hub</h1>
         <p class="lede">A free study companion for Grades 6–8 — clear learning objectives, hand-picked free resources and self-marking quizzes for every objective, plus a concept mindmap. Choose a subject to begin.</p>
       </section>
       <h2 class="section-title">Subjects <span class="count">${HUB.subjects.length} live${planned.length ? " · " + planned.length + " coming" : ""}</span></h2>
@@ -90,7 +90,7 @@
       ${CLASS.meta.count ? `
       <h2 class="section-title">Enrichment library</h2>
       <a class="grade-card" href="#/library" style="border-top-color:#c08a3e">
-        <span class="card-eyebrow" style="color:#c08a3e">📚 School's Library</span>
+        <span class="card-eyebrow" style="color:#c08a3e">📚 Library</span>
         <h3>${CLASS.meta.count} free resources across every subject</h3>
         <p class="card-desc">A searchable stream of real-world videos, articles and podcasts your class collected — Science, Maths, Finance, History, AI, civics and more. Filter by subject and type.</p>
         <div class="card-footer"><span class="chip">Searchable</span><span class="go-link">Browse the library →</span></div>
@@ -147,9 +147,9 @@
       </a>` : ""}
 
       ${CLASS.meta.count ? `
-      <h2 class="section-title">Enrichment from the School's Library</h2>
+      <h2 class="section-title">Enrichment from the Library</h2>
       <a class="grade-card" href="#/library" style="border-top-color:#c08a3e">
-        <span class="card-eyebrow" style="color:#c08a3e">📚 School's Library</span>
+        <span class="card-eyebrow" style="color:#c08a3e">📚 Library</span>
         <h3>${CLASS.meta.count} videos, articles &amp; podcasts across all subjects</h3>
         <p class="card-desc">A searchable stream of real-world resources your class collected. Filter by subject and type, or find the relevant ones woven into each objective's resources.</p>
         <div class="card-footer"><span class="chip">Searchable</span><span class="go-link">Browse the library →</span></div>
@@ -245,9 +245,9 @@
     const classroom = classroomFor(t.id);
     const classroomBlock = classroom.length ? `
       <div class="classroom-block">
-        <h3>📚 From the School's Library</h3>
+        <h3>📚 From the Library</h3>
         <p class="muted">Extra videos, articles &amp; podcasts collected by your class that connect to this topic.
-          <a href="#/library">Browse the full School's Library →</a></p>
+          <a href="#/library">Browse the full Library →</a></p>
         <div class="res-list">${classroom.map(classroomCard).join("")}</div>
       </div>` : "";
 
@@ -357,9 +357,9 @@
     const classroom = classroomFor(t.id);
     const classroomBlock = classroom.length ? `
       <div class="classroom-block">
-        <h3>📚 From the School's Library</h3>
+        <h3>📚 From the Library</h3>
         <p class="muted">Extra videos, articles &amp; podcasts collected by your class that connect to this topic.
-          <a href="#/library">Browse the full School's Library →</a></p>
+          <a href="#/library">Browse the full Library →</a></p>
         <div class="res-list">${classroom.map(classroomCard).join("")}</div>
       </div>` : "";
     return `<div class="tab-panel">
@@ -387,7 +387,7 @@
       </div>`;
   }
 
-  // ---------- School's Library (hub-level, all subjects) ----------
+  // ---------- Library (hub-level, all subjects) ----------
   function viewLibrary() {
     const mods = (CLASS.meta.modules || []).map(m => m.name);
     const moduleChips = ["All", ...mods].map((s, i) =>
@@ -396,8 +396,8 @@
     const kindChips = kinds.map((k, i) =>
       `<button class="filter-chip ${i === 0 ? "active" : ""}" data-filter="kind" data-val="${k[0]}">${esc(k[1])}</button>`).join("");
     return `
-      <nav class="breadcrumb"><a href="#/">Subjects</a> › <span>School's Library</span></nav>
-      <h1>📚 School's Library</h1>
+      <nav class="breadcrumb"><a href="#/">Subjects</a> › <span>Library</span></nav>
+      <h1>📚 Library</h1>
       <p class="topic-summary">${CLASS.meta.count} free videos, articles and podcasts collected across <strong>every subject</strong> of the
         school — Science, Maths, Finance, History, AI, civics and more. Search, filter by subject and type, and open any of them.
         Where a resource connects to a curriculum topic, it also appears on that topic's <em>Resources</em>.</p>
@@ -757,7 +757,7 @@
       return;
     }
 
-    // hub-level School's Library (spans all subjects)
+    // hub-level Library (spans all subjects)
     if (parts[0] === "library") {
       renderNav(null);
       main.innerHTML = viewLibrary();

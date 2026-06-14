@@ -409,7 +409,7 @@ window.CURRICULUM_MATH.grades.push({
         {
           text: "Understand decimal place value.",
           resources: [
-            { type: "interactive", title: "Decimal explorer study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-677cdc98011081919446ff3a69d7af27-decimal-explorer", note: "Your class's tutor bot for exploring decimals and place value. (Needs a ChatGPT login.)" },
+            { type: "interactive", title: "Decimal explorer study bot", provider: "📚 Library · ChatGPT", url: "https://chatgpt.com/g/g-677cdc98011081919446ff3a69d7af27-decimal-explorer", note: "Your class's tutor bot for exploring decimals and place value. (Needs a ChatGPT login.)" },
             { type: "interactive", title: "Decimals", provider: "Math is Fun", url: "https://www.mathsisfun.com/decimals.html", note: "Place value of tenths, hundredths, thousandths." },
             { type: "interactive", title: "Decimal place value", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Reading and writing decimals." },
             { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Place value, ordering, rounding and decimals (Stage 7)", note: "Decimals and place value are covered in the Cambridge Stage 7 'Place value, ordering and rounding' / decimals units.", url: "https://www.cambridge.org/us/education/subject/mathematics/cambridge-primary-and-lower-secondary-mathematics-2nd-edition/cambridge-lower-secondary-mathematics-2nd-edition-learners-book-7-digital-access-1-year?isbn=9781108771436" },
@@ -479,7 +479,7 @@ window.CURRICULUM_MATH.grades.push({
         {
           text: "Add, subtract, multiply and divide decimals.",
           resources: [
-            { type: "interactive", title: "Decimal operations study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-677f7e1049148191a7c1cd39711ea281-decimal-operations", note: "Your class's tutor bot for the four operations with decimals. (Needs a ChatGPT login.)" },
+            { type: "interactive", title: "Decimal operations study bot", provider: "📚 Library · ChatGPT", url: "https://chatgpt.com/g/g-677f7e1049148191a7c1cd39711ea281-decimal-operations", note: "Your class's tutor bot for the four operations with decimals. (Needs a ChatGPT login.)" },
             { type: "interactive", title: "Decimal operations", provider: "Math is Fun", url: "https://www.mathsisfun.com/decimals-menu.html", note: "All four operations with decimals." },
             { type: "interactive", title: "Khan Academy: Decimal operations", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Practice the four operations with decimals." },
             { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Place value, ordering, rounding and decimals (Stage 7)", note: "Decimals and place value are covered in the Cambridge Stage 7 'Place value, ordering and rounding' / decimals units.", url: "https://www.cambridge.org/us/education/subject/mathematics/cambridge-primary-and-lower-secondary-mathematics-2nd-edition/cambridge-lower-secondary-mathematics-2nd-edition-learners-book-7-digital-access-1-year?isbn=9781108771436" },
@@ -560,7 +560,7 @@ window.CURRICULUM_MATH.grades.push({
         {
           text: "Convert between fractions and percentages.",
           resources: [
-            { type: "interactive", title: "Fractions, decimals & percentages study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-6767dd62d82481919fe6c2a40027aa83-fractions-decimals-and-percentages", note: "Your class's tutor bot linking fractions, decimals and percentages. (Needs a ChatGPT login.)" },
+            { type: "interactive", title: "Fractions, decimals & percentages study bot", provider: "📚 Library · ChatGPT", url: "https://chatgpt.com/g/g-6767dd62d82481919fe6c2a40027aa83-fractions-decimals-and-percentages", note: "Your class's tutor bot linking fractions, decimals and percentages. (Needs a ChatGPT login.)" },
             { type: "interactive", title: "Fractions to percentages", provider: "Math is Fun", url: "https://www.mathsisfun.com/converting-fractions-percents.html", note: "Both directions." },
             { type: "interactive", title: "Khan Academy: Fractions & percentages", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Converting between fractions and percentages." },
             { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Percentages (Stage 7)", note: "Percentages are covered in the Cambridge Stage 7 'Percentages' unit (spirals across Stages 7–9).", url: "https://www.cambridge.org/us/education/subject/mathematics/cambridge-primary-and-lower-secondary-mathematics-2nd-edition/cambridge-lower-secondary-mathematics-2nd-edition-learners-book-7-digital-access-1-year?isbn=9781108771436" },
@@ -630,7 +630,7 @@ window.CURRICULUM_MATH.grades.push({
         {
           text: "Apply basic percentage ideas, including increases.",
           resources: [
-            { type: "interactive", title: "Cent-percent study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-6799cb7e19f48191b31c60ba00c127bd-cent-percent", note: "Your class's tutor bot for working with percentages. (Needs a ChatGPT login.)" },
+            { type: "interactive", title: "Cent-percent study bot", provider: "📚 Library · ChatGPT", url: "https://chatgpt.com/g/g-6799cb7e19f48191b31c60ba00c127bd-cent-percent", note: "Your class's tutor bot for working with percentages. (Needs a ChatGPT login.)" },
             { type: "interactive", title: "Percentage change", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/percentage-change.html", note: "Increases and decreases." },
             { type: "interactive", title: "Percentages", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Percentage applications." },
             { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Percentages (Stage 7)", note: "Percentages are covered in the Cambridge Stage 7 'Percentages' unit (spirals across Stages 7–9).", url: "https://www.cambridge.org/us/education/subject/mathematics/cambridge-primary-and-lower-secondary-mathematics-2nd-edition/cambridge-lower-secondary-mathematics-2nd-edition-learners-book-7-digital-access-1-year?isbn=9781108771436" },
@@ -688,7 +688,7 @@ window.CURRICULUM_MATH.grades.push({
         {
           text: "Classify numbers as natural, whole, integer or rational.",
           resources: [
-            { type: "podcast", title: "The Trouble With Zero – Short Wave", provider: "📚 School's Library · Apple Podcasts", url: "https://podcasts.apple.com/us/podcast/the-trouble-with-zero/id1482575855?i=1000681901180", note: "The strange story of zero — a number it took humans centuries to accept." },
+            { type: "podcast", title: "The Trouble With Zero – Short Wave", provider: "📚 Library · Apple Podcasts", url: "https://podcasts.apple.com/us/podcast/the-trouble-with-zero/id1482575855?i=1000681901180", note: "The strange story of zero — a number it took humans centuries to accept." },
             { type: "interactive", title: "Types of numbers", provider: "Math is Fun", url: "https://www.mathsisfun.com/sets/number-types.html", note: "Natural, whole, integer, rational and more." },
             { type: "interactive", title: "Classifying numbers", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Number sets explained." },
             { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Integers (Stage 7)", note: "Negative numbers and the four operations with integers are covered in the Cambridge Stage 7 'Integers' unit.", url: "https://www.cambridge.org/us/education/subject/mathematics/cambridge-primary-and-lower-secondary-mathematics-2nd-edition/cambridge-lower-secondary-mathematics-2nd-edition-learners-book-7-digital-access-1-year?isbn=9781108771436" },
@@ -941,7 +941,7 @@ window.CURRICULUM_MATH.grades.push({
         {
           text: "Understand and use the laws of indices.",
           resources: [
-            { type: "interactive", title: "Power in the roots study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-6787a7149d2881918eee37ff3d6a365c-power-in-the-roots", note: "Your class's tutor bot for powers, indices and roots. (Needs a ChatGPT login.)" },
+            { type: "interactive", title: "Power in the roots study bot", provider: "📚 Library · ChatGPT", url: "https://chatgpt.com/g/g-6787a7149d2881918eee37ff3d6a365c-power-in-the-roots", note: "Your class's tutor bot for powers, indices and roots. (Needs a ChatGPT login.)" },
             { type: "interactive", title: "Laws of Exponents", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/exponent-laws.html", note: "All the index laws in one place." },
             { type: "interactive", title: "Exponents", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-sixth-grade-math", note: "Intro to powers and exponents." },
             { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Powers and roots / indices (Stage 7)", note: "Indices (powers) and roots are covered in the Cambridge Stage 7 'Powers and roots' unit.", url: "https://www.cambridge.org/us/education/subject/mathematics/cambridge-primary-and-lower-secondary-mathematics-2nd-edition/cambridge-lower-secondary-mathematics-2nd-edition-learners-book-7-digital-access-1-year?isbn=9781108771436" },
@@ -1309,7 +1309,7 @@ window.CURRICULUM_MATH.grades.push({
         {
           text: "Find the area and perimeter of rectangles and triangles.",
           resources: [
-            { type: "interactive", title: "Perimeter, area & surface area study bot", provider: "📚 School's Library · ChatGPT", url: "https://chatgpt.com/g/g-6773b11f5ac48191b58d5389f40a4ebd-perimeter-area-and-surface-area", note: "Your class's tutor bot for perimeter, area and surface area. (Needs a ChatGPT login.)" },
+            { type: "interactive", title: "Perimeter, area & surface area study bot", provider: "📚 Library · ChatGPT", url: "https://chatgpt.com/g/g-6773b11f5ac48191b58d5389f40a4ebd-perimeter-area-and-surface-area", note: "Your class's tutor bot for perimeter, area and surface area. (Needs a ChatGPT login.)" },
             { type: "interactive", title: "Area & Perimeter", provider: "Math is Fun", url: "https://www.mathsisfun.com/area.html", note: "Formulas for rectangles and triangles." },
             { type: "interactive", title: "Area & perimeter", provider: "Khan Academy", url: "https://www.khanacademy.org/math/basic-geo", note: "Practice problems." },
             { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Expressions, formulae and equations; Geometry (Stage 7)", note: "Introductory algebra is covered in 'Expressions, formulae and equations' and shape/angle/area work in the Cambridge Stage 7 geometry units.", url: "https://www.cambridge.org/us/education/subject/mathematics/cambridge-primary-and-lower-secondary-mathematics-2nd-edition/cambridge-lower-secondary-mathematics-2nd-edition-learners-book-7-digital-access-1-year?isbn=9781108771436" },
@@ -1333,7 +1333,7 @@ window.CURRICULUM_MATH.grades.push({
         {
           text: "Find the circumference and area of circles.",
           resources: [
-            { type: "video", title: "Area of a circle, formula explained (2 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=YokKp3pwVFc", note: "A quick, clear look at where the circle-area formula comes from." },
+            { type: "video", title: "Area of a circle, formula explained (2 min)", provider: "📚 Library · YouTube", url: "https://www.youtube.com/watch?v=YokKp3pwVFc", note: "A quick, clear look at where the circle-area formula comes from." },
             { type: "interactive", title: "Circle area & circumference", provider: "Math is Fun", url: "https://www.mathsisfun.com/geometry/circle.html", note: "Using π with the formulas." },
             { type: "interactive", title: "Area & circumference of circles", provider: "Khan Academy", url: "https://www.khanacademy.org/math/basic-geo", note: "Worked examples and practice." },
             { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Expressions, formulae and equations; Geometry (Stage 7)", note: "Introductory algebra is covered in 'Expressions, formulae and equations' and shape/angle/area work in the Cambridge Stage 7 geometry units.", url: "https://www.cambridge.org/us/education/subject/mathematics/cambridge-primary-and-lower-secondary-mathematics-2nd-edition/cambridge-lower-secondary-mathematics-2nd-edition-learners-book-7-digital-access-1-year?isbn=9781108771436" },

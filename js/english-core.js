@@ -11,7 +11,7 @@ window.CURRICULUM_ENGLISH = window.registerSubject({
   hasLibrary: false,
   blurb: "Reading literary & non-literary texts, writing, grammar, rhetoric and research across Grades 6–8.",
   meta: {
-    title: "IB English Hub",
+    title: "English Hub",
     subtitle: "Grades 6 – 8 · Learning objectives, free resources, quizzes & a concept mindmap",
     arc:
       "Grade 6 builds the foundations — reading for literal meaning and inference, the basics of plot, character, " +

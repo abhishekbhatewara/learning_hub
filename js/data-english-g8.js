@@ -68,7 +68,7 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Science fiction & dystopia", provider: "LiteraryDevices", url: "https://literarydevices.net/genre/", note: "Speculative genres and their purposes." },
             { type: "reading", title: "Speculative texts", provider: "CommonLit", url: "https://www.commonlit.org/", note: "Stories imagining possible futures." },
-            { type: "video", title: "If you had the chance to be immortal, would you take it? - Sarah Stroud and Michael Vazquez (5 minutes)", provider: "📚 School\u0027s Library · youtube.com", url: "https://www.youtube.com/watch?v=S3jqTWXwzJc", note: "From the Wolves classroom library." }
+            { type: "video", title: "If you had the chance to be immortal, would you take it? - Sarah Stroud and Michael Vazquez (5 minutes)", provider: "📚 Library · youtube.com", url: "https://www.youtube.com/watch?v=S3jqTWXwzJc", note: "From the Wolves classroom library." }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "Speculative fiction (sci-fi, dystopia) often uses imagined futures to:", options: ["avoid all real-world ideas", "comment on present-day issues and warn or question", "teach maths", "report the news"], answer: 1, explanation: "Speculative fiction reflects on today through 'what if' futures." },
@@ -217,9 +217,9 @@ window.CURRICULUM_ENGLISH.grades.push({
             { type: "reading", title: "Symbolism", provider: "LiteraryDevices", url: "https://literarydevices.net/symbolism/", note: "How symbols deepen theme." },
             { type: "reading", title: "Theme development", provider: "CommonLit", url: "https://www.commonlit.org/", note: "Following a theme across a text." },
             { type: "book", enrichment: true, title: "How to Read Literature Like a Professor — For Kids", author: "Thomas C. Foster", chapter: "(e.g. 'Is That a Symbol?', 'It's All Political', 'He's Blind for a Reason')", note: "Enrichment read (great for ages 11–13): a fun guide to symbols, theme, irony and the deeper patterns in literature.", url: "https://openlibrary.org/search?q=how+to+read+literature+like+a+professor+for+kids" },
-            { type: "video", title: "The meaning behind Harry Potter | Jordan B Peterson (19 minutes)", provider: "📚 School\u0027s Library · youtube.com", url: "https://www.youtube.com/watch?v=jnTFpCemVrA", note: "From the Wolves classroom library." },
-            { type: "video", title: "Plato’s Allegory of the Cave - Alex Gendler (4 minutes)", provider: "📚 School\u0027s Library · youtube.com", url: "https://www.youtube.com/watch?v=1RWOpQXTltA", note: "From the Wolves classroom library." },
-            { type: "video", title: "The Profound Meaning of Plato's Allegory of the Cave (16 minutes)", provider: "📚 School\u0027s Library · youtube.com", url: "https://www.youtube.com/watch?v=4nHj3gL_JN0", note: "From the Wolves classroom library." }
+            { type: "video", title: "The meaning behind Harry Potter | Jordan B Peterson (19 minutes)", provider: "📚 Library · youtube.com", url: "https://www.youtube.com/watch?v=jnTFpCemVrA", note: "From the Wolves classroom library." },
+            { type: "video", title: "Plato’s Allegory of the Cave - Alex Gendler (4 minutes)", provider: "📚 Library · youtube.com", url: "https://www.youtube.com/watch?v=1RWOpQXTltA", note: "From the Wolves classroom library." },
+            { type: "video", title: "The Profound Meaning of Plato's Allegory of the Cave (16 minutes)", provider: "📚 Library · youtube.com", url: "https://www.youtube.com/watch?v=4nHj3gL_JN0", note: "From the Wolves classroom library." }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "How does a symbol typically support a text's theme?", options: ["by being random", "by standing for a larger idea that connects to the message", "by ending the story", "by listing facts"], answer: 1, explanation: "Symbols represent ideas that reinforce the theme." },
@@ -370,8 +370,8 @@ window.CURRICULUM_ENGLISH.grades.push({
             { type: "reading", title: "Bias detection", provider: "Khan Academy", url: "https://www.khanacademy.org/ela", note: "Spotting slant and unreliable sources." },
             { type: "reading", title: "Evaluating credibility", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/research_and_citation/conducting_research/evaluating_sources_of_information/index.html", note: "Judging source reliability." },
             { type: "book", enrichment: true, title: "The Elements of Eloquence: How to Turn the Perfect English Phrase", author: "Mark Forsyth", chapter: "(rhetorical figures, one per chapter)", note: "Enrichment read (accessible stretch): the rhetorical devices that make speeches, ads and writing persuasive and memorable.", url: "https://archive.org/details/the-elements-of-eloquence-how-to-turn-the-perfect-english-phrase" },
-            { type: "reading", title: "‘That’s the one thing we did’: New Zealand irked by Trump’s false claim US split the atom | New Zealand | The Guardian", provider: "📚 School\u0027s Library · theguardian.com", url: "https://www.theguardian.com/world/2025/jan/21/donald-trump-splitting-the-atom-claim-new-zealand-ernest-rutherford", note: "From the Wolves classroom library." },
-            { type: "video", title: "Yuval Noah Harari: How to safeguard your mind in the age of junk information (13 minutes)", provider: "📚 School\u0027s Library · youtube.com", url: "https://www.youtube.com/watch?v=K1OvbwY6GPM", note: "From the Wolves classroom library." }
+            { type: "reading", title: "‘That’s the one thing we did’: New Zealand irked by Trump’s false claim US split the atom | New Zealand | The Guardian", provider: "📚 Library · theguardian.com", url: "https://www.theguardian.com/world/2025/jan/21/donald-trump-splitting-the-atom-claim-new-zealand-ernest-rutherford", note: "From the Wolves classroom library." },
+            { type: "video", title: "Yuval Noah Harari: How to safeguard your mind in the age of junk information (13 minutes)", provider: "📚 Library · youtube.com", url: "https://www.youtube.com/watch?v=K1OvbwY6GPM", note: "From the Wolves classroom library." }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "A credible source is one that is:", options: ["anonymous and unsupported", "trustworthy, accurate and from a knowledgeable author", "always the shortest", "full of emotional language"], answer: 1, explanation: "Credibility rests on accuracy, authority and support." },
@@ -836,7 +836,7 @@ window.CURRICULUM_ENGLISH.grades.push({
             { type: "reading", title: "Collaborative discussion", provider: "ReadWriteThink", url: "https://www.readwritethink.org/", note: "Student-led seminar skills." },
             { type: "reading", title: "Academic conversation", provider: "Khan Academy", url: "https://www.khanacademy.org/ela", note: "Extending and connecting ideas." },
             { type: "book", enrichment: true, title: "The Elements of Eloquence: How to Turn the Perfect English Phrase", author: "Mark Forsyth", chapter: "(rhetorical figures, one per chapter)", note: "Enrichment read (accessible stretch): the rhetorical techniques that make spoken arguments and debate memorable.", url: "https://archive.org/details/the-elements-of-eloquence-how-to-turn-the-perfect-english-phrase" },
-            { type: "video", title: "The Science Behind Dramatically Better Conversations | Charles Duhigg | TED (11 minutes)", provider: "📚 School\u0027s Library · youtube.com", url: "https://www.youtube.com/watch?v=K_RSZC0s8a4", note: "From the Wolves classroom library." }
+            { type: "video", title: "The Science Behind Dramatically Better Conversations | Charles Duhigg | TED (11 minutes)", provider: "📚 Library · youtube.com", url: "https://www.youtube.com/watch?v=K_RSZC0s8a4", note: "From the Wolves classroom library." }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Building on a peer's idea in discussion means:", options: ["repeating it exactly", "adding to, extending or thoughtfully responding to it", "ignoring it", "changing the subject"], answer: 1, explanation: "You connect your contribution to what was just said." },
@@ -860,7 +860,7 @@ window.CURRICULUM_ENGLISH.grades.push({
             { type: "reading", title: "Active listening", provider: "Khan Academy", url: "https://www.khanacademy.org/ela", note: "Listening to understand and respond." },
             { type: "reading", title: "Discussion skills", provider: "ReadWriteThink", url: "https://www.readwritethink.org/", note: "Listening and responding well." },
             { type: "book", enrichment: true, title: "The Elements of Eloquence: How to Turn the Perfect English Phrase", author: "Mark Forsyth", chapter: "(rhetorical figures, one per chapter)", note: "Enrichment read (accessible stretch): the rhetorical techniques that make spoken arguments and debate memorable.", url: "https://archive.org/details/the-elements-of-eloquence-how-to-turn-the-perfect-english-phrase" },
-            { type: "video", title: "The Science Behind Dramatically Better Conversations | Charles Duhigg | TED (11 minutes)", provider: "📚 School\u0027s Library · youtube.com", url: "https://www.youtube.com/watch?v=K_RSZC0s8a4", note: "From the Wolves classroom library." }
+            { type: "video", title: "The Science Behind Dramatically Better Conversations | Charles Duhigg | TED (11 minutes)", provider: "📚 Library · youtube.com", url: "https://www.youtube.com/watch?v=K_RSZC0s8a4", note: "From the Wolves classroom library." }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "Active listening includes paying attention, not interrupting, and responding to what was actually said.", answer: true, explanation: "Active listening means truly engaging with the speaker." },
@@ -907,7 +907,7 @@ window.CURRICULUM_ENGLISH.grades.push({
             { type: "reading", title: "Oral presentation skills", provider: "ReadWriteThink", url: "https://www.readwritethink.org/", note: "Planning and delivering a talk." },
             { type: "reading", title: "Speech delivery", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/", note: "Engaging an audience aloud." },
             { type: "book", enrichment: true, title: "The Elements of Eloquence: How to Turn the Perfect English Phrase", author: "Mark Forsyth", chapter: "(rhetorical figures, one per chapter)", note: "Enrichment read (accessible stretch): the rhetorical techniques that make spoken arguments and debate memorable.", url: "https://archive.org/details/the-elements-of-eloquence-how-to-turn-the-perfect-english-phrase" },
-            { type: "video", title: "How to communicate clearly (7 minutes)", provider: "📚 School\u0027s Library · youtube.com", url: "https://www.youtube.com/watch?v=btWlBHE0pe4", note: "From the Wolves classroom library." }
+            { type: "video", title: "How to communicate clearly (7 minutes)", provider: "📚 Library · youtube.com", url: "https://www.youtube.com/watch?v=btWlBHE0pe4", note: "From the Wolves classroom library." }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "Eye contact, clear voice and pacing all help an oral presentation succeed.", answer: true, explanation: "Delivery skills are key to effective speaking." },

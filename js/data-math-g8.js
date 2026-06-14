@@ -1292,7 +1292,7 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "State and use the Pythagorean theorem.",
           resources: [
-            { type: "video", title: "Properties of a right-angle triangle (4 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=PORfKtT7rU0", note: "The right triangle — the shape the Pythagorean theorem is built on." },
+            { type: "video", title: "Properties of a right-angle triangle (4 min)", provider: "📚 Library · YouTube", url: "https://www.youtube.com/watch?v=PORfKtT7rU0", note: "The right triangle — the shape the Pythagorean theorem is built on." },
             { type: "interactive", title: "Pythagorean theorem", provider: "Math is Fun", url: "https://www.mathsisfun.com/geometry/pythagorean-theorem.html", note: "a² + b² = c²." },
             { type: "interactive", title: "Pythagorean theorem", provider: "Khan Academy", url: "https://www.khanacademy.org/math/geometry", note: "Practice." },
             { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Angles & Pythagoras; Transformations; Area and volume (Stage 9)", note: "Pythagoras' theorem, transformations, similarity and measures are covered in the Cambridge Stage 9 geometry units.", url: "https://www.cambridge.org/us/education/subject/mathematics/cambridge-primary-and-lower-secondary-mathematics-2nd-edition/cambridge-lower-secondary-mathematics-2nd-edition-learners-book-9-digital-access-1-year?isbn=9781108783774" },
@@ -1693,7 +1693,7 @@ window.CURRICULUM_MATH.grades.push({
           ] },
         { text: "Use test strategy for a cumulative assessment.",
           resources: [
-            { type: "reading", title: "The math myth — you don't need a 'math brain'", provider: "📚 School's Library · Big Think", url: "https://bigthink.com/hard-science/math-myth/", note: "Why anyone can improve at maths with practice — a confidence boost before a test." },
+            { type: "reading", title: "The math myth — you don't need a 'math brain'", provider: "📚 Library · Big Think", url: "https://bigthink.com/hard-science/math-myth/", note: "Why anyone can improve at maths with practice — a confidence boost before a test." },
             { type: "interactive", title: "Khan Academy: Review & test prep", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-eighth-grade-math", note: "Revision and review." },
             { type: "interactive", title: "Math is Fun: Practice index", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/index.html", note: "Revision across topics." },
             { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Cambridge Lower Secondary Mathematics 9 (review across all units)", note: "Capstone/review objectives draw together topics from across the Cambridge Stage 9 course.", url: "https://www.cambridge.org/us/education/subject/mathematics/cambridge-primary-and-lower-secondary-mathematics-2nd-edition/cambridge-lower-secondary-mathematics-2nd-edition-learners-book-9-digital-access-1-year?isbn=9781108783774" },
