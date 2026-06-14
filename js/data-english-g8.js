@@ -146,7 +146,7 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Comparing texts", provider: "CommonLit", url: "https://www.commonlit.org/", note: "Paired texts for comparison." },
             { type: "reading", title: "Comparative analysis", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/", note: "Structuring a comparison." },
-            { type: "book", enrichment: true, title: "How to Read Literature Like a Professor — For Kids", author: "Thomas C. Foster", chapter: "(e.g. 'Is That a Symbol?', 'It's All Political', 'He's Blind for a Reason')", note: "Enrichment read (great for ages 11–13): a fun guide to symbols, theme, irony and the deeper patterns in literature.", url: "" }
+            { type: "book", enrichment: true, title: "How to Read Literature Like a Professor — For Kids", author: "Thomas C. Foster", chapter: "(e.g. 'Is That a Symbol?', 'It's All Political', 'He's Blind for a Reason')", note: "Enrichment read (great for ages 11–13): a fun guide to symbols, theme, irony and the deeper patterns in literature.", url: "https://openlibrary.org/search?q=how+to+read+literature+like+a+professor+for+kids" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "A comparative analysis examines:", options: ["only one text", "similarities and differences between two or more texts", "the cover design", "the publisher"], answer: 1, explanation: "Comparison looks at how texts are alike and different." },
@@ -169,7 +169,7 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Character foils", provider: "LiteraryDevices", url: "https://literarydevices.net/foil/", note: "Characters who contrast to highlight traits." },
             { type: "reading", title: "Characterisation", provider: "CommonLit", url: "https://www.commonlit.org/", note: "Analysing contrasting characters." },
-            { type: "book", enrichment: true, title: "How to Read Literature Like a Professor — For Kids", author: "Thomas C. Foster", chapter: "(e.g. 'Is That a Symbol?', 'It's All Political', 'He's Blind for a Reason')", note: "Enrichment read (great for ages 11–13): a fun guide to symbols, theme, irony and the deeper patterns in literature.", url: "" }
+            { type: "book", enrichment: true, title: "How to Read Literature Like a Professor — For Kids", author: "Thomas C. Foster", chapter: "(e.g. 'Is That a Symbol?', 'It's All Political', 'He's Blind for a Reason')", note: "Enrichment read (great for ages 11–13): a fun guide to symbols, theme, irony and the deeper patterns in literature.", url: "https://openlibrary.org/search?q=how+to+read+literature+like+a+professor+for+kids" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "A 'foil' is a character who:", options: ["is identical to the hero", "contrasts with another character to highlight their qualities", "narrates the story", "never appears"], answer: 1, explanation: "A foil's contrast emphasises another character's traits." },
@@ -192,7 +192,7 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Subtext", provider: "LiteraryDevices", url: "https://literarydevices.net/subtext/", note: "Meaning beneath the lines." },
             { type: "reading", title: "Reading drama", provider: "CommonLit", url: "https://www.commonlit.org/", note: "Plays and scenes to analyse." },
-            { type: "book", enrichment: true, title: "How to Read Literature Like a Professor — For Kids", author: "Thomas C. Foster", chapter: "(e.g. 'Is That a Symbol?', 'It's All Political', 'He's Blind for a Reason')", note: "Enrichment read (great for ages 11–13): a fun guide to symbols, theme, irony and the deeper patterns in literature.", url: "" }
+            { type: "book", enrichment: true, title: "How to Read Literature Like a Professor — For Kids", author: "Thomas C. Foster", chapter: "(e.g. 'Is That a Symbol?', 'It's All Political', 'He's Blind for a Reason')", note: "Enrichment read (great for ages 11–13): a fun guide to symbols, theme, irony and the deeper patterns in literature.", url: "https://openlibrary.org/search?q=how+to+read+literature+like+a+professor+for+kids" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "'Subtext' is:", options: ["the literal words spoken", "the underlying meaning beneath what is said", "stage directions only", "the title"], answer: 1, explanation: "Subtext is the implied meaning beneath the dialogue." },
@@ -215,7 +215,7 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Symbolism", provider: "LiteraryDevices", url: "https://literarydevices.net/symbolism/", note: "How symbols deepen theme." },
             { type: "reading", title: "Theme development", provider: "CommonLit", url: "https://www.commonlit.org/", note: "Following a theme across a text." },
-            { type: "book", enrichment: true, title: "How to Read Literature Like a Professor — For Kids", author: "Thomas C. Foster", chapter: "(e.g. 'Is That a Symbol?', 'It's All Political', 'He's Blind for a Reason')", note: "Enrichment read (great for ages 11–13): a fun guide to symbols, theme, irony and the deeper patterns in literature.", url: "" }
+            { type: "book", enrichment: true, title: "How to Read Literature Like a Professor — For Kids", author: "Thomas C. Foster", chapter: "(e.g. 'Is That a Symbol?', 'It's All Political', 'He's Blind for a Reason')", note: "Enrichment read (great for ages 11–13): a fun guide to symbols, theme, irony and the deeper patterns in literature.", url: "https://openlibrary.org/search?q=how+to+read+literature+like+a+professor+for+kids" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "How does a symbol typically support a text's theme?", options: ["by being random", "by standing for a larger idea that connects to the message", "by ending the story", "by listing facts"], answer: 1, explanation: "Symbols represent ideas that reinforce the theme." },
@@ -238,7 +238,7 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Literary genres", provider: "LiteraryDevices", url: "https://literarydevices.net/genre/", note: "Defining features of genres." },
             { type: "reading", title: "Genre study", provider: "CommonLit", url: "https://www.commonlit.org/", note: "Texts across multiple genres." },
-            { type: "book", enrichment: true, title: "How to Read Literature Like a Professor — For Kids", author: "Thomas C. Foster", chapter: "(e.g. 'Is That a Symbol?', 'It's All Political', 'He's Blind for a Reason')", note: "Enrichment read (great for ages 11–13): a fun guide to symbols, theme, irony and the deeper patterns in literature.", url: "" }
+            { type: "book", enrichment: true, title: "How to Read Literature Like a Professor — For Kids", author: "Thomas C. Foster", chapter: "(e.g. 'Is That a Symbol?', 'It's All Political', 'He's Blind for a Reason')", note: "Enrichment read (great for ages 11–13): a fun guide to symbols, theme, irony and the deeper patterns in literature.", url: "https://openlibrary.org/search?q=how+to+read+literature+like+a+professor+for+kids" }
           ],
           quiz: [
             { type: "match", difficulty: "medium", q: "Match each genre to a key feature.", pairs: [["Dystopia", "Oppressive imagined society"], ["Science fiction", "Imagined science/technology and futures"], ["War poetry", "Verse exploring the experience of war"], ["Drama", "A story told through dialogue and performance"]], explanation: "Each genre has recognisable defining features." },
@@ -261,7 +261,7 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Diction, tone & syntax", provider: "LiteraryDevices", url: "https://literarydevices.net/diction/", note: "How word and sentence choices create effect." },
             { type: "reading", title: "Author's craft", provider: "CommonLit", url: "https://www.commonlit.org/", note: "Analysing stylistic choices." },
-            { type: "book", enrichment: true, title: "How to Read Literature Like a Professor — For Kids", author: "Thomas C. Foster", chapter: "(e.g. 'Is That a Symbol?', 'It's All Political', 'He's Blind for a Reason')", note: "Enrichment read (great for ages 11–13): a fun guide to symbols, theme, irony and the deeper patterns in literature.", url: "" }
+            { type: "book", enrichment: true, title: "How to Read Literature Like a Professor — For Kids", author: "Thomas C. Foster", chapter: "(e.g. 'Is That a Symbol?', 'It's All Political', 'He's Blind for a Reason')", note: "Enrichment read (great for ages 11–13): a fun guide to symbols, theme, irony and the deeper patterns in literature.", url: "https://openlibrary.org/search?q=how+to+read+literature+like+a+professor+for+kids" }
           ],
           quiz: [
             { type: "match", difficulty: "medium", q: "Match each term to its meaning.", pairs: [["Diction", "An author's word choice"], ["Syntax", "How sentences are arranged"], ["Tone", "The author's attitude toward the subject"], ["Imagery", "Descriptive language appealing to the senses"]], explanation: "These are key elements of an author's craft." },
@@ -284,7 +284,7 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Point of view & perspective", provider: "LiteraryDevices", url: "https://literarydevices.net/point-of-view/", note: "Narrative voice and perspective." },
             { type: "reading", title: "Dual narratives", provider: "CommonLit", url: "https://www.commonlit.org/", note: "Texts told from more than one viewpoint." },
-            { type: "book", enrichment: true, title: "How to Read Literature Like a Professor — For Kids", author: "Thomas C. Foster", chapter: "(e.g. 'Is That a Symbol?', 'It's All Political', 'He's Blind for a Reason')", note: "Enrichment read (great for ages 11–13): a fun guide to symbols, theme, irony and the deeper patterns in literature.", url: "" }
+            { type: "book", enrichment: true, title: "How to Read Literature Like a Professor — For Kids", author: "Thomas C. Foster", chapter: "(e.g. 'Is That a Symbol?', 'It's All Political', 'He's Blind for a Reason')", note: "Enrichment read (great for ages 11–13): a fun guide to symbols, theme, irony and the deeper patterns in literature.", url: "https://openlibrary.org/search?q=how+to+read+literature+like+a+professor+for+kids" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "A 'dual narrative' tells a story:", options: ["from a single fixed viewpoint", "through two narrators or perspectives", "with no narrator", "only in dialogue"], answer: 1, explanation: "A dual narrative uses two narrative perspectives." },
@@ -319,7 +319,7 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Analysing visual & film texts", provider: "ReadWriteThink", url: "https://www.readwritethink.org/", note: "Reading film and visual media." },
             { type: "reading", title: "Media analysis", provider: "CommonLit", url: "https://www.commonlit.org/", note: "Questioning media messages." },
-            { type: "book", enrichment: true, title: "The Elements of Eloquence: How to Turn the Perfect English Phrase", author: "Mark Forsyth", chapter: "(rhetorical figures, one per chapter)", note: "Enrichment read (accessible stretch): the rhetorical devices that make speeches, ads and writing persuasive and memorable.", url: "" }
+            { type: "book", enrichment: true, title: "The Elements of Eloquence: How to Turn the Perfect English Phrase", author: "Mark Forsyth", chapter: "(rhetorical figures, one per chapter)", note: "Enrichment read (accessible stretch): the rhetorical devices that make speeches, ads and writing persuasive and memorable.", url: "https://archive.org/details/the-elements-of-eloquence-how-to-turn-the-perfect-english-phrase" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "A film poster persuades viewers mainly through:", options: ["only the title", "images, colour, text and design choices that create an impression", "the running time", "the director's address"], answer: 1, explanation: "Posters use visual design to attract and persuade." },
@@ -342,7 +342,7 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Editorials & opinion", provider: "CommonLit", url: "https://www.commonlit.org/", note: "Reading persuasive non-fiction." },
             { type: "reading", title: "Rhetoric & persuasion", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/", note: "How persuasive texts work." },
-            { type: "book", enrichment: true, title: "The Elements of Eloquence: How to Turn the Perfect English Phrase", author: "Mark Forsyth", chapter: "(rhetorical figures, one per chapter)", note: "Enrichment read (accessible stretch): the rhetorical devices that make speeches, ads and writing persuasive and memorable.", url: "" }
+            { type: "book", enrichment: true, title: "The Elements of Eloquence: How to Turn the Perfect English Phrase", author: "Mark Forsyth", chapter: "(rhetorical figures, one per chapter)", note: "Enrichment read (accessible stretch): the rhetorical devices that make speeches, ads and writing persuasive and memorable.", url: "https://archive.org/details/the-elements-of-eloquence-how-to-turn-the-perfect-english-phrase" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "An editorial is a piece that:", options: ["only reports facts neutrally", "expresses an opinion or argument on an issue", "is a short story", "lists ingredients"], answer: 1, explanation: "Editorials argue a viewpoint on an issue." },
@@ -365,7 +365,7 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Bias detection", provider: "Khan Academy", url: "https://www.khanacademy.org/ela", note: "Spotting slant and unreliable sources." },
             { type: "reading", title: "Evaluating credibility", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/research_and_citation/conducting_research/evaluating_sources_of_information/index.html", note: "Judging source reliability." },
-            { type: "book", enrichment: true, title: "The Elements of Eloquence: How to Turn the Perfect English Phrase", author: "Mark Forsyth", chapter: "(rhetorical figures, one per chapter)", note: "Enrichment read (accessible stretch): the rhetorical devices that make speeches, ads and writing persuasive and memorable.", url: "" }
+            { type: "book", enrichment: true, title: "The Elements of Eloquence: How to Turn the Perfect English Phrase", author: "Mark Forsyth", chapter: "(rhetorical figures, one per chapter)", note: "Enrichment read (accessible stretch): the rhetorical devices that make speeches, ads and writing persuasive and memorable.", url: "https://archive.org/details/the-elements-of-eloquence-how-to-turn-the-perfect-english-phrase" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "A credible source is one that is:", options: ["anonymous and unsupported", "trustworthy, accurate and from a knowledgeable author", "always the shortest", "full of emotional language"], answer: 1, explanation: "Credibility rests on accuracy, authority and support." },
@@ -388,7 +388,7 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Rhetorical strategies", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/academic_writing/establishing_arguments/rhetorical_strategies.html", note: "Analysing the three appeals." },
             { type: "reading", title: "Appeals in speeches & ads", provider: "CommonLit", url: "https://www.commonlit.org/", note: "Practice analysing rhetoric." },
-            { type: "book", enrichment: true, title: "The Elements of Eloquence: How to Turn the Perfect English Phrase", author: "Mark Forsyth", chapter: "(rhetorical figures, one per chapter)", note: "Enrichment read (accessible stretch): the rhetorical devices that make speeches, ads and writing persuasive and memorable.", url: "" }
+            { type: "book", enrichment: true, title: "The Elements of Eloquence: How to Turn the Perfect English Phrase", author: "Mark Forsyth", chapter: "(rhetorical figures, one per chapter)", note: "Enrichment read (accessible stretch): the rhetorical devices that make speeches, ads and writing persuasive and memorable.", url: "https://archive.org/details/the-elements-of-eloquence-how-to-turn-the-perfect-english-phrase" }
           ],
           quiz: [
             { type: "match", difficulty: "medium", q: "Match each appeal to an example.", pairs: [["Ethos", "'As a doctor of 20 years, I can say...'"], ["Pathos", "'Imagine your own child going hungry.'"], ["Logos", "'Studies show a 40% drop in accidents.'"]], explanation: "Ethos = credibility, pathos = emotion, logos = logic." },
@@ -411,7 +411,7 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Visual rhetoric", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/visual_rhetoric/visual_rhetoric/index.html", note: "How images persuade." },
             { type: "reading", title: "Reading images", provider: "ReadWriteThink", url: "https://www.readwritethink.org/", note: "Analysing visual texts." },
-            { type: "book", enrichment: true, title: "The Elements of Eloquence: How to Turn the Perfect English Phrase", author: "Mark Forsyth", chapter: "(rhetorical figures, one per chapter)", note: "Enrichment read (accessible stretch): the rhetorical devices that make speeches, ads and writing persuasive and memorable.", url: "" }
+            { type: "book", enrichment: true, title: "The Elements of Eloquence: How to Turn the Perfect English Phrase", author: "Mark Forsyth", chapter: "(rhetorical figures, one per chapter)", note: "Enrichment read (accessible stretch): the rhetorical devices that make speeches, ads and writing persuasive and memorable.", url: "https://archive.org/details/the-elements-of-eloquence-how-to-turn-the-perfect-english-phrase" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "'Visual rhetoric' is the study of how:", options: ["words sound", "images and design persuade or communicate meaning", "books are bound", "fonts are made"], answer: 1, explanation: "Visual rhetoric examines persuasion through images and design." },
@@ -434,7 +434,7 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Argument vs persuasion", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/academic_writing/establishing_arguments/index.html", note: "Reason-based argument vs emotional persuasion." },
             { type: "reading", title: "Building arguments", provider: "Khan Academy", url: "https://www.khanacademy.org/ela", note: "Claims, reasons and evidence." },
-            { type: "book", enrichment: true, title: "The Elements of Eloquence: How to Turn the Perfect English Phrase", author: "Mark Forsyth", chapter: "(rhetorical figures, one per chapter)", note: "Enrichment read (accessible stretch): the rhetorical devices that make speeches, ads and writing persuasive and memorable.", url: "" }
+            { type: "book", enrichment: true, title: "The Elements of Eloquence: How to Turn the Perfect English Phrase", author: "Mark Forsyth", chapter: "(rhetorical figures, one per chapter)", note: "Enrichment read (accessible stretch): the rhetorical devices that make speeches, ads and writing persuasive and memorable.", url: "https://archive.org/details/the-elements-of-eloquence-how-to-turn-the-perfect-english-phrase" }
           ],
           quiz: [
             { type: "mcq", difficulty: "hard", q: "How does a reasoned ARGUMENT differ from pure PERSUASION?", options: ["They are identical", "Argument relies mainly on logic and evidence; persuasion may lean heavily on emotion and rhetoric", "Argument has no claim", "Persuasion uses only facts"], answer: 1, explanation: "Argument centres on reasoning/evidence; persuasion often foregrounds emotion." },
@@ -469,8 +469,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Compare & contrast writing", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/", note: "Structuring comparisons." },
             { type: "reading", title: "Narrative & descriptive craft", provider: "ReadWriteThink", url: "https://www.readwritethink.org/", note: "Refining story and description." },
-            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Essay-Writing; Story-Writing", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Essay-Writing; Story-Writing'.", url: "" },
-            { type: "book", enrichment: true, title: "On Writing: A Memoir of the Craft", author: "Stephen King", chapter: "(the 'Toolbox' and 'On Writing' craft sections)", note: "Enrichment read (advanced / with guidance): a celebrated author's practical advice on argument, storytelling and the craft of writing.", url: "" }
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Essay-Writing; Story-Writing", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Essay-Writing; Story-Writing'.", url: "https://openlibrary.org/search?q=wren+martin+high+school+english+grammar+and+composition" },
+            { type: "book", enrichment: true, title: "On Writing: A Memoir of the Craft", author: "Stephen King", chapter: "(the 'Toolbox' and 'On Writing' craft sections)", note: "Enrichment read (advanced / with guidance): a celebrated author's practical advice on argument, storytelling and the craft of writing.", url: "https://archive.org/details/onwritingmemoiro0000king" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "Two common ways to structure a compare-and-contrast essay are point-by-point and:", options: ["alphabetical", "block (subject-by-subject)", "random", "backwards"], answer: 1, explanation: "Block and point-by-point are the two standard structures." },
@@ -493,8 +493,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Literary analysis essay", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/subject_specific_writing/writing_in_literature/writing_in_literature_detailed_discussion/index.html", note: "How to analyse literature in an essay." },
             { type: "reading", title: "Analysing texts", provider: "CommonLit", url: "https://www.commonlit.org/", note: "Building text-based arguments." },
-            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Essay-Writing", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Essay-Writing'.", url: "" },
-            { type: "book", enrichment: true, title: "On Writing: A Memoir of the Craft", author: "Stephen King", chapter: "(the 'Toolbox' and 'On Writing' craft sections)", note: "Enrichment read (advanced / with guidance): a celebrated author's practical advice on argument, storytelling and the craft of writing.", url: "" }
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Essay-Writing", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Essay-Writing'.", url: "https://openlibrary.org/search?q=wren+martin+high+school+english+grammar+and+composition" },
+            { type: "book", enrichment: true, title: "On Writing: A Memoir of the Craft", author: "Stephen King", chapter: "(the 'Toolbox' and 'On Writing' craft sections)", note: "Enrichment read (advanced / with guidance): a celebrated author's practical advice on argument, storytelling and the craft of writing.", url: "https://archive.org/details/onwritingmemoiro0000king" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "A literary analysis essay should be built around:", options: ["a plot summary only", "a thesis (interpretation) supported by textual evidence and analysis", "the author's biography", "your favourite quotes with no point"], answer: 1, explanation: "Literary analysis argues an interpretation with evidence." },
@@ -517,8 +517,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Argumentative essays", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/academic_writing/essay_writing/argumentative_essays.html", note: "Claim, reasons, evidence, structure." },
             { type: "reading", title: "Argument writing", provider: "Khan Academy", url: "https://www.khanacademy.org/ela", note: "Making a case in writing." },
-            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Essay-Writing", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Essay-Writing'.", url: "" },
-            { type: "book", enrichment: true, title: "On Writing: A Memoir of the Craft", author: "Stephen King", chapter: "(the 'Toolbox' and 'On Writing' craft sections)", note: "Enrichment read (advanced / with guidance): a celebrated author's practical advice on argument, storytelling and the craft of writing.", url: "" }
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Essay-Writing", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Essay-Writing'.", url: "https://openlibrary.org/search?q=wren+martin+high+school+english+grammar+and+composition" },
+            { type: "book", enrichment: true, title: "On Writing: A Memoir of the Craft", author: "Stephen King", chapter: "(the 'Toolbox' and 'On Writing' craft sections)", note: "Enrichment read (advanced / with guidance): a celebrated author's practical advice on argument, storytelling and the craft of writing.", url: "https://archive.org/details/onwritingmemoiro0000king" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "The central claim of an argument essay is its:", options: ["conclusion only", "thesis", "title", "first quote"], answer: 1, explanation: "The thesis states the essay's main argument." },
@@ -541,8 +541,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Counterargument & rebuttal", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/academic_writing/establishing_arguments/index.html", note: "Addressing the other side." },
             { type: "reading", title: "Nuanced argument", provider: "Khan Academy", url: "https://www.khanacademy.org/ela", note: "Qualifying and strengthening claims." },
-            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Essay-Writing", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Essay-Writing'.", url: "" },
-            { type: "book", enrichment: true, title: "On Writing: A Memoir of the Craft", author: "Stephen King", chapter: "(the 'Toolbox' and 'On Writing' craft sections)", note: "Enrichment read (advanced / with guidance): a celebrated author's practical advice on argument, storytelling and the craft of writing.", url: "" }
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Essay-Writing", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Essay-Writing'.", url: "https://openlibrary.org/search?q=wren+martin+high+school+english+grammar+and+composition" },
+            { type: "book", enrichment: true, title: "On Writing: A Memoir of the Craft", author: "Stephen King", chapter: "(the 'Toolbox' and 'On Writing' craft sections)", note: "Enrichment read (advanced / with guidance): a celebrated author's practical advice on argument, storytelling and the craft of writing.", url: "https://archive.org/details/onwritingmemoiro0000king" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "A 'counterargument' is:", options: ["your own thesis", "an opposing view that you acknowledge and respond to", "a grammar rule", "the conclusion"], answer: 1, explanation: "A counterargument is the opposing side you address." },
@@ -565,8 +565,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Strong thesis statements", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/the_writing_process/thesis_statement_tips.html", note: "Crafting a defensible thesis." },
             { type: "reading", title: "Defending a claim", provider: "Khan Academy", url: "https://www.khanacademy.org/ela", note: "Building a sustained argument." },
-            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Essay-Writing", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Essay-Writing'.", url: "" },
-            { type: "book", enrichment: true, title: "On Writing: A Memoir of the Craft", author: "Stephen King", chapter: "(the 'Toolbox' and 'On Writing' craft sections)", note: "Enrichment read (advanced / with guidance): a celebrated author's practical advice on argument, storytelling and the craft of writing.", url: "" }
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Essay-Writing", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Essay-Writing'.", url: "https://openlibrary.org/search?q=wren+martin+high+school+english+grammar+and+composition" },
+            { type: "book", enrichment: true, title: "On Writing: A Memoir of the Craft", author: "Stephen King", chapter: "(the 'Toolbox' and 'On Writing' craft sections)", note: "Enrichment read (advanced / with guidance): a celebrated author's practical advice on argument, storytelling and the craft of writing.", url: "https://archive.org/details/onwritingmemoiro0000king" }
           ],
           quiz: [
             { type: "mcq", difficulty: "hard", q: "A strong capstone thesis is one that is:", options: ["obvious and unarguable", "specific, debatable and supportable with evidence", "a question with no answer", "a list of facts"], answer: 1, explanation: "A good thesis is specific, arguable and provable." },
@@ -589,8 +589,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Flash fiction", provider: "ReadWriteThink", url: "https://www.readwritethink.org/", note: "Telling a complete story very briefly." },
             { type: "reading", title: "Editorial writing", provider: "CommonLit", url: "https://www.commonlit.org/", note: "Opinion writing on an issue." },
-            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Story-Writing", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Story-Writing'.", url: "" },
-            { type: "book", enrichment: true, title: "On Writing: A Memoir of the Craft", author: "Stephen King", chapter: "(the 'Toolbox' and 'On Writing' craft sections)", note: "Enrichment read (advanced / with guidance): a celebrated author's practical advice on argument, storytelling and the craft of writing.", url: "" }
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Story-Writing", note: "This writing skill is covered in Wren & Martin's Composition section, 'Composition — Story-Writing'.", url: "https://openlibrary.org/search?q=wren+martin+high+school+english+grammar+and+composition" },
+            { type: "book", enrichment: true, title: "On Writing: A Memoir of the Craft", author: "Stephen King", chapter: "(the 'Toolbox' and 'On Writing' craft sections)", note: "Enrichment read (advanced / with guidance): a celebrated author's practical advice on argument, storytelling and the craft of writing.", url: "https://archive.org/details/onwritingmemoiro0000king" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "'Flash fiction' is:", options: ["a very long novel", "an extremely short, complete story", "a news report", "a poem with no words"], answer: 1, explanation: "Flash fiction tells a whole story in very few words." },
@@ -625,8 +625,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Verb tenses", provider: "Khan Academy", url: "https://www.khanacademy.org/humanities/grammar", note: "Simple and perfect tenses." },
             { type: "reading", title: "Past perfect", provider: "Grammarly", url: "https://www.grammarly.com/blog/past-perfect/", note: "When to use the past perfect." },
-            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "The Verb — Tenses", note: "This is covered in Wren & Martin's grammar section, 'The Verb — Tenses'.", url: "" },
-            { type: "book", enrichment: true, title: "Eats, Shoots & Leaves", author: "Lynne Truss (children's edition available)", chapter: "(punctuation, dialogue & sentence sense)", note: "Enrichment read (great for ages 11–13): a witty tour of punctuation and why it really matters.", url: "" }
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "The Verb — Tenses", note: "This is covered in Wren & Martin's grammar section, 'The Verb — Tenses'.", url: "https://openlibrary.org/search?q=wren+martin+high+school+english+grammar+and+composition" },
+            { type: "book", enrichment: true, title: "Eats, Shoots & Leaves", author: "Lynne Truss (children's edition available)", chapter: "(punctuation, dialogue & sentence sense)", note: "Enrichment read (great for ages 11–13): a witty tour of punctuation and why it really matters.", url: "https://openlibrary.org/search?q=eats+shoots+and+leaves+truss" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "The past perfect ('had + past participle') is used for an action that:", options: ["is happening now", "happened before another past action", "will happen later", "never happened"], answer: 1, explanation: "Past perfect shows the earlier of two past events." },
@@ -649,8 +649,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Gerunds & infinitives", provider: "Khan Academy", url: "https://www.khanacademy.org/humanities/grammar", note: "-ing nouns and 'to + verb'." },
             { type: "reading", title: "Gerunds vs infinitives", provider: "Grammarly", url: "https://www.grammarly.com/blog/gerund/", note: "Forms and uses." },
-            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "The Verb — Verbals (Gerunds & Infinitives)", note: "This is covered in Wren & Martin's grammar section, 'The Verb — Verbals (Gerunds & Infinitives)'.", url: "" },
-            { type: "book", enrichment: true, title: "Eats, Shoots & Leaves", author: "Lynne Truss (children's edition available)", chapter: "(punctuation, dialogue & sentence sense)", note: "Enrichment read (great for ages 11–13): a witty tour of punctuation and why it really matters.", url: "" }
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "The Verb — Verbals (Gerunds & Infinitives)", note: "This is covered in Wren & Martin's grammar section, 'The Verb — Verbals (Gerunds & Infinitives)'.", url: "https://openlibrary.org/search?q=wren+martin+high+school+english+grammar+and+composition" },
+            { type: "book", enrichment: true, title: "Eats, Shoots & Leaves", author: "Lynne Truss (children's edition available)", chapter: "(punctuation, dialogue & sentence sense)", note: "Enrichment read (great for ages 11–13): a witty tour of punctuation and why it really matters.", url: "https://openlibrary.org/search?q=eats+shoots+and+leaves+truss" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "A gerund is a verb form ending in -ing that acts as a:", options: ["verb only", "noun", "preposition", "punctuation mark"], answer: 1, explanation: "A gerund (e.g. 'swimming is fun') functions as a noun." },
@@ -673,8 +673,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Modal verbs", provider: "Grammarly", url: "https://www.grammarly.com/blog/modal-verbs/", note: "Can, could, may, might, must, should." },
             { type: "reading", title: "Phrasal verbs", provider: "Grammarly", url: "https://www.grammarly.com/blog/phrasal-verbs/", note: "Verb + particle combinations." },
-            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "The Verb — Auxiliary & Modal Verbs; Phrasal Verbs", note: "This is covered in Wren & Martin's grammar section, 'The Verb — Auxiliary & Modal Verbs; Phrasal Verbs'.", url: "" },
-            { type: "book", enrichment: true, title: "Eats, Shoots & Leaves", author: "Lynne Truss (children's edition available)", chapter: "(punctuation, dialogue & sentence sense)", note: "Enrichment read (great for ages 11–13): a witty tour of punctuation and why it really matters.", url: "" }
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "The Verb — Auxiliary & Modal Verbs; Phrasal Verbs", note: "This is covered in Wren & Martin's grammar section, 'The Verb — Auxiliary & Modal Verbs; Phrasal Verbs'.", url: "https://openlibrary.org/search?q=wren+martin+high+school+english+grammar+and+composition" },
+            { type: "book", enrichment: true, title: "Eats, Shoots & Leaves", author: "Lynne Truss (children's edition available)", chapter: "(punctuation, dialogue & sentence sense)", note: "Enrichment read (great for ages 11–13): a witty tour of punctuation and why it really matters.", url: "https://openlibrary.org/search?q=eats+shoots+and+leaves+truss" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Which is a modal verb?", options: ["run", "must", "table", "quickly"], answer: 1, explanation: "'Must' is a modal expressing necessity." },
@@ -697,8 +697,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Active vs passive voice", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/academic_writing/active_and_passive_voice/index.html", note: "When to use each voice." },
             { type: "reading", title: "Passive voice", provider: "Grammarly", url: "https://www.grammarly.com/blog/passive-voice/", note: "Recognising and using the passive." },
-            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Active and Passive Voice", note: "This is covered in Wren & Martin's grammar section, 'Active and Passive Voice'.", url: "" },
-            { type: "book", enrichment: true, title: "Eats, Shoots & Leaves", author: "Lynne Truss (children's edition available)", chapter: "(punctuation, dialogue & sentence sense)", note: "Enrichment read (great for ages 11–13): a witty tour of punctuation and why it really matters.", url: "" }
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Active and Passive Voice", note: "This is covered in Wren & Martin's grammar section, 'Active and Passive Voice'.", url: "https://openlibrary.org/search?q=wren+martin+high+school+english+grammar+and+composition" },
+            { type: "book", enrichment: true, title: "Eats, Shoots & Leaves", author: "Lynne Truss (children's edition available)", chapter: "(punctuation, dialogue & sentence sense)", note: "Enrichment read (great for ages 11–13): a witty tour of punctuation and why it really matters.", url: "https://openlibrary.org/search?q=eats+shoots+and+leaves+truss" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "Which sentence is in the PASSIVE voice?", options: ["The cat chased the mouse.", "The mouse was chased by the cat.", "The cat chases mice.", "Cats chase mice."], answer: 1, explanation: "In the passive, the subject receives the action: 'was chased'." },
@@ -721,8 +721,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Verb moods", provider: "Grammarly", url: "https://www.grammarly.com/blog/grammatical-mood/", note: "Indicative, imperative, subjunctive and more." },
             { type: "reading", title: "Mood in grammar", provider: "Khan Academy", url: "https://www.khanacademy.org/humanities/grammar", note: "How mood changes meaning." },
-            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "The Verb — Mood", note: "This is covered in Wren & Martin's grammar section, 'The Verb — Mood'.", url: "" },
-            { type: "book", enrichment: true, title: "Eats, Shoots & Leaves", author: "Lynne Truss (children's edition available)", chapter: "(punctuation, dialogue & sentence sense)", note: "Enrichment read (great for ages 11–13): a witty tour of punctuation and why it really matters.", url: "" }
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "The Verb — Mood", note: "This is covered in Wren & Martin's grammar section, 'The Verb — Mood'.", url: "https://openlibrary.org/search?q=wren+martin+high+school+english+grammar+and+composition" },
+            { type: "book", enrichment: true, title: "Eats, Shoots & Leaves", author: "Lynne Truss (children's edition available)", chapter: "(punctuation, dialogue & sentence sense)", note: "Enrichment read (great for ages 11–13): a witty tour of punctuation and why it really matters.", url: "https://openlibrary.org/search?q=eats+shoots+and+leaves+truss" }
           ],
           quiz: [
             { type: "match", difficulty: "medium", q: "Match each mood to an example.", pairs: [["Indicative", "She walks to school."], ["Imperative", "Close the door."], ["Subjunctive", "If I were you, I'd rest."]], explanation: "Indicative states facts, imperative commands, subjunctive expresses hypotheticals/wishes." },
@@ -745,8 +745,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Parallel structure", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/mechanics/parallel_structure.html", note: "Keeping items in a series parallel." },
             { type: "reading", title: "Participial phrases", provider: "Grammarly", url: "https://www.grammarly.com/blog/participle/", note: "Phrases built from participles." },
-            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "The Participle; Synthesis of Sentences", note: "This is covered in Wren & Martin's grammar section, 'The Participle; Synthesis of Sentences'.", url: "" },
-            { type: "book", enrichment: true, title: "Eats, Shoots & Leaves", author: "Lynne Truss (children's edition available)", chapter: "(punctuation, dialogue & sentence sense)", note: "Enrichment read (great for ages 11–13): a witty tour of punctuation and why it really matters.", url: "" }
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "The Participle; Synthesis of Sentences", note: "This is covered in Wren & Martin's grammar section, 'The Participle; Synthesis of Sentences'.", url: "https://openlibrary.org/search?q=wren+martin+high+school+english+grammar+and+composition" },
+            { type: "book", enrichment: true, title: "Eats, Shoots & Leaves", author: "Lynne Truss (children's edition available)", chapter: "(punctuation, dialogue & sentence sense)", note: "Enrichment read (great for ages 11–13): a witty tour of punctuation and why it really matters.", url: "https://openlibrary.org/search?q=eats+shoots+and+leaves+truss" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "Which sentence uses correct parallelism?", options: ["She likes reading, to swim, and biking.", "She likes reading, swimming, and biking.", "She likes to read, swimming, biked.", "She likes read, swim, and to bike."], answer: 1, explanation: "Parallelism keeps the items in the same grammatical form (all -ing)." },
@@ -769,8 +769,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Dialogue punctuation", provider: "Grammarly", url: "https://www.grammarly.com/blog/punctuation-in-dialogue/", note: "Quotation marks, commas and new lines." },
             { type: "reading", title: "Writing dialogue", provider: "ReadWriteThink", url: "https://www.readwritethink.org/", note: "Conventions for dialogue." },
-            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Direct and Indirect Speech; Punctuation", note: "This is covered in Wren & Martin's grammar section, 'Direct and Indirect Speech; Punctuation'.", url: "" },
-            { type: "book", enrichment: true, title: "Eats, Shoots & Leaves", author: "Lynne Truss (children's edition available)", chapter: "(punctuation, dialogue & sentence sense)", note: "Enrichment read (great for ages 11–13): a witty tour of punctuation and why it really matters.", url: "" }
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Direct and Indirect Speech; Punctuation", note: "This is covered in Wren & Martin's grammar section, 'Direct and Indirect Speech; Punctuation'.", url: "https://openlibrary.org/search?q=wren+martin+high+school+english+grammar+and+composition" },
+            { type: "book", enrichment: true, title: "Eats, Shoots & Leaves", author: "Lynne Truss (children's edition available)", chapter: "(punctuation, dialogue & sentence sense)", note: "Enrichment read (great for ages 11–13): a witty tour of punctuation and why it really matters.", url: "https://openlibrary.org/search?q=eats+shoots+and+leaves+truss" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "Which is correctly punctuated dialogue?", options: ["\"Let's go\" she said.", "\"Let's go,\" she said.", "Let's go, she said.", "\"Let's go,\" She said"], answer: 1, explanation: "A comma goes inside the quotation marks before the dialogue tag, which is lowercase." },
@@ -793,8 +793,8 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Tone & voice", provider: "LiteraryDevices", url: "https://literarydevices.net/tone/", note: "How word choice shapes voice." },
             { type: "reading", title: "Writing voice", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/", note: "Adjusting tone for purpose." },
-            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Style and Tone", note: "Style and tone are developed in Wren & Martin's Composition section.", url: "" },
-            { type: "book", enrichment: true, title: "Eats, Shoots & Leaves", author: "Lynne Truss (children's edition available)", chapter: "(punctuation, dialogue & sentence sense)", note: "Enrichment read (great for ages 11–13): a witty tour of punctuation and why it really matters.", url: "" }
+            { type: "book", title: "Wren & Martin — High School English Grammar and Composition", author: "Wren & Martin (rev. N.D.V. Prasada Rao)", chapter: "Composition — Style and Tone", note: "Style and tone are developed in Wren & Martin's Composition section.", url: "https://openlibrary.org/search?q=wren+martin+high+school+english+grammar+and+composition" },
+            { type: "book", enrichment: true, title: "Eats, Shoots & Leaves", author: "Lynne Truss (children's edition available)", chapter: "(punctuation, dialogue & sentence sense)", note: "Enrichment read (great for ages 11–13): a witty tour of punctuation and why it really matters.", url: "https://openlibrary.org/search?q=eats+shoots+and+leaves+truss" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "'Voice' in writing refers to:", options: ["how loud you read", "the distinctive style and personality of the writing", "the font", "the page count"], answer: 1, explanation: "Voice is the writer's distinctive style and attitude." },
@@ -829,7 +829,7 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Collaborative discussion", provider: "ReadWriteThink", url: "https://www.readwritethink.org/", note: "Student-led seminar skills." },
             { type: "reading", title: "Academic conversation", provider: "Khan Academy", url: "https://www.khanacademy.org/ela", note: "Extending and connecting ideas." },
-            { type: "book", enrichment: true, title: "The Elements of Eloquence: How to Turn the Perfect English Phrase", author: "Mark Forsyth", chapter: "(rhetorical figures, one per chapter)", note: "Enrichment read (accessible stretch): the rhetorical techniques that make spoken arguments and debate memorable.", url: "" }
+            { type: "book", enrichment: true, title: "The Elements of Eloquence: How to Turn the Perfect English Phrase", author: "Mark Forsyth", chapter: "(rhetorical figures, one per chapter)", note: "Enrichment read (accessible stretch): the rhetorical techniques that make spoken arguments and debate memorable.", url: "https://archive.org/details/the-elements-of-eloquence-how-to-turn-the-perfect-english-phrase" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Building on a peer's idea in discussion means:", options: ["repeating it exactly", "adding to, extending or thoughtfully responding to it", "ignoring it", "changing the subject"], answer: 1, explanation: "You connect your contribution to what was just said." },
@@ -852,7 +852,7 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Active listening", provider: "Khan Academy", url: "https://www.khanacademy.org/ela", note: "Listening to understand and respond." },
             { type: "reading", title: "Discussion skills", provider: "ReadWriteThink", url: "https://www.readwritethink.org/", note: "Listening and responding well." },
-            { type: "book", enrichment: true, title: "The Elements of Eloquence: How to Turn the Perfect English Phrase", author: "Mark Forsyth", chapter: "(rhetorical figures, one per chapter)", note: "Enrichment read (accessible stretch): the rhetorical techniques that make spoken arguments and debate memorable.", url: "" }
+            { type: "book", enrichment: true, title: "The Elements of Eloquence: How to Turn the Perfect English Phrase", author: "Mark Forsyth", chapter: "(rhetorical figures, one per chapter)", note: "Enrichment read (accessible stretch): the rhetorical techniques that make spoken arguments and debate memorable.", url: "https://archive.org/details/the-elements-of-eloquence-how-to-turn-the-perfect-english-phrase" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "Active listening includes paying attention, not interrupting, and responding to what was actually said.", answer: true, explanation: "Active listening means truly engaging with the speaker." },
@@ -875,7 +875,7 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Debate basics", provider: "ReadWriteThink", url: "https://www.readwritethink.org/", note: "Structuring and arguing a debate." },
             { type: "reading", title: "Counterclaims & rebuttal", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/academic_writing/establishing_arguments/index.html", note: "Answering the opposing side." },
-            { type: "book", enrichment: true, title: "The Elements of Eloquence: How to Turn the Perfect English Phrase", author: "Mark Forsyth", chapter: "(rhetorical figures, one per chapter)", note: "Enrichment read (accessible stretch): the rhetorical techniques that make spoken arguments and debate memorable.", url: "" }
+            { type: "book", enrichment: true, title: "The Elements of Eloquence: How to Turn the Perfect English Phrase", author: "Mark Forsyth", chapter: "(rhetorical figures, one per chapter)", note: "Enrichment read (accessible stretch): the rhetorical techniques that make spoken arguments and debate memorable.", url: "https://archive.org/details/the-elements-of-eloquence-how-to-turn-the-perfect-english-phrase" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "A 'counterclaim' in a debate is:", options: ["your own main point", "the opposing side's argument", "a grammar error", "the conclusion"], answer: 1, explanation: "A counterclaim is the opposing argument you must answer." },
@@ -898,7 +898,7 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Oral presentation skills", provider: "ReadWriteThink", url: "https://www.readwritethink.org/", note: "Planning and delivering a talk." },
             { type: "reading", title: "Speech delivery", provider: "Purdue OWL", url: "https://owl.purdue.edu/owl/general_writing/", note: "Engaging an audience aloud." },
-            { type: "book", enrichment: true, title: "The Elements of Eloquence: How to Turn the Perfect English Phrase", author: "Mark Forsyth", chapter: "(rhetorical figures, one per chapter)", note: "Enrichment read (accessible stretch): the rhetorical techniques that make spoken arguments and debate memorable.", url: "" }
+            { type: "book", enrichment: true, title: "The Elements of Eloquence: How to Turn the Perfect English Phrase", author: "Mark Forsyth", chapter: "(rhetorical figures, one per chapter)", note: "Enrichment read (accessible stretch): the rhetorical techniques that make spoken arguments and debate memorable.", url: "https://archive.org/details/the-elements-of-eloquence-how-to-turn-the-perfect-english-phrase" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "Eye contact, clear voice and pacing all help an oral presentation succeed.", answer: true, explanation: "Delivery skills are key to effective speaking." },
@@ -921,7 +921,7 @@ window.CURRICULUM_ENGLISH.grades.push({
           resources: [
             { type: "reading", title: "Using evidence in speech", provider: "Khan Academy", url: "https://www.khanacademy.org/ela", note: "Backing spoken claims with support." },
             { type: "reading", title: "Evidence-based discussion", provider: "CommonLit", url: "https://www.commonlit.org/", note: "Citing the text when you speak." },
-            { type: "book", enrichment: true, title: "The Elements of Eloquence: How to Turn the Perfect English Phrase", author: "Mark Forsyth", chapter: "(rhetorical figures, one per chapter)", note: "Enrichment read (accessible stretch): the rhetorical techniques that make spoken arguments and debate memorable.", url: "" }
+            { type: "book", enrichment: true, title: "The Elements of Eloquence: How to Turn the Perfect English Phrase", author: "Mark Forsyth", chapter: "(rhetorical figures, one per chapter)", note: "Enrichment read (accessible stretch): the rhetorical techniques that make spoken arguments and debate memorable.", url: "https://archive.org/details/the-elements-of-eloquence-how-to-turn-the-perfect-english-phrase" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "Referring to specific evidence from a text makes a spoken point more convincing.", answer: true, explanation: "Evidence strengthens spoken arguments." },

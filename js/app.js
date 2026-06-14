@@ -328,8 +328,9 @@
       const by = r.author || r.provider || "";
       const enrich = !!r.enrichment;
       const chip = enrich ? "📗 Enrichment read" : "📕 Textbook";
+      const linkText = enrich ? "Read online ↗" : "Publisher page ↗";
       const link = r.url
-        ? `<a class="res-open" href="${esc(r.url)}" target="_blank" rel="noopener noreferrer">View book ↗</a>`
+        ? `<a class="res-open" href="${esc(r.url)}" target="_blank" rel="noopener noreferrer">${linkText}</a>`
         : "";
       return `
         <div class="res-card book${enrich ? " enrich" : ""}">
