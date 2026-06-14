@@ -19,7 +19,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Solve ratio problems involving algebra.",
           resources: [
             { type: "interactive", title: "Ratios", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/ratio.html", note: "Algebraic ratio problems." },
-            { type: "interactive", title: "Ratios", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-eighth-grade-math", note: "Practice." }
+            { type: "interactive", title: "Ratios", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-eighth-grade-math", note: "Practice." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Ratio and proportion; Percentages (Stage 9)", note: "Proportion, percentages and financial maths are covered in the Cambridge Stage 9 ratio and percentages units.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "easy", q: "A ratio is 1:4. The total is 10 parts? No — there are 5 parts in total. If the sum is 10, find the smaller number.", answer: "2", explanation: "5 parts → 10 ÷ 5 = 2; smaller = 1 × 2 = 2." },
@@ -38,7 +39,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Use direct proportion to find missing quantities.",
           resources: [
             { type: "interactive", title: "Direct proportion", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/directly-inversely-proportional.html", note: "Scaling with a constant." },
-            { type: "interactive", title: "Proportion", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-eighth-grade-math", note: "Practice." }
+            { type: "interactive", title: "Proportion", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-eighth-grade-math", note: "Practice." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Ratio and proportion; Percentages (Stage 9)", note: "Proportion, percentages and financial maths are covered in the Cambridge Stage 9 ratio and percentages units.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "If y is directly proportional to x, when x doubles, y doubles.", answer: true, explanation: "Direct proportion means y = kx, so doubling x doubles y." },
@@ -57,7 +59,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Calculate simple interest.",
           resources: [
             { type: "interactive", title: "Simple Interest", provider: "Math is Fun", url: "https://www.mathsisfun.com/money/interest.html", note: "I = PRT/100." },
-            { type: "interactive", title: "Simple interest", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." }
+            { type: "interactive", title: "Simple interest", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Ratio and proportion; Percentages (Stage 9)", note: "Proportion, percentages and financial maths are covered in the Cambridge Stage 9 ratio and percentages units.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "Simple interest is calculated only on the original principal.", answer: true, explanation: "Unlike compound interest, simple interest does not earn interest on interest." },
@@ -76,7 +79,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Calculate compound interest.",
           resources: [
             { type: "interactive", title: "Compound Interest", provider: "Math is Fun", url: "https://www.mathsisfun.com/money/compound-interest.html", note: "Interest on interest." },
-            { type: "interactive", title: "Interest (simple & compound)", provider: "Math is Fun", url: "https://www.mathsisfun.com/money/interest.html", note: "How interest is calculated." }
+            { type: "interactive", title: "Interest (simple & compound)", provider: "Math is Fun", url: "https://www.mathsisfun.com/money/interest.html", note: "How interest is calculated." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Ratio and proportion; Percentages (Stage 9)", note: "Proportion, percentages and financial maths are covered in the Cambridge Stage 9 ratio and percentages units.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "Compound interest is calculated on both the principal and the accumulated interest.", answer: true, explanation: "Each period the interest is added, so the next period earns on a larger amount." },
@@ -95,7 +99,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Calculate GST (goods and services tax).",
           resources: [
             { type: "interactive", title: "Percentages of amounts", provider: "Math is Fun", url: "https://www.mathsisfun.com/percentage.html", note: "Adding a tax percentage." },
-            { type: "interactive", title: "Tax & percentages", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Practice." }
+            { type: "interactive", title: "Tax & percentages", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Practice." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Ratio and proportion; Percentages (Stage 9)", note: "Proportion, percentages and financial maths are covered in the Cambridge Stage 9 ratio and percentages units.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "GST (Goods and Services Tax) is added to the price of goods.", answer: true, explanation: "GST is a consumption tax added on top of the base price." },
@@ -114,7 +119,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Calculate depreciation.",
           resources: [
             { type: "interactive", title: "Money & financial maths", provider: "Math is Fun", url: "https://www.mathsisfun.com/money/index.html", note: "Value falling over time." },
-            { type: "interactive", title: "Percentage decrease", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/percentage-change.html", note: "Repeated decrease." }
+            { type: "interactive", title: "Percentage decrease", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/percentage-change.html", note: "Repeated decrease." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Ratio and proportion; Percentages (Stage 9)", note: "Proportion, percentages and financial maths are covered in the Cambridge Stage 9 ratio and percentages units.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "Depreciation means an asset loses value over time.", answer: true, explanation: "Assets such as cars and electronics typically decrease in value." },
@@ -133,7 +139,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Apply percentage change to financial problems.",
           resources: [
             { type: "interactive", title: "Percentage change", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/percentage-change.html", note: "Increases and decreases in money." },
-            { type: "interactive", title: "Money & financial maths", provider: "Math is Fun", url: "https://www.mathsisfun.com/money/index.html", note: "Real-life financial percentages." }
+            { type: "interactive", title: "Money & financial maths", provider: "Math is Fun", url: "https://www.mathsisfun.com/money/index.html", note: "Real-life financial percentages." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Ratio and proportion; Percentages (Stage 9)", note: "Proportion, percentages and financial maths are covered in the Cambridge Stage 9 ratio and percentages units.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "The formula for percentage change is:", options: ["(change ÷ original) × 100", "(original ÷ change) × 100", "change × 100", "(new − original) ÷ 100"], answer: 0, explanation: "Percentage change = (change ÷ original) × 100." },
@@ -163,7 +170,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Round to a given number of significant figures.",
           resources: [
             { type: "interactive", title: "Significant Figures", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/significant-figures.html", note: "Counting and rounding sig figs." },
-            { type: "interactive", title: "Khan Academy: Significant figures", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-eighth-grade-math", note: "Worked rounding to sig figs." }
+            { type: "interactive", title: "Khan Academy: Significant figures", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-eighth-grade-math", note: "Worked rounding to sig figs." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Place value, rounding and standard form (Stage 9)", note: "Rounding, significant figures and standard form are covered in the Cambridge Stage 9 number units.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "Leading zeros (like the zeros in 0.0045) are not significant.", answer: true, explanation: "Leading zeros only locate the decimal point; the first sig fig in 0.0045 is 4." },
@@ -182,7 +190,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Approximate to a given number of decimal places.",
           resources: [
             { type: "interactive", title: "Rounding Numbers", provider: "Math is Fun", url: "https://www.mathsisfun.com/rounding-numbers.html", note: "Decimal place rounding." },
-            { type: "interactive", title: "Rounding decimals", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Practice." }
+            { type: "interactive", title: "Rounding decimals", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-seventh-grade-math", note: "Practice." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Place value, rounding and standard form (Stage 9)", note: "Rounding, significant figures and standard form are covered in the Cambridge Stage 9 number units.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "3.145 rounded to 2 decimal places is 3.15.", answer: true, explanation: "The third decimal is 5, so round up: 3.15." },
@@ -201,7 +210,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Find upper and lower bounds of rounded values.",
           resources: [
             { type: "interactive", title: "Rounding Numbers", provider: "Math is Fun", url: "https://www.mathsisfun.com/rounding-numbers.html", note: "Upper and lower bounds of rounded values." },
-            { type: "interactive", title: "Khan Academy: Bounds", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-eighth-grade-math", note: "Worked bounds examples." }
+            { type: "interactive", title: "Khan Academy: Bounds", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-eighth-grade-math", note: "Worked bounds examples." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Place value, rounding and standard form (Stage 9)", note: "Rounding, significant figures and standard form are covered in the Cambridge Stage 9 number units.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "If a measurement is rounded to the nearest unit, the bounds are half a unit above and below.", answer: true, explanation: "Lower = value − 0.5; upper = value + 0.5 (for rounding to the nearest 1)." },
@@ -220,7 +230,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Express bounds using inequalities.",
           resources: [
             { type: "interactive", title: "Khan Academy: Error intervals", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-eighth-grade-math", note: "Writing bounds as inequalities." },
-            { type: "interactive", title: "Inequalities", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/inequality.html", note: "Inequality notation." }
+            { type: "interactive", title: "Inequalities", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/inequality.html", note: "Inequality notation." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Place value, rounding and standard form (Stage 9)", note: "Rounding, significant figures and standard form are covered in the Cambridge Stage 9 number units.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "Error intervals use inequalities to express the range of possible values.", answer: true, explanation: "e.g. 5.5 ≤ x < 6.5 tells you x lies in that range." },
@@ -239,7 +250,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Write numbers in scientific (standard) form.",
           resources: [
             { type: "interactive", title: "Scientific Notation", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/scientific-notation.html", note: "a × 10ⁿ form." },
-            { type: "interactive", title: "Scientific notation", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-eighth-grade-math", note: "Practice." }
+            { type: "interactive", title: "Scientific notation", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-eighth-grade-math", note: "Practice." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Place value, rounding and standard form (Stage 9)", note: "Rounding, significant figures and standard form are covered in the Cambridge Stage 9 number units.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "In standard form a × 10ⁿ, the value of a must satisfy 1 ≤ a < 10.", answer: true, explanation: "The leading digit is always a single non-zero digit." },
@@ -258,7 +270,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Use standard form for small numbers.",
           resources: [
             { type: "interactive", title: "Khan Academy: Standard form", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-eighth-grade-math", note: "Negative powers of 10." },
-            { type: "interactive", title: "Scientific notation", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/scientific-notation.html", note: "Tiny numbers." }
+            { type: "interactive", title: "Scientific notation", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/scientific-notation.html", note: "Tiny numbers." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Place value, rounding and standard form (Stage 9)", note: "Rounding, significant figures and standard form are covered in the Cambridge Stage 9 number units.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "A negative power of 10 (like 10⁻³) represents a number less than 1.", answer: true, explanation: "10⁻³ = 0.001, which is less than 1." },
@@ -277,7 +290,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Calculate with numbers in scientific notation.",
           resources: [
             { type: "interactive", title: "Scientific Notation", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/scientific-notation.html", note: "Multiplying and dividing in standard form." },
-            { type: "interactive", title: "Scientific notation", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-eighth-grade-math", note: "Practice." }
+            { type: "interactive", title: "Scientific notation", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-eighth-grade-math", note: "Practice." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Place value, rounding and standard form (Stage 9)", note: "Rounding, significant figures and standard form are covered in the Cambridge Stage 9 number units.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "When multiplying numbers in standard form, you add the powers of 10.", answer: true, explanation: "10^a × 10^b = 10^(a+b)." },
@@ -307,7 +321,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Evaluate fractional indices.",
           resources: [
             { type: "interactive", title: "Fractional Exponents", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/exponent-fractional.html", note: "Roots and powers together." },
-            { type: "interactive", title: "Rational exponents", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." }
+            { type: "interactive", title: "Rational exponents", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Powers, roots and standard form (Stage 9)", note: "Indices, roots and surds are covered in the Cambridge Stage 9 'Powers and roots' / standard form units.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "a^(1/2) means the square root of a.", answer: true, explanation: "A power of 1/2 is equivalent to a square root." },
@@ -326,7 +341,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Convert between index and radical form.",
           resources: [
             { type: "interactive", title: "Radicals & exponents", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "√ ↔ power forms." },
-            { type: "interactive", title: "Fractional exponents", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/exponent-fractional.html", note: "Radical form." }
+            { type: "interactive", title: "Fractional exponents", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/exponent-fractional.html", note: "Radical form." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Powers, roots and standard form (Stage 9)", note: "Indices, roots and surds are covered in the Cambridge Stage 9 'Powers and roots' / standard form units.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "x^(1/3) can be written as ∛x in radical form.", answer: true, explanation: "The power 1/3 is the cube root, written ∛x." },
@@ -345,7 +361,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Solve equations involving indices.",
           resources: [
             { type: "interactive", title: "Laws of Exponents", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/exponent-laws.html", note: "Matching bases and powers." },
-            { type: "interactive", title: "Exponential equations", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." }
+            { type: "interactive", title: "Exponential equations", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Powers, roots and standard form (Stage 9)", note: "Indices, roots and surds are covered in the Cambridge Stage 9 'Powers and roots' / standard form units.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "To solve x³ = 27, you take the cube root of both sides.", answer: true, explanation: "x = ∛27 = 3." },
@@ -364,7 +381,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Distinguish pure and mixed surds.",
           resources: [
             { type: "interactive", title: "Simplifying Square Roots", provider: "Math is Fun", url: "https://www.mathsisfun.com/surds.html", note: "Pure and mixed surds." },
-            { type: "interactive", title: "Simplifying surds", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." }
+            { type: "interactive", title: "Simplifying surds", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Powers, roots and standard form (Stage 9)", note: "Indices, roots and surds are covered in the Cambridge Stage 9 'Powers and roots' / standard form units.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "A pure surd consists only of a radical with no integer coefficient, e.g. √7.", answer: true, explanation: "Pure surds have no whole-number coefficient in front of the radical." },
@@ -383,7 +401,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Use conjugates of surd expressions.",
           resources: [
             { type: "interactive", title: "Conjugates", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/conjugate.html", note: "Pairs that remove the surd." },
-            { type: "interactive", title: "Surds", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." }
+            { type: "interactive", title: "Surds", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Powers, roots and standard form (Stage 9)", note: "Indices, roots and surds are covered in the Cambridge Stage 9 'Powers and roots' / standard form units.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "The conjugate of (a + √b) is (a − √b).", answer: true, explanation: "The conjugate changes the sign of the surd term." },
@@ -402,7 +421,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Square and square-root surds.",
           resources: [
             { type: "interactive", title: "Simplifying Square Roots", provider: "Math is Fun", url: "https://www.mathsisfun.com/surds.html", note: "Squaring and simplifying surds." },
-            { type: "interactive", title: "Surds", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." }
+            { type: "interactive", title: "Surds", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Powers, roots and standard form (Stage 9)", note: "Indices, roots and surds are covered in the Cambridge Stage 9 'Powers and roots' / standard form units.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "(√a)² = a for any non-negative a.", answer: true, explanation: "Squaring undoes the square root." },
@@ -421,7 +441,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Simplify surds by prime factorisation.",
           resources: [
             { type: "interactive", title: "Simplifying Square Roots", provider: "Math is Fun", url: "https://www.mathsisfun.com/surds.html", note: "Take out square factors." },
-            { type: "interactive", title: "Khan Academy: Simplifying surds", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Worked surd simplification." }
+            { type: "interactive", title: "Khan Academy: Simplifying surds", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Worked surd simplification." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Powers, roots and standard form (Stage 9)", note: "Indices, roots and surds are covered in the Cambridge Stage 9 'Powers and roots' / standard form units.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "To simplify a surd you look for the largest perfect-square factor.", answer: true, explanation: "e.g. √72 = √36 × √2 = 6√2." },
@@ -440,7 +461,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Add, subtract and multiply surds.",
           resources: [
             { type: "interactive", title: "Simplifying Square Roots", provider: "Math is Fun", url: "https://www.mathsisfun.com/surds.html", note: "Adding, subtracting and multiplying surds." },
-            { type: "interactive", title: "Surds", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." }
+            { type: "interactive", title: "Surds", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Powers, roots and standard form (Stage 9)", note: "Indices, roots and surds are covered in the Cambridge Stage 9 'Powers and roots' / standard form units.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "√a + √b cannot generally be simplified to √(a+b).", answer: true, explanation: "e.g. √4 + √9 = 2 + 3 = 5, but √(4+9) = √13 ≠ 5." },
@@ -459,7 +481,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Rationalise the denominator.",
           resources: [
             { type: "interactive", title: "Conjugates", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/conjugate.html", note: "Removing surds from the denominator." },
-            { type: "interactive", title: "Rationalize the denominator", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." }
+            { type: "interactive", title: "Rationalize the denominator", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Powers, roots and standard form (Stage 9)", note: "Indices, roots and surds are covered in the Cambridge Stage 9 'Powers and roots' / standard form units.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "To rationalise a denominator of the form √n, multiply numerator and denominator by √n.", answer: true, explanation: "√n × √n = n, leaving an integer denominator." },
@@ -489,7 +512,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Factorise quadratic expressions.",
           resources: [
             { type: "interactive", title: "Factoring Quadratics", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/factoring-quadratics.html", note: "Into two brackets." },
-            { type: "interactive", title: "Factoring quadratics", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." }
+            { type: "interactive", title: "Factoring quadratics", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions and formulae (Stage 9)", note: "Expanding, factorising and manipulating expressions is covered in the Cambridge Stage 9 'Expressions and formulae' unit.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "To factorise x² + bx + c you find two numbers that multiply to c and add to b.", answer: true, explanation: "Those two numbers become the constants in the two brackets." },
@@ -508,7 +532,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Factorise by splitting the middle term.",
           resources: [
             { type: "interactive", title: "Splitting the middle term", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "For ax² + bx + c." },
-            { type: "interactive", title: "Factoring Quadratics", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/factoring-quadratics.html", note: "Splitting the middle term." }
+            { type: "interactive", title: "Factoring Quadratics", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/factoring-quadratics.html", note: "Splitting the middle term." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions and formulae (Stage 9)", note: "Expanding, factorising and manipulating expressions is covered in the Cambridge Stage 9 'Expressions and formulae' unit.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "When factorising ax² + bx + c, the product of the two numbers used to split bx equals a × c.", answer: true, explanation: "This is the ac method: find two numbers with product ac and sum b." },
@@ -527,7 +552,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Factorise special quadratics where b = 0 or c = 0.",
           resources: [
             { type: "interactive", title: "Difference of squares", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/factoring.html", note: "b = 0 and c = 0 cases." },
-            { type: "interactive", title: "Special factoring", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." }
+            { type: "interactive", title: "Special factoring", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions and formulae (Stage 9)", note: "Expanding, factorising and manipulating expressions is covered in the Cambridge Stage 9 'Expressions and formulae' unit.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "x² − 25 = (x + 5)(x − 5) is a difference of two squares.", answer: true, explanation: "a² − b² = (a+b)(a−b); here a = x, b = 5." },
@@ -546,7 +572,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Simplify algebraic fractions with algebraic denominators.",
           resources: [
             { type: "interactive", title: "Algebra Index", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/index.html", note: "Simplifying algebraic fractions." },
-            { type: "interactive", title: "Rational expressions", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." }
+            { type: "interactive", title: "Rational expressions", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions and formulae (Stage 9)", note: "Expanding, factorising and manipulating expressions is covered in the Cambridge Stage 9 'Expressions and formulae' unit.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "You simplify algebraic fractions by cancelling common factors.", answer: true, explanation: "Divide numerator and denominator by any shared factor." },
@@ -565,7 +592,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Form equations from situations.",
           resources: [
             { type: "interactive", title: "Linear Equations", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/linear-equations.html", note: "Turning situations into equations." },
-            { type: "interactive", title: "Khan Academy: Forming equations", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Worked word-problem equations." }
+            { type: "interactive", title: "Khan Academy: Forming equations", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Worked word-problem equations." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions and formulae (Stage 9)", note: "Expanding, factorising and manipulating expressions is covered in the Cambridge Stage 9 'Expressions and formulae' unit.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "To form an equation from a word problem, introduce a variable for the unknown quantity.", answer: true, explanation: "Naming the unknown is the first step." },
@@ -584,7 +612,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Solve linear equations.",
           resources: [
             { type: "interactive", title: "Solving equations", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/linear-equations.html", note: "Step-by-step solving." },
-            { type: "interactive", title: "Linear equations", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." }
+            { type: "interactive", title: "Linear equations", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions and formulae (Stage 9)", note: "Expanding, factorising and manipulating expressions is covered in the Cambridge Stage 9 'Expressions and formulae' unit.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "Whatever you do to one side of an equation, you must do to the other side.", answer: true, explanation: "This keeps the equation balanced." },
@@ -603,7 +632,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Change the subject of a formula.",
           resources: [
             { type: "interactive", title: "Algebra Index", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/index.html", note: "Rearranging formulae." },
-            { type: "interactive", title: "Rearranging formulas", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." }
+            { type: "interactive", title: "Rearranging formulas", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions and formulae (Stage 9)", note: "Expanding, factorising and manipulating expressions is covered in the Cambridge Stage 9 'Expressions and formulae' unit.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "Making x the subject means writing x = ... with no x on the right side.", answer: true, explanation: "The subject appears alone on one side." },
@@ -622,7 +652,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Transpose formulae and model multi-step problems.",
           resources: [
             { type: "interactive", title: "Algebra Index", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/index.html", note: "Rearranging multi-term formulae." },
-            { type: "interactive", title: "Algebraic modelling", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." }
+            { type: "interactive", title: "Algebraic modelling", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Expressions and formulae (Stage 9)", note: "Expanding, factorising and manipulating expressions is covered in the Cambridge Stage 9 'Expressions and formulae' unit.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "Transposition means rearranging a formula so a different variable is the subject.", answer: true, explanation: "The same algebraic steps apply — add, subtract, multiply, divide, square-root." },
@@ -652,7 +683,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Solve equations with variables on both sides.",
           resources: [
             { type: "interactive", title: "Variables on both sides", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Collecting terms." },
-            { type: "interactive", title: "Linear equations", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/linear-equations.html", note: "Solving step-by-step." }
+            { type: "interactive", title: "Linear equations", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/linear-equations.html", note: "Solving step-by-step." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Sequences, functions and graphs (Stage 9)", note: "Linear equations, functions and straight-line graphs are covered in the Cambridge Stage 9 functions and graphs units.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "When solving equations with variables on both sides, move all x-terms to one side first.", answer: true, explanation: "Collect x-terms on one side and constants on the other." },
@@ -671,7 +703,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Interpret slope as a rate of change.",
           resources: [
             { type: "interactive", title: "Slope (gradient)", provider: "Math is Fun", url: "https://www.mathsisfun.com/gradient.html", note: "Rate of change of a line." },
-            { type: "interactive", title: "Slope", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." }
+            { type: "interactive", title: "Slope", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Sequences, functions and graphs (Stage 9)", note: "Linear equations, functions and straight-line graphs are covered in the Cambridge Stage 9 functions and graphs units.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "A steeper line has a larger gradient.", answer: true, explanation: "Steeper = greater rate of change." },
@@ -690,7 +723,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Find slope from a table of values.",
           resources: [
             { type: "interactive", title: "Slope from a table", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Change in y over change in x." },
-            { type: "interactive", title: "Gradient", provider: "Math is Fun", url: "https://www.mathsisfun.com/gradient.html", note: "Rise over run." }
+            { type: "interactive", title: "Gradient", provider: "Math is Fun", url: "https://www.mathsisfun.com/gradient.html", note: "Rise over run." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Sequences, functions and graphs (Stage 9)", note: "Linear equations, functions and straight-line graphs are covered in the Cambridge Stage 9 functions and graphs units.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "Slope from a table is found by dividing the change in y by the change in x.", answer: true, explanation: "Slope = (y₂ − y₁)/(x₂ − x₁)." },
@@ -709,7 +743,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Find slope from a graph.",
           resources: [
             { type: "interactive", title: "Slope from two points", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Reading a line's gradient." },
-            { type: "interactive", title: "Graphing calculator", provider: "Desmos", url: "https://www.desmos.com/calculator", note: "Plot lines and see the slope." }
+            { type: "interactive", title: "Graphing calculator", provider: "Desmos", url: "https://www.desmos.com/calculator", note: "Plot lines and see the slope." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Sequences, functions and graphs (Stage 9)", note: "Linear equations, functions and straight-line graphs are covered in the Cambridge Stage 9 functions and graphs units.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "The slope of a line can be found from a graph using slope = rise ÷ run.", answer: true, explanation: "Pick two points on the line and calculate the vertical change over the horizontal change." },
@@ -728,7 +763,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Interpret slope as rise over run.",
           resources: [
             { type: "interactive", title: "Rise over run", provider: "Math is Fun", url: "https://www.mathsisfun.com/gradient.html", note: "The slope formula." },
-            { type: "interactive", title: "Slope", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." }
+            { type: "interactive", title: "Slope", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Sequences, functions and graphs (Stage 9)", note: "Linear equations, functions and straight-line graphs are covered in the Cambridge Stage 9 functions and graphs units.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "A horizontal line has a slope of 0.", answer: true, explanation: "There is no rise, so the slope is 0." },
@@ -747,7 +783,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Graph linear equations.",
           resources: [
             { type: "interactive", title: "Equation of a line (y = mx + c)", provider: "Math is Fun", url: "https://www.mathsisfun.com/equation_of_line.html", note: "Gradient and intercept." },
-            { type: "interactive", title: "Graphing calculator", provider: "Desmos", url: "https://www.desmos.com/calculator", note: "Plot lines instantly." }
+            { type: "interactive", title: "Graphing calculator", provider: "Desmos", url: "https://www.desmos.com/calculator", note: "Plot lines instantly." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Sequences, functions and graphs (Stage 9)", note: "Linear equations, functions and straight-line graphs are covered in the Cambridge Stage 9 functions and graphs units.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "In y = mx + c, m is the gradient and c is the y-intercept.", answer: true, explanation: "Standard form: y = mx + c." },
@@ -766,7 +803,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Use linear models.",
           resources: [
             { type: "interactive", title: "Linear models", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Real-life linear relationships." },
-            { type: "interactive", title: "Graphing calculator", provider: "Desmos", url: "https://www.desmos.com/calculator", note: "Model with lines." }
+            { type: "interactive", title: "Graphing calculator", provider: "Desmos", url: "https://www.desmos.com/calculator", note: "Model with lines." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Sequences, functions and graphs (Stage 9)", note: "Linear equations, functions and straight-line graphs are covered in the Cambridge Stage 9 functions and graphs units.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "A linear model has the form y = mx + c and produces a straight-line graph.", answer: true, explanation: "m is the rate of change and c is the starting value." },
@@ -785,7 +823,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Use function notation f(x).",
           resources: [
             { type: "interactive", title: "Function notation", provider: "Math is Fun", url: "https://www.mathsisfun.com/sets/function.html", note: "What f(x) means." },
-            { type: "interactive", title: "Functions", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." }
+            { type: "interactive", title: "Functions", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Sequences, functions and graphs (Stage 9)", note: "Linear equations, functions and straight-line graphs are covered in the Cambridge Stage 9 functions and graphs units.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "f(x) is read as 'f of x' and means the function f applied to input x.", answer: true, explanation: "Function notation shows which function is applied to which input." },
@@ -804,7 +843,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Evaluate functions.",
           resources: [
             { type: "interactive", title: "Evaluating functions", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Substituting inputs." },
-            { type: "interactive", title: "Functions", provider: "Math is Fun", url: "https://www.mathsisfun.com/sets/function.html", note: "Inputs and outputs." }
+            { type: "interactive", title: "Functions", provider: "Math is Fun", url: "https://www.mathsisfun.com/sets/function.html", note: "Inputs and outputs." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Sequences, functions and graphs (Stage 9)", note: "Linear equations, functions and straight-line graphs are covered in the Cambridge Stage 9 functions and graphs units.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "To evaluate a function, substitute the given value for x and simplify.", answer: true, explanation: "This is what 'evaluate' means — plug in and compute." },
@@ -823,7 +863,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Understand linearity and the definition of a function.",
           resources: [
             { type: "interactive", title: "What is a Function?", provider: "Math is Fun", url: "https://www.mathsisfun.com/sets/function.html", note: "One output per input." },
-            { type: "interactive", title: "Functions", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." }
+            { type: "interactive", title: "Functions", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Sequences, functions and graphs (Stage 9)", note: "Linear equations, functions and straight-line graphs are covered in the Cambridge Stage 9 functions and graphs units.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "A function gives exactly one output for each input.", answer: true, explanation: "That one-to-one mapping of inputs to outputs is the definition." },
@@ -853,7 +894,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Solve simultaneous equations by substitution.",
           resources: [
             { type: "interactive", title: "Systems by substitution", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/systems-linear-equations.html", note: "Substituting one equation into another." },
-            { type: "interactive", title: "Substitution method", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." }
+            { type: "interactive", title: "Substitution method", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Equations and inequalities (Stage 9, incl. simultaneous equations)", note: "Simultaneous equations are covered in the Cambridge Stage 9 'Equations and inequalities' unit.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "In substitution, you replace one variable in an equation using an expression from another equation.", answer: true, explanation: "This reduces the system to one equation with one unknown." },
@@ -872,7 +914,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Solve simultaneous equations by elimination.",
           resources: [
             { type: "interactive", title: "Systems by elimination", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/systems-linear-equations.html", note: "Adding or subtracting equations." },
-            { type: "interactive", title: "Elimination method", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." }
+            { type: "interactive", title: "Elimination method", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Equations and inequalities (Stage 9, incl. simultaneous equations)", note: "Simultaneous equations are covered in the Cambridge Stage 9 'Equations and inequalities' unit.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "In the elimination method, you add or subtract equations to remove one variable.", answer: true, explanation: "If coefficients match, adding/subtracting cancels that variable." },
@@ -891,7 +934,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Multiply equations by constants to eliminate a variable.",
           resources: [
             { type: "interactive", title: "Scaling equations", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Matching coefficients." },
-            { type: "interactive", title: "Systems of equations", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/systems-linear-equations.html", note: "Preparing to eliminate." }
+            { type: "interactive", title: "Systems of equations", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/systems-linear-equations.html", note: "Preparing to eliminate." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Equations and inequalities (Stage 9, incl. simultaneous equations)", note: "Simultaneous equations are covered in the Cambridge Stage 9 'Equations and inequalities' unit.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "You can multiply an entire equation by a constant without changing its solution.", answer: true, explanation: "Both sides scale equally, so the solution is unchanged." },
@@ -910,7 +954,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Solve systems graphically.",
           resources: [
             { type: "interactive", title: "Graphical solutions", provider: "Desmos", url: "https://www.desmos.com/calculator", note: "Plot both lines and find the crossing point." },
-            { type: "interactive", title: "Systems graphically", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." }
+            { type: "interactive", title: "Systems graphically", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Equations and inequalities (Stage 9, incl. simultaneous equations)", note: "Simultaneous equations are covered in the Cambridge Stage 9 'Equations and inequalities' unit.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "The graphical solution of two simultaneous equations is where their graphs intersect.", answer: true, explanation: "The intersection point satisfies both equations." },
@@ -929,7 +974,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Solve word problems with simultaneous equations.",
           resources: [
             { type: "interactive", title: "Systems word problems", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Forming two equations from a problem." },
-            { type: "interactive", title: "Systems of Linear Equations", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/systems-linear-equations.html", note: "Worked simultaneous-equation problems." }
+            { type: "interactive", title: "Systems of Linear Equations", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/systems-linear-equations.html", note: "Worked simultaneous-equation problems." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Equations and inequalities (Stage 9, incl. simultaneous equations)", note: "Simultaneous equations are covered in the Cambridge Stage 9 'Equations and inequalities' unit.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "To solve a simultaneous equations word problem, first write two equations using the given information.", answer: true, explanation: "Translating the problem into equations is the key first step." },
@@ -959,7 +1005,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Work with arithmetic sequences.",
           resources: [
             { type: "interactive", title: "Arithmetic Sequences", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/sequences-series.html", note: "Constant common difference." },
-            { type: "interactive", title: "Arithmetic sequences", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." }
+            { type: "interactive", title: "Arithmetic sequences", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Sequences and functions (Stage 9)", note: "Sequences and the nth term are covered in the Cambridge Stage 9 'Sequences and functions' unit.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "In an arithmetic sequence, the difference between consecutive terms is constant.", answer: true, explanation: "This constant is called the common difference." },
@@ -978,7 +1025,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Work with geometric sequences.",
           resources: [
             { type: "interactive", title: "Geometric Sequences", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/sequences-series.html", note: "Constant common ratio." },
-            { type: "interactive", title: "Geometric sequences", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." }
+            { type: "interactive", title: "Geometric sequences", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Practice." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Sequences and functions (Stage 9)", note: "Sequences and the nth term are covered in the Cambridge Stage 9 'Sequences and functions' unit.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "In a geometric sequence, each term is multiplied by the same constant ratio.", answer: true, explanation: "This constant is called the common ratio." },
@@ -997,7 +1045,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Find the rule (nth term) of a linear sequence.",
           resources: [
             { type: "interactive", title: "Sequences & Series", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/sequences-series.html", note: "Finding the nth-term formula." },
-            { type: "interactive", title: "Khan Academy: nth term", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Worked nth-term examples." }
+            { type: "interactive", title: "Khan Academy: nth term", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Worked nth-term examples." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Sequences and functions (Stage 9)", note: "Sequences and the nth term are covered in the Cambridge Stage 9 'Sequences and functions' unit.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "To find the nth term of a linear sequence, multiply n by the common difference and adjust.", answer: true, explanation: "nth term = d × n + (first term − d)." },
@@ -1016,7 +1065,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Generalise a pattern with an nth-term formula.",
           resources: [
             { type: "interactive", title: "Generalising patterns", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "From pattern to formula." },
-            { type: "interactive", title: "Sequences", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/sequences-series.html", note: "Rules and terms." }
+            { type: "interactive", title: "Sequences", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/sequences-series.html", note: "Rules and terms." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Sequences and functions (Stage 9)", note: "Sequences and the nth term are covered in the Cambridge Stage 9 'Sequences and functions' unit.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "The nth term formula lets you find any term without listing all the previous ones.", answer: true, explanation: "Just substitute the term number into the formula." },
@@ -1046,7 +1096,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Use scale drawings and map scales.",
           resources: [
             { type: "interactive", title: "Khan Academy: Scale drawings", provider: "Khan Academy", url: "https://www.khanacademy.org/math/geometry", note: "Real lengths from a scale." },
-            { type: "interactive", title: "Scale", provider: "Math is Fun", url: "https://www.mathsisfun.com/geometry/index.html", note: "Scale and ratio." }
+            { type: "interactive", title: "Scale", provider: "Math is Fun", url: "https://www.mathsisfun.com/geometry/index.html", note: "Scale and ratio." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Angles & Pythagoras; Transformations; Area and volume (Stage 9)", note: "Pythagoras' theorem, transformations, similarity and measures are covered in the Cambridge Stage 9 geometry units.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "A scale of 1:100 means 1 cm on the map represents 100 cm in real life.", answer: true, explanation: "The map/drawing is 100 times smaller than reality." },
@@ -1065,7 +1116,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Recognise transformations.",
           resources: [
             { type: "interactive", title: "Transformations", provider: "Math is Fun", url: "https://www.mathsisfun.com/geometry/transformations.html", note: "Translation, rotation, reflection, enlargement." },
-            { type: "interactive", title: "Transformations", provider: "Khan Academy", url: "https://www.khanacademy.org/math/geometry", note: "Practice." }
+            { type: "interactive", title: "Transformations", provider: "Khan Academy", url: "https://www.khanacademy.org/math/geometry", note: "Practice." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Angles & Pythagoras; Transformations; Area and volume (Stage 9)", note: "Pythagoras' theorem, transformations, similarity and measures are covered in the Cambridge Stage 9 geometry units.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Which of these is NOT a geometric transformation?", options: ["translation", "rotation", "reflection", "factorisation"], answer: 3, explanation: "Factorisation is an algebra operation, not a transformation." },
@@ -1084,7 +1136,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Apply rigid transformations.",
           resources: [
             { type: "interactive", title: "Rigid transformations", provider: "Khan Academy", url: "https://www.khanacademy.org/math/geometry", note: "Congruence-preserving moves." },
-            { type: "interactive", title: "Transformations", provider: "GeoGebra", url: "https://www.geogebra.org/geometry", note: "Explore interactively." }
+            { type: "interactive", title: "Transformations", provider: "GeoGebra", url: "https://www.geogebra.org/geometry", note: "Explore interactively." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Angles & Pythagoras; Transformations; Area and volume (Stage 9)", note: "Pythagoras' theorem, transformations, similarity and measures are covered in the Cambridge Stage 9 geometry units.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "medium", q: "Rigid transformations (translation, rotation, reflection) preserve size and shape.", answer: true, explanation: "Only the position/orientation changes." },
@@ -1103,7 +1156,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Work with dilations (enlargements).",
           resources: [
             { type: "interactive", title: "Resizing (dilation)", provider: "Math is Fun", url: "https://www.mathsisfun.com/geometry/resizing.html", note: "Scale factor enlargements." },
-            { type: "interactive", title: "Dilations", provider: "Khan Academy", url: "https://www.khanacademy.org/math/geometry", note: "Practice." }
+            { type: "interactive", title: "Dilations", provider: "Khan Academy", url: "https://www.khanacademy.org/math/geometry", note: "Practice." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Angles & Pythagoras; Transformations; Area and volume (Stage 9)", note: "Pythagoras' theorem, transformations, similarity and measures are covered in the Cambridge Stage 9 geometry units.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "easy", q: "A shape is enlarged by scale factor 3. A 4 cm side becomes how many cm?", answer: "12", explanation: "4 × 3 = 12 cm." },
@@ -1122,7 +1176,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Understand similarity.",
           resources: [
             { type: "interactive", title: "Similar shapes", provider: "Math is Fun", url: "https://www.mathsisfun.com/geometry/similar.html", note: "Same shape, scaled size." },
-            { type: "interactive", title: "Similarity", provider: "Khan Academy", url: "https://www.khanacademy.org/math/geometry", note: "Practice." }
+            { type: "interactive", title: "Similarity", provider: "Khan Academy", url: "https://www.khanacademy.org/math/geometry", note: "Practice." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Angles & Pythagoras; Transformations; Area and volume (Stage 9)", note: "Pythagoras' theorem, transformations, similarity and measures are covered in the Cambridge Stage 9 geometry units.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "Similar shapes have the same shape but may differ in size, with equal corresponding angles.", answer: true, explanation: "Angles match and sides are in the same ratio." },
@@ -1141,7 +1196,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Find the effect of scaling on perimeter and area.",
           resources: [
             { type: "interactive", title: "Similar Shapes", provider: "Math is Fun", url: "https://www.mathsisfun.com/geometry/similar.html", note: "How area scales with length." },
-            { type: "interactive", title: "Similar shapes & area", provider: "Khan Academy", url: "https://www.khanacademy.org/math/geometry", note: "Practice." }
+            { type: "interactive", title: "Similar shapes & area", provider: "Khan Academy", url: "https://www.khanacademy.org/math/geometry", note: "Practice." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Angles & Pythagoras; Transformations; Area and volume (Stage 9)", note: "Pythagoras' theorem, transformations, similarity and measures are covered in the Cambridge Stage 9 geometry units.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "hard", q: "If a shape is enlarged by scale factor 2, its area increases by a factor of:", options: ["4", "2", "8", "1/2"], answer: 0, explanation: "Area scales by the square of the length factor: 2² = 4." },
@@ -1160,7 +1216,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Use algebra within geometry.",
           resources: [
             { type: "interactive", title: "Angles & algebra", provider: "Khan Academy", url: "https://www.khanacademy.org/math/geometry", note: "Forming equations from angle/length facts." },
-            { type: "interactive", title: "Geometry", provider: "Math is Fun", url: "https://www.mathsisfun.com/geometry/index.html", note: "Angle rules." }
+            { type: "interactive", title: "Geometry", provider: "Math is Fun", url: "https://www.mathsisfun.com/geometry/index.html", note: "Angle rules." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Angles & Pythagoras; Transformations; Area and volume (Stage 9)", note: "Pythagoras' theorem, transformations, similarity and measures are covered in the Cambridge Stage 9 geometry units.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "medium", q: "Angles on a straight line sum to 180°. They are x and 2x. Find x.", answer: "60", explanation: "x + 2x = 180 → 3x = 180 → x = 60." },
@@ -1180,7 +1237,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "video", title: "Properties of a right-angle triangle (4 min)", provider: "📚 School's Library · YouTube", url: "https://www.youtube.com/watch?v=PORfKtT7rU0", note: "The right triangle — the shape the Pythagorean theorem is built on." },
             { type: "interactive", title: "Pythagorean theorem", provider: "Math is Fun", url: "https://www.mathsisfun.com/geometry/pythagorean-theorem.html", note: "a² + b² = c²." },
-            { type: "interactive", title: "Pythagorean theorem", provider: "Khan Academy", url: "https://www.khanacademy.org/math/geometry", note: "Practice." }
+            { type: "interactive", title: "Pythagorean theorem", provider: "Khan Academy", url: "https://www.khanacademy.org/math/geometry", note: "Practice." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Angles & Pythagoras; Transformations; Area and volume (Stage 9)", note: "Pythagoras' theorem, transformations, similarity and measures are covered in the Cambridge Stage 9 geometry units.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "easy", q: "In a right triangle, a² + b² = c², where c is the hypotenuse.", answer: true, explanation: "This is the Pythagorean theorem." },
@@ -1199,7 +1257,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Find the hypotenuse of a right triangle.",
           resources: [
             { type: "interactive", title: "Finding the hypotenuse", provider: "Math is Fun", url: "https://www.mathsisfun.com/geometry/pythagorean-theorem.html", note: "c = √(a² + b²)." },
-            { type: "interactive", title: "Khan Academy: Pythagorean theorem", provider: "Khan Academy", url: "https://www.khanacademy.org/math/geometry", note: "Worked hypotenuse examples." }
+            { type: "interactive", title: "Khan Academy: Pythagorean theorem", provider: "Khan Academy", url: "https://www.khanacademy.org/math/geometry", note: "Worked hypotenuse examples." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Angles & Pythagoras; Transformations; Area and volume (Stage 9)", note: "Pythagoras' theorem, transformations, similarity and measures are covered in the Cambridge Stage 9 geometry units.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "easy", q: "A right triangle has legs 3 and 4. What is the hypotenuse?", answer: "5", explanation: "√(3² + 4²) = √25 = 5." },
@@ -1218,7 +1277,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Find a missing leg of a right triangle.",
           resources: [
             { type: "interactive", title: "Finding a leg", provider: "Khan Academy", url: "https://www.khanacademy.org/math/geometry", note: "Rearranging Pythagoras." },
-            { type: "interactive", title: "Pythagorean theorem", provider: "Math is Fun", url: "https://www.mathsisfun.com/geometry/pythagorean-theorem.html", note: "Solving for a leg." }
+            { type: "interactive", title: "Pythagorean theorem", provider: "Math is Fun", url: "https://www.mathsisfun.com/geometry/pythagorean-theorem.html", note: "Solving for a leg." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Angles & Pythagoras; Transformations; Area and volume (Stage 9)", note: "Pythagoras' theorem, transformations, similarity and measures are covered in the Cambridge Stage 9 geometry units.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "medium", q: "A right triangle has hypotenuse 13 and one leg 5. What is the other leg?", answer: "12", explanation: "√(13² − 5²) = √(169 − 25) = √144 = 12." },
@@ -1237,7 +1297,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Apply coordinate geometry.",
           resources: [
             { type: "interactive", title: "Distance & midpoint", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/distance-2-points.html", note: "Distance and midpoint formulas." },
-            { type: "interactive", title: "Coordinate geometry", provider: "Khan Academy", url: "https://www.khanacademy.org/math/geometry", note: "Practice." }
+            { type: "interactive", title: "Coordinate geometry", provider: "Khan Academy", url: "https://www.khanacademy.org/math/geometry", note: "Practice." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Angles & Pythagoras; Transformations; Area and volume (Stage 9)", note: "Pythagoras' theorem, transformations, similarity and measures are covered in the Cambridge Stage 9 geometry units.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "medium", q: "What is the distance between (0, 0) and (3, 4)?", answer: "5", explanation: "√(3² + 4²) = √25 = 5." },
@@ -1256,7 +1317,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Solve ratio segment / partition problems.",
           resources: [
             { type: "interactive", title: "Dividing a line in a ratio", provider: "Khan Academy", url: "https://www.khanacademy.org/math/geometry", note: "Partitioning segments." },
-            { type: "interactive", title: "Ratios", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/ratio.html", note: "Dividing a segment in a ratio." }
+            { type: "interactive", title: "Ratios", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/ratio.html", note: "Dividing a segment in a ratio." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Angles & Pythagoras; Transformations; Area and volume (Stage 9)", note: "Pythagoras' theorem, transformations, similarity and measures are covered in the Cambridge Stage 9 geometry units.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "medium", q: "A line from 0 to 12 is divided in the ratio 1:3. The dividing point is at?", answer: "3", explanation: "4 parts over length 12 = 3 each; 1 part from 0 is at 3." },
@@ -1286,7 +1348,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Find compound probability.",
           resources: [
             { type: "interactive", title: "Compound probability", provider: "Math is Fun", url: "https://www.mathsisfun.com/data/probability-events-conditional.html", note: "Probability of combined events." },
-            { type: "interactive", title: "Compound events", provider: "Khan Academy", url: "https://www.khanacademy.org/math/statistics-probability", note: "Practice." }
+            { type: "interactive", title: "Compound events", provider: "Khan Academy", url: "https://www.khanacademy.org/math/statistics-probability", note: "Practice." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Statistics; Probability (Stage 9)", note: "Averages, bivariate data, scatter graphs and probability are covered in the Cambridge Stage 9 statistics and probability units.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "P(two heads on two coin flips) = ?", options: ["1/4", "1/2", "1/3", "2/3"], answer: 0, explanation: "1/2 × 1/2 = 1/4." },
@@ -1305,7 +1368,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Review and extend probability.",
           resources: [
             { type: "interactive", title: "Probability", provider: "Math is Fun", url: "https://www.mathsisfun.com/data/probability.html", note: "Probability scale and outcomes." },
-            { type: "interactive", title: "Probability", provider: "Khan Academy", url: "https://www.khanacademy.org/math/statistics-probability", note: "Practice." }
+            { type: "interactive", title: "Probability", provider: "Khan Academy", url: "https://www.khanacademy.org/math/statistics-probability", note: "Practice." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Statistics; Probability (Stage 9)", note: "Averages, bivariate data, scatter graphs and probability are covered in the Cambridge Stage 9 statistics and probability units.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "easy", q: "A bag has 4 red and 6 blue balls. P(blue) as a decimal?", answer: "0.6", explanation: "6 out of 10 = 0.6." },
@@ -1324,7 +1388,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Work with bivariate data.",
           resources: [
             { type: "interactive", title: "Bivariate data", provider: "Khan Academy", url: "https://www.khanacademy.org/math/statistics-probability", note: "Two variables together." },
-            { type: "interactive", title: "Data", provider: "Math is Fun", url: "https://www.mathsisfun.com/data/index.html", note: "Paired data." }
+            { type: "interactive", title: "Data", provider: "Math is Fun", url: "https://www.mathsisfun.com/data/index.html", note: "Paired data." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Statistics; Probability (Stage 9)", note: "Averages, bivariate data, scatter graphs and probability are covered in the Cambridge Stage 9 statistics and probability units.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "Bivariate data involves:", options: ["two variables", "one variable", "no variables", "categories only"], answer: 0, explanation: "'Bi' means two — two variables." },
@@ -1343,7 +1408,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Read and create scatter plots.",
           resources: [
             { type: "interactive", title: "Scatter Plots", provider: "Math is Fun", url: "https://www.mathsisfun.com/data/scatter-xy-plots.html", note: "Plotting paired data." },
-            { type: "interactive", title: "Scatter plots", provider: "Khan Academy", url: "https://www.khanacademy.org/math/statistics-probability", note: "Practice." }
+            { type: "interactive", title: "Scatter plots", provider: "Khan Academy", url: "https://www.khanacademy.org/math/statistics-probability", note: "Practice." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Statistics; Probability (Stage 9)", note: "Averages, bivariate data, scatter graphs and probability are covered in the Cambridge Stage 9 statistics and probability units.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "A scatter plot is used to show:", options: ["the relationship between two variables", "a single value", "parts of a whole", "time only"], answer: 0, explanation: "It reveals how two variables relate." },
@@ -1362,7 +1428,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Describe correlation.",
           resources: [
             { type: "interactive", title: "Correlation", provider: "Math is Fun", url: "https://www.mathsisfun.com/data/correlation.html", note: "Positive, negative and no correlation." },
-            { type: "interactive", title: "Correlation", provider: "Khan Academy", url: "https://www.khanacademy.org/math/statistics-probability", note: "Practice." }
+            { type: "interactive", title: "Correlation", provider: "Khan Academy", url: "https://www.khanacademy.org/math/statistics-probability", note: "Practice." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Statistics; Probability (Stage 9)", note: "Averages, bivariate data, scatter graphs and probability are covered in the Cambridge Stage 9 statistics and probability units.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "Points going from bottom-left to top-right show:", options: ["positive correlation", "negative correlation", "no correlation", "an outlier"], answer: 0, explanation: "Both variables increase together — positive correlation." },
@@ -1381,7 +1448,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Model data with a line of best fit.",
           resources: [
             { type: "interactive", title: "Line of best fit", provider: "Math is Fun", url: "https://www.mathsisfun.com/data/least-squares-regression.html", note: "Trend lines for data." },
-            { type: "interactive", title: "Trend lines", provider: "Desmos", url: "https://www.desmos.com/calculator", note: "Fit a line to data." }
+            { type: "interactive", title: "Trend lines", provider: "Desmos", url: "https://www.desmos.com/calculator", note: "Fit a line to data." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Statistics; Probability (Stage 9)", note: "Averages, bivariate data, scatter graphs and probability are covered in the Cambridge Stage 9 statistics and probability units.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "medium", q: "A line of best fit is used to:", options: ["model a trend in scattered data", "connect every point", "show the mean only", "list the data"], answer: 0, explanation: "It summarises the overall trend." },
@@ -1400,7 +1468,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Judge sampling and reliability.",
           resources: [
             { type: "interactive", title: "Sampling & reliability", provider: "Khan Academy", url: "https://www.khanacademy.org/math/statistics-probability", note: "Fair, reliable samples." },
-            { type: "interactive", title: "Data Index", provider: "Math is Fun", url: "https://www.mathsisfun.com/data/index.html", note: "Bias and reliability in data." }
+            { type: "interactive", title: "Data Index", provider: "Math is Fun", url: "https://www.mathsisfun.com/data/index.html", note: "Bias and reliability in data." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Statistics; Probability (Stage 9)", note: "Averages, bivariate data, scatter graphs and probability are covered in the Cambridge Stage 9 statistics and probability units.", url: "" }
           ],
           quiz: [
             { type: "tf", difficulty: "medium", q: "A larger, well-chosen sample generally gives more reliable results.", answer: true, explanation: "It better represents the population." },
@@ -1419,7 +1488,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Interpret statistics.",
           resources: [
             { type: "interactive", title: "Averages & range", provider: "Math is Fun", url: "https://www.mathsisfun.com/data/central-measures.html", note: "Summarising data." },
-            { type: "interactive", title: "Interpreting data", provider: "Khan Academy", url: "https://www.khanacademy.org/math/statistics-probability", note: "Practice." }
+            { type: "interactive", title: "Interpreting data", provider: "Khan Academy", url: "https://www.khanacademy.org/math/statistics-probability", note: "Practice." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Units: Statistics; Probability (Stage 9)", note: "Averages, bivariate data, scatter graphs and probability are covered in the Cambridge Stage 9 statistics and probability units.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "easy", q: "Find the range of 4, 9, 2, 7.", answer: "7", explanation: "Range = largest − smallest = 9 − 2 = 7." },
@@ -1449,7 +1519,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Revise mixed Grade 6–8 skills (spiral review).",
           resources: [
             { type: "interactive", title: "Mixed practice", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-eighth-grade-math", note: "Spiral review across topics." },
-            { type: "interactive", title: "Math is Fun: Number skills", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/index.html", note: "Mixed number and algebra practice." }
+            { type: "interactive", title: "Math is Fun: Number skills", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/index.html", note: "Mixed number and algebra practice." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Cambridge Lower Secondary Mathematics 9 (review across all units)", note: "Capstone/review objectives draw together topics from across the Cambridge Stage 9 course.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "easy", q: "Work out 25% of 200.", answer: "50", explanation: "200 ÷ 4 = 50." },
@@ -1468,7 +1539,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Bridge core skills before Grade 8 work.",
           resources: [
             { type: "interactive", title: "Pre-algebra review", provider: "Khan Academy", url: "https://www.khanacademy.org/math/pre-algebra", note: "Foundation skills." },
-            { type: "interactive", title: "Number & algebra", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/index.html", note: "Review topics." }
+            { type: "interactive", title: "Number & algebra", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/index.html", note: "Review topics." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Cambridge Lower Secondary Mathematics 9 (review across all units)", note: "Capstone/review objectives draw together topics from across the Cambridge Stage 9 course.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "easy", q: "Evaluate 3² + 4².", answer: "25", explanation: "9 + 16 = 25." },
@@ -1487,7 +1559,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Review exponents, linear equations and systems.",
           resources: [
             { type: "interactive", title: "Algebra review", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Exponents, equations and systems." },
-            { type: "interactive", title: "Algebra", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/index.html", note: "Review." }
+            { type: "interactive", title: "Algebra", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/index.html", note: "Review." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Cambridge Lower Secondary Mathematics 9 (review across all units)", note: "Capstone/review objectives draw together topics from across the Cambridge Stage 9 course.", url: "" }
           ],
           quiz: [
             { type: "mcq", difficulty: "easy", q: "x³ × x² = ?", options: ["x⁵", "x⁶", "x¹", "2x⁵"], answer: 0, explanation: "Add the powers: 3 + 2 = 5." },
@@ -1506,7 +1579,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Review geometry and data.",
           resources: [
             { type: "interactive", title: "Geometry review", provider: "Khan Academy", url: "https://www.khanacademy.org/math/geometry", note: "Key geometry skills." },
-            { type: "interactive", title: "Data review", provider: "Math is Fun", url: "https://www.mathsisfun.com/data/index.html", note: "Averages and graphs." }
+            { type: "interactive", title: "Data review", provider: "Math is Fun", url: "https://www.mathsisfun.com/data/index.html", note: "Averages and graphs." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Cambridge Lower Secondary Mathematics 9 (review across all units)", note: "Capstone/review objectives draw together topics from across the Cambridge Stage 9 course.", url: "" }
           ],
           quiz: [
             { type: "numeric", difficulty: "medium", q: "A right triangle has legs 9 and 12. What is the hypotenuse?", answer: "15", explanation: "√(81 + 144) = √225 = 15." },
@@ -1525,7 +1599,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Solve multi-step modelling problems.",
           resources: [
             { type: "interactive", title: "Modelling problems", provider: "Khan Academy", url: "https://www.khanacademy.org/math/algebra", note: "Real-world multi-step problems." },
-            { type: "interactive", title: "Algebra Index", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/index.html", note: "Multi-step modelling problems." }
+            { type: "interactive", title: "Algebra Index", provider: "Math is Fun", url: "https://www.mathsisfun.com/algebra/index.html", note: "Multi-step modelling problems." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Cambridge Lower Secondary Mathematics 9 (review across all units)", note: "Capstone/review objectives draw together topics from across the Cambridge Stage 9 course.", url: "" }
           ],
           quiz: [
             { type: "short", difficulty: "hard", q: "A gym charges £20 joining fee plus £15 per month. Write a formula for cost C after m months and find the cost after 6 months.", answer: "C = 20 + 15m; for m = 6, C = 20 + 90 = £110.", explanation: "Fixed fee plus a monthly rate." },
@@ -1545,7 +1620,8 @@ window.CURRICULUM_MATH.grades.push({
           resources: [
             { type: "reading", title: "The math myth — you don't need a 'math brain'", provider: "📚 School's Library · Big Think", url: "https://bigthink.com/hard-science/math-myth/", note: "Why anyone can improve at maths with practice — a confidence boost before a test." },
             { type: "interactive", title: "Khan Academy: Review & test prep", provider: "Khan Academy", url: "https://www.khanacademy.org/math/cc-eighth-grade-math", note: "Revision and review." },
-            { type: "interactive", title: "Math is Fun: Practice index", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/index.html", note: "Revision across topics." }
+            { type: "interactive", title: "Math is Fun: Practice index", provider: "Math is Fun", url: "https://www.mathsisfun.com/numbers/index.html", note: "Revision across topics." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Cambridge Lower Secondary Mathematics 9 (review across all units)", note: "Capstone/review objectives draw together topics from across the Cambridge Stage 9 course.", url: "" }
           ],
           quiz: [
             { type: "short", difficulty: "medium", q: "Give two good strategies for a maths test.", answer: "Examples: read each question carefully, show your working, manage your time, attempt easier questions first, and check answers at the end.", explanation: "Good strategy improves accuracy and earns method marks." },
@@ -1564,7 +1640,8 @@ window.CURRICULUM_MATH.grades.push({
         { text: "Plan and carry out a final data / modelling project.",
           resources: [
             { type: "interactive", title: "Statistical projects", provider: "Khan Academy", url: "https://www.khanacademy.org/math/statistics-probability", note: "The data-handling cycle." },
-            { type: "interactive", title: "Data handling", provider: "Math is Fun", url: "https://www.mathsisfun.com/data/index.html", note: "Collecting and presenting data." }
+            { type: "interactive", title: "Data handling", provider: "Math is Fun", url: "https://www.mathsisfun.com/data/index.html", note: "Collecting and presenting data." },
+            { type: "book", title: "Cambridge Lower Secondary Mathematics Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Cambridge Lower Secondary Mathematics 9 (review across all units)", note: "Capstone/review objectives draw together topics from across the Cambridge Stage 9 course.", url: "" }
           ],
           quiz: [
             { type: "short", difficulty: "hard", q: "Outline the steps of a data project, from question to conclusion.", answer: "Pose a clear question; collect/sample data fairly; organise and display it (tables and graphs); analyse it (averages, correlation); then draw and justify a conclusion, noting limitations.", explanation: "This is the data-handling cycle." },
