@@ -307,7 +307,7 @@
     const cards = (o.resources || []).map(resourceCard).join("");
     return `
       ${objNav(t, g, +i, "resources")}
-      <div id="obj-progress" class="obj-progress"></div>
+      <div class="obj-controls"><div id="obj-progress" class="obj-progress"></div><span id="obj-bookmark"></span></div>
       <h2 class="section-title">📚 Resources for this objective</h2>
       <p class="obj-intro">Free, high-quality resources to build this specific skill. Mix watching, reading and interacting.</p>
       <div class="res-list">${cards || `<p class="empty">No resources yet for this objective.</p>`}</div>`;
@@ -321,7 +321,7 @@
     if (!o) return `<p class="empty">Objective not found.</p>`;
     return `
       ${objNav(t, g, +i, "quiz")}
-      <div id="obj-progress" class="obj-progress"></div>
+      <div class="obj-controls"><div id="obj-progress" class="obj-progress"></div><span id="obj-bookmark"></span></div>
       <h2 class="section-title">📝 Quiz for this objective</h2>
       ${renderQuizShell(o.quiz || [])}`;
   }
@@ -699,6 +699,7 @@
     }
     if (CLASS.meta.count) html += `<a href="#/library">Library</a>`;
     if (window.Search) html += `<a href="#/search">🔍 Search</a>`;
+    if (window.Bookmarks) html += `<a href="#/saved">⭐ Saved</a>`;
     if (window.Progress) html += `<a href="#/progress">My Progress</a>`;
     nav.innerHTML = html;
   }
@@ -743,11 +744,15 @@
             const o = found.topic.objectives[+idx];
             if (o) mountQuiz(o.quiz || [], { s: SUBJ.id, t: rest[1], i: +idx });
             if (window.Progress) window.Progress.decorateObj(SUBJ.id, rest[1], +idx);
+            if (window.Bookmarks) window.Bookmarks.decorateObj(SUBJ.id, rest[1], +idx);
             if (window.Admin) window.Admin.decorate("quiz", SUBJ.id, rest[1], +idx);
           } else {
             main.innerHTML = viewObjResources(rest[1], idx);
+            const ro = found.topic.objectives[+idx];
             if (window.Progress) window.Progress.decorateObj(SUBJ.id, rest[1], +idx);
+            if (window.Bookmarks) window.Bookmarks.decorateObj(SUBJ.id, rest[1], +idx);
             if (window.Admin) window.Admin.decorate("resources", SUBJ.id, rest[1], +idx);
+            if (window.Bookmarks && ro) window.Bookmarks.decorateResources(SUBJ.id, rest[1], +idx, ro.resources || []);
           }
         } else if (rest[2] === "worksheet" && window.Worksheet) {
           main.innerHTML = window.Worksheet.page(SUBJ, found.topic, found.grade);
@@ -807,6 +812,16 @@
       main.innerHTML = window.Search.page(parts[1] ? decodeURIComponent(parts[1]) : "");
       window.Search.mount();
       setActiveNav(hash);
+      return;
+    }
+
+    // hub-level Saved / bookmarks (spans all subjects)
+    if (parts[0] === "saved" && window.Bookmarks) {
+      renderNav(null);
+      main.innerHTML = window.Bookmarks.page();
+      window.Bookmarks.mount();
+      setActiveNav(hash);
+      main.focus({ preventScroll: true });
       return;
     }
 

@@ -464,6 +464,29 @@ textarea.short-input:focus { outline: none; border-color: var(--brand); }
 .sr-ctx { font-size: .8rem; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .sr-go { flex: 0 0 auto; color: var(--muted); font-size: 1.1rem; }
 
+/* ===== Bookmarks / favorites ===== */
+.obj-controls { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; margin: .2rem 0 1rem; }
+.obj-controls .obj-progress { margin: 0; }
+.bm-star { display: inline-flex; align-items: center; gap: .4rem; cursor: pointer; font: inherit; font-weight: 600;
+  padding: .5rem .85rem; border-radius: 999px; border: 1.5px solid var(--line); background: var(--surface); color: var(--ink-soft);
+  transition: all .15s ease; }
+.bm-star:hover { border-color: var(--warn); color: var(--warn); }
+.bm-star .bm-ico { font-size: 1.1rem; line-height: 1; color: var(--warn); }
+.bm-star.on { background: #fff8ec; border-color: var(--warn); color: #92600c; }
+/* star tucked into the corner of a resource card */
+.res-card { position: relative; }
+.bm-card-star { position: absolute; top: .5rem; right: .5rem; }
+.bm-card-star .bm-star { padding: .25rem .45rem; border-radius: 8px; border-color: transparent; background: transparent; }
+.bm-card-star .bm-star .bm-ico { font-size: 1.15rem; }
+.bm-card-star .bm-star:hover { background: #fff8ec; }
+/* saved page resource rows */
+.bm-res-row { gap: .9rem; }
+.bm-res-link { display: flex; flex-direction: column; text-decoration: none; color: var(--ink); }
+.bm-res-link:hover { text-decoration: none; }
+.bm-remove { flex: 0 0 auto; cursor: pointer; border: none; background: var(--surface-2); color: var(--muted);
+  width: 28px; height: 28px; border-radius: 50%; font-size: .9rem; }
+.bm-remove:hover { background: #fdecec; color: var(--bad); }
+
 /* ===== Printable worksheet ===== */
 .topic-actions { margin: 0 0 1rem; }
 .ws-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; margin-bottom: 1.2rem;
