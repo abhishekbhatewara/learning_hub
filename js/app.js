@@ -21,6 +21,11 @@
   }
   function gradeOf(id) { return SUBJ.grades.find(g => g.id === id); }
   function esc(s) { return String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
+  // Small progress bar for a card, only once the learner has done something there.
+  function cardProg(stats, color) {
+    if (!window.Progress || !stats || !stats.done) return "";
+    return `<div class="card-prog">${window.Progress.bar(stats, color)}</div>`;
+  }
   function countByType(quiz) {
     const auto = quiz.filter(q => ["mcq", "tf", "numeric", "match"].includes(q.type)).length;
     return { total: quiz.length, auto, written: quiz.length - auto };
@@ -69,6 +74,7 @@
         <span class="card-eyebrow" style="color:${s.color}">${esc(s.icon || "")} Subject</span>
         <h3>${esc(s.name)}</h3>
         <p class="card-desc">${esc(s.blurb || "")}</p>
+        ${cardProg(window.Progress && window.Progress.subjectStats(s), s.color)}
         <div class="card-footer"><span class="chip">${s.grades.length} grade${s.grades.length === 1 ? "" : "s"} · ${topics} topics</span><span class="go-link">Open →</span></div>
       </a>`;
     }).join("");
@@ -107,6 +113,7 @@
         <span class="card-eyebrow" style="color:${g.color}">${esc(g.name)}</span>
         <h3>${esc(g.tagline)}</h3>
         <p class="card-desc">${esc(g.blurb)}</p>
+        ${cardProg(window.Progress && window.Progress.gradeStats(SUBJ.id, g), g.color)}
         <div class="card-footer">
           <span class="chip">${g.topics.length} topics</span>
           <span class="go-link">Explore →</span>
@@ -172,6 +179,7 @@
           <span>📚 ${allResources(t).length} resources</span>
           <span>📝 ${c.total} questions</span>
         </div>
+        ${cardProg(window.Progress && window.Progress.topicStats(SUBJ.id, t), g.color)}
         <div class="card-footer"><span class="chip subject">${esc(g.name)}</span><span class="go-link">Open →</span></div>
       </a>`;
     }).join("");
@@ -230,11 +238,12 @@
       const nRes = (o.resources || []).length;
       const nQuiz = (o.quiz || []).length;
       return `
-        <div class="obj-card">
+        <div class="obj-card" data-obj="${i}">
           <div class="obj-card-head">
             <span class="obj-num" style="background:${g.color}">${i + 1}</span>
             <p class="obj-text">${esc(o.text)}</p>
           </div>
+          <div class="obj-prog-badge"></div>
           <div class="obj-links">
             <a class="obj-link res" href="${sb()}/topic/${t.id}/obj/${i}/resources">📚 Resources <span class="obj-link-count">${nRes}</span></a>
             <a class="obj-link quiz" href="${sb()}/topic/${t.id}/obj/${i}/quiz">📝 Quiz <span class="obj-link-count">${nQuiz}</span></a>
@@ -257,6 +266,7 @@
       <p class="topic-summary">${esc(t.summary)}</p>
       <p class="obj-intro">This topic has <strong>${t.objectives.length} learning objectives</strong>. Each one has its own
         resources and its own quick quiz — open whichever you want from the links below.</p>
+      <div id="topic-progress"></div>
       <div class="obj-hub">${objCards}</div>
       ${classroomBlock}
       ${renderConnections(t)}
@@ -291,6 +301,7 @@
     const cards = (o.resources || []).map(resourceCard).join("");
     return `
       ${objNav(t, g, +i, "resources")}
+      <div id="obj-progress" class="obj-progress"></div>
       <h2 class="section-title">📚 Resources for this objective</h2>
       <p class="obj-intro">Free, high-quality resources to build this specific skill. Mix watching, reading and interacting.</p>
       <div class="res-list">${cards || `<p class="empty">No resources yet for this objective.</p>`}</div>`;
@@ -304,6 +315,7 @@
     if (!o) return `<p class="empty">Objective not found.</p>`;
     return `
       ${objNav(t, g, +i, "quiz")}
+      <div id="obj-progress" class="obj-progress"></div>
       <h2 class="section-title">📝 Quiz for this objective</h2>
       ${renderQuizShell(o.quiz || [])}`;
   }
@@ -485,11 +497,11 @@
     </div>`;
   }
 
-  function mountQuiz(quiz) {
+  function mountQuiz(quiz, ctx) {
     const list = document.getElementById("quiz-list");
     if (!list) return;
     const c = countByType(quiz);
-    const state = { correct: 0, answered: 0, checkedAuto: 0, autoTotal: c.auto };
+    const state = { correct: 0, answered: 0, checkedAuto: 0, autoTotal: c.auto, ctx: ctx || null };
 
     quiz.forEach((q, i) => list.appendChild(buildQuestion(q, i, state)));
     updateProgress(state);
@@ -513,6 +525,12 @@
     s.innerHTML = `<div class="score">${state.correct} / ${state.autoTotal} <small>(${pct}%)</small></div>
       <p>${msg}</p><p class="muted">Auto-graded questions only. Remember to self-check your written answers against the model answers.</p>`;
     s.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    if (state.ctx && window.Progress) {
+      window.Progress.recordQuiz(state.ctx.s, state.ctx.t, state.ctx.i, state.correct, state.autoTotal);
+      if (pct >= window.Progress.PASS) {
+        s.innerHTML += `<p class="prog-passed">✅ Objective marked complete — see it on <a href="#/progress">My Progress</a>.</p>`;
+      }
+    }
   }
 
   const KIND_LABEL = { mcq: "Multiple choice", tf: "True / False", numeric: "Numeric", short: "Short answer", long: "Long answer", match: "Match" };
@@ -674,6 +692,7 @@
       HUB.subjects.forEach(s => { html += `<a href="#/${s.id}">${esc(s.name)}</a>`; });
     }
     if (CLASS.meta.count) html += `<a href="#/library">Library</a>`;
+    if (window.Progress) html += `<a href="#/progress">My Progress</a>`;
     nav.innerHTML = html;
   }
 
@@ -715,14 +734,17 @@
           if (rest[4] === "quiz") {
             main.innerHTML = viewObjQuiz(rest[1], idx);
             const o = found.topic.objectives[+idx];
-            if (o) mountQuiz(o.quiz || []);
+            if (o) mountQuiz(o.quiz || [], { s: SUBJ.id, t: rest[1], i: +idx });
+            if (window.Progress) window.Progress.decorateObj(SUBJ.id, rest[1], +idx);
             if (window.Admin) window.Admin.decorate("quiz", SUBJ.id, rest[1], +idx);
           } else {
             main.innerHTML = viewObjResources(rest[1], idx);
+            if (window.Progress) window.Progress.decorateObj(SUBJ.id, rest[1], +idx);
             if (window.Admin) window.Admin.decorate("resources", SUBJ.id, rest[1], +idx);
           }
         } else {
           main.innerHTML = viewTopicHub(rest[1]);
+          if (window.Progress) window.Progress.decorateHub(SUBJ.id, found.topic, found.grade.color);
         }
       } else {
         const tab = rest[2] || "objectives";
@@ -764,6 +786,16 @@
       renderNav(null);
       main.innerHTML = viewLibrary();
       mountLibrary();
+      setActiveNav(hash);
+      main.focus({ preventScroll: true });
+      return;
+    }
+
+    // hub-level My Progress (spans all subjects)
+    if (parts[0] === "progress" && window.Progress) {
+      renderNav(null);
+      main.innerHTML = window.Progress.dashboard();
+      window.Progress.mountDashboard();
       setActiveNav(hash);
       main.focus({ preventScroll: true });
       return;
