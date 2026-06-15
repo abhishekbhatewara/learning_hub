@@ -90,6 +90,9 @@
       <section class="hero">
         <h1>Learning Hub</h1>
         <p class="lede">A free study companion for Grades 6–8 — clear learning objectives, hand-picked free resources and self-marking quizzes for every objective, plus a concept mindmap. Choose a subject to begin.</p>
+        ${window.Search ? `<form class="home-search" onsubmit="location.hash='#/search/'+encodeURIComponent(this.q.value.trim());return false;">
+          <input name="q" class="search-box" type="search" placeholder="🔍 Search topics, objectives & resources across all subjects…" />
+        </form>` : ""}
       </section>
       <h2 class="section-title">Subjects <span class="count">${HUB.subjects.length} live${planned.length ? " · " + planned.length + " coming" : ""}</span></h2>
       <div class="grid cols-3">${cards}${soon}</div>
@@ -692,6 +695,7 @@
       HUB.subjects.forEach(s => { html += `<a href="#/${s.id}">${esc(s.name)}</a>`; });
     }
     if (CLASS.meta.count) html += `<a href="#/library">Library</a>`;
+    if (window.Search) html += `<a href="#/search">🔍 Search</a>`;
     if (window.Progress) html += `<a href="#/progress">My Progress</a>`;
     nav.innerHTML = html;
   }
@@ -788,6 +792,15 @@
       mountLibrary();
       setActiveNav(hash);
       main.focus({ preventScroll: true });
+      return;
+    }
+
+    // hub-level Search (spans all subjects)
+    if (parts[0] === "search" && window.Search) {
+      renderNav(null);
+      main.innerHTML = window.Search.page(parts[1] ? decodeURIComponent(parts[1]) : "");
+      window.Search.mount();
+      setActiveNav(hash);
       return;
     }
 
