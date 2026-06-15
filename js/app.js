@@ -269,6 +269,9 @@
       <p class="topic-summary">${esc(t.summary)}</p>
       <p class="obj-intro">This topic has <strong>${t.objectives.length} learning objectives</strong>. Each one has its own
         resources and its own quick quiz — open whichever you want from the links below.</p>
+      <div class="topic-actions">
+        <a class="btn btn-ghost" href="${sb()}/topic/${t.id}/worksheet">🖨️ Print worksheet</a>
+      </div>
       <div id="topic-progress"></div>
       <div class="obj-hub">${objCards}</div>
       ${classroomBlock}
@@ -746,6 +749,9 @@
             if (window.Progress) window.Progress.decorateObj(SUBJ.id, rest[1], +idx);
             if (window.Admin) window.Admin.decorate("resources", SUBJ.id, rest[1], +idx);
           }
+        } else if (rest[2] === "worksheet" && window.Worksheet) {
+          main.innerHTML = window.Worksheet.page(SUBJ, found.topic, found.grade);
+          window.Worksheet.mount();
         } else {
           main.innerHTML = viewTopicHub(rest[1]);
           if (window.Progress) window.Progress.decorateHub(SUBJ.id, found.topic, found.grade.color);
