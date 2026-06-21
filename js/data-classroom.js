@@ -2,11 +2,11 @@
 window.CLASSROOM = {
  "meta": {
   "class_name": "Wolves",
-  "count": 292,
+  "count": 301,
   "modules": [
    {
     "name": "Science",
-    "count": 90
+    "count": 99
    },
    {
     "name": "Math",
@@ -3057,6 +3057,96 @@ window.CLASSROOM = {
    "module": "Civics & Governance",
    "subject": "Civics & Governance",
    "source": "economist.com",
+   "topics": []
+  },
+  {
+   "id": "nhm-1",
+   "title": "Nature & wildlife quizzes (British wildlife, dinosaurs & more)",
+   "kind": "reading",
+   "url": "https://www.nhm.ac.uk/discover/quizzes.html",
+   "module": "Science",
+   "subject": "Biology",
+   "source": "🏛️ Natural History Museum",
+   "topics": []
+  },
+  {
+   "id": "nhm-2",
+   "title": "Virtual Museum: explore from home — 360° tours, Hope the blue whale & Nature Live talks",
+   "kind": "video",
+   "url": "https://www.nhm.ac.uk/visit/virtual-museum.html",
+   "module": "Science",
+   "subject": "Nature",
+   "source": "🏛️ Natural History Museum",
+   "topics": []
+  },
+  {
+   "id": "nhm-3",
+   "title": "Nature activities to try outdoors",
+   "kind": "reading",
+   "url": "https://www.nhm.ac.uk/discover/nature-activities-for-summer.html",
+   "module": "Science",
+   "subject": "Nature",
+   "source": "🏛️ Natural History Museum",
+   "topics": []
+  },
+  {
+   "id": "nhm-4",
+   "title": "Indoor science experiments & crafts",
+   "kind": "reading",
+   "url": "https://www.nhm.ac.uk/take-part/activities-for-all/indoor-science-and-crafts.html",
+   "module": "Science",
+   "subject": "Science / Experiment",
+   "source": "🏛️ Natural History Museum",
+   "topics": []
+  },
+  {
+   "id": "nhm-5",
+   "title": "Make a hatching dinosaur egg (hands-on activity)",
+   "kind": "reading",
+   "url": "https://www.nhm.ac.uk/discover/make-a-hatching-dinosaur-egg.html",
+   "module": "Science",
+   "subject": "Earth & Space",
+   "source": "🏛️ Natural History Museum",
+   "topics": []
+  },
+  {
+   "id": "nhm-6",
+   "title": "Free colouring pages — animals & nature",
+   "kind": "reading",
+   "url": "https://www.nhm.ac.uk/take-part/activities-for-all/colouring-pages-for-kids-and-adults.html",
+   "module": "Science",
+   "subject": "Nature",
+   "source": "🏛️ Natural History Museum",
+   "topics": []
+  },
+  {
+   "id": "nhm-7",
+   "title": "Schools teaching-resources hub (free lesson resources, ages 5–14)",
+   "kind": "reading",
+   "url": "https://www.nhm.ac.uk/schools/teaching-resources.html",
+   "module": "Science",
+   "subject": "Science",
+   "source": "🏛️ Natural History Museum",
+   "topics": []
+  },
+  {
+   "id": "nhm-8",
+   "title": "Make your own fossil (hands-on activity)",
+   "kind": "reading",
+   "url": "https://www.nhm.ac.uk/schools/teaching-resources/key-stage-1/dinosaurs-and-fossils/make-your-own-fossil.html",
+   "module": "Science",
+   "subject": "Earth & Space",
+   "source": "🏛️ Natural History Museum",
+   "topics": []
+  },
+  {
+   "id": "nhm-9",
+   "title": "Adventures with Dippy — dinosaur learning series (KS2)",
+   "kind": "reading",
+   "url": "https://www.nhm.ac.uk/schools/teaching-resources/key-stage-2/rocks-fossils-and-dinosaurs/adventures-with-dippy-learning-resources.html",
+   "module": "Science",
+   "subject": "Earth & Space",
+   "source": "🏛️ Natural History Museum",
    "topics": []
   }
  ]
