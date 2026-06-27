@@ -470,6 +470,8 @@ textarea.short-input:focus { outline: none; border-color: var(--brand); }
   padding: 1.4rem 1.5rem; margin-bottom: 1rem; box-shadow: var(--shadow); }
 .family-card h3 { margin-top: 0; }
 .family-head { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap; }
+.fam-signout-wrap { display: flex; align-items: center; gap: .6rem; flex-wrap: wrap; justify-content: flex-end; }
+.fam-stay-hint { font-size: .8rem; max-width: 230px; line-height: 1.35; text-align: right; }
 .family-form { display: flex; gap: .6rem; flex-wrap: wrap; margin-top: .6rem; }
 .family-form input { flex: 1; min-width: 200px; padding: .7rem .9rem; font: inherit; border: 1.5px solid var(--line);
   border-radius: var(--radius-sm); background: var(--surface); color: var(--ink); }

@@ -212,7 +212,10 @@
     container.innerHTML = shell(`
       <div class="family-head">
         <div><span class="role-chip parent">Parent</span> <strong>${esc(state.profile.full_name || state.user.email)}</strong></div>
-        <button class="btn btn-ghost" id="fam-signout" type="button">Sign out</button>
+        <div class="fam-signout-wrap">
+          <span class="muted fam-stay-hint">No need to sign out — just close the tab and you'll stay signed in.</span>
+          <button class="btn btn-ghost btn-sm" id="fam-signout" type="button">Sign out</button>
+        </div>
       </div>
       <div class="family-card">
         <h3>Your learners</h3>
@@ -252,7 +255,10 @@
     container.innerHTML = shell(`
       <div class="family-head">
         <div><span class="role-chip child">Learner</span> <strong>${esc(state.profile.full_name || state.user.email)}</strong></div>
-        <button class="btn btn-ghost" id="fam-signout" type="button">Sign out</button>
+        <div class="fam-signout-wrap">
+          <span class="muted fam-stay-hint">No need to sign out — just close the tab and you'll stay signed in.</span>
+          <button class="btn btn-ghost btn-sm" id="fam-signout" type="button">Sign out</button>
+        </div>
       </div>
       <div class="family-card">
         <h3>Parent invites</h3>
