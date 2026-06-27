@@ -22,9 +22,9 @@
     loading = import("https://esm.sh/@supabase/supabase-js@2")
       .then(({ createClient }) => {
         SB = createClient(CFG.url, CFG.anonKey, {
-          // PKCE => the magic-link callback returns ?code=... in the QUERY string
-          // (not the #hash), so it never collides with our hash router.
-          auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true, flowType: "pkce" }
+          // We handle the magic-link callback ourselves (see handleCallback) so
+          // it works whether the token comes back in the #hash or a ?code= query.
+          auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: false }
         });
         SB.auth.onAuthStateChange(() => { refresh(); });
         return SB;
@@ -44,9 +44,9 @@
     if (!state.user) state.view = "auth";
     else if (!state.profile) state.view = "onboard";
     else state.view = state.profile.role === "parent" ? "parent" : "child";
-    // after a magic-link return we land on the base URL; once signed in, send
-    // the user into the Parents area (the router will then mount + render).
-    if (cameFromCallback && state.user) {
+    // after a magic-link return we land on the base URL; route into the Parents
+    // area either way — signed in (parent/child view) or failed (auth + error).
+    if (cameFromCallback) {
       cameFromCallback = false;
       if (location.hash !== "#/parents") { location.hash = "#/parents"; return; }
     }
@@ -293,10 +293,35 @@
   function isAuthCallback() {
     return /[?&]code=/.test(location.search) || /access_token=|refresh_token=/.test(location.hash);
   }
-  if (isAuthCallback()) {
+  async function handleCallback() {
     cameFromCallback = true;
-    init().then(() => refresh()).catch(() => { cameFromCallback = false; });
+    try {
+      await init();
+      const h = (location.hash || "").replace(/^#/, "");
+      if (/access_token=/.test(h)) {
+        // implicit flow: tokens delivered in the hash
+        const p = new URLSearchParams(h);
+        const access_token = p.get("access_token"), refresh_token = p.get("refresh_token");
+        if (access_token && refresh_token) {
+          const { error } = await SB.auth.setSession({ access_token, refresh_token });
+          if (error) throw error;
+        }
+      } else {
+        // PKCE flow: ?code=... in the query
+        const code = new URLSearchParams(location.search).get("code");
+        if (code) {
+          const { error } = await SB.auth.exchangeCodeForSession(code);
+          if (error) throw error;
+        }
+      }
+    } catch (e) {
+      state.msg = "⚠️ Sign-in failed: " + (e.message || e);
+    }
+    // strip the auth params from the URL, then route into Parents
+    history.replaceState(null, "", location.href.split("#")[0].split("?")[0]);
+    refresh();
   }
+  if (isAuthCallback()) handleCallback();
 
   window.Family = { mount };
 })();
