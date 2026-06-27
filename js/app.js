@@ -701,6 +701,7 @@
     if (window.Search) html += `<a href="#/search">🔍 Search</a>`;
     if (window.Bookmarks) html += `<a href="#/saved">⭐ Saved</a>`;
     if (window.Progress) html += `<a href="#/progress">My Progress</a>`;
+    if (window.Family) html += `<a href="#/parents">👪 Parents</a>`;
     nav.innerHTML = html;
   }
 
@@ -811,6 +812,15 @@
       renderNav(null);
       main.innerHTML = window.Search.page(parts[1] ? decodeURIComponent(parts[1]) : "");
       window.Search.mount();
+      setActiveNav(hash);
+      return;
+    }
+
+    // hub-level Parents area (Supabase-backed accounts & assignments)
+    if (parts[0] === "parents" && window.Family) {
+      renderNav(null);
+      main.innerHTML = `<div id="family-root"></div>`;
+      window.Family.mount(document.getElementById("family-root"));
       setActiveNav(hash);
       return;
     }

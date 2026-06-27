@@ -464,6 +464,36 @@ textarea.short-input:focus { outline: none; border-color: var(--brand); }
 .sr-ctx { font-size: .8rem; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .sr-go { flex: 0 0 auto; color: var(--muted); font-size: 1.1rem; }
 
+/* ===== Family / Parents area ===== */
+.family-wrap { max-width: 640px; margin: 0 auto; }
+.family-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-sm);
+  padding: 1.4rem 1.5rem; margin-bottom: 1rem; box-shadow: var(--shadow); }
+.family-card h3 { margin-top: 0; }
+.family-head { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap; }
+.family-form { display: flex; gap: .6rem; flex-wrap: wrap; margin-top: .6rem; }
+.family-form input { flex: 1; min-width: 200px; padding: .7rem .9rem; font: inherit; border: 1.5px solid var(--line);
+  border-radius: var(--radius-sm); background: var(--surface); color: var(--ink); }
+.family-form input:focus { outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px rgba(59,91,219,.15); }
+.family-form-col { display: flex; flex-direction: column; gap: 1rem; margin-top: .6rem; }
+.family-field { display: flex; flex-direction: column; gap: .3rem; font-weight: 600; color: var(--ink-soft); }
+.family-field input { padding: .7rem .9rem; font: inherit; border: 1.5px solid var(--line); border-radius: var(--radius-sm); }
+.family-msg { margin-top: .8rem; padding: .6rem .8rem; border-radius: var(--radius-sm); background: var(--surface-2); color: var(--ink-soft); font-size: .92rem; }
+.role-pick { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; }
+.role-btn { display: flex; flex-direction: column; gap: .25rem; align-items: flex-start; text-align: left; cursor: pointer;
+  padding: 1rem; border: 1.5px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); font: inherit; transition: all .15s ease; }
+.role-btn:hover { border-color: var(--brand); background: var(--surface-2); }
+.role-emoji { font-size: 1.6rem; }
+.role-chip { font-size: .72rem; font-weight: 700; padding: .2rem .55rem; border-radius: 999px; }
+.role-chip.parent { background: #eef2ff; color: #3b5bdb; }
+.role-chip.child { background: #e8f7ee; color: #15803d; }
+.link-row { display: flex; align-items: center; gap: .8rem; padding: .6rem .2rem; border-bottom: 1px solid var(--line); }
+.link-row:last-child { border-bottom: none; }
+.link-name { flex: 1; font-weight: 500; }
+.link-status { font-size: .78rem; font-weight: 700; padding: .15rem .55rem; border-radius: 999px; }
+.link-status.accepted { background: #e8f7ee; color: #15803d; }
+.link-status.pending { background: #fff7ed; color: #b45309; }
+.btn-sm { padding: .35rem .8rem; font-size: .85rem; }
+
 /* ===== Bookmarks / favorites ===== */
 .obj-controls { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; margin: .2rem 0 1rem; }
 .obj-controls .obj-progress { margin: 0; }
