@@ -785,6 +785,12 @@
 
   function route() {
     const hash = location.hash || "#/";
+    // auth callback from a magic-link email (implicit flow leaves tokens in the
+    // hash); family.js processes it and redirects. Don't show "page not found".
+    if (/access_token=|refresh_token=/.test(hash)) {
+      main.innerHTML = `<p class="empty">Signing you in…</p>`;
+      return;
+    }
     const parts = hash.replace(/^#\//, "").split("/").filter(Boolean);
     window.scrollTo(0, 0);
     closeMobileNav();

@@ -10,6 +10,7 @@
   let SB = null;          // supabase client (once loaded)
   let loading = null;     // promise guard for init
   let container = null;   // where we render
+  let cameFromCallback = false; // true while handling a magic-link return
   let state = { user: null, profile: null, view: "loading", msg: "", pendingEmail: "" };
 
   function esc(x) { return String(x == null ? "" : x).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
@@ -21,7 +22,9 @@
     loading = import("https://esm.sh/@supabase/supabase-js@2")
       .then(({ createClient }) => {
         SB = createClient(CFG.url, CFG.anonKey, {
-          auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true }
+          // PKCE => the magic-link callback returns ?code=... in the QUERY string
+          // (not the #hash), so it never collides with our hash router.
+          auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true, flowType: "pkce" }
         });
         SB.auth.onAuthStateChange(() => { refresh(); });
         return SB;
@@ -41,6 +44,12 @@
     if (!state.user) state.view = "auth";
     else if (!state.profile) state.view = "onboard";
     else state.view = state.profile.role === "parent" ? "parent" : "child";
+    // after a magic-link return we land on the base URL; once signed in, send
+    // the user into the Parents area (the router will then mount + render).
+    if (cameFromCallback && state.user) {
+      cameFromCallback = false;
+      if (location.hash !== "#/parents") { location.hash = "#/parents"; return; }
+    }
     render();
   }
 
@@ -275,6 +284,18 @@
     state.view = "loading"; render();
     try { await init(); await refresh(); }
     catch (e) { container.innerHTML = shell(`<p class="empty">Couldn't load the accounts service. ${esc(e.message || e)}</p>`); }
+  }
+
+  // If the page was opened from a magic-link email, the URL carries the auth
+  // callback (PKCE: ?code=... in the query; legacy/implicit: #access_token=...).
+  // Eagerly load the client so detectSessionInUrl consumes it, then refresh()
+  // routes the now-signed-in user to #/parents.
+  function isAuthCallback() {
+    return /[?&]code=/.test(location.search) || /access_token=|refresh_token=/.test(location.hash);
+  }
+  if (isAuthCallback()) {
+    cameFromCallback = true;
+    init().then(() => refresh()).catch(() => { cameFromCallback = false; });
   }
 
   window.Family = { mount };
