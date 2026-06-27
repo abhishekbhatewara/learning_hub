@@ -101,7 +101,9 @@
     const { error } = await SB.from("family_links").insert({
       parent_id: state.user.id, child_email: email.trim().toLowerCase(), status: "pending"
     });
-    state.msg = error ? "⚠️ " + error.message : "✓ Invitation added. Ask your child to sign in with that email and accept.";
+    const link = location.href.split("#")[0] + "#/parents";
+    state.msg = error ? "⚠️ " + error.message
+      : `✓ Saved — but no email is sent automatically. Send your child this link, and have them sign in with ${email.trim()}, choose “I'm a learner”, and tap Accept:  ${link}`;
     renderParent();
   }
   async function revokeLink(id) {
@@ -216,7 +218,7 @@
         <h3>Your learners</h3>
         <div id="fam-children"><p class="muted">Loading…</p></div>
         <h4 style="margin-top:1.2rem">Invite a child</h4>
-        <p class="muted">Enter your child's email. They sign in with that email and tap “Accept”, then you can assign them work.</p>
+        <p class="muted">Enter your child's email. <strong>No email is sent automatically</strong> — you'll get a link to share. Your child opens it, signs in with that email, picks “I'm a learner”, and taps Accept. Then you can assign them work.</p>
         <form id="fam-invite" class="family-form">
           <input id="fam-invite-email" type="email" required placeholder="child@example.com" />
           <button class="btn btn-primary" type="submit">Send invite →</button>
