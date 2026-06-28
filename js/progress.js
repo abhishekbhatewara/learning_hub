@@ -22,6 +22,12 @@
   function isDone(s, t, i) { return !!db().done[k(s, t, i)]; }
   function quizOf(s, t, i) { return db().quiz[k(s, t, i)] || null; }
 
+  // ---- visited resources (lightweight; keyed by URL) ----
+  const VKEY = "lh_visited_v1";
+  function visitedDb() { try { return JSON.parse(localStorage.getItem(VKEY)) || {}; } catch (e) { return {}; } }
+  function isVisited(url) { return !!visitedDb()[url]; }
+  function markVisited(url) { if (!url) return; const d = visitedDb(); if (!d[url]) { d[url] = 1; try { localStorage.setItem(VKEY, JSON.stringify(d)); } catch (e) {} } }
+
   // ---- writes ----
   function setDone(s, t, i, val) {
     const d = db();
@@ -202,7 +208,7 @@
   }
 
   window.Progress = {
-    isDone, quizOf, setDone, toggleDone, recordQuiz, reset, onChange,
+    isDone, quizOf, isVisited, markVisited, setDone, toggleDone, recordQuiz, reset, onChange,
     topicStats, gradeStats, subjectStats, hubStats, pct, bar,
     decorateObj, decorateHub, dashboard, mountDashboard, PASS
   };

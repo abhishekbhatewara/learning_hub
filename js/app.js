@@ -279,23 +279,96 @@
       <div class="back-top"><a class="btn btn-ghost" href="${sb()}/grade/${g.id}">← Back to ${esc(g.name)}</a></div>`;
   }
 
+  // ---- objective "workspace" helpers ----
+  const RES_META = {
+    video: { icon: "▶", label: "Video" },
+    reading: { icon: "📄", label: "Read" },
+    interactive: { icon: "🧪", label: "Interactive" },
+    practice: { icon: "✏️", label: "Practice" },
+    podcast: { icon: "🎧", label: "Podcast" }
+  };
+  function parseMins(title) { const m = (title || "").match(/\((\d+)\s*(?:minutes|mins|min)\)/i); return m ? +m[1] : null; }
+  function resMeta(r) {
+    const base = RES_META[r.type] || RES_META.reading;
+    const mins = parseMins(r.title);
+    let dur = mins ? mins + " min" : (r.type === "reading" ? "5 min read" : r.type === "interactive" || r.type === "practice" ? "~10 min" : r.type === "podcast" ? "listen" : "video");
+    return { icon: base.icon, label: base.label, dur };
+  }
+  function estMinutes(o) {
+    let m = 0;
+    (o.resources || []).forEach(r => {
+      if (r.type === "book") return;
+      const mm = parseMins(r.title);
+      if (mm) m += mm;
+      else if (r.type === "video") m += 6;
+      else if (r.type === "reading") m += 5;
+      else if (r.type === "interactive" || r.type === "practice") m += 10;
+      else if (r.type === "podcast") m += 15;
+    });
+    m += Math.round((o.quiz || []).length * 0.75);
+    return Math.max(5, Math.round(m / 5) * 5);
+  }
+  function objStatus(tId, i) {
+    const P = window.Progress;
+    if (P && P.isDone(SUBJ.id, tId, i)) return { key: "completed", label: "✓ Completed" };
+    if (P && P.quizOf(SUBJ.id, tId, i)) return { key: "progress", label: "● In progress" };
+    return { key: "new", label: "Not started" };
+  }
+  function objRail(t, curI) {
+    return `<div class="ws-rail" aria-label="Objectives in this topic">${t.objectives.map((o, i) => {
+      const st = objStatus(t.id, i);
+      const cls = i === curI ? "cur" : st.key === "completed" ? "done" : "";
+      const mark = st.key === "completed" && i !== curI ? "✓" : (i + 1);
+      return `<a class="ws-dot ${cls}" href="${sb()}/topic/${t.id}/obj/${i}/resources" title="Objective ${i + 1}${st.key === "completed" ? " · completed" : ""}">${mark}</a>`;
+    }).join("")}</div>`;
+  }
+
+  // workspace header shared by the resources & quiz views
   function objNav(t, g, i, here) {
     const o = t.objectives[i];
-    const otherKey = here === "resources" ? "quiz" : "resources";
-    const otherLabel = here === "resources" ? "📝 Take the quiz for this objective" : "📚 See resources for this objective";
+    const st = objStatus(t.id, i);
+    const nRes = (o.resources || []).length, nQuiz = (o.quiz || []).length, mins = estMinutes(o);
+    const last = t.objectives.length - 1;
+    const pn = (idx, label) => idx < 0 || idx > last
+      ? `<span class="ws-pn disabled">${label}</span>`
+      : `<a class="ws-pn" href="${sb()}/topic/${t.id}/obj/${idx}/${here}">${label}</a>`;
     return `
       <nav class="breadcrumb">${crumbBase()} › <a href="${sb()}/grade/${g.id}">${esc(g.name)}</a> › <a href="${sb()}/topic/${t.id}">${esc(t.title)}</a> › <span>Objective ${i + 1}</span></nav>
-      <div class="obj-detail-head">
-        <span class="obj-num lg" style="background:${g.color}">${i + 1}</span>
-        <div>
-          <span class="card-eyebrow" style="color:${g.color}">${esc(g.name)} · ${esc(t.title)} · Objective ${i + 1} of ${t.objectives.length}</span>
-          <h1>${esc(o.text)}</h1>
+      <section class="ws-head" style="--accent:${g.color}">
+        <div class="ws-head-row">
+          <span class="obj-num lg" style="background:${g.color}">${i + 1}</span>
+          <div class="ws-head-main">
+            <span class="card-eyebrow" style="color:${g.color}">${esc(g.name)} · ${esc(t.title)}</span>
+            <div class="ws-head-status">
+              <span class="ws-pos">Objective ${i + 1} of ${t.objectives.length}</span>
+              <span class="mastery-chip ${st.key}">${st.label}</span>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="obj-switch">
-        <a class="btn btn-ghost" href="${sb()}/topic/${t.id}/obj/${i}/${otherKey}">${otherLabel} →</a>
-        <a class="btn btn-ghost" href="${sb()}/topic/${t.id}">← All objectives</a>
-      </div>`;
+        <h1 class="ws-obj-title">${esc(o.text)}</h1>
+        ${objRail(t, i)}
+        <div class="ws-meta"><span>⏱ ~${mins} min</span><span>📚 ${nRes} resource${nRes === 1 ? "" : "s"}</span><span>📝 ${nQuiz} question${nQuiz === 1 ? "" : "s"}</span></div>
+        <div class="ws-prevnext">${pn(i - 1, "← Previous")}<a class="ws-pn mid" href="${sb()}/topic/${t.id}">All objectives</a>${pn(i + 1, "Next →")}</div>
+      </section>`;
+  }
+
+  // the two-step "Learn → Quiz" guided flow
+  function objFlow(t, i, here) {
+    const quizDone = objStatus(t.id, i).key === "completed";
+    const step = (key, n, title, sub) =>
+      `<a class="ws-step ${here === key ? "active" : ""} ${key === "quiz" && quizDone ? "done" : ""}" href="${sb()}/topic/${t.id}/obj/${i}/${key}">
+        <span class="ws-step-n">${key === "quiz" && quizDone ? "✓" : n}</span>
+        <span class="ws-step-tx"><strong>${title}</strong><small>${sub}</small></span></a>`;
+    return `<div class="ws-flow">${step("resources", "1", "Learn", "Watch, read &amp; explore")}<span class="ws-flow-arrow">→</span>${step("quiz", "2", "Quiz", "Check your understanding")}</div>`;
+  }
+
+  // a subtle secondary-actions row (mark-complete + save + hint slots)
+  function objControls() {
+    return `<div class="obj-controls">
+      <div id="obj-progress" class="obj-progress"></div>
+      <span id="obj-bookmark"></span>
+      <span class="obj-controls-hint">Passing the quiz (≥70%) completes this automatically — or mark it done yourself.</span>
+    </div>`;
   }
 
   function viewObjResources(topicId, i) {
@@ -305,12 +378,18 @@
     const o = t.objectives[+i];
     if (!o) return `<p class="empty">Objective not found.</p>`;
     const cards = (o.resources || []).map(resourceCard).join("");
-    return `
+    return `<div class="objview" style="--accent:${g.color}">
       ${objNav(t, g, +i, "resources")}
-      <div class="obj-controls"><div id="obj-progress" class="obj-progress"></div><span id="obj-bookmark"></span></div>
-      <h2 class="section-title">📚 Resources for this objective</h2>
-      <p class="obj-intro">Free, high-quality resources to build this specific skill. Mix watching, reading and interacting.</p>
-      <div class="res-list">${cards || `<p class="empty">No resources yet for this objective.</p>`}</div>`;
+      ${objFlow(t, +i, "resources")}
+      ${objControls()}
+      <h2 class="section-title ws-step1">Step 1 · Learn</h2>
+      <p class="obj-intro">Work through these free resources to build this skill — mix watching, reading and interacting. Open each one; we'll tick them as you go.</p>
+      <div class="res-list">${cards || `<p class="empty">No resources yet for this objective.</p>`}</div>
+      <div class="ws-cta">
+        <p class="ws-cta-lead">Feel ready? Check your understanding.</p>
+        <a class="btn btn-primary btn-lg" href="${sb()}/topic/${t.id}/obj/${+i}/quiz">📝 Take the quiz for this objective →</a>
+      </div>
+    </div>`;
   }
 
   function viewObjQuiz(topicId, i) {
@@ -319,11 +398,13 @@
     const { topic: t, grade: g } = found;
     const o = t.objectives[+i];
     if (!o) return `<p class="empty">Objective not found.</p>`;
-    return `
+    return `<div class="objview" style="--accent:${g.color}">
       ${objNav(t, g, +i, "quiz")}
-      <div class="obj-controls"><div id="obj-progress" class="obj-progress"></div><span id="obj-bookmark"></span></div>
-      <h2 class="section-title">📝 Quiz for this objective</h2>
-      ${renderQuizShell(o.quiz || [])}`;
+      ${objFlow(t, +i, "quiz")}
+      ${objControls()}
+      <h2 class="section-title ws-step2">Step 2 · Quiz</h2>
+      ${renderQuizShell(o.quiz || [])}
+    </div>`;
   }
 
   function renderTabContent(t, g, tab) {
@@ -360,13 +441,19 @@
           ${link}
         </div>`;
     }
+    const meta = resMeta(r);
+    const visited = !!(window.Progress && window.Progress.isVisited && window.Progress.isVisited(r.url));
     return `
-      <div class="res-card">
-        <span class="res-type ${r.type}">${r.type}</span>
+      <div class="res-card${visited ? " visited" : ""}">
+        <div class="res-card-head">
+          <span class="res-type ${r.type}">${meta.icon} ${meta.label}</span>
+          <span class="res-dur">${esc(meta.dur)}</span>
+          <span class="res-visited">✓ opened</span>
+        </div>
         <h4>${esc(r.title)}</h4>
         <div class="res-provider">${esc(r.provider)}</div>
-        <div class="res-note">${esc(r.note || "")}</div>
-        <a class="res-open" href="${esc(r.url)}" target="_blank" rel="noopener noreferrer">Open resource ↗</a>
+        ${r.note ? `<div class="res-note">${esc(r.note)}</div>` : ""}
+        <a class="res-open" href="${esc(r.url)}" target="_blank" rel="noopener noreferrer" data-visit="${esc(r.url)}">Open ↗</a>
       </div>`;
   }
 
@@ -761,6 +848,7 @@
     navSubject = subject;
     const nav = document.getElementById("main-nav");
     if (!nav) return;
+    // primary: where the student is studying
     let html = `<a href="#/">Subjects</a>`;
     if (subject) {
       subject.grades.forEach(g => { html += `<a href="#/${subject.id}/grade/${g.id}">${esc(g.name)}</a>`; });
@@ -768,15 +856,17 @@
     } else {
       HUB.subjects.forEach(s => { html += `<a href="#/${s.id}">${esc(s.name)}</a>`; });
     }
-    if (CLASS.meta.count) html += `<a href="#/library">Library</a>`;
-    if (window.Search) html += `<a href="#/search">🔍 Search</a>`;
-    if (window.Bookmarks) html += `<a href="#/saved">⭐ Saved</a>`;
-    if (window.Progress) html += `<a href="#/progress">My Progress</a>`;
+    // utilities: grouped + visually de-emphasised so they don't compete
+    let util = "";
+    if (window.Search) util += `<a href="#/search" title="Search">🔍 Search</a>`;
+    if (CLASS.meta.count) util += `<a href="#/library">Library</a>`;
+    if (window.Bookmarks) util += `<a href="#/saved" title="Saved">⭐ Saved</a>`;
+    if (window.Progress) util += `<a href="#/progress">My Progress</a>`;
     if (window.Family) {
       const famLabel = (window.Family.navInfo && window.Family.navInfo().label) || "👪 Parents";
-      html += `<a href="#/parents">${famLabel}</a>`;
+      util += `<a href="#/parents">${famLabel}</a>`;
     }
-    nav.innerHTML = html;
+    nav.innerHTML = html + (util ? `<span class="nav-sep" aria-hidden="true"></span><span class="nav-util">${util}</span>` : "");
   }
 
   function setActiveNav(hash) {
@@ -957,6 +1047,14 @@
   // when admin-added resources arrive, re-render the current view (except the
   // stateful Parents area) so they show up without a manual refresh
   window.addEventListener("lh-resources-loaded", () => { if (!location.hash.startsWith("#/parents")) route(); });
+  // mark a resource "opened" when the student clicks through (delegated)
+  main.addEventListener("click", e => {
+    const a = e.target.closest("a[data-visit]");
+    if (!a) return;
+    if (window.Progress && window.Progress.markVisited) window.Progress.markVisited(a.dataset.visit);
+    const card = a.closest(".res-card"); if (card) card.classList.add("visited");
+  });
+
   window.addEventListener("hashchange", route);
   window.addEventListener("DOMContentLoaded", route);
   if (document.readyState !== "loading") route();
