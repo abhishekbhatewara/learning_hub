@@ -500,6 +500,11 @@
       </div>
       <div id="quiz-list"></div>
       <div class="quiz-summary" id="quiz-summary"></div>
+      <div class="quiz-finish" id="quiz-finish" hidden>
+        <button class="btn btn-primary" id="quiz-finish-btn" type="button">✓ Finish &amp; submit</button>
+        <span class="muted quiz-finish-hint">Press this when you're done — it marks the objective complete.</span>
+        <div id="quiz-finish-done"></div>
+      </div>
     </div>`;
   }
 
@@ -511,6 +516,23 @@
 
     quiz.forEach((q, i) => list.appendChild(buildQuestion(q, i, state)));
     updateProgress(state);
+    if (ctx) wireFinish(ctx);
+  }
+
+  // Explicit "Finish & submit" for a per-objective quiz: marks the objective
+  // complete (which syncs to the parent dashboard if a child is signed in).
+  function wireFinish(ctx) {
+    const wrap = document.getElementById("quiz-finish");
+    if (!wrap) return;
+    wrap.hidden = false;
+    const btn = document.getElementById("quiz-finish-btn");
+    const doneEl = document.getElementById("quiz-finish-done");
+    btn.addEventListener("click", () => {
+      if (window.Progress) window.Progress.setDone(ctx.s, ctx.t, ctx.i, true);
+      btn.disabled = true; btn.style.opacity = ".55";
+      const isChild = window.Family && window.Family.role && window.Family.role() === "child";
+      doneEl.innerHTML = `<p class="quiz-submitted">✓ Submitted &amp; marked complete.${isChild ? ` Your parent can see it now. <a href="#/parents">← Back to My learning</a>` : ""}</p>`;
+    });
   }
 
   function updateProgress(state) {

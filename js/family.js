@@ -200,6 +200,7 @@
 
   // ---- views ----
   function isChildView() { return state.profile && state.profile.role === "child"; }
+  function role() { return state.profile ? state.profile.role : null; }
   function navInfo() { return { label: isChildView() ? "🎒 My learning" : "👪 Parents" }; }
   function shell(inner) {
     const child = isChildView();
@@ -612,5 +613,5 @@
   if (isAuthCallback()) handleCallback();
   else if (hasStoredSession()) init().then(() => refresh()).catch(() => {});
 
-  window.Family = { mount, syncProgress, navInfo };
+  window.Family = { mount, syncProgress, navInfo, role };
 })();
