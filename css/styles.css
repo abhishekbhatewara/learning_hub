@@ -472,6 +472,12 @@ textarea.short-input:focus { outline: none; border-color: var(--brand); }
 .family-head { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap; }
 .fam-signout-wrap { display: flex; align-items: center; gap: .6rem; flex-wrap: wrap; justify-content: flex-end; }
 .fam-stay-hint { font-size: .8rem; max-width: 230px; line-height: 1.35; text-align: right; }
+.btn-google { display: flex; align-items: center; justify-content: center; gap: .6rem; width: 100%; padding: .75rem 1rem;
+  font: inherit; font-weight: 600; cursor: pointer; border: 1.5px solid var(--line); border-radius: var(--radius-sm);
+  background: var(--surface); color: var(--ink); transition: background .15s ease, border-color .15s ease; }
+.btn-google:hover { background: var(--surface-2); border-color: var(--ink-soft); }
+.auth-divider { display: flex; align-items: center; gap: .8rem; margin: 1.1rem 0; color: var(--muted); font-size: .82rem; }
+.auth-divider::before, .auth-divider::after { content: ""; flex: 1; height: 1px; background: var(--line); }
 .family-form { display: flex; gap: .6rem; flex-wrap: wrap; margin-top: .6rem; }
 .family-form input { flex: 1; min-width: 200px; padding: .7rem .9rem; font: inherit; border: 1.5px solid var(--line);
   border-radius: var(--radius-sm); background: var(--surface); color: var(--ink); }

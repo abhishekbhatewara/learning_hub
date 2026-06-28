@@ -72,6 +72,14 @@
     if (error) { state.msg = "⚠️ " + error.message; render(); return; }
     // onAuthStateChange → refresh() handles the rest
   }
+  async function signInWithGoogle() {
+    state.msg = "Redirecting to Google…"; render();
+    const { error } = await SB.auth.signInWithOAuth({
+      provider: "google",
+      options: { redirectTo: location.href.split("#")[0] }
+    });
+    if (error) { state.msg = "⚠️ " + error.message; render(); }
+  }
   async function signOut() { await SB.auth.signOut(); state.pendingEmail = ""; refresh(); }
 
   async function saveProfile(role, name) {
@@ -131,11 +139,16 @@
       <nav class="breadcrumb"><a href="#/">Subjects</a> › <span>Parents</span></nav>
       <section class="hero">
         <h1>👪 Parents &amp; learners</h1>
-        <p class="lede">Assign objectives and quizzes to your child, and watch their progress update live. Sign in by email — no passwords.</p>
+        <p class="lede">Assign objectives and quizzes to your child, and watch their progress update live. Sign in with Google or email — no passwords.</p>
       </section>
       <div class="family-wrap">${inner}</div>`;
   }
   function note() { return state.msg ? `<p class="family-msg">${esc(state.msg)}</p>` : ""; }
+  const GOOGLE_SVG = `
+    <path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/>
+    <path fill="#FF3D00" d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z"/>
+    <path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238C29.211 35.091 26.715 36 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/>
+    <path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303c-.792 2.237-2.231 4.166-4.087 5.571l.003-.002 6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/>`;
 
   function render() {
     if (!container) return;
@@ -151,6 +164,11 @@
     container.innerHTML = shell(`
       <div class="family-card">
         <h3>Sign in or create an account</h3>
+        <button class="btn-google" id="fam-google" type="button">
+          <svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true">${GOOGLE_SVG}</svg>
+          Continue with Google
+        </button>
+        <div class="auth-divider"><span>or with email</span></div>
         <p class="muted">Enter your email and we'll send you a 6-digit code (and a magic link). Works for both parents and children.</p>
         <form id="fam-email-form" class="family-form">
           <input id="fam-email" type="email" required placeholder="you@example.com" autocomplete="email" />
@@ -158,6 +176,7 @@
         </form>
         ${note()}
       </div>`);
+    document.getElementById("fam-google").addEventListener("click", signInWithGoogle);
     document.getElementById("fam-email-form").addEventListener("submit", e => {
       e.preventDefault();
       const v = document.getElementById("fam-email").value.trim();
