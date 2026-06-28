@@ -96,6 +96,7 @@
       id: state.user.id, role, full_name: name || null, email: state.user.email
     });
     if (error) { state.msg = "⚠️ " + error.message; render(); return; }
+    state.msg = "";
     refresh();
   }
 
