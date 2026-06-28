@@ -564,8 +564,18 @@
         <details class="rev-panel" open><summary>📋 Review your answers ${wrong.length ? `· ${wrong.length} to revisit` : "· all correct! 🎉"}</summary>${rows}</details>`;
       doneEl.scrollIntoView({ behavior: "smooth", block: "nearest" });
 
-      if (isChild && window.Family && window.Family.syncQuizResult) {
-        window.Family.syncQuizResult(ctx.s, ctx.t, ctx.i, { score: pct, correct: state.correct, total: state.autoTotal, wrong });
+      if (isChild && window.Family && window.Family.submitQuiz) {
+        const found = findTopic(ctx.t);
+        const objectiveText = found && found.topic.objectives[ctx.i] ? (found.topic.objectives[ctx.i].text || "") : "";
+        const aiBox = document.createElement("div");
+        aiBox.className = "concept-summary loading";
+        aiBox.innerHTML = "🤖 Analysing your answers to suggest what to revise…";
+        doneEl.appendChild(aiBox);
+        window.Family.submitQuiz(ctx.s, ctx.t, ctx.i, objectiveText, { score: pct, correct: state.correct, total: state.autoTotal, wrong })
+          .then(summary => {
+            if (summary) { aiBox.classList.remove("loading"); aiBox.innerHTML = `<strong>🤖 Focus on this:</strong> ${esc(summary)}`; }
+            else { aiBox.remove(); }
+          });
       }
     });
   }

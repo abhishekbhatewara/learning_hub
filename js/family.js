@@ -198,6 +198,26 @@
     }
   }
 
+  // Ask the edge function for an AI "concepts to strengthen" summary.
+  async function conceptSummary(objective, detail) {
+    try {
+      const { data, error } = await SB.functions.invoke("concept-summary", {
+        body: { objective, wrong: detail.wrong, score: detail.score, total: detail.total }
+      });
+      if (error) return "";
+      return (data && data.summary) || "";
+    } catch (e) { return ""; }
+  }
+  // Full quiz submit for a child: get the AI summary, then store the breakdown
+  // (+ summary) so both child and parent can see it. Returns the summary text.
+  async function submitQuiz(s, t, i, objective, detail) {
+    if (!SB || role() !== "child") return "";
+    const summary = await conceptSummary(objective, detail);
+    detail.summary = summary;
+    await syncQuizResult(s, t, i, detail);
+    return summary;
+  }
+
   // Store a quiz result breakdown (score + which questions were wrong) so the
   // parent dashboard can show exactly what to review.
   async function syncQuizResult(s, t, i, detail) {
@@ -488,7 +508,9 @@
           ? `<details class="assign-wrong"><summary>${wrong.length} question${wrong.length === 1 ? "" : "s"} to review</summary>
               <ul>${wrong.map(w => `<li>Q${w.n}. ${esc(w.q)}</li>`).join("")}</ul></details>`
           : "";
-        return `<div class="assign-item-wrap"><div class="assign-item ${st}"><span>${esc(objText(it.s, it.t, it.i))}</span><span class="assign-item-st">${lbl}${score}</span></div>${wrongBlock}</div>`;
+        const summary = p?.details?.summary;
+        const summaryBlock = summary ? `<div class="concept-summary"><strong>🤖 Focus area:</strong> ${esc(summary)}</div>` : "";
+        return `<div class="assign-item-wrap"><div class="assign-item ${st}"><span>${esc(objText(it.s, it.t, it.i))}</span><span class="assign-item-st">${lbl}${score}</span></div>${wrongBlock}${summaryBlock}</div>`;
       }).join("");
       return `<div class="assign-card">
         <div class="assign-top"><strong>${esc(a.title)}</strong> <span class="muted">→ ${esc(nameOf[a.child_id] || "child")}</span>
@@ -633,5 +655,5 @@
   if (isAuthCallback()) handleCallback();
   else if (hasStoredSession()) init().then(() => refresh()).catch(() => {});
 
-  window.Family = { mount, syncProgress, syncQuizResult, navInfo, role };
+  window.Family = { mount, syncProgress, syncQuizResult, submitQuiz, navInfo, role };
 })();
