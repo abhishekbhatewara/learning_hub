@@ -534,6 +534,10 @@ textarea.short-input:focus { outline: none; border-color: var(--brand); }
 .link-status.pending { background: #fff7ed; color: #b45309; }
 .btn-sm { padding: .35rem .8rem; font-size: .85rem; }
 
+.admin-card { border-color: #c4b5fd; background: linear-gradient(180deg, #faf5ff, var(--surface)); }
+.rb-libcheck { display: inline-flex; align-items: center; gap: .5rem; font-weight: 600; color: var(--ink-soft); cursor: pointer; }
+.rb-book[hidden], .rb-libfields[hidden] { display: none; }
+
 /* assignment builder + cards */
 .fam-assign-head { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
 .fam-builder { border: 1px dashed var(--line); border-radius: var(--radius-sm); padding: 1rem; margin: .8rem 0 1rem; background: var(--surface-2); }

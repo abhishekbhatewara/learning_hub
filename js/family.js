@@ -14,7 +14,8 @@
   let childAssignments = [];    // cache of the signed-in child's assignments
   let progressChannel = null;   // realtime subscription (parent dashboard)
   const builderSel = new Map(); // assignment builder selection: "s|t|i" -> {s,t,i}
-  let state = { user: null, profile: null, view: "loading", msg: "", pendingEmail: "" };
+  const resSel = new Map();     // admin resource-builder objective targets
+  let state = { user: null, profile: null, view: "loading", msg: "", pendingEmail: "", isAdmin: false };
 
   function esc(x) { return String(x == null ? "" : x).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
 
@@ -52,6 +53,11 @@
     if (state.profile && state.profile.role === "child") {
       try { childAssignments = await listChildAssignments(); } catch (e) { /* offline ok */ }
     } else { childAssignments = []; }
+    // is this user allowed to add public resources?
+    if (state.user) {
+      try { const { data } = await SB.from("admins").select("email").eq("email", state.user.email); state.isAdmin = !!(data && data.length); }
+      catch (e) { state.isAdmin = false; }
+    } else { state.isAdmin = false; }
     // tell app.js to re-label the nav (Parents vs My learning) for the new state
     try { window.dispatchEvent(new CustomEvent("lh-auth-change")); } catch (e) {}
     // after a magic-link return we land on the base URL; route into the Parents
@@ -361,7 +367,16 @@
         </div>
         <div id="fam-builder" class="fam-builder" hidden></div>
         <div id="fam-assignments"><p class="muted">Loading…</p></div>
-      </div>`);
+      </div>
+      ${state.isAdmin ? `<div class="family-card admin-card">
+        <div class="fam-assign-head">
+          <h3>🛠️ Admin · Add a resource</h3>
+          <button class="btn btn-primary btn-sm" id="adm-new-res" type="button">＋ Add resource</button>
+        </div>
+        <p class="muted">Add a video, site, podcast or book to one or more objectives and/or the Library. It goes live for everyone.</p>
+        <div id="adm-builder" class="fam-builder" hidden></div>
+        <div id="adm-resources"></div>
+      </div>` : ""}`);
     document.getElementById("fam-signout").addEventListener("click", signOut);
     document.getElementById("fam-invite").addEventListener("submit", e => {
       e.preventDefault();
@@ -389,6 +404,137 @@
     });
     renderParentAssignments();
     subscribeProgress();
+
+    if (state.isAdmin) {
+      const admBtn = document.getElementById("adm-new-res");
+      admBtn.addEventListener("click", () => {
+        const b = document.getElementById("adm-builder");
+        if (b.hidden) { openResourceBuilder(); b.hidden = false; admBtn.textContent = "✕ Close"; }
+        else { b.hidden = true; b.innerHTML = ""; admBtn.textContent = "＋ Add resource"; }
+      });
+      renderMyResources();
+    }
+  }
+
+  // ---- admin: add a resource live ----
+  function openResourceBuilder() {
+    const b = document.getElementById("adm-builder");
+    resSel.clear();
+    const subs = subjectsList();
+    b.innerHTML = `
+      <form id="rb-form" class="family-form-col">
+        <div class="ab-row">
+          <label class="family-field">Type
+            <select id="rb-type">
+              <option value="video">Video</option>
+              <option value="reading">Reading / article</option>
+              <option value="interactive">Interactive</option>
+              <option value="podcast">Podcast</option>
+              <option value="book">Book</option>
+            </select>
+          </label>
+          <label class="family-field">Link (URL)<input id="rb-url" type="url" placeholder="https://…" required /></label>
+        </div>
+        <label class="family-field">Title<input id="rb-title" type="text" required /></label>
+        <div class="ab-row">
+          <label class="family-field">Provider / source<input id="rb-provider" placeholder="e.g. Khan Academy" /></label>
+          <label class="family-field">Short note (optional)<input id="rb-note" /></label>
+        </div>
+        <div class="ab-row rb-book" hidden>
+          <label class="family-field">Author<input id="rb-author" /></label>
+          <label class="family-field">Chapter reference<input id="rb-chapter" placeholder="e.g. Ch 3" /></label>
+        </div>
+        <h4 style="margin:.6rem 0 0">Add to objectives</h4>
+        <div class="ab-row">
+          <label class="family-field">Subject<select id="rb-subject">${subs.map(s => `<option value="${esc(s.id)}">${esc(s.name)}</option>`).join("")}</select></label>
+          <label class="family-field">Grade<select id="rb-grade"></select></label>
+        </div>
+        <div id="rb-objectives" class="ab-objectives"></div>
+        <p class="muted"><strong id="rb-count">0</strong> objectives selected</p>
+        <label class="rb-libcheck"><input type="checkbox" id="rb-lib" /> Also add to the Library</label>
+        <div class="ab-row rb-libfields" hidden>
+          <label class="family-field">Library module<input id="rb-libmod" value="Science" /></label>
+          <label class="family-field">Library subject<input id="rb-libsub" placeholder="e.g. Biology" /></label>
+        </div>
+        <button class="btn btn-primary" type="submit">Add resource</button>
+        <p id="rb-msg" class="family-msg" hidden></p>
+      </form>`;
+
+    const typeSel = document.getElementById("rb-type");
+    typeSel.addEventListener("change", () => { document.querySelector(".rb-book").hidden = typeSel.value !== "book"; });
+    document.getElementById("rb-lib").addEventListener("change", e => { document.querySelector(".rb-libfields").hidden = !e.target.checked; });
+
+    const subjSel = document.getElementById("rb-subject");
+    const gradeSel = document.getElementById("rb-grade");
+    function fillGrades() {
+      const sub = subs.find(s => s.id === subjSel.value);
+      gradeSel.innerHTML = (sub ? sub.grades : []).map(g => `<option value="${esc(g.id)}">${esc(g.name)}</option>`).join("");
+    }
+    function fillObjectives() {
+      const sub = subs.find(s => s.id === subjSel.value);
+      const grade = sub && sub.grades.find(g => g.id === gradeSel.value);
+      const wrap = document.getElementById("rb-objectives");
+      if (!grade) { wrap.innerHTML = ""; return; }
+      wrap.innerHTML = grade.topics.map(tp => `
+        <details class="ab-topic"><summary>${esc(tp.icon || "")} ${esc(tp.title)} <span class="muted">(${tp.objectives.length})</span></summary>
+          ${tp.objectives.map((o, i) => {
+            const key = `${sub.id}|${tp.id}|${i}`;
+            const txt = typeof o === "object" ? o.text : o;
+            return `<label class="ab-obj"><input type="checkbox" data-key="${key}" data-s="${sub.id}" data-t="${tp.id}" data-i="${i}" ${resSel.has(key) ? "checked" : ""}/> <span>${esc(txt)}</span></label>`;
+          }).join("")}
+        </details>`).join("");
+      wrap.querySelectorAll("input[type=checkbox]").forEach(cb => cb.addEventListener("change", () => {
+        const key = cb.dataset.key;
+        if (cb.checked) resSel.set(key, { s: cb.dataset.s, t: cb.dataset.t, i: +cb.dataset.i });
+        else resSel.delete(key);
+        document.getElementById("rb-count").textContent = resSel.size;
+      }));
+    }
+    subjSel.addEventListener("change", () => { fillGrades(); fillObjectives(); });
+    gradeSel.addEventListener("change", fillObjectives);
+    fillGrades(); fillObjectives();
+
+    document.getElementById("rb-form").addEventListener("submit", async e => {
+      e.preventDefault();
+      const msg = document.getElementById("rb-msg");
+      const val = id => (document.getElementById(id).value || "").trim();
+      const url = val("rb-url"), title = val("rb-title");
+      const toLib = document.getElementById("rb-lib").checked;
+      if (!url || !title) { msg.hidden = false; msg.textContent = "Title and link are required."; return; }
+      if (!resSel.size && !toLib) { msg.hidden = false; msg.textContent = "Pick at least one objective, or tick “Add to the Library”."; return; }
+      const row = {
+        created_by: state.user.id, type: val("rb-type"), title, provider: val("rb-provider") || null,
+        url, note: val("rb-note") || null, author: val("rb-author") || null, chapter: val("rb-chapter") || null,
+        targets: [...resSel.values()], to_library: toLib,
+        library_module: toLib ? (val("rb-libmod") || "Science") : null, library_subject: toLib ? (val("rb-libsub") || null) : null
+      };
+      msg.hidden = false; msg.textContent = "Adding…";
+      const { error } = await SB.from("custom_resources").insert(row);
+      if (error) { msg.textContent = "⚠️ " + error.message; return; }
+      if (window.CustomResources) window.CustomResources.reload(); // merge it live
+      document.getElementById("adm-builder").hidden = true;
+      document.getElementById("adm-builder").innerHTML = "";
+      document.getElementById("adm-new-res").textContent = "＋ Add resource";
+      renderMyResources();
+    });
+  }
+
+  async function renderMyResources() {
+    const box = document.getElementById("adm-resources");
+    if (!box) return;
+    const { data } = await SB.from("custom_resources").select("*").order("created_at", { ascending: false });
+    const list = data || [];
+    box.innerHTML = list.length ? `<h4 style="margin-top:1rem">Added resources (${list.length})</h4>` + list.map(cr => `
+      <div class="link-row">
+        <span class="link-name">${esc(cr.title)} <small class="muted">· ${esc(cr.type)}${(cr.targets || []).length ? ` · ${cr.targets.length} obj` : ""}${cr.to_library ? " · Library" : ""}</small></span>
+        <button class="bm-remove" type="button" data-del-res="${esc(cr.id)}" title="Delete">✕</button>
+      </div>`).join("") : "";
+    box.querySelectorAll("[data-del-res]").forEach(b => b.addEventListener("click", async () => {
+      if (confirm("Delete this resource? It will disappear for everyone (a page refresh updates already-open pages).")) {
+        await SB.from("custom_resources").delete().eq("id", b.dataset.delRes);
+        renderMyResources();
+      }
+    }));
   }
 
   // ---- assignment builder (parent) ----

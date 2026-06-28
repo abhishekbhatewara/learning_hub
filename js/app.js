@@ -954,6 +954,9 @@
 
   // when sign-in state resolves/changes, re-label the nav (Parents ⇄ My learning)
   window.addEventListener("lh-auth-change", () => { renderNav(navSubject); setActiveNav(location.hash); });
+  // when admin-added resources arrive, re-render the current view (except the
+  // stateful Parents area) so they show up without a manual refresh
+  window.addEventListener("lh-resources-loaded", () => { if (!location.hash.startsWith("#/parents")) route(); });
   window.addEventListener("hashchange", route);
   window.addEventListener("DOMContentLoaded", route);
   if (document.readyState !== "loading") route();
