@@ -11,6 +11,9 @@
   let loading = null;     // promise guard for init
   let container = null;   // where we render
   let cameFromCallback = false; // true while handling a magic-link return
+  let childAssignments = [];    // cache of the signed-in child's assignments
+  let progressChannel = null;   // realtime subscription (parent dashboard)
+  const builderSel = new Map(); // assignment builder selection: "s|t|i" -> {s,t,i}
   let state = { user: null, profile: null, view: "loading", msg: "", pendingEmail: "" };
 
   function esc(x) { return String(x == null ? "" : x).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
@@ -44,6 +47,11 @@
     if (!state.user) state.view = "auth";
     else if (!state.profile) state.view = "onboard";
     else state.view = state.profile.role === "parent" ? "parent" : "child";
+    // keep the child's assignments cached so progress made on objective pages
+    // (away from #/parents) can be synced to the database.
+    if (state.profile && state.profile.role === "child") {
+      try { childAssignments = await listChildAssignments(); } catch (e) { /* offline ok */ }
+    } else { childAssignments = []; }
     // after a magic-link return we land on the base URL; route into the Parents
     // area either way — signed in (parent/child view) or failed (auth + error).
     if (cameFromCallback) {
@@ -131,6 +139,60 @@
       .eq("id", id);
     state.msg = error ? "⚠️ " + error.message : "✓ Linked!";
     renderChild();
+  }
+
+  // ---- curriculum lookup (from window.HUB) ----
+  function subjectsList() { return (window.HUB && window.HUB.subjects) || []; }
+  function objText(s, t, i) {
+    const sub = subjectsList().find(x => x.id === s); if (!sub) return "(objective)";
+    for (const g of sub.grades) {
+      const tp = g.topics.find(x => x.id === t);
+      if (tp && tp.objectives[i] != null) return typeof tp.objectives[i] === "object" ? tp.objectives[i].text : tp.objectives[i];
+    }
+    return "(objective)";
+  }
+
+  // ---- assignments data ----
+  async function listParentAssignments() {
+    const { data } = await SB.from("assignments").select("*").eq("parent_id", state.user.id).order("created_at", { ascending: false });
+    return data || [];
+  }
+  async function listChildAssignments() {
+    const { data } = await SB.from("assignments").select("*").eq("child_id", state.user.id).order("created_at", { ascending: false });
+    return data || [];
+  }
+  async function listProgressFor(ids) {
+    if (!ids.length) return [];
+    const { data } = await SB.from("assignment_progress").select("*").in("assignment_id", ids);
+    return data || [];
+  }
+  function progressMap(rows) {
+    const m = {};
+    rows.forEach(p => { (m[p.assignment_id] = m[p.assignment_id] || {})[p.item_key] = p; });
+    return m;
+  }
+  async function createAssignment(childId, title, note, due, items) {
+    return (await SB.from("assignments").insert({
+      parent_id: state.user.id, child_id: childId, title, note: note || null, due_date: due || null, items
+    })).error;
+  }
+
+  // Bridge: when a signed-in child completes an objective via the localStorage
+  // Progress system, mirror it into assignment_progress so the parent sees it live.
+  async function syncProgress(s, t, i) {
+    if (!SB || !state.user || !state.profile || state.profile.role !== "child" || !childAssignments.length) return;
+    const key = `${s}|${t}|${i}`;
+    const P = window.Progress;
+    const done = P ? P.isDone(s, t, i) : false;
+    const q = P ? P.quizOf(s, t, i) : null;
+    for (const a of childAssignments) {
+      if ((a.items || []).some(it => it.s === s && it.t === t && it.i === i)) {
+        await SB.from("assignment_progress").upsert(
+          { assignment_id: a.id, child_id: state.user.id, item_key: key, status: done ? "done" : "in_progress", score: q ? q.pct : null },
+          { onConflict: "assignment_id,item_key" }
+        );
+      }
+    }
   }
 
   // ---- views ----
@@ -248,8 +310,12 @@
         ${note()}
       </div>
       <div class="family-card">
-        <h3>Assignments</h3>
-        <p class="muted">Once a child is linked, you'll build and track assignments here. (Coming in the next step.)</p>
+        <div class="fam-assign-head">
+          <h3>Assignments</h3>
+          <button class="btn btn-primary btn-sm" id="fam-new-assign" type="button">＋ New assignment</button>
+        </div>
+        <div id="fam-builder" class="fam-builder" hidden></div>
+        <div id="fam-assignments"><p class="muted">Loading…</p></div>
       </div>`);
     document.getElementById("fam-signout").addEventListener("click", signOut);
     document.getElementById("fam-invite").addEventListener("submit", e => {
@@ -267,6 +333,154 @@
         <button class="bm-remove" type="button" data-id="${esc(l.id)}" title="Remove">✕</button>
       </div>`).join("") : `<p class="muted">No children linked yet — invite one below.</p>`;
     box.querySelectorAll(".bm-remove").forEach(b => b.addEventListener("click", () => revokeLink(b.dataset.id)));
+
+    const accepted = kids.filter(k => k.status === "accepted" && k.child_id)
+      .map(k => ({ id: k.child_id, name: k.childProfile ? (k.childProfile.full_name || k.childProfile.email) : k.child_email }));
+    const newBtn = document.getElementById("fam-new-assign");
+    newBtn.addEventListener("click", () => {
+      const b = document.getElementById("fam-builder");
+      if (b.hidden) { openBuilder(accepted); b.hidden = false; newBtn.textContent = "✕ Close"; }
+      else { b.hidden = true; b.innerHTML = ""; newBtn.textContent = "＋ New assignment"; }
+    });
+    renderParentAssignments();
+    subscribeProgress();
+  }
+
+  // ---- assignment builder (parent) ----
+  function openBuilder(children) {
+    const b = document.getElementById("fam-builder");
+    if (!children.length) {
+      b.innerHTML = `<p class="muted">Link a child first (invite them above and have them accept), then you can assign work.</p>`;
+      return;
+    }
+    builderSel.clear();
+    const subs = subjectsList();
+    b.innerHTML = `
+      <form id="ab-form" class="family-form-col">
+        <div class="ab-row">
+          <label class="family-field">Assign to
+            <select id="ab-child">${children.map(c => `<option value="${esc(c.id)}">${esc(c.name)}</option>`).join("")}</select>
+          </label>
+          <label class="family-field">What to assign
+            <select id="ab-mode">
+              <option value="both">Resources + Quiz</option>
+              <option value="resources">Resources only</option>
+              <option value="quiz">Quiz only</option>
+            </select>
+          </label>
+        </div>
+        <label class="family-field">Title
+          <input id="ab-title" type="text" placeholder="e.g. This week's science" required />
+        </label>
+        <div class="ab-row">
+          <label class="family-field">Note (optional)<input id="ab-note" type="text" placeholder="A message for your child" /></label>
+          <label class="family-field">Due date (optional)<input id="ab-due" type="date" /></label>
+        </div>
+        <div class="ab-row">
+          <label class="family-field">Subject
+            <select id="ab-subject">${subs.map(s => `<option value="${esc(s.id)}">${esc(s.name)}</option>`).join("")}</select>
+          </label>
+          <label class="family-field">Grade<select id="ab-grade"></select></label>
+        </div>
+        <div id="ab-objectives" class="ab-objectives"></div>
+        <p class="muted"><strong id="ab-count">0</strong> objectives selected (across all subjects/grades)</p>
+        <button class="btn btn-primary" type="submit">Create assignment</button>
+        <p id="ab-msg" class="family-msg" hidden></p>
+      </form>`;
+
+    const subjSel = document.getElementById("ab-subject");
+    const gradeSel = document.getElementById("ab-grade");
+    function fillGrades() {
+      const sub = subs.find(s => s.id === subjSel.value);
+      gradeSel.innerHTML = (sub ? sub.grades : []).map(g => `<option value="${esc(g.id)}">${esc(g.name)}</option>`).join("");
+    }
+    function fillObjectives() {
+      const sub = subs.find(s => s.id === subjSel.value);
+      const grade = sub && sub.grades.find(g => g.id === gradeSel.value);
+      const wrap = document.getElementById("ab-objectives");
+      if (!grade) { wrap.innerHTML = ""; return; }
+      wrap.innerHTML = grade.topics.map(tp => `
+        <details class="ab-topic">
+          <summary>${esc(tp.icon || "")} ${esc(tp.title)} <span class="muted">(${tp.objectives.length})</span></summary>
+          ${tp.objectives.map((o, i) => {
+            const key = `${sub.id}|${tp.id}|${i}`;
+            const txt = typeof o === "object" ? o.text : o;
+            return `<label class="ab-obj"><input type="checkbox" data-key="${key}" data-s="${sub.id}" data-t="${tp.id}" data-i="${i}" ${builderSel.has(key) ? "checked" : ""}/> <span>${esc(txt)}</span></label>`;
+          }).join("")}
+        </details>`).join("");
+      wrap.querySelectorAll("input[type=checkbox]").forEach(cb => cb.addEventListener("change", () => {
+        const key = cb.dataset.key;
+        if (cb.checked) builderSel.set(key, { s: cb.dataset.s, t: cb.dataset.t, i: +cb.dataset.i });
+        else builderSel.delete(key);
+        document.getElementById("ab-count").textContent = builderSel.size;
+      }));
+    }
+    subjSel.addEventListener("change", () => { fillGrades(); fillObjectives(); });
+    gradeSel.addEventListener("change", fillObjectives);
+    fillGrades(); fillObjectives();
+
+    document.getElementById("ab-form").addEventListener("submit", async e => {
+      e.preventDefault();
+      const msg = document.getElementById("ab-msg");
+      const childId = document.getElementById("ab-child").value;
+      const title = document.getElementById("ab-title").value.trim();
+      const mode = document.getElementById("ab-mode").value;
+      const note = document.getElementById("ab-note").value.trim();
+      const due = document.getElementById("ab-due").value || null;
+      if (!title) { msg.hidden = false; msg.textContent = "Please add a title."; return; }
+      if (!builderSel.size) { msg.hidden = false; msg.textContent = "Pick at least one objective."; return; }
+      const items = [...builderSel.values()].map(v => ({ ...v, mode }));
+      msg.hidden = false; msg.textContent = "Creating…";
+      const err = await createAssignment(childId, title, note, due, items);
+      if (err) { msg.textContent = "⚠️ " + err.message; return; }
+      document.getElementById("fam-builder").hidden = true;
+      document.getElementById("fam-builder").innerHTML = "";
+      document.getElementById("fam-new-assign").textContent = "＋ New assignment";
+      renderParentAssignments();
+    });
+  }
+
+  async function renderParentAssignments() {
+    const box = document.getElementById("fam-assignments");
+    if (!box) return;
+    const assigns = await listParentAssignments();
+    if (!assigns.length) { box.innerHTML = `<p class="muted">No assignments yet. Tap “＋ New assignment” to set work for a linked child.</p>`; return; }
+    const pmap = progressMap(await listProgressFor(assigns.map(a => a.id)));
+    const kids = await listChildren();
+    const nameOf = {};
+    kids.forEach(k => { if (k.child_id) nameOf[k.child_id] = k.childProfile ? (k.childProfile.full_name || k.childProfile.email) : k.child_email; });
+    box.innerHTML = assigns.map(a => {
+      const items = a.items || [];
+      const done = items.filter(it => (pmap[a.id] || {})[`${it.s}|${it.t}|${it.i}`]?.status === "done").length;
+      const pct = items.length ? Math.round(done / items.length * 100) : 0;
+      const rows = items.map(it => {
+        const p = (pmap[a.id] || {})[`${it.s}|${it.t}|${it.i}`];
+        const st = p?.status === "done" ? "done" : p?.status === "in_progress" ? "in_progress" : "not_started";
+        const lbl = st === "done" ? "✓ done" : st === "in_progress" ? "… started" : "not started";
+        const score = p?.score != null ? ` · ${p.score}%` : "";
+        return `<div class="assign-item ${st}"><span>${esc(objText(it.s, it.t, it.i))}</span><span class="assign-item-st">${lbl}${score}</span></div>`;
+      }).join("");
+      return `<div class="assign-card">
+        <div class="assign-top"><strong>${esc(a.title)}</strong> <span class="muted">→ ${esc(nameOf[a.child_id] || "child")}</span>
+          <button class="bm-remove" type="button" data-del="${esc(a.id)}" title="Delete assignment">✕</button></div>
+        ${a.due_date ? `<div class="muted">Due ${esc(a.due_date)}</div>` : ""}
+        ${a.note ? `<div class="assign-note">${esc(a.note)}</div>` : ""}
+        <div class="prog-bar"><div class="prog-fill" style="width:${pct}%;background:var(--brand)"></div><span class="prog-label">${done}/${items.length} · ${pct}%</span></div>
+        <details class="assign-items"><summary>${items.length} item${items.length === 1 ? "" : "s"}</summary>${rows}</details>
+      </div>`;
+    }).join("");
+    box.querySelectorAll("[data-del]").forEach(b => b.addEventListener("click", async () => {
+      if (confirm("Delete this assignment?")) { await SB.from("assignments").delete().eq("id", b.dataset.del); renderParentAssignments(); }
+    }));
+  }
+
+  function subscribeProgress() {
+    if (progressChannel) return;
+    progressChannel = SB.channel("assign-progress")
+      .on("postgres_changes", { event: "*", schema: "public", table: "assignment_progress" }, () => {
+        if (document.getElementById("fam-assignments")) renderParentAssignments();
+      })
+      .subscribe();
   }
 
   async function renderChild() {
@@ -285,10 +499,11 @@
       </div>
       <div class="family-card">
         <h3>My assignments</h3>
-        <p class="muted">Assignments your parent sets will appear here. (Coming in the next step.)</p>
+        <div id="fam-child-assignments"><p class="muted">Loading…</p></div>
       </div>
       ${note()}`);
     document.getElementById("fam-signout").addEventListener("click", signOut);
+    renderChildAssignments();
     const invites = await listInvites();
     const box = document.getElementById("fam-invites");
     if (!box) return;
@@ -303,6 +518,37 @@
       ${linked.length ? `<p class="muted" style="margin-top:.6rem">Linked with ${linked.length} parent${linked.length === 1 ? "" : "s"} ✓</p>` : ""}
       ${!pending.length && !linked.length ? `<p class="muted">No invites yet. Ask your parent to invite your email: <strong>${esc(state.user.email)}</strong></p>` : ""}`;
     box.querySelectorAll("[data-accept]").forEach(b => b.addEventListener("click", () => acceptInvite(b.dataset.accept)));
+  }
+
+  async function renderChildAssignments() {
+    const box = document.getElementById("fam-child-assignments");
+    if (!box) return;
+    childAssignments = await listChildAssignments();
+    if (!childAssignments.length) { box.innerHTML = `<p class="muted">No assignments yet. When your parent sets work, it'll appear here.</p>`; return; }
+    const pmap = progressMap(await listProgressFor(childAssignments.map(a => a.id)));
+    const P = window.Progress;
+    const isDone = (it, p) => p?.status === "done" || (P && P.isDone(it.s, it.t, it.i));
+    box.innerHTML = childAssignments.map(a => {
+      const items = a.items || [];
+      const done = items.filter(it => isDone(it, (pmap[a.id] || {})[`${it.s}|${it.t}|${it.i}`])).length;
+      const pct = items.length ? Math.round(done / items.length * 100) : 0;
+      const rows = items.map(it => {
+        const p = (pmap[a.id] || {})[`${it.s}|${it.t}|${it.i}`];
+        const d = isDone(it, p);
+        const dest = it.mode === "quiz" ? "quiz" : "resources";
+        const modeLbl = it.mode === "both" ? "Read + Quiz" : it.mode === "quiz" ? "Quiz" : "Resources";
+        return `<a class="assign-item ${d ? "done" : ""}" href="#/${esc(it.s)}/topic/${esc(it.t)}/obj/${it.i}/${dest}">
+          <span>${d ? "✓" : "○"} ${esc(objText(it.s, it.t, it.i))}</span>
+          <span class="assign-item-st">${modeLbl} →</span></a>`;
+      }).join("");
+      return `<div class="assign-card">
+        <div class="assign-top"><strong>${esc(a.title)}</strong></div>
+        ${a.due_date ? `<div class="muted">Due ${esc(a.due_date)}</div>` : ""}
+        ${a.note ? `<div class="assign-note">${esc(a.note)}</div>` : ""}
+        <div class="prog-bar"><div class="prog-fill" style="width:${pct}%;background:var(--g6)"></div><span class="prog-label">${done}/${items.length} done</span></div>
+        <div class="assign-items-list">${rows}</div>
+      </div>`;
+    }).join("");
   }
 
   // ---- entry point (called by the router) ----
@@ -348,7 +594,14 @@
     history.replaceState(null, "", location.href.split("#")[0].split("?")[0]);
     refresh();
   }
+  // A persisted Supabase session means the user logged in before. Eagerly load
+  // the client on every page (not just #/parents) so a child's completions sync
+  // to the database while they work through objectives elsewhere in the hub.
+  function hasStoredSession() {
+    try { return Object.keys(localStorage).some(k => /^sb-.*-auth-token$/.test(k)); } catch (e) { return false; }
+  }
   if (isAuthCallback()) handleCallback();
+  else if (hasStoredSession()) init().then(() => refresh()).catch(() => {});
 
-  window.Family = { mount };
+  window.Family = { mount, syncProgress };
 })();

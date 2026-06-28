@@ -28,7 +28,10 @@
     if (val) d.done[k(s, t, i)] = 1; else delete d.done[k(s, t, i)];
     save(d);
     notify();
+    syncFamily(s, t, i);
   }
+  // mirror completion to the parent/child assignments backend, if signed in
+  function syncFamily(s, t, i) { if (window.Family && window.Family.syncProgress) window.Family.syncProgress(s, t, i); }
   function toggleDone(s, t, i) { const v = !isDone(s, t, i); setDone(s, t, i, v); return v; }
   function recordQuiz(s, t, i, correct, total) {
     if (!total) return;
@@ -40,6 +43,7 @@
     if (pct >= PASS) d.done[key] = 1; // passing the quiz auto-completes the objective
     save(d);
     notify();
+    syncFamily(s, t, i);
   }
   function reset() { save({ done: {}, quiz: {} }); notify(); }
 
