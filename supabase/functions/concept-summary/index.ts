@@ -56,6 +56,8 @@ If they got everything right, congratulate them and suggest one stretch idea. Do
     });
     const data = await r.json();
     const summary = data?.choices?.[0]?.message?.content?.trim() || "";
+    // if OpenRouter returned no content, surface why (bad key, no credits, bad model…)
+    if (!summary) return json({ summary: "", error: data?.error?.message || data?.error || `no content (status ${r.status})`, status: r.status, model: MODEL });
     return json({ summary });
   } catch (e) {
     return json({ summary: "", error: String(e) });

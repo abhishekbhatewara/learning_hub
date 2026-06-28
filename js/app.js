@@ -581,7 +581,7 @@
       <div class="quiz-intro">
         <div class="quiz-meta">
           <strong>${c.total} questions</strong> · ${c.auto} auto-graded, ${c.written} written (self-checked).<br>
-          <span class="muted">Ordered easy → hard. Answer each, then press <em>Check</em>.</span>
+          <span class="muted">Answer each question — press <em>Check</em> for instant feedback, or just <em>Finish &amp; submit</em> at the end.</span>
         </div>
         <div class="quiz-progress" id="quiz-progress">Score: 0 / ${c.auto}</div>
       </div>
@@ -589,7 +589,7 @@
       <div class="quiz-summary" id="quiz-summary"></div>
       <div class="quiz-finish" id="quiz-finish" hidden>
         <button class="btn btn-primary" id="quiz-finish-btn" type="button">✓ Finish &amp; submit</button>
-        <span class="muted quiz-finish-hint">Press this when you're done — it marks the objective complete.</span>
+        <span class="muted quiz-finish-hint">Grades everything you've answered, shows the correct answers, and marks the objective complete.</span>
         <div id="quiz-finish-done"></div>
       </div>
     </div>`;
@@ -624,6 +624,9 @@
     const btn = document.getElementById("quiz-finish-btn");
     const doneEl = document.getElementById("quiz-finish-done");
     btn.addEventListener("click", () => {
+      // grade any questions the student answered but didn't press "Check" on,
+      // so selected answers count instead of showing as "not answered"
+      document.querySelectorAll("#quiz-list .btn-check").forEach(cb => { if (!cb.disabled) cb.click(); });
       if (window.Progress) window.Progress.setDone(ctx.s, ctx.t, ctx.i, true);
       btn.disabled = true; btn.style.opacity = ".55";
 
