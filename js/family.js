@@ -52,6 +52,8 @@
     if (state.profile && state.profile.role === "child") {
       try { childAssignments = await listChildAssignments(); } catch (e) { /* offline ok */ }
     } else { childAssignments = []; }
+    // tell app.js to re-label the nav (Parents vs My learning) for the new state
+    try { window.dispatchEvent(new CustomEvent("lh-auth-change")); } catch (e) {}
     // after a magic-link return we land on the base URL; route into the Parents
     // area either way — signed in (parent/child view) or failed (auth + error).
     if (cameFromCallback) {
@@ -197,13 +199,19 @@
   }
 
   // ---- views ----
+  function isChildView() { return state.profile && state.profile.role === "child"; }
+  function navInfo() { return { label: isChildView() ? "🎒 My learning" : "👪 Parents" }; }
   function shell(inner) {
+    const child = isChildView();
+    const crumb = child ? "My learning" : "Parents";
+    const hero = child
+      ? `<h1>🎒 My learning</h1>
+         <p class="lede">Your assignments from your parent — open each one, do the work, and your progress updates automatically.</p>`
+      : `<h1>👪 Parents &amp; learners</h1>
+         <p class="lede">Assign objectives and quizzes to your child, and watch their progress update live. Sign in with Google or email — no passwords.</p>`;
     return `
-      <nav class="breadcrumb"><a href="#/">Subjects</a> › <span>Parents</span></nav>
-      <section class="hero">
-        <h1>👪 Parents &amp; learners</h1>
-        <p class="lede">Assign objectives and quizzes to your child, and watch their progress update live. Sign in with Google or email — no passwords.</p>
-      </section>
+      <nav class="breadcrumb"><a href="#/">Subjects</a> › <span>${crumb}</span></nav>
+      <section class="hero">${hero}</section>
       <div class="family-wrap">${inner}</div>`;
   }
   function note() { return state.msg ? `<p class="family-msg">${esc(state.msg)}</p>` : ""; }
@@ -604,5 +612,5 @@
   if (isAuthCallback()) handleCallback();
   else if (hasStoredSession()) init().then(() => refresh()).catch(() => {});
 
-  window.Family = { mount, syncProgress };
+  window.Family = { mount, syncProgress, navInfo };
 })();

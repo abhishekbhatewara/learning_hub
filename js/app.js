@@ -687,7 +687,9 @@
   function shuffle(arr) { for (let i = arr.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1));[arr[i], arr[j]] = [arr[j], arr[i]]; } return arr; }
 
   // ---------- navigation ----------
+  let navSubject = null; // remember the nav context so we can re-render on auth change
   function renderNav(subject) {
+    navSubject = subject;
     const nav = document.getElementById("main-nav");
     if (!nav) return;
     let html = `<a href="#/">Subjects</a>`;
@@ -701,7 +703,10 @@
     if (window.Search) html += `<a href="#/search">🔍 Search</a>`;
     if (window.Bookmarks) html += `<a href="#/saved">⭐ Saved</a>`;
     if (window.Progress) html += `<a href="#/progress">My Progress</a>`;
-    if (window.Family) html += `<a href="#/parents">👪 Parents</a>`;
+    if (window.Family) {
+      const famLabel = (window.Family.navInfo && window.Family.navInfo().label) || "👪 Parents";
+      html += `<a href="#/parents">${famLabel}</a>`;
+    }
     nav.innerHTML = html;
   }
 
@@ -878,6 +883,8 @@
     navToggle.setAttribute("aria-expanded", open ? "true" : "false");
   });
 
+  // when sign-in state resolves/changes, re-label the nav (Parents ⇄ My learning)
+  window.addEventListener("lh-auth-change", () => { renderNav(navSubject); setActiveNav(location.hash); });
   window.addEventListener("hashchange", route);
   window.addEventListener("DOMContentLoaded", route);
   if (document.readyState !== "loading") route();
