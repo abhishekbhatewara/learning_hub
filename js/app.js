@@ -512,16 +512,25 @@
     const list = document.getElementById("quiz-list");
     if (!list) return;
     const c = countByType(quiz);
-    const state = { correct: 0, answered: 0, checkedAuto: 0, autoTotal: c.auto, ctx: ctx || null };
+    const state = { correct: 0, answered: 0, checkedAuto: 0, autoTotal: c.auto, ctx: ctx || null, results: [] };
 
     quiz.forEach((q, i) => list.appendChild(buildQuestion(q, i, state)));
     updateProgress(state);
-    if (ctx) wireFinish(ctx);
+    if (ctx) wireFinish(quiz, ctx, state);
+  }
+
+  function correctText(q) {
+    if (q.type === "mcq") return q.options[q.answer];
+    if (q.type === "tf") return q.answer ? "True" : "False";
+    if (q.type === "numeric") return String(q.answer);
+    if (q.type === "match") return q.pairs.map(p => `${p[0]} → ${p[1]}`).join("; ");
+    return q.answer; // short / long
   }
 
   // Explicit "Finish & submit" for a per-objective quiz: marks the objective
-  // complete (which syncs to the parent dashboard if a child is signed in).
-  function wireFinish(ctx) {
+  // complete, shows a full answer review, and (for a signed-in child) stores the
+  // wrong-question breakdown so the parent can see exactly what to review.
+  function wireFinish(quiz, ctx, state) {
     const wrap = document.getElementById("quiz-finish");
     if (!wrap) return;
     wrap.hidden = false;
@@ -530,8 +539,34 @@
     btn.addEventListener("click", () => {
       if (window.Progress) window.Progress.setDone(ctx.s, ctx.t, ctx.i, true);
       btn.disabled = true; btn.style.opacity = ".55";
+
+      const wrong = [];
+      const rows = quiz.map((q, i) => {
+        const r = state.results[i];
+        const auto = ["mcq", "tf", "numeric", "match"].includes(q.type);
+        if (!auto) {
+          return `<div class="rev-q written"><div class="rev-qh"><span>Q${i + 1}</span><span class="rev-tag">self-check</span></div>
+            <div class="rev-qtext">${esc(q.q)}</div><div class="rev-ans">📝 Model answer: ${esc(q.answer)}</div></div>`;
+        }
+        const ok = !!(r && r.correct);
+        if (!ok) wrong.push({ n: i + 1, q: q.q });
+        return `<div class="rev-q ${ok ? "ok" : "bad"}"><div class="rev-qh"><span>Q${i + 1}</span><span class="rev-mark">${ok ? "✓ correct" : "✗ incorrect"}</span></div>
+          <div class="rev-qtext">${esc(q.q)}</div>
+          <div class="rev-your">Your answer: ${r ? esc(r.your || "—") : "<em>not answered</em>"}</div>
+          ${ok ? "" : `<div class="rev-ans">✓ Correct answer: ${esc(correctText(q))}</div>`}
+          ${q.explanation ? `<div class="rev-exp">${esc(q.explanation)}</div>` : ""}</div>`;
+      }).join("");
+
+      const pct = state.autoTotal ? Math.round(state.correct / state.autoTotal * 100) : null;
       const isChild = window.Family && window.Family.role && window.Family.role() === "child";
-      doneEl.innerHTML = `<p class="quiz-submitted">✓ Submitted &amp; marked complete.${isChild ? ` Your parent can see it now. <a href="#/parents">← Back to My learning</a>` : ""}</p>`;
+      doneEl.innerHTML = `
+        <p class="quiz-submitted">✓ Submitted &amp; marked complete${pct != null ? ` — scored ${state.correct}/${state.autoTotal} (${pct}%)` : ""}.${isChild ? ` Your parent can see it now. <a href="#/parents">← Back to My learning</a>` : ""}</p>
+        <details class="rev-panel" open><summary>📋 Review your answers ${wrong.length ? `· ${wrong.length} to revisit` : "· all correct! 🎉"}</summary>${rows}</details>`;
+      doneEl.scrollIntoView({ behavior: "smooth", block: "nearest" });
+
+      if (isChild && window.Family && window.Family.syncQuizResult) {
+        window.Family.syncQuizResult(ctx.s, ctx.t, ctx.i, { score: pct, correct: state.correct, total: state.autoTotal, wrong });
+      }
     });
   }
 
@@ -602,7 +637,7 @@
           if (j === q.answer) opt.classList.add("was-answer");
           if (j === chosen && !right) opt.classList.add("incorrect");
         });
-        resolveAuto(right);
+        resolveAuto(right, q.options[chosen]);
       });
     }
 
@@ -621,7 +656,7 @@
         const correctIdx = q.answer ? 0 : 1;
         opts[correctIdx].classList.add("was-answer");
         if (!right) opts[chosen ? 0 : 1].classList.add("incorrect");
-        resolveAuto(right);
+        resolveAuto(right, chosen ? "True" : "False");
       });
     }
 
@@ -636,7 +671,7 @@
         const right = numericMatch(val, q.answer);
         input.disabled = true;
         input.style.borderColor = right ? "var(--good)" : "var(--bad)";
-        resolveAuto(right);
+        resolveAuto(right, val);
       });
       input.addEventListener("keydown", e => { if (e.key === "Enter") check.click(); });
     }
@@ -667,7 +702,8 @@
           row.classList.add(ok ? "correct" : "incorrect");
           sel.disabled = true;
         });
-        resolveAuto(allRight);
+        const yourPairs = [...rows].map((row, r) => `${q.pairs[r][0]} → ${row.querySelector("select").value || "—"}`).join("; ");
+        resolveAuto(allRight, yourPairs);
       });
     }
 
@@ -684,10 +720,11 @@
       });
     }
 
-    function resolveAuto(right) {
+    function resolveAuto(right, your) {
       lock();
       state.answered++; state.checkedAuto++;
       if (right) state.correct++;
+      state.results[i] = { n: i + 1, q: q.q, type: q.type, correct: right, your: your };
       feedback.className = "feedback show " + (right ? "right" : "wrong");
       feedback.innerHTML = `<strong>${right ? "✓ Correct!" : "✗ Not quite"}</strong>${esc(q.explanation || "")}`;
       const btn = $(".btn-check", actions); if (btn) { btn.disabled = true; btn.style.opacity = ".55"; }

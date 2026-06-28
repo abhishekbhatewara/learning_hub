@@ -198,6 +198,21 @@
     }
   }
 
+  // Store a quiz result breakdown (score + which questions were wrong) so the
+  // parent dashboard can show exactly what to review.
+  async function syncQuizResult(s, t, i, detail) {
+    if (!SB || role() !== "child" || !childAssignments.length) return;
+    const key = `${s}|${t}|${i}`;
+    for (const a of childAssignments) {
+      if ((a.items || []).some(it => it.s === s && it.t === t && it.i === i)) {
+        await SB.from("assignment_progress").upsert(
+          { assignment_id: a.id, child_id: state.user.id, item_key: key, status: "done", score: detail.score, details: detail },
+          { onConflict: "assignment_id,item_key" }
+        );
+      }
+    }
+  }
+
   // ---- views ----
   function isChildView() { return state.profile && state.profile.role === "child"; }
   function role() { return state.profile ? state.profile.role : null; }
@@ -468,7 +483,12 @@
         const st = p?.status === "done" ? "done" : p?.status === "in_progress" ? "in_progress" : "not_started";
         const lbl = st === "done" ? "✓ done" : st === "in_progress" ? "… started" : "not started";
         const score = p?.score != null ? ` · ${p.score}%` : "";
-        return `<div class="assign-item ${st}"><span>${esc(objText(it.s, it.t, it.i))}</span><span class="assign-item-st">${lbl}${score}</span></div>`;
+        const wrong = p?.details?.wrong || [];
+        const wrongBlock = wrong.length
+          ? `<details class="assign-wrong"><summary>${wrong.length} question${wrong.length === 1 ? "" : "s"} to review</summary>
+              <ul>${wrong.map(w => `<li>Q${w.n}. ${esc(w.q)}</li>`).join("")}</ul></details>`
+          : "";
+        return `<div class="assign-item-wrap"><div class="assign-item ${st}"><span>${esc(objText(it.s, it.t, it.i))}</span><span class="assign-item-st">${lbl}${score}</span></div>${wrongBlock}</div>`;
       }).join("");
       return `<div class="assign-card">
         <div class="assign-top"><strong>${esc(a.title)}</strong> <span class="muted">→ ${esc(nameOf[a.child_id] || "child")}</span>
@@ -613,5 +633,5 @@
   if (isAuthCallback()) handleCallback();
   else if (hasStoredSession()) init().then(() => refresh()).catch(() => {});
 
-  window.Family = { mount, syncProgress, navInfo, role };
+  window.Family = { mount, syncProgress, syncQuizResult, navInfo, role };
 })();

@@ -392,6 +392,25 @@ textarea.short-input:focus { outline: none; border-color: var(--brand); }
 .quiz-finish[hidden] { display: none; }
 .quiz-finish-hint { font-size: .85rem; }
 .quiz-submitted { width: 100%; margin: .4rem 0 0; font-weight: 600; color: var(--good); }
+/* answer review panel */
+.rev-panel { width: 100%; margin-top: 1rem; border: 1px solid var(--line); border-radius: var(--radius-sm); padding: .4rem 1rem 1rem; background: var(--surface); }
+.rev-panel summary { cursor: pointer; font-weight: 600; padding: .6rem 0; }
+.rev-q { border-left: 3px solid var(--line); padding: .5rem .8rem; margin: .6rem 0; border-radius: 0 8px 8px 0; background: var(--surface-2); }
+.rev-q.ok { border-left-color: var(--good); }
+.rev-q.bad { border-left-color: var(--bad); }
+.rev-q.written { border-left-color: var(--brand); }
+.rev-qh { display: flex; justify-content: space-between; font-size: .78rem; font-weight: 700; color: var(--muted); }
+.rev-q.ok .rev-mark { color: var(--good); }
+.rev-q.bad .rev-mark { color: var(--bad); }
+.rev-qtext { font-weight: 600; margin: .25rem 0; }
+.rev-your { font-size: .9rem; color: var(--ink-soft); }
+.rev-ans { font-size: .9rem; color: #15803d; font-weight: 600; margin-top: .2rem; }
+.rev-exp { font-size: .85rem; color: var(--muted); font-style: italic; margin-top: .3rem; }
+/* parent dashboard: wrong-questions per item */
+.assign-wrong { margin: .1rem 0 .5rem 1.6rem; }
+.assign-wrong summary { cursor: pointer; font-size: .8rem; color: var(--bad); }
+.assign-wrong ul { margin: .3rem 0 0; padding-left: 1.2rem; font-size: .85rem; color: var(--ink-soft); }
+.assign-wrong li { margin: .2rem 0; }
 
 /* ===== Progress tracking ===== */
 .prog-bar { position: relative; height: 18px; background: var(--surface-2); border-radius: 999px; overflow: hidden;
