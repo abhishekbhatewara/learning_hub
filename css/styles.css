@@ -600,6 +600,16 @@ textarea.short-input:focus { outline: none; border-color: var(--brand); }
 
 .admin-card { border-color: #c4b5fd; background: linear-gradient(180deg, #faf5ff, var(--surface)); }
 .rb-libcheck { display: inline-flex; align-items: center; gap: .5rem; font-weight: 600; color: var(--ink-soft); cursor: pointer; }
+.family-field textarea { padding: .6rem .7rem; font: inherit; border: 1.5px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); resize: vertical; }
+.rb-ai-bar { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; margin: .2rem 0; }
+.rb-ai-bar .muted { font-size: .82rem; }
+.rb-ai { border: 1px solid #ddd6fe; background: linear-gradient(135deg, #eef2ff, #f5f3ff); border-radius: var(--radius-sm); padding: .8rem 1rem; }
+.rb-ai[hidden] { display: none; }
+.rb-ai-note { margin: 0 0 .6rem; font-weight: 600; color: #5b21b6; }
+.rb-ai-list { display: flex; flex-direction: column; gap: .5rem; }
+.rb-ai-item { display: flex; gap: .6rem; align-items: flex-start; padding: .55rem .7rem; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-sm); font-size: .9rem; cursor: pointer; }
+.rb-ai-item input { margin-top: .25rem; }
+.rb-ai-item strong { font-size: .8rem; color: var(--brand); }
 .rb-book[hidden], .rb-libfields[hidden] { display: none; }
 
 /* assignment builder + cards */

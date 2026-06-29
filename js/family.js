@@ -160,6 +160,25 @@
     }
     return "(objective)";
   }
+  // flat catalog of every objective for the AI placement helper
+  function objCatalog() {
+    const out = [];
+    subjectsList().forEach(s => s.grades.forEach(g => g.topics.forEach(t =>
+      (t.objectives || []).forEach((o, i) => { if (typeof o === "object") out.push({ id: `${s.id}|${t.id}|${i}`, text: o.text }); }))));
+    return out;
+  }
+  function objCtxOf(id) {
+    const [s, t, i] = id.split("|");
+    const sub = subjectsList().find(x => x.id === s); if (!sub) return null;
+    for (const g of sub.grades) {
+      const tp = g.topics.find(x => x.id === t);
+      if (tp && tp.objectives[+i] != null) {
+        const o = tp.objectives[+i];
+        return { s, t, i: +i, text: typeof o === "object" ? o.text : o, ctx: `${sub.name} · ${g.name} · ${tp.title}` };
+      }
+    }
+    return null;
+  }
 
   // ---- assignments data ----
   async function listParentAssignments() {
@@ -444,7 +463,14 @@
           <label class="family-field">Author<input id="rb-author" /></label>
           <label class="family-field">Chapter reference<input id="rb-chapter" placeholder="e.g. Ch 3" /></label>
         </div>
-        <h4 style="margin:.6rem 0 0">Add to objectives</h4>
+        <label class="family-field">What does this cover? <small class="muted">(a sentence helps the AI place it well)</small>
+          <textarea id="rb-desc" rows="2" placeholder="e.g. A short video on adding and subtracting powers with the same base"></textarea></label>
+        <div class="rb-ai-bar">
+          <button class="btn btn-ghost" type="button" id="rb-ai-btn">🤖 Suggest objectives &amp; Library with AI</button>
+          <span class="muted">Don't know where it fits? Let AI read the curriculum and suggest.</span>
+        </div>
+        <div id="rb-ai" class="rb-ai" hidden></div>
+        <h4 style="margin:.6rem 0 0">Objectives <small class="muted">(AI suggestions land here; tweak as needed)</small></h4>
         <div class="ab-row">
           <label class="family-field">Subject<select id="rb-subject">${subs.map(s => `<option value="${esc(s.id)}">${esc(s.name)}</option>`).join("")}</select></label>
           <label class="family-field">Grade<select id="rb-grade"></select></label>
@@ -493,6 +519,52 @@
     subjSel.addEventListener("change", () => { fillGrades(); fillObjectives(); });
     gradeSel.addEventListener("change", fillObjectives);
     fillGrades(); fillObjectives();
+
+    // ---- AI placement helper ----
+    function syncNavCheckbox(id, on) {
+      const navCb = document.querySelector(`#rb-objectives input[data-key="${id}"]`);
+      if (navCb) navCb.checked = on;
+    }
+    function showSuggestions(box, res) {
+      const sug = (res.objectives || []).map(o => { const c = objCtxOf(o.id); return c ? { ...c, id: o.id, reason: o.reason } : null; }).filter(Boolean);
+      sug.forEach(o => resSel.set(o.id, { s: o.s, t: o.t, i: o.i }));
+      document.getElementById("rb-count").textContent = resSel.size;
+      if (res.library && res.library.recommend) {
+        document.getElementById("rb-lib").checked = true;
+        document.querySelector(".rb-libfields").hidden = false;
+        if (res.library.module) document.getElementById("rb-libmod").value = res.library.module;
+        if (res.library.subject) document.getElementById("rb-libsub").value = res.library.subject;
+      }
+      box.innerHTML = `
+        ${res.note ? `<p class="rb-ai-note">🤖 ${esc(res.note)}</p>` : ""}
+        ${sug.length ? `<p class="muted">Suggested objectives — untick any that don't fit:</p>
+          <div class="rb-ai-list">${sug.map(o => `
+            <label class="rb-ai-item"><input type="checkbox" data-aikey="${esc(o.id)}" checked />
+              <span><strong>${esc(o.ctx)}</strong><br>${esc(o.text)}${o.reason ? `<br><em class="muted">${esc(o.reason)}</em>` : ""}</span></label>`).join("")}</div>`
+          : `<p class="muted">No single objective is a strong fit${res.library && res.library.recommend ? " — I've ticked “Add to the Library” instead." : ". Consider the Library, or pick objectives manually below."}</p>`}`;
+      box.querySelectorAll("[data-aikey]").forEach(cb => cb.addEventListener("change", () => {
+        const id = cb.dataset.aikey, p = id.split("|");
+        if (cb.checked) resSel.set(id, { s: p[0], t: p[1], i: +p[2] }); else resSel.delete(id);
+        document.getElementById("rb-count").textContent = resSel.size;
+        syncNavCheckbox(id, cb.checked);
+      }));
+    }
+    document.getElementById("rb-ai-btn").addEventListener("click", async () => {
+      const box = document.getElementById("rb-ai"); box.hidden = false;
+      const v = id => (document.getElementById(id).value || "").trim();
+      const title = v("rb-title"), desc = v("rb-desc");
+      if (!title && !desc) { box.innerHTML = `<p class="muted">Add a title or a short description first, then I can place it.</p>`; return; }
+      box.innerHTML = `<p class="muted">🤖 Reading the curriculum and finding the best fit…</p>`;
+      const resource = { title, description: desc, type: v("rb-type"), url: v("rb-url") };
+      const modules = ((window.CLASSROOM && window.CLASSROOM.meta && window.CLASSROOM.meta.modules) || []).map(m => m.name);
+      let res;
+      try {
+        const { data, error } = await SB.functions.invoke("suggest-placement", { body: { resource, objectives: objCatalog(), modules } });
+        res = error ? { error: error.message } : data;
+      } catch (e) { res = { error: String(e) }; }
+      if (!res || res.error) { box.innerHTML = `<p class="family-msg">⚠️ ${esc((res && res.error) || "AI unavailable")}. You can still pick objectives manually below.</p>`; return; }
+      showSuggestions(box, res);
+    });
 
     document.getElementById("rb-form").addEventListener("submit", async e => {
       e.preventDefault();
