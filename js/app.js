@@ -315,11 +315,11 @@
     return { key: "new", label: "Not started" };
   }
   function objRail(t, curI) {
-    return `<div class="ws-rail" aria-label="Objectives in this topic">${t.objectives.map((o, i) => {
+    return `<div class="lo-rail" aria-label="Objectives in this topic">${t.objectives.map((o, i) => {
       const st = objStatus(t.id, i);
       const cls = i === curI ? "cur" : st.key === "completed" ? "done" : "";
       const mark = st.key === "completed" && i !== curI ? "✓" : (i + 1);
-      return `<a class="ws-dot ${cls}" href="${sb()}/topic/${t.id}/obj/${i}/resources" title="Objective ${i + 1}${st.key === "completed" ? " · completed" : ""}">${mark}</a>`;
+      return `<a class="lo-dot ${cls}" href="${sb()}/topic/${t.id}/obj/${i}/resources" title="Objective ${i + 1}${st.key === "completed" ? " · completed" : ""}">${mark}</a>`;
     }).join("")}</div>`;
   }
 
@@ -330,25 +330,25 @@
     const nRes = (o.resources || []).length, nQuiz = (o.quiz || []).length, mins = estMinutes(o);
     const last = t.objectives.length - 1;
     const pn = (idx, label) => idx < 0 || idx > last
-      ? `<span class="ws-pn disabled">${label}</span>`
-      : `<a class="ws-pn" href="${sb()}/topic/${t.id}/obj/${idx}/${here}">${label}</a>`;
+      ? `<span class="lo-pn disabled">${label}</span>`
+      : `<a class="lo-pn" href="${sb()}/topic/${t.id}/obj/${idx}/${here}">${label}</a>`;
     return `
       <nav class="breadcrumb">${crumbBase()} › <a href="${sb()}/grade/${g.id}">${esc(g.name)}</a> › <a href="${sb()}/topic/${t.id}">${esc(t.title)}</a> › <span>Objective ${i + 1}</span></nav>
-      <section class="ws-head" style="--accent:${g.color}">
-        <div class="ws-head-row">
+      <section class="lo-head" style="--accent:${g.color}">
+        <div class="lo-head-row">
           <span class="obj-num lg" style="background:${g.color}">${i + 1}</span>
-          <div class="ws-head-main">
+          <div class="lo-head-main">
             <span class="card-eyebrow" style="color:${g.color}">${esc(g.name)} · ${esc(t.title)}</span>
-            <div class="ws-head-status">
-              <span class="ws-pos">Objective ${i + 1} of ${t.objectives.length}</span>
+            <div class="lo-head-status">
+              <span class="lo-pos">Objective ${i + 1} of ${t.objectives.length}</span>
               <span class="mastery-chip ${st.key}">${st.label}</span>
             </div>
           </div>
         </div>
-        <h1 class="ws-obj-title">${esc(o.text)}</h1>
+        <h1 class="lo-obj-title">${esc(o.text)}</h1>
         ${objRail(t, i)}
-        <div class="ws-meta"><span>⏱ ~${mins} min</span><span>📚 ${nRes} resource${nRes === 1 ? "" : "s"}</span><span>📝 ${nQuiz} question${nQuiz === 1 ? "" : "s"}</span></div>
-        <div class="ws-prevnext">${pn(i - 1, "← Previous")}<a class="ws-pn mid" href="${sb()}/topic/${t.id}">All objectives</a>${pn(i + 1, "Next →")}</div>
+        <div class="lo-meta"><span>⏱ ~${mins} min</span><span>📚 ${nRes} resource${nRes === 1 ? "" : "s"}</span><span>📝 ${nQuiz} question${nQuiz === 1 ? "" : "s"}</span></div>
+        <div class="lo-prevnext">${pn(i - 1, "← Previous")}<a class="lo-pn mid" href="${sb()}/topic/${t.id}">All objectives</a>${pn(i + 1, "Next →")}</div>
       </section>`;
   }
 
@@ -356,10 +356,10 @@
   function objFlow(t, i, here) {
     const quizDone = objStatus(t.id, i).key === "completed";
     const step = (key, n, title, sub) =>
-      `<a class="ws-step ${here === key ? "active" : ""} ${key === "quiz" && quizDone ? "done" : ""}" href="${sb()}/topic/${t.id}/obj/${i}/${key}">
-        <span class="ws-step-n">${key === "quiz" && quizDone ? "✓" : n}</span>
-        <span class="ws-step-tx"><strong>${title}</strong><small>${sub}</small></span></a>`;
-    return `<div class="ws-flow">${step("resources", "1", "Learn", "Watch, read &amp; explore")}<span class="ws-flow-arrow">→</span>${step("quiz", "2", "Quiz", "Check your understanding")}</div>`;
+      `<a class="lo-step ${here === key ? "active" : ""} ${key === "quiz" && quizDone ? "done" : ""}" href="${sb()}/topic/${t.id}/obj/${i}/${key}">
+        <span class="lo-step-n">${key === "quiz" && quizDone ? "✓" : n}</span>
+        <span class="lo-step-tx"><strong>${title}</strong><small>${sub}</small></span></a>`;
+    return `<div class="lo-flow">${step("resources", "1", "Learn", "Watch, read &amp; explore")}<span class="lo-flow-arrow">→</span>${step("quiz", "2", "Quiz", "Check your understanding")}</div>`;
   }
 
   // a subtle secondary-actions row (mark-complete + save + hint slots)
@@ -382,11 +382,11 @@
       ${objNav(t, g, +i, "resources")}
       ${objFlow(t, +i, "resources")}
       ${objControls()}
-      <h2 class="section-title ws-step1">Step 1 · Learn</h2>
+      <h2 class="section-title lo-step1">Step 1 · Learn</h2>
       <p class="obj-intro">Work through these free resources to build this skill — mix watching, reading and interacting. Open each one; we'll tick them as you go.</p>
       <div class="res-list">${cards || `<p class="empty">No resources yet for this objective.</p>`}</div>
-      <div class="ws-cta">
-        <p class="ws-cta-lead">Feel ready? Check your understanding.</p>
+      <div class="lo-cta">
+        <p class="lo-cta-lead">Feel ready? Check your understanding.</p>
         <a class="btn btn-primary btn-lg" href="${sb()}/topic/${t.id}/obj/${+i}/quiz">📝 Take the quiz for this objective →</a>
       </div>
     </div>`;
@@ -402,7 +402,7 @@
       ${objNav(t, g, +i, "quiz")}
       ${objFlow(t, +i, "quiz")}
       ${objControls()}
-      <h2 class="section-title ws-step2">Step 2 · Quiz</h2>
+      <h2 class="section-title lo-step2">Step 2 · Quiz</h2>
       ${renderQuizShell(o.quiz || [])}
     </div>`;
   }
