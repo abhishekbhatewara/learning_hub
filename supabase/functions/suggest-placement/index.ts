@@ -17,12 +17,53 @@ function json(body: unknown, status = 200) {
   return new Response(JSON.stringify(body), { status, headers: { ...cors, "Content-Type": "application/json" } });
 }
 
+// Read what the resource is actually about, server-side (no browser CORS limits).
+async function fetchContent(url: string): Promise<string> {
+  if (!url) return "";
+  const withTimeout = (p: Promise<Response>, ms = 8000) => {
+    const c = new AbortController();
+    const t = setTimeout(() => c.abort(), ms);
+    return { signal: c.signal, done: () => clearTimeout(t) };
+  };
+  try {
+    // YouTube: get the real video title + channel via oEmbed (no API key)
+    if (/youtube\.com|youtu\.be/i.test(url)) {
+      const o = await fetch(`https://www.youtube.com/oembed?url=${encodeURIComponent(url)}&format=json`);
+      if (o.ok) { const j = await o.json(); return `Video title: "${j.title}"${j.author_name ? ` — channel: ${j.author_name}` : ""}`; }
+    }
+    const w = withTimeout(fetch(url, {
+      headers: { "User-Agent": "Mozilla/5.0 (compatible; LearningHubBot/1.0)", "Accept": "text/html,*/*" },
+      redirect: "follow",
+    }));
+    const r = await fetch(url, { headers: { "User-Agent": "Mozilla/5.0 (compatible; LearningHubBot/1.0)", "Accept": "text/html,*/*" }, redirect: "follow", signal: w.signal });
+    w.done();
+    const ct = r.headers.get("content-type") || "";
+    if (!r.ok || !/html|text/i.test(ct)) return "";
+    const html = (await r.text()).slice(0, 200000);
+    const pick = (re: RegExp) => { const m = html.match(re); return m ? m[1].replace(/\s+/g, " ").trim() : ""; };
+    const title = pick(/<title[^>]*>([\s\S]{1,220}?)<\/title>/i);
+    const ogTitle = pick(/<meta[^>]+property=["']og:title["'][^>]+content=["']([^"']{1,220})["']/i);
+    const desc = pick(/<meta[^>]+name=["']description["'][^>]+content=["']([^"']{1,500})["']/i)
+      || pick(/<meta[^>]+property=["']og:description["'][^>]+content=["']([^"']{1,500})["']/i);
+    const body = html
+      .replace(/<script[\s\S]*?<\/script>/gi, " ").replace(/<style[\s\S]*?<\/style>/gi, " ")
+      .replace(/<[^>]+>/g, " ").replace(/&[a-z#0-9]+;/gi, " ").replace(/\s+/g, " ").trim();
+    return [
+      title && `Title: ${title}`,
+      ogTitle && ogTitle !== title && `Heading: ${ogTitle}`,
+      desc && `Description: ${desc}`,
+      body && `Page text: ${body.slice(0, 1500)}`,
+    ].filter(Boolean).join("\n");
+  } catch { return ""; }
+}
+
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: cors });
   try {
     if (!OPENROUTER_API_KEY) return json({ error: "OPENROUTER_API_KEY not set", objectives: [] });
     const { resource = {}, objectives = [], modules = [] } = await req.json();
     const catalog = (objectives as { id: string; text: string }[]).map(o => `${o.id} :: ${o.text}`).join("\n");
+    const fetched = await fetchContent(resource.url || "");
 
     const prompt =
 `You help place a free educational resource into a Grades 6-8 curriculum.
@@ -30,9 +71,9 @@ Deno.serve(async (req) => {
 RESOURCE
 - Title: ${resource.title || "(none)"}
 - Type: ${resource.type || "link"}
-- What it covers: ${resource.description || "(not provided — infer from the title)"}
+- Admin's note: ${resource.description || "(none)"}
 - URL: ${resource.url || "(none)"}
-
+${fetched ? `\nCONTENT READ FROM THE RESOURCE (use this as the main signal for what it teaches):\n${fetched}\n` : ""}
 LEARNING OBJECTIVES (each line is "id :: objective text"):
 ${catalog}
 

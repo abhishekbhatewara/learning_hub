@@ -463,8 +463,8 @@
           <label class="family-field">Author<input id="rb-author" /></label>
           <label class="family-field">Chapter reference<input id="rb-chapter" placeholder="e.g. Ch 3" /></label>
         </div>
-        <label class="family-field">What does this cover? <small class="muted">(a sentence helps the AI place it well)</small>
-          <textarea id="rb-desc" rows="2" placeholder="e.g. A short video on adding and subtracting powers with the same base"></textarea></label>
+        <label class="family-field">What does this cover? <small class="muted">(optional — the AI also reads the link itself)</small>
+          <textarea id="rb-desc" rows="2" placeholder="Optional extra context — the AI reads the resource, but a hint helps"></textarea></label>
         <div class="rb-ai-bar">
           <button class="btn btn-ghost" type="button" id="rb-ai-btn">🤖 Suggest objectives &amp; Library with AI</button>
           <span class="muted">Don't know where it fits? Let AI read the curriculum and suggest.</span>
@@ -554,7 +554,7 @@
       const v = id => (document.getElementById(id).value || "").trim();
       const title = v("rb-title"), desc = v("rb-desc");
       if (!title && !desc) { box.innerHTML = `<p class="muted">Add a title or a short description first, then I can place it.</p>`; return; }
-      box.innerHTML = `<p class="muted">🤖 Reading the curriculum and finding the best fit…</p>`;
+      box.innerHTML = `<p class="muted">🤖 Reading the resource and matching it to the curriculum…</p>`;
       const resource = { title, description: desc, type: v("rb-type"), url: v("rb-url") };
       const modules = ((window.CLASSROOM && window.CLASSROOM.meta && window.CLASSROOM.meta.modules) || []).map(m => m.name);
       let res;
