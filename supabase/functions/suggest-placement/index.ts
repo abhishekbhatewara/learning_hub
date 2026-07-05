@@ -20,23 +20,19 @@ function json(body: unknown, status = 200) {
 // Read what the resource is actually about, server-side (no browser CORS limits).
 async function fetchContent(url: string): Promise<string> {
   if (!url) return "";
-  const withTimeout = (p: Promise<Response>, ms = 8000) => {
-    const c = new AbortController();
-    const t = setTimeout(() => c.abort(), ms);
-    return { signal: c.signal, done: () => clearTimeout(t) };
-  };
   try {
     // YouTube: get the real video title + channel via oEmbed (no API key)
     if (/youtube\.com|youtu\.be/i.test(url)) {
       const o = await fetch(`https://www.youtube.com/oembed?url=${encodeURIComponent(url)}&format=json`);
       if (o.ok) { const j = await o.json(); return `Video title: "${j.title}"${j.author_name ? ` — channel: ${j.author_name}` : ""}`; }
     }
-    const w = withTimeout(fetch(url, {
+    const c = new AbortController();
+    const t = setTimeout(() => c.abort(), 8000);
+    const r = await fetch(url, {
       headers: { "User-Agent": "Mozilla/5.0 (compatible; LearningHubBot/1.0)", "Accept": "text/html,*/*" },
-      redirect: "follow",
-    }));
-    const r = await fetch(url, { headers: { "User-Agent": "Mozilla/5.0 (compatible; LearningHubBot/1.0)", "Accept": "text/html,*/*" }, redirect: "follow", signal: w.signal });
-    w.done();
+      redirect: "follow", signal: c.signal,
+    });
+    clearTimeout(t);
     const ct = r.headers.get("content-type") || "";
     if (!r.ok || !/html|text/i.test(ct)) return "";
     const html = (await r.text()).slice(0, 200000);
