@@ -15,6 +15,7 @@
   let progressChannel = null;   // realtime subscription (parent dashboard)
   const builderSel = new Map(); // assignment builder selection: "s|t|i" -> {s,t,i}
   const resSel = new Map();     // admin resource-builder objective targets
+  let lastUid = null;           // last signed-in user id (to ignore token-refresh churn)
   let state = { user: null, profile: null, view: "loading", msg: "", pendingEmail: "", isAdmin: false };
 
   function esc(x) { return String(x == null ? "" : x).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
@@ -30,7 +31,12 @@
           // it works whether the token comes back in the #hash or a ?code= query.
           auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: false }
         });
-        SB.auth.onAuthStateChange(() => { refresh(); });
+        // Only re-render when the signed-in USER changes — ignore the frequent
+        // TOKEN_REFRESHED / focus events that would otherwise wipe a form in progress.
+        SB.auth.onAuthStateChange((_event, session) => {
+          const uid = (session && session.user && session.user.id) || null;
+          if (uid !== lastUid) refresh();
+        });
         return SB;
       });
     return loading;
@@ -44,6 +50,7 @@
   async function refresh() {
     const { data: { user } } = await SB.auth.getUser();
     state.user = user || null;
+    lastUid = user ? user.id : null;
     state.profile = user ? await loadProfile(user.id) : null;
     if (!state.user) state.view = "auth";
     else if (!state.profile) state.view = "onboard";
@@ -466,8 +473,8 @@
         <label class="family-field">What does this cover? <small class="muted">(optional — the AI also reads the link itself)</small>
           <textarea id="rb-desc" rows="2" placeholder="Optional extra context — the AI reads the resource, but a hint helps"></textarea></label>
         <div class="rb-ai-bar">
-          <button class="btn btn-ghost" type="button" id="rb-ai-btn">🤖 Suggest objectives &amp; Library with AI</button>
-          <span class="muted">Don't know where it fits? Let AI read the curriculum and suggest.</span>
+          <button class="btn btn-ghost" type="button" id="rb-ai-btn">🤖 Read the link &amp; auto-fill with AI</button>
+          <span class="muted">Paste a link above, then let AI fill the title, source, description &amp; objectives.</span>
         </div>
         <div id="rb-ai" class="rb-ai" hidden></div>
         <h4 style="margin:.6rem 0 0">Objectives <small class="muted">(AI suggestions land here; tweak as needed)</small></h4>
@@ -526,6 +533,11 @@
       if (navCb) navCb.checked = on;
     }
     function showSuggestions(box, res) {
+      // autofill metadata the admin left blank (they can still edit)
+      const fillIfEmpty = (id, v) => { const el = document.getElementById(id); if (el && v && !el.value.trim()) el.value = v; };
+      fillIfEmpty("rb-title", res.title);
+      fillIfEmpty("rb-provider", res.provider);
+      fillIfEmpty("rb-desc", res.description);
       const sug = (res.objectives || []).map(o => { const c = objCtxOf(o.id); return c ? { ...c, id: o.id, reason: o.reason } : null; }).filter(Boolean);
       sug.forEach(o => resSel.set(o.id, { s: o.s, t: o.t, i: o.i }));
       document.getElementById("rb-count").textContent = resSel.size;

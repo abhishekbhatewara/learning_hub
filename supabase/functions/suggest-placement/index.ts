@@ -106,12 +106,16 @@ LEARNING OBJECTIVES (each line is "id :: objective text"):
 ${catalog}
 
 TASK
-Pick ONLY the objectives this resource genuinely helps a student achieve — be strict and selective (0 to 5; fewer and more precise is better). Use the exact ids.
-If the resource is broad, general-interest or enrichment and does not target specific objectives, return an empty objectives list.
-Separately decide whether it also belongs in the general browsable Library; if yes, choose the best module from: ${(modules as string[]).join(", ") || "Science, Math, General Learning"} and a short subject label (e.g. "Biology").
+1. Suggest clean, student-facing metadata for this resource:
+   - "title": a concise title (max ~12 words; prefer the real title of the video/page)
+   - "provider": the creator or source (e.g. "Khan Academy", "TED-Ed", the YouTube channel name, or the website name)
+   - "description": ONE short sentence describing what it covers
+2. Pick ONLY the objectives this resource genuinely helps a student achieve — be strict and selective (0 to 5; fewer and more precise is better). Use the exact ids.
+   If the resource is broad, general-interest or enrichment and does not target specific objectives, return an empty objectives list.
+3. Decide whether it also belongs in the general browsable Library; if yes, choose the best module from: ${(modules as string[]).join(", ") || "Science, Math, General Learning"} and a short subject label (e.g. "Biology").
 
 Respond with ONLY valid minified JSON, no markdown fences:
-{"objectives":[{"id":"<exact id>","reason":"<one short sentence>"}],"library":{"recommend":<true|false>,"module":"<module>","subject":"<short label>"},"note":"<one short overall sentence>"}`;
+{"title":"<title>","provider":"<provider>","description":"<one sentence>","objectives":[{"id":"<exact id>","reason":"<one short sentence>"}],"library":{"recommend":<true|false>,"module":"<module>","subject":"<short label>"},"note":"<one short overall sentence>"}`;
 
     const r = await fetch("https://openrouter.ai/api/v1/chat/completions", {
       method: "POST",
@@ -137,6 +141,9 @@ Respond with ONLY valid minified JSON, no markdown fences:
     if (!parsed) return json({ error: "could not parse AI response", raw: content, objectives: [] });
 
     return json({
+      title: parsed.title || "",
+      provider: parsed.provider || "",
+      description: parsed.description || "",
       objectives: Array.isArray(parsed.objectives) ? parsed.objectives : [],
       library: parsed.library || { recommend: false },
       note: parsed.note || "",
