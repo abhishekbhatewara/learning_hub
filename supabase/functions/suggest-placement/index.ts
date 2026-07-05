@@ -85,13 +85,30 @@ async function fetchContent(url: string): Promise<string> {
   } catch { return ""; }
 }
 
+// Lexical pre-filter: with 400+ objectives the model gets distracted, so we first
+// shortlist the objectives whose words overlap the resource content, then let the
+// model choose only from that focused set. Huge precision win.
+const STOP = new Set(("a an and are as at be by for from how in into is it its of on or over per the their them they this to via with what when where which why you your about between within both not but has had have was were able each end off use used using list recall draw label state name give explain describe identify relate compare distinguish apply outline classify sequence discuss link predict write find tell order read evaluate solve plan select justify carry interpret define calculate").split(" "));
+function tok(s: string): string[] { return ((s || "").toLowerCase().match(/[a-z][a-z]{2,}/g) || []).filter(t => !STOP.has(t)); }
+function preselect(query: string, objectives: { id: string; text: string }[], k: number) {
+  const q = new Set(tok(query));
+  if (q.size === 0) return objectives;
+  const scored = objectives
+    .map(o => { const ot = new Set(tok(o.text)); let sc = 0; ot.forEach(t => { if (q.has(t)) sc++; }); return { o, sc }; })
+    .filter(x => x.sc > 0)
+    .sort((a, b) => b.sc - a.sc);
+  return scored.length ? scored.slice(0, k).map(x => x.o) : objectives;
+}
+
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: cors });
   try {
     if (!OPENROUTER_API_KEY) return json({ error: "OPENROUTER_API_KEY not set", objectives: [] });
     const { resource = {}, objectives = [], modules = [] } = await req.json();
-    const catalog = (objectives as { id: string; text: string }[]).map(o => `${o.id} :: ${o.text}`).join("\n");
     const fetched = await fetchContent(resource.url || "");
+    const query = [resource.title, resource.description, fetched].filter(Boolean).join(" ");
+    const shortlist = preselect(query, objectives as { id: string; text: string }[], 45);
+    const catalog = shortlist.map(o => `${o.id} :: ${o.text}`).join("\n");
 
     const prompt =
 `You help place a free educational resource into a Grades 6-8 curriculum.
