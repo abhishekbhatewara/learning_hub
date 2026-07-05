@@ -17,15 +17,47 @@ function json(body: unknown, status = 200) {
   return new Response(JSON.stringify(body), { status, headers: { ...cors, "Content-Type": "application/json" } });
 }
 
+function videoId(url: string): string {
+  const m = url.match(/(?:v=|youtu\.be\/|\/embed\/|\/shorts\/)([A-Za-z0-9_-]{11})/);
+  return m ? m[1] : "";
+}
+// YouTube: title + channel (oEmbed) plus the video's own description + topic tags
+// from the watch page. (Direct transcript scraping is blocked by YouTube now —
+// caption URLs return empty server-side — so we use the creator's description,
+// which for educational videos describes what's taught.)
+async function fetchYouTube(url: string): Promise<string> {
+  let out = "";
+  try {
+    const o = await fetch(`https://www.youtube.com/oembed?url=${encodeURIComponent(url)}&format=json`);
+    if (o.ok) { const j = await o.json(); out = `Video title: "${j.title}"${j.author_name ? ` — channel: ${j.author_name}` : ""}`; }
+  } catch { /* ignore */ }
+  try {
+    const id = videoId(url);
+    if (id) {
+      const c = new AbortController();
+      const t = setTimeout(() => c.abort(), 9000);
+      const r = await fetch(`https://www.youtube.com/watch?v=${id}&hl=en`, {
+        headers: { "User-Agent": "Mozilla/5.0 (compatible; LearningHubBot/1.0)", "Accept-Language": "en-US,en;q=0.9" }, signal: c.signal,
+      });
+      clearTimeout(t);
+      const html = await r.text();
+      const pickStr = (re: RegExp) => { const m = html.match(re); if (!m) return ""; try { return JSON.parse('"' + m[1] + '"'); } catch { return m[1]; } };
+      const desc = pickStr(/"shortDescription":"((?:[^"\\]|\\.)*)"/);
+      const kwM = html.match(/"keywords":\[((?:[^\]])*)\]/);
+      let kw = "";
+      if (kwM) { try { kw = JSON.parse("[" + kwM[1] + "]").join(", "); } catch { kw = kwM[1].replace(/"/g, ""); } }
+      if (desc) out += `\nVideo description: ${desc.slice(0, 1500)}`;
+      if (kw) out += `\nTopic tags: ${kw.slice(0, 300)}`;
+    }
+  } catch { /* best-effort */ }
+  return out;
+}
+
 // Read what the resource is actually about, server-side (no browser CORS limits).
 async function fetchContent(url: string): Promise<string> {
   if (!url) return "";
   try {
-    // YouTube: get the real video title + channel via oEmbed (no API key)
-    if (/youtube\.com|youtu\.be/i.test(url)) {
-      const o = await fetch(`https://www.youtube.com/oembed?url=${encodeURIComponent(url)}&format=json`);
-      if (o.ok) { const j = await o.json(); return `Video title: "${j.title}"${j.author_name ? ` — channel: ${j.author_name}` : ""}`; }
-    }
+    if (/youtube\.com|youtu\.be/i.test(url)) return await fetchYouTube(url);
     const c = new AbortController();
     const t = setTimeout(() => c.abort(), 8000);
     const r = await fetch(url, {
