@@ -212,6 +212,68 @@
     })).error;
   }
 
+  // ---- library items in a child's To-do list ----
+  const TODO_TITLE = "📋 To-do list";
+  // progress key for any assignment item (objective vs library resource)
+  function itemKey(it) { return it.type === "library" ? `lib|${it.url}` : `${it.s}|${it.t}|${it.i}`; }
+
+  // Parent: drop a Library resource into a child's (single) To-do list assignment.
+  async function assignLibraryItem(childId, resource) {
+    const item = { type: "library", url: resource.url, title: resource.title, kind: resource.kind || "reading" };
+    const { data } = await SB.from("assignments").select("id, items")
+      .eq("parent_id", state.user.id).eq("child_id", childId).eq("title", TODO_TITLE).limit(1);
+    if (data && data.length) {
+      const items = data[0].items || [];
+      if (items.some(x => x.type === "library" && x.url === item.url)) return "already"; // no dup
+      items.push(item);
+      const { error } = await SB.from("assignments").update({ items }).eq("id", data[0].id);
+      if (error) throw error;
+    } else {
+      const { error } = await SB.from("assignments").insert({
+        parent_id: state.user.id, child_id: childId, title: TODO_TITLE, note: "Hand-picked resources to go through.", items: [item]
+      });
+      if (error) throw error;
+    }
+    if (document.getElementById("fam-assignments")) renderParentAssignments();
+    return "added";
+  }
+
+  // Parent: modal to choose which linked child gets the resource.
+  async function assignResourcePrompt(resource) {
+    if (role() !== "parent") { alert("Sign in as a parent (in the 👪 Parents area) to add resources to a child's to-do."); return; }
+    const kids = (await listChildren()).filter(k => k.status === "accepted" && k.child_id);
+    if (!kids.length) { alert("Link a child first in the Parents area, then you can add resources to their to-do."); return; }
+    const ov = document.createElement("div");
+    ov.className = "fam-modal-ov";
+    ov.innerHTML = `<div class="fam-modal">
+      <h3>Add to a child's to-do</h3>
+      <p class="muted">${esc(resource.title)}</p>
+      <div class="fam-modal-kids">${kids.map(k => `<button class="btn btn-primary btn-sm" data-kid="${esc(k.child_id)}">${esc(k.childProfile ? (k.childProfile.full_name || k.childProfile.email) : k.child_email)}</button>`).join("")}</div>
+      <p class="fam-modal-msg muted"></p>
+      <button class="btn btn-ghost btn-sm fam-modal-close">Close</button>
+    </div>`;
+    document.body.appendChild(ov);
+    const close = () => ov.remove();
+    ov.querySelector(".fam-modal-close").addEventListener("click", close);
+    ov.addEventListener("click", e => { if (e.target === ov) close(); });
+    ov.querySelectorAll("[data-kid]").forEach(b => b.addEventListener("click", async () => {
+      const msg = ov.querySelector(".fam-modal-msg");
+      ov.querySelectorAll("[data-kid]").forEach(x => x.disabled = true);
+      msg.textContent = "Adding…";
+      try { const r = await assignLibraryItem(b.dataset.kid, resource); msg.textContent = r === "already" ? "Already on their to-do ✓" : "✓ Added to their to-do!"; setTimeout(close, 1000); }
+      catch (e) { msg.textContent = "⚠️ " + (e.message || e); ov.querySelectorAll("[data-kid]").forEach(x => x.disabled = false); }
+    }));
+  }
+
+  // Child: tick/untick a library to-do item.
+  async function toggleLibraryDone(aid, url, done) {
+    await SB.from("assignment_progress").upsert(
+      { assignment_id: aid, child_id: state.user.id, item_key: `lib|${url}`, status: done ? "done" : "not_started" },
+      { onConflict: "assignment_id,item_key" }
+    );
+    renderChildAssignments();
+  }
+
   // Bridge: when a signed-in child completes an objective via the localStorage
   // Progress system, mirror it into assignment_progress so the parent sees it live.
   async function syncProgress(s, t, i) {
@@ -726,12 +788,15 @@
     kids.forEach(k => { if (k.child_id) nameOf[k.child_id] = k.childProfile ? (k.childProfile.full_name || k.childProfile.email) : k.child_email; });
     box.innerHTML = assigns.map(a => {
       const items = a.items || [];
-      const done = items.filter(it => (pmap[a.id] || {})[`${it.s}|${it.t}|${it.i}`]?.status === "done").length;
+      const done = items.filter(it => (pmap[a.id] || {})[itemKey(it)]?.status === "done").length;
       const pct = items.length ? Math.round(done / items.length * 100) : 0;
       const rows = items.map(it => {
-        const p = (pmap[a.id] || {})[`${it.s}|${it.t}|${it.i}`];
+        const p = (pmap[a.id] || {})[itemKey(it)];
         const st = p?.status === "done" ? "done" : p?.status === "in_progress" ? "in_progress" : "not_started";
         const lbl = st === "done" ? "✓ done" : st === "in_progress" ? "… started" : "not started";
+        if (it.type === "library") {
+          return `<div class="assign-item-wrap"><div class="assign-item ${st}"><span>🔗 ${esc(it.title)}</span><span class="assign-item-st">${lbl}</span></div></div>`;
+        }
         const score = p?.score != null ? ` · ${p.score}%` : "";
         const wrong = p?.details?.wrong || [];
         const wrongBlock = wrong.length
@@ -809,14 +874,21 @@
     if (!childAssignments.length) { box.innerHTML = `<p class="muted">No assignments yet. When your parent sets work, it'll appear here.</p>`; return; }
     const pmap = progressMap(await listProgressFor(childAssignments.map(a => a.id)));
     const P = window.Progress;
-    const isDone = (it, p) => p?.status === "done" || (P && P.isDone(it.s, it.t, it.i));
+    const LIB_ICON = { video: "▶", podcast: "🎧", reading: "📄" };
+    const isDone = (it, p) => it.type === "library" ? (p?.status === "done") : (p?.status === "done" || (P && P.isDone(it.s, it.t, it.i)));
     box.innerHTML = childAssignments.map(a => {
       const items = a.items || [];
-      const done = items.filter(it => isDone(it, (pmap[a.id] || {})[`${it.s}|${it.t}|${it.i}`])).length;
+      const done = items.filter(it => isDone(it, (pmap[a.id] || {})[itemKey(it)])).length;
       const pct = items.length ? Math.round(done / items.length * 100) : 0;
       const rows = items.map(it => {
-        const p = (pmap[a.id] || {})[`${it.s}|${it.t}|${it.i}`];
+        const p = (pmap[a.id] || {})[itemKey(it)];
         const d = isDone(it, p);
+        if (it.type === "library") {
+          return `<div class="assign-item lib ${d ? "done" : ""}">
+            <a href="${esc(it.url)}" target="_blank" rel="noopener noreferrer" data-visit="${esc(it.url)}">${LIB_ICON[it.kind] || "🔗"} ${esc(it.title)} ↗</a>
+            <label class="lib-done-check"><input type="checkbox" data-aid="${esc(a.id)}" data-liburl="${esc(it.url)}" ${d ? "checked" : ""}/> Done</label>
+          </div>`;
+        }
         const dest = it.mode === "quiz" ? "quiz" : "resources";
         const modeLbl = it.mode === "both" ? "Read + Quiz" : it.mode === "quiz" ? "Quiz" : "Resources";
         return `<a class="assign-item ${d ? "done" : ""}" href="#/${esc(it.s)}/topic/${esc(it.t)}/obj/${it.i}/${dest}">
@@ -831,6 +903,7 @@
         <div class="assign-items-list">${rows}</div>
       </div>`;
     }).join("");
+    box.querySelectorAll("[data-liburl]").forEach(cb => cb.addEventListener("change", () => toggleLibraryDone(cb.dataset.aid, cb.dataset.liburl, cb.checked)));
   }
 
   // ---- entry point (called by the router) ----
@@ -885,5 +958,5 @@
   if (isAuthCallback()) handleCallback();
   else if (hasStoredSession()) init().then(() => refresh()).catch(() => {});
 
-  window.Family = { mount, syncProgress, syncQuizResult, submitQuiz, navInfo, role };
+  window.Family = { mount, syncProgress, syncQuizResult, submitQuiz, navInfo, role, assignResourcePrompt };
 })();

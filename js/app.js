@@ -538,7 +538,11 @@
         <h4>${esc(r.title)}</h4>
         <div class="res-provider">${esc(r.source || "")}</div>
         ${topicPills ? `<div class="lib-topics">${topicPills}</div>` : ""}
-        <a class="res-open" href="${esc(r.url)}" target="_blank" rel="noopener noreferrer">Open ↗</a>
+        <div class="lib-card-actions">
+          <a class="res-open" href="${esc(r.url)}" target="_blank" rel="noopener noreferrer">Open ↗</a>
+          ${(window.Family && window.Family.role && window.Family.role() === "parent")
+            ? `<button class="lib-assign" data-assign-url="${esc(r.url)}" data-assign-title="${esc(r.title)}" data-assign-kind="${esc(r.kind || "reading")}">➕ To child's to-do</button>` : ""}
+        </div>
       </div>`;
   }
 
@@ -561,6 +565,12 @@
       countEl.textContent = `Showing ${list.length} of ${CLASS.resources.length} resources`;
       emptyEl.style.display = list.length ? "none" : "block";
     }
+    grid.addEventListener("click", e => {
+      const b = e.target.closest(".lib-assign"); if (!b) return;
+      e.preventDefault();
+      if (window.Family && window.Family.assignResourcePrompt)
+        window.Family.assignResourcePrompt({ url: b.dataset.assignUrl, title: b.dataset.assignTitle, kind: b.dataset.assignKind });
+    });
     document.getElementById("lib-search").addEventListener("input", e => { state.q = e.target.value; apply(); });
     document.querySelectorAll(".filter-chip").forEach(btn => {
       btn.addEventListener("click", () => {
@@ -1046,7 +1056,11 @@
   });
 
   // when sign-in state resolves/changes, re-label the nav (Parents ⇄ My learning)
-  window.addEventListener("lh-auth-change", () => { renderNav(navSubject); setActiveNav(location.hash); });
+  window.addEventListener("lh-auth-change", () => {
+    renderNav(navSubject); setActiveNav(location.hash);
+    // the Library card's "add to to-do" button depends on parent sign-in state
+    if (/^#\/library/.test(location.hash)) route();
+  });
   // when admin-added resources arrive, re-render the current view (except the
   // stateful Parents area) so they show up without a manual refresh
   window.addEventListener("lh-resources-loaded", () => { if (!location.hash.startsWith("#/parents")) route(); });

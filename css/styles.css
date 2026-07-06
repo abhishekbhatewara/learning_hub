@@ -470,6 +470,21 @@ textarea.short-input:focus { outline: none; border-color: var(--brand); }
 .rev-your { font-size: .9rem; color: var(--ink-soft); }
 .rev-ans { font-size: .9rem; color: #15803d; font-weight: 600; margin-top: .2rem; }
 .rev-exp { font-size: .85rem; color: var(--muted); font-style: italic; margin-top: .3rem; }
+/* Library → child's to-do */
+.lib-card-actions { display: flex; align-items: center; gap: .8rem; flex-wrap: wrap; margin-top: auto; }
+.lib-assign { cursor: pointer; font: inherit; font-size: .82rem; font-weight: 600; padding: .35rem .7rem; border-radius: 999px;
+  border: 1.5px solid var(--brand); background: #eef2ff; color: var(--brand); }
+.lib-assign:hover { background: var(--brand); color: #fff; }
+.fam-modal-ov { position: fixed; inset: 0; z-index: 9999; background: rgba(20,30,60,.45); display: grid; place-items: center; padding: 1rem; }
+.fam-modal { background: var(--surface); border-radius: var(--radius); padding: 1.4rem 1.6rem; max-width: 420px; width: 100%; box-shadow: var(--shadow-lg); }
+.fam-modal h3 { margin-top: 0; }
+.fam-modal-kids { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1rem 0 .6rem; }
+.fam-modal-msg { min-height: 1.2em; font-weight: 600; }
+.assign-item.lib { display: flex; align-items: center; justify-content: space-between; gap: .8rem; }
+.assign-item.lib a { flex: 1; min-width: 0; color: var(--ink); font-weight: 500; }
+.assign-item.lib.done a { color: var(--muted); }
+.lib-done-check { display: inline-flex; align-items: center; gap: .35rem; font-size: .82rem; font-weight: 600; color: var(--ink-soft); cursor: pointer; white-space: nowrap; }
+
 /* AI concept summary */
 .concept-summary { width: 100%; margin: .7rem 0 0; padding: .7rem .9rem; border-radius: var(--radius-sm);
   background: linear-gradient(135deg, #eef2ff, #f5f3ff); border: 1px solid #ddd6fe; color: var(--ink); font-size: .92rem; line-height: 1.5; }
