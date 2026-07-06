@@ -614,6 +614,10 @@ textarea.short-input:focus { outline: none; border-color: var(--brand); }
 .btn-sm { padding: .35rem .8rem; font-size: .85rem; }
 
 .admin-card { border-color: #c4b5fd; background: linear-gradient(180deg, #faf5ff, var(--surface)); }
+.res-row { gap: .5rem; }
+.res-row .link-name { flex: 1; min-width: 0; }
+.res-row .link-name a { color: var(--ink); font-weight: 600; }
+.res-row .btn-sm { flex: 0 0 auto; }
 .rb-libcheck { display: inline-flex; align-items: center; gap: .5rem; font-weight: 600; color: var(--ink-soft); cursor: pointer; }
 .family-field textarea { padding: .6rem .7rem; font: inherit; border: 1.5px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); resize: vertical; }
 .rb-ai-bar { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; margin: .2rem 0; }

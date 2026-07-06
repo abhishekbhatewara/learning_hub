@@ -26,8 +26,20 @@
       module: cr.library_module || "Science", subject: cr.library_subject || "", source: cr.provider || "Added", topics: [] };
   }
 
+  // remove all previously-merged custom resources (so a reload reflects edits/deletes)
+  function clearMerged() {
+    ((window.HUB && window.HUB.subjects) || []).forEach(s => s.grades.forEach(g => g.topics.forEach(t =>
+      (t.objectives || []).forEach(o => { if (o.resources) o.resources = o.resources.filter(r => !r.__cid); }))));
+    if (window.CLASSROOM && Array.isArray(window.CLASSROOM.resources)) {
+      window.CLASSROOM.resources = window.CLASSROOM.resources.filter(r => !(typeof r.id === "string" && r.id.indexOf("cr-") === 0));
+      window.CLASSROOM.meta.count = window.CLASSROOM.resources.length;
+    }
+    seen.clear();
+  }
+
   function merge(list) {
     let changed = false;
+    const newLib = []; // collected so we can put them at the TOP of the Library
     list.forEach(cr => {
       if (seen.has(cr.id)) return;
       seen.add(cr.id);
@@ -39,22 +51,24 @@
         }
       });
       if (cr.to_library && window.CLASSROOM && Array.isArray(window.CLASSROOM.resources)) {
-        if (!window.CLASSROOM.resources.some(r => r.id === "cr-" + cr.id)) {
-          window.CLASSROOM.resources.push(libResource(cr));
-          window.CLASSROOM.meta.count = window.CLASSROOM.resources.length;
-          changed = true;
-        }
+        if (!window.CLASSROOM.resources.some(r => r.id === "cr-" + cr.id)) { newLib.push(libResource(cr)); changed = true; }
       }
     });
+    if (newLib.length && window.CLASSROOM) {
+      window.CLASSROOM.resources.unshift(...newLib);           // newest additions at the top
+      window.CLASSROOM.meta.count = window.CLASSROOM.resources.length;
+    }
     if (changed) { try { window.dispatchEvent(new CustomEvent("lh-resources-loaded")); } catch (e) {} }
   }
 
   async function reload() {
     try {
-      const res = await fetch(`${CFG.url}/rest/v1/custom_resources?select=*`, {
+      // newest first so the most recent additions sit at the top of the Library
+      const res = await fetch(`${CFG.url}/rest/v1/custom_resources?select=*&order=created_at.desc`, {
         headers: { apikey: CFG.anonKey, Authorization: `Bearer ${CFG.anonKey}` }
       });
       if (!res.ok) return;
+      clearMerged();
       merge(await res.json());
     } catch (e) { /* offline / not set up yet — ignore */ }
   }

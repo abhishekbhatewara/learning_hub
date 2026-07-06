@@ -458,12 +458,10 @@
       </div>
       ${state.isAdmin ? `<div class="family-card admin-card">
         <div class="fam-assign-head">
-          <h3>🛠️ Admin · Add a resource</h3>
-          <button class="btn btn-primary btn-sm" id="adm-new-res" type="button">＋ Add resource</button>
+          <h3>🛠️ Admin</h3>
+          <a class="btn btn-primary btn-sm" href="#/manage-resources">Manage resources →</a>
         </div>
-        <p class="muted">Add a video, site, podcast or book to one or more objectives and/or the Library. It goes live for everyone.</p>
-        <div id="adm-builder" class="fam-builder" hidden></div>
-        <div id="adm-resources"></div>
+        <p class="muted">Add, edit and remove resources that appear in objectives and the Library — on its own page so this one stays tidy.</p>
       </div>` : ""}`);
     document.getElementById("fam-signout").addEventListener("click", signOut);
     document.getElementById("fam-invite").addEventListener("submit", e => {
@@ -492,22 +490,41 @@
     });
     renderParentAssignments();
     subscribeProgress();
-
-    if (state.isAdmin) {
-      const admBtn = document.getElementById("adm-new-res");
-      admBtn.addEventListener("click", () => {
-        const b = document.getElementById("adm-builder");
-        if (b.hidden) { openResourceBuilder(); b.hidden = false; admBtn.textContent = "✕ Close"; }
-        else { b.hidden = true; b.innerHTML = ""; admBtn.textContent = "＋ Add resource"; }
-      });
-      renderMyResources();
-    }
   }
 
-  // ---- admin: add a resource live ----
-  function openResourceBuilder() {
+  // ---- admin: dedicated "Manage resources" page (#/manage-resources) ----
+  async function mountManage(el) {
+    container = null; // this page renders itself; keep refresh() from clobbering it
+    try { await init(); await refresh(); } catch (e) { /* ignore */ }
+    el.innerHTML = `
+      <nav class="breadcrumb"><a href="#/">Subjects</a> › <a href="#/parents">Parents</a> › <span>Manage resources</span></nav>
+      <section class="hero"><h1>🛠️ Manage resources</h1>
+        <p class="lede">Add, edit and remove resources that appear in objectives and the Library — live for everyone.</p></section>
+      <div class="family-wrap">${!state.isAdmin
+        ? `<p class="empty">This area is for admins only. <a href="#/parents">Go to Parents</a>.</p>`
+        : `<div class="family-card">
+             <div class="fam-assign-head"><h3>Add a resource</h3>
+               <button class="btn btn-primary btn-sm" id="adm-new-res" type="button">＋ Add resource</button></div>
+             <p class="muted">Add a video, site, podcast or book to one or more objectives and/or the Library. It goes live for everyone.</p>
+             <div id="adm-builder" class="fam-builder" hidden></div>
+           </div>
+           <div class="family-card"><h3>Added resources</h3><div id="adm-resources"><p class="muted">Loading…</p></div></div>`}
+      </div>`;
+    if (!state.isAdmin) return;
+    const admBtn = document.getElementById("adm-new-res");
+    admBtn.addEventListener("click", () => {
+      const b = document.getElementById("adm-builder");
+      if (b.hidden) { openResourceBuilder(); b.hidden = false; admBtn.textContent = "✕ Close"; }
+      else { b.hidden = true; b.innerHTML = ""; admBtn.textContent = "＋ Add resource"; }
+    });
+    renderMyResources();
+  }
+
+  // ---- admin: add/edit a resource live (existing = edit an added resource) ----
+  function openResourceBuilder(existing) {
     const b = document.getElementById("adm-builder");
     resSel.clear();
+    if (existing && Array.isArray(existing.targets)) existing.targets.forEach(tg => resSel.set(`${tg.s}|${tg.t}|${tg.i}`, { s: tg.s, t: tg.t, i: +tg.i }));
     const subs = subjectsList();
     b.innerHTML = `
       <form id="rb-form" class="family-form-col">
@@ -589,6 +606,20 @@
     gradeSel.addEventListener("change", fillObjectives);
     fillGrades(); fillObjectives();
 
+    // pre-fill for edit mode
+    if (existing) {
+      const set = (id, v) => { const el = document.getElementById(id); if (el) el.value = v || ""; };
+      set("rb-type", existing.type || "video"); set("rb-url", existing.url); set("rb-title", existing.title);
+      set("rb-provider", existing.provider); set("rb-note", existing.note); set("rb-author", existing.author); set("rb-chapter", existing.chapter);
+      document.querySelector(".rb-book").hidden = existing.type !== "book";
+      if (existing.to_library) {
+        document.getElementById("rb-lib").checked = true; document.querySelector(".rb-libfields").hidden = false;
+        set("rb-libmod", existing.library_module || "Science"); set("rb-libsub", existing.library_subject);
+      }
+      document.getElementById("rb-count").textContent = resSel.size;
+      document.querySelector("#rb-form button[type=submit]").textContent = "Save changes";
+    }
+
     // ---- AI placement helper ----
     function syncNavCheckbox(id, on) {
       const navCb = document.querySelector(`#rb-objectives input[data-key="${id}"]`);
@@ -649,18 +680,20 @@
       if (!url || !title) { msg.hidden = false; msg.textContent = "Title and link are required."; return; }
       if (!resSel.size && !toLib) { msg.hidden = false; msg.textContent = "Pick at least one objective, or tick “Add to the Library”."; return; }
       const row = {
-        created_by: state.user.id, type: val("rb-type"), title, provider: val("rb-provider") || null,
+        type: val("rb-type"), title, provider: val("rb-provider") || null,
         url, note: val("rb-note") || null, author: val("rb-author") || null, chapter: val("rb-chapter") || null,
         targets: [...resSel.values()], to_library: toLib,
         library_module: toLib ? (val("rb-libmod") || "Science") : null, library_subject: toLib ? (val("rb-libsub") || null) : null
       };
-      msg.hidden = false; msg.textContent = "Adding…";
-      const { error } = await SB.from("custom_resources").insert(row);
+      msg.hidden = false; msg.textContent = existing ? "Saving…" : "Adding…";
+      const { error } = existing
+        ? await SB.from("custom_resources").update(row).eq("id", existing.id)
+        : await SB.from("custom_resources").insert({ ...row, created_by: state.user.id });
       if (error) { msg.textContent = "⚠️ " + error.message; return; }
-      if (window.CustomResources) window.CustomResources.reload(); // merge it live
-      document.getElementById("adm-builder").hidden = true;
-      document.getElementById("adm-builder").innerHTML = "";
-      document.getElementById("adm-new-res").textContent = "＋ Add resource";
+      if (window.CustomResources) window.CustomResources.reload(); // re-merge live (reflects edits)
+      const bd = document.getElementById("adm-builder");
+      bd.hidden = true; bd.innerHTML = "";
+      const nb = document.getElementById("adm-new-res"); if (nb) nb.textContent = "＋ Add resource";
       renderMyResources();
     });
   }
@@ -670,14 +703,24 @@
     if (!box) return;
     const { data } = await SB.from("custom_resources").select("*").order("created_at", { ascending: false });
     const list = data || [];
-    box.innerHTML = list.length ? `<h4 style="margin-top:1rem">Added resources (${list.length})</h4>` + list.map(cr => `
-      <div class="link-row">
-        <span class="link-name">${esc(cr.title)} <small class="muted">· ${esc(cr.type)}${(cr.targets || []).length ? ` · ${cr.targets.length} obj` : ""}${cr.to_library ? " · Library" : ""}</small></span>
+    box.innerHTML = list.length ? list.map(cr => `
+      <div class="link-row res-row">
+        <span class="link-name"><a href="${esc(cr.url)}" target="_blank" rel="noopener noreferrer">${esc(cr.title)}</a>
+          <small class="muted">· ${esc(cr.type)}${(cr.targets || []).length ? ` · ${cr.targets.length} obj` : ""}${cr.to_library ? " · Library" : ""}</small></span>
+        <button class="btn btn-ghost btn-sm" type="button" data-edit-res="${esc(cr.id)}">Edit</button>
         <button class="bm-remove" type="button" data-del-res="${esc(cr.id)}" title="Delete">✕</button>
-      </div>`).join("") : "";
+      </div>`).join("") : `<p class="muted">No resources added yet. Use “＋ Add resource” above.</p>`;
+    box.querySelectorAll("[data-edit-res]").forEach(b => b.addEventListener("click", () => {
+      const cr = list.find(x => x.id === b.dataset.editRes); if (!cr) return;
+      const bd = document.getElementById("adm-builder");
+      openResourceBuilder(cr); bd.hidden = false;
+      const nb = document.getElementById("adm-new-res"); if (nb) nb.textContent = "✕ Close";
+      bd.scrollIntoView({ behavior: "smooth", block: "start" });
+    }));
     box.querySelectorAll("[data-del-res]").forEach(b => b.addEventListener("click", async () => {
-      if (confirm("Delete this resource? It will disappear for everyone (a page refresh updates already-open pages).")) {
+      if (confirm("Delete this resource? It will disappear for everyone.")) {
         await SB.from("custom_resources").delete().eq("id", b.dataset.delRes);
+        if (window.CustomResources) window.CustomResources.reload();
         renderMyResources();
       }
     }));
@@ -958,5 +1001,5 @@
   if (isAuthCallback()) handleCallback();
   else if (hasStoredSession()) init().then(() => refresh()).catch(() => {});
 
-  window.Family = { mount, syncProgress, syncQuizResult, submitQuiz, navInfo, role, assignResourcePrompt };
+  window.Family = { mount, mountManage, syncProgress, syncQuizResult, submitQuiz, navInfo, role, assignResourcePrompt };
 })();

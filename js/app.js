@@ -1008,6 +1008,15 @@
       return;
     }
 
+    // admin: dedicated manage-resources page
+    if (parts[0] === "manage-resources" && window.Family && window.Family.mountManage) {
+      renderNav(null);
+      main.innerHTML = `<div id="family-root"></div>`;
+      window.Family.mountManage(document.getElementById("family-root"));
+      setActiveNav(hash);
+      return;
+    }
+
     // hub-level Saved / bookmarks (spans all subjects)
     if (parts[0] === "saved" && window.Bookmarks) {
       renderNav(null);
