@@ -86,6 +86,13 @@
         <p class="card-desc">Same structure — objectives, free resources, quizzes and a concept mindmap — coming next.</p>
         <div class="card-footer"><span class="chip">Planned</span></div>
       </div>`).join("");
+    const medicineCard = `
+      <a class="grade-card" href="medicine/" style="border-top-color:#9b1d20">
+        <span class="card-eyebrow" style="color:#9b1d20">🩺 Module</span>
+        <h3>Medicine Through Time</h3>
+        <p class="card-desc">A GCSE-level history-of-medicine module — anatomy, surgery, germ theory, radiation, penicillin and more — with objectives, quizzes, key terms and discussion.</p>
+        <div class="card-footer"><span class="chip">8 themes · 40 quizzes</span><span class="go-link">Open ↗</span></div>
+      </a>`;
     return `
       <section class="hero">
         <h1>Learning Hub</h1>
@@ -95,7 +102,7 @@
         </form>` : ""}
       </section>
       <h2 class="section-title">Subjects <span class="count">${HUB.subjects.length} live${planned.length ? " · " + planned.length + " coming" : ""}</span></h2>
-      <div class="grid cols-3">${cards}${soon}</div>
+      <div class="grid cols-3">${cards}${medicineCard}${soon}</div>
       ${CLASS.meta.count ? `
       <h2 class="section-title">Enrichment library</h2>
       <a class="grade-card" href="#/library" style="border-top-color:#c08a3e">
@@ -873,6 +880,7 @@
     let util = "";
     if (window.Search) util += `<a href="#/search" title="Search">🔍 Search</a>`;
     if (CLASS.meta.count) util += `<a href="#/library">Library</a>`;
+    util += `<a href="medicine/" title="Medicine Through Time module">🩺 Medicine</a>`;
     if (window.Bookmarks) util += `<a href="#/saved" title="Saved">⭐ Saved</a>`;
     if (window.Progress) util += `<a href="#/progress">My Progress</a>`;
     if (window.Family) {

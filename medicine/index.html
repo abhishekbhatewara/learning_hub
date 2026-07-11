@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Medicine Through Time · Learning Hub</title>
+<meta name="description" content="A GCSE-level interactive learning module on the history of medicine, built from the Science Museum's Medicine and Bodies gallery. Objectives, key terms, quizzes and discussion." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --bg:#f6f7fb; --surface:#ffffff; --surface-2:#f0f2f8; --ink:#1c2230; --ink-soft:#4a5468;
+  --muted:#7b8499; --line:#e3e7f0; --brand:#9b1d20; --brand-ink:#7a1619; --accent:#c0392b;
+  --blue:#3b5bdb; --good:#16a34a; --bad:#dc2626; --warn:#d97706;
+  --shadow:0 1px 2px rgba(20,30,60,.06),0 8px 24px rgba(20,30,60,.07);
+  --shadow-lg:0 12px 40px rgba(20,30,60,.16); --radius:16px; --radius-sm:10px; --maxw:1040px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:"Fraunces",Georgia,serif;line-height:1.18;color:var(--ink);margin:0 0 .4em;font-weight:600}
+a{color:var(--brand);text-decoration:none}a:hover{text-decoration:underline}
+.muted{color:var(--muted)}
+img{max-width:100%;display:block}
+
+/* Header */
+.site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:saturate(160%) blur(10px);border-bottom:1px solid var(--line)}
+.header-inner{max-width:var(--maxw);margin:0 auto;padding:.6rem 1.2rem;display:flex;align-items:center;gap:1rem}
+.brand{display:flex;align-items:center;gap:.6rem;color:var(--ink)}.brand:hover{text-decoration:none}
+.brand-mark{font-size:1.4rem;width:40px;height:40px;display:grid;place-items:center;background:linear-gradient(135deg,var(--brand),var(--accent));color:#fff;border-radius:12px;box-shadow:var(--shadow)}
+.brand-text{display:flex;flex-direction:column;line-height:1.1}
+.brand-text strong{font-size:1.02rem}
+.brand-text small{color:var(--muted);font-size:.72rem;letter-spacing:.03em;text-transform:uppercase}
+.main-nav{margin-left:auto;display:flex;gap:.3rem;flex-wrap:wrap}
+.main-nav a{color:var(--ink-soft);font-weight:500;padding:.4rem .7rem;border-radius:999px;font-size:.9rem;transition:background .15s,color .15s;cursor:pointer}
+.main-nav a:hover{background:var(--surface-2);text-decoration:none}
+.main-nav a.active{background:var(--brand);color:#fff}
+.nav-toggle{display:none;background:none;border:1px solid var(--line);border-radius:10px;font-size:1.3rem;padding:.2rem .55rem;cursor:pointer}
+
+.app{max-width:var(--maxw);margin:0 auto;padding:1.6rem 1.2rem 3rem}
+.site-footer{max-width:var(--maxw);margin:0 auto;padding:2rem 1.2rem 3rem;color:var(--ink-soft);border-top:1px solid var(--line);font-size:.88rem}
+.site-footer p{margin:.3rem 0}
+.breadcrumb{font-size:.86rem;color:var(--muted);margin-bottom:1rem;display:flex;gap:.4rem;flex-wrap:wrap}
+.breadcrumb a{color:var(--ink-soft);cursor:pointer}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,#fbeeee 0%,#f8fbff 60%,#fdf6ee 100%);border:1px solid var(--line);border-radius:var(--radius);padding:2.4rem 2rem;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero::after{content:"⚕ 🩺 🧬 🔬";position:absolute;right:-6px;bottom:-10px;font-size:3.2rem;opacity:.07;letter-spacing:.4rem}
+.hero h1{font-size:clamp(1.9rem,4vw,2.8rem);margin-bottom:.3rem}
+.hero .lede{font-size:1.1rem;color:var(--ink-soft);max-width:62ch}
+.hero-cta{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.3rem}
+.btn{display:inline-flex;align-items:center;gap:.45rem;padding:.65rem 1.15rem;border-radius:999px;font-weight:600;font-size:.95rem;cursor:pointer;border:1px solid transparent;transition:transform .08s,box-shadow .15s,background .15s;font-family:inherit}
+.btn:hover{text-decoration:none;transform:translateY(-1px)}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:var(--shadow)}.btn-primary:hover{background:var(--brand-ink)}
+.btn-ghost{background:var(--surface);color:var(--ink);border-color:var(--line)}.btn-ghost:hover{background:var(--surface-2)}
+.stats-row{display:flex;gap:1.4rem;flex-wrap:wrap;margin-top:1.5rem}
+.stat{display:flex;flex-direction:column}
+.stat b{font-family:"Fraunces",serif;font-size:1.6rem;color:var(--brand);font-weight:700;line-height:1}
+.stat span{font-size:.8rem;color:var(--muted);margin-top:.2rem}
+
+.section-title{font-size:1.4rem;margin:2.2rem 0 1rem}
+.grid{display:grid;gap:1.1rem}
+.cols-2{grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+.topic-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:1.2rem 1.3rem;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:.4rem;cursor:pointer;transition:transform .1s,box-shadow .15s,border-color .15s;border-top:5px solid var(--accent)}
+.topic-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);border-color:#e6b9b9}
+.topic-card .icon{font-size:1.7rem}
+.topic-card .num{font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;font-weight:700;color:var(--muted)}
+.topic-card h3{font-size:1.18rem;margin:.1rem 0}
+.card-desc{color:var(--ink-soft);font-size:.92rem;margin:.1rem 0 .5rem}
+.card-foot{margin-top:auto;display:flex;justify-content:space-between;align-items:center;font-size:.82rem;color:var(--muted)}
+.go-link{font-weight:600;color:var(--brand)}
+.prog-mini{height:7px;border-radius:999px;background:var(--surface-2);overflow:hidden;margin-top:.3rem}
+.prog-mini i{display:block;height:100%;background:var(--good);width:0;transition:width .4s}
+
+/* Section page */
+.sec-head{display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap;margin-bottom:.4rem}
+.sec-head .big-icon{font-size:2.6rem}
+.sec-head h1{font-size:clamp(1.6rem,3.5vw,2.2rem)}
+.sec-summary{color:var(--ink-soft);font-size:1.05rem;max-width:72ch;margin:.2rem 0 0}
+
+.objbox{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--brand);border-radius:var(--radius-sm);padding:1.1rem 1.3rem;margin:1.6rem 0}
+.objbox h3{font-size:1rem;text-transform:uppercase;letter-spacing:.04em;color:var(--brand-ink);margin-bottom:.6rem}
+.objbox ul{margin:0;padding:0;list-style:none;display:grid;gap:.5rem}
+.objbox li{padding-left:1.7rem;position:relative;color:var(--ink-soft)}
+.objbox li::before{content:"✓";position:absolute;left:0;top:0;color:var(--good);font-weight:800}
+
+.block-prose{margin:1.2rem 0}
+.block-prose h3{font-size:1.25rem;margin-top:1.6rem;color:var(--brand-ink)}
+.block-prose p{margin:.7rem 0}
+.figure{margin:1.4rem 0;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-sm);overflow:hidden;box-shadow:var(--shadow)}
+.figure img{width:100%;height:auto;background:var(--surface-2)}
+.figure figcaption{padding:.6rem .9rem;font-size:.83rem;color:var(--ink-soft);border-top:1px solid var(--line)}
+.figure.img-fail{display:none}
+.credit{display:block;margin-top:.35rem;font-size:.74rem;color:var(--muted)}
+.credit a{color:var(--muted);text-decoration:underline}
+.quote{margin:1.3rem 0;padding:1rem 1.3rem;background:var(--surface-2);border-left:4px solid var(--accent);border-radius:var(--radius-sm);font-style:italic;color:var(--ink)}
+.quote cite{display:block;margin-top:.5rem;font-style:normal;font-weight:600;color:var(--ink-soft);font-size:.9rem}
+.callout{margin:1.3rem 0;padding:1rem 1.3rem;background:#eff5ff;border:1px solid #d6e2ff;border-radius:var(--radius-sm)}
+.callout h4{font-family:"Inter";font-weight:700;color:var(--blue);margin-bottom:.3rem;font-size:.95rem}
+.callout.spec{background:#fdf6ee;border-color:#f0dcc0}.callout.spec h4{color:var(--warn)}
+
+.terms{display:grid;gap:.7rem;margin:1rem 0}
+.term{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-sm);padding:.7rem 1rem}
+.term b{color:var(--brand-ink)}
+
+/* Quiz */
+.q-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:1.2rem 1.3rem;box-shadow:var(--shadow);margin-bottom:1rem}
+.q-top{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;margin-bottom:.6rem}
+.q-num{font-weight:700;color:var(--muted);font-size:.82rem}
+.badge{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:.12rem .5rem;border-radius:999px}
+.badge.easy{background:#dcfce7;color:#15803d}.badge.medium{background:#fef3c7;color:#b45309}.badge.hard{background:#fee2e2;color:#b91c1c}
+.q-text{font-size:1.04rem;font-weight:600;margin-bottom:.8rem}
+.options{display:grid;gap:.5rem}
+.option{display:flex;align-items:center;gap:.7rem;padding:.65rem .9rem;border:1.5px solid var(--line);border-radius:var(--radius-sm);cursor:pointer;background:var(--surface);transition:border-color .12s,background .12s;font-size:.97rem}
+.option:hover{border-color:#d8a3a3;background:var(--surface-2)}
+.option .mark{flex:none;width:22px;height:22px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;font-size:.8rem;font-weight:700}
+.option.correct{border-color:var(--good);background:#ecfdf3}.option.correct .mark{background:var(--good);color:#fff;border-color:var(--good)}
+.option.incorrect{border-color:var(--bad);background:#fef2f2}.option.incorrect .mark{background:var(--bad);color:#fff;border-color:var(--bad)}
+.option.locked{cursor:default;pointer-events:none}
+.feedback{margin-top:.8rem;padding:.8rem 1rem;border-radius:var(--radius-sm);font-size:.93rem;display:none}
+.feedback.show{display:block}
+.feedback.right{background:#ecfdf3;border:1px solid #abefc6;color:#08703a}
+.feedback.wrong{background:#fef2f2;border:1px solid #fbcfcf;color:#a4242b}
+.feedback b{display:block;margin-bottom:.2rem}
+.quiz-score{background:linear-gradient(135deg,#fbeeee,#f4f7ff);border:1px solid var(--line);border-radius:var(--radius);padding:1.2rem 1.4rem;box-shadow:var(--shadow);text-align:center;margin:1rem 0;display:none}
+.quiz-score.show{display:block}
+.quiz-score .score{font-family:"Fraunces";font-size:2.4rem;font-weight:700;color:var(--brand)}
+
+.discuss{display:grid;gap:.7rem;margin:1rem 0}
+.discuss .d{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-sm);padding:.8rem 1rem;border-left:4px solid var(--blue);color:var(--ink-soft)}
+.discuss .d b{color:var(--ink)}
+
+.subnav{display:flex;gap:.4rem;margin:1.8rem 0 1.2rem;border-bottom:2px solid var(--line);flex-wrap:wrap}
+.tab-btn{background:none;border:none;padding:.6rem .9rem;font-size:.95rem;font-weight:600;color:var(--muted);cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px;border-radius:8px 8px 0 0;font-family:inherit}
+.tab-btn:hover{color:var(--ink);background:var(--surface-2)}
+.tab-btn.active{color:var(--brand);border-bottom-color:var(--brand)}
+.tab-panel{animation:fade .25s ease}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+.pager{display:flex;justify-content:space-between;gap:1rem;margin-top:2.4rem;padding-top:1.4rem;border-top:1px solid var(--line);flex-wrap:wrap}
+.pager a{font-weight:600;cursor:pointer;color:var(--brand)}
+.pager .nxt{margin-left:auto;text-align:right}
+
+.timeline{position:relative;margin:1rem 0;padding-left:1.4rem;border-left:3px solid var(--line)}
+.tl-item{position:relative;margin-bottom:1.1rem}
+.tl-item::before{content:"";position:absolute;left:-1.85rem;top:.35rem;width:13px;height:13px;border-radius:50%;background:var(--brand);border:3px solid var(--surface);box-shadow:0 0 0 1px var(--line)}
+.tl-item b{color:var(--brand-ink);font-family:"Fraunces",serif}
+
+@media (max-width:760px){
+  .main-nav{position:absolute;top:100%;right:0;left:0;background:var(--surface);flex-direction:column;padding:.6rem;border-bottom:1px solid var(--line);display:none;box-shadow:var(--shadow-lg);max-height:70vh;overflow:auto}
+  .main-nav.open{display:flex}.main-nav a{width:100%}
+  .nav-toggle{display:block;margin-left:auto}
+  .hero{padding:1.8rem 1.3rem}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main" style="position:absolute;left:-999px">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" onclick="go('')" aria-label="Module home">
+      <span class="brand-mark">🎓</span>
+      <span class="brand-text"><strong>Learning Hub</strong><small>Medicine Through Time</small></span>
+    </a>
+    <nav class="main-nav" id="main-nav"></nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">☰</button>
+  </div>
+</header>
+<main id="main" class="app"></main>
+<footer class="site-footer">
+  <p><strong>Medicine Through Time</strong> · A GCSE-level module for the Learning Hub, built from photographs of the <em>Medicine and Bodies</em> gallery at the Science Museum, London (part of Medicine: The Wellcome Galleries).</p>
+  <p class="muted">Exhibit text © Science Museum Group / Wellcome Collection, transcribed for educational use. Enrichment, quizzes and activities written for the Learning Hub.</p>
+  <p class="muted"><a onclick="go('credits')" style="cursor:pointer">Image credits &amp; licences</a> · <a href="https://abhishekbhatewara.github.io/learning_hub/">← Back to Learning Hub</a></p>
+</footer>
+<script>
+/* ============ DATA ============ */
+const SECTIONS = [];
+SECTIONS.push({
+  id:'anatomy', icon:'🦴', navTitle:'Anatomy',
+  title:'Understanding the Body: Anatomy & Dissection',
+  blurb:'How dissection replaced ancient theory and revealed what really lies beneath the skin.',
+  summary:'For centuries, European doctors trusted ancient books over their own eyes. From the 1500s onwards, anatomists began cutting open the dead to see the truth for themselves — transforming how we understand the human body.',
+  objectives:[
+    'Explain why dissection was so important to the development of medical knowledge.',
+    'Describe the contributions of Vesalius, Harvey and the Hunter brothers.',
+    'Understand how anatomy schools trained doctors and where they got their bodies.',
+    'Explain how studying the dead (post-mortems) helped doctors understand disease in the living.'
+  ],
+  blocks:[
+    {type:'prose',html:`<p>Understanding how our bodies work is the key to understanding and caring for our health. Over the centuries we have invented extraordinary tools and techniques to explore the way we function — from looking, listening and touching to measuring, scanning and dissecting. What we have discovered has transformed medicine and the way we think about ourselves.</p>`},
+    {type:'image',src:'https://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt%20-%20The%20Anatomy%20Lesson%20of%20Dr%20Nicolaes%20Tulp.jpg?width=1000',alt:'Rembrandt painting The Anatomy Lesson of Dr Nicolaes Tulp',caption:'Public dissections were teaching events. Rembrandt’s <em>The Anatomy Lesson of Dr Nicolaes Tulp</em> (1632) shows an anatomist demonstrating on a real body before an audience.',credit:'Rembrandt, 1632. Public domain, via Wikimedia Commons.'},
+    {type:'prose',html:`<h3>From Galen to Vesalius: trusting your own eyes</h3><p>For over 1,300 years, European knowledge of the body was based on the writings of the Greek physician <b>Galen</b> (around AD 200). The problem? Dissecting humans was taboo in Galen's time, so he had based much of his work on <b>animal</b> dissection. His mistakes were copied from book to book for centuries.</p><p><b>Andreas Vesalius</b> (1514–64) changed this. He was one of the first anatomists to study the human body through careful, methodical <b>dissection</b>, and he encouraged doctors to test old theories through observation rather than simply trusting ancient texts.</p>`},
+    {type:'image',src:'https://commons.wikimedia.org/wiki/Special:FilePath/Vesalius%20Fabrica%20portrait.jpg?width=800',alt:'Portrait of Andreas Vesalius from De Fabrica',caption:'Andreas Vesalius (1514–64), the "father of modern anatomy", shown dissecting an arm in his own 1543 book.',credit:'Portrait from <em>De Fabrica</em>, 1543. Public domain, via Wikimedia Commons.'},
+    {type:'image',src:'https://commons.wikimedia.org/wiki/Special:FilePath/Vesalius%2C%20De%20humani%20corporis%20fabrica%2C%201543%20Wellcome%20L0031739.jpg?width=1000',alt:'Title page of De Humani Corporis Fabrica showing a public dissection',caption:'The title page of Vesalius’s <em>De Humani Corporis Fabrica</em> (1543), showing a crowded public dissection. The 700-page book was larger and more richly illustrated than any medical text before it.',credit:'Wellcome Collection (CC BY 4.0), via Wikimedia Commons.'},
+    {type:'callout',title:'Why was De Fabrica such a big deal?',html:`Vesalius’s <em>On the Fabric of the Human Body</em> (1543) was the most detailed exploration of the body ever published. Its evidence directly challenged accepted but incorrect ideas. More importantly, it modelled a <b>new way of doing science</b>: observe carefully, record accurately, and change your conclusions when the evidence demands it.`},
+    {type:'prose',html:`<h3>William Harvey and the circulation of blood</h3><p>Europeans had long believed the <b>liver</b> produced blood in a continuous flow that the body then used up. In 1628, physician <b>William Harvey</b> (1578–1657) proved them wrong. By dissecting the dead and experimenting on the living, he showed that the <b>heart pumps a fixed amount of blood around the body in a circle</b> — it circulates.</p><p>Harvey trained at the University of Padua in Italy, one of Europe's best medical schools, and his use of experiment and observation became a model for scientific medicine.</p>`},
+    {type:'image',src:'https://commons.wikimedia.org/wiki/Special:FilePath/William%20Harvey%202.jpg?width=800',alt:'Portrait of William Harvey',caption:'William Harvey (1578–1657). His <em>On the Motion of the Heart</em> (1628) revealed for the first time how blood is pumped around the body.',credit:'Public domain, via Wikimedia Commons.'},
+    {type:'prose',html:`<h3>The rise of the anatomy school</h3><p>By the 1700s, studying anatomy was a standard part of a doctor's training. Students needed hands-on knowledge of the body's internal workings to qualify. Private anatomy schools opened across Europe, and a curious public was even allowed to sit in and watch dissections. The Scottish doctor <b>William Hunter</b> founded the most famous anatomy school in London in 1768.</p>`},
+    {type:'quote',text:`“Anatomy is the only solid foundation of medicine; it is to the physician and surgeon what geometry is to the astronomer. It discovers and ascertains the truth, overturns superstition and vulgar error.”`,who:'William Hunter, anatomist and man-midwife'},
+    {type:'prose',html:`<p>William Hunter (1718–83) recruited his younger brother <b>John Hunter</b> (1728–93) to help run the school. John prepared specimens and sourced fresh corpses — mainly from <b>executions or robbed graves</b>. Because demand for bodies far outstripped supply, "body-snatching" became a real and grisly trade.</p>`},
+    {type:'prose',html:`<h3>Dissection and childbirth</h3><p>For centuries, death during childbirth was common. Dissection in the 1700s helped doctors understand it. William Hunter advanced knowledge of pregnancy by dissecting women who died late in pregnancy. New tools such as <b>forceps</b> (to grip and turn a baby's head) were invented, but because they were covered in leather they were hard to clean — and many women died of infection afterwards.</p><p>This created fierce debate about who should deliver babies. Trained female midwives like <b>Sarah Stone</b> argued passionately that the new "man-midwives" were intruding on women's work.</p>`},
+    {type:'quote',text:`“I cannot comprehend, why women are not capable of completing this business when begun... and then the midwife, who has taken all the pains, is accounted of little value, and the young men command all the praise.”`,who:'Sarah Stone, midwife and author, 1700s'},
+    {type:'prose',html:`<h3>Learning from the dead</h3><p>The earliest dissections simply revealed what the body looked like inside. But by the 1700s, doctors were using <b>post-mortems</b> (examinations after death) to find out <em>why</em> people died. By comparing a patient's symptoms in life with what they found in the body after death, they discovered that particular diseases attack particular <b>organs and tissues</b>.</p><p>This was revolutionary. It directly contradicted the ancient idea that illness was caused by an imbalance of liquids in the body, and it pushed medicine towards locating disease in specific parts of the body.</p>`},
+    {type:'callout',spec:true,title:'GCSE link: causes of disease',html:`This theme is the heart of the <b>Renaissance</b> period in "Medicine Through Time". Vesalius (anatomy) and Harvey (physiology) didn't cure many people directly — but they replaced blind trust in ancient authorities with <b>observation and dissection</b>, laying the foundations for everything that followed.`}
+  ],
+  glossary:[
+    {term:'Anatomy',def:'the study of the structure of the body — its bones, muscles, organs and vessels.'},
+    {term:'Dissection',def:'cutting open a body to examine its internal structure.'},
+    {term:'Physiology',def:'the study of how the body and its parts actually work (e.g. how blood circulates).'},
+    {term:'Post-mortem',def:'an examination of a body after death to find the cause of death or study disease.'},
+    {term:'Circulation',def:'the movement of blood pumped by the heart around the body in a continuous loop.'},
+    {term:'Obstetrics',def:'the branch of medicine dealing with pregnancy and childbirth.'},
+    {term:'Forceps',def:'a tong-like instrument used to grip and turn a baby’s head during a difficult birth.'}
+  ],
+  quiz:[
+    {q:'Whose animal-based ideas about the body went unchallenged in Europe for over 1,000 years?',options:['Galen','Vesalius','Harvey','Hunter'],answer:0,diff:'easy',explain:'Galen (around AD 200) based much of his anatomy on animal dissection because dissecting humans was taboo. His errors were copied for centuries.'},
+    {q:'What did William Harvey prove in 1628?',options:['That germs cause disease','That the heart circulates blood around the body','That the liver makes blood continuously','That anaesthetics are safe'],answer:1,diff:'easy',explain:'Harvey showed the heart pumps a fixed amount of blood around the body in a circle — overturning the old idea that the liver produced blood continuously.'},
+    {q:'Why were dead bodies for anatomy schools often obtained from executions or robbed graves?',options:['Bodies were cheap to buy legally','Demand for bodies was far greater than the legal supply','The law required it','Families donated them freely'],answer:1,diff:'medium',explain:'Anatomy schools needed many fresh corpses, but few were legally available — so a grim trade in stolen bodies developed.'},
+    {q:'How did post-mortems change doctors’ understanding of disease?',options:['They proved illness came from an imbalance of liquids','They showed diseases affect specific organs and tissues','They made dissection illegal','They replaced the need for anatomy'],answer:1,diff:'medium',explain:'By comparing symptoms in life with the body after death, doctors found diseases attack particular organs — undermining the old "imbalance of liquids" theory.'},
+    {q:'Why did new childbirth tools like leather-covered forceps often lead to deaths?',options:['They were too expensive','They were difficult to clean, so spread infection','They were banned by midwives','They only worked on animals'],answer:1,diff:'hard',explain:'Leather coverings could not be properly cleaned, so the instruments spread infection and many women died shortly after birth.'}
+  ],
+  discussion:[
+    'Vesalius and Harvey made huge discoveries but cured few patients directly. Can knowledge be a "medical breakthrough" even if it doesn’t immediately save lives? Explain your view.',
+    'Was the use of stolen and executed bodies for dissection ever justifiable? Weigh the benefits to medical knowledge against the rights of the dead.',
+    'Sarah Stone argued women were being pushed out of midwifery. Use the evidence here to explain how new technology can change who holds power in a profession.'
+  ]
+});
+/*__SEC1__*/
+SECTIONS.push({
+  id:'measuring', icon:'📏', navTitle:'Measuring',
+  title:'Measuring the Body',
+  blurb:'Pulse, blood, urine and growth charts — how numbers became central to diagnosis.',
+  summary:'Modern diagnosis depends on measurement. This theme follows how doctors moved from feeling a pulse by hand and tasting urine, to precise machines, chemical tests and growth charts that define what is "healthy".',
+  objectives:[
+    'Explain how diagnosis changed from the senses (sight, smell, taste, touch) to precise measurement.',
+    'Describe how blood and urine became key tools for diagnosis.',
+    'Understand how the pulse and the heart’s electrical activity were measured (sphygmograph and ECG).',
+    'Explain how studying healthy people and growth helped define "normal" development.'
+  ],
+  blocks:[
+    {type:'prose',html:`<p>Blood and urine have been signs of disease for thousands of years. What changed was <b>how</b> we read them. In the past, doctors relied on the <b>colour, smell and even taste</b> of bodily fluids. Only when chemistry developed in the 1700s did European medicine begin to look closely at what fluids were actually made of — and link that to disease.</p>`},
+    {type:'prose',html:`<h3>From tasting to testing</h3><p>Tasting urine for sweetness was an early way to spot what we now call <b>diabetes</b>. Over time, chemical tests replaced the senses. A high level of <b>urea</b> could signal kidney disease; too few red blood cells meant <b>anaemia</b>. By 1941, simple <b>Clinitest</b> kits let a colour change reveal sugar in urine, making diabetes far easier to detect.</p><p>Eventually, machines like the 1980s <b>Biomek robot</b> could prepare thousands of samples a day — turning diagnosis into fast, large-scale laboratory science.</p>`},
+    {type:'callout',title:'Four humours vs. body chemistry',html:`Until the 1850s, Western medicine believed blood was one of <b>four humours</b> (blood, phlegm, black bile, yellow bile) that had to stay in balance. The rise of chemistry replaced this with a far more powerful idea: that disease changes the measurable <b>chemical composition</b> of our fluids.`},
+    {type:'prose',html:`<h3>Measuring the pulse</h3><p>The pulse is a key sign of heart health. For centuries doctors simply pressed a hand to the skin and counted — but this was personal, imprecise, and some patients objected to being touched at all (until the 1900s, touching patients of the opposite sex was often thought unacceptable).</p><p>Accurate <b>watches with a second hand</b> (from the late 1600s) made pulse-counting reliable. Then, in the 1850s, the <b>sphygmograph</b> produced the first visual <em>trace</em> of the pulse — pressing against the wrist and transferring each beat to an inked needle.</p>`},
+    {type:'callout',title:'Science and equality',html:`The sphygmograph was used by American doctor <b>Mary Putnam Jacobi</b> (1842–1906) to disprove the widely-held belief that women were physically weakened by menstruation. Her measurements showed a woman’s pulse was <b>not</b> weakened — and she used this evidence to argue for a bigger role for women in medicine and society.`},
+    {type:'prose',html:`<h3>Measuring the heart’s electricity</h3><p>We now know the heart produces tiny <b>electrical signals</b> that make it pump. In 1887, Dr Augustus Waller recorded a human heart’s electrical activity for the first time — using electrodes and a photographic plate mounted on a slowly moving <b>toy train</b>!</p><p>This grew into the <b>electrocardiograph (ECG)</b>, which translates the heart’s electrical signals into lines on paper called traces. British specialist <b>Thomas Lewis</b>, working with Willem Einthoven, made the ECG a trusted hospital tool for spotting heart problems at a glance.</p>`},
+    {type:'image',src:'https://commons.wikimedia.org/wiki/Special:FilePath/Willem%20Einthoven%20ECG.jpg?width=1000',alt:'Willem Einthoven demonstrating his string galvanometer ECG',caption:'Willem Einthoven’s string-galvanometer electrocardiograph (early 1900s). The first machines were enormous — this one needed several people to operate — but they made the heart’s electrical activity visible for the first time.',credit:'Public domain, via Wikimedia Commons.'},
+    {type:'prose',html:`<h3>Measuring growth and "normal"</h3><p>From the late 1800s, doctors began studying <b>healthy</b> people too, not just the sick. <b>Professor James Tanner</b> ran a famous study (1949–71) measuring 450 boys and 260 girls as they grew. Fifteen measurements were taken on over 6,000 occasions, using special tools like the Harpenden anthropometer.</p><p>Tanner’s <b>growth charts</b> revealed there isn’t one "normal" pattern of growth in adolescence but three — early, middle and late developers. His charts are now an international standard used to track children worldwide.</p>`},
+    {type:'quote',text:`“A child’s growth rate reflects, better than any other single index, his state of health and nutrition, and often, indeed, his psychological situation.”`,who:'Professor James Tanner, growth expert'},
+    {type:'callout',spec:true,title:'GCSE link: diagnosis',html:`Improvements in <b>diagnosis</b> are a key exam theme. Notice the pattern: subjective senses → simple instruments (watch, sphygmograph) → electrical/chemical machines (ECG, Clinitest, lab robots). Each step made diagnosis more <b>objective, precise and shareable</b> between doctors.`}
+  ],
+  glossary:[
+    {term:'Diagnosis',def:'identifying which disease or condition a patient has.'},
+    {term:'Uroscopy',def:'the old practice of diagnosing illness by examining urine’s colour, smell and taste.'},
+    {term:'Sphygmograph',def:'a 19th-century device that produced a visual trace of a person’s pulse.'},
+    {term:'ECG (electrocardiograph)',def:'a machine that records the heart’s electrical activity as a line trace.'},
+    {term:'Anaemia',def:'a condition caused by too few healthy red blood cells.'},
+    {term:'Four humours',def:'the ancient theory that health depended on a balance of blood, phlegm, black bile and yellow bile.'},
+    {term:'Anthropometer',def:'an instrument for measuring the dimensions of the human body.'}
+  ],
+  quiz:[
+    {q:'Before chemistry developed, how did doctors mainly assess blood and urine?',options:['With microscopes','By colour, smell and taste','With X-rays','With blood-pressure cuffs'],answer:1,diff:'easy',explain:'Doctors relied on the senses — colour, smell and even taste — long before chemical analysis was possible.'},
+    {q:'What does an ECG (electrocardiograph) measure?',options:['Levels of sugar in urine','The heart’s electrical activity','Body temperature','Lung capacity'],answer:1,diff:'easy',explain:'The ECG records the electrical signals that make the heart pump, drawing them as traces doctors can read.'},
+    {q:'What was surprising about how the first electrocardiogram was recorded in 1887?',options:['It used a toy train to move the photographic plate','It was done on an animal','It needed no electricity','It used a smartphone'],answer:0,diff:'medium',explain:'Dr Augustus Waller mounted the recording plate on a slowly moving toy train to capture a continuous trace.'},
+    {q:'What did Mary Putnam Jacobi use the sphygmograph to prove?',options:['That the heart circulates blood','That a woman’s pulse is not weakened by menstruation','That urine contains sugar','That germs cause disease'],answer:1,diff:'medium',explain:'Her pulse measurements disproved the belief that menstruation weakened women, supporting her case for women in medicine.'},
+    {q:'What did Professor Tanner’s growth charts reveal about adolescence?',options:['Everyone grows at exactly the same rate','There are three normal patterns: early, middle and late developers','Growth cannot be measured','Diet has no effect on growth'],answer:1,diff:'hard',explain:'Tanner showed there is no single "normal" — children may be early, middle or late developers, all healthy.'}
+  ],
+  discussion:[
+    'Measuring "normal" growth can reassure parents — but could labelling a child "early" or "late" also cause harm? Discuss.',
+    'Why might doctors trust a number from a machine more than their own senses? Is that always a good thing?',
+    'Mary Putnam Jacobi used data to challenge unfair beliefs about women. Can you think of other times measurement has been used to overturn prejudice?'
+  ]
+});
+SECTIONS.push({
+  id:'surgery', icon:'🔪', navTitle:'Surgery & Pain',
+  title:'Surgery & the Conquest of Pain',
+  blurb:'Trephination, screaming patients, anaesthetics and modern brain surgery.',
+  summary:'For most of history, surgery meant agony. Speed was a surgeon’s only mercy. This theme traces how the discovery of anaesthetics — and ways to control blood loss — turned surgery from a terrifying last resort into everyday medicine.',
+  objectives:[
+    'Describe what surgery was like before anaesthetics.',
+    'Explain how ether, chloroform and cocaine transformed pain relief.',
+    'Understand how surgeons controlled blood loss during operations.',
+    'Compare historical surgery (e.g. trephination, amputation) with modern neurosurgery.'
+  ],
+  blocks:[
+    {type:'prose',html:`<p>Health care in the past faced three deadly problems in surgery: <b>pain</b>, <b>blood loss</b> and (covered in the next theme) <b>infection</b>. Until the mid-1800s, surgeons could do little about any of them. Operations were a last resort, and a surgeon’s main skill was simply <b>speed</b>.</p>`},
+    {type:'prose',html:`<h3>One of the oldest operations: trephination</h3><p>Drilling a hole in a living person’s skull — <b>trephination</b> — was first done around <b>7,000 years ago</b>, in cultures all over the world. It was used to treat head injuries, relieve headaches, or in rituals to "release spirits". Astonishingly, many patients <b>survived</b>: regrowth of bone around the holes proves it.</p><p>It was hugely dangerous, though — done with flint, shells or shark teeth, with mandrake root or coca leaves as the only pain relief. Today, neurosurgeons perform similar operations safely, under anaesthetic, in sterile theatres.</p>`},
+    {type:'prose',html:`<h3>The age of agony</h3><p>Before pain relief, patients were held down, fully conscious, while surgeons cut. Tooth-pulling, removing bladder stones, and amputations were all done with little more than alcohol or opium to dull the pain. The writer <b>Fanny Burney</b> described her own mastectomy in 1812:</p>`},
+    {type:'quote',text:`“When the dreadful steel was plunged into the breast — cutting through veins — arteries — flesh — nerves — I needed no injunctions not to restrain my cries. I began a scream that lasted unintermittingly during the whole time of the incision… so excruciating was the agony.”`,who:'Fanny Burney, 1812'},
+    {type:'prose',html:`<h3>The gift of anaesthetics</h3><p>From the 1840s, <b>anaesthetics</b> changed everything. The first were inhaled. In 1846, <b>William Morton</b> used an <b>ether</b> inhaler to render a patient unconscious while removing a tooth. <b>Chloroform</b> followed in the 1850s — easier to use, but with a risk of heart failure.</p><p>Anaesthetics were controversial. Some argued pain was natural, even necessary for recovery. Public opinion shifted when <b>Queen Victoria</b> chose chloroform (given by Dr John Snow) for the births of two of her children, calling it a “blessed chloroform… soothing, quieting and delightful beyond measure.”</p>`},
+    {type:'image',src:'https://commons.wikimedia.org/wiki/Special:FilePath/The%20First%20Operation%20Under%20Ether%20-%20Robert%20Hinckley.jpg?width=1000',alt:'Painting of the first operation under ether, 1846',caption:'Robert Hinckley’s painting of the first public operation under ether, Boston, 1846 — when William Morton showed that surgery could be painless. Getting the dose right was hard, which created a new specialist: the anaesthetist.',credit:'Robert Hinckley (1882–93). Public domain, via Wikimedia Commons.'},
+    {type:'callout',title:'Local vs. general anaesthetic',html:`A <b>general</b> anaesthetic makes the whole patient unconscious (ether, chloroform). A <b>local</b> anaesthetic numbs just one area while the patient stays awake. <b>Cocaine</b> was used as a local anaesthetic in the 1880s; its safer relative <b>Novocaine</b> (1905) is still used in dentistry today.</p>`},
+    {type:'callout',spec:true,title:'GCSE link: the problem of pain',html:`Anaesthetics are a classic example of a breakthrough that brought <b>new problems</b>. With patients now unconscious and still, surgeons grew bolder and operated deeper inside the body — which actually <b>increased</b> deaths from infection and blood loss until those problems were solved too. This is sometimes called the "Black Period" of surgery (c.1846–70).`},
+    {type:'prose',html:`<h3>Controlling blood loss</h3><p>Even pain-free, a patient could bleed to death. Surgeons developed several tools: <b>cauteries</b> (sealing vessels with heat — agonising before electricity made it precise in the 1920s), <b>tourniquets</b> and <b>artery forceps</b> to clamp vessels, and <b>ligatures</b> (stitches that tie off blood vessels).</p><p>The French surgeon <b>Ambroise Paré</b> (1510–90) pioneered stitching the stump of an amputation with thread instead of burning it shut. From the First World War, <b>blood transfusion</b> kits — using sodium citrate to store blood — saved many wounded soldiers.</p>`},
+    {type:'prose',html:`<h3>Amputation and prosthetics</h3><p>Amputation could save a life, but it was life-changing. Before anaesthetics and antiseptics, <b>speed</b> was everything — saws like those on display could remove a limb in under a minute. Afterwards, patients faced long recoveries and the challenge of <b>prosthetic</b> (artificial) limbs.</p>`},
+    {type:'prose',html:`<p>Many amputees disliked complex artificial limbs. A First World War veteran, J B Middlebrook, eventually rejected his prosthetic arm entirely:</p>`},
+    {type:'quote',text:`“I gave the artificial arm every chance for three months… I very quickly realised that it was what I had left that mattered.”`,who:'J B Middlebrook, First World War veteran'},
+    {type:'prose',html:`<h3>Surgery today: into the brain</h3><p>Modern surgery is almost unrecognisable. Neurosurgeon <b>Joan Grieve</b> performs over 300 operations a year, using precise tools and trained on lifelike head models ("MARTYN"). Operations once impossible — like <b>deep brain stimulation</b>, where thin wires implanted in the brain calm the tremors of Parkinson’s disease — are now routine.</p>`},
+    {type:'quote',text:`“People think that neurosurgery is ‘difficult’ surgery. It’s not — yes, it’s precise, but it’s not difficult. Making the right decision for the patient is more difficult.”`,who:'Joan Grieve, consultant neurosurgeon'}
+  ],
+  glossary:[
+    {term:'Anaesthetic',def:'a drug that prevents a patient feeling pain, by making them unconscious (general) or numbing an area (local).'},
+    {term:'Trephination',def:'cutting or drilling a hole in the skull — one of the oldest known operations.'},
+    {term:'Cautery',def:'sealing a wound or blood vessel using heat to stop bleeding.'},
+    {term:'Ligature',def:'a thread used to tie off a blood vessel and stop bleeding.'},
+    {term:'Tourniquet',def:'a tight band that restricts blood flow to a limb during surgery.'},
+    {term:'Amputation',def:'the surgical removal of a limb or part of the body.'},
+    {term:'Prosthetic',def:'an artificial replacement for a missing body part, such as a limb.'},
+    {term:'Transfusion',def:'transferring blood from a donor (or store) into a patient.'}
+  ],
+  quiz:[
+    {q:'Before anaesthetics, what was a surgeon’s most important skill?',options:['Cleanliness','Speed','Note-taking','Latin'],answer:1,diff:'easy',explain:'With patients fully conscious, operating as fast as possible was the only way to limit suffering and shock.'},
+    {q:'Who used an ether inhaler in 1846 to make a patient unconscious during surgery?',options:['Joseph Lister','William Morton','John Snow','Ambroise Paré'],answer:1,diff:'easy',explain:'William Morton’s 1846 demonstration of ether showed surgery could be done painlessly, inspiring others.'},
+    {q:'How did Queen Victoria help anaesthetics become accepted?',options:['She banned them','She invented chloroform','She used chloroform during childbirth','She funded research'],answer:2,diff:'medium',explain:'Victoria’s use of chloroform (given by John Snow) reassured the public that anaesthetics were safe and respectable.'},
+    {q:'Why did the arrival of anaesthetics at first lead to MORE deaths from infection?',options:['Anaesthetics caused infection directly','Surgeons operated deeper in the body, where infection was deadlier','Patients stopped washing','Hospitals closed'],answer:1,diff:'hard',explain:'Pain-free, still patients let surgeons attempt longer, deeper operations — but without infection control, more patients died. This was the "Black Period" of surgery.'},
+    {q:'Which surgeon pioneered tying off blood vessels with ligatures instead of burning them?',options:['Ambroise Paré','William Hunter','Augustus Waller','James Tanner'],answer:0,diff:'medium',explain:'Ambroise Paré suggested stitching amputation stumps with thread rather than sealing them with painful heat.'}
+  ],
+  discussion:[
+    'Some people in the 1800s argued that pain was natural and even good for recovery. Why might people resist a clearly beneficial new technology? Give modern examples.',
+    'Anaesthetics solved one problem but worsened another (infection). Is it fair to call a discovery a "breakthrough" if it creates new dangers?',
+    'J B Middlebrook rejected his prosthetic arm. What does his story tell us about the difference between what medicine <em>can</em> do and what patients actually <em>want</em>?'
+  ]
+});
+SECTIONS.push({
+  id:'infection', icon:'🦠', navTitle:'Infection',
+  title:'Fighting Infection',
+  blurb:'Lister, carbolic acid, germ theory and the rise of the sterile operating theatre.',
+  summary:'Until the 1860s, infection killed huge numbers of surgical patients. The discovery that invisible germs cause infection — and the slow battle to keep wounds and instruments clean — made deep, complex surgery possible.',
+  objectives:[
+    'Explain why infection was such a deadly problem after surgery before the 1860s.',
+    'Describe Joseph Lister’s antiseptic methods and why they were controversial.',
+    'Distinguish between antiseptic and aseptic surgery.',
+    'Explain how controlling infection allowed surgeons to operate deeper in the body.'
+  ],
+  blocks:[
+    {type:'prose',html:`<p>Until the 1860s, infection was a frequent cause of death after surgery. Surgeons relied on speed and luck, and avoided operating deep inside the body — on the heart or brain — because the risk of fatal infection was so high. To make surgery safe, doctors had to learn what caused infection and how to stop it.</p>`},
+    {type:'prose',html:`<h3>Joseph Lister: the man who cleaned up surgery</h3><p>British surgeon <b>Joseph Lister</b> (1827–1912) transformed surgery from the 1860s. Influenced by the idea that microbes in the air caused decay, he cleaned wounds and instruments with pungent yellow <b>carbolic acid</b>. He called the process <b>antisepsis</b> — killing germs on and around the wound. On his Glasgow wards, far more patients survived.</p><p>Lister even invented a <b>carbolic spray</b> to fill the operating theatre with a fine mist of disinfectant. (He later dropped it when he realised germs weren’t only airborne.) Many surgeons doubted his methods at first — they disliked the mess and didn’t believe in invisible germs.</p>`},
+    {type:'image',src:'https://commons.wikimedia.org/wiki/Special:FilePath/Joseph%20Lister%201902.jpg?width=800',alt:'Portrait of Joseph Lister',caption:'Joseph Lister (1827–1912). By cleaning wounds and instruments with carbolic acid — a process he called antisepsis — he dramatically cut deaths from surgical infection.',credit:'1902. Public domain, via Wikimedia Commons.'},
+    {type:'callout',title:'Germ theory: the big idea behind it all',html:`Lister’s work made sense because of <b>germ theory</b> — the idea, proven by Louis Pasteur and later Robert Koch, that specific micro-organisms cause specific diseases. Before this, many believed in "miasma" (bad air). Germ theory explained <em>why</em> cleanliness worked and pointed the way to vaccines and antibiotics.`},
+    {type:'prose',html:`<h3>From antiseptic to aseptic</h3><p>Lister’s approach was <b>antiseptic</b>: killing germs that were already there. The next step was <b>aseptic</b> surgery: stopping germs reaching the patient in the first place. From the 1880s, <b>autoclaves</b> used high-pressure steam (about 20°C above boiling) to sterilise instruments completely. Surgeons added <b>gowns, masks, rubber gloves</b> and scrubbed hands.</p>`},
+    {type:'callout',title:'Antiseptic vs. aseptic — know the difference',html:`<b>Antiseptic</b> = destroying germs in and around a wound (e.g. carbolic acid). <b>Aseptic</b> = creating a germ-free environment so germs never reach the wound (e.g. sterilised instruments, gloves, masks). Modern surgery relies mostly on <b>asepsis</b>.`},
+    {type:'prose',html:`<h3>Infection on the battlefield</h3><p>War drove innovation. In the First World War, antiseptics alone couldn’t treat filthy battle wounds, so surgeons used the <b>Carrel–Dakin</b> system to flush wounds with a disinfectant solution every two hours, and <b>debridement</b> — cutting away dead tissue — a technique still vital in emergency medicine today.</p>`},
+    {type:'prose',html:`<h3>The pay-off: operating on the heart</h3><p>Once infection could be controlled, surgeons grew confident enough to operate deep inside the body. The ultimate example is <b>open-heart surgery</b>. In 1953, American surgeon <b>John Gibbon</b> used the first <b>heart–lung machine</b> to take over the heart and lungs during an operation. In Britain, <b>Denis Melrose</b>’s machine first repaired a heart defect in 1957 — and the patient lived another 25 years.</p>`},
+    {type:'image',src:'https://commons.wikimedia.org/wiki/Special:FilePath/Albert%20Edelfelt%20-%20Louis%20Pasteur%20-%201885.jpg?width=900',alt:'Painting of Louis Pasteur in his laboratory',caption:'Louis Pasteur in his laboratory (1885). Pasteur’s germ theory — that specific micro-organisms cause disease — explained <em>why</em> Lister’s cleanliness worked, and pointed the way to vaccines and antibiotics.',credit:'Albert Edelfelt, 1885. Public domain, via Wikimedia Commons.'},
+    {type:'prose',html:`<p>Keeping things clean is still front-line medicine. Behind the scenes, staff sterilise tens of thousands of instruments each week, and hospitals fight antibiotic-resistant infections like MRSA with hand gel, swabbing and easy-to-clean equipment.</p>`},
+    {type:'quote',text:`“While we rarely have direct contact with patients, we have a direct impact on their safety by ensuring the risk of cross infection is reduced.”`,who:'Trevor Garcia, hospital sterilisation manager'},
+    {type:'callout',spec:true,title:'GCSE link: surgery’s three problems',html:`Examiners love the story of how surgery overcame its <b>three big problems</b>: pain (anaesthetics, 1840s), infection (Lister’s antiseptics 1860s → asepsis), and blood loss (transfusion, blood groups). Lister is a "key individual" — be ready to explain both <b>what</b> he did and <b>why people resisted</b> him.`}
+  ],
+  glossary:[
+    {term:'Infection',def:'the invasion of the body by harmful micro-organisms (germs), causing illness.'},
+    {term:'Antiseptic',def:'a substance or method that destroys germs in and around a wound (e.g. carbolic acid).'},
+    {term:'Aseptic',def:'creating a completely germ-free environment so germs never reach the wound.'},
+    {term:'Germ theory',def:'the proven idea that specific micro-organisms cause specific diseases.'},
+    {term:'Carbolic acid',def:'a strong disinfectant Lister used to kill germs on wounds and instruments.'},
+    {term:'Autoclave',def:'a machine that sterilises instruments using high-pressure steam.'},
+    {term:'Debridement',def:'cutting away dead or infected tissue to prevent the spread of infection.'},
+    {term:'MRSA',def:'a bacterial infection resistant to many antibiotics, a serious risk in hospitals.'}
+  ],
+  quiz:[
+    {q:'What substance did Joseph Lister use to kill germs in and around wounds?',options:['Chloroform','Carbolic acid','Penicillin','Radium'],answer:1,diff:'easy',explain:'Lister used pungent yellow carbolic acid to clean wounds and instruments — the basis of antiseptic surgery.'},
+    {q:'What is the key difference between antiseptic and aseptic surgery?',options:['There is no difference','Antiseptic kills germs already present; aseptic stops germs reaching the wound','Aseptic uses anaesthetics','Antiseptic only works in war'],answer:1,diff:'medium',explain:'Antiseptic methods destroy existing germs; aseptic methods create a germ-free environment so germs never arrive.'},
+    {q:'Which big scientific idea explained WHY Lister’s cleanliness worked?',options:['The four humours','Miasma theory','Germ theory','The theory of opposites'],answer:2,diff:'medium',explain:'Germ theory (Pasteur, Koch) showed micro-organisms cause disease, explaining why killing germs prevented infection.'},
+    {q:'Why did controlling infection make open-heart surgery possible?',options:['It made anaesthetics unnecessary','Surgeons could safely operate deep inside the body','It stopped all bleeding','It replaced the heart–lung machine'],answer:1,diff:'hard',explain:'Once infection could be prevented, surgeons dared to operate on organs like the heart — leading to the heart–lung machine and open-heart surgery.'},
+    {q:'Why did many surgeons initially resist Lister’s methods?',options:['They were too expensive to import','They disliked the mess and didn’t believe in invisible germs','The government banned them','They preferred to use radium'],answer:1,diff:'medium',explain:'Carbolic acid was unpleasant to work with, and many surgeons were sceptical that invisible germs even existed.'}
+  ],
+  discussion:[
+    'Lister had strong evidence that his methods saved lives, yet many surgeons rejected them for years. What does this tell us about how new ideas spread in medicine?',
+    'Today, antibiotic-resistant infections like MRSA are a growing problem. Are we at risk of returning to a world where infection makes surgery dangerous? Explain.',
+    'War repeatedly drove medical progress (Carrel–Dakin, transfusion). Is it troubling that conflict advances medicine? Discuss.'
+  ]
+});
+SECTIONS.push({
+  id:'humours', icon:'🩸', navTitle:'Blood-letting',
+  title:'Blood-letting & the Four Humours',
+  blurb:'Leeches, lancets and a 2,000-year-old theory that refused to die.',
+  summary:'For most of history, Western medicine believed illness came from an imbalance of four bodily "humours". The main cure was to remove "excess" blood. This theme explores why a treatment that rarely worked survived for two thousand years — and how data finally helped end it.',
+  objectives:[
+    'Explain the theory of the four humours and how it shaped treatment.',
+    'Describe the methods of blood-letting: lancets, leeches and cupping.',
+    'Understand why an ineffective treatment lasted for so long.',
+    'Explain how statistics and evidence began to challenge traditional treatments.'
+  ],
+  blocks:[
+    {type:'prose',html:`<p>Cutting open a vein to let it bleed — <b>blood-letting</b> — is one of the oldest and longest-lasting treatments in history. It was used all over the world for thousands of years. To understand why, you have to understand the theory behind it.</p>`},
+    {type:'prose',html:`<h3>The theory of the four humours</h3><p>Until the 1850s, Western medicine believed the body contained four <b>humours</b> (liquids): <b>blood</b>, <b>phlegm</b>, <b>yellow bile</b> and <b>black bile</b>. Good health meant these four were in balance; illness meant one was in excess. Since blood was the humour people could most easily remove, blood-letting became the go-to "cure" to restore balance.</p>`},
+    {type:'callout',title:'A neat but wrong idea',html:`The four humours theory came from the ancient Greeks (Hippocrates and Galen). It was attractive because it was <b>simple, logical and explained everything</b> — even personality (a "sanguine" or "melancholic" mood). But it was based on philosophy, not observation, and it was almost entirely <b>wrong</b>.`},
+    {type:'prose',html:`<h3>Tools of the blood-letting trade</h3><p>In Europe, blood-letting was often done by <b>barber-surgeons</b> — who also cut hair and pulled teeth. (The red-and-white barber’s pole still seen today originally advertised blood-letting: <b>red for blood, white for bandages</b>.) The main tool was a sharp <b>lancet</b> and a bowl to catch the blood. It took skill to cut enough to release blood, but not so much that the patient bled to death.</p>`},
+    {type:'image',src:'https://commons.wikimedia.org/wiki/Special:FilePath/Bloodletting%2C%2016th%20Century%20Wellcome%20L0003183.jpg?width=1000',alt:'16th-century illustration of blood-letting',caption:'A 16th-century image of blood-letting. Opening a vein to release "excess" blood was standard treatment for centuries, usually done by barber-surgeons.',credit:'Wellcome Collection (CC BY 4.0), via Wikimedia Commons.'},
+    {type:'prose',html:`<h3>Leeches and cupping</h3><p>Blades weren’t the only method. In the 1800s, <b>leeches</b> became hugely popular — these worms can suck up to ten times their body weight in blood. Demand was enormous: in 1840s England, over <b>7 million leeches</b> were imported every year. Another method, <b>wet cupping</b>, used warmed cups on cut skin to draw out blood.</p>`},
+    {type:'image',src:'https://commons.wikimedia.org/wiki/Special:FilePath/Pharmacy%20leech%20jar%2C%20England%2C%201830-1870%20Wellcome%20L0058506.jpg?width=800',alt:'A pharmacy leech jar',caption:'An ornate pharmacy leech jar (England, 1830–1870). During the 1800s "leech craze", such jars stored the live leeches used to bleed patients — England imported over 7 million a year.',credit:'Wellcome Collection (CC BY 4.0), via Wikimedia Commons.'},
+    {type:'prose',html:`<h3>Why did it last 2,000 years?</h3><p>Blood-letting rarely helped and often harmed — so why did it survive so long? Because it <b>fitted the accepted theory</b>, both doctors and patients trusted it; because people sometimes recovered anyway, it seemed to "work"; and because there were few alternatives. Tradition and authority were powerful forces in medicine.</p>`},
+    {type:'callout',title:'The power of data',html:`Change came from <b>evidence</b>. French doctor <b>Pierre Charles Alexandre Louis</b> (1787–1872) was one of the first to use <b>statistics</b> to test a treatment. After carefully recording many blood-lettings, he showed that the benefit was “actually much less than commonly believed.” His "numerical method" was an early step towards <b>evidence-based medicine</b>.`},
+    {type:'prose',html:`<p>As new medicines and gentler therapies developed, blood-letting faded in Europe and North America — though it is still practised in some parts of the world. Interestingly, medical leeches are still used occasionally today in reconstructive surgery, to keep blood flowing in reattached body parts.</p>`},
+    {type:'callout',spec:true,title:'GCSE link: continuity and change',html:`The four humours is the perfect example of <b>continuity</b> in medicine — an idea that dominated treatment from ancient times until the 1800s. Its slow death shows how powerful <b>tradition and authority</b> can be, and how <b>scientific evidence</b> (like Louis’s statistics) is needed to overturn long-held beliefs.`}
+  ],
+  glossary:[
+    {term:'Four humours',def:'the ancient theory that the body contains four liquids — blood, phlegm, yellow bile, black bile — that must stay in balance.'},
+    {term:'Blood-letting',def:'deliberately removing blood from a patient to "rebalance" the body.'},
+    {term:'Lancet',def:'a small sharp blade used to open a vein for blood-letting.'},
+    {term:'Barber-surgeon',def:'a tradesman who cut hair and also performed minor surgery, tooth-pulling and blood-letting.'},
+    {term:'Cupping',def:'placing warmed cups on the skin to draw blood to the surface (wet cupping involves cutting the skin first).'},
+    {term:'Evidence-based medicine',def:'making medical decisions based on careful data and proof, not tradition or authority.'}
+  ],
+  quiz:[
+    {q:'According to the theory of the four humours, what caused illness?',options:['Germs','An imbalance of the body’s four liquids','Bad luck','Lack of exercise'],answer:1,diff:'easy',explain:'Illness was thought to result from one humour (blood, phlegm, yellow bile or black bile) being out of balance.'},
+    {q:'Why does a barber’s pole have red and white stripes?',options:['They were the cheapest paints','Red for blood and white for bandages, advertising blood-letting','To match the national flag','For no particular reason'],answer:1,diff:'easy',explain:'Barber-surgeons performed blood-letting; the pole advertised it — red for blood, white for bandages.'},
+    {q:'Roughly how many leeches did England import each year in the 1840s?',options:['About 7,000','About 70,000','Over 7 million','None'],answer:2,diff:'medium',explain:'Demand was enormous — over 7 million leeches a year were imported into England in the 1840s.'},
+    {q:'How did Pierre Louis challenge blood-letting?',options:['He invented a new lancet','He used statistics to show its benefits were exaggerated','He banned it by law','He proved germs cause disease'],answer:1,diff:'hard',explain:'Louis used a "numerical method" — early medical statistics — to show blood-letting helped far less than believed.'},
+    {q:'Why did blood-letting survive for around 2,000 years despite rarely working?',options:['It always cured patients','It fitted accepted theory, was trusted by doctors and patients, and had few alternatives','It was free','It was only used on animals'],answer:1,diff:'medium',explain:'Tradition, authority, belief in the four humours, and a lack of alternatives kept blood-letting going for centuries.'}
+  ],
+  discussion:[
+    'The four humours theory was wrong but lasted 2,000 years. What makes a wrong idea so hard to get rid of?',
+    'Patients often felt better after blood-letting. How can a useless (or harmful) treatment appear to work? (Think about the placebo effect and natural recovery.)',
+    'Pierre Louis used numbers to challenge tradition. Why is collecting data so powerful in medicine — and can statistics ever be misleading?'
+  ]
+});
+SECTIONS.push({
+  id:'radiation', icon:'☢️', navTitle:'Radiation',
+  title:'Cancer, Radiation & X-rays',
+  blurb:'From the radium craze to modern radiotherapy — a powerful, double-edged cure.',
+  summary:'The discovery of X-rays and radium gave new hope to cancer patients in the 1890s. But radiation is a double-edged tool: it kills cancer cells and healthy cells alike. This theme explores its dangers, its misuse, and how it became a precise life-saving treatment.',
+  objectives:[
+    'Explain how X-rays and radium were discovered and first used in medicine.',
+    'Understand how radiation can both cause and treat cancer.',
+    'Describe how radiotherapy was made safer and more precise over time.',
+    'Evaluate the "radium craze" as an example of medical misinformation.'
+  ],
+  blocks:[
+    {type:'prose',html:`<p>Radiation from newly discovered <b>X-rays</b> (1895) and the radioactive element <b>radium</b> (1898) offered fresh hope for cancer patients. At the same time, more people were being <em>diagnosed</em> with cancer — partly because they were living longer, as better housing, nutrition and control of infectious disease meant fewer people died young.</p>`},
+    {type:'prose',html:`<h3>A double-edged discovery</h3><p>Radium was discovered by <b>Pierre and Marie Curie</b> in 1898. Doctors found that radiation could <b>kill cancer cells</b> — the basis of <b>radiotherapy</b>. The catch: radiation harms <b>healthy cells too</b>, causing burns, nausea and hair loss, and even causing the very cancers it was used to treat. Early X-ray treatment sometimes left burns on patients and endangered the staff giving it.</p>`},
+    {type:'image',src:'https://commons.wikimedia.org/wiki/Special:FilePath/Marie%20Curie%201903.jpg?width=800',alt:'Portrait of Marie Curie',caption:'Marie Curie (1867–1934), who with her husband Pierre discovered radium in 1898. She won two Nobel Prizes — but her work with radioactivity ultimately cost her her life.',credit:'1903. Public domain, via Wikimedia Commons.'},
+    {type:'image',src:'https://commons.wikimedia.org/wiki/Special:FilePath/First%20medical%20X-ray%20by%20Wilhelm%20R%C3%B6ntgen%20of%20his%20wife%20Anna%20Bertha%20Ludwig%27s%20hand%20-%2018951222.jpg?width=800',alt:'Röntgen’s 1895 X-ray of a hand',caption:'One of the first medical X-rays: Wilhelm Röntgen’s image of his wife’s hand, 1895 — suddenly doctors could see inside a living body without cutting.',credit:'1895. Public domain, via Wikimedia Commons.'},
+    {type:'callout',title:'How does radiotherapy work?',html:`Radiotherapy uses <b>high-energy radiation</b> to damage the DNA of fast-dividing cancer cells so they die. Because it harms healthy cells too, modern treatment is carefully <b>targeted</b> and <b>spread out over days and weeks</b>, giving healthy tissue time to recover between doses.`},
+    {type:'prose',html:`<h3>The radium craze</h3><p>Before its dangers were understood, radium was marketed as a miracle <b>"cure-all"</b> and health booster. Companies sold radioactive drinking water, face creams, toothpaste — even radium-branded butter and bath salts. (Some products just used the <em>name</em> "radium" with no actual radioactivity.) The craze only faded after several prominent radium researchers <b>died</b> from radiation exposure in the late 1920s.</p>`},
+    {type:'image',src:'https://commons.wikimedia.org/wiki/Special:FilePath/Radithor%20bottle%20%2825799475341%29.jpg?width=800',alt:'A bottle of Radithor radioactive water',caption:'"Radithor" — radioactive water sold as a health tonic in the 1920s. The craze only faded after its users, and radium researchers, began to die. A reminder that public enthusiasm can race far ahead of the evidence.',credit:'CC BY-SA 2.0, via Wikimedia Commons.'},
+    {type:'prose',html:`<h3>Making radiation safer</h3><p>Doctors developed ways to control the danger. <b>Brachytherapy</b> places tiny radioactive "seeds" or needles directly into a tumour, so only nearby tissue is affected. <b>Dose calculators</b> worked out exactly how much radiation was safe. From the 1950s, artificially-made <b>cobalt-60</b> caused fewer skin burns than radium and could treat tumours deep in the body — over 35 million cancer patients have been treated with it. In 2018, <b>proton therapy</b> arrived in Britain, offering even more precise targeting.</p>`},
+    {type:'prose',html:`<h3>What treatment feels like</h3><p>Today, patients with head or neck cancer wear a <b>moulded mask</b> that holds them perfectly still while a machine targets the tumour. It can feel claustrophobic, and the side effects — sore throat, loss of taste, weight loss — are tough. At Leeds Children’s Hospital, staff decorate masks to help young patients feel less frightened.</p>`},
+    {type:'quote',text:`“I would close my eyes as the mask was put on… dreaming of everything I would be doing once the cancer was gone, like rocking out on stage… I never once opened my eyes as the machine did its thing.”`,who:'Dave Boyce, guitarist, after radiotherapy in 2018'},
+    {type:'callout',title:'Treating children with care',html:`Because patients must be <b>alone</b> in the room during radiotherapy (to protect others from radiation), it can be lonely and frightening. The <b>"Little Linac"</b> LEGO® kit lets children build a model of the machine and learn what will happen — reducing fear through play.`},
+    {type:'callout',spec:true,title:'GCSE link: science, technology & society',html:`Radiation links <b>scientific discovery</b> (the Curies), <b>technology</b> (X-ray tubes, cobalt-60, proton beams) and <b>society</b> (the radium craze, public misinformation). It shows medicine is shaped not just by what’s possible, but by how the public understands — or misunderstands — new science.`}
+  ],
+  glossary:[
+    {term:'X-ray',def:'a form of radiation discovered in 1895, used to see inside the body and to treat cancer.'},
+    {term:'Radium',def:'a radioactive element discovered by the Curies in 1898, used in early cancer treatment.'},
+    {term:'Radiotherapy',def:'using radiation to kill cancer cells.'},
+    {term:'Brachytherapy',def:'placing radioactive "seeds" or needles directly inside or next to a tumour.'},
+    {term:'Cobalt-60',def:'an artificial radioactive material introduced in the 1950s, safer for the skin than radium.'},
+    {term:'Linac (linear accelerator)',def:'a common modern radiotherapy machine that directs high-energy rays at a tumour.'},
+    {term:'Tumour',def:'an abnormal mass of cells; some tumours are cancerous (malignant).'}
+  ],
+  quiz:[
+    {q:'Who discovered the radioactive element radium in 1898?',options:['Joseph Lister','Pierre and Marie Curie','Alexander Fleming','Wilhelm Röntgen'],answer:1,diff:'easy',explain:'Pierre and Marie Curie discovered radium in 1898; it was soon used (and misused) in medicine.'},
+    {q:'Why is radiation a "double-edged" treatment for cancer?',options:['It is very expensive','It kills healthy cells as well as cancer cells','It only works on children','It causes infection'],answer:1,diff:'easy',explain:'Radiation damages healthy tissue as well as cancer cells, causing side effects and even cancer itself.'},
+    {q:'What was the "radium craze"?',options:['A dance popular in the 1920s','A fashion for selling radioactive products as health cures','A type of surgery','A new anaesthetic'],answer:1,diff:'medium',explain:'Before its dangers were known, radium was sold in water, creams and even butter as a "cure-all".'},
+    {q:'What is brachytherapy?',options:['Surgery to remove tumours','Placing radioactive seeds directly into or near a tumour','A type of blood test','A talking therapy'],answer:1,diff:'medium',explain:'Brachytherapy puts radioactive seeds or needles right at the tumour, so healthy tissue gets much less radiation.'},
+    {q:'Why is modern radiotherapy usually spread out over days and weeks?',options:['To save money','To give healthy cells time to recover between doses','Because machines are slow','To keep patients in hospital longer'],answer:1,diff:'hard',explain:'Short, spread-out doses let healthy tissue recover while still destroying the cancer — reducing harmful side effects.'}
+  ],
+  discussion:[
+    'The radium craze sold dangerous products as health cures. How can the public tell good medical science from dangerous hype today?',
+    'Radiotherapy causes serious side effects but can save lives. How should doctors and patients weigh up such trade-offs?',
+    'Tools like the "Little Linac" use play to reduce children’s fear. Why might emotional care matter as much as the treatment itself?'
+  ]
+});
+SECTIONS.push({
+  id:'electricity', icon:'⚡', navTitle:'Electricity & Mind',
+  title:'Rethinking Treatments: Electricity & the Mind',
+  blurb:'Electric cure-alls, defibrillators, and the rise of talking and play therapy.',
+  summary:'The 1900s brought a revolution in treatment. Electricity went from miracle "cure-all" to precise tool — from quack hairbrushes to life-saving defibrillators. Meanwhile, doctors began to treat the mind itself, through talking and play.',
+  objectives:[
+    'Explain how electricity moved from a "cure-all" to targeted medical treatments.',
+    'Distinguish between genuine electrical treatments and quackery.',
+    'Describe how electricity is used legitimately in defibrillators and pacemakers.',
+    'Understand how talking and play therapies developed to treat mental health.'
+  ],
+  blocks:[
+    {type:'prose',html:`<p>Health care in the 1900s went through a revolution. New discoveries — radiation, electricity, even the properties of sunlight — opened new channels of treatment. And for the first time, <b>talking</b> and <b>play</b> offered ways to treat the <em>mind</em>. With every new treatment came both <b>hope</b> and <b>risk</b>.</p>`},
+    {type:'prose',html:`<h3>The electric cure-all</h3><p>When scientists discovered the body has its own electricity in the 1700s, it sparked imaginations. Soon, all kinds of devices claimed to heal with electricity: rods, cages, belts, corsets — even an <b>electric hairbrush</b> said to cure baldness and headaches. Metal "galvanic" <b>amulets</b> were sold as cure-alls.</p><p>Much of this was <b>quackery</b> — false medicine sold for profit. American Elisha Perkins sold metal "tractors" he claimed drew out disease (later discredited). Yet some respected figures believed in electricity: John Wesley, founder of Methodism, called it “the nearest a universal medicine of any yet known in the world.”</p>`},
+    {type:'image',src:'https://commons.wikimedia.org/wiki/Special:FilePath/Electrotherapy%20machine%2C%20England%2C%201860-1900%20Wellcome%20L0057493.jpg?width=1000',alt:'An ornate Victorian electrotherapy machine',caption:'A Victorian electrotherapy machine (England, 1860–1900). Turning the handle generated electricity delivered to the patient — an expensive treatment sold for everything from pain to nerve conditions.',credit:'Wellcome Collection (CC BY 4.0), via Wikimedia Commons.'},
+    {type:'callout',title:'How to spot quackery',html:`Watch for the warning signs: a single product that claims to cure <b>many unrelated conditions</b>, "miracle" language, testimonials instead of trials, and profit for the seller. The electric hairbrush and radium butter are historical examples — but the same red flags apply to dubious health products today.`},
+    {type:'prose',html:`<h3>From cure-all to precise tool</h3><p>Over time, electricity stopped being a cure for everything and became a <b>targeted</b> treatment for specific problems — the heart, the nerves, and pain. Two life-savers stand out:</p><ul><li><b>Defibrillators</b> deliver an electric shock to restore a normal rhythm to a heart that has stopped or is beating dangerously. Modern ones are designed so anyone can use them, and are found in public places.</li><li><b>Pacemakers</b> use small electrical pulses from a battery to keep the heart beating steadily. Early ones were bulky and needed mains power; modern ones are tiny and last over ten years.</li></ul><p><b>TENS</b> machines, meanwhile, use a mild current to relieve pain — for example during labour.</p>`},
+    {type:'prose',html:`<h3>Electricity and the mind: ECT</h3><p>Electricity was also turned on the brain. <b>Electroconvulsive therapy (ECT)</b>, developed in 1938, passed electricity through the head to cause a seizure, after reports that people with epilepsy felt better after fits. It was used for severe mental illness, with restraints and a mouth gag to protect the patient. Largely replaced by medicines and talking therapies since the 1960s, ECT is <b>still occasionally used</b> as a last resort — and experiences of it vary greatly.</p>`},
+    {type:'prose',html:`<h3>The power of talking</h3><p>Changes to our <b>mental</b> health are harder to spot than physical illness. <b>Sigmund Freud</b> was a key figure from the 1890s, and since then psychotherapists have developed many "talking therapies" — used for anxiety, depression, chronic pain, and the hidden causes of physical symptoms.</p>`},
+    {type:'prose',html:`<h3>The power of play</h3><p>Children can’t always put feelings into words. Paediatrician <b>Margaret Lowenfeld</b> (1890–1973), influenced by traumatised children after the First World War, devised the <b>"world technique"</b>: children arranged toys in a sandbox, and the scene revealed their inner emotions. Her ideas — original but criticised at the time — inspired play therapies still used today.</p>`},
+    {type:'image',src:'https://commons.wikimedia.org/wiki/Special:FilePath/Sigmund%20Freud%2C%20by%20Max%20Halberstadt%20%28cropped%29.jpg?width=800',alt:'Portrait of Sigmund Freud',caption:'Sigmund Freud (1856–1939), a founding figure of the "talking therapies". From the 1890s, psychotherapists developed ways to treat the mind through talking and listening.',credit:'Max Halberstadt. Public domain, via Wikimedia Commons.'},
+    {type:'callout',spec:true,title:'GCSE link: treating the whole person',html:`This theme shows medicine widening its focus from the <b>body</b> to the <b>mind</b>, and learning to tell <b>evidence-based treatment</b> from <b>quackery</b>. It also raises a key modern theme: treatments like ECT can be both helpful and harmful, so <b>patient experience</b> and <b>consent</b> matter enormously.`}
+  ],
+  glossary:[
+    {term:'Quackery',def:'the promotion of false or unproven medical treatments, usually for profit.'},
+    {term:'Electrotherapy',def:'the use of electricity to try to treat illness or relieve pain.'},
+    {term:'Defibrillator',def:'a device that gives the heart an electric shock to restore a normal rhythm.'},
+    {term:'Pacemaker',def:'an implanted device that uses electrical pulses to keep the heart beating regularly.'},
+    {term:'ECT (electroconvulsive therapy)',def:'passing electricity through the brain to cause a seizure, used for severe mental illness.'},
+    {term:'Psychotherapy',def:'treating mental health problems by talking with a trained specialist.'},
+    {term:'Play therapy',def:'helping children express feelings and heal through guided play.'}
+  ],
+  quiz:[
+    {q:'What is "quackery"?',options:['A type of surgery','The selling of false or unproven medical treatments','A talking therapy','An early anaesthetic'],answer:1,diff:'easy',explain:'Quackery means promoting fake or unproven cures, often for profit — like the "electric hairbrush".'},
+    {q:'What does a defibrillator do?',options:['Numbs pain','Gives the heart an electric shock to restore its rhythm','Measures blood sugar','Sterilises instruments'],answer:1,diff:'easy',explain:'A defibrillator shocks a stopped or dangerously irregular heart back into a normal rhythm.'},
+    {q:'How did electricity’s role in medicine change over time?',options:['It was banned completely','It went from a "cure-all" to targeted treatments like pacemakers','It replaced all surgery','It became only a quack remedy'],answer:1,diff:'medium',explain:'Electricity stopped being sold as a cure for everything and became a precise tool for the heart, nerves and pain.'},
+    {q:'Why did Margaret Lowenfeld use toys and sand with children?',options:['To entertain them while waiting','Because play could reveal feelings children could not put into words','To test their intelligence','To replace medicine'],answer:1,diff:'medium',explain:'Her "world technique" let children express hidden emotions through the scenes they built — the basis of play therapy.'},
+    {q:'Which statement about ECT (electroconvulsive therapy) is accurate?',options:['It was a proven cure-all','It is no longer used at all','It is controversial and occasionally still used as a last resort','It was invented by Freud'],answer:2,diff:'hard',explain:'ECT is largely replaced by medicines and talking therapies but is still sometimes used; patient experiences of it vary widely.'}
+  ],
+  discussion:[
+    'Many "electric" cures were quackery, yet respected people believed in them. Why are even intelligent people sometimes fooled by false medicine?',
+    'ECT helped some patients but harmed others. How should doctors decide whether to use a treatment with such mixed results?',
+    'For centuries medicine focused on the body, not the mind. Why do you think mental health was taken seriously so much later — and is it taken seriously enough now?'
+  ]
+});
+SECTIONS.push({
+  id:'penicillin', icon:'💊', navTitle:'Penicillin',
+  title:'Penicillin & the Age of Antibiotics',
+  blurb:'A chance discovery, a wartime race, and the looming threat of resistance.',
+  summary:'Penicillin — the first antibiotic — is one of the greatest breakthroughs in medical history. This theme follows its journey from a mouldy Petri dish to mass production, and asks whether overuse could now undo its benefits.',
+  objectives:[
+    'Describe how Alexander Fleming discovered penicillin by chance in 1928.',
+    'Explain the roles of Florey, Chain and Heatley in turning it into a usable drug.',
+    'Understand how war and teamwork drove mass production.',
+    'Explain what antibiotic resistance is and why it is a serious threat.'
+  ],
+  blocks:[
+    {type:'prose',html:`<p>As the first <b>antibiotic</b>, penicillin changed our lives. Conditions once hopeless — ear infections, infected cuts, sexually transmitted diseases — became easily curable for the first time. Penicillin sparked a hunt for more antibiotics, and helped <b>lengthen average life expectancy in Britain by around 20 years</b>.</p>`},
+    {type:'prose',html:`<h3>An accidental hero</h3><p>In 1928, Scottish microbiologist <b>Alexander Fleming</b> (1881–1955) noticed something unexpected. He’d been growing bacteria in a Petri dish, but where a <b>mould</b> had grown, the bacteria had been killed. He named the active substance from the mould <em>Penicillium</em> — <b>penicillin</b>. (The word <em>Penicillium</em> is Latin for "painter’s brush", which is what the mould looks like under a microscope.)</p>`},
+    {type:'image',src:'https://commons.wikimedia.org/wiki/Special:FilePath/Sir%20Alexander%20Fleming%2C%20Frs%2C%20the%20Discoverer%20of%20Penicillin%20Art.IWMARTLD4217.jpg?width=800',alt:'Portrait of Sir Alexander Fleming',caption:'Sir Alexander Fleming (1881–1955). His chance observation of a mould killing bacteria in 1928 began the antibiotic age.',credit:'Ethel Gabain (IWM). Public domain, via Wikimedia Commons.'},
+    {type:'callout',title:'Discovery is not enough',html:`Fleming <b>discovered</b> penicillin but couldn’t produce a pure, usable form — and gave up trying. This is a crucial lesson: a discovery only changes the world when others <b>develop</b> it. Penicillin needed a whole team and over a decade of work.`},
+    {type:'prose',html:`<h3>From mould to medicine</h3><p>The challenge of extracting pure penicillin was solved around 1940 by a team at <b>Oxford University</b>, including <b>Howard Florey</b>, <b>Ernst Chain</b> and biochemist <b>Norman Heatley</b>. Heatley even built purifying equipment from scrap — including parts of an old oak bookcase from a university library!</p>`},
+    {type:'image',src:'https://commons.wikimedia.org/wiki/Special:FilePath/Sample%20of%20penicillin%20mould%20presented%20by%20Alexander%20Fleming%20to%20Douglas%20Macleod%2C%201935%20%289672239344%29.jpg?width=1000',alt:'A sample of penicillin mould presented by Fleming, 1935',caption:'A sample of the original <em>Penicillium</em> mould, given by Fleming himself in 1935. Turning this mould into a usable drug took the Oxford team another decade.',credit:'Science Museum, London (CC BY-SA 4.0), via Wikimedia Commons.'},
+    {type:'prose',html:`<h3>The first patient</h3><p>On 12 February 1941, <b>Albert Alexander</b> — a policeman with a cut that had become catastrophically infected — became the first British patient treated with penicillin. He improved dramatically with each dose. But the drug was so scarce it was even <b>recycled from his urine</b> and re-injected. It ran out after four days, and he died. His case proved penicillin worked — and that far more of it was needed.</p>`},
+    {type:'prose',html:`<h3>Penicillin goes global</h3><p>The <b>Second World War</b> turbocharged production. Penicillin worked faster than other drugs and could quickly treat infected battle wounds, returning soldiers to action. Six women known as the "penicillin girls" grew the mould; pharmaceutical companies across the world were encouraged to mass-produce it. It became so precious that a tiny reference vial was guarded on behalf of the World Health Organization.</p>`},
+    {type:'callout',title:'A Nobel Prize — and a warning',html:`In 1945, Fleming, Florey and Chain shared the <b>Nobel Prize</b> for penicillin. But in his acceptance speech, Fleming <b>warned</b> that misusing penicillin could make bacteria <b>resistant</b> to it. He was right.`},
+    {type:'prose',html:`<h3>The threat of resistance</h3><p>Penicillin sparked a search for new antibiotics to fight bacteria it couldn’t treat. But <b>antibiotic resistance</b> is now a serious global danger. When antibiotics are <b>overused</b> — taken for viral colds and flu (which they can’t cure), or courses not finished — bacteria evolve to survive them. A 2005 survey found 1 in 5 Britons wrongly thought antibiotics could cure colds.</p><p>Scientists hunt for new antibiotics using clever tools like the <b>iChip</b>, which grows soil bacteria that won’t grow in a lab. Meanwhile, hospitals fight resistant infections like <b>MRSA</b> with hand gel, swabbing and easy-to-clean equipment — because <b>preventing</b> infection reduces the need for antibiotics in the first place.</p>`},
+    {type:'callout',spec:true,title:'GCSE link: the modern period',html:`Penicillin is the headline story of <b>modern medicine</b>. Be ready to explain the difference between Fleming’s <b>discovery</b> (1928) and the Oxford team’s <b>development</b> (1940), the role of <b>war and government</b> in mass production, and why <b>antibiotic resistance</b> threatens to reverse the gains. It’s a perfect "factors" question: science, war, individuals, teamwork and chance all play a part.`}
+  ],
+  glossary:[
+    {term:'Antibiotic',def:'a medicine that kills bacteria or stops them growing.'},
+    {term:'Penicillin',def:'the first antibiotic, produced from the Penicillium mould.'},
+    {term:'Penicillium',def:'the mould from which penicillin is made (Latin for "painter’s brush").'},
+    {term:'Antibiotic resistance',def:'when bacteria evolve to survive antibiotics, making infections hard to treat.'},
+    {term:'Bacteria',def:'tiny single-celled micro-organisms; some cause disease, and antibiotics target them.'},
+    {term:'Mass production',def:'making large quantities of a product, e.g. enough penicillin for everyone who needs it.'}
+  ],
+  quiz:[
+    {q:'How did Alexander Fleming discover penicillin in 1928?',options:['By careful planned experiments','By chance — a mould killed bacteria in a Petri dish','By studying the Curies','During the Second World War'],answer:1,diff:'easy',explain:'Fleming noticed by accident that mould growing in a dish had killed the surrounding bacteria.'},
+    {q:'Why could Fleming’s discovery not help patients at first?',options:['It was illegal','He could not produce a pure, usable form of the drug','Bacteria were already resistant','No one was ill'],answer:1,diff:'medium',explain:'Fleming could not purify penicillin into a usable drug and gave up; the Oxford team solved this over a decade later.'},
+    {q:'Who developed penicillin into a usable, mass-produced drug?',options:['Fleming alone','The Oxford team: Florey, Chain and Heatley','Joseph Lister','Marie Curie'],answer:1,diff:'medium',explain:'Florey, Chain and Heatley at Oxford worked out how to purify and produce penicillin in the early 1940s.'},
+    {q:'What event greatly increased penicillin production?',options:['The radium craze','The Second World War','The discovery of X-rays','The NHS opening'],answer:1,diff:'easy',explain:'WWII created huge demand for treating wounds, driving the mass production of penicillin worldwide.'},
+    {q:'What causes antibiotic resistance?',options:['Using antibiotics correctly','Overusing antibiotics, e.g. for viral colds or not finishing a course','Refrigerating antibiotics','Vaccination'],answer:1,diff:'hard',explain:'Overuse and misuse let bacteria evolve to survive antibiotics — exactly the danger Fleming warned about in 1945.'}
+  ],
+  discussion:[
+    'Fleming discovered penicillin; Florey, Chain and Heatley made it usable. Who deserves the most credit for "saving lives" — and does it matter?',
+    'Fleming warned about resistance in 1945, yet overuse continued. Why do societies often ignore expert warnings until a crisis hits?',
+    'Antibiotics may become less effective in your lifetime. What could governments, doctors and ordinary people do now to protect them?'
+  ]
+});
+SECTIONS.push({
+  id:'timeline', icon:'🕰️', navTitle:'Timeline', extra:true,
+  title:'The Big Picture: A Timeline of Medicine',
+  blurb:'500+ years of medicine at a glance.',
+  summary:'A quick overview of the key moments in this module — from prehistoric skull surgery to the fight against antibiotic resistance. Use it to see how the themes connect.',
+  blocks:[
+    {type:'prose',html:`<p>Medicine didn’t improve in a straight line. There were dead ends (blood-letting), false hopes (the radium craze) and chance discoveries (penicillin). But the big shift is clear: from trusting <b>ancient authority</b>, to <b>observation and dissection</b>, to <b>germ theory and science</b>, to today’s <b>evidence-based, technological medicine</b>.</p>`},
+    {type:'timeline',items:[
+      {year:'c.5000 BC',text:'<b>Trephination</b> — holes drilled in living skulls; some patients survived. One of the oldest operations.'},
+      {year:'AD 200',text:'<b>Galen’s</b> animal-based anatomy dominates European medicine for over 1,300 years.'},
+      {year:'Pre-1850s',text:'The <b>four humours</b> theory rules; <b>blood-letting</b>, leeches and cupping are standard treatments.'},
+      {year:'1543',text:'<b>Vesalius</b> publishes <em>De Fabrica</em> — modern anatomy built on human dissection.'},
+      {year:'1628',text:'<b>William Harvey</b> proves blood circulates, pumped by the heart.'},
+      {year:'1768',text:'<b>William Hunter</b> founds London’s most famous anatomy school.'},
+      {year:'1840s',text:'<b>Anaesthetics</b> arrive — ether (1846) and chloroform — conquering surgical pain.'},
+      {year:'1860s',text:'<b>Joseph Lister’s</b> antiseptic surgery (carbolic acid) slashes deaths from infection.'},
+      {year:'1880s',text:'<b>Germ theory</b> accepted; <b>aseptic</b> surgery and autoclaves follow.'},
+      {year:'1887',text:'First <b>ECG</b> trace of a human heart recorded (using a toy train).'},
+      {year:'1895–98',text:'<b>X-rays</b> discovered; the Curies discover <b>radium</b> — the dawn of radiotherapy.'},
+      {year:'1928',text:'<b>Fleming</b> discovers <b>penicillin</b> by chance.'},
+      {year:'1940–41',text:'Oxford team (<b>Florey, Chain, Heatley</b>) develops penicillin; first patient treated 1941.'},
+      {year:'1948',text:'The <b>NHS</b> is founded, making treatment free at the point of use.'},
+      {year:'1950s',text:'<b>Heart–lung machine</b> enables open-heart surgery; <b>cobalt-60</b> improves radiotherapy.'},
+      {year:'1949–71',text:'<b>Tanner’s</b> growth study defines "normal" childhood development.'},
+      {year:'2010s',text:'<b>Deep brain stimulation</b>, <b>proton therapy</b> (UK 2018), and the global fight against <b>antibiotic resistance</b>.'}
+    ]},
+    {type:'callout',spec:true,title:'Tip for exams',html:`When you compare periods, think about the <b>factors</b> that drove change or held it back: <b>science & technology</b>, <b>individuals</b>, <b>war</b>, <b>government</b>, <b>communication</b>, <b>religion & attitudes</b>, and <b>chance</b>. Almost every story in this module can be explained using these.`}
+  ]
+});
+SECTIONS.push({
+  id:'credits', icon:'🖼️', navTitle:'Image credits', extra:true,
+  title:'Image credits & licences',
+  blurb:'Sources and licences for every image in this module.',
+  summary:'All images in this module are used under open licences — public domain or Creative Commons. Each requires attribution, listed here. Click any title to see the original.',
+  blocks:[
+    {type:'prose',html:`<p>The photographs originally taken in the museum have been replaced with openly-licensed equivalents from <b>Wikimedia Commons</b> and the <b>Wellcome Collection</b>, so this module carries no image-copyright restrictions. "PD" = public domain; "CC BY" / "CC BY-SA" = Creative Commons (free to reuse with credit).</p>
+    <ul style="line-height:1.9">
+      <li><a href="https://commons.wikimedia.org/wiki/File:Rembrandt_-_The_Anatomy_Lesson_of_Dr_Nicolaes_Tulp.jpg" target="_blank" rel="noopener">Rembrandt, <em>The Anatomy Lesson of Dr Nicolaes Tulp</em> (1632)</a> — PD</li>
+      <li><a href="https://commons.wikimedia.org/wiki/File:Vesalius_Fabrica_portrait.jpg" target="_blank" rel="noopener">Portrait of Andreas Vesalius, <em>De Fabrica</em> (1543)</a> — PD</li>
+      <li><a href="https://commons.wikimedia.org/wiki/File:Vesalius,_De_humani_corporis_fabrica,_1543_Wellcome_L0031739.jpg" target="_blank" rel="noopener">Title page of <em>De Humani Corporis Fabrica</em> (1543)</a> — Wellcome Collection, CC BY 4.0</li>
+      <li><a href="https://commons.wikimedia.org/wiki/File:William_Harvey_2.jpg" target="_blank" rel="noopener">Portrait of William Harvey</a> — PD</li>
+      <li><a href="https://commons.wikimedia.org/wiki/File:Willem_Einthoven_ECG.jpg" target="_blank" rel="noopener">Willem Einthoven and his string-galvanometer ECG</a> — PD</li>
+      <li><a href="https://commons.wikimedia.org/wiki/File:The_First_Operation_Under_Ether_-_Robert_Hinckley.jpg" target="_blank" rel="noopener">Robert Hinckley, <em>The First Operation Under Ether</em></a> — PD</li>
+      <li><a href="https://commons.wikimedia.org/wiki/File:Joseph_Lister_1902.jpg" target="_blank" rel="noopener">Joseph Lister (1902)</a> — PD</li>
+      <li><a href="https://commons.wikimedia.org/wiki/File:Albert_Edelfelt_-_Louis_Pasteur_-_1885.jpg" target="_blank" rel="noopener">Albert Edelfelt, <em>Louis Pasteur</em> (1885)</a> — PD</li>
+      <li><a href="https://commons.wikimedia.org/wiki/File:Bloodletting,_16th_Century_Wellcome_L0003183.jpg" target="_blank" rel="noopener">Blood-letting, 16th century</a> — Wellcome Collection, CC BY 4.0</li>
+      <li><a href="https://commons.wikimedia.org/wiki/File:Pharmacy_leech_jar,_England,_1830-1870_Wellcome_L0058506.jpg" target="_blank" rel="noopener">Pharmacy leech jar (1830–1870)</a> — Wellcome Collection, CC BY 4.0</li>
+      <li><a href="https://commons.wikimedia.org/wiki/File:Marie_Curie_1903.jpg" target="_blank" rel="noopener">Marie Curie (1903)</a> — PD</li>
+      <li><a href="https://commons.wikimedia.org/wiki/File:First_medical_X-ray_by_Wilhelm_R%C3%B6ntgen_of_his_wife_Anna_Bertha_Ludwig%27s_hand_-_18951222.jpg" target="_blank" rel="noopener">Röntgen’s X-ray of a hand (1895)</a> — PD</li>
+      <li><a href="https://commons.wikimedia.org/wiki/File:Radithor_bottle_(25799475341).jpg" target="_blank" rel="noopener">Radithor radioactive tonic bottle</a> — CC BY-SA 2.0</li>
+      <li><a href="https://commons.wikimedia.org/wiki/File:Electrotherapy_machine,_England,_1860-1900_Wellcome_L0057493.jpg" target="_blank" rel="noopener">Electrotherapy machine (1860–1900)</a> — Wellcome Collection, CC BY 4.0</li>
+      <li><a href="https://commons.wikimedia.org/wiki/File:Sigmund_Freud,_by_Max_Halberstadt_(cropped).jpg" target="_blank" rel="noopener">Sigmund Freud, by Max Halberstadt</a> — PD</li>
+      <li><a href="https://commons.wikimedia.org/wiki/File:Sir_Alexander_Fleming,_Frs,_the_Discoverer_of_Penicillin_Art.IWMARTLD4217.jpg" target="_blank" rel="noopener">Sir Alexander Fleming (IWM)</a> — PD</li>
+      <li><a href="https://commons.wikimedia.org/wiki/File:Sample_of_penicillin_mould_presented_by_Alexander_Fleming_to_Douglas_Macleod,_1935_(9672239344).jpg" target="_blank" rel="noopener">Penicillin mould sample given by Fleming (1935)</a> — Science Museum, CC BY-SA 4.0</li>
+    </ul>
+    <p class="muted">Images load directly from Wikimedia Commons. The written content of this module is original work for the Learning Hub, informed by (but not copied from) the museum’s exhibit panels.</p>`}
+  ]
+});
+/*__DATA__*/
+/* ============ ENGINE ============ */
+const $=(s,r=document)=>r.querySelector(s);
+const main=$('#main'), navEl=$('#main-nav');
+const PKEY='lh_medicine_progress_v1';
+function loadProg(){try{return JSON.parse(localStorage.getItem(PKEY))||{}}catch(e){return {}}}
+function saveProg(p){try{localStorage.setItem(PKEY,JSON.stringify(p))}catch(e){}}
+function esc(s){return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+
+function buildNav(){
+  navEl.innerHTML='<a onclick="go(\'\')">Home</a>'+SECTIONS.map(s=>`<a onclick="go('${s.id}')" data-id="${s.id}">${s.navTitle||s.title}</a>`).join('');
+}
+$('#nav-toggle').onclick=()=>navEl.classList.toggle('open');
+
+function go(id){navEl.classList.remove('open');window.scrollTo(0,0);location.hash=id?('/'+id):'/';route();}
+window.addEventListener('hashchange',route);
+
+function setActive(id){document.querySelectorAll('.main-nav a').forEach(a=>a.classList.toggle('active',a.dataset.id===id));}
+
+function route(){
+  const h=location.hash.replace(/^#\/?/,'');
+  if(!h){renderHome();setActive(null);return;}
+  const sec=SECTIONS.find(s=>s.id===h);
+  if(sec){renderSection(sec);setActive(sec.id);}else{renderHome();setActive(null);}
+}
+
+function renderHome(){
+  const prog=loadProg();
+  const themes=SECTIONS.filter(s=>!s.extra);
+  const totalQ=SECTIONS.reduce((a,s)=>a+(s.quiz?s.quiz.length:0),0);
+  const cards=themes.map((s,i)=>{
+    const sc=prog[s.id]; const pct=sc?Math.round(100*sc.correct/sc.total):0;
+    return `<div class="topic-card" onclick="go('${s.id}')">
+      <div class="icon">${s.icon}</div>
+      <div class="num">Theme ${i+1}</div>
+      <h3>${s.title}</h3>
+      <div class="card-desc">${s.blurb}</div>
+      <div class="prog-mini"><i style="width:${pct}%"></i></div>
+      <div class="card-foot"><span>${s.quiz?s.quiz.length:0} quiz questions</span><span class="go-link">${sc?('Best '+pct+'%'):'Start →'}</span></div>
+    </div>`;
+  }).join('');
+  main.innerHTML=`
+  <section class="hero">
+    <h1>Medicine Through Time</h1>
+    <p class="lede">From dissection tables and leeches to penicillin and pacemakers — explore how doctors learned to understand, measure and treat the human body. Built from a real museum gallery, written for GCSE.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" onclick="go('${SECTIONS[0].id}')">Start learning →</a>
+      <a class="btn btn-ghost" onclick="go('timeline')">Big-picture timeline</a>
+    </div>
+    <div class="stats-row">
+      <div class="stat"><b>${themes.length}</b><span>themes</span></div>
+      <div class="stat"><b>${totalQ}</b><span>quiz questions</span></div>
+      <div class="stat"><b>500+</b><span>years of medicine</span></div>
+      <div class="stat"><b>25+</b><span>real objects</span></div>
+    </div>
+  </section>
+  <h2 class="section-title">Explore the themes</h2>
+  <div class="grid cols-2">${cards}</div>
+  <div class="callout" style="margin-top:2rem"><h4>How to use this module</h4>Each theme has four parts: <b>Learn</b> (the story and the science), <b>Key terms</b> (vocabulary you must know), <b>Quiz</b> (check yourself) and <b>Discuss</b> (think harder). Your best quiz scores are saved on this device.</div>`;
+}
+
+function blockHTML(b){
+  if(b.type==='prose')return `<div class="block-prose">${b.html}</div>`;
+  if(b.type==='image'){const s=(b.src||'').startsWith('http')?b.src:('images/'+b.src);return `<figure class="figure"><img src="${s}" alt="${esc(b.alt||'')}" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('figure').classList.add('img-fail')"><figcaption>${b.caption||''}${b.credit?`<span class="credit">${b.credit}</span>`:''}</figcaption></figure>`;}
+  if(b.type==='quote')return `<blockquote class="quote">${b.text}<cite>— ${b.who}</cite></blockquote>`;
+  if(b.type==='callout')return `<div class="callout ${b.spec?'spec':''}"><h4>${b.title}</h4>${b.html}</div>`;
+  if(b.type==='timeline')return `<div class="timeline">${b.items.map(i=>`<div class="tl-item"><b>${i.year}</b> — ${i.text}</div>`).join('')}</div>`;
+  return '';
+}
+
+function renderSection(sec){
+  const idx=SECTIONS.indexOf(sec);
+  const prev=SECTIONS[idx-1], next=SECTIONS[idx+1];
+  const learn=sec.blocks.map(blockHTML).join('');
+  const hasTerms=sec.glossary&&sec.glossary.length, hasQuiz=sec.quiz&&sec.quiz.length, hasDisc=sec.discussion&&sec.discussion.length;
+  const terms=(sec.glossary||[]).map(t=>`<div class="term"><b>${t.term}</b> — ${t.def}</div>`).join('');
+  const discuss=(sec.discussion||[]).map((d,i)=>`<div class="d"><b>${i+1}.</b> ${d}</div>`).join('');
+  const objBox=(sec.objectives&&sec.objectives.length)?`<div class="objbox"><h3>Learning objectives</h3><ul>${sec.objectives.map(o=>`<li>${o}</li>`).join('')}</ul></div>`:'';
+  let tabs='<button class="tab-btn active" data-t="learn">📖 Learn</button>';
+  if(hasTerms)tabs+='<button class="tab-btn" data-t="terms">🔑 Key terms</button>';
+  if(hasQuiz)tabs+='<button class="tab-btn" data-t="quiz">📝 Quiz</button>';
+  if(hasDisc)tabs+='<button class="tab-btn" data-t="discuss">💭 Discuss</button>';
+  main.innerHTML=`
+  <div class="breadcrumb"><a onclick="go('')">Home</a> › <span>${sec.title}</span></div>
+  <div class="sec-head"><div class="big-icon">${sec.icon}</div><div><h1>${sec.title}</h1><p class="sec-summary">${sec.summary}</p></div></div>
+  ${objBox}
+  <div class="subnav">${tabs}</div>
+  <div id="tab-learn" class="tab-panel">${learn}</div>
+  ${hasTerms?`<div id="tab-terms" class="tab-panel" hidden><h2 class="section-title" style="margin-top:0">Key terms &amp; glossary</h2><div class="terms">${terms}</div></div>`:''}
+  ${hasQuiz?`<div id="tab-quiz" class="tab-panel" hidden><h2 class="section-title" style="margin-top:0">Test yourself</h2><div id="quiz-wrap"></div></div>`:''}
+  ${hasDisc?`<div id="tab-discuss" class="tab-panel" hidden><h2 class="section-title" style="margin-top:0">Discussion &amp; thinking points</h2><p class="muted">No single right answer — use evidence from this theme to argue your case.</p><div class="discuss">${discuss}</div></div>`:''}
+  <div class="pager">
+    ${prev?`<a class="prv" onclick="go('${prev.id}')">← ${prev.navTitle||prev.title}</a>`:'<span></span>'}
+    ${next?`<a class="nxt" onclick="go('${next.id}')">${next.navTitle||next.title} →</a>`:`<a class="nxt" onclick="go('')">Back to home →</a>`}
+  </div>`;
+  document.querySelectorAll('.tab-btn').forEach(b=>b.onclick=()=>{
+    document.querySelectorAll('.tab-btn').forEach(x=>x.classList.toggle('active',x===b));
+    ['learn','terms','quiz','discuss'].forEach(t=>{const el=$('#tab-'+t);if(el)el.hidden=(t!==b.dataset.t);});
+    if(b.dataset.t==='quiz')renderQuiz(sec);
+  });
+}
+
+function renderQuiz(sec){
+  const wrap=$('#quiz-wrap'); if(wrap.dataset.done)return; wrap.dataset.done='1';
+  const state={answered:0,correct:0,total:sec.quiz.length};
+  wrap.innerHTML=sec.quiz.map((q,qi)=>`
+    <div class="q-card" id="q${qi}">
+      <div class="q-top"><span class="q-num">Question ${qi+1} of ${sec.quiz.length}</span><span class="badge ${q.diff||'easy'}">${q.diff||'easy'}</span></div>
+      <div class="q-text">${q.q}</div>
+      <div class="options">${q.options.map((o,oi)=>`<div class="option" data-q="${qi}" data-o="${oi}"><span class="mark">${String.fromCharCode(65+oi)}</span><span>${o}</span></div>`).join('')}</div>
+      <div class="feedback" id="fb${qi}"></div>
+    </div>`).join('')+`<div class="quiz-score" id="qscore"></div>`;
+  wrap.querySelectorAll('.option').forEach(opt=>opt.onclick=()=>{
+    const qi=+opt.dataset.q, oi=+opt.dataset.o, q=sec.quiz[qi];
+    const card=$('#q'+qi); if(card.dataset.locked)return; card.dataset.locked='1';
+    const correct=oi===q.answer;
+    card.querySelectorAll('.option').forEach((el,i)=>{el.classList.add('locked');if(i===q.answer)el.classList.add('correct');});
+    if(!correct)opt.classList.add('incorrect');
+    const fb=$('#fb'+qi); fb.className='feedback show '+(correct?'right':'wrong');
+    fb.innerHTML=`<b>${correct?'✓ Correct':'✗ Not quite'}</b>${q.explain}`;
+    state.answered++; if(correct)state.correct++;
+    if(state.answered===state.total){
+      const pct=Math.round(100*state.correct/state.total);
+      const sc=$('#qscore'); sc.className='quiz-score show';
+      sc.innerHTML=`<div class="score">${state.correct}/${state.total}</div><div>${pct}% — ${pct>=80?'excellent work! 🎉':pct>=50?'good effort, review the tricky ones.':'worth re-reading this theme, then try again.'}</div>`;
+      const p=loadProg(); const best=p[sec.id]; if(!best||pct>Math.round(100*best.correct/best.total))p[sec.id]={correct:state.correct,total:state.total}; saveProg(p);
+      if(sc.scrollIntoView)sc.scrollIntoView({behavior:'smooth',block:'center'});
+    }
+  });
+}
+buildNav();route();
+</script>
+</body>
+</html>
