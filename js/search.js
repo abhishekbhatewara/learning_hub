@@ -33,6 +33,25 @@
         });
       });
     });
+    // ---- external "Medicine Through Time" module (self-contained microsite) ----
+    const MEDICINE = [
+      { id: "anatomy", title: "Anatomy & Dissection", kw: "vesalius harvey hunter dissection de fabrica circulation blood galen postmortem post-mortem midwifery" },
+      { id: "measuring", title: "Measuring the Body", kw: "diagnosis pulse urine uroscopy ecg electrocardiograph einthoven sphygmograph blood test growth tanner clinitest diabetes" },
+      { id: "surgery", title: "Surgery & the Conquest of Pain", kw: "anaesthetic anesthetic ether chloroform morton john snow queen victoria cocaine trephination amputation prosthetic pare tooth neurosurgery pain" },
+      { id: "infection", title: "Fighting Infection", kw: "lister antiseptic aseptic carbolic germ theory pasteur autoclave sterilise mrsa asepsis heart-lung" },
+      { id: "humours", title: "Blood-letting & the Four Humours", kw: "four humours bloodletting leeches cupping lancet barber-surgeon galen hippocrates phlegm bile pierre louis statistics" },
+      { id: "radiation", title: "Cancer, Radiation & X-rays", kw: "x-ray xray rontgen roentgen radium marie curie radiotherapy brachytherapy cobalt radithor cancer tumour proton" },
+      { id: "electricity", title: "Electricity & the Mind", kw: "electrotherapy quackery defibrillator pacemaker ect electroconvulsive tens freud psychotherapy play therapy lowenfeld mental health" },
+      { id: "penicillin", title: "Penicillin & Antibiotics", kw: "penicillin fleming florey chain heatley antibiotic mould oxford resistance bacteria nobel" }
+    ];
+    INDEX.push({ kind: "module", title: "Medicine Through Time", text: "GCSE history-of-medicine module",
+      href: "medicine/", color: "#9b1d20", subjName: "Medicine Through Time", gradeName: "GCSE module",
+      hay: "medicine through time history of medicine module gcse museum science museum wellcome anatomy surgery infection" });
+    MEDICINE.forEach(m => {
+      INDEX.push({ kind: "module", title: m.title, text: "Medicine module theme",
+        href: "medicine/#/" + m.id, color: "#9b1d20", subjName: "Medicine Through Time", gradeName: "GCSE module",
+        hay: (m.title + " " + m.kw + " medicine").toLowerCase() });
+    });
     return INDEX;
   }
 
@@ -41,7 +60,7 @@
     if (!tokens.length) return [];
     const items = buildIndex().filter(it => tokens.every(tk => it.hay.includes(tk)));
     // rank: topics first, then objectives, then resources; title-start matches boosted
-    const order = { topic: 0, objective: 1, resource: 2 };
+    const order = { module: 0, topic: 0, objective: 1, resource: 2 };
     const q0 = tokens[0];
     items.forEach(it => { it._rank = order[it.kind] * 100 - (it.title.toLowerCase().startsWith(q0) ? 10 : 0); });
     items.sort((a, b) => a._rank - b._rank);
@@ -51,12 +70,13 @@
   const KIND = {
     topic: { label: "Topic", icon: "📘" },
     objective: { label: "Objective", icon: "🎯" },
-    resource: { label: "Resource", icon: "🔗" }
+    resource: { label: "Resource", icon: "🔗" },
+    module: { label: "Medicine", icon: "🩺" }
   };
 
   function resultCard(it) {
     const k = KIND[it.kind];
-    const ctx = `${esc(it.subjName)} · ${esc(it.gradeName)}${it.kind !== "topic" ? " · " + esc(it.topicTitle) : ""}`;
+    const ctx = `${esc(it.subjName)} · ${esc(it.gradeName)}${(it.kind === "objective" || it.kind === "resource") ? " · " + esc(it.topicTitle) : ""}`;
     return `<a class="search-result" href="${it.href}">
       <span class="sr-kind" style="background:${it.color}1a;color:${it.color}">${k.icon} ${k.label}</span>
       <span class="sr-main">
@@ -73,7 +93,7 @@
       <nav class="breadcrumb"><a href="#/">Subjects</a> › <span>Search</span></nav>
       <section class="hero">
         <h1>🔍 Search the hub</h1>
-        <p class="lede">Find any topic, learning objective or resource across Science, Maths and English — all three grades at once.</p>
+        <p class="lede">Find any topic, learning objective or resource across Science, Maths and English — plus the Medicine Through Time module.</p>
         <input id="search-box" class="search-box" type="search" autocomplete="off"
           placeholder="Search topics, objectives, resources…" value="${esc(q)}" />
       </section>
