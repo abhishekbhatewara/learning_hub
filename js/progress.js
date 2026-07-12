@@ -144,12 +144,32 @@
     });
   }
 
+  // ---- Medicine Through Time module (external microsite; same-origin storage) ----
+  const MED = [
+    { id: "anatomy", icon: "🦴", title: "Anatomy & Dissection" },
+    { id: "measuring", icon: "📏", title: "Measuring the Body" },
+    { id: "surgery", icon: "🔪", title: "Surgery & Pain" },
+    { id: "infection", icon: "🦠", title: "Fighting Infection" },
+    { id: "humours", icon: "🩸", title: "Blood-letting & the Four Humours" },
+    { id: "radiation", icon: "☢️", title: "Cancer, Radiation & X-rays" },
+    { id: "electricity", icon: "⚡", title: "Electricity & the Mind" },
+    { id: "penicillin", icon: "💊", title: "Penicillin & Antibiotics" }
+  ];
+  function medQuiz(id) { return db().quiz["medicine|" + id + "|0"] || null; }
+  function medicineStats() {
+    let done = 0, quizzes = 0, scoreSum = 0;
+    MED.forEach(m => { const q = medQuiz(m.id); if (q) { quizzes++; scoreSum += q.pct; if (q.pct >= PASS) done++; } });
+    return { done, total: MED.length, quizzes, scoreSum };
+  }
+
   // ---- dashboard (#/progress) ----
   function dashboard() {
     const subs = (window.HUB && window.HUB.subjects) || [];
     const hub = hubStats();
-    const overallPct = pct(hub);
-    const avgScore = hub.quizzes ? Math.round(hub.scoreSum / hub.quizzes) : null;
+    const med = medicineStats();
+    const combined = { done: hub.done + med.done, total: hub.total + med.total, quizzes: hub.quizzes + med.quizzes, scoreSum: hub.scoreSum + med.scoreSum };
+    const overallPct = pct(combined);
+    const avgScore = combined.quizzes ? Math.round(combined.scoreSum / combined.quizzes) : null;
 
     const subjBlocks = subs.map(s => {
       const sst = subjectStats(s);
@@ -177,6 +197,24 @@
       </details>`;
     }).join("");
 
+    const medRows = MED.map(m => {
+      const q = medQuiz(m.id);
+      const chip = q
+        ? `<span class="prog-quiz-chip ${q.pct >= PASS ? "pass" : "fail"}">📝 ${q.pct}%</span>`
+        : `<span class="prog-quiz-chip">— not tried</span>`;
+      return `<a class="dash-topic" href="medicine/#/${m.id}">
+        <span class="dash-topic-name">${m.icon} ${esc(m.title)}${q && q.pct >= PASS ? " ✓" : ""}</span>
+        ${chip}
+      </a>`;
+    }).join("");
+    const medBlock = `<details class="dash-subject" ${med.quizzes > 0 ? "open" : ""}>
+      <summary>
+        <span class="dash-subj-name" style="color:#9b1d20">🩺 Medicine Through Time</span>
+        ${bar({ done: med.done, total: med.total }, "#9b1d20")}
+      </summary>
+      <div class="dash-grades"><div class="dash-topics" style="padding-top:.6rem">${medRows}</div></div>
+    </details>`;
+
     return `
       <nav class="breadcrumb"><a href="#/">Subjects</a> › <span>My Progress</span></nav>
       <section class="hero">
@@ -185,13 +223,13 @@
       </section>
       <div class="dash-summary">
         <div class="dash-stat"><div class="dash-num">${overallPct}%</div><div class="dash-cap">Objectives complete</div></div>
-        <div class="dash-stat"><div class="dash-num">${hub.done}<small>/${hub.total}</small></div><div class="dash-cap">Objectives done</div></div>
-        <div class="dash-stat"><div class="dash-num">${hub.quizzes}</div><div class="dash-cap">Quizzes attempted</div></div>
+        <div class="dash-stat"><div class="dash-num">${combined.done}<small>/${combined.total}</small></div><div class="dash-cap">Objectives done</div></div>
+        <div class="dash-stat"><div class="dash-num">${combined.quizzes}</div><div class="dash-cap">Quizzes attempted</div></div>
         <div class="dash-stat"><div class="dash-num">${avgScore == null ? "—" : avgScore + "%"}</div><div class="dash-cap">Avg quiz score</div></div>
       </div>
-      ${hub.done === 0 && hub.quizzes === 0
-        ? `<p class="empty">No progress yet. Open any objective, mark it complete or take its quiz, and it'll show up here.</p>`
-        : `<h2 class="section-title">By subject</h2><div class="dash-list">${subjBlocks}</div>`}
+      ${combined.done === 0 && combined.quizzes === 0
+        ? `<p class="empty">No progress yet. Open any objective, mark it complete or take its quiz — or try a Medicine module quiz — and it'll show up here.</p>`
+        : `<h2 class="section-title">By subject</h2><div class="dash-list">${subjBlocks}${medBlock}</div>`}
       <div class="dash-actions">
         <button id="prog-reset" class="btn btn-ghost" type="button">↺ Reset all progress</button>
       </div>`;
