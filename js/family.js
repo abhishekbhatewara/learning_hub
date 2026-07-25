@@ -21,12 +21,30 @@
   function esc(x) { return String(x == null ? "" : x).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
 
   // ---- client bootstrap ----
+  // Load the Supabase library from OUR OWN site (vendored), lazily — not from a
+  // third-party CDN, which was failing on some networks ("Failed to fetch
+  // dynamically imported module"). Injected as a classic <script> that sets
+  // window.supabase; only loaded when the accounts area is actually used.
+  function loadSupabaseLib() {
+    return new Promise((resolve, reject) => {
+      if (window.supabase && window.supabase.createClient) return resolve(window.supabase);
+      let s = document.getElementById("lh-supabase-lib");
+      if (!s) {
+        s = document.createElement("script");
+        s.id = "lh-supabase-lib";
+        s.src = "js/vendor/supabase.js?v=1";
+        document.head.appendChild(s);
+      }
+      s.addEventListener("load", () => resolve(window.supabase));
+      s.addEventListener("error", () => reject(new Error("could not load the accounts library")));
+    });
+  }
   async function init() {
     if (SB) return SB;
     if (loading) return loading;
-    loading = import("https://esm.sh/@supabase/supabase-js@2")
-      .then(({ createClient }) => {
-        SB = createClient(CFG.url, CFG.anonKey, {
+    loading = loadSupabaseLib()
+      .then((lib) => {
+        SB = lib.createClient(CFG.url, CFG.anonKey, {
           // We handle the magic-link callback ourselves (see handleCallback) so
           // it works whether the token comes back in the #hash or a ?code= query.
           auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: false }
