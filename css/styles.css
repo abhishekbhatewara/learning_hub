@@ -741,3 +741,10 @@ body.ws-show-answers .ws-key { display: block; }
   .hero { padding: 1.8rem 1.3rem; }
   .match-row { grid-template-columns: 1fr; }
 }
+
+/* ---- accounts unavailable (backend paused / unreachable) ---- */
+.fam-offline { border-left: 4px solid #f59e0b; }
+.fam-offline h3 { color: #b45309; }
+.fam-offline p { line-height: 1.6; }
+.fam-offline-actions { display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; margin: 1.1rem 0 .4rem; }
+.fam-offline-hint { font-size: .86rem; opacity: .8; margin-bottom: 0; }

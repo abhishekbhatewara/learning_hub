@@ -62,15 +62,24 @@
   }
 
   async function reload() {
+    // If we already know the backend is down (paused project / offline), don't
+    // fire a request that can only fail — it just adds a console error per page.
+    const B = window.LHBackend;
+    if (B && B.isKnownDown()) return;
     try {
       // newest first so the most recent additions sit at the top of the Library
       const res = await fetch(`${CFG.url}/rest/v1/custom_resources?select=*&order=created_at.desc`, {
         headers: { apikey: CFG.anonKey, Authorization: `Bearer ${CFG.anonKey}` }
       });
+      // This call doubles as the hub's health check, so the accounts area never
+      // needs a probe of its own on a page that already loaded resources.
+      if (B) B.report(res.status < 500);
       if (!res.ok) return;
       clearMerged();
       merge(await res.json());
-    } catch (e) { /* offline / not set up yet — ignore */ }
+    } catch (e) {
+      if (B) B.report(false);   // network/DNS failure — the project is asleep
+    }
   }
 
   window.CustomResources = { reload };

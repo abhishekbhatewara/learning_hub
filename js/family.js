@@ -20,6 +20,25 @@
 
   function esc(x) { return String(x == null ? "" : x).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
 
+  // Is the accounts backend reachable? Delegates to the shared status module
+  // (js/backend-status.js), which usually already has a verdict from the
+  // custom-resources fetch this page made — so this normally costs nothing.
+  // If that module isn't loaded, assume up and let the old error paths handle it.
+  function backendUp() {
+    return window.LHBackend ? window.LHBackend.check() : Promise.resolve(true);
+  }
+
+  // Turn a raw failure into something a parent can act on. Network/DNS failures
+  // surface from supabase-js as a bare "Failed to fetch", which tells them nothing.
+  function friendlyErr(e) {
+    const m = String((e && e.message) || e || "");
+    if (/failed to fetch|networkerror|load failed|fetch failed/i.test(m)) {
+      if (window.LHBackend) window.LHBackend.report(false);
+      return "Can't reach the accounts service right now. Please try again in a moment.";
+    }
+    return m || "Something went wrong.";
+  }
+
   // ---- client bootstrap ----
   // Load the Supabase library from OUR OWN site (vendored), lazily — not from a
   // third-party CDN, which was failing on some networks ("Failed to fetch
@@ -99,27 +118,33 @@
     state.msg = "Sending…"; render();
     // redirect target for the magic-link path: the page base WITHOUT a hash
     // fragment (Supabase appends its own #tokens; a pre-existing #route would clash)
-    const { error } = await SB.auth.signInWithOtp({
-      email,
-      options: { shouldCreateUser: true, emailRedirectTo: location.href.split("#")[0] }
-    });
-    if (error) { state.msg = "⚠️ " + error.message; render(); return; }
+    try {
+      const { error } = await SB.auth.signInWithOtp({
+        email,
+        options: { shouldCreateUser: true, emailRedirectTo: location.href.split("#")[0] }
+      });
+      if (error) throw error;
+    } catch (e) { state.msg = "⚠️ " + friendlyErr(e); render(); return; }
     state.pendingEmail = email; state.view = "verify"; state.msg = "";
     render();
   }
   async function verifyCode(token) {
     state.msg = "Checking…"; render();
-    const { error } = await SB.auth.verifyOtp({ email: state.pendingEmail, token: token.trim(), type: "email" });
-    if (error) { state.msg = "⚠️ " + error.message; render(); return; }
+    try {
+      const { error } = await SB.auth.verifyOtp({ email: state.pendingEmail, token: token.trim(), type: "email" });
+      if (error) throw error;
+    } catch (e) { state.msg = "⚠️ " + friendlyErr(e); render(); return; }
     // onAuthStateChange → refresh() handles the rest
   }
   async function signInWithGoogle() {
     state.msg = "Redirecting to Google…"; render();
-    const { error } = await SB.auth.signInWithOAuth({
-      provider: "google",
-      options: { redirectTo: location.href.split("#")[0] }
-    });
-    if (error) { state.msg = "⚠️ " + error.message; render(); }
+    try {
+      const { error } = await SB.auth.signInWithOAuth({
+        provider: "google",
+        options: { redirectTo: location.href.split("#")[0] }
+      });
+      if (error) throw error;
+    } catch (e) { state.msg = "⚠️ " + friendlyErr(e); render(); }
   }
   async function signOut() { await SB.auth.signOut(); state.pendingEmail = ""; refresh(); }
 
@@ -302,10 +327,14 @@
     const q = P ? P.quizOf(s, t, i) : null;
     for (const a of childAssignments) {
       if ((a.items || []).some(it => it.s === s && it.t === t && it.i === i)) {
-        await SB.from("assignment_progress").upsert(
-          { assignment_id: a.id, child_id: state.user.id, item_key: key, status: done ? "done" : "in_progress", score: q ? q.pct : null },
-          { onConflict: "assignment_id,item_key" }
-        );
+        // Fire-and-forget from progress.js — if the backend drops mid-session,
+        // swallow it. The completion is already saved locally either way.
+        try {
+          await SB.from("assignment_progress").upsert(
+            { assignment_id: a.id, child_id: state.user.id, item_key: key, status: done ? "done" : "in_progress", score: q ? q.pct : null },
+            { onConflict: "assignment_id,item_key" }
+          );
+        } catch (e) { if (window.LHBackend) window.LHBackend.report(false); return; }
       }
     }
   }
@@ -372,11 +401,40 @@
   function render() {
     if (!container) return;
     if (state.view === "loading") { container.innerHTML = shell(`<p class="empty">Loading…</p>`); return; }
+    if (state.view === "offline") return renderOffline();
     if (state.view === "auth") return renderAuth();
     if (state.view === "verify") return renderVerify();
     if (state.view === "onboard") return renderOnboard();
     if (state.view === "parent") return renderParent();
     if (state.view === "child") return renderChild();
+  }
+
+  // Shown when the accounts backend can't be reached at all. The rest of the hub
+  // is static and unaffected, so say so plainly rather than presenting a sign-in
+  // form whose buttons cannot work.
+  function renderOffline() {
+    container.innerHTML = shell(`
+      <div class="family-card fam-offline">
+        <h3>😴 Accounts are temporarily unavailable</h3>
+        <p>We can't reach the accounts service right now, so signing in, assignments
+           and live progress are paused. Nothing has been lost — your assignments are
+           safe and will be here when it's back.</p>
+        <p class="muted"><strong>Everything else still works.</strong> All the subjects,
+           objectives, resources, quizzes, mindmaps, worksheets and the Library are part
+           of the site itself and need no sign-in. Your progress keeps saving in this
+           browser and will sync once accounts are back.</p>
+        <div class="fam-offline-actions">
+          <button class="btn btn-primary" id="fam-retry" type="button">Try again</button>
+          <a class="btn btn-ghost" href="#/">← Back to subjects</a>
+        </div>
+        <p class="muted fam-offline-hint">If this lasts, the Supabase project is most
+           likely paused — restoring it from the Supabase dashboard brings accounts back.</p>
+      </div>`);
+    document.getElementById("fam-retry").addEventListener("click", () => {
+      if (window.LHBackend) window.LHBackend.forget();   // drop the cached verdict
+      // Re-run the router so whichever accounts page we're on remounts itself.
+      window.dispatchEvent(new HashChangeEvent("hashchange"));
+    });
   }
 
   function renderAuth() {
@@ -513,6 +571,9 @@
   // ---- admin: dedicated "Manage resources" page (#/manage-resources) ----
   async function mountManage(el) {
     container = null; // this page renders itself; keep refresh() from clobbering it
+    // Without the backend we can't tell an admin from anyone else, and the page
+    // would wrongly claim "admins only". Show the honest reason instead.
+    if (!(await backendUp())) { container = el; state.view = "offline"; render(); container = null; return; }
     try { await init(); await refresh(); } catch (e) { /* ignore */ }
     el.innerHTML = `
       <nav class="breadcrumb"><a href="#/">Subjects</a> › <a href="#/parents">Parents</a> › <span>Manage resources</span></nav>
@@ -971,6 +1032,10 @@
   async function mount(el) {
     container = el;
     state.view = "loading"; render();
+    // Check the backend BEFORE rendering the sign-in form. A paused Supabase
+    // project still lets the client construct fine, so without this the page
+    // looks perfectly healthy while every button silently fails.
+    if (!(await backendUp())) { state.view = "offline"; render(); return; }
     try { await init(); await refresh(); }
     catch (e) { container.innerHTML = shell(`<p class="empty">Couldn't load the accounts service. ${esc(e.message || e)}</p>`); }
   }
@@ -1017,7 +1082,11 @@
     try { return Object.keys(localStorage).some(k => /^sb-.*-auth-token$/.test(k)); } catch (e) { return false; }
   }
   if (isAuthCallback()) handleCallback();
-  else if (hasStoredSession()) init().then(() => refresh()).catch(() => {});
+  else if (hasStoredSession()) {
+    // Don't wake the client on every page when we already know it can't connect —
+    // the session stays in localStorage and picks up again once the backend is up.
+    backendUp().then(up => { if (up) return init().then(() => refresh()); }).catch(() => {});
+  }
 
   window.Family = { mount, mountManage, syncProgress, syncQuizResult, submitQuiz, navInfo, role, assignResourcePrompt };
 })();
