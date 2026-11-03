@@ -2,11 +2,11 @@
 window.CLASSROOM = {
  "meta": {
   "class_name": "Wolves",
-  "count": 304,
+  "count": 305,
   "modules": [
    {
     "name": "Science",
-    "count": 102
+    "count": 103
    },
    {
     "name": "Math",
@@ -3181,6 +3181,18 @@ window.CLASSROOM = {
    "module": "Science",
    "subject": "Biology",
    "source": "YouTube · NDSU Virtual Cell",
+   "topics": [
+    "g6-cells"
+   ]
+  },
+  {
+   "id": "yt-cells-5",
+   "title": "Mitosis (Updated 2026) — Amoeba Sisters (8 minutes)",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=ShEzlXZPpPM",
+   "module": "Science",
+   "subject": "Biology",
+   "source": "YouTube · Amoeba Sisters",
    "topics": [
     "g6-cells"
    ]
