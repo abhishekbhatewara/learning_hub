@@ -534,6 +534,8 @@ window.CURRICULUM.grades.push({
         {
           text: "State the cell theory and explain why the cell is called the basic unit of life.",
           resources: [
+            { type: "video", title: "Mitosis — NDSU Virtual Cell Animations (6 minutes)", provider: "YouTube · NDSU Virtual Cell", url: "https://www.youtube.com/watch?v=C6hn3sA0ip0", note: "Cell theory says new cells come from existing cells; this animation shows how one cell becomes two. More advanced than this objective." },
+            { type: "video", title: "Prokaryotic vs Eukaryotic Cells — Amoeba Sisters (5 minutes)", provider: "YouTube · Amoeba Sisters", url: "https://www.youtube.com/watch?v=Pxujitlv8wc", note: "Modern cell theory at 1:27, then how the two basic types of cell compare. A step beyond this objective." },
             { type: "interactive", title: "CELLS alive: interactive cell model", provider: "CELLS alive!", url: "https://www.cellsalive.com/cells/cell_model.htm", note: "Explore the cell, the basic unit of life." },
             { type: "reading", title: "CK-12: Cells", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "Why the cell is the basic unit of life." },
             { type: "interactive", title: "Cells & microorganisms study bot", provider: "📚 Library · ChatGPT", url: "https://chatgpt.com/g/g-677e0912ba3c81918a4fc6efcdbf3077-cells-and-microorganisms-bot", note: "An interactive tutor to quiz yourself on cells and the cell theory. (Needs a ChatGPT login.)" },
@@ -583,6 +585,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Distinguish unicellular from multicellular organisms with examples.",
           resources: [
+            { type: "video", title: "Prokaryotic vs Eukaryotic Cells — Amoeba Sisters (5 minutes)", provider: "YouTube · Amoeba Sisters", url: "https://www.youtube.com/watch?v=Pxujitlv8wc", note: "Extra: examples of prokaryotes and eukaryotes from 1:37, and how their cells differ. A step beyond this objective." },
             { type: "video", title: "Unicellular vs Multicellular (Amoeba Sisters)", provider: "YouTube · Amoeba Sisters", url: "https://www.youtube.com/watch?v=xKqhbFnWbvI", note: "Single-celled versus many-celled life." },
             { type: "reading", title: "CK-12: Unicellular & multicellular", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "Single-celled and many-celled life." },
             { type: "interactive", title: "Cells & microorganisms study bot", provider: "📚 Library · ChatGPT", url: "https://chatgpt.com/g/g-677e0912ba3c81918a4fc6efcdbf3077-cells-and-microorganisms-bot", note: "Explore single-celled microorganisms and how they differ from many-celled life. (Needs a ChatGPT login.)" },
@@ -657,6 +660,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Compare plant and animal cells and identify structures unique to each.",
           resources: [
+            { type: "video", title: "Cell Organelles and Structures Review — Amoeba Sisters (8 minutes)", provider: "YouTube · Amoeba Sisters", url: "https://www.youtube.com/watch?v=6mgkoqcm6Sg", note: "Near the end you label the organelles and structures in both animal and plant cells." },
             { type: "interactive", title: "Plant & animal cell models", provider: "CELLS alive!", url: "https://www.cellsalive.com/cells/cell_model.htm", note: "Compare the two side by side, interactively." },
             { type: "interactive", title: "Khan Academy: Plant vs animal cells", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology/structure-of-a-cell", note: "Comparing the two cell types." },
             { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit 1: Living things", note: "Cells, plant vs animal cells, organelles, and levels of organisation are introduced in the Stage 7 'Living things' unit.", url: "https://www.cambridge.org/us/education/subject/science/cambridge-primary-and-lower-secondary-science-2nd-edition/cambridge-lower-secondary-science-2nd-edition-digital-learners-book-7-1-year-learners-book-7-digital-access-1-year?isbn=9781108742788" },
@@ -681,6 +685,7 @@ window.CURRICULUM.grades.push({
         {
           text: "State the function of key organelles: cell membrane, cell wall, nucleus, cytoplasm, ribosomes, endoplasmic reticulum, mitochondria, chloroplasts and vacuoles.",
           resources: [
+            { type: "video", title: "Cell Organelles and Structures Review — Amoeba Sisters (8 minutes)", provider: "YouTube · Amoeba Sisters", url: "https://www.youtube.com/watch?v=6mgkoqcm6Sg", note: "A review game: guess each organelle from clues. Best after you've learned them." },
             { type: "interactive", title: "Khan Academy: Cell organelles", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology/structure-of-a-cell", note: "A tour of the organelles and their jobs." },
             { type: "reading", title: "CK-12: Cell Structure & Function", provider: "CK-12 Foundation", url: "https://www.ck12.org/c/biology/", note: "Each organelle and its function, with diagrams." },
             { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 7", author: "Cambridge University Press (2nd ed.)", chapter: "Unit 1: Living things", note: "Cells, plant vs animal cells, organelles, and levels of organisation are introduced in the Stage 7 'Living things' unit.", url: "https://www.cambridge.org/us/education/subject/science/cambridge-primary-and-lower-secondary-science-2nd-edition/cambridge-lower-secondary-science-2nd-edition-digital-learners-book-7-1-year-learners-book-7-digital-access-1-year?isbn=9781108742788" },
@@ -705,6 +710,7 @@ window.CURRICULUM.grades.push({
         {
           text: "Explain the relationship between DNA, genes and chromosomes.",
           resources: [
+            { type: "video", title: "Mitosis — NDSU Virtual Cell Animations (6 minutes)", provider: "YouTube · NDSU Virtual Cell", url: "https://www.youtube.com/watch?v=C6hn3sA0ip0", note: "Extension: an animation of chromosomes being divided into two new nuclei as one cell becomes two. More advanced than this objective." },
             { type: "video", title: "DNA, Chromosomes, Genes & Traits (Amoeba Sisters)", provider: "YouTube · Amoeba Sisters", url: "https://www.youtube.com/watch?v=8m6hHRlKwxY", note: "How DNA, genes and chromosomes fit together." },
             { type: "interactive", title: "Khan Academy: DNA & chromosomes", provider: "Khan Academy", url: "https://www.khanacademy.org/science/biology", note: "Videos and practice on genetic material." },
             { type: "book", title: "Cambridge Lower Secondary Science Learner's Book 9", author: "Cambridge University Press (2nd ed.)", chapter: "Unit: Genes and inheritance", note: "DNA, genes, chromosomes and inheritance are covered in the Stage 9 'Genes and inheritance' unit.", url: "https://www.cambridge.org/us/education/subject/science/cambridge-primary-and-lower-secondary-science-2nd-edition/cambridge-lower-secondary-science-2nd-edition-digital-learners-book-9-1-year-learners-book-9-digital-access-1-year?isbn=9781108742863" },

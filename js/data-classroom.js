@@ -2,11 +2,11 @@
 window.CLASSROOM = {
  "meta": {
   "class_name": "Wolves",
-  "count": 301,
+  "count": 304,
   "modules": [
    {
     "name": "Science",
-    "count": 99
+    "count": 102
    },
    {
     "name": "Math",
@@ -3148,6 +3148,42 @@ window.CLASSROOM = {
    "subject": "Earth & Space",
    "source": "🏛️ Natural History Museum",
    "topics": []
+  },
+  {
+   "id": "yt-cells-2",
+   "title": "Cell Organelles and Structures Review — Amoeba Sisters (8 minutes)",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=6mgkoqcm6Sg",
+   "module": "Science",
+   "subject": "Biology",
+   "source": "YouTube · Amoeba Sisters",
+   "topics": [
+    "g6-cells"
+   ]
+  },
+  {
+   "id": "yt-cells-3",
+   "title": "Prokaryotic vs Eukaryotic Cells — Amoeba Sisters (5 minutes)",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=Pxujitlv8wc",
+   "module": "Science",
+   "subject": "Biology",
+   "source": "YouTube · Amoeba Sisters",
+   "topics": [
+    "g6-cells"
+   ]
+  },
+  {
+   "id": "yt-cells-4",
+   "title": "Mitosis — NDSU Virtual Cell Animations (6 minutes)",
+   "kind": "video",
+   "url": "https://www.youtube.com/watch?v=C6hn3sA0ip0",
+   "module": "Science",
+   "subject": "Biology",
+   "source": "YouTube · NDSU Virtual Cell",
+   "topics": [
+    "g6-cells"
+   ]
   }
  ]
 };
