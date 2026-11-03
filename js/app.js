@@ -94,18 +94,22 @@
         <div class="card-footer"><span class="chip">8 themes · 40 quizzes</span><span class="go-link">Open ↗</span></div>
       </a>`;
     return `
-      <section class="hero">
+      <section class="hero hero-home">
+        <div class="hero-copy">
         <h1>Learning Hub</h1>
         <p class="lede">A free study companion for Grades 6–8 — clear learning objectives, hand-picked free resources and self-marking quizzes for every objective, plus a concept mindmap. Choose a subject to begin.</p>
         ${window.Search ? `<form class="home-search" onsubmit="location.hash='#/search/'+encodeURIComponent(this.q.value.trim());return false;">
           <input name="q" class="search-box" type="search" placeholder="🔍 Search topics, objectives & resources across all subjects…" />
         </form>` : ""}
+        </div>
+        <img class="hero-art" src="assets/images/hero-students.png" width="560" height="560" alt="Illustration of three students exploring science, maths and reading together" />
       </section>
       <h2 class="section-title">Subjects <span class="count">${HUB.subjects.length} live${planned.length ? " · " + planned.length + " coming" : ""}</span></h2>
       <div class="grid cols-3">${cards}${medicineCard}${soon}</div>
       ${CLASS.meta.count ? `
       <h2 class="section-title">Enrichment library</h2>
-      <a class="grade-card" href="#/library" style="border-top-color:#c08a3e">
+      <a class="grade-card has-banner" href="#/library" style="border-top-color:#c08a3e">
+        <img class="card-banner" src="assets/images/library-banner.jpg" width="1200" height="400" loading="lazy" alt="Illustration of a library reading nook with books, a laptop playing a video and headphones" />
         <span class="card-eyebrow" style="color:#c08a3e">📚 Library</span>
         <h3>${CLASS.meta.count} free resources across every subject</h3>
         <p class="card-desc">A searchable stream of real-world videos, articles and podcasts your class collected — Science, Maths, Finance, History, AI, civics and more. Filter by subject and type.</p>
@@ -165,7 +169,8 @@
 
       ${CLASS.meta.count ? `
       <h2 class="section-title">Enrichment from the Library</h2>
-      <a class="grade-card" href="#/library" style="border-top-color:#c08a3e">
+      <a class="grade-card has-banner" href="#/library" style="border-top-color:#c08a3e">
+        <img class="card-banner" src="assets/images/library-banner.jpg" width="1200" height="400" loading="lazy" alt="Illustration of a library reading nook with books, a laptop playing a video and headphones" />
         <span class="card-eyebrow" style="color:#c08a3e">📚 Library</span>
         <h3>${CLASS.meta.count} videos, articles &amp; podcasts across all subjects</h3>
         <p class="card-desc">A searchable stream of real-world resources your class collected. Filter by subject and type, or find the relevant ones woven into each objective's resources.</p>

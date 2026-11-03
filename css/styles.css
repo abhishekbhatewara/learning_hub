@@ -748,3 +748,17 @@ body.ws-show-answers .ws-key { display: block; }
 .fam-offline p { line-height: 1.6; }
 .fam-offline-actions { display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; margin: 1.1rem 0 .4rem; }
 .fam-offline-hint { font-size: .86rem; opacity: .8; margin-bottom: 0; }
+
+/* ===== Generated illustrations (home hero + library card) ===== */
+.hero-home { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 1.5rem; }
+.hero-home::after { content: none; }
+.hero-art { width: clamp(180px, 26vw, 280px); height: auto; display: block; }
+@media (max-width: 760px) {
+  .hero-home { grid-template-columns: 1fr; }
+  .hero-art { width: 180px; margin: 0 auto; order: -1; }
+}
+.grade-card.has-banner { padding-top: 0; }
+.card-banner {
+  display: block; width: calc(100% + 2.6rem); margin: 0 -1.3rem .5rem; height: auto;
+  aspect-ratio: 3 / 1; max-height: 230px; object-fit: cover;
+}
